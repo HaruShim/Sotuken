@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="PjbrcRX92Mcgj2SXwtRG" name="ページ1">
+        <mxGraphModel dx="2044" dy="918" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" style="locked=1;" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#23445d;fillColor=#E6E6E6;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="40" width="1180" height="690" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="40" width="1180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;align=left;fillColor=#000000;gradientColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="58" width="20" height="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.frame;dx=2.52;fontSize=14;strokeColor=#666666;fillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1122.5" y="51" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.x;fontSize=14;fillColor=#000000;gradientColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1183" y="51" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=-1;hachureGap=8;fillStyle=cross-hatch;fillColor=#006600;sketch=1;" parent="1" vertex="1">
+                    <mxGeometry x="85" y="46.5" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;span style=&quot;font-size: 19px&quot;&gt;ページタイトル&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="46.5" width="250" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=-1;hachureGap=8;fillStyle=cross-hatch;fillColor=#006600;sketch=1;" parent="1" vertex="1">
+                    <mxGeometry x="85" y="46.5" width="30" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
