@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-10-21T02:07:48.032Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="7Juucg2LQ6kiQTuhsI4I" version="15.5.7" type="embed" pages="2">
+<mxfile host="65bd71144e" pages="2">
     <diagram id="siqil_cSp3EDbmd0_-ep" name="人事管理_ユースケース図">
-        <mxGraphModel dx="536" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="809" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -140,7 +140,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="在庫管理_ユースケース図" id="xcpFUl_7C4qsOaSbGQAx">
-        <mxGraphModel dx="1545" dy="698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="809" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="J2_OW1Aq3B7b4-vx6GuX-0"/>
                 <mxCell id="J2_OW1Aq3B7b4-vx6GuX-1" parent="J2_OW1Aq3B7b4-vx6GuX-0"/>
@@ -163,7 +163,7 @@
                     <mxGeometry x="313" y="530" width="170" height="27" as="geometry"/>
                 </mxCell>
                 <mxCell id="rn6YbCdCaGZHP1L7RdL3-6" value="非正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="J2_OW1Aq3B7b4-vx6GuX-1" vertex="1">
-                    <mxGeometry x="100" y="573.5" width="40" height="70" as="geometry"/>
+                    <mxGeometry x="80" y="726" width="40" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="rn6YbCdCaGZHP1L7RdL3-8" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;strokeColor=#36393d;fillColor=#DEDCD3;fontColor=#080808;" parent="J2_OW1Aq3B7b4-vx6GuX-1" vertex="1">
                     <mxGeometry x="220" y="120" width="356" height="330" as="geometry"/>
