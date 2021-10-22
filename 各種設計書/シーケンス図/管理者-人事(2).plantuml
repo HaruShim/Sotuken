@@ -2,7 +2,7 @@
 
 hide footbox
 header 営業情報管理システム/人事情報管理
-title <back:#25b7c0>従業員情報</back>管理・<back:25b7c0>店舗情報</back>管理
+title 正規非正規ユーザの権限を編集
 
 actor "管理者\n(権限)" as Manager
 boundary "メ二ュー\n画面" as MenuSc
