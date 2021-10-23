@@ -1,0 +1,63 @@
+@startuml robustness
+left to right direction
+
+usecase "店舗情報管理" as TENPO
+
+
+' Actors
+actor "管理者" as admin
+
+' Boundaries boundary "" as 
+boundary "メニュー" as me
+
+
+' Controls control "" as 
+
+
+' control "登録ボタンを押す" as tb 
+' control "参照ボタンを押す" as sb 
+' control "編集ボタンを押す" as hb 
+' control "削除ボタンを押す" as deb 
+' Entities
+entity "店舗情報" as tj
+
+admin -[hidden]left- TENPO
+
+admin --> me
+
+package "店舗の登録"{
+  boundary "店舗登録画面" as ttg
+  control "新規店舗情報を\n入力する" as in
+  ' tb --> ttg
+  me --> ttg:"登録ボタン\nを押す"
+  ttg --> in
+
+}
+' 
+  ' admin -right-> me
+package "店舗の参照"{
+  boundary "店舗一覧" as ti 
+  ' me --> sb
+  ' sb --> ti
+  ti --> tj
+  me --> ti:"参照ボタン\nを押す"
+  
+}
+package "店舗の編集"{
+  boundary "編集画面" as hg
+  control "編集する情報を\n入力する" as hj
+  ti --> hg:"編集ボタン\nを押す"
+  ' hb --> hg
+  hg --> hj
+  hj --> tj
+  ' ti --> hg:"編集ボタンを押す"
+}
+package "店舗の削除"{
+  boundary "確認画面" as kg
+  ti --> kg:"削除ボタン\nを押す"
+  ' deb --> kg
+  kg --> tj
+
+}
+in --> tj
+@enduml
