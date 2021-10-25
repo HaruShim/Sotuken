@@ -1,0 +1,82 @@
+@startuml domainmodel
+left to right direction
+
+hide circle
+hide method
+
+
+
+' 正規社員 -[hidden]- 非正規社員
+
+
+' package マスタ管理_ドメインモデル図 {
+'   class ベンチマークマスタ
+'   class 商品情報
+'   class 売上情報
+'   class 販売履歴
+'   class 従業員情報
+'   class 店舗情報
+'   class 権限
+
+'   ' 正規社員 - ベンチマークマスタ
+' }
+
+package 在庫管理_ドメインモデル図 {
+
+  class 商品情報 #F5A9BC
+  class カテゴリ
+  class 倉庫情報
+  class 在庫商品 #F5A9BC
+  class セット商品
+  class 取置予約 #F5A9BC
+  ' class 粗利計算
+  class 販売価格
+  class 売上情報
+  ' class 販売履歴
+  ' mix_actor 従業員
+
+
+  商品情報 : 型番
+  商品情報 : 商品コード
+  商品情報 : JANコード
+  商品情報 : 製品コード
+  商品情報 : 商品画像
+  商品情報 : 在庫場所
+  カテゴリ : カテゴリ1
+  カテゴリ : カテゴリ2
+  カテゴリ : カテゴリ3
+  売上情報 : 販売履歴
+  販売価格 : 粗利計算
+'   ' 商品 : 価格
+
+  ' 従業員 -> ログイン : has-one
+
+  ' ユーザ --> カート
+  ' カート o--> 商品 : has-many
+  ' 商品 <--o カテゴリ
+  ' ユーザ o--> 注文
+  ' 注文 o--> 商品
+  ' ユーザ --> ウィッシュリスト
+  ' ウィッシュリスト o--> 商品
+  ' ユーザ o--> レビュー
+  ' レビュー <--o 商品
+  セット商品 o--> 商品情報 : has-many
+  商品情報 --> 倉庫情報 : has-one
+  商品情報 <|-- 取置予約 : is-a-kind-of
+  商品情報 <|-- 在庫商品 : is-a-kind-of
+  商品情報 <--o カテゴリ
+  販売価格 -left- 売上情報
+  ' 販売価格 -up- 粗利計算
+  商品情報 -left- 販売価格
+  ' 販売価格 -[hidden]up- 売上情報
+  
+
+}
+
+' package 従業員内容 {
+'   mix_actor 正規社員
+'   mix_actor 非正規社員
+' }
+' 在庫管理_ドメインモデル図 -[hidden]down- 従業員内容
+
+@enduml
