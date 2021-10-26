@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-10-22T03:12:50.463Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="7445pmfTJQ_5tZjEf8Wd" version="15.5.8" type="embed" pages="2">
+<mxfile host="65bd71144e" pages="2">
     <diagram id="CvgPCsXY9eOnfGZYOeE3" name="人事管理_ユースケース図">
-        <mxGraphModel dx="804" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1348" dy="565" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="RNgX-jbUkB-9QtbaT86_-0"/>
                 <mxCell id="RNgX-jbUkB-9QtbaT86_-1" parent="RNgX-jbUkB-9QtbaT86_-0"/>
@@ -107,7 +107,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="1RIJjTR2KE_wcN-HXxek" name="在庫管理_ユースケース図">
-        <mxGraphModel dx="804" dy="1599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1348" dy="1734" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="mOK6NjzvD6mZe8noQFNt-67" value="Untitled Layer" style="" parent="0"/>
@@ -205,7 +205,7 @@
                         <mxPoint x="380" y="437" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="30" value="人事情報管理" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" parent="1" vertex="1">
+                <mxCell id="30" value="在庫管理" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" parent="1" vertex="1">
                     <mxGeometry x="402" y="231" width="348" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="31" value="倉庫情報管理" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="1" vertex="1">
