@@ -8,4 +8,5 @@ app_name = 'tamesi1'
 urlpatterns = [
   path('',TemplateView.as_view(template_name = 'index.html'), name='index'),
   path('base/',views.BaseView.as_view(),name='base'),
+  path('temp/',TemplateView.as_view(template_name = 'TEMPLATE.html'), name='temp'),
 ]

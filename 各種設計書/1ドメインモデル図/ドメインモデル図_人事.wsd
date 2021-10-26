@@ -1,26 +1,29 @@
 @startuml domainmodel
-left to right direction
+' left to right direction
 
 hide circle
 hide method
 
-
-package 従業員 {
+package 従業員内容 {
   mix_actor 正規社員 
   mix_actor 非正規社員
 }
-class ログイン #A9C6F6
-従業員 -down-> ログイン
-  ログイン : 従業員番号
-  ログイン : パスワード
 
 正規社員 -[hidden]- 非正規社員
 
 package 人事情報管理_ドメインモデル図{
+  mix_actor 従業員
   class 従業員情報
   class 店舗情報
   class 勤務店舗状況
+  class ログイン #A9C6F6
 
+  従業員情報 -[hidden]left- 従業員
+
+  ログイン : 従業員番号
+  ログイン : パスワード
+
+  従業員情報 : 従業員番号
   従業員情報 : 氏名
   従業員情報 : 住所
   従業員情報 : 電話番号
@@ -29,7 +32,6 @@ package 人事情報管理_ドメインモデル図{
   従業員情報 : 年齢
   従業員情報 : 生年月日
   従業員情報 : 主な店舗
-  従業員情報 : 従業員番号
   店舗情報 : 店舗名
   店舗情報 : 住所
   店舗情報 : 連絡先
@@ -39,16 +41,21 @@ package 人事情報管理_ドメインモデル図{
   勤務店舗状況 : 従業員数
   勤務店舗状況 : 責任者
 
-  従業員情報 -[hidden]- 店舗情報
+  従業員 -up-> ログイン : has-one 
+  従業員 <- 従業員情報 : has-many
+  従業員情報 -right-> 店舗情報 : has-one 
+  従業員情報 --> 勤務店舗状況 : has-one
+  店舗情報 <|-- 勤務店舗状況 : is-a
+  ' 従業員情報 -[hidden]- 店舗情報
   ' 従業員情報 --> 店舗情報
   店舗情報 o--> 従業員情報 : has-many
-  店舗情報 -[hidden]down- 勤務店舗状況
+  ' 店舗情報 -[hidden]down- 勤務店舗状況
 
-  正規社員 -[hidden]up- 従業員情報 
+  ' 正規社員 -[hidden]up- 従業員情報 
 
-  正規社員 -> 従業員情報 : has-one
-  非正規社員 -> 従業員情報 : has-one
-  非正規社員 -> 勤務店舗状況 : has-one
-  店舗情報 o--> 勤務店舗状況 :has-many
+  ' 正規社員 -> 従業員情報 : has-one
+  ' 非正規社員 -> 従業員情報 : has-one
+  ' 非正規社員 -> 勤務店舗状況 : has-one
+  ' 店舗情報 o--> 勤務店舗状況 :has-many
 }
 @enduml
