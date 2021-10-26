@@ -1,37 +1,74 @@
 @startuml domainmodel
-left to right direction
+' left to right direction
 
 hide circle
 hide method
 
 package ドメインモデル図_マスタ管理 {
-    class 商品 #F5A9BC
-    class 予約商品 #F5A9BC
-    class 在庫商品 #F5A9BC
-    class カテゴリ
-    class レビュー
-    class カート
-    class 注文 #CEF6F5
-    class ウィッシュリスト
-    class 登録情報 #A9C6F6
-    mix_actor ユーザ
+  ' class 商品 #F5A9BC
+  ' class 予約商品 #F5A9BC
+  ' class 在庫商品 #F5A9BC
+  ' class カテゴリ
+  ' class レビュー
+  ' class カート
+  ' class 注文 #CEF6F5
+  ' class ウィッシュリスト
+  ' class 登録情報 #A9C6F6
+  class 商品情報
+  class ベンチマーク
+  class 売上情報
+  class 従業員情報
+  class 店舗情報
+  class 権限管理
 
-    商品 : 型番
-    商品 : 価格
-    登録情報 : メールアドレス
+  権限管理 : 管理者
+  権限管理 : 正規社員
+  権限管理 : 非正規社員
+  従業員情報 : 従業員番号
+  従業員情報 : 役職（権限）
+  従業員情報 : 氏名
+  従業員情報 : 住所
+  従業員情報 : 電話番号
+  従業員情報 : 緊急連絡先
+  従業員情報 : 性別
+  従業員情報 : 年齢
+  従業員情報 : 生年月日
+  従業員情報 : 主な店舗
+  商品情報 : 型番
+  商品情報 : 商品コード
+  商品情報 : JANコード
+  商品情報 : 商品画像
+  商品情報 : 在庫場所
+  売上情報 : 販売履歴
+  店舗情報 : 店舗A
+  店舗情報 : 店舗B
+  店舗情報 : 店舗C
+  店舗情報 : 店舗D
 
-    ユーザ -> 登録情報 : has-one
-    ユーザ --> カート
-    カート o--> 商品 : has-many
-    商品 <--o カテゴリ
-    ユーザ o--> 注文
-    注文 o--> 商品
-    ユーザ --> ウィッシュリスト
-    ウィッシュリスト o--> 商品
-    ユーザ o--> レビュー
-    レビュー <--o 商品
+  従業員情報 -- 店舗情報
+  商品情報 -left- 売上情報
 
-    商品 <|-- 予約商品 : is-a-kind-of
-    商品 <|-- 在庫商品 : is-a-kind-of
+
+  ' mix_actor 管理者
+  ' mix_actor 正規社員
+
+  ' 商品 : 型番
+  ' 商品 : 価格
+  ' 登録情報 : メールアドレス
+
+  従業員情報 -> 権限管理 : has-one
+  商品情報 -- ベンチマーク : is-a-kind-of
+  ' ユーザ --> カート
+  ' カート o--> 商品 : has-many
+  ' 商品 <--o カテゴリ
+  ' ユーザ o--> 注文
+  ' 注文 o--> 商品
+  ' ユーザ --> ウィッシュリスト
+  ' ウィッシュリスト o--> 商品
+  ' ユーザ o--> レビュー
+  ' レビュー <--o 商品
+
+  ' 商品 <|-- 予約商品 : is-a-kind-of
+  ' 商品 <|-- 在庫商品 : is-a-kind-of
 }
 @enduml
