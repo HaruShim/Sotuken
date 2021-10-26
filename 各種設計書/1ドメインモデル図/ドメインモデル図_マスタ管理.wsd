@@ -4,7 +4,7 @@ left to right direction
 hide circle
 hide method
 
-package DomainModel {
+package ドメインモデル図_マスタ管理 {
     class 商品 #F5A9BC
     class 予約商品 #F5A9BC
     class 在庫商品 #F5A9BC
