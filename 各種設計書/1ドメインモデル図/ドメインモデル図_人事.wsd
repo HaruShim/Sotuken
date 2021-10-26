@@ -13,9 +13,9 @@ package 従業員内容 {
 
 package 人事情報管理_ドメインモデル図{
   mix_actor 従業員
-  class 従業員情報
+  class 従業員情報 #F5A9BC
   class 店舗情報
-  class 勤務店舗状況
+  class 勤務店舗状況 
   class ログイン #A9C6F6
 
   従業員情報 -[hidden]left- 従業員

@@ -4,22 +4,21 @@
 hide circle
 hide method
 
-package ドメインモデル図_マスタ管理 {
-  ' class 商品 #F5A9BC
-  ' class 予約商品 #F5A9BC
-  ' class 在庫商品 #F5A9BC
-  ' class カテゴリ
-  ' class レビュー
-  ' class カート
-  ' class 注文 #CEF6F5
-  ' class ウィッシュリスト
-  ' class 登録情報 #A9C6F6
-  class 商品情報
-  class ベンチマーク
-  class 売上情報
-  class 従業員情報
-  class 店舗情報
-  class 権限管理
+package ユーザ内容 {
+  mix_actor 管理者
+  mix_actor 正規社員
+  mix_actor 非正規社員
+}
+package ドメインモデル図_マスタ管理・その他 {
+  class 商品情報 #F5A9BC
+  class ベンチマーク 
+  class 売上情報 
+  class 従業員情報 #F5A9BC
+  class 店舗情報 
+  class 権限管理 
+  class ログイン #A9C6F6
+  class ログ
+  mix_actor ユーザ
 
   権限管理 : 管理者
   権限管理 : 正規社員
@@ -44,31 +43,15 @@ package ドメインモデル図_マスタ管理 {
   店舗情報 : 店舗B
   店舗情報 : 店舗C
   店舗情報 : 店舗D
+  ログイン : 従業員ID
+  ログイン : パスワード
+  ログ : 操作履歴
 
-  従業員情報 -- 店舗情報
+  従業員情報 -left- 店舗情報
   商品情報 -left- 売上情報
-
-
-  ' mix_actor 管理者
-  ' mix_actor 正規社員
-
-  ' 商品 : 型番
-  ' 商品 : 価格
-  ' 登録情報 : メールアドレス
-
+  ユーザ -up-> ログイン
+  ユーザ <-right- ログ 
   従業員情報 -> 権限管理 : has-one
   商品情報 -- ベンチマーク : is-a-kind-of
-  ' ユーザ --> カート
-  ' カート o--> 商品 : has-many
-  ' 商品 <--o カテゴリ
-  ' ユーザ o--> 注文
-  ' 注文 o--> 商品
-  ' ユーザ --> ウィッシュリスト
-  ' ウィッシュリスト o--> 商品
-  ' ユーザ o--> レビュー
-  ' レビュー <--o 商品
-
-  ' 商品 <|-- 予約商品 : is-a-kind-of
-  ' 商品 <|-- 在庫商品 : is-a-kind-of
 }
 @enduml
