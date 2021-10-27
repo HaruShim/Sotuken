@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-10-27T05:03:47.189Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="gspqWgJ692J9FQjqdH28" version="15.5.9" type="embed" pages="2">
+<mxfile host="65bd71144e" modified="2021-10-27T05:45:23.988Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="L4fpN4RRXQ-azpgeMgi2" version="15.5.9" type="embed">
     <diagram id="iHAmE9tPRXu_R2L8gTPu" name="ログイン">
-        <mxGraphModel dx="1572" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2467" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -88,7 +88,7 @@
                         <mxPoint x="240" y="640" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="26" value="未登録&lt;br&gt;ID・パスワードのルールを満たさない&lt;br&gt;組み合わせが違う&lt;br&gt;場合" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="26" value="未登録&lt;br&gt;ID・パスワードのルールを満たさない&lt;br&gt;ID・パスワードの組み合わせが違う&lt;br&gt;場合" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="310" y="520" width="236" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
@@ -99,20 +99,5 @@
                 </mxCell>
             </root>
         </mxGraphModel>
-    </diagram>
-    <diagram id="tf4UZJZD0RDiBqe-PHWQ" name="データ履歴参照">
-        &#xa;
-        <mxGraphModel dx="1003" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            &#xa;
-            <root>
-                &#xa;
-                <mxCell id="WSY_VpjnfgpXnHkrCLhn-0"/>
-                &#xa;
-                <mxCell id="WSY_VpjnfgpXnHkrCLhn-1" parent="WSY_VpjnfgpXnHkrCLhn-0"/>
-                &#xa;
-            </root>
-            &#xa;
-        </mxGraphModel>
-        &#xa;
     </diagram>
 </mxfile>
