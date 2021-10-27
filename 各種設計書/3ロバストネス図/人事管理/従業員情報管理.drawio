@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-10-27T05:01:09.130Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="PMoF0yV1LYrrO7k95t72" version="15.5.9" type="embed" pages="9">
+<mxfile host="65bd71144e" modified="2021-10-27T05:47:47.660Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="cgMf5UO-PisU7orzgra3" version="15.5.9" type="embed" pages="9">
     <diagram id="iSPzxl_2xVxqQYnBs36q" name="従業員情報管理">
-        <mxGraphModel dx="1628" dy="1805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2240" dy="1783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -197,7 +197,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="CpNj_ktUT5lcBxkSo7AQ" name="店舗情報管理">
-        <mxGraphModel dx="1473" dy="1783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2240" dy="1783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="fTSLs3XvEAHBtL_dvW31-0"/>
                 <mxCell id="fTSLs3XvEAHBtL_dvW31-1" parent="fTSLs3XvEAHBtL_dvW31-0"/>
@@ -394,7 +394,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="w_k554iymfJO7y2h8K5w" name="正規非正規ユーザの権限編集">
-        <mxGraphModel dx="1388" dy="445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="ASrqJBNXCCzHL_zLXTTT-0"/>
                 <mxCell id="ASrqJBNXCCzHL_zLXTTT-1" parent="ASrqJBNXCCzHL_zLXTTT-0"/>
@@ -458,7 +458,7 @@
                 <mxCell id="IoQcXrIahRn48QSyjaG7-2" value="" style="endArrow=classic;html=1;rounded=0;" parent="ASrqJBNXCCzHL_zLXTTT-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="400" y="330" as="sourcePoint"/>
-                        <mxPoint x="240" y="480" as="targetPoint"/>
+                        <mxPoint x="240" y="470" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="IoQcXrIahRn48QSyjaG7-3" value="" style="endArrow=classic;html=1;rounded=0;" parent="ASrqJBNXCCzHL_zLXTTT-1" edge="1">
@@ -492,7 +492,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="o1we0pB541-lX3KxvMWT" name="従業員情報参照">
-        <mxGraphModel dx="1388" dy="1614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1816" dy="1599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="vCAVx6xAhASOeBfDmkAW-0"/>
                 <mxCell id="vCAVx6xAhASOeBfDmkAW-1" parent="vCAVx6xAhASOeBfDmkAW-0"/>
@@ -590,7 +590,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="T3UCkDnLSe7B-hkeW1Hc" name="店舗情報参照">
-        <mxGraphModel dx="1388" dy="1614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1816" dy="1599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="dxEq_eG8Xxh_2Hl3lJVE-0"/>
                 <mxCell id="dxEq_eG8Xxh_2Hl3lJVE-1" parent="dxEq_eG8Xxh_2Hl3lJVE-0"/>

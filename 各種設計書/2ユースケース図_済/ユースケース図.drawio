@@ -295,15 +295,21 @@
             </root>
         </mxGraphModel>
     </diagram>
+<<<<<<< HEAD
     <diagram id="t57BOz2_AoMPRST4uH8D" name="その他_ユースケース図">
         &#xa;
         <mxGraphModel dx="809" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             &#xa;
+=======
+    <diagram id="t57BOz2_AoMPRST4uH8D" name="ログイン_ユースケース図">
+        <mxGraphModel dx="1158" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> de2711c22517fbf3a2df233e14c00a25f45ce55d
             <root>
                 &#xa;
                 <mxCell id="TdQh5nYLvs6xpVCR4rOV-0"/>
                 &#xa;
                 <mxCell id="TdQh5nYLvs6xpVCR4rOV-1" parent="TdQh5nYLvs6xpVCR4rOV-0"/>
+<<<<<<< HEAD
                 &#xa;
                 <mxCell id="0WsyRj6sKyPAaoaiVb-Q-0" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="TdQh5nYLvs6xpVCR4rOV-1" vertex="1">
                     &#xa;
@@ -315,15 +321,27 @@
                     &#xa;
                     <mxGeometry x="138" y="316.5" width="356" height="173.5" as="geometry"/>
                     &#xa;
+=======
+                <mxCell id="fTrJj0oOOItAwGeYD-Jv-0" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="TdQh5nYLvs6xpVCR4rOV-1">
+                    <mxGeometry x="125" y="158.25" width="190" height="220.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="0WsyRj6sKyPAaoaiVb-Q-0" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="TdQh5nYLvs6xpVCR4rOV-1" vertex="1">
+                    <mxGeometry x="348" y="191" width="400" height="129" as="geometry"/>
+>>>>>>> de2711c22517fbf3a2df233e14c00a25f45ce55d
                 </mxCell>
                 &#xa;
                 <mxCell id="0WsyRj6sKyPAaoaiVb-Q-1" value="管理者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="TdQh5nYLvs6xpVCR4rOV-1" vertex="1">
+<<<<<<< HEAD
                     &#xa;
                     <mxGeometry x="20" y="373.5" width="40" height="70" as="geometry"/>
                     &#xa;
+=======
+                    <mxGeometry x="200" y="197" width="40" height="70" as="geometry"/>
+>>>>>>> de2711c22517fbf3a2df233e14c00a25f45ce55d
                 </mxCell>
                 &#xa;
                 <mxCell id="0WsyRj6sKyPAaoaiVb-Q-2" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;strokeColor=#36393d;fillColor=#DEDCD3;fontColor=#080808;" parent="TdQh5nYLvs6xpVCR4rOV-1" vertex="1">
+<<<<<<< HEAD
                     &#xa;
                     <mxGeometry x="140" y="221" width="356" height="79" as="geometry"/>
                     &#xa;
@@ -333,9 +351,13 @@
                     &#xa;
                     <mxGeometry x="120" y="191" width="80" height="30" as="geometry"/>
                     &#xa;
+=======
+                    <mxGeometry x="370" y="221" width="356" height="79" as="geometry"/>
+>>>>>>> de2711c22517fbf3a2df233e14c00a25f45ce55d
                 </mxCell>
                 &#xa;
                 <mxCell id="0WsyRj6sKyPAaoaiVb-Q-4" value="ログインする" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="TdQh5nYLvs6xpVCR4rOV-1" vertex="1">
+<<<<<<< HEAD
                     &#xa;
                     <mxGeometry x="211.5" y="251" width="219" height="35" as="geometry"/>
                     &#xa;
@@ -369,9 +391,13 @@
                         &#xa;
                     </mxGeometry>
                     &#xa;
+=======
+                    <mxGeometry x="441.5" y="251" width="219" height="35" as="geometry"/>
+>>>>>>> de2711c22517fbf3a2df233e14c00a25f45ce55d
                 </mxCell>
                 &#xa;
                 <mxCell id="0WsyRj6sKyPAaoaiVb-Q-10" value="ログイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#080808;" parent="TdQh5nYLvs6xpVCR4rOV-1" vertex="1">
+<<<<<<< HEAD
                     &#xa;
                     <mxGeometry x="142" y="231" width="348" height="20" as="geometry"/>
                     &#xa;
@@ -405,9 +431,16 @@
                     &#xa;
                     <mxGeometry relative="1" as="geometry"/>
                     &#xa;
+=======
+                    <mxGeometry x="330" y="197" width="138" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="0WsyRj6sKyPAaoaiVb-Q-26" value="正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="TdQh5nYLvs6xpVCR4rOV-1" vertex="1">
+                    <mxGeometry x="160" y="280" width="40" height="70" as="geometry"/>
+>>>>>>> de2711c22517fbf3a2df233e14c00a25f45ce55d
                 </mxCell>
                 &#xa;
                 <mxCell id="0WsyRj6sKyPAaoaiVb-Q-22" value="非正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="TdQh5nYLvs6xpVCR4rOV-1" vertex="1">
+<<<<<<< HEAD
                     &#xa;
                     <mxGeometry x="620" y="233.5" width="40" height="70" as="geometry"/>
                     &#xa;
@@ -433,9 +466,15 @@
                 &#xa;
                 <mxCell id="0WsyRj6sKyPAaoaiVb-Q-27" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="TdQh5nYLvs6xpVCR4rOV-1" source="0WsyRj6sKyPAaoaiVb-Q-26" target="0WsyRj6sKyPAaoaiVb-Q-4" edge="1">
                     &#xa;
+=======
+                    <mxGeometry x="240" y="280" width="40" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="fTrJj0oOOItAwGeYD-Jv-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="TdQh5nYLvs6xpVCR4rOV-1" source="fTrJj0oOOItAwGeYD-Jv-0" target="0WsyRj6sKyPAaoaiVb-Q-4">
+>>>>>>> de2711c22517fbf3a2df233e14c00a25f45ce55d
                     <mxGeometry relative="1" as="geometry"/>
                     &#xa;
                 </mxCell>
+<<<<<<< HEAD
                 &#xa;
                 <mxCell id="0WsyRj6sKyPAaoaiVb-Q-28" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="TdQh5nYLvs6xpVCR4rOV-1" source="0WsyRj6sKyPAaoaiVb-Q-26" target="0WsyRj6sKyPAaoaiVb-Q-6" edge="1">
                     &#xa;
@@ -447,6 +486,10 @@
                     &#xa;
                     <mxGeometry x="620" y="400" width="40" height="70" as="geometry"/>
                     &#xa;
+=======
+                <mxCell id="fTrJj0oOOItAwGeYD-Jv-4" value="ユーザ" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="TdQh5nYLvs6xpVCR4rOV-1">
+                    <mxGeometry x="195" y="171" width="50" height="20" as="geometry"/>
+>>>>>>> de2711c22517fbf3a2df233e14c00a25f45ce55d
                 </mxCell>
                 &#xa;
             </root>
