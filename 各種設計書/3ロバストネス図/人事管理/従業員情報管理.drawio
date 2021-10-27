@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" pages="7">
+<mxfile host="65bd71144e" modified="2021-10-27T02:29:59.683Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.5.9" etag="6vSRHreo_aggDyRfygRk" type="embed" pages="7">
     <diagram id="iSPzxl_2xVxqQYnBs36q" name="従業員情報管理">
-        <mxGraphModel dx="1636" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1604" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -55,12 +55,6 @@
                         <mxPoint x="500" y="200" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="25" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="400" y="200" as="sourcePoint"/>
-                        <mxPoint x="240" y="200" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="30" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="410" y="230" as="sourcePoint"/>
@@ -79,7 +73,7 @@
                         <mxPoint x="610" y="270" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="45" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+                <mxCell id="45" value="" style="endArrow=classic;html=1;rounded=0;jumpStyle=arc;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="420" y="240" as="sourcePoint"/>
                         <mxPoint x="230" y="420" as="targetPoint"/>
@@ -88,7 +82,7 @@
                 <mxCell id="47" value="従業員情報&lt;br&gt;編集画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
                     <mxGeometry x="120" y="520" width="100" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+                <mxCell id="48" value="" style="endArrow=classic;html=1;rounded=0;jumpStyle=arc;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="430" y="250" as="sourcePoint"/>
                         <mxPoint x="230" y="530" as="targetPoint"/>
@@ -151,11 +145,17 @@
                         <mxPoint x="110" y="199.9999999999999" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="gHfgHg54n4XYzkmyc0fP-52" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="200" as="sourcePoint"/>
+                        <mxPoint x="400" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="CpNj_ktUT5lcBxkSo7AQ" name="店舗情報管理">
-        <mxGraphModel dx="1636" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1561" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="fTSLs3XvEAHBtL_dvW31-0"/>
                 <mxCell id="fTSLs3XvEAHBtL_dvW31-1" parent="fTSLs3XvEAHBtL_dvW31-0"/>
@@ -210,12 +210,6 @@
                         <mxPoint x="500" y="199.9999999999999" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="v--iVw8E8URV__1AKJQJ-14" value="" style="endArrow=classic;html=1;rounded=0;" parent="fTSLs3XvEAHBtL_dvW31-1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="400" y="199.9999999999999" as="sourcePoint"/>
-                        <mxPoint x="240" y="199.9999999999999" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="v--iVw8E8URV__1AKJQJ-15" value="" style="endArrow=classic;html=1;rounded=0;" parent="fTSLs3XvEAHBtL_dvW31-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="410" y="229.9999999999999" as="sourcePoint"/>
@@ -234,7 +228,7 @@
                         <mxPoint x="610" y="269.9999999999999" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="v--iVw8E8URV__1AKJQJ-18" value="" style="endArrow=classic;html=1;rounded=0;" parent="fTSLs3XvEAHBtL_dvW31-1" edge="1">
+                <mxCell id="v--iVw8E8URV__1AKJQJ-18" value="" style="endArrow=classic;html=1;rounded=0;jumpStyle=arc;" parent="fTSLs3XvEAHBtL_dvW31-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="420" y="239.9999999999999" as="sourcePoint"/>
                         <mxPoint x="230" y="420" as="targetPoint"/>
@@ -243,7 +237,7 @@
                 <mxCell id="v--iVw8E8URV__1AKJQJ-19" value="店舗情報&lt;br&gt;編集画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="fTSLs3XvEAHBtL_dvW31-1" vertex="1">
                     <mxGeometry x="120" y="520" width="100" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="v--iVw8E8URV__1AKJQJ-20" value="" style="endArrow=classic;html=1;rounded=0;" parent="fTSLs3XvEAHBtL_dvW31-1" edge="1">
+                <mxCell id="v--iVw8E8URV__1AKJQJ-20" value="" style="endArrow=classic;html=1;rounded=0;jumpStyle=arc;" parent="fTSLs3XvEAHBtL_dvW31-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="430" y="249.9999999999999" as="sourcePoint"/>
                         <mxPoint x="230" y="530" as="targetPoint"/>
@@ -306,11 +300,17 @@
                         <mxPoint x="110" y="200" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="GJuI38r5OqHNO0Njk28U-0" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="fTSLs3XvEAHBtL_dvW31-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="200" as="sourcePoint"/>
+                        <mxPoint x="400" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="w_k554iymfJO7y2h8K5w" name="正規非正規ユーザの権限編集">
-        <mxGraphModel dx="1636" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1561" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="ASrqJBNXCCzHL_zLXTTT-0"/>
                 <mxCell id="ASrqJBNXCCzHL_zLXTTT-1" parent="ASrqJBNXCCzHL_zLXTTT-0"/>
@@ -371,12 +371,6 @@
                         <mxPoint x="500" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="IoQcXrIahRn48QSyjaG7-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="ASrqJBNXCCzHL_zLXTTT-1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="400" y="320" as="sourcePoint"/>
-                        <mxPoint x="240" y="320" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="IoQcXrIahRn48QSyjaG7-2" value="" style="endArrow=classic;html=1;rounded=0;" parent="ASrqJBNXCCzHL_zLXTTT-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="400" y="330" as="sourcePoint"/>
@@ -404,11 +398,17 @@
                         <mxPoint x="110" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="LMJ1Vln8c9uHf1E2hwo5-0" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="ASrqJBNXCCzHL_zLXTTT-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="320" as="sourcePoint"/>
+                        <mxPoint x="400" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="o1we0pB541-lX3KxvMWT" name="従業員情報参照">
-        <mxGraphModel dx="1636" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1561" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="vCAVx6xAhASOeBfDmkAW-0"/>
                 <mxCell id="vCAVx6xAhASOeBfDmkAW-1" parent="vCAVx6xAhASOeBfDmkAW-0"/>
@@ -457,12 +457,6 @@
                         <mxPoint x="400" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="SI_BDwgW4Lhpb8TTPr_U-4" value="" style="endArrow=classic;html=1;rounded=0;" parent="vCAVx6xAhASOeBfDmkAW-1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="400" y="320" as="sourcePoint"/>
-                        <mxPoint x="239.99999999999977" y="320" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="SI_BDwgW4Lhpb8TTPr_U-5" value="" style="endArrow=classic;html=1;rounded=0;" parent="vCAVx6xAhASOeBfDmkAW-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="400" y="330" as="sourcePoint"/>
@@ -484,11 +478,17 @@
                         <mxPoint x="500" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="AvGeEPQrjgJoGsiPnstD-0" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="vCAVx6xAhASOeBfDmkAW-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="320" as="sourcePoint"/>
+                        <mxPoint x="400" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="T3UCkDnLSe7B-hkeW1Hc" name="店舗情報参照">
-        <mxGraphModel dx="1636" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1561" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="dxEq_eG8Xxh_2Hl3lJVE-0"/>
                 <mxCell id="dxEq_eG8Xxh_2Hl3lJVE-1" parent="dxEq_eG8Xxh_2Hl3lJVE-0"/>
@@ -537,12 +537,6 @@
                         <mxPoint x="400" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="uvHnYzWHBnzQ2yUbMlZ--11" value="" style="endArrow=classic;html=1;rounded=0;" parent="dxEq_eG8Xxh_2Hl3lJVE-1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="400" y="320" as="sourcePoint"/>
-                        <mxPoint x="239.99999999999977" y="320" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="uvHnYzWHBnzQ2yUbMlZ--12" value="" style="endArrow=classic;html=1;rounded=0;" parent="dxEq_eG8Xxh_2Hl3lJVE-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="400" y="330" as="sourcePoint"/>
@@ -564,11 +558,17 @@
                         <mxPoint x="500" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="Y85mXMhYF-k0RmhAlIZn-0" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="dxEq_eG8Xxh_2Hl3lJVE-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="320" as="sourcePoint"/>
+                        <mxPoint x="400" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="q7J2tqKcjkb_hwts1HtD" name="勤務店舗情報管理">
-        <mxGraphModel dx="1636" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1604" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="uPCTpEF2r6n-lkYG-dxw-0"/>
                 <mxCell id="uPCTpEF2r6n-lkYG-dxw-1" parent="uPCTpEF2r6n-lkYG-dxw-0"/>
@@ -629,12 +629,6 @@
                         <mxPoint x="500" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="6tV9xsz2oFO4HKePDE_--14" value="" style="endArrow=classic;html=1;rounded=0;" parent="uPCTpEF2r6n-lkYG-dxw-1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="400" y="320" as="sourcePoint"/>
-                        <mxPoint x="239.99999999999977" y="320" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="6tV9xsz2oFO4HKePDE_--15" value="" style="endArrow=classic;html=1;rounded=0;" parent="uPCTpEF2r6n-lkYG-dxw-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="400" y="330" as="sourcePoint"/>
@@ -674,11 +668,17 @@
                         <mxPoint x="240" y="620" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="QDttnWmXIKQR5Z7m8x6W-0" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="uPCTpEF2r6n-lkYG-dxw-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="320" as="sourcePoint"/>
+                        <mxPoint x="400" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="ZDKTbDEgJJMV1xWzbsfM" name="情報検索">
-        <mxGraphModel dx="1636" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1801" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="-1JpLQUT_Qyv8fWckbRt-0"/>
                 <mxCell id="-1JpLQUT_Qyv8fWckbRt-1" parent="-1JpLQUT_Qyv8fWckbRt-0"/>
@@ -727,12 +727,6 @@
                         <mxPoint x="400" y="159.9999999999999" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="_Nh-kKbw4i4o8xH2NEyf-11" value="" style="endArrow=classic;html=1;rounded=0;" parent="-1JpLQUT_Qyv8fWckbRt-1" edge="1">
-                    <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="400" y="320" as="sourcePoint"/>
-                        <mxPoint x="240" y="320" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="_Nh-kKbw4i4o8xH2NEyf-12" value="" style="endArrow=classic;html=1;rounded=0;" parent="-1JpLQUT_Qyv8fWckbRt-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="400" y="330" as="sourcePoint"/>
@@ -752,6 +746,12 @@
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="630" y="249.9999999999999" as="sourcePoint"/>
                         <mxPoint x="500" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="0dY6N87sr7EuYQeJpdH7-1" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="-1JpLQUT_Qyv8fWckbRt-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="320" as="sourcePoint"/>
+                        <mxPoint x="400" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
