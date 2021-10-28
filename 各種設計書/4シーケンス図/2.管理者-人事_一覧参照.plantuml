@@ -1,7 +1,5 @@
 @startuml シーケンス図
 
-
-
 ' 下アイコン除去
 hide footbox
 ' ヘッダー
@@ -40,31 +38,5 @@ deactivate
 activate StaffListSc
 Act <-- StaffListSc : 一覧画面を表示する
 
-
-' 新規登録シーケンス
-group "新規登録"
-    Act -> StaffListSc : 「新規登録」を押下する
-    StaffListSc -> ScCl : 新規登録画面を要求する
-    deactivate
-    activate ScCl
-    RegiSc <-- ScCl
-    deactivate
-    activate RegiSc
-    Act <-- RegiSc
-
-    Act -> RegiSc : データ入力
-    RegiSc -> JudgeCl : 入力データの検証を要求する
-        alt successful case
-            RegiCl <-- JudgeCl : 成功フラグを返す()
-            RegiCl <-> StaffDB : 従業員情報を登録する()
-            RegiSc <-- RegiCl : 登録結果画面を組み立てる()
-            Act <-- RegiSc : 「登録しました」として表示する()
-        else fail
-            RegiCl <-- JudgeCl : 失敗フラグを返す()
-            RegiSc <-- RegiCl : 登録結果画面を組み立てる()
-            Act <-- RegiSc : エラー部分を示し表示する()
-        end
-
-end
 
 @enduml
