@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="3">
     <diagram id="CvgPCsXY9eOnfGZYOeE3" name="人事管理_ユースケース図">
-        <mxGraphModel dx="809" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="764" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="RNgX-jbUkB-9QtbaT86_-0"/>
                 <mxCell id="RNgX-jbUkB-9QtbaT86_-1" parent="RNgX-jbUkB-9QtbaT86_-0"/>
@@ -107,7 +107,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="1RIJjTR2KE_wcN-HXxek" name="在庫管理_ユースケース図">
-        <mxGraphModel dx="809" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="764" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="mOK6NjzvD6mZe8noQFNt-67" value="Untitled Layer" style="" parent="0"/>
@@ -293,7 +293,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="xcE7I82zPZJEnPT5pIup" name="ログイン_ユースケース図">
-        <mxGraphModel dx="815" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="764" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="Xd7oxiFQeFBAZhC6O8YC-0"/>
                 <mxCell id="Xd7oxiFQeFBAZhC6O8YC-1" parent="Xd7oxiFQeFBAZhC6O8YC-0"/>
