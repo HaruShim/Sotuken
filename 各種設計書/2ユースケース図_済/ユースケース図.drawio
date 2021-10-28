@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <mxfile host="65bd71144e" modified="2021-10-27T07:37:49.451Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.5.9" etag="73qfC-0ysoaLQy94T2o7" type="embed" pages="3">
+=======
+<mxfile host="65bd71144e" pages="3">
+>>>>>>> a26f0ed6af91cacb318e1a6eb68543c55a33c4c5
     <diagram id="CvgPCsXY9eOnfGZYOeE3" name="人事管理_ユースケース図">
-        <mxGraphModel dx="815" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="984" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="RNgX-jbUkB-9QtbaT86_-0"/>
                 <mxCell id="RNgX-jbUkB-9QtbaT86_-1" parent="RNgX-jbUkB-9QtbaT86_-0"/>
@@ -107,7 +111,11 @@
         </mxGraphModel>
     </diagram>
     <diagram id="1RIJjTR2KE_wcN-HXxek" name="在庫管理_ユースケース図">
+<<<<<<< HEAD
         <mxGraphModel dx="1165" dy="667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+=======
+        <mxGraphModel dx="984" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> a26f0ed6af91cacb318e1a6eb68543c55a33c4c5
             <root>
                 <mxCell id="0"/>
                 <mxCell id="mOK6NjzvD6mZe8noQFNt-67" value="Untitled Layer" style="" parent="0"/>
@@ -131,6 +139,12 @@
                 </mxCell>
                 <mxCell id="mOK6NjzvD6mZe8noQFNt-77" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;strokeColor=#36393d;fillColor=#DEDCD3;fontColor=#080808;" parent="mOK6NjzvD6mZe8noQFNt-67" vertex="1">
                     <mxGeometry x="924" y="467" width="356" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="uopExSj1K74y8ZdupmQt-67" value="販売履歴UCにいる？" style="shape=callout;rounded=1;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" parent="mOK6NjzvD6mZe8noQFNt-67" vertex="1">
+                    <mxGeometry x="360" y="560" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="uopExSj1K74y8ZdupmQt-68" value="倉庫情報管理以下ry" style="shape=callout;rounded=1;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" parent="mOK6NjzvD6mZe8noQFNt-67" vertex="1">
+                    <mxGeometry x="520" y="570" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="1" style="" parent="0"/>
                 <mxCell id="VGDOHHYCb-uCLaKSD1Ca-94" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
