@@ -2,35 +2,35 @@
 
 hide footbox
 header 営業情報管理システム/人事情報管理
-title <back:#25b7c0>従業員情報</back>管理・<back:25b7c0>店舗情報</back>管理
+title <back:#25b7c0>従業員情報</back>管理
 
-actor "管理者\n(権限)" as Manager
-boundary "メ二ュー\n画面" as MenuSc
-Manager -> MenuSc : マスタ管理\nを選択
-activate MenuSc
+actor "管理者\n正規社員" as Actor
+boundary "ログイン済み\nホーム画面" as HomeSc
+control "従業員情報コントローラ" as Staff
+entity "従業員情報" as StaffDB
+control "新規登録コントローラ" as RegiCl
+boundary "新規登録画面" as RegiSc
+control "入力データを検証する" as Judge
+control "登録する" as Regi
 
-create boundary "マスタ管理\n画面" as MastSc
+
+
+
 MenuSc -> MastSc : 表示()
-deactivate
-activate MastSc
 
 Manager -> MastSc : <back:#25b7c0>○○</back>管理を選択
 
-create boundary "<back:#25b7c0>○○</back>登録\n画面" as StaffRegiSc
-MastSc -> StaffRegiSc : 表示()
-deactivate
-activate StaffRegiSc
 
-Manager -> StaffRegiSc : <back:#25b7c0>○○</back>入力
+MastSc -> StaffRegiSc : 表示する()
 
-create entity "<back:#25b7c0>○○</back>\nモデル" as StaffObj
-StaffRegiSc -> StaffObj : <back:#25b7c0>○○</back>登録()
-deactivate
-activate StaffObj
 
-StaffObj -> StaffRegiSc : 登録しました\nポップを表示()
-deactivate
-activate StaffRegiSc
-deactivate
+
+Manager -> StaffRegiSc : <back:#25b7c0>○○</back>入力する
+
+
+StaffRegiSc -> StaffObj : <back:#25b7c0>○○</back>を登録する()
+
+
+StaffObj -> StaffRegiSc : 登録しました\nポップを表示する()
 
 @enduml
