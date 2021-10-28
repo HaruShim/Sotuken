@@ -1,70 +1,43 @@
 @startuml シーケンス図
 
-
-
-' 下アイコン除去
 hide footbox
-' ヘッダー
 header 営業情報管理システム/人事情報管理
-' タイトル
-title 従業員情報管理
+title 従業員情報管理_登録
 
-
-' アイコン
 actor "管理者\n正規社員" as Act
-boundary "ログイン済み\nホーム画面" as HomeSc
 boundary "従業員情報\n一覧画面" as StaffListSc
 boundary "新規登録画面" as RegiSc
-control "従業員情報を取得する" as StaffCl
-control "表示する" as ScCl
-control "入力データ検証" as JudgeCl
-control "登録する" as RegiCl
+boundary "従業員詳細情報画面" as StaffSc
+boundary "従業員情報編集画面" as UpdateSc
+control "従業員情報\nコントローラ" as StaffCl
+control "新規登録\nコントローラ" as RegiCl
+control "更新\nコントローラ" as UpdateCl
+control "削除\nコントローラ" as DeleteCl
+control "入力データを検証する" as JudgeCl
+
+control "登録する" as Regi
 entity "従業員情報" as StaffDB
 
 
 
-' ログイン済みホーム画面から一覧表示までのシーケンス
-activate Act
-Act -> HomeSc : 「従業員情報」を押下する
-activate HomeSc
-HomeSc -> StaffCl : 従業員情報一覧画面\nを要求する
-deactivate
-activate StaffCl
+Act -> StaffListSc : 新規登録を押下する
+StaffListSc -> RegiCl : 新規登録画面を要求する()
+RegiSc <-- RegiCl : 新規登録画面を組み立てる()
+Act <-- RegiSc : 新規登録画面を表示する()
+Act -> RegiSc : 従業員情報を入力する
+RegiSc -> RegiCl : 登録結果画面を要求する()
+RegiCl -> JudgeCl : 入力データの検証を要求する()
+    alt successful case
+        RegiCl <-- JudgeCl : 成功フラグを返す()
+        RegiCl <-> StaffDB : 従業員情報を登録する()
+        RegiSc <-- RegiCl : 登録結果画面を組み立てる()
+        Act <-- RegiSc : 「登録しました」として表示する()
+    else fail
+        RegiCl <-- JudgeCl : 失敗フラグを返す()
+        RegiSc <-- RegiCl : 登録結果画面を組み立てる()
+        Act <-- RegiSc : エラー部分を示し表示する()
+    end
 
-StaffCl -> StaffDB : 従業員のデータを要求する
-activate StaffDB
-StaffCl <-- StaffDB : 従業員のデータを返す
-deactivate
-StaffListSc <-- StaffCl : 一覧画面を組み立てる
-deactivate
-activate StaffListSc
-Act <-- StaffListSc : 一覧画面を表示する
 
-
-' 新規登録シーケンス
-group "新規登録"
-    Act -> StaffListSc : 「新規登録」を押下する
-    StaffListSc -> ScCl : 新規登録画面を要求する
-    deactivate
-    activate ScCl
-    RegiSc <-- ScCl
-    deactivate
-    activate RegiSc
-    Act <-- RegiSc
-
-    Act -> RegiSc : データ入力
-    RegiSc -> JudgeCl : 入力データの検証を要求する
-        alt successful case
-            RegiCl <-- JudgeCl : 成功フラグを返す()
-            RegiCl <-> StaffDB : 従業員情報を登録する()
-            RegiSc <-- RegiCl : 登録結果画面を組み立てる()
-            Act <-- RegiSc : 「登録しました」として表示する()
-        else fail
-            RegiCl <-- JudgeCl : 失敗フラグを返す()
-            RegiSc <-- RegiCl : 登録結果画面を組み立てる()
-            Act <-- RegiSc : エラー部分を示し表示する()
-        end
-
-end
 
 @enduml

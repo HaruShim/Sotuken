@@ -4,18 +4,16 @@ hide footbox
 ' ヘッダー
 header 営業情報管理システム/人事情報管理
 ' タイトル
-title 従業員情報管理
+title 従業員情報管理_削除
 
 
 ' アイコン
 actor "管理者\n正規社員" as Act
 boundary "ログイン済み\nホーム画面" as HomeSc
 boundary "従業員情報\n一覧画面" as StaffListSc
-boundary "新規登録画面" as RegiSc
+boundary "詳細画面" as StaffSc
 control "従業員情報を取得する" as StaffCl
 control "表示する" as ScCl
-control "入力データ検証" as JudgeCl
-control "登録する" as RegiCl
 entity "従業員情報" as StaffDB
 
 
@@ -38,10 +36,24 @@ activate StaffListSc
 Act <-- StaffListSc : 一覧画面を表示する
 
 
-    ' 削除シーケンス
-    group "削除する"
+' 詳細画面表示までのシーケンス
+Act -> StaffListSc : 参照したいデータを選択し押下する
+StaffListSc -> ScCl : 詳細画面を要求する
+deactivate
+activate ScCl
+StaffSc <-- ScCl
+deactivate
+activate StaffSc
+Act <-- StaffSc : 詳細画面を表示する
+deactivate
 
-    end
+
+' 従業員情報を削除するシーケンス
+group "削除する"
+
+
+
+end
 
 
 @enduml
