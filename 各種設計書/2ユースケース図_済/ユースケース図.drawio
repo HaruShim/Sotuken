@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="3">
     <diagram id="CvgPCsXY9eOnfGZYOeE3" name="人事管理_ユースケース図">
-        <mxGraphModel dx="984" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="809" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="RNgX-jbUkB-9QtbaT86_-0"/>
                 <mxCell id="RNgX-jbUkB-9QtbaT86_-1" parent="RNgX-jbUkB-9QtbaT86_-0"/>
@@ -58,7 +58,7 @@
                         <mxPoint x="1090" y="420" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="bhvNu0Lqs81DkffSNlAM-19" value="勤務店舗状況を管理する" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="RNgX-jbUkB-9QtbaT86_-1" vertex="1">
+                <mxCell id="bhvNu0Lqs81DkffSNlAM-19" value="勤務店舗状況を編集する" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="RNgX-jbUkB-9QtbaT86_-1" vertex="1">
                     <mxGeometry x="914" y="453" width="140" height="35" as="geometry"/>
                 </mxCell>
                 <mxCell id="bhvNu0Lqs81DkffSNlAM-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#36393d;fillColor=#f9f7ed;fontColor=#080808;" parent="RNgX-jbUkB-9QtbaT86_-1" source="bhvNu0Lqs81DkffSNlAM-4" target="bhvNu0Lqs81DkffSNlAM-12" edge="1">
@@ -107,7 +107,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="1RIJjTR2KE_wcN-HXxek" name="在庫管理_ユースケース図">
-        <mxGraphModel dx="984" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="809" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="mOK6NjzvD6mZe8noQFNt-67" value="Untitled Layer" style="" parent="0"/>
@@ -131,12 +131,6 @@
                 </mxCell>
                 <mxCell id="mOK6NjzvD6mZe8noQFNt-77" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;strokeColor=#36393d;fillColor=#DEDCD3;fontColor=#080808;" parent="mOK6NjzvD6mZe8noQFNt-67" vertex="1">
                     <mxGeometry x="924" y="467" width="356" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="uopExSj1K74y8ZdupmQt-67" value="販売履歴UCにいる？" style="shape=callout;rounded=1;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" parent="mOK6NjzvD6mZe8noQFNt-67" vertex="1">
-                    <mxGeometry x="360" y="560" width="120" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="uopExSj1K74y8ZdupmQt-68" value="倉庫情報管理以下ry" style="shape=callout;rounded=1;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" parent="mOK6NjzvD6mZe8noQFNt-67" vertex="1">
-                    <mxGeometry x="520" y="570" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="1" style="" parent="0"/>
                 <mxCell id="VGDOHHYCb-uCLaKSD1Ca-94" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
