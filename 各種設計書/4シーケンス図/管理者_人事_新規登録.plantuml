@@ -5,7 +5,6 @@ header 営業情報管理システム/人事情報管理
 title <back:#25b7c0>従業員情報</back>管理
 
 actor "管理者\n正規社員" as Act
-boundary "ログイン済み\nホーム画面" as HomeSc
 boundary "従業員情報\n一覧画面" as StaffListSc
 boundary "新規登録画面" as RegiSc
 boundary "従業員詳細情報画面" as StaffSc
@@ -39,6 +38,6 @@ RegiCl -> JudgeCl : 入力データの検証を要求する()
         Act <-- RegiSc : エラー部分を示し表示する()
     end
 
-ｙ
+
 
 @enduml
