@@ -1,4 +1,4 @@
-@startuml シーケンス図
+@startuml sequence
 
 hide footbox
 header 営業情報管理システム/人事情報管理
