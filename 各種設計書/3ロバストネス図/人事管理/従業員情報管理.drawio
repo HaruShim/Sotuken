@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2021-10-28T03:22:43.666Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="Bw0hmPFK5Nc5RFs50xMs" version="15.5.9" type="embed" pages="6">
+<mxfile host="65bd71144e" modified="2021-10-28T03:36:40.294Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="tVyMEJdCdRmHVl9EbBTp" version="15.5.9" type="embed" pages="6">
     <diagram id="iSPzxl_2xVxqQYnBs36q" name="従業員情報管理">
         <mxGraphModel dx="1626" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -465,7 +465,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="o1we0pB541-lX3KxvMWT" name="従業員情報参照">
-        <mxGraphModel dx="1485" dy="524" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2219" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="vCAVx6xAhASOeBfDmkAW-0"/>
                 <mxCell id="vCAVx6xAhASOeBfDmkAW-1" style="locked=1;" parent="vCAVx6xAhASOeBfDmkAW-0"/>
@@ -545,10 +545,10 @@
         </mxGraphModel>
     </diagram>
     <diagram id="T3UCkDnLSe7B-hkeW1Hc" name="店舗情報参照">
-        <mxGraphModel dx="1759" dy="742" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2799" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="dxEq_eG8Xxh_2Hl3lJVE-0"/>
-                <mxCell id="dxEq_eG8Xxh_2Hl3lJVE-1" style="" parent="dxEq_eG8Xxh_2Hl3lJVE-0"/>
+                <mxCell id="dxEq_eG8Xxh_2Hl3lJVE-1" style="locked=1;" parent="dxEq_eG8Xxh_2Hl3lJVE-0"/>
                 <mxCell id="uvHnYzWHBnzQ2yUbMlZ--0" value="ログイン済&lt;br&gt;ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="dxEq_eG8Xxh_2Hl3lJVE-1" vertex="1">
                     <mxGeometry x="120" y="120" width="100" height="80" as="geometry"/>
                 </mxCell>
@@ -625,7 +625,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="q7J2tqKcjkb_hwts1HtD" name="勤務店舗状況管理">
-        <mxGraphModel dx="1626" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2517" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="uPCTpEF2r6n-lkYG-dxw-0"/>
                 <mxCell id="uPCTpEF2r6n-lkYG-dxw-1" style="locked=1;" parent="uPCTpEF2r6n-lkYG-dxw-0"/>
