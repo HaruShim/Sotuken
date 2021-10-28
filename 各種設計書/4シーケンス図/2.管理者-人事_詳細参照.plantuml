@@ -38,10 +38,8 @@ activate StaffListSc
 Act <-- StaffListSc : 一覧画面を表示する
 
 
-    ' 削除シーケンス
-    group "削除する"
 
-    end
+
 
 
 @enduml
