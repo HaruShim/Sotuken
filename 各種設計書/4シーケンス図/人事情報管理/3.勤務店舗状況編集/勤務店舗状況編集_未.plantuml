@@ -23,4 +23,24 @@ control "更新する" as c2
 entity "従業員情報" as e1
 
 
+
+' 長谷川
+activate a1
+a1 -> b1
+activate b1
+b1 -> c1 : 「勤務店舗状況」を押下する()
+deactivate
+activate c1
+c1 <-> e1 : aaaaaaa
+b2 <-- c1
+deactivate
+activate b2
+a1 <-- b2
+a1 -> b2
+b2 -> c2
+activate c2
+c2 <-> e1 : aaaaaaaa
+
+
+
 @enduml
