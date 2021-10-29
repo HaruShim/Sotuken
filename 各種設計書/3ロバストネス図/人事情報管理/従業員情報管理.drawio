@@ -206,7 +206,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="CpNj_ktUT5lcBxkSo7AQ" name="店舗情報管理">
-        <mxGraphModel dx="2475" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="fTSLs3XvEAHBtL_dvW31-0"/>
                 <mxCell id="fTSLs3XvEAHBtL_dvW31-1" style="locked=1;" parent="fTSLs3XvEAHBtL_dvW31-0"/>
@@ -376,7 +376,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="w_k554iymfJO7y2h8K5w" name="正規非正規ユーザの権限編集">
-        <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="ASrqJBNXCCzHL_zLXTTT-0"/>
                 <mxCell id="ASrqJBNXCCzHL_zLXTTT-1" style="locked=1;" parent="ASrqJBNXCCzHL_zLXTTT-0"/>
