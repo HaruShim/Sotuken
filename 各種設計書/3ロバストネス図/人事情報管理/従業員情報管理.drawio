@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" pages="19">
+<mxfile host="65bd71144e" modified="2021-10-29T03:14:42.051Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="oa5H3KjfEZLJKovHwZbv" version="15.6.2" type="embed" pages="19">
     <diagram id="iSPzxl_2xVxqQYnBs36q" name="従業員情報管理">
-        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1937" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" style="locked=1;" parent="0"/>
@@ -705,7 +705,11 @@
         </mxGraphModel>
     </diagram>
     <diagram id="u6uAz6le20SeR2MsST6_" name="*従業員情報管理_登録">
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+        <mxGraphModel dx="2236" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+=======
         <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
             <root>
                 <mxCell id="iILXsB8xfi0MmqsRtAAt-0"/>
                 <mxCell id="iILXsB8xfi0MmqsRtAAt-1" parent="iILXsB8xfi0MmqsRtAAt-0"/>
@@ -796,7 +800,7 @@
                 <mxCell id="H5UDgFJsVJjFs0eg-Qf4-13" value="入力エラー時は&lt;br&gt;エラーメッセージを表示" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="iILXsB8xfi0MmqsRtAAt-1" vertex="1">
                     <mxGeometry x="280" y="410" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="51a1IdMckLsOIh7_EKAz-0" value="登録完了画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="iILXsB8xfi0MmqsRtAAt-1" vertex="1">
+                <mxCell id="51a1IdMckLsOIh7_EKAz-0" value="登録完了&lt;br&gt;画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="iILXsB8xfi0MmqsRtAAt-1" vertex="1">
                     <mxGeometry x="120" y="480" width="100" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="51a1IdMckLsOIh7_EKAz-3" value="" style="endArrow=none;html=1;rounded=0;startArrow=classic;startFill=1;endFill=0;jumpStyle=arc;" parent="iILXsB8xfi0MmqsRtAAt-1" edge="1">
@@ -833,7 +837,11 @@
         </mxGraphModel>
     </diagram>
     <diagram id="iKOnc4zgBir_UfPWP5Ad" name="*従業員情報管理_参照">
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+        <mxGraphModel dx="1801" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+=======
         <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
             <root>
                 <mxCell id="RgFA7SEQGFGJVd3Gjxhv-0"/>
                 <mxCell id="RgFA7SEQGFGJVd3Gjxhv-1" parent="RgFA7SEQGFGJVd3Gjxhv-0"/>
@@ -913,7 +921,11 @@
         </mxGraphModel>
     </diagram>
     <diagram id="IFMydM7Jh42T5aiGVzNp" name="*従業員情報管理_編集">
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+        <mxGraphModel dx="2799" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+=======
         <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
             <root>
                 <mxCell id="ExiGSukkad4t69l5Ue1t-0"/>
                 <mxCell id="ExiGSukkad4t69l5Ue1t-1" parent="ExiGSukkad4t69l5Ue1t-0"/>
@@ -1032,7 +1044,11 @@
         </mxGraphModel>
     </diagram>
     <diagram id="3DgiwX1BnJunymCmlgRd" name="*従業員情報管理_削除">
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+        <mxGraphModel dx="2010" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+=======
         <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
             <root>
                 <mxCell id="MctrNSa3Du8lBBgZTMPF-0"/>
                 <mxCell id="MctrNSa3Du8lBBgZTMPF-1" parent="MctrNSa3Du8lBBgZTMPF-0"/>
@@ -1127,7 +1143,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="q8-iIdnQaGOhImmDq-Hs" name="*従業員情報管理_完全削除">
-        <mxGraphModel dx="1604" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2010" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-0"/>
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-1" parent="FTmizxJ5Uo7_tb_mia2T-0"/>
@@ -1222,7 +1238,11 @@
         </mxGraphModel>
     </diagram>
     <diagram id="0njrBXwLBZodpT-bwOXG" name="*店舗情報管理_登録">
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+        <mxGraphModel dx="2517" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+=======
         <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
             <root>
                 <mxCell id="B2onn0E_DKdJGnS-M1Jf-0"/>
                 <mxCell id="B2onn0E_DKdJGnS-M1Jf-1" parent="B2onn0E_DKdJGnS-M1Jf-0"/>
@@ -1313,19 +1333,31 @@
                 <mxCell id="Rj_Em5FQ6qEgNJwc6hiV-20" value="入力エラー時は&lt;br&gt;エラーメッセージを表示" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="B2onn0E_DKdJGnS-M1Jf-1" vertex="1">
                     <mxGeometry x="210" y="380" width="160" height="30" as="geometry"/>
                 </mxCell>
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+                <mxCell id="-Z23oWpu5IADky0cIbeO-0" value="" style="endArrow=classic;html=1;rounded=0;" parent="B2onn0E_DKdJGnS-M1Jf-1" edge="1">
+=======
                 <mxCell id="-Z23oWpu5IADky0cIbeO-0" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="B2onn0E_DKdJGnS-M1Jf-1">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint y="200" as="sourcePoint"/>
                         <mxPoint x="110" y="200" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+                <mxCell id="-Z23oWpu5IADky0cIbeO-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="B2onn0E_DKdJGnS-M1Jf-1" edge="1">
+=======
                 <mxCell id="-Z23oWpu5IADky0cIbeO-1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="B2onn0E_DKdJGnS-M1Jf-1">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint y="200" as="sourcePoint"/>
                         <mxPoint x="110" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+                <mxCell id="-Z23oWpu5IADky0cIbeO-2" value="" style="endArrow=classic;html=1;rounded=0;" parent="B2onn0E_DKdJGnS-M1Jf-1" edge="1">
+=======
                 <mxCell id="-Z23oWpu5IADky0cIbeO-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="B2onn0E_DKdJGnS-M1Jf-1">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint y="200" as="sourcePoint"/>
                         <mxPoint x="110" y="80" as="targetPoint"/>
@@ -1335,7 +1367,11 @@
         </mxGraphModel>
     </diagram>
     <diagram id="SjRwPrIsXA_sPiAEgSe7" name="*店舗情報管理_参照">
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+        <mxGraphModel dx="1813" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+=======
         <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
             <root>
                 <mxCell id="0wM4-PDtNf0cweebk43Z-0"/>
                 <mxCell id="0wM4-PDtNf0cweebk43Z-1" parent="0wM4-PDtNf0cweebk43Z-0"/>
@@ -1401,7 +1437,11 @@
                 </mxCell>
                 <mxCell id="LqHnXmeNuNXDJQg0NYT9-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="0wM4-PDtNf0cweebk43Z-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+                        <mxPoint x="-30" y="200" as="sourcePoint"/>
+=======
                         <mxPoint x="-20" y="200" as="sourcePoint"/>
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
                         <mxPoint x="110" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
@@ -1415,7 +1455,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="OAosC6wEdwBd4S2FgjxL" name="*店舗情報管理_編集">
-        <mxGraphModel dx="1604" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1973" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="mYNMvEEZdprbyX6TXufr-0"/>
                 <mxCell id="mYNMvEEZdprbyX6TXufr-1" parent="mYNMvEEZdprbyX6TXufr-0"/>
@@ -1534,7 +1574,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="hSwyPR2D0Fulrqtt-Bpg" name="*店舗情報管理_削除">
-        <mxGraphModel dx="1604" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1801" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="nOBV6p7rp-YeCwguWGeW-0"/>
                 <mxCell id="nOBV6p7rp-YeCwguWGeW-1" parent="nOBV6p7rp-YeCwguWGeW-0"/>
@@ -1629,7 +1669,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="8rljQJpVP2cf8zGHvLNZ" name="*ユーザ権限編集">
-        <mxGraphModel dx="2122" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2450" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="KRAYQnu5lO2XR03qIK7f-0"/>
                 <mxCell id="KRAYQnu5lO2XR03qIK7f-1" parent="KRAYQnu5lO2XR03qIK7f-0"/>
@@ -1712,7 +1752,11 @@
         </mxGraphModel>
     </diagram>
     <diagram id="J6VQVWwLp_xhOfZSVtFy" name="*従業員情報参照">
+<<<<<<< HEAD:各種設計書/3ロバストネス図/従業員情報管理/従業員情報管理.drawio
+        <mxGraphModel dx="1624" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+=======
         <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+>>>>>>> 4dbfa44be4367e4ac545b8365b3b2fad1e4eb461:各種設計書/3ロバストネス図/人事情報管理/従業員情報管理.drawio
             <root>
                 <mxCell id="bVZB3vS4jX3ZoeBwVVSb-0"/>
                 <mxCell id="bVZB3vS4jX3ZoeBwVVSb-1" parent="bVZB3vS4jX3ZoeBwVVSb-0"/>
