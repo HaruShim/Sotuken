@@ -20,9 +20,8 @@ entity "店舗情報\n" as e1
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス
 activate a1
-a1 -> b1
+a1 -> b1 : ログインする
 activate b1
-' b1 -> c1 : ｢店舗情報マスタ｣を押下する
 b1 -> c1 : ｢店舗情報マスタ｣を押下する
 deactivate
 activate c1
@@ -35,17 +34,16 @@ deactivate c1
 activate b2
 b2 --> a1 : 画面を表示する
 
-a1 -> b2 : a
-
+a1 -> b2 : 
 b2 -> c2 : ｢新規登録｣を押下
 deactivate b2
 activate c2
-c2 --> b3
+c2 --> b3 : 画面を組み立てる
 deactivate c2
 activate b3
-b3 --> a1
+b3 --> a1 : 画面を表示する
 
-a1 -> b3 : 新規登録を押下
+a1 -> b3
 b3 -> c3 : データ入力\n[エラー時はエラーメッセージを表示]
 deactivate b3
 activate c3
