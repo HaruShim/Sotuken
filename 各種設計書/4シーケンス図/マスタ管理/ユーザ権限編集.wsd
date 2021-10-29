@@ -1,0 +1,15 @@
+@startuml sequence
+
+hide footbox
+header 営業情報管理システム
+title マスタ管理/ユーザの権限を編集する
+
+' actor "" as 
+
+' boundary "" as 
+
+' control "" as 
+
+' entity "" as
+
+@enduml
