@@ -29,6 +29,16 @@ b1 -> c1
 
 c1 -> e1
 ' activate e1
+e1 --> c1
+c1 --> b2
+
+a1 -> b2
+b2 -> c2
+c2 --> b3
+b3 -> c3
+c3 -> c4
+c4 -> e1
+e1 --> b2
 
 
 @enduml
