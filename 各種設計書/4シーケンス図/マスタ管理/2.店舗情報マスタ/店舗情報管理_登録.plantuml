@@ -20,7 +20,7 @@ entity "店舗情報\n" as e1
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス
 activate a1
-a1 -> b1 : ログインする
+a1 -> b1
 activate b1
 b1 -> c1 : ｢店舗情報マスタ｣を押下する
 deactivate

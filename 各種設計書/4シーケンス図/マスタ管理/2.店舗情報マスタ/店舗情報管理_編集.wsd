@@ -8,9 +8,79 @@ title マスタ管理/店舗情報を編集する
 actor "管理者" as a1
 
 ' boundary "" as 
+boundary "ログイン済ホーム画面 " as b1
+boundary "店舗情報一覧画面" as b2
+boundary "詳細画面" as b3
+boundary "編集画面" as b4
 
 ' control "" as 
+control "店舗情報を取得する" as c1
+control "入力情報検証" as c2
+control "更新する" as c3
 
 ' entity "" as
+entity "店舗情報" as e1
+
+activate a1 
+a1 -> b1 :
+activate b1
+b1 -> c1 :「店舗情報」を押下する
+deactivate b1
+
+activate c1
+c1 -> e1 :店舗の情報を要求する
+activate e1
+e1 --> c1 :店舗の情報を返す
+deactivate e1
+c1 --> b2 : 一覧画面を組み立てる
+deactivate c1
+
+activate b2 
+b2 --> a1 :一覧画面を表示する
+deactivate b2
+
+
+a1 ->b2 : 編集したい情報を選択し押下する
+activate b2
+b2 -> b3 : 詳細画面を組み立てる
+deactivate b2
+
+activate b3
+b3 --> a1 :詳細画面を表示する
+deactivate b3
+
+
+a1 -> b4 :編集したい情報を編集する
+activate b4
+b4 -> c2 :情報を検証する
+deactivate b4
+
+activate c2
+c2 -> c3 :情報を更新する
+deactivate c2
+
+activate c3
+c3 -> e1 :データを更新する
+deactivate
+
+activate e1
+e1 --> c1 :更新したデータを取得する
+deactivate e1
+
+activate c1
+c1 --> b2 :一覧画面を組み立てる
+deactivate c1
+
+activate b2 
+b2  -->  a1 : 一覧画面を表示する
+deactivate b2
+
+
+
+
+
+
+
+
 
 @enduml
