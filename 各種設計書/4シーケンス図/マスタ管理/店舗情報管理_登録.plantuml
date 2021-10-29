@@ -2,12 +2,12 @@
 
 hide footbox
 header 営業情報管理システム
-title 店舗情報管理_登録
+title マスタ管理/店舗情報を登録する
 
 ' actor "" as 
 actor "管理者" as a1
 ' boundary "" as
-boundary "ログイン済み\nホーム画面" as b1
+boundary "ログイン済\nホーム画面" as b1
 boundary "店舗情報\n一覧画面" as b2
 boundary "新規登録\n画面" as b3
 ' control "" as 
@@ -19,15 +19,26 @@ control "登録する\n" as c4
 entity "店舗情報\n" as e1
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス
-activate a1
+' activate a1
 a1 -> b1 : 
-activate b1
-b1 -> c1 : ｢従業員情報マスタ｣を押下する
-deactivate
-activate c1
+' activate b1
+' b1 -> c1 : ｢従業員情報マスタ｣を押下する
+b1 -> c1
+' deactivate
+' activate c1
 
 c1 -> e1
-activate e1
+' activate e1
+e1 --> c1
+c1 --> b2
+
+a1 -> b2
+b2 -> c2
+c2 --> b3
+b3 -> c3
+c3 -> c4
+c4 -> e1
+e1 --> b2
 
 
 @enduml
