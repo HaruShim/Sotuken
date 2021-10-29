@@ -50,14 +50,16 @@ activate c3
 c3 -> c4 : 入力データ
 deactivate c3
 activate c4
-c4 -> e1 : 店舗情報を\n要求する
+c4 -> e1 : 店舗情報へ\n記録する
 deactivate c4
 activate e1
-e1 --> b2  : 一覧画面へ戻る　　　　　　　　　　　　　　　　
+e1 --> c1 : 店舗情報を返す　　　　　　　　　　　　　　　
 deactivate e1
+activate c1
+c1 --> b2 : 画面を組み立てる
+deactivate c1
 activate b2
 b2 --> a1
-
 
 
 @enduml
