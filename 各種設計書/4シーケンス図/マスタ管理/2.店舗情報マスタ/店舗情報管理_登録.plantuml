@@ -19,26 +19,47 @@ control "登録する\n" as c4
 entity "店舗情報\n" as e1
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス
-' activate a1
-a1 -> b1 : 
-' activate b1
-' b1 -> c1 : ｢従業員情報マスタ｣を押下する
-b1 -> c1
-' deactivate
-' activate c1
+activate a1
+a1 -> b1
+activate b1
+b1 -> c1 : ｢店舗情報マスタ｣を押下する
+deactivate
+activate c1
+c1 -> e1 : 店舗情報を要求する
+activate e1
+e1 --> c1 : 店舗情報を返す
+deactivate e1
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1 : 画面を表示する
 
-c1 -> e1
-' activate e1
-e1 --> c1
-c1 --> b2
+a1 -> b2 : 
+b2 -> c2 : ｢新規登録｣を押下
+deactivate b2
+activate c2
+c2 --> b3 : 画面を組み立てる
+deactivate c2
+activate b3
+b3 --> a1 : 画面を表示する
 
-a1 -> b2
-b2 -> c2
-c2 --> b3
-b3 -> c3
-c3 -> c4
-c4 -> e1
-e1 --> b2
+a1 -> b3
+b3 -> c3 : データ入力\n[エラー時はエラーメッセージを表示]
+deactivate b3
+activate c3
+c3 -> c4 : 入力データ
+deactivate c3
+activate c4
+c4 -> e1 : 店舗情報へ\n記録する
+deactivate c4
+activate e1
+e1 --> c1 : 店舗情報を返す　　　　　　　　　　　　　　　
+deactivate e1
+activate c1
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1
 
 
 @enduml

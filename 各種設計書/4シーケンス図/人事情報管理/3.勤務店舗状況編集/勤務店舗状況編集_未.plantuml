@@ -1,0 +1,26 @@
+@startuml シーケンス図
+' 下アイコン除去
+hide footbox
+' ヘッダー
+header 営業情報管理システム/人事情報管理
+' タイトル
+title 従業員情報管理_参照
+
+
+
+' actor "" as 
+actor "正規社員\n非正規社員" as a1
+
+' boundary "" as 
+boundary "ログイン済\nホーム画面" as b1
+boundary "勤務店舗状況\n一覧画面" as b2
+
+' control "" as 
+control "勤務店舗\n状況を\n取得する" as c1
+control "更新する" as c2
+
+' entity "" as
+entity "従業員情報" as e1
+
+
+@enduml
