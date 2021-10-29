@@ -1,0 +1,33 @@
+@startuml シーケンス図
+
+hide footbox
+header 営業情報管理システム/人事情報管理
+title <back:#25b7c0>従業員情報</back>管理
+
+actor "管理者\n正規社員" as Act
+boundary "ログイン済み\nホーム画面" as HomeSc
+boundary "従業員情報\n一覧画面" as StaffListSc
+boundary "新規登録画面" as RegiSc
+boundary "従業員詳細情報画面" as StaffSc
+boundary "従業員情報編集画面" as UpdateSc
+control "従業員情報\nコントローラ" as StaffCl
+control "新規登録\nコントローラ" as RegiCl
+control "更新\nコントローラ" as UpdateCl
+control "削除\nコントローラ" as DeleteCl
+control "入力データを検証する" as JudgeCl
+
+control "登録する" as Regi
+entity "従業員情報" as StaffDB
+
+
+
+
+
+Act -> StaffSc : 「削除」を選択し押下する
+StaffSc -> DeleteCl : 削除確認画面を要求する()
+UpdateSc <-- StaffCl : 従業員情報編集画面を組み立てる()
+Act <-- UpdateSc : 従業員情報編集画面を表示する()
+Act -> UpdateSc : 更新情報を入力する
+UpdateSc -> UpdateCl : 更新結果画面を要求する()
+UpdateCl -> JudgeCl : 入力データの検証を要求する()
+@enduml
