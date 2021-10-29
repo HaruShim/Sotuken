@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-10-29T05:43:54.398Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="-XP95DqN-TV5cf463t5d" version="15.6.2" type="embed" pages="7">
+<mxfile host="65bd71144e" modified="2021-10-29T05:46:01.372Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="8fGeL-fqPuxyqajEH4ba" version="15.6.2" type="embed" pages="7">
     <diagram id="ILKYu9vgjBJOuqvXN9g7" name="*商品情報管理_登録">
-        <mxGraphModel dx="2161" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1949" dy="890" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="RjQzy-eRPyqWTiVo5QUl-0"/>
                 <mxCell id="RjQzy-eRPyqWTiVo5QUl-1" parent="RjQzy-eRPyqWTiVo5QUl-0"/>
@@ -600,7 +600,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="OvpScdd4KDrzfWwWWDi8" name="売上情報管理">
-        <mxGraphModel dx="2520" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1762" dy="742" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="C8GtgaMKqe1gccSzZxkh-0"/>
                 <mxCell id="C8GtgaMKqe1gccSzZxkh-1" parent="C8GtgaMKqe1gccSzZxkh-0"/>
