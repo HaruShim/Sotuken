@@ -21,14 +21,17 @@ control "従業員情報を取得する" as c1
 entity "従業員情報" as e1
 
 ' 長谷川
-activate a1
+
 a1 -> b1
 activate b1
 b1 -> c1 : 「従業員情報」を押下する()
 deactivate
 activate c1
-c1 <-> e1 : aaaaaaa
-b2 <-- c1
+c1 -> e1 : 登録情報を\n要求する() 
+activate e1
+e1 --> c1 : 要求された\n情報を送信する
+deactivate
+b2 <-- c1 : 取得情報を基に画面を表示する
 deactivate
 activate b2
 a1 <-- b2
