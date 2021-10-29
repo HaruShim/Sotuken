@@ -29,30 +29,30 @@ b1 -> c1 : 「店舗情報マスタ」を押下する
 deactivate b1
 
 activate c1
-c1 -> e1 :参照情報を\n要求する()
+c1 -> e1 :店舗のデータを要求する
 
 
 activate e1
-e1 -->c1 :要求された\n情報を送信する
+e1 -->c1 :店舗のデータを返す
 deactivate e1
-c1 --> b2 :店舗情報一覧を表示する()
+c1 --> b2 :一覧画面を組み立てる
 deactivate c1
 
 
 activate b2
-b2 --> a1 
+b2 --> a1 :一覧画面を表示する
 deactivate b2
 
 activate a1
-a1 -> b2 
+a1 -> b2 :参照したいデータを選択する
 deactivate a1
 
 activate b2
-b2 -> b3 :詳細画面を選択する()
+b2 -> b3 :詳細画面を要求する
 deactivate b2
 
 activate b3
-b3 --> a1 :詳細画面を表示する()
+b3 --> a1 :参照画面を表示する
 deactivate b3
 
 @enduml
