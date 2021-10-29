@@ -1,22 +1,10 @@
-@startuml sequence
+@startuml シーケンス図
 ' 下アイコン除去
 hide footbox
 ' ヘッダー
 header 営業情報管理システム/人事情報管理
 ' タイトル
 title 従業員情報管理_参照
-
-
-
-' actor "" as 
-
-' boundary "" as 
-
-' control "" as 
-
-' entity "" as
-
-
 
 
 ' アイコン
