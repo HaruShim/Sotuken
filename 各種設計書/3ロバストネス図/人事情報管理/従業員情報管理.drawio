@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-10-29T03:34:03.599Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.6.2" etag="abF0CzhgAUVSwKOTL5K3" type="embed" pages="13">
+<mxfile host="65bd71144e" modified="2021-10-29T04:56:02.449Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="eLLXSj-izPvqmSTS4UJ_" version="15.6.2" type="embed" pages="14">
     <diagram id="u6uAz6le20SeR2MsST6_" name="*従業員情報管理_登録">
-        <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1553" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="iILXsB8xfi0MmqsRtAAt-0"/>
                 <mxCell id="iILXsB8xfi0MmqsRtAAt-1" parent="iILXsB8xfi0MmqsRtAAt-0"/>
@@ -129,7 +129,7 @@
     </diagram>
     <diagram id="iKOnc4zgBir_UfPWP5Ad" name="*従業員情報管理_参照">
         &#xa;
-        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1937" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             &#xa;
             <root>
                 &#xa;
@@ -288,7 +288,7 @@
     </diagram>
     <diagram id="IFMydM7Jh42T5aiGVzNp" name="*従業員情報管理_編集">
         &#xa;
-        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2381" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             &#xa;
             <root>
                 &#xa;
@@ -525,7 +525,7 @@
     </diagram>
     <diagram id="3DgiwX1BnJunymCmlgRd" name="*従業員情報管理_削除">
         &#xa;
-        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2122" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             &#xa;
             <root>
                 &#xa;
@@ -713,103 +713,197 @@
         &#xa;
     </diagram>
     <diagram id="q8-iIdnQaGOhImmDq-Hs" name="*従業員情報管理_完全削除">
-        <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        &#xa;
+        <mxGraphModel dx="1604" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            &#xa;
             <root>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-0"/>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-1" parent="FTmizxJ5Uo7_tb_mia2T-0"/>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-2" value="正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="FTmizxJ5Uo7_tb_mia2T-1" vertex="1">
+                    &#xa;
                     <mxGeometry x="-70" y="160" width="30" height="60" as="geometry"/>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-3" value="ログイン済&lt;br&gt;ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="FTmizxJ5Uo7_tb_mia2T-1" vertex="1">
+                    &#xa;
                     <mxGeometry x="120" y="40" width="100" height="80" as="geometry"/>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-4" value="従業員情報&lt;br&gt;一覧画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="FTmizxJ5Uo7_tb_mia2T-1" vertex="1">
+                    &#xa;
                     <mxGeometry x="120" y="160" width="100" height="80" as="geometry"/>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-5" value="従業員情報&lt;br&gt;を取得する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="FTmizxJ5Uo7_tb_mia2T-1" vertex="1">
+                    &#xa;
                     <mxGeometry x="420" y="40" width="70" height="80" as="geometry"/>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-6" value="従業員情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="FTmizxJ5Uo7_tb_mia2T-1" vertex="1">
+                    &#xa;
                     <mxGeometry x="640" y="120" width="80" height="80" as="geometry"/>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-7" value="表示する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="FTmizxJ5Uo7_tb_mia2T-1" vertex="1">
+                    &#xa;
                     <mxGeometry x="420" y="210" width="70" height="80" as="geometry"/>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-8" value="詳細画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="FTmizxJ5Uo7_tb_mia2T-1" vertex="1">
+                    &#xa;
                     <mxGeometry x="120" y="280" width="100" height="80" as="geometry"/>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.019;entryY=0.489;entryDx=0;entryDy=0;entryPerimeter=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" source="FTmizxJ5Uo7_tb_mia2T-3" target="FTmizxJ5Uo7_tb_mia2T-5" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="240" y="80" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="400" y="80" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-10" value="「従業員情報マスタ」&lt;br&gt;を押下" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" vertex="1">
+                    &#xa;
                     <mxGeometry x="230" y="40" width="160" height="30" as="geometry"/>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-11" value="" style="endArrow=classic;html=1;rounded=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="410" y="90" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="240" y="200" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-12" value="" style="endArrow=classic;html=1;rounded=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="240" y="210" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="410" y="260" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-13" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" parent="FTmizxJ5Uo7_tb_mia2T-1" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="500" y="80" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="620" y="159.9999999999999" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-14" value="完全削除&lt;br&gt;する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="FTmizxJ5Uo7_tb_mia2T-1" vertex="1">
+                    &#xa;
                     <mxGeometry x="414" y="360" width="70" height="80" as="geometry"/>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-15" value="" style="endArrow=classic;html=1;rounded=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="490" y="400" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="680" y="210" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-16" value="" style="endArrow=classic;html=1;rounded=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="400" y="270" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="240" y="320" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="FTmizxJ5Uo7_tb_mia2T-17" value="" style="endArrow=classic;html=1;rounded=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="240" y="330" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="400" y="400" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="J02obl9D4JKI2htGLwr5-0" value="" style="endArrow=classic;html=1;rounded=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="-30" y="200" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="110" y="200" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="J02obl9D4JKI2htGLwr5-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="-30" y="200" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="110" y="80" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
                 <mxCell id="J02obl9D4JKI2htGLwr5-2" value="" style="endArrow=classic;html=1;rounded=0;" parent="FTmizxJ5Uo7_tb_mia2T-1" edge="1">
+                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        &#xa;
                         <mxPoint x="-30" y="200" as="sourcePoint"/>
+                        &#xa;
                         <mxPoint x="110" y="320" as="targetPoint"/>
+                        &#xa;
                     </mxGeometry>
+                    &#xa;
                 </mxCell>
+                &#xa;
             </root>
+            &#xa;
         </mxGraphModel>
+        &#xa;
     </diagram>
     <diagram id="0njrBXwLBZodpT-bwOXG" name="*店舗情報管理_登録">
         &#xa;
-        <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2122" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             &#xa;
             <root>
                 &#xa;
@@ -991,7 +1085,7 @@
                     &#xa;
                 </mxCell>
                 &#xa;
-                <mxCell id="-Z23oWpu5IADky0cIbeO-0" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="B2onn0E_DKdJGnS-M1Jf-1">
+                <mxCell id="-Z23oWpu5IADky0cIbeO-0" value="" style="endArrow=classic;html=1;rounded=0;" parent="B2onn0E_DKdJGnS-M1Jf-1" edge="1">
                     &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         &#xa;
@@ -1003,7 +1097,7 @@
                     &#xa;
                 </mxCell>
                 &#xa;
-                <mxCell id="-Z23oWpu5IADky0cIbeO-1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="B2onn0E_DKdJGnS-M1Jf-1">
+                <mxCell id="-Z23oWpu5IADky0cIbeO-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="B2onn0E_DKdJGnS-M1Jf-1" edge="1">
                     &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         &#xa;
@@ -1015,7 +1109,7 @@
                     &#xa;
                 </mxCell>
                 &#xa;
-                <mxCell id="-Z23oWpu5IADky0cIbeO-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="B2onn0E_DKdJGnS-M1Jf-1">
+                <mxCell id="-Z23oWpu5IADky0cIbeO-2" value="" style="endArrow=classic;html=1;rounded=0;" parent="B2onn0E_DKdJGnS-M1Jf-1" edge="1">
                     &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         &#xa;
@@ -1034,7 +1128,7 @@
     </diagram>
     <diagram id="SjRwPrIsXA_sPiAEgSe7" name="*店舗情報管理_参照">
         &#xa;
-        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1741" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             &#xa;
             <root>
                 &#xa;
@@ -1193,7 +1287,7 @@
     </diagram>
     <diagram id="OAosC6wEdwBd4S2FgjxL" name="*店舗情報管理_編集">
         &#xa;
-        <mxGraphModel dx="1604" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1937" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             &#xa;
             <root>
                 &#xa;
@@ -1430,7 +1524,7 @@
     </diagram>
     <diagram id="hSwyPR2D0Fulrqtt-Bpg" name="*店舗情報管理_削除">
         &#xa;
-        <mxGraphModel dx="1604" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1937" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             &#xa;
             <root>
                 &#xa;
@@ -1619,7 +1713,7 @@
     </diagram>
     <diagram id="8rljQJpVP2cf8zGHvLNZ" name="*ユーザ権限編集">
         &#xa;
-        <mxGraphModel dx="2122" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2381" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             &#xa;
             <root>
                 &#xa;
@@ -1783,325 +1877,167 @@
         &#xa;
     </diagram>
     <diagram id="J6VQVWwLp_xhOfZSVtFy" name="*従業員情報参照">
-        &#xa;
-        <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            &#xa;
+        <mxGraphModel dx="2037" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
-                &#xa;
                 <mxCell id="bVZB3vS4jX3ZoeBwVVSb-0"/>
-                &#xa;
                 <mxCell id="bVZB3vS4jX3ZoeBwVVSb-1" parent="bVZB3vS4jX3ZoeBwVVSb-0"/>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-0" value="ログイン済&lt;br&gt;ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bVZB3vS4jX3ZoeBwVVSb-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="120" y="120" width="100" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-1" value="従業員情報&lt;br&gt;一覧画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bVZB3vS4jX3ZoeBwVVSb-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="120" y="280" width="100" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-2" value="詳細画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="bVZB3vS4jX3ZoeBwVVSb-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="120" y="440" width="100" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-3" value="" style="endArrow=classic;html=1;rounded=0;" parent="bVZB3vS4jX3ZoeBwVVSb-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="-29.999999999999773" y="320" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="110" y="159.9999999999999" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-4" value="" style="endArrow=classic;html=1;rounded=0;" parent="bVZB3vS4jX3ZoeBwVVSb-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="-29.999999999999773" y="320" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="110" y="480" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-5" value="「従業員情報」を押下" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="bVZB3vS4jX3ZoeBwVVSb-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="270" y="120" width="90" height="30" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-6" value="" style="endArrow=classic;html=1;rounded=0;" parent="bVZB3vS4jX3ZoeBwVVSb-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="-29.999999999999773" y="320" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="110" y="320" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-7" value="正規社員&lt;br&gt;非正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="bVZB3vS4jX3ZoeBwVVSb-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="-70" y="280" width="30" height="60" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-8" value="従業員情報&lt;br&gt;を取得する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="bVZB3vS4jX3ZoeBwVVSb-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="414" y="120" width="70" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-9" value="表示する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="bVZB3vS4jX3ZoeBwVVSb-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="414" y="280" width="70" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-10" value="" style="endArrow=classic;html=1;rounded=0;" parent="bVZB3vS4jX3ZoeBwVVSb-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="240" y="159.9999999999999" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="400" y="159.9999999999999" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-11" value="" style="endArrow=classic;html=1;rounded=0;" parent="bVZB3vS4jX3ZoeBwVVSb-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="400" y="330" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="240" y="480" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-12" value="従業員情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="bVZB3vS4jX3ZoeBwVVSb-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="640" y="200" width="80" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-13" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" parent="bVZB3vS4jX3ZoeBwVVSb-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="500" y="159.9999999999999" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="630" y="239.9999999999999" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-15" value="" style="endArrow=classic;startArrow=none;html=1;rounded=0;startFill=0;" parent="bVZB3vS4jX3ZoeBwVVSb-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="240" y="320" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="400" y="320" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="nJg_hH3APXqxuItrQ8fL-16" value="" style="endArrow=classic;html=1;rounded=0;" parent="bVZB3vS4jX3ZoeBwVVSb-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="410" y="190" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="230" y="300" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
             </root>
-            &#xa;
         </mxGraphModel>
-        &#xa;
     </diagram>
     <diagram id="n8MwB2peb2suapYu6MIm" name="*店舗情報参照">
-        &#xa;
-        <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            &#xa;
+        <mxGraphModel dx="1864" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
-                &#xa;
                 <mxCell id="-Zp-b05N4_6l_6rreAiu-0"/>
-                &#xa;
                 <mxCell id="-Zp-b05N4_6l_6rreAiu-1" parent="-Zp-b05N4_6l_6rreAiu-0"/>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-0" value="ログイン済&lt;br&gt;ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="-Zp-b05N4_6l_6rreAiu-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="120" y="120" width="100" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-1" value="店舗情報&lt;br&gt;一覧画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="-Zp-b05N4_6l_6rreAiu-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="120" y="280" width="100" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-2" value="詳細画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="-Zp-b05N4_6l_6rreAiu-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="120" y="440" width="100" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-3" value="" style="endArrow=classic;html=1;rounded=0;" parent="-Zp-b05N4_6l_6rreAiu-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="-29.999999999999773" y="320" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="110" y="159.9999999999999" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-4" value="" style="endArrow=classic;html=1;rounded=0;" parent="-Zp-b05N4_6l_6rreAiu-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="-29.999999999999773" y="320" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="110" y="480" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-5" value="「店舗情報」&lt;br&gt;を押下" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="-Zp-b05N4_6l_6rreAiu-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="270" y="120" width="90" height="30" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-6" value="" style="endArrow=classic;html=1;rounded=0;" parent="-Zp-b05N4_6l_6rreAiu-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="-29.999999999999773" y="320" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="110" y="320" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-7" value="正規社員&lt;br&gt;非正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="-Zp-b05N4_6l_6rreAiu-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="-70" y="280" width="30" height="60" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-8" value="店舗情報&lt;br&gt;を取得する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="-Zp-b05N4_6l_6rreAiu-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="414" y="120" width="70" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-9" value="表示する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="-Zp-b05N4_6l_6rreAiu-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="414" y="280" width="70" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-10" value="" style="endArrow=classic;html=1;rounded=0;" parent="-Zp-b05N4_6l_6rreAiu-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="240" y="159.9999999999999" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="400" y="159.9999999999999" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-11" value="" style="endArrow=classic;html=1;rounded=0;" parent="-Zp-b05N4_6l_6rreAiu-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="400" y="330" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="240" y="480" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-12" value="店舗情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="-Zp-b05N4_6l_6rreAiu-1" vertex="1">
-                    &#xa;
                     <mxGeometry x="640" y="200" width="80" height="80" as="geometry"/>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-13" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" parent="-Zp-b05N4_6l_6rreAiu-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="500" y="159.9999999999999" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="630" y="239.9999999999999" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-14" value="" style="endArrow=classic;startArrow=none;html=1;rounded=0;startFill=0;" parent="-Zp-b05N4_6l_6rreAiu-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="240" y="320" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="400" y="320" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
                 <mxCell id="9oqTO0q-d8bOJXzve-tl-15" value="" style="endArrow=classic;html=1;rounded=0;" parent="-Zp-b05N4_6l_6rreAiu-1" edge="1">
-                    &#xa;
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        &#xa;
                         <mxPoint x="410" y="189.9999999999999" as="sourcePoint"/>
-                        &#xa;
                         <mxPoint x="230" y="300" as="targetPoint"/>
-                        &#xa;
                     </mxGeometry>
-                    &#xa;
                 </mxCell>
-                &#xa;
             </root>
-            &#xa;
         </mxGraphModel>
-        &#xa;
     </diagram>
     <diagram id="H8nFw5nNeNQx_T4gaD8O" name="*勤務店舗状況管理_参照">
-        <mxGraphModel dx="1816" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2642" dy="1075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="NyvIg0s3OZugaIVglc1--0"/>
                 <mxCell id="NyvIg0s3OZugaIVglc1--1" parent="NyvIg0s3OZugaIVglc1--0"/>
@@ -2151,6 +2087,77 @@
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="400" y="170" as="sourcePoint"/>
                         <mxPoint x="240" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="fn3Q71V4AJGm_9MMe8aB" name="*勤務店舗状況管理_編集">
+        <mxGraphModel dx="1864" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="7obc3y8mGDwCz1rb35OC-0"/>
+                <mxCell id="7obc3y8mGDwCz1rb35OC-1" parent="7obc3y8mGDwCz1rb35OC-0"/>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-0" value="正規社員&lt;br&gt;非正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry x="-70" y="280" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-1" value="ログイン済&lt;br&gt;ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry x="120" y="120" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-2" value="勤務店舗状況&lt;br&gt;一覧画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry x="120" y="280" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-30.000000000000455" y="320" as="sourcePoint"/>
+                        <mxPoint x="109.99999999999955" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-4" value="「勤務店舗状況」&lt;br&gt;を押下" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry x="250" y="130" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-5" value="勤務店舗&lt;br&gt;状況を&lt;br&gt;取得する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry x="414" y="120" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-6" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" edge="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="239.99999999999955" y="160" as="sourcePoint"/>
+                        <mxPoint x="399.99999999999955" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-7" value="勤務店舗状況" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry x="640" y="200" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-8" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" edge="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500.00000000000045" y="160" as="sourcePoint"/>
+                        <mxPoint x="630.0000000000005" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-30.000000000000455" y="320" as="sourcePoint"/>
+                        <mxPoint x="109.99999999999955" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="399.99999999999955" y="170" as="sourcePoint"/>
+                        <mxPoint x="239.99999999999955" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-11" value="更新する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry x="414" y="280" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-12" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;startFill=0;" edge="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="239.99999999999955" y="319.28999999999996" as="sourcePoint"/>
+                        <mxPoint x="399.99999999999955" y="319.28999999999996" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="HqMUFx1qFh-9Tl5q0YYA-13" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;startFill=0;" edge="1" parent="7obc3y8mGDwCz1rb35OC-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="499.99999999999955" y="319.28999999999985" as="sourcePoint"/>
+                        <mxPoint x="630" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
