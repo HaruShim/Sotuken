@@ -20,7 +20,24 @@ control "店舗情報を取得する" as c1
 entity "店舗情報" as e1
 
 
-
+' 長谷川
+activate a1
+a1 -> b1
+activate b1
+b1 -> c1 : 「店舗情報」を押下する()
+deactivate
+activate c1
+c1 <-> e1 : aaaaaaa
+b2 <-- c1
+deactivate
+activate b2
+a1 <-- b2
+a1 -> b2
+b2 -> b3 : 表示したい項目を\n選択し押下する()
+deactivate
+activate b3
+a1 <-- b3
+deactivate
 
 
 
