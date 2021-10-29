@@ -1,0 +1,15 @@
+@startuml sequence
+
+hide footbox
+header 営業情報管理システム
+title マスタ管理/店舗情報を削除する
+
+' actor "" as 
+actor "管理者" as a1 
+' boundary "" as 
+
+' control "" as 
+
+' entity "" as
+
+@enduml
