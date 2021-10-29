@@ -1,0 +1,42 @@
+<mxfile host="65bd71144e" modified="2021-10-29T06:42:02.285Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.6.2" etag="JBYFnRSkhZY5_rxIl9ms" type="embed" pages="5">
+    <diagram id="gK0L_vO17O7NY7Z7OVR5" name="売上情報管理_登録">
+        <mxGraphModel dx="776" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="AUWY2sqyxB_gJZ5fvk6p" name="売上情報管理_参照">
+        <mxGraphModel dx="776" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="YSVPIyuumFlyNAX_10df-0"/>
+                <mxCell id="YSVPIyuumFlyNAX_10df-1" parent="YSVPIyuumFlyNAX_10df-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="rlL2KIcHxsmWdDMy5Cie" name="売上情報管理_編集">
+        <mxGraphModel dx="776" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="6sy8OTf5AHw0qntDZcab-0"/>
+                <mxCell id="6sy8OTf5AHw0qntDZcab-1" parent="6sy8OTf5AHw0qntDZcab-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="id5BWrpkqergq9WMVsvq" name="売上情報管理_削除">
+        <mxGraphModel dx="776" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="GH4WaG8hF_58bTW3ABaH-0"/>
+                <mxCell id="GH4WaG8hF_58bTW3ABaH-1" parent="GH4WaG8hF_58bTW3ABaH-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="IkiTwZIHjaAA4hidb9Vw" name="販売履歴検索">
+        <mxGraphModel dx="776" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="qaS-oZ-pttqYyQszQj6c-0"/>
+                <mxCell id="qaS-oZ-pttqYyQszQj6c-1" parent="qaS-oZ-pttqYyQszQj6c-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
