@@ -7,7 +7,6 @@ title マスタ管理/店舗情報を参照する
 
 ' actor "" as
 actor "管理者\n正規社員" as a1
- 
 
 ' boundary "" as
 boundary "ログイン済ホーム画面" as b1

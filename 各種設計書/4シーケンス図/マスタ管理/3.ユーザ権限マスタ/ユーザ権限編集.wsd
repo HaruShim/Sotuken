@@ -5,11 +5,49 @@ header 営業情報管理システム
 title マスタ管理/ユーザの権限を編集する
 
 ' actor "" as 
+actor "管理者" as a1
 
-' boundary "" as 
+' boundary "" as
+boundary "ログイン済ホーム画面" as b1
+boundary "権限編集画面" as b2 
 
-' control "" as 
+' control "" as
+control "取得する" as c1 
+control "更新内容を検証する" as c2
+control "更新する" as c3
 
 ' entity "" as
+entity "権限情報" as e1
+
+a1 -> b1
+activate b1
+b1 -> c1
+deactivate b1
+activate c1
+c1 -> e1
+activate e1
+e1 --> c1
+deactivate e1
+c1 --> b2
+deactivate c1
+activate b2
+b2 -> c2
+activate c2
+opt 従業員が選択されていない
+c2 --> b2 : メッセージを表示する
+end
+deactivate b2
+c2 -> c3
+deactivate c2
+activate c3
+c3 -> e1
+activate e1
+e1 --> c3
+deactivate e1
+c3 --> b1
+deactivate c3
+activate b1
+b1 --> a1
+deactivate b1
 
 @enduml

@@ -6,17 +6,20 @@ title マスタ管理/店舗情報を削除する
 
 ' actor "" as 
 actor "管理者" as a1 
+
 ' boundary "" as 
 boundary "ログイン済ホーム画面" as b1
 boundary "店舗情報一覧画面" as b2
 boundary "詳細画面" as b3
+
 ' control "" as 
 control "店舗情報を取得する" as c1
 control "削除する" as c2
+
 ' entity "" as
 entity "店舗情報" as e1
 
-activate a1
+
 a1 -> b1 : 「店舗情報」を押下する
 
 activate b1
