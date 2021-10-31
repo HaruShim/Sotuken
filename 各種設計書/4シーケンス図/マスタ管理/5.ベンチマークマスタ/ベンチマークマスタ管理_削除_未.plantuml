@@ -1,0 +1,29 @@
+@startuml sequence
+
+hide footbox
+header 営業情報管理システム
+title マスタ管理/ベンチマーク情報を削除する
+
+' actor "" as 
+actor "管理者\n正規社員" as a1 
+
+' boundary "" as 
+boundary "ログイン済\nホーム画面" as b1
+boundary "ベンチマーク\n情報一覧画面" as b2
+boundary "詳細画面" as b3
+
+' control "" as c
+control "情報を取得する" as c1
+' ↑ベンチマークマスタ情報を取得するだったんだけど変更していいかな
+control "表示する" as c2
+control "削除する" as c3
+
+' entity "" as e
+entity "ベンチマーク情報" as e1
+
+a1 -> b1
+b1 -> b2
+b2 -> b3
+
+
+@enduml
