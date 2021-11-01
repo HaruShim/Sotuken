@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="4">
     <diagram id="5pw75ilbSoKskP-KV6Ab" name="*取置予約管理_登録">
-        <mxGraphModel dx="2040" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1384" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -112,14 +112,14 @@
                         <mxPoint x="520" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="25" value="取置予約管理_登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+                <mxCell id="25" value="取置予約管理_登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="1" vertex="1">
                     <mxGeometry x="-149.5" y="100" width="189" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="wavU6_zpWrWzt8Qf3CIB" name="*取置予約管理_参照">
-        <mxGraphModel dx="1757" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1384" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="vrzb5vrYvZUAXiLEs5TB-0"/>
                 <mxCell id="vrzb5vrYvZUAXiLEs5TB-1" parent="vrzb5vrYvZUAXiLEs5TB-0"/>
@@ -195,14 +195,14 @@
                         <mxPoint x="110" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="vaNLkwpX-J-hQ9c1lnZE-0" value="取置予約管理_参照" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="vrzb5vrYvZUAXiLEs5TB-1">
+                <mxCell id="vaNLkwpX-J-hQ9c1lnZE-0" value="取置予約管理_参照" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="vrzb5vrYvZUAXiLEs5TB-1" vertex="1">
                     <mxGeometry x="-149.5" y="105" width="189" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="fIKYkDOvj5jYHC63RYqT" name="*取置予約管理_編集">
-        <mxGraphModel dx="2028" dy="678" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1384" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="jbOiT8LiOi8Tyat2nmli-0"/>
                 <mxCell id="jbOiT8LiOi8Tyat2nmli-1" parent="jbOiT8LiOi8Tyat2nmli-0"/>
@@ -323,14 +323,14 @@
                         <mxPoint x="110" y="640" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="0vF3At8Wutf0TrMB-gZU-0" value="取置予約管理_編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="jbOiT8LiOi8Tyat2nmli-1">
+                <mxCell id="0vF3At8Wutf0TrMB-gZU-0" value="取置予約管理_編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="jbOiT8LiOi8Tyat2nmli-1" vertex="1">
                     <mxGeometry x="-149.5" y="100" width="189" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="JqwzY6ZZVCmIHyzHBNhO" name="*取置予約管理_削除">
-        <mxGraphModel dx="2028" dy="678" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1384" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="pKjt3V_D00QfAraaRqGu-0"/>
                 <mxCell id="pKjt3V_D00QfAraaRqGu-1" parent="pKjt3V_D00QfAraaRqGu-0"/>
@@ -421,7 +421,7 @@
                         <mxPoint x="660" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="EExBq1cd5jXBP4jlDjoC-0" value="取置予約管理_削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="pKjt3V_D00QfAraaRqGu-1">
+                <mxCell id="EExBq1cd5jXBP4jlDjoC-0" value="取置予約管理_削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="pKjt3V_D00QfAraaRqGu-1" vertex="1">
                     <mxGeometry x="-149.5" y="100" width="189" height="60" as="geometry"/>
                 </mxCell>
             </root>
