@@ -5,31 +5,30 @@ hide footbox
 ' ヘッダー
 header 営業情報管理システム
 ' タイトル
-title マスタ管理/従業員情報を登録する
+title マスタ管理/店舗情報を登録する
 
 
 ' actor "" as 
-actor "管理者\n正規社員" as a1
+actor "管理者" as a1
 
 ' boundary "" as 
 boundary "ログイン済み\nホーム画面" as b1
-boundary "従業員情報\n一覧画面" as b2
+boundary "店舗情報\n一覧画面" as b2
 boundary "新規登録\n画面" as b3
-boundary "登録完了\n画面" as b4
 
 ' control "" as 
 control "従業員情報一覧\nコントローラ" as c1
 control "新規登録\nコントローラ" as c2
-control "登録完了\nコントローラ" as c3
+control "新規登録\nコントローラ" as c3
 
 ' entity "" as
-entity "従業員情報" as e1
+entity "店舗情報" as e1
 
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス
-a1 -> b1 : 「従業員情報マスタ」を押下する
+a1 -> b1 : 「店舗情報マスタ」を押下する
 activate b1
-b1 -> c1 : 従業員情報一覧画面を要求する()
+b1 -> c1 : 店舗情報一覧画面を要求する()
 deactivate b1
 activate c1
 c1 -> e1 : 登録情報を要求する()
@@ -38,7 +37,7 @@ c1 <-- e1 : 要求された情報を送信する
 deactivate e1
 
 ' 代替フロー
-opt 従業員情報がない場合
+opt 店舗情報がない場合
 b2 <-- c1 : 画面を組み立てる
 activate b2
 a1 <-- b2 : メッセージを表示する
@@ -73,11 +72,11 @@ activate e1
 c3 <-- e1 : 処理の結果を返す
 deactivate e1
 activate c3
-b4 <-- c3 : 画面を組み立てる
+b2 <-- c3 : 画面を組み立てる
 deactivate c3
-activate b4
-a1 <-- b4 : 画面を表示する
-deactivate b4
+activate b2
+a1 <-- b2 : 画面を表示する
+deactivate b2
 
 
 
