@@ -1,0 +1,56 @@
+@startuml sequence
+
+hide footbox
+header 営業情報管理システム
+title マスタ管理/売上情報を編集する
+
+' actor "" as a
+actor "管理者" as a1
+
+' boundary "" as b
+boundary "ログイン済\nホーム画面" as b1
+boundary "売上情報\n一覧画面" as b2
+boundary "詳細画面" as b3
+boundary "編集画面" as b4
+
+' control "" as c
+control "取得する" as c1
+control "検証する" as c2
+
+' entity "" as e
+entity "売上情報" as e1
+
+a1 -> b1 :「売上情報マスタ」\nを押下する
+activate b1
+b1 -> c1 : 画面の表示を要求する()
+deactivate b1
+activate c1
+c1 -> e1:情報を\n要求する()
+activate e1
+e1 --> c1:情報を返す
+c1 --> b2:画面を表示する
+activate b2
+b2 -> c1:情報を選択する
+deactivate b2
+c1 -> e1:情報を\n要求する()
+e1 --> c1:情報を返す
+c1 --> b3:画面を表示する
+deactivate c1
+activate b3
+b3 -> b4:「編集」ボタンを\n押下する
+deactivate b3
+activate b4
+b4 -> c2:情報を入力し\n「更新」を押下する
+activate c2
+opt 入力情報が間違っている場合
+c2 --> b4:メッセージを表示する
+deactivate b4
+end
+c2 -> e1:情報を\n更新する()
+deactivate c2
+e1 --> b3:画面を表示する
+deactivate e1
+activate b3
+b3 --> a1
+deactivate b3
+@enduml

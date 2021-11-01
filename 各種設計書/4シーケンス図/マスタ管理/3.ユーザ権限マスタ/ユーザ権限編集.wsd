@@ -5,11 +5,49 @@ header 営業情報管理システム
 title マスタ管理/ユーザの権限を編集する
 
 ' actor "" as 
+actor "管理者" as a1
 
-' boundary "" as 
+' boundary "" as
+boundary "ログイン済\nホーム画面" as b1
+boundary "権限編集画面" as b2 
 
-' control "" as 
+' control "" as
+control "更新内容を検証する" as c2
+control "権限編集画面\nコントローラ" as c4
 
 ' entity "" as
+entity "権限情報" as e1
+
+a1 -> b1:「ユーザ権限マスタ」\nを押下する
+activate b1
+b1 -> c4 : 画面の表示を要求する()
+deactivate b1
+activate c4
+c4 -> e1:情報を\n要求する()
+activate e1
+e1 --> c4:情報を返す
+deactivate e1
+' c1 
+c4 --> b2:画面を表示する
+deactivate c4
+activate b2
+b2 --> a1
+a1 -> b2:従業員と権限を選択し、\n「登録」ボタンを押下する
+b2 -> c2:情報の更新を要求する()
+activate c2
+opt 従業員が選択されていない場合
+c2 --> b2 : メッセージを表示する
+b2 --> a1
+end
+deactivate b2
+c2 -> e1: 情報を更新する()
+activate e1
+e1 --> c2:情報を返す
+deactivate e1
+c2 --> b2: 画面を表示する
+deactivate c2
+activate b2
+b2 --> a1
+deactivate b2
 
 @enduml
