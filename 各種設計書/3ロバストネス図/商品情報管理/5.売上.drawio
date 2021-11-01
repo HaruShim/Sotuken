@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="4">
     <diagram id="gK0L_vO17O7NY7Z7OVR5" name="*売上情報管理_登録">
-        <mxGraphModel dx="1757" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1175" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -106,14 +106,14 @@
                         <mxPoint x="474.17" y="590" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2" value="売上情報管理_登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+                <mxCell id="2" value="売上情報管理_登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="1" vertex="1">
                     <mxGeometry x="-149.5" y="100" width="189" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="AUWY2sqyxB_gJZ5fvk6p" name="*売上情報管理_参照">
-        <mxGraphModel dx="1757" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1175" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="YSVPIyuumFlyNAX_10df-0"/>
                 <mxCell id="YSVPIyuumFlyNAX_10df-1" parent="YSVPIyuumFlyNAX_10df-0"/>
@@ -189,14 +189,14 @@
                 <mxCell id="BOGcBiReKdCSQE0mYAIb-15" value="詳細画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="YSVPIyuumFlyNAX_10df-1" vertex="1">
                     <mxGeometry x="120" y="440" width="100" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="T7hCC7a_J7sBgH4MBuqx-0" value="売上情報管理_参照" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="YSVPIyuumFlyNAX_10df-1">
+                <mxCell id="T7hCC7a_J7sBgH4MBuqx-0" value="売上情報管理_参照" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="YSVPIyuumFlyNAX_10df-1" vertex="1">
                     <mxGeometry x="-149.5" y="100" width="189" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="rlL2KIcHxsmWdDMy5Cie" name="*売上情報管理_編集">
-        <mxGraphModel dx="1757" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1175" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="6sy8OTf5AHw0qntDZcab-0"/>
                 <mxCell id="6sy8OTf5AHw0qntDZcab-1" parent="6sy8OTf5AHw0qntDZcab-0"/>
@@ -317,7 +317,7 @@
                         <mxPoint x="240" y="470" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="J-vomR3hW0VPQrFUxNHV-0" value="売上情報管理_編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="6sy8OTf5AHw0qntDZcab-1">
+                <mxCell id="J-vomR3hW0VPQrFUxNHV-0" value="売上情報管理_編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="6sy8OTf5AHw0qntDZcab-1" vertex="1">
                     <mxGeometry x="-149.5" y="100" width="189" height="60" as="geometry"/>
                 </mxCell>
             </root>

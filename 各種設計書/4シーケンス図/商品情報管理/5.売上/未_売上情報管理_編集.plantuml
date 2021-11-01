@@ -1,8 +1,8 @@
-@startuml ../../images/売上/売上情報管理_登録
+@startuml ../../images/売上/売上情報管理_編集
 
 hide footbox
 header 営業情報管理システム
-title 商品情報管理/売上情報を登録する
+title 商品情報管理/売上情報を編集する
 
 ' actor "" as a
 actor "正規社員\n非正規社員" as a1
@@ -10,11 +10,13 @@ actor "正規社員\n非正規社員" as a1
 ' boundary "" as b
 boundary "ログイン済\nホーム画面" as b1
 boundary "売上情報\n一覧画面" as b2
-boundary "新規登録画面" as b3
+boundary "詳細画面" as b3
+boundary "編集画面" as b4
 
 ' control "" as c
 control "売上情報一覧\nコントローラ" as c1
 control "詳細\nコントローラ" as c2
+control "編集\nコントローラ" as c3
 
 ' entity "" as e
 entity "売上情報" as e1
