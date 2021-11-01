@@ -8,7 +8,7 @@ title 従業員情報管理_削除
 
 
 ' アイコン
-actor "管理者\n正規社員" as Act
+actor "管理者\n正規社員" as a1
 boundary "ログイン済み\nホーム画面" as HomeSc
 boundary "従業員情報\n一覧画面" as StaffListSc
 boundary "詳細画面" as StaffSc
@@ -19,8 +19,8 @@ entity "従業員情報" as StaffDB
 
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス
-activate Act
-Act -> HomeSc : 「従業員情報」を押下する
+activate a1
+a1 -> HomeSc : 「従業員情報」を押下する
 activate HomeSc
 HomeSc -> StaffCl : 従業員情報一覧画面\nを要求する
 deactivate
@@ -33,18 +33,18 @@ deactivate
 StaffListSc <-- StaffCl : 一覧画面を組み立てる
 deactivate
 activate StaffListSc
-Act <-- StaffListSc : 一覧画面を表示する
+a1 <-- StaffListSc : 一覧画面を表示する
 
 
 ' 詳細画面表示までのシーケンス
-Act -> StaffListSc : 参照したいデータを選択し押下する
+a1 -> StaffListSc : 参照したいデータを選択し押下する
 StaffListSc -> ScCl : 詳細画面を要求する
 deactivate
 activate ScCl
 StaffSc <-- ScCl
 deactivate
 activate StaffSc
-Act <-- StaffSc : 詳細画面を表示する
+a1 <-- StaffSc : 詳細画面を表示する
 deactivate
 
 

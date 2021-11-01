@@ -28,10 +28,11 @@ activate e1
 e1 --> c4:情報を返す
 deactivate e1
 ' c1 
-c4 --> b2:画面を表示する
-deactivate c4
+c4 --> b2:画面を組み立てる
 activate b2
-b2 --> a1
+deactivate c4
+b2 -> b2:入力内容を検証する
+b2 --> a1 : 画面を表示する
 a1 -> b2:従業員と権限を選択し、\n「登録」ボタンを押下する
 b2 -> c2:情報の更新を要求する()
 activate c2
