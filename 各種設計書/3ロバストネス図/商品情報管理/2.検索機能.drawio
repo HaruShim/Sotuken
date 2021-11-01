@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-01T03:16:09.221Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="DRbTw3AqN6ewbMjg6nxG" version="15.6.3" type="embed" pages="3">
+<mxfile host="65bd71144e" modified="2021-11-01T04:59:09.250Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="hFUOJiLeuZn5bL2MugIF" version="15.6.3" type="embed" pages="3">
     <diagram id="em1b6fMsbLagTfWiKfip" name="*商品情報検索">
-        <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1387" dy="430" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="d4U6wp0cc1fB_iKBPiok-0"/>
                 <mxCell id="d4U6wp0cc1fB_iKBPiok-1" parent="d4U6wp0cc1fB_iKBPiok-0"/>
@@ -67,14 +67,17 @@
                         <mxPoint x="660" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="o3MJEPmD4ptvkqMaT6uP-0" value="「検索」を押下" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="d4U6wp0cc1fB_iKBPiok-1">
+                <mxCell id="o3MJEPmD4ptvkqMaT6uP-0" value="「検索」を押下" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="d4U6wp0cc1fB_iKBPiok-1" vertex="1">
                     <mxGeometry x="290" y="280" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="0" value="商品情報検索" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="d4U6wp0cc1fB_iKBPiok-1">
+                    <mxGeometry x="-150" y="100" width="160" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="5Pz3x9tau8wW2VPo6GqX" name="*ボトルネック判定">
-        <mxGraphModel dx="2474" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1387" dy="430" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="mzyuVujSkgFNetJPbpG6-0"/>
                 <mxCell id="mzyuVujSkgFNetJPbpG6-1" parent="mzyuVujSkgFNetJPbpG6-0"/>
@@ -123,29 +126,32 @@
                 <mxCell id="7AsI2XNyP3h9JwQ9ARKl-1" value="検索する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="mzyuVujSkgFNetJPbpG6-1" vertex="1">
                     <mxGeometry x="440" y="280" width="70" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="RiAp14Sy4-qBGC_ccncW-0" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="mzyuVujSkgFNetJPbpG6-1">
+                <mxCell id="RiAp14Sy4-qBGC_ccncW-0" value="" style="endArrow=classic;html=1;rounded=0;" parent="mzyuVujSkgFNetJPbpG6-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="430" y="169" as="sourcePoint"/>
                         <mxPoint x="240" y="310" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="RiAp14Sy4-qBGC_ccncW-1" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" edge="1" parent="mzyuVujSkgFNetJPbpG6-1">
+                <mxCell id="RiAp14Sy4-qBGC_ccncW-1" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" parent="mzyuVujSkgFNetJPbpG6-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="240" y="319.58000000000004" as="sourcePoint"/>
                         <mxPoint x="430" y="319.40999999999997" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="RiAp14Sy4-qBGC_ccncW-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="mzyuVujSkgFNetJPbpG6-1">
+                <mxCell id="RiAp14Sy4-qBGC_ccncW-2" value="" style="endArrow=classic;html=1;rounded=0;" parent="mzyuVujSkgFNetJPbpG6-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="520" y="320" as="sourcePoint"/>
                         <mxPoint x="660" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="tTIceZ_QKUupI9o02bHn-0" value="ボトルネック判定" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="mzyuVujSkgFNetJPbpG6-1">
+                    <mxGeometry x="-150" y="100" width="160" height="60" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="ESTtlpsgeIXyWqRHIMmx" name="*ベンチマーク検索">
-        <mxGraphModel dx="1815" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1147" dy="430" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="nSvWwGeYQzesH8xxH-ef-0"/>
                 <mxCell id="nSvWwGeYQzesH8xxH-ef-1" parent="nSvWwGeYQzesH8xxH-ef-0"/>
@@ -211,6 +217,9 @@
                         <mxPoint x="520" y="320" as="sourcePoint"/>
                         <mxPoint x="660" y="170" as="targetPoint"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="QPlnC9_Mq0j8riVt_4eE-0" value="ベンチマーク検索" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="nSvWwGeYQzesH8xxH-ef-1">
+                    <mxGeometry x="-150" y="100" width="160" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
