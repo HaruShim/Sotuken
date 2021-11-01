@@ -1,33 +1,33 @@
-@startuml ../../images/従業員情報マスタ/従業員情報管理_参照
+@startuml ../../images/店舗情報マスタ/店舗情報管理_削除
 
 ' 下アイコン除去
 hide footbox
 ' ヘッダー
 header 営業情報管理システム
 ' タイトル
-title マスタ管理/従業員情報を参照する
+title マスタ管理/店舗情報を削除する
 
 
 ' actor "" as 
-actor "管理者\n正規社員" as a1
+actor "管理者" as a1
 
 ' boundary "" as 
 boundary "ログイン済み\nホーム画面" as b1
-boundary "従業員情報\n一覧画面" as b2
+boundary "店舗情報\n一覧画面" as b2
 boundary "詳細\n画面" as b3
 
 ' control "" as 
-control "従業員情報一覧\nコントローラ" as c1
+control "店舗情報一覧\nコントローラ" as c1
 control "詳細\nコントローラ" as c2
 
 ' entity "" as
-entity "従業員情報" as e1
+entity "店舗情報" as e1
 
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス
-a1 -> b1 : 「従業員情報マスタ」を押下する
+a1 -> b1 : 「店舗情報マスタ」を押下する
 activate b1
-b1 -> c1 : 従業員情報一覧画面を要求する()
+b1 -> c1 : 店舗情報一覧画面を要求する()
 deactivate b1
 activate c1
 c1 -> e1 : 登録情報を要求する()
@@ -36,7 +36,7 @@ c1 <-- e1 : 要求された情報を送信する
 deactivate e1
 
 ' 代替フロー
-opt 参照したい従業員情報がない場合
+opt 参照したい店舗情報がない場合
 b2 <-- c1 : 画面を組み立てる
 activate b2
 a1 <-- b2 : メッセージを表示する
@@ -58,6 +58,21 @@ b3 <-- c2 : 画面を組み立てる
 deactivate c2
 activate b3
 a1 <-- b3 : 画面を表示する
+
+
+
+a1 -> b3 : 「削除」を押下する
+b3 -> c2 : 指定された店舗情報を\n無効にするよう要求する()
 deactivate b3
+activate c2
+c2 -> e1 : 情報を無効にする()
+activate e1
+c2 <-- e1 : 処理の結果を返す
+deactivate e1
+b2 <-- c2 : 画面を組み立てる
+deactivate c2
+activate b2
+a1 <-- b2 : 画面を表示する
+deactivate b2
 
 @enduml
