@@ -1,0 +1,72 @@
+@startuml ../../images/勤務店舗状況編集/勤務店舗状況編集
+' 下アイコン除去
+hide footbox
+' ヘッダー
+header 営業情報管理システム
+' タイトル
+title 人事情報管理/勤務店舗状況を更新する
+
+
+
+' actor "" as 
+actor "正規社員\n非正規社員" as a1
+
+' boundary "" as 
+boundary "ログイン済\nホーム画面" as b1
+boundary "勤務店舗状況\n一覧画面" as b2
+
+' control "" as 
+control "勤務店舗状況一覧\nコントローラ" as c1
+
+' entity "" as
+entity "従業員情報" as e1
+
+a1 -> b1 : 「勤務店舗状況」を押下する
+activate b1
+b1 -> c1 : 画面の表示を要求する()
+deactivate b1
+activate c1
+c1 -> e1 : 情報を要求する()
+activate e1
+e1 --> c1 : 情報を送信する
+deactivate e1
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1 : 画面を表示する
+a1 -> b2 : 従業員と働く店舗を\n選択する
+b2 -> b2 : 入力されたデータを検証する
+opt  入力値チェックを満たさない場合
+b2 --> a1 : メッセージを表示する
+end
+b2 -> c1 : 入力された情報を送信する
+deactivate b2
+activate c1
+c1 -> c1 : 入力されたデータを検証する
+opt  入力値チェックを満たさない場合
+c1 --> b2 : 画面を組み立てる
+activate b2
+b2 --> a1 : メッセージを表示する
+deactivate b2
+end
+c1 -> e1 : 情報の更新を要求する()
+activate e1
+e1 --> c1 : 処理の結果を送信する
+deactivate e1
+opt DBの処理が失敗に終わった場合
+c1 --> b2 : 画面を組み立てる
+activate b2
+b2 --> a1 : エラーメッセージを表示する
+deactivate b2
+end
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1 : 画面を表示する
+deactivate b2
+
+
+
+
+
+@enduml

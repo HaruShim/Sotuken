@@ -12,38 +12,40 @@ boundary "ホーム画面" as b1
 boundary "ログイン済\nホーム画面" as b2
 
 ' control "" as 
-control "登録を検証する" as c1
+control "Django-allauth" as c1
 ' control "表示する" as c2
 
 ' entity "" as
 entity "従業員情報" as e1
 
-a1 -> b1
+a1 -> b1 : フォームに情報を入力\n「ログイン」を押下()
 activate b1
-b1 -> c1 : フォームに情報を入力\n「ログイン」を押下()
+b1 -> b1 : 入力された情報を検証する
+b1 -> c1 : 入力された情報を送信する
 activate c1
+c1 -> c1 : 入力された情報を検証する
 opt 情報に間違いがある場合
-c1 --> b1 : メッセージを表示する
-b1 --> a1
+c1 --> b1 : 画面を組み立てる
+b1 --> a1 : メッセージを表示する
 deactivate b1
 end
-c1 -> e1 : 登録情報を\n要求する() 
+c1 -> e1 : ログインを要求する() 
 activate e1
-e1 --> c1 : 要求された\n情報を送信する
+e1 --> c1 : 結果を送信する
 deactivate e1
 ' c1 -> c2 : 画面の表示を\n要求する()
 alt 検証成功
 ' activate c2
-c1 --> b2 : 検証結果を基に\n画面を表示する
+c1 --> b2 : 画面を組み立てる
 activate b2
-b2 --> a1
+b2 --> a1:画面を表示する
 deactivate b2
 else 検証失敗
-c1 --> b1 : 検証結果を基に\n画面を表示する
+c1 --> b1 : 画面を組み立てる
 ' deactivate c2
 deactivate c1
 activate b1
-b1 --> a1
+b1 --> a1: エラーメッセージを表示する
 deactivate b1
 end
 
