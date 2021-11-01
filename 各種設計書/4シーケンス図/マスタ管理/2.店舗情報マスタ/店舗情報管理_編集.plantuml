@@ -12,13 +12,15 @@ title マスタ管理/店舗情報を編集する
 actor "管理者" as a1
 
 ' boundary "" as 
-boundary "ログイン済み\nホーム画面" as b1
+boundary "ログイン済\nホーム画面" as b1
 boundary "店舗情報\n一覧画面" as b2
 boundary "詳細\n画面" as b3
+boundary "編集\n画面" as b4
 
 ' control "" as 
 control "店舗情報一覧\nコントローラ" as c1
 control "詳細\nコントローラ" as c2
+control "編集\nコントローラ" as c3
 
 ' entity "" as
 entity "店舗情報" as e1
@@ -45,11 +47,17 @@ end
 b2 <-- c1 : 画面を組み立てる
 deactivate c1
 
+
+
+
+
 a1 <-- b2 : 画面を表示する
 a1 -> b2 : 参照したい情報を選択し押下する
 b2 -> c2 : 詳細画面を要求する()
 deactivate b2
 activate c2
+
+
 c2 -> e1 : 登録情報を\n要求する()
 activate e1
 c2 <-- e1 : 要求された\n情報を送信する
@@ -58,6 +66,40 @@ b3 <-- c2 : 画面を組み立てる
 deactivate c2
 activate b3
 a1 <-- b3 : 画面を表示する
+
+
+a1 -> b3 : 「編集」ボタンを押下する
+b3 -> b4 : 遷移する()
 deactivate b3
+activate b4
+a1 <-- b4 : 画面を表示する
+a1 -> b4 : 変更点を入力し「更新」ボタンを押下する
+b4 -> b4 : 入力内容を検証する
+b4 -> c3 : 更新を要求する()
+activate c3
+
+' 代替フロー
+
+
+opt 入力する内容について、指定されている文字数や種類があっていない場合
+b4 <-- c3 : 画面を組み立てる
+deactivate c1
+a1 <-- b4 : メッセージを表示する
+deactivate b4
+end
+
+
+deactivate b4
+activate c3
+c3 -> e1 : 情報を更新する()
+activate e1
+c3 <-- e1 : 処理の結果を返す
+deactivate e1
+b2 <-- c3 : 画面を組み立てる
+deactivate c3
+activate b2
+a1 <-- b2 : 画面を表示する
+deactivate b2
+
 
 @enduml
