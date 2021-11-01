@@ -23,9 +23,9 @@ entity "従業員情報" as e1
 
 ' 長谷川
 
-a1 -> b1
+a1 -> b1 : 「勤務店舗状況」を押下する()
 activate b1
-b1 -> c1 : 「勤務店舗状況」を押下する()
+b1 -> c1
 deactivate
 activate c1
 c1 -> e1 : 登録情報を\n要求する() 
