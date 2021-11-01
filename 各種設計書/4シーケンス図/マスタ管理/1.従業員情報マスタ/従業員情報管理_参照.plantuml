@@ -5,7 +5,7 @@ hide footbox
 ' ヘッダー
 header 営業情報管理システム
 ' タイトル
-title 人事情報管理/従業員情報を編集する
+title 人事情報管理/従業員情報を参照する
 
 
 ' actor "" as 
