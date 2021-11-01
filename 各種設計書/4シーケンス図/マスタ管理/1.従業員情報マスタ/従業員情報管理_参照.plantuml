@@ -34,23 +34,22 @@ c1 -> e1 : 登録情報を要求する()
 activate e1
 c1 <-- e1 : 要求された情報を送信する
 deactivate e1
-b2 <-- c1 : 画面を組み立てる
-activate b2
 
 ' 代替フロー
-opt 基本フロー②で参照したい従業員情報がない場合
-b2 <-- c1 : 画面を組み立てる\n「データがありません」
-deactivate c1
+opt 参照したい従業員情報がない場合
+b2 <-- c1 : 画面を組み立てる
+activate b2
+a1 <-- b2 : メッセージを表示する
 end
 
-activate b2
+b2 <-- c1 : 画面を組み立てる
+deactivate c1
+
 a1 <-- b2 : 画面を表示する
 a1 -> b2 : 参照したい情報を選択し押下する
 b2 -> c2 : 詳細画面を要求する()
 deactivate b2
 activate c2
-
-
 c2 -> e1 : 登録情報を\n要求する()
 activate e1
 c2 <-- e1 : 要求された\n情報を送信する
@@ -60,7 +59,5 @@ deactivate c2
 activate b3
 a1 <-- b3 : 画面を表示する
 deactivate b3
-
-
 
 @enduml
