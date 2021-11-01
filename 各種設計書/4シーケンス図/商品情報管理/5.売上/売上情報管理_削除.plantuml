@@ -1,11 +1,26 @@
-@startuml ../../images/売上情報マスタ/売上情報管理_削除
+@startuml ../../images/売上/売上情報管理_削除
 
 hide footbox
 header 営業情報管理システム
-title マスタ管理/売上情報を削除する
+title 商品情報管理/売上情報を削除する
 
 ' actor "" as a
-actor "管理者" as a1
+actor "正規社員\n非正規社員" as a1
+
+' boundary "" as b
+boundary "ログイン済\nホーム画面" as b1
+boundary "売上情報\n一覧画面" as b2
+boundary "詳細画面" as b3
+
+' control "" as c
+control "売上情報一覧\nコントローラ" as c1
+control "詳細\nコントローラ" as c2
+
+' entity "" as e
+entity "売上情報" as e1
+
+' actor "" as a
+actor "正規社員\n非正規社員" as a1
 
 ' boundary "" as b
 boundary "ログイン済\nホーム画面" as b1
@@ -76,6 +91,5 @@ deactivate c2
 activate b2
 b2 --> a1 : 画面を表示する
 deactivate b2
-
 
 @enduml
