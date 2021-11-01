@@ -44,7 +44,7 @@ deactivate c1
 end
 
 activate b2
-a1 <-- b2 : 表示する
+a1 <-- b2 : 画面を表示する
 a1 -> b2 : 参照したい情報を選択し押下する
 b2 -> c2 : 詳細画面を要求する()
 deactivate b2
@@ -58,7 +58,7 @@ deactivate e1
 b3 <-- c2 : 画面を組み立てる
 deactivate c2
 activate b3
-a1 <-- b3 : 表示する
+a1 <-- b3 : 画面を表示する
 deactivate b3
 
 
