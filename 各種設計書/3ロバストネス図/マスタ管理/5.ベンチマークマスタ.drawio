@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" pages="4">
+<mxfile host="65bd71144e" modified="2021-11-01T04:38:33.496Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.6.3" etag="1iIjH6Crlhsq9syNWoy5" type="embed" pages="4">
     <diagram id="RWeOAwpdm6szLaTIHd15" name="*ベンチマークマスタ管理_登録">
-        <mxGraphModel dx="1918" dy="484" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1464" dy="614" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -100,11 +100,14 @@
                         <mxPoint x="710" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="2" value="ベンチマークマスタ管理_登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="-160" y="100" width="250" height="60" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="kNyEyUyUbylaJBoFLzu6" name="*ベンチマークマスタ管理_参照">
-        <mxGraphModel dx="1726" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2090" dy="614" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="Noq5ilU5FU8ZEYIdX7iq-0"/>
                 <mxCell id="Noq5ilU5FU8ZEYIdX7iq-1" parent="Noq5ilU5FU8ZEYIdX7iq-0"/>
@@ -180,11 +183,14 @@
                 <mxCell id="6jQ6UgOFRzboO_oVdpWV-0" value="ベンチマーク&lt;br&gt;マスタ情報&lt;br&gt;を取得する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="Noq5ilU5FU8ZEYIdX7iq-1" vertex="1">
                     <mxGeometry x="440" y="110" width="80" height="90" as="geometry"/>
                 </mxCell>
+                <mxCell id="dUlQ4flZGrjJP7amC4kk-0" value="ベンチマークマスタ管理_参照" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="Noq5ilU5FU8ZEYIdX7iq-1">
+                    <mxGeometry x="-160" y="100" width="250" height="60" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="8uVS_xQF8xlp2i3T6R5J" name="*ベンチマークマスタ管理_編集">
-        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2219" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="Vqz1aeMNSxQNZWVuaeiP-0"/>
                 <mxCell id="Vqz1aeMNSxQNZWVuaeiP-1" parent="Vqz1aeMNSxQNZWVuaeiP-0"/>
@@ -279,7 +285,7 @@
                     <mxGeometry x="440" y="600" width="70" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="z9AlBpr7LHTCgQyZx6nX-5" value="更新する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="Vqz1aeMNSxQNZWVuaeiP-1" vertex="1">
-                    <mxGeometry x="440" y="760" width="70" height="80" as="geometry"/>
+                    <mxGeometry x="440" y="440" width="70" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="z9AlBpr7LHTCgQyZx6nX-6" value="" style="endArrow=classic;html=1;rounded=0;jumpStyle=none;startArrow=classic;startFill=1;endFill=1;" parent="Vqz1aeMNSxQNZWVuaeiP-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -289,14 +295,14 @@
                 </mxCell>
                 <mxCell id="z9AlBpr7LHTCgQyZx6nX-7" value="" style="endArrow=none;html=1;rounded=0;jumpStyle=none;startArrow=classic;startFill=1;endFill=0;" parent="Vqz1aeMNSxQNZWVuaeiP-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="474.66" y="760" as="sourcePoint"/>
-                        <mxPoint x="475" y="690" as="targetPoint"/>
+                        <mxPoint x="475" y="530" as="sourcePoint"/>
+                        <mxPoint x="475" y="590" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="z9AlBpr7LHTCgQyZx6nX-8" value="" style="endArrow=none;html=1;rounded=0;jumpStyle=none;startArrow=classic;startFill=1;endFill=0;" parent="Vqz1aeMNSxQNZWVuaeiP-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="710" y="250" as="sourcePoint"/>
-                        <mxPoint x="520" y="800" as="targetPoint"/>
+                        <mxPoint x="520" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="z9AlBpr7LHTCgQyZx6nX-9" value="" style="endArrow=classic;html=1;rounded=0;jumpStyle=arc;" parent="Vqz1aeMNSxQNZWVuaeiP-1" edge="1">
@@ -305,11 +311,14 @@
                         <mxPoint x="240" y="470" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="6e0Y1z3ff_5MrrpyJy39-0" value="ベンチマークマスタ管理_編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="Vqz1aeMNSxQNZWVuaeiP-1">
+                    <mxGeometry x="-160" y="100" width="250" height="60" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="Ufez5nXvk2XaxpIsFsRu" name="*ベンチマークマスタ管理_削除">
-        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1770" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="DMxsckBU2M_JoR_AKvYi-0"/>
                 <mxCell id="DMxsckBU2M_JoR_AKvYi-1" parent="DMxsckBU2M_JoR_AKvYi-0"/>
@@ -399,6 +408,9 @@
                         <mxPoint x="710" y="250" as="sourcePoint"/>
                         <mxPoint x="530" y="480" as="targetPoint"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="la75sHiAkwk_fY0pO1k2-0" value="ベンチマークマスタ管理_削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="DMxsckBU2M_JoR_AKvYi-1">
+                    <mxGeometry x="-160" y="100" width="250" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
