@@ -14,37 +14,39 @@ boundary "店舗情報\n一覧画面" as b2
 boundary "詳細画面" as b3
 
 ' control "" as 
-control "取得する" as c1
+control "店舗情報一覧\nコントローラ" as c1
+control "詳細\nコントローラ" as c2
 
 ' entity "" as
 entity "店舗情報" as e1
 
 
-a1 -> b1
+a1 -> b1 :「店舗情報」を押下する()
 activate b1
-b1 -> c1 : 「店舗情報」を押下する()
-deactivate
+b1 -> c1 : 画面の表示を要求する()
+deactivate b1
 activate c1
-c1 -> e1 : 情報を\n要求する() 
+c1 -> e1 : 情報を要求する() 
 activate e1
-e1 --> c1 : 要求された\n情報を送信する
+e1 --> c1 : 情報を送信する
 deactivate
-opt 店舗情報がない場合
-b2 <-- c1 : メッセージを表示する
+c1 --> b2 : 画面を組み立てる
 activate b2
-end
-b2 <-- c1 : 画面を表示する
+b2 --> a1 : 画面を表示する
+opt 店舗情報がない場合
+c1 --> b2 : 画面を組み立てる 
 deactivate c1
-a1 <-- b2
-a1 -> b2
-b2 -> b3 : 表示したい情報を\n選択する
+b2 --> a1 : メッセージを表示する
+end
+a1 -> b2 : 表示したい情報を選択する
+b2 -> b3 : 画面の表示を\n要求する()
 deactivate b2
 activate b3
 b3 -> e1 : 情報を要求する() 
 activate e1
-e1 --> b3 : 要求された情報を送信する
+e1 --> b3 : 情報を送信する
 deactivate e1
-a1 <-- b3
+a1 <-- b3 : 画面を表示する
 deactivate
 
 
