@@ -21,7 +21,6 @@ control "勤務店舗状況一覧\nコントロール" as c1
 entity "勤務店舗状況" as e1
 
 
-' 長谷川
 a1 -> b1 : 「勤務店舗状況」を押下する
 activate b1
 b1 -> c1 : 勤務店舗状況\n一覧画面表示を要求する()
@@ -33,18 +32,14 @@ e1 --> c1 : 要求された\n情報を送信する
 deactivate e1
 b2 <-- c1 : 取得情報を基に\n画面を表示する
 activate b2
-a1 <-- b2
-deactivate b2
 
 ' 代替フロー
 opt 基本フロー②で参照したい従業員情報がない場合
 b2 <-- c1 : 取得情報を基に画面を表示する\n「データがありません」
 deactivate c1
-activate b2
-a1 <-- b2
-deactivate b2
 end
 
-
+a1 <-- b2
+deactivate b2
 
 @enduml

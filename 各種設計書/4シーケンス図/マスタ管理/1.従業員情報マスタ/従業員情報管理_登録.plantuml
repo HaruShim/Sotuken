@@ -37,7 +37,6 @@ activate b2
 opt 基本フロー②で参照したい従業員情報がない場合
 b2 <-- c1 : 取得情報を基に画面を表示する\n「データがありません」
 deactivate c1
-a1 <-- b2
 end
 
 activate b2
