@@ -20,9 +20,9 @@ entity "従業員情報" as e1
 
 ' 長谷川
 
-a1 -> b1
+a1 -> b1 : 「従業員情報」を押下する
 activate b1
-b1 -> c1 : 「従業員情報」を押下する
+b1 -> c1 : 従業員情報一覧画面表示を要求する()
 deactivate
 activate c1
 c1 -> e1 : 情報を\n要求する() 
@@ -32,13 +32,17 @@ deactivate
 opt 従業員情報がない場合
 b2 <-- c1 : メッセージを表示する
 activate b2
-end
-b2 <-- c1 : 画面を表示する
-deactivate c1
-b2 --> a1
-a1 -> b2
-b2 -> b3 : 情報を選択する
-deactivate b2
+a1 <-- b2
+a1 -> b2 : 表示したい項目を選択し押下する
+b2 -> c1 : 詳細画面表示を要求する()
+deactivate
+activate c1
+c1 -> e1 : 登録情報を\n要求する() 
+activate e1
+e1 --> c1 : 要求された\n情報を送信する
+deactivate
+b3 <-- c1 : 取得情報を基に画面を表示する
+deactivate
 activate b3
 b3 -> e1: 情報を要求する() 
 activate e1
