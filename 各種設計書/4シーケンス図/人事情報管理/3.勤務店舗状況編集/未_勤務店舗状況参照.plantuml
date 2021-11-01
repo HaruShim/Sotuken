@@ -15,7 +15,7 @@ boundary "ログイン済\nホーム画面" as b1
 boundary "勤務店舗状況\n一覧画面" as b2
 
 ' control "" as 
-control "勤務店舗\n状況を\n取得する" as c1
+control "取得する" as c1
 
 ' entity "" as
 entity "従業員情報" as e1

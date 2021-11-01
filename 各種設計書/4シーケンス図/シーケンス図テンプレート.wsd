@@ -4,12 +4,12 @@ hide footbox
 header 営業情報管理システム
 title #/#
 
-' actor "" as 
+' actor "" as a
 
-' boundary "" as 
+' boundary "" as b
 
-' control "" as 
+' control "" as c
 
-' entity "" as
+' entity "" as e
 
 @enduml

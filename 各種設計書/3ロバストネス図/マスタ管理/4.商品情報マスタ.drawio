@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-10-29T06:05:26.210Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="7FSRgcQig2ZrRXGekBbq" version="15.6.2" type="embed" pages="4">
+<mxfile host="65bd71144e" pages="4">
     <diagram id="zRWkxzNCmzS7zqm-mONb" name="*商品情報管理_登録">
-        <mxGraphModel dx="1066" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -116,7 +116,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="oxx0aPTfE0HgOdgYFnXd" name="*商品情報管理_参照">
-        <mxGraphModel dx="1291" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="6h30WmC1kWDwmjAZNorG-0"/>
                 <mxCell id="6h30WmC1kWDwmjAZNorG-1" parent="6h30WmC1kWDwmjAZNorG-0"/>

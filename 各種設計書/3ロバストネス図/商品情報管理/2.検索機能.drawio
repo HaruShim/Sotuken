@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-10-29T08:07:05.496Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="t2BLVKQwF1L1Q-oFp7ld" version="15.6.2" type="embed" pages="3">
+<mxfile host="65bd71144e" pages="3">
     <diagram id="em1b6fMsbLagTfWiKfip" name="*商品情報検索">
-        <mxGraphModel dx="1777" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="d4U6wp0cc1fB_iKBPiok-0"/>
                 <mxCell id="d4U6wp0cc1fB_iKBPiok-1" parent="d4U6wp0cc1fB_iKBPiok-0"/>
@@ -159,8 +159,8 @@
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram id="ESTtlpsgeIXyWqRHIMmx" name="スペック検索(ボトルネック)">
-        <mxGraphModel dx="2521" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <diagram id="ESTtlpsgeIXyWqRHIMmx" name="ベンチマーク検索">
+        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="nSvWwGeYQzesH8xxH-ef-0"/>
                 <mxCell id="nSvWwGeYQzesH8xxH-ef-1" parent="nSvWwGeYQzesH8xxH-ef-0"/>
