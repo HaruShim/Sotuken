@@ -1,46 +1,44 @@
 @startuml シーケンス図
-
+' 下アイコン除去
 hide footbox
+' ヘッダー
 header 営業情報管理システム
-title 人事情報管理/従業員情報を参照する
-
+' タイトル
+title 人事情報管理/勤務店舗状況を参照する
 
 
 ' actor "" as 
 actor "正規社員\n非正規社員" as a1
 
 ' boundary "" as 
-boundary "ログイン済み\nホーム画面" as b1
-boundary "従業員情報\n一覧画面" as b2
-boundary "詳細画面" as b3
+boundary "ログイン済\nホーム画面" as b1
+boundary "勤務店舗状況\n一覧画面" as b2
 
 ' control "" as 
-control "従業員情報を取得する" as c1
+control "取得する" as c1
 
 ' entity "" as
 entity "従業員情報" as e1
+
 
 ' 長谷川
 
 a1 -> b1
 activate b1
-b1 -> c1 : 「従業員情報」を押下する()
+b1 -> c1 : 「勤務店舗状況」を押下する()
 deactivate
 activate c1
 c1 -> e1 : 登録情報を\n要求する() 
 activate e1
 e1 --> c1 : 要求された\n情報を送信する
 deactivate
-b2 <-- c1 : 取得情報を基に画面を表示する
+b2 <-- c1
 deactivate
 activate b2
 a1 <-- b2
-a1 -> b2
-b2 -> b3 : 表示したい項目を\n選択し押下する()
 deactivate
-activate b3
-a1 <-- b3
-deactivate
+
+
 
 
 
