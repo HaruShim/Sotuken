@@ -8,15 +8,21 @@ header 営業情報管理システム
 title 人事情報管理/従業員情報を登録する
 
 
-' アイコン
+' actor "" as 
 actor "管理者\n正規社員" as a1
+
+' boundary "" as 
 boundary "ログイン済み\nホーム画面" as b1
 boundary "従業員情報\n一覧画面" as b2
 boundary "新規登録\n画面" as b3
 boundary "登録完了\n画面" as b4
+
+' control "" as 
 control "従業員情報一覧\nコントローラ" as c1
 control "新規登録\nコントローラ" as c2
 control "登録完了\nコントローラ" as c3
+
+' entity "" as
 entity "従業員情報" as e1
 
 
