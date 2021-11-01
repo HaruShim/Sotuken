@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-01T03:13:11.239Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="_HSfC8KxIaLWvgq8UG7I" version="15.6.3" type="embed" pages="3">
+<mxfile host="65bd71144e" modified="2021-11-01T03:16:09.221Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="DRbTw3AqN6ewbMjg6nxG" version="15.6.3" type="embed" pages="3">
     <diagram id="em1b6fMsbLagTfWiKfip" name="*商品情報検索">
-        <mxGraphModel dx="2474" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="d4U6wp0cc1fB_iKBPiok-0"/>
                 <mxCell id="d4U6wp0cc1fB_iKBPiok-1" parent="d4U6wp0cc1fB_iKBPiok-0"/>
@@ -145,7 +145,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="ESTtlpsgeIXyWqRHIMmx" name="*ベンチマーク検索">
-        <mxGraphModel dx="2474" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1815" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="nSvWwGeYQzesH8xxH-ef-0"/>
                 <mxCell id="nSvWwGeYQzesH8xxH-ef-1" parent="nSvWwGeYQzesH8xxH-ef-0"/>
@@ -206,7 +206,7 @@
                 <mxCell id="AMLM4FUAheRv_1A4bSG0-12" value="検索する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="nSvWwGeYQzesH8xxH-ef-1" vertex="1">
                     <mxGeometry x="440" y="280" width="70" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="26A0M0TjZevItJ6gILFt-0" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;startFill=0;endFill=1;" edge="1" parent="nSvWwGeYQzesH8xxH-ef-1">
+                <mxCell id="26A0M0TjZevItJ6gILFt-0" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;startFill=0;endFill=1;" parent="nSvWwGeYQzesH8xxH-ef-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="520" y="320" as="sourcePoint"/>
                         <mxPoint x="660" y="170" as="targetPoint"/>
