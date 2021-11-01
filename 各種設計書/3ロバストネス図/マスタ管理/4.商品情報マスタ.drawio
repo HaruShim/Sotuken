@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" pages="4">
+<mxfile host="65bd71144e" modified="2021-11-01T04:32:29.067Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.6.3" etag="WIa0VHRkeFh5M4KuQHUX" type="embed" pages="4">
     <diagram id="zRWkxzNCmzS7zqm-mONb" name="*商品情報管理_登録">
-        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2094" dy="614" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -112,11 +112,14 @@
                 <mxCell id="25" value="登録済&lt;br&gt;入力内容のエラーがある場合は&lt;br&gt;エラーメッセージを表示" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" parent="1" vertex="1">
                     <mxGeometry x="280" y="510" width="110" height="30" as="geometry"/>
                 </mxCell>
+                <mxCell id="26" value="商品情報管理_登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="-120" y="80" width="189" height="60" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="oxx0aPTfE0HgOdgYFnXd" name="*商品情報管理_参照">
-        <mxGraphModel dx="1591" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1811" dy="614" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="6h30WmC1kWDwmjAZNorG-0"/>
                 <mxCell id="6h30WmC1kWDwmjAZNorG-1" parent="6h30WmC1kWDwmjAZNorG-0"/>
@@ -192,11 +195,14 @@
                         <mxPoint x="430" y="330" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="2tyA72wgHynPA6pTtvVA-0" value="商品情報管理_参照" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="6h30WmC1kWDwmjAZNorG-1">
+                    <mxGeometry x="-120" y="80" width="189" height="60" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="uA1Vm-JMy-6dObAZWppL" name="*商品情報管理_編集">
-        <mxGraphModel dx="1291" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2376" dy="860" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="LbgHs6ZPHBYUlUjT8pi--0"/>
                 <mxCell id="LbgHs6ZPHBYUlUjT8pi--1" parent="LbgHs6ZPHBYUlUjT8pi--0"/>
@@ -317,11 +323,14 @@
                         <mxPoint x="240" y="470" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="8IdQaAR0gUEuD1F1gpQq-0" value="商品情報管理_編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="LbgHs6ZPHBYUlUjT8pi--1">
+                    <mxGeometry x="-120" y="80" width="189" height="60" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="Bju-Oied4lOsdnA-EONm" name="*商品情報管理_削除">
-        <mxGraphModel dx="1291" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1751" dy="614" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="XnX9uZomtcTrIy8l5btS-0"/>
                 <mxCell id="XnX9uZomtcTrIy8l5btS-1" parent="XnX9uZomtcTrIy8l5btS-0"/>
@@ -411,6 +420,9 @@
                         <mxPoint x="430" y="490" as="sourcePoint"/>
                         <mxPoint x="240.00000000000045" y="490" as="targetPoint"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="HKyX9XFVA0ahOkuL98Ae-0" value="商品情報管理_削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="XnX9uZomtcTrIy8l5btS-1">
+                    <mxGeometry x="-120" y="80" width="189" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
