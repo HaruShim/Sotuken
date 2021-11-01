@@ -72,7 +72,7 @@ activate e1
 c3 <-- e1 : フラグを返す
 deactivate e1
 activate c3
-b4 <-- c3 :: 画面を組み立てる
+b4 <-- c3 : 画面を組み立てる
 deactivate c3
 activate b4
 a1 <-- b4 : 画面を表示する
