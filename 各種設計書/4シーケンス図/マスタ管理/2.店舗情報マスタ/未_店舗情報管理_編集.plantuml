@@ -1,4 +1,4 @@
-@startuml ../../images/従業員情報マスタ/従業員情報管理_参照
+@startuml ../../images/店舗情報マスタ/店舗情報管理_編集
 
 ' 下アイコン除去
 hide footbox
