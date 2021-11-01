@@ -1,0 +1,66 @@
+@startuml ../../images/商品情報マスタ/商品情報管理_登録
+
+hide footbox
+header 営業情報管理システム
+title マスタ管理/商品情報を登録する
+
+' actor "" as a
+actor "管理者" as a1
+
+' boundary "" as b
+boundary "ログイン済\nホーム画面" as b1
+boundary "商品情報\n一覧画面" as b2
+boundary "新規登録画面" as b3
+
+' control "" as c
+control "商品情報一覧\nコントローラ" as c1
+control "新規登録\nコントローラ" as c2
+
+' entity "" as e
+entity "商品情報" as e1
+
+a1 -> b1 : 「商品情報マスタ」を押下する
+activate b1
+b1 -> c1 : 画面の表示を要求する()
+deactivate b1
+activate c1
+c1 -> e1 : 情報を要求する()
+activate e1
+e1 --> c1 : 情報を送信する
+deactivate e1
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1 : 画面を表示する
+a1 -> b2 : 「新規登録」ボタンを押下する
+b2 -> c2 : 画面の表示を要求する()
+deactivate b2
+activate c2
+c2 -> e1 : 情報を要求する()
+activate e1
+e1 --> c2 : 情報を送信する
+deactivate e1
+c2 --> b3 : 画面を組み立てる
+activate b3
+b3 --> a1 : 画面を表示する
+a1 -> b3 : 情報を入力し、「登録」ボタンを押下する
+b3 -> c2 : 入力された情報を送信する
+deactivate b3
+c2 -> e1 : 情報の登録を要求する()
+activate e1
+e1 --> c2 : 処理の結果を送信する
+deactivate e1
+opt DBの処理が失敗に終わった場合
+c2 --> b2 : 画面を組み立てる
+activate b2
+b2 --> a1 : エラーメッセージを表示する  
+deactivate b2
+end
+c2 --> b2 : 画面を組み立てる
+deactivate c2
+activate b2
+b2 --> a1 : 画面を表示する  
+deactivate b2
+
+
+@enduml

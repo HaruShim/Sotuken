@@ -1,8 +1,8 @@
-@startuml ../../images/売上/売上情報管理_削除
+@startuml ../../images/売上/売上情報管理_登録
 
 hide footbox
 header 営業情報管理システム
-title 商品情報管理/売上情報を削除する
+title 商品情報管理/売上情報を登録する
 
 ' actor "" as a
 actor "正規社員\n非正規社員" as a1
@@ -10,29 +10,29 @@ actor "正規社員\n非正規社員" as a1
 ' boundary "" as b
 boundary "ログイン済\nホーム画面" as b1
 boundary "売上情報\n一覧画面" as b2
-boundary "詳細画面" as b3
+boundary "新規登録画面" as b3
 
 ' control "" as c
 control "売上情報一覧\nコントローラ" as c1
-control "詳細\nコントローラ" as c2
+control "新規登録\nコントローラ" as c2
 
 ' entity "" as e
 entity "売上情報" as e1
 
-a1 -> b1:「売上情報」\nを押下する
+a1 -> b1 : 「売上情報」を押下する
 activate b1
-b1 -> c1:画面の表示を要求する()
+b1 -> c1 : 画面の表示を要求する()
 deactivate b1
 activate c1
 c1 -> e1 : 情報を要求する()
 activate e1
 e1 --> c1 : 情報を送信する
 deactivate e1
-c1 --> b2: 画面を組み立てる
+c1 --> b2 : 画面を組み立てる
 deactivate c1
 activate b2
 b2 --> a1 : 画面を表示する
-a1 -> b2 : 情報を選択する
+a1 -> b2 : 「新規登録」ボタンを押下する
 b2 -> c2 : 画面の表示を要求する()
 deactivate b2
 activate c2
@@ -41,40 +41,25 @@ activate e1
 e1 --> c2 : 情報を送信する
 deactivate e1
 c2 --> b3 : 画面を組み立てる
-deactivate c2
 activate b3
 b3 --> a1 : 画面を表示する
-a1 -> b3 : 情報を選択する
+a1 -> b3 : 情報を入力し、「登録」ボタンを押下する
 b3 -> c2 : 入力された情報を送信する
 deactivate b3
-activate c2
-c2 -> e1 : 情報を要求する()
-activate e1
-e1 --> c2 : 情報を送信する
-deactivate e1
-c2 --> b3 : 画面を組み立てる
-deactivate c2
-activate b3
-b3 --> a1 : 画面を表示する
-a1 -> b3 : 「削除」ボタンを押下する
-b3 -> c2 : 入力された情報を送信する
-deactivate b3
-activate c2
-c2 -> e1 : 情報の削除を要求する()
+c2 -> e1 : 情報の登録を要求する()
 activate e1
 e1 --> c2 : 処理の結果を送信する
 deactivate e1
 opt DBの処理が失敗に終わった場合
 c2 --> b2 : 画面を組み立てる
-
 activate b2
-b2 --> a1 : エラーメッセージを表示する
+b2 --> a1 : エラーメッセージを表示する  
 deactivate b2
 end
 c2 --> b2 : 画面を組み立てる
 deactivate c2
 activate b2
-b2 --> a1 : 画面を表示する
+b2 --> a1 : 画面を表示する  
 deactivate b2
 
 @enduml
