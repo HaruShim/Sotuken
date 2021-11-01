@@ -26,7 +26,7 @@ activate b1
 b1 -> c1 : 従業員情報一覧画面表示を要求する()
 deactivate b1
 activate c1
-c1 -> e1 : 登録情報を\n要求する() 
+c1 -> e1 : 登録情報を\n要求する()
 activate e1
 e1 --> c1 : 要求された\n情報を送信する
 deactivate e1
