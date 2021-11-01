@@ -1,4 +1,4 @@
-@startuml sequence
+@startuml ../../images/ベンチマークマスタ/ベンチマークマスタ管理_編集
 
 hide footbox
 header 営業情報管理システム

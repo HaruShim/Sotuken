@@ -1,4 +1,4 @@
-@startuml sequence
+@startuml ../../images/売上情報マスタ/売上情報管理_参照
 
 hide footbox
 header 営業情報管理システム

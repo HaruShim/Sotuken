@@ -1,4 +1,4 @@
-@startuml シーケンス図
+@startuml ../../images/取置予約管理/取置予約管理
 ' 下アイコン除去
 hide footbox
 ' ヘッダー

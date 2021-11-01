@@ -1,4 +1,4 @@
-@startuml シーケンス図
+@startuml ../../images/在庫管理/移動指示入力
 ' 下アイコン除去
 hide footbox
 ' ヘッダー

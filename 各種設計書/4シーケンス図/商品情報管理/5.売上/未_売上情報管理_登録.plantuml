@@ -1,4 +1,4 @@
-@startuml シーケンス図
+@startuml ../../images/売上/売上情報管理_登録
 ' 下アイコン除去
 hide footbox
 ' ヘッダー

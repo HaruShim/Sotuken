@@ -1,4 +1,4 @@
-@startuml シーケンス図
+@startuml ../../images/見積/販売価格見積
 ' 下アイコン除去
 hide footbox
 ' ヘッダー

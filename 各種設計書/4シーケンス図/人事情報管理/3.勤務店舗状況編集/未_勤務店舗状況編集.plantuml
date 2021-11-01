@@ -1,4 +1,4 @@
-@startuml シーケンス図
+@startuml ../../images/勤務店舗状況編集/勤務店舗状況編集
 ' 下アイコン除去
 hide footbox
 ' ヘッダー

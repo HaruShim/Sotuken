@@ -1,4 +1,4 @@
-@startuml sequence
+@startuml ../../images/店舗情報マスタ/店舗情報管理_削除
 
 hide footbox
 header 営業情報管理システム

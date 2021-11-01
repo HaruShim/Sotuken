@@ -1,4 +1,4 @@
-@startuml シーケンス図
+@startuml ../../images/検索機能/商品情報検索
 ' 下アイコン除去
 hide footbox
 ' ヘッダー

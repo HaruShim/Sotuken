@@ -1,4 +1,4 @@
-@startuml シーケンス図
+@startuml ../../images/従業員情報参照/従業員情報参照
 
 hide footbox
 header 営業情報管理システム

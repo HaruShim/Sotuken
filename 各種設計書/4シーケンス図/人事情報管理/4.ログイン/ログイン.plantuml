@@ -1,4 +1,4 @@
-@startuml sequence
+@startuml ../../images/ログイン/ログイン
 
 hide footbox
 header 営業情報管理システム

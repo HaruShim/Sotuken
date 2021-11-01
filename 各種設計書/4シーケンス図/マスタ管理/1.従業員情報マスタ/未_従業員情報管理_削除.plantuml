@@ -1,4 +1,4 @@
-@startuml シーケンス図
+@startuml ../../images/従業員情報マスタ/従業員情報管理_削除
 
 ' 下アイコン除去
 hide footbox
