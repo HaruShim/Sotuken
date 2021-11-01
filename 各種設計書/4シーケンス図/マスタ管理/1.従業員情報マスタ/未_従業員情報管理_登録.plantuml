@@ -3,37 +3,74 @@
 ' 下アイコン除去
 hide footbox
 ' ヘッダー
-header 営業情報管理システム/人事情報管理
+header 営業情報管理システム
 ' タイトル
-title 従業員情報管理
+title 人事情報管理/従業員情報を登録する
 
 
 ' アイコン
-actor "管理者\n正規社員" as Act
-boundary "ログイン済み\nホーム画面" as HomeSc
-boundary "従業員情報\n一覧画面" as StaffListSc
-control "従業員情報を取得する" as StaffCl
-control "表示する" as ScCl
-entity "従業員情報" as StaffDB
-
+actor "管理者\n正規社員" as a1
+boundary "ログイン済み\nホーム画面" as b1
+boundary "従業員情報\n一覧画面" as b2
+boundary "新規登録\n画面" as b3
+boundary "登録完了\n画面" as b4
+control "従業員情報一覧\nコントローラ" as c1
+control "新規登録\nコントローラ" as c2
+control "登録完了\nコントローラ" as c3
+entity "従業員情報" as e1
 
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス
-activate Act
-Act -> HomeSc : 「従業員情報」を押下する
-activate HomeSc
-HomeSc -> StaffCl : 従業員情報一覧画面を要求する
-deactivate
-activate StaffCl
-StaffCl -> StaffDB : 従業員のデータを要求する
-activate StaffDB
-StaffCl <-- StaffDB : 従業員のデータを返す
-deactivate
-StaffListSc <-- StaffCl : 一覧画面を組み立てる
-deactivate
-activate StaffListSc
-Act <-- StaffListSc : 一覧画面を表示する
-deactivate
+a1 -> b1 : 「従業員情報」を押下する
+activate b1
+b1 -> c1 : 従業員情報一覧画面を要求する()
+deactivate b1
+activate c1
+c1 -> e1 : 登録情報を\n要求する()
+activate e1
+c1 <-- e1 : 要求された\n情報を送信する
+deactivate e1
+b2 <-- c1 : 取得情報を基に画面を表示する
+activate b2
+
+' 代替フロー
+opt 基本フロー②で参照したい従業員情報がない場合
+b2 <-- c1 : 取得情報を基に画面を表示する\n「データがありません」
+deactivate c1
+a1 <-- b2
+end
+
+activate b2
+a1 <-- b2
+a1 -> b2 : 「新規登録」を押下する
+b2 -> b3 : 表示する()
+deactivate b2
+activate b3
+a1 <-- b3
+a1 -> b3 : 情報を入力し「登録」を押下する
+b3 -> c2 : 入力情報の検証と登録を要求する
+activate c2
+
+' 代替フロー
+opt 基本フロー⑤で入力する内容について、指定されている文字数や種類があっていない場合
+b3 <-- c2 : 画面に「入力したデータに誤りがあります」と表示
+deactivate c1
+a1 <-- b3
+end
+
+deactivate b3
+activate c2
+c2 -> e1 : 登録する()
+deactivate c2
+activate e1
+c3 <-- e1
+deactivate e1
+activate c3
+b4 <-- c3 : 一覧画面を表示する
+deactivate c3
+activate b4
+a1 <-- b4
+deactivate b4
 
 
 
