@@ -32,11 +32,11 @@ activate b1
 b1 -> c1 : 従業員情報一覧画面を要求する()
 deactivate b1
 activate c1
-c1 -> e1 : 登録情報を\n要求する()
+c1 -> e1 : 登録情報を要求する()
 activate e1
-c1 <-- e1 : 要求された\n情報を送信する
+c1 <-- e1 : 要求された情報を送信する
 deactivate e1
-b2 <-- c1 : 取得情報を基に画面を表示する
+b2 <-- c1 : 画面を組み立てる
 activate b2
 
 ' 代替フロー
@@ -46,35 +46,36 @@ deactivate c1
 end
 
 activate b2
-a1 <-- b2
+a1 <-- b2 : 表示する
 a1 -> b2 : 「新規登録」を押下する
-b2 -> b3 : 表示する()
+b2 -> b3 : 遷移する
 deactivate b2
 activate b3
-a1 <-- b3
+a1 <-- b3 : 表示する
 a1 -> b3 : 情報を入力し「登録」を押下する
-b3 -> c2 : 入力情報の検証と登録を要求する
+b3 -> c2 : 入力情報の検証と登録を要求する()
 activate c2
 
 ' 代替フロー
 opt 基本フロー⑤で入力する内容について、指定されている文字数や種類があっていない場合
-b3 <-- c2 : 画面に「入力したデータに誤りがあります」と表示
+b3 <-- c2 : フラグを返す
 deactivate c1
-a1 <-- b3
+a1 <-- b3 : 表示する　「入力した内容に誤りがあります」
+deactivate b3
 end
 
-deactivate b3
+
 activate c2
 c2 -> e1 : 登録する()
 deactivate c2
 activate e1
-c3 <-- e1
+c3 <-- e1 : フラグを返す
 deactivate e1
 activate c3
-b4 <-- c3 : 一覧画面を表示する
+b4 <-- c3 :: 画面を組み立てる
 deactivate c3
 activate b4
-a1 <-- b4
+a1 <-- b4 : 表示する
 deactivate b4
 
 
