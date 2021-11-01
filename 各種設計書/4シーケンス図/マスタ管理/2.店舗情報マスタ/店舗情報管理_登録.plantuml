@@ -12,14 +12,14 @@ title マスタ管理/店舗情報を登録する
 actor "管理者" as a1
 
 ' boundary "" as 
-boundary "ログイン済み\nホーム画面" as b1
+boundary "ログイン済\nホーム画面" as b1
 boundary "店舗情報\n一覧画面" as b2
 boundary "新規登録\n画面" as b3
 
 ' control "" as 
-control "従業員情報一覧\nコントローラ" as c1
+control "店舗情報一覧\nコントローラ" as c1
 control "新規登録\nコントローラ" as c2
-control "新規登録\nコントローラ" as c3
+
 
 ' entity "" as
 entity "店舗情報" as e1
@@ -53,11 +53,12 @@ activate b3
 a1 <-- b3 : 画面を表示する
 a1 -> b3 : 情報を入力し「登録」を押下する
 b3 -> b3 : 入力内容を検証する()
-b3 -> c2 : 入力情報の検証と登録を要求する()
+b3 -> c2 : 入力された情報を送信する
 activate c2
+c2 -> c2 : 入力された情報を検証する
 
 ' 代替フロー
-opt 入力する内容について、指定されている文字数や種類があっていない場合
+opt 入力値チェックの条件を満たさない場合
 b3 <-- c2 : 画面を組み立てる
 deactivate c1
 a1 <-- b3 : メッセージを表示する
@@ -66,14 +67,18 @@ end
 
 
 activate c2
-c2 -> e1 : 登録する()
-deactivate c2
+c2 -> e1 : 情報の登録を要求する()
 activate e1
-c3 <-- e1 : 処理の結果を返す
+c2 <-- e1 : 処理の結果を返す
 deactivate e1
-activate c3
-b2 <-- c3 : 画面を組み立てる
-deactivate c3
+opt DBの処理が失敗に終わった場合
+b2 <-- c2 : 画面を組み立てる
+a1 <-- b2 : エラーメッセージを表示する
+end
+deactivate e1
+activate c2
+b2 <-- c2 : 画面を組み立てる
+deactivate c2
 activate b2
 a1 <-- b2 : 画面を表示する
 deactivate b2

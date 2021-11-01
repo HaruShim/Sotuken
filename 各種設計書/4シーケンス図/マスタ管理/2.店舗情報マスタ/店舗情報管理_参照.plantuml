@@ -12,7 +12,7 @@ title マスタ管理/店舗情報を参照する
 actor "管理者" as a1
 
 ' boundary "" as 
-boundary "ログイン済み\nホーム画面" as b1
+boundary "ログイン済\nホーム画面" as b1
 boundary "店舗情報\n一覧画面" as b2
 boundary "詳細\n画面" as b3
 

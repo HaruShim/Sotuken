@@ -12,7 +12,7 @@ title マスタ管理/店舗情報を削除する
 actor "管理者" as a1
 
 ' boundary "" as 
-boundary "ログイン済み\nホーム画面" as b1
+boundary "ログイン済\nホーム画面" as b1
 boundary "店舗情報\n一覧画面" as b2
 boundary "詳細\n画面" as b3
 
@@ -69,6 +69,12 @@ c2 -> e1 : 情報を無効にする()
 activate e1
 c2 <-- e1 : 処理の結果を返す
 deactivate e1
+opt Dbの処理結果が失敗に終わった場合
+b2 <-- c2 : 画面を組み立てる
+activate b2
+a1 <-- b2 : エラーメッセージを表示する
+deactivate b2
+end
 b2 <-- c2 : 画面を組み立てる
 deactivate c2
 activate b2

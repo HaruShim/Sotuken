@@ -54,6 +54,13 @@ b3 --> a1 : 画面を表示する
 a1 -> b3 : 情報を入力し、「登録」ボタンを押下する
 b3 -> c2 : 入力された情報を送信する
 deactivate b3
+c2 -> c2 : 入力された情報を検証する
+opt 入力値チェック条件を満たさない場合
+c2 --> b3 :画面を組み立てる
+activate b3
+b3 --> a1 : 画面を表示する 
+deactivate b3
+end
 c2 -> e1 : 情報の登録を要求する()
 activate e1
 e1 --> c2 : 処理の結果を送信する
@@ -64,10 +71,7 @@ activate b2
 b2 --> a1 : エラーメッセージを表示する  
 deactivate b2
 end
-c2 --> b2 : 画面を組み立てる
-deactivate c2
-activate b2
-b2 --> a1 : 画面を表示する  
+activate b2  
 deactivate b2
 
 
