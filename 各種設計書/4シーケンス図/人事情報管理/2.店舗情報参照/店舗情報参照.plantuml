@@ -20,8 +20,6 @@ control "取得する" as c1
 entity "店舗情報" as e1
 
 
-' 長谷川
-
 a1 -> b1
 activate b1
 b1 -> c1 : 「店舗情報」を押下する()
