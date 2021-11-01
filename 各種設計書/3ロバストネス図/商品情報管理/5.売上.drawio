@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="4">
     <diagram id="gK0L_vO17O7NY7Z7OVR5" name="*売上情報管理_登録">
-        <mxGraphModel dx="1641" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1757" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -113,7 +113,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="AUWY2sqyxB_gJZ5fvk6p" name="*売上情報管理_参照">
-        <mxGraphModel dx="1641" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1757" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="YSVPIyuumFlyNAX_10df-0"/>
                 <mxCell id="YSVPIyuumFlyNAX_10df-1" parent="YSVPIyuumFlyNAX_10df-0"/>
@@ -196,7 +196,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="rlL2KIcHxsmWdDMy5Cie" name="*売上情報管理_編集">
-        <mxGraphModel dx="1641" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1757" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="6sy8OTf5AHw0qntDZcab-0"/>
                 <mxCell id="6sy8OTf5AHw0qntDZcab-1" parent="6sy8OTf5AHw0qntDZcab-0"/>
@@ -279,7 +279,7 @@
                     <mxGeometry x="440" y="600" width="70" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="jlOEbLyuGE9gtVG0Og6Y-18" value="更新する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="6sy8OTf5AHw0qntDZcab-1" vertex="1">
-                    <mxGeometry x="440" y="760" width="70" height="80" as="geometry"/>
+                    <mxGeometry x="440" y="440" width="70" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="jlOEbLyuGE9gtVG0Og6Y-19" value="" style="endArrow=classic;html=1;rounded=0;" parent="6sy8OTf5AHw0qntDZcab-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -301,14 +301,14 @@
                 </mxCell>
                 <mxCell id="nmts8cqX3aREAj3f9nUh-0" value="" style="endArrow=classic;html=1;rounded=0;" parent="6sy8OTf5AHw0qntDZcab-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="520" y="800" as="sourcePoint"/>
+                        <mxPoint x="520" y="480" as="sourcePoint"/>
                         <mxPoint x="710" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="nmts8cqX3aREAj3f9nUh-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="6sy8OTf5AHw0qntDZcab-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="474.1700000000001" y="690" as="sourcePoint"/>
-                        <mxPoint x="474.1700000000001" y="750" as="targetPoint"/>
+                        <mxPoint x="474" y="590" as="sourcePoint"/>
+                        <mxPoint x="474" y="530" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="nmts8cqX3aREAj3f9nUh-2" value="" style="endArrow=classic;html=1;rounded=0;jumpStyle=arc;" parent="6sy8OTf5AHw0qntDZcab-1" edge="1">
@@ -324,7 +324,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="id5BWrpkqergq9WMVsvq" name="*売上情報管理_削除">
-        <mxGraphModel dx="1641" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1757" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="GH4WaG8hF_58bTW3ABaH-0"/>
                 <mxCell id="GH4WaG8hF_58bTW3ABaH-1" parent="GH4WaG8hF_58bTW3ABaH-0"/>
