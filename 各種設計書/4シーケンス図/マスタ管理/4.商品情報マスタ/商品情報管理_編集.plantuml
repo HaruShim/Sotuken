@@ -1,0 +1,91 @@
+@startuml ../../images/商品情報マスタ/商品情報管理_編集
+
+hide footbox
+header 営業情報管理システム
+title マスタ管理/商品情報を編集する
+
+' actor "" as a
+actor "管理者" as a1
+
+' boundary "" as b
+boundary "ログイン済\nホーム画面" as b1
+boundary "商品情報\n一覧画面" as b2
+boundary "詳細画面" as b3
+boundary "編集画面" as b4
+
+' control "" as c
+control "商品情報一覧\nコントローラ" as c1
+control "詳細\nコントローラ" as c2
+control "編集\nコントローラ" as c3
+
+' entity "" as e
+entity "商品情報" as e1
+
+a1 -> b1 : 「商品情報マスタ」を押下する
+activate b1
+b1 -> c1 : 画面の表示を要求する()
+deactivate b1
+activate c1
+c1 -> e1 : 情報を要求する()
+activate e1
+e1 --> c1 : 情報を送信する
+deactivate e1
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1 : 画面を表示する
+a1 -> b2 : 情報を選択する
+b2 -> c2 : 画面の表示を要求する()
+deactivate b2
+activate c2
+c2 -> e1 : 情報を要求する()
+activate e1
+e1 --> c2 : 情報を送信する
+deactivate e1
+c2 -> b3 : 画面を組み立てる
+deactivate c2 
+activate b3
+b3 --> a1 : 画面を表示する
+a1 -> b3 : 「編集」ボタンを押下する
+b3 -> c3 : 画面の表示を要求する
+deactivate b3
+activate c3
+c3 -> e1 : 情報を要求する()
+activate e1
+e1 --> c3 : 情報を送信する
+deactivate e1
+c3 --> b4 : 画面を組み立てる
+deactivate c3
+activate b4
+b4 --> a1 : 画面を表示する
+a1 -> b4 : 編集内容を入力し、\n「完了」ボタンを押す
+b4 -> b4 : 入力内容を検証する
+opt 入力内容に間違いがあった場合
+b4 --> a1 : メッセージを表示する
+end
+b4 -> c2 : 入力された情報を送信する
+activate c2
+c2 -> c2 : 入力内容を検証する
+opt 入力内容に間違いがあった場合
+c2 --> b4: 画面を組み立てる
+b4 --> a1 : メッセージを表示する 
+deactivate b4
+end
+c2 -> e1 : 情報の編集を要求する()
+activate e1
+e1 --> c2 : 処理の結果を送信する
+deactivate e1
+opt DBの処理が失敗に終わった場合
+c2 --> b2 : 画面を組み立てる
+
+activate b2
+b2 --> a1 : 画面を表示する
+deactivate b2
+end
+c2 --> b2 : 画面を組み立てる
+deactivate c2
+activate b2
+b2 --> a1 : 画面を表示する
+deactivate b2
+
+@enduml
