@@ -1,0 +1,24 @@
+@startuml ../../images/在庫管理/セット商品管理
+
+hide footbox
+header 営業情報管理システム
+title 人事情報管理/セット商品情報を管理
+
+' actor "" as a
+actor "正規社員\n非正規社員" as a1
+
+' boundary "" as b
+boundary "ログイン済\nホーム画面" as b1
+boundary "セット商品\n一覧画面" as b2
+boundary "詳細画面" as b3
+
+' control "" as c
+control "セット商品一覧\nコントローラ" as c1
+control "詳細\nコントローラ" as c2
+
+' entity "" as e
+entity "セット商品情報" as e1
+
+
+
+@enduml

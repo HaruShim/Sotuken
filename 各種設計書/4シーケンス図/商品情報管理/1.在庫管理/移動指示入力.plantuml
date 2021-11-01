@@ -1,0 +1,61 @@
+@startuml ../../images/在庫管理/移動指示入力
+hide footbox
+header 営業情報管理システム
+title 商品情報管理/移動指示を入力する
+
+' actor "" as a
+actor "正規社員\n非正規社員" as a1
+
+' boundary "" as b
+boundary "ログイン済\nホーム画面" as b1
+boundary "商品情報\n一覧画面" as b2
+
+' control "" as c
+control "商品情報一覧\nコントローラ" as c1
+
+' entity "" as e
+entity "商品情報" as e1
+
+a1 -> b1 : 「移動指示入力」を押下する
+activate b1
+b1 -> c1 : 画面の表示を要求する()
+deactivate b1
+activate c1
+c1 -> e1 : 情報を要求する()
+activate e1
+e1 --> c1 : 情報を送信する
+deactivate e1
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1 : 画面を表示する
+a1 -> b2 : 情報を選択し、入力する
+b2 -> b2 : 入力された情報を検証する
+opt 入力値チェック条件を満たさない場合
+b2 --> a1 : メッセージを表示する
+end
+b2 -> c1 : 入力された情報を\n送信する()
+deactivate b2
+activate c1
+c1 -> c1 : 入力された情報を検証する
+opt 入力値チェック条件を満たさない場合
+c1 --> b2 : 画面を組み立てる
+b2 --> a1 : メッセージを表示する
+end
+c1 -> e1 : 情報の更新を要求する()
+activate e1
+e1 --> c1 : 処理の結果を返す
+deactivate e1
+opt DBの処理が失敗に終わった場合
+c1 --> b2 : 画面を組み立てる
+activate b2
+b2 --> a1 : 画面を表示する
+deactivate b2
+end
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1 : 画面を表示する
+deactivate b2
+
+@enduml
