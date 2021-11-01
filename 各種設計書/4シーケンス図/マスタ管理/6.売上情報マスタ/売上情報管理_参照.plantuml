@@ -8,8 +8,8 @@ title マスタ管理/売上情報を参照する
 actor "管理者" as a1
 
 ' boundary "" as b
-boundary "ログイン済ホーム画面" as b1
-boundary "売上情報一覧画面" as b2
+boundary "ログイン済\nホーム画面" as b1
+boundary "売上情報\n一覧画面" as b2
 boundary "詳細画面" as b3
 
 ' control "" as c
@@ -18,9 +18,9 @@ control "取得する" as c1
 ' entity "" as e
 entity "売上情報" as e1
 
-a1 -> b1
+a1 -> b1 :「売上情報マスタ」\nを押下する
 activate b1
-b1 -> c1: 「売上情報マスタ」を押下する
+b1 -> c1 : 画面の表示を要求する()
 deactivate b1
 activate c1
 c1 -> e1: 情報を\n要求する()
@@ -28,10 +28,12 @@ activate e1
 e1 --> c1: 情報を返す
 c1 --> b2: 画面を表示する
 activate b2
+b2 --> a1
 opt 売上情報がない場合
 b2 --> a1 : メッセージを表示する
 end
-b2 -> c1: 情報を選択する
+a1 -> b2 : 商品情報を押下する
+b2 -> c1: 画面の表示を要求する()
 deactivate b2
 c1 -> e1:情報を\n要求する()
 e1 --> c1:情報を返す

@@ -18,9 +18,9 @@ control "更新内容を検証する" as c2
 ' entity "" as
 entity "権限情報" as e1
 
-a1 -> b1
+a1 -> b1:「ユーザ権限マスタ」\nを押下する
 activate b1
-b1 -> c1:「ユーザ権限マスタ」\nを押下する
+b1 -> c1 : 画面の表示を要求する()
 deactivate b1
 activate c1
 c1 -> e1:情報を\n要求する()
