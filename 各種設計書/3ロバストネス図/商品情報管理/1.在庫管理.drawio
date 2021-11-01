@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-01T04:51:50.110Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="1bcvNpv8r9mRPjZrTmnw" version="15.6.3" type="embed" pages="6">
+<mxfile host="65bd71144e" modified="2021-11-01T04:55:48.399Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="Fw1W7CwTiZVx-R7ly5bt" version="15.6.3" type="embed" pages="6">
     <diagram id="0M8oCvQFctW1lw27DiTi" name="*移動指示入力">
-        <mxGraphModel dx="1815" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1562" dy="506" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -74,7 +74,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="dhBLlI-sLBPiBkyHBoTz" name="*商品情報参照">
-        <mxGraphModel dx="1815" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1811" dy="614" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="a2xsRXoQgeo3w4BCkCPZ-0"/>
                 <mxCell id="a2xsRXoQgeo3w4BCkCPZ-1" parent="a2xsRXoQgeo3w4BCkCPZ-0"/>
@@ -157,7 +157,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="_kwBjCncr3_jRXPhB9Ry" name="*セット商品管理_登録">
-        <mxGraphModel dx="1815" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2047" dy="717" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="JudzOt8P_-GoBtnZuMjQ-0"/>
                 <mxCell id="JudzOt8P_-GoBtnZuMjQ-1" parent="JudzOt8P_-GoBtnZuMjQ-0"/>
@@ -270,7 +270,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="vwvAH9eaKZsHiTSYRP3_" name="*セット商品管理_参照">
-        <mxGraphModel dx="1815" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1811" dy="614" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="YJJ_zpVFxmJvptFkqKVC-0"/>
                 <mxCell id="YJJ_zpVFxmJvptFkqKVC-1" parent="YJJ_zpVFxmJvptFkqKVC-0"/>
@@ -353,7 +353,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="h3Yb8LTFwyXQZ77fVDFs" name="*セット商品管理_編集">
-        <mxGraphModel dx="1815" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2047" dy="717" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="J5ikxC3KuF6J-4jfTKDv-0"/>
                 <mxCell id="J5ikxC3KuF6J-4jfTKDv-1" parent="J5ikxC3KuF6J-4jfTKDv-0"/>
@@ -460,7 +460,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="sx-vfc7r64_f77pe8X1S" name="*セット商品管理_削除">
-        <mxGraphModel dx="1815" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1896" dy="860" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="mCIMHGP8_qXsOWba4IXd-0"/>
                 <mxCell id="mCIMHGP8_qXsOWba4IXd-1" parent="mCIMHGP8_qXsOWba4IXd-0"/>
