@@ -4,8 +4,20 @@ hide footbox
 header 営業情報管理システム
 title マスタ管理/店舗情報を編集する
 
-' actor "" as
+' actor "" as 
 actor "管理者" as a1
+' boundary "" as
+boundary "ログイン済\nホーム画面" as b1
+boundary "店舗情報\n一覧画面" as b2
+boundary "詳細画面" as b3
+boundary "編集画面" as b4
+' control "" as 
+control "店舗情報を\n取得する" as c1
+control "表示する\n" as c2
+control "入力データ\n検証" as c3
+control "更新する\n" as c4
+' entity "" as
+entity "店舗情報\n" as e1
 
 ' boundary "" as 
 boundary "ログイン済ホーム画面 " as b1
