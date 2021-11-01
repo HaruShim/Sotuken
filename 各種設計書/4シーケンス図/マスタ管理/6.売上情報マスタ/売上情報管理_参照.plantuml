@@ -31,13 +31,20 @@ e1 --> c1: 情報を送信する
 deactivate e1
 c1 --> b2: 画面を組み立てる
 deactivate c1
+activate b2
 b2 --> a1 : 画面を表示する
 a1 -> b2 : 情報を選択する
 b2 -> c2 : 入力された情報を送信する
+deactivate b2
+activate c2
 c2 -> e1 : 情報を要求する()
+activate e1
 e1 --> c2 : 情報を送信する
+deactivate e1
 c2 -> b3 : 画面を組み立てる
+deactivate c2
+activate b3
 b3 --> a1 : 画面を表示する
-
+deactivate b3
 
 @enduml
