@@ -59,13 +59,26 @@ deactivate c2
 activate b3
 a1 <-- b3 : 画面を表示する
 a1 -> b3 : 「削除」を押下する
-b3 -> c2 : 指定された従業員情報を\n無効にするよう要求する()
+alt ユーザが正規社員の場合
+b3 -> c2 : 入力された情報を送信する
+activate c2
+c2 -> e1 : 情報の無効化を要求する()
+deactivate c2
+activate e1
+else ユーザが管理者の場合
+b3 -> c2 : 入力された情報を送信する
 deactivate b3
 activate c2
-c2 -> e1 : 情報を無効にする()
-activate e1
+c2 -> e1 : 情報の削除を要求する()
+end
 c2 <-- e1 : 処理の結果を返す
 deactivate e1
+opt DBの処理が失敗に終わった場合
+b2 <-- c2 : 画面を組み立てる
+activate b2
+a1 <-- b2 : 画面を表示する
+deactivate b2
+end 
 b2 <-- c2 : 画面を組み立てる
 deactivate c2
 activate b2
