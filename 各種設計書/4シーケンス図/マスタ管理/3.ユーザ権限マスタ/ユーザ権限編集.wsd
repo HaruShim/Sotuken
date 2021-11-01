@@ -22,9 +22,9 @@ activate b1
 b1 -> c4 : 画面の表示を要求する()
 deactivate b1
 activate c4
-c4 -> e1:情報を\n要求する()
+c4 -> e1:情報を要求する()
 activate e1
-e1 --> c4:情報を返す
+e1 --> c4:情報を送信する
 deactivate e1
 c4 --> b2:画面を組み立てる
 deactivate c4

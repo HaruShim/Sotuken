@@ -13,37 +13,69 @@ boundary "売上情報\n一覧画面" as b2
 boundary "詳細画面" as b3
 
 ' control "" as c
-control "取得する" as c1
-control "削除する" as c2
+control "売上情報一覧\nコントローラ" as c1
+control "詳細\nコントローラ" as c2
 
 ' entity "" as e
 entity "売上情報" as e1
 
-a1 -> b1
+a1 -> b1:「売上情報マスタ」\nを押下する
 activate b1
-b1 -> c1:「売上情報マスタ」を押下する
+b1 -> c1:画面の表示を要求する()
 deactivate b1
 activate c1
-c1 -> e1:情報を\n要求する()
+c1 -> e1 : 情報を要求する()
 activate e1
-e1 --> c1:情報を返す
-c1 --> b2:画面を表示する
-activate b2
-b2 -> c1:情報を選択する
-deactivate b2
-c1 -> e1:情報を\n要求する()
-e1 --> c1:情報を返す
-c1 --> b3:画面を表示する
+e1 --> c1 : 情報を送信する
+deactivate e1
+c1 --> b2: 画面を組み立てる
 deactivate c1
+activate b2
+b2 --> a1 : 画面を表示する
+a1 -> b2 : 情報を選択する
+b2 -> c2 : 画面の表示を要求する()
+deactivate b2
+activate c2
+c2 -> e1 : 情報を要求する()
+activate e1
+e1 --> c2 : 情報を送信する
+deactivate e1
+c2 --> b3 : 画面を組み立てる
+deactivate c2
 activate b3
-b3 -> c2:「削除」ボタンを\n押下する
+b3 --> a1 : 画面を表示する
+a1 -> b3 : 情報を選択する
+b3 -> c2 : 入力された情報を送信する
 deactivate b3
 activate c2
-c2 -> e1:情報を\n更新する()
-deactivate c2
-e1 --> b2:画面を表示する
+c2 -> e1 : 情報を要求する()
+activate e1
+e1 --> c2 : 情報を送信する
 deactivate e1
+c2 --> b3 : 画面を組み立てる
+deactivate c2
+activate b3
+b3 --> a1 : 画面を表示する
+a1 -> b3 : 「削除」ボタンを押下する
+b3 -> c2 : 入力された情報を送信する
+deactivate b3
+activate c2
+c2 -> e1 : 情報の削除を要求する()
+activate e1
+e1 --> c2 : 処理の結果を送信する
+deactivate e1
+opt DBの処理が失敗に終わった場合
+c2 --> b2 : 画面を組み立てる
+
 activate b2
-b2 --> a1
+b2 --> a1 : 画面を表示する
 deactivate b2
+end
+c2 --> b2 : 画面を組み立てる
+deactivate c2
+activate b2
+b2 --> a1 : 画面を表示する
+deactivate b2
+
+
 @enduml

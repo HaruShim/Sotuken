@@ -13,35 +13,31 @@ boundary "売上情報\n一覧画面" as b2
 boundary "詳細画面" as b3
 
 ' control "" as c
-control "取得する" as c1
+control "売上情報一覧\nコントローラ" as c1
+control "詳細画面\nコントローラ" as c2
+control "取得する" as c3
 
 ' entity "" as e
 entity "売上情報" as e1
 
 a1 -> b1 :「売上情報マスタ」\nを押下する
-activate b1
+activate b1 
 b1 -> c1 : 画面の表示を要求する()
 deactivate b1
 activate c1
-c1 -> e1: 情報を\n要求する()
+c1 -> e1: 情報を要求する()
 activate e1
-e1 --> c1: 情報を返す
-c1 --> b2: 画面を表示する
-activate b2
-b2 --> a1
-opt 売上情報がない場合
-b2 --> a1 : メッセージを表示する
-end
-a1 -> b2 : 商品情報を押下する
-b2 -> c1: 画面の表示を要求する()
-deactivate b2
-c1 -> e1:情報を\n要求する()
-e1 --> c1:情報を返す
+e1 --> c1: 情報を送信する
 deactivate e1
-c1 --> b3:画面を表示する
+c1 --> b2: 画面を組み立てる
 deactivate c1
-activate b3
-b3 --> a1
-deactivate b3
+b2 --> a1 : 画面を表示する
+a1 -> b2 : 情報を選択する
+b2 -> c2 : 入力された情報を送信する
+c2 -> e1 : 情報を要求する()
+e1 --> c2 : 情報を送信する
+c2 -> b3 : 画面を組み立てる
+b3 --> a1 : 画面を表示する
+
 
 @enduml
