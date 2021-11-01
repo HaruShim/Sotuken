@@ -1,0 +1,69 @@
+@startuml ../../images/検索機能/ボトルネック情報検索
+
+hide footbox
+header 営業情報管理システム
+title 商品情報管理/ボトルネック情報を検索する
+
+' actor "" as a
+actor "正規社員\n非正規社員" as a1
+
+' boundary "" as b
+boundary "ログイン済\nホーム画面" as b1
+boundary "商品情報・セット商品情報\n一覧画面" as b2
+
+' control "" as c
+control "商品情報・セット商品情報\n一覧コントローラ" as c1
+
+' entity "" as e
+entity "商品情報" as e1
+
+a1 -> b1 : 「商品情報検索」を押下する
+activate b1
+b1 -> c1 : 画面の表示を要求する()
+deactivate b1
+activate c1
+c1 -> e1 : 情報を要求する()
+activate e1
+e1 --> c1 : 情報を送信する
+deactivate e1
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1 : 画面を表示する
+a1 -> b2 : 情報を入力して「検索」を押下する
+b2 -> b2 : 入力された情報を検証する
+opt 入力値チェック条件を満たさない場合
+b2 --> a1 : メッセージを表示する
+end
+b2 -> c1 : 情報を送信する
+deactivate b2
+activate c1
+c1 -> c1 : 入力された情報を検証する
+opt 入力値チェック条件を満たさない場合
+c1 --> b2 : 画面を組み立てる
+activate b2
+b2 --> a1 : メッセージを表示する
+deactivate b2
+end
+c1 -> e1 : 情報の検索を要求()
+activate e1
+e1 --> c1 : 検索の結果を送信する
+deactivate e1
+alt 条件を満たす情報がなかった場合
+c1 --> b2 : 画面を組み立てる
+activate b2
+b2 --> a1 : メッセージを表示する
+deactivate b2
+else DBの処理が失敗に終わった場合
+c1 --> b2 : 画面を組み立てる
+activate b2
+b2 --> a1 : メッセージを表示 
+deactivate b2
+end
+c1 --> b2 : 画面を組み立てる
+deactivate c1
+activate b2
+b2 --> a1 : メッセージを表示
+deactivate b2
+
+@enduml
