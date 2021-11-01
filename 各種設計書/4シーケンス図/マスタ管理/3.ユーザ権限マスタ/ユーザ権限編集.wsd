@@ -12,7 +12,6 @@ boundary "ログイン済\nホーム画面" as b1
 boundary "権限編集画面" as b2 
 
 ' control "" as
-control "更新内容を検証する" as c2
 control "権限編集画面\nコントローラ" as c4
 
 ' entity "" as
@@ -27,28 +26,35 @@ c4 -> e1:情報を\n要求する()
 activate e1
 e1 --> c4:情報を返す
 deactivate e1
-' c1 
 c4 --> b2:画面を組み立てる
-activate b2
 deactivate c4
-b2 -> b2:入力内容を検証する
+activate b2
 b2 --> a1 : 画面を表示する
 a1 -> b2:従業員と権限を選択し、\n「登録」ボタンを押下する
-b2 -> c2:情報の更新を要求する()
-activate c2
-opt 従業員が選択されていない場合
-c2 --> b2 : メッセージを表示する
-b2 --> a1
+b2 -> b2:入力内容を検証する
+alt 従業員が選択されていない場合
+b2 --> a1 : メッセージを表示する
+else 権限が選択されていない場合
+b2 --> a1 : メッセージを表示する
 end
+b2 -> c4:入力された情報を送る
 deactivate b2
-c2 -> e1: 情報を更新する()
+activate c4
+c4 -> c4 : 入力内容を検証する
+c4 -> e1:情報の更新を要求する()
 activate e1
-e1 --> c2:情報を返す
+e1 --> c4 : 処理の結果を返す
 deactivate e1
-c2 --> b2: 画面を表示する
-deactivate c2
+opt DBの処理が失敗に終わった場合
+c4 --> b2 : 画面を組み立てる
 activate b2
-b2 --> a1
+b2 --> a1 : エラーメッセージを表示する
+deactivate b2
+end
+c4 --> b2 : 画面を組み立てる
+deactivate c4
+activate b2
+b2 --> a1:画面を表示する
 deactivate b2
 
 @enduml
