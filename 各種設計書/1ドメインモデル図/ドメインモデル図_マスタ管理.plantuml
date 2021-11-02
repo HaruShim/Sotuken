@@ -1,4 +1,4 @@
-@startuml domainmodel
+@startuml マスタ管理
 ' left to right direction
 
 hide circle
