@@ -9,10 +9,10 @@ actor "正規社員\n非正規社員" as a1
 
 ' boundary "" as b
 boundary "ログイン済\nホーム画面" as b1
-boundary "商品情報・セット商品情報\n一覧画面" as b2
+boundary "ボトルネック\n検索画面" as b2
 
 ' control "" as c
-control "商品情報・セット商品情報\n一覧コントローラ" as c1
+control "ボトルネック検索\nコントローラ" as c1
 
 ' entity "" as e
 entity "商品情報" as e1
