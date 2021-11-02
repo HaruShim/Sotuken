@@ -16,8 +16,6 @@ boundary "編集画面" as b4
 ' control "" as c
 control "売上情報一覧\nコントローラ" as c1
 control "詳細画面\nコントローラ" as c2
-control "取得する" as c3
-control "検証する" as c4
 
 ' entity "" as e
 entity "売上情報" as e1
