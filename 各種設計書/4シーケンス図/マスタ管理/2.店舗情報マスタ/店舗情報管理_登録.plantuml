@@ -71,15 +71,17 @@ c2 -> e1 : 情報の登録を要求する()
 activate e1
 c2 <-- e1 : 処理の結果を返す
 deactivate e1
+
 opt DBの処理が失敗に終わった場合
 b2 <-- c2 : 画面を組み立てる
+activate b2
 a1 <-- b2 : エラーメッセージを表示する
 end
+
 deactivate e1
 activate c2
 b2 <-- c2 : 画面を組み立てる
 deactivate c2
-activate b2
 a1 <-- b2 : 画面を表示する
 deactivate b2
 
