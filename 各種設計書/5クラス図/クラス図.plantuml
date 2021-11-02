@@ -1,4 +1,5 @@
 @startuml クラス図
+left to right direction
 
 title 営業情報管理
 
@@ -113,11 +114,11 @@ package 人事情報管理{
         class ログイン{}
     }
 }
+
 class 倉庫情報{
     -倉庫名
     +移動指示()
 }
-
 class CustomUser{
     -従業員ID
     -パスワード
@@ -128,6 +129,17 @@ class Meta{
 class "django-allauth(ログイン)" as Da {
     +ログイン()
 }
+class カテゴリ{
+    -ノートPC
+    -デスクトップPC
+    -モニター
+    -メモリ
+    -HDD
+    -SSD
+}
+
+' 要素の書き出しから
+
 
 ' CustomUser +-- Meta
 @enduml
