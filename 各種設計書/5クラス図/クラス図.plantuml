@@ -1,7 +1,8 @@
-@startuml 営業情報管理
+@startuml クラス図
+
 title 営業情報管理
 
-'ベンチマークマスタ
+' 'ベンチマークマスタ
 class ベンチマーク情報{
     ' 保留中
 }
@@ -73,6 +74,9 @@ class CustomUser{
 }
 class Meta{
     -保留
+}
+class django-allauth {
+    +ログイン()
 }
 
 CustomUser +-- Meta
