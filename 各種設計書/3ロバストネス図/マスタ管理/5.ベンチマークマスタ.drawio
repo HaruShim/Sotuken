@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-01T07:39:56.749Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="cNqng4hjfwD6gVKd0TE4" version="15.6.3" type="embed" pages="4">
+<mxfile host="65bd71144e" modified="2021-11-02T01:08:23.086Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="lkTltw8G5xl-TS9GAQz2" version="15.6.4" type="embed" pages="4">
     <diagram id="RWeOAwpdm6szLaTIHd15" name="*ベンチマークマスタ管理_登録">
-        <mxGraphModel dx="1469" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1952" dy="860" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -37,7 +37,7 @@
                         <mxPoint x="110" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="3" value="「ベンチマークマスタ情報」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="R05j1q6MOaR2_SYUFppI-10">
+                <mxCell id="3" value="「ベンチマークマスタ情報」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="R05j1q6MOaR2_SYUFppI-10" vertex="1" connectable="0">
                     <mxGeometry x="0.2118" y="-2" relative="1" as="geometry">
                         <mxPoint x="-9" y="10" as="offset"/>
                     </mxGeometry>
@@ -48,7 +48,7 @@
                         <mxPoint x="110" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="8" value="ベンチマークマスタ情報&lt;br&gt;を入力" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="R05j1q6MOaR2_SYUFppI-11">
+                <mxCell id="8" value="ベンチマークマスタ情報&lt;br&gt;を入力" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="R05j1q6MOaR2_SYUFppI-11" vertex="1" connectable="0">
                     <mxGeometry x="-0.227" y="-2" relative="1" as="geometry">
                         <mxPoint x="17" y="7" as="offset"/>
                     </mxGeometry>
@@ -59,7 +59,7 @@
                         <mxPoint x="110" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="4" value="「新規登録」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="R05j1q6MOaR2_SYUFppI-12">
+                <mxCell id="4" value="「新規登録」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="R05j1q6MOaR2_SYUFppI-12" vertex="1" connectable="0">
                     <mxGeometry x="-0.3413" y="-4" relative="1" as="geometry">
                         <mxPoint x="24" y="-4" as="offset"/>
                     </mxGeometry>
@@ -100,7 +100,7 @@
                         <mxPoint x="710" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="S3Q7KRvCaLWE7IMsoWQz-9" value="ベンチマーク情報を&lt;br&gt;登録する" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="R05j1q6MOaR2_SYUFppI-21">
+                <mxCell id="S3Q7KRvCaLWE7IMsoWQz-9" value="ベンチマーク情報を&lt;br&gt;登録する" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="R05j1q6MOaR2_SYUFppI-21" vertex="1" connectable="0">
                     <mxGeometry x="0.3181" y="-1" relative="1" as="geometry">
                         <mxPoint x="-1" as="offset"/>
                     </mxGeometry>
@@ -108,19 +108,19 @@
                 <mxCell id="2" value="ベンチマークマスタ管理_登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="1" vertex="1">
                     <mxGeometry x="-150" y="70" width="250" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="入力データ検証" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                <mxCell id="5" value="入力データ検証" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
                     <mxGeometry x="440" y="560" width="70" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="登録する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                <mxCell id="6" value="登録する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
                     <mxGeometry x="440" y="440" width="70" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="5">
+                <mxCell id="7" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="5" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="475" y="550" as="sourcePoint"/>
                         <mxPoint x="475" y="530" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="9" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+                <mxCell id="9" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="520" y="460" as="sourcePoint"/>
                         <mxPoint x="520" y="170" as="targetPoint"/>
@@ -133,7 +133,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="kNyEyUyUbylaJBoFLzu6" name="*ベンチマークマスタ管理_参照">
-        <mxGraphModel dx="1469" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1176" dy="430" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="Noq5ilU5FU8ZEYIdX7iq-0"/>
                 <mxCell id="Noq5ilU5FU8ZEYIdX7iq-1" parent="Noq5ilU5FU8ZEYIdX7iq-0"/>
@@ -188,33 +188,33 @@
                 <mxCell id="dUlQ4flZGrjJP7amC4kk-0" value="ベンチマークマスタ管理_参照" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="Noq5ilU5FU8ZEYIdX7iq-1" vertex="1">
                     <mxGeometry x="-159" y="77" width="250" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="cIIOQEor-hzKWbsgji4y-0" value="管理者&lt;br&gt;正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="Noq5ilU5FU8ZEYIdX7iq-1">
+                <mxCell id="cIIOQEor-hzKWbsgji4y-0" value="管理者&lt;br&gt;正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="Noq5ilU5FU8ZEYIdX7iq-1" vertex="1">
                     <mxGeometry x="-70" y="280" width="30" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="cIIOQEor-hzKWbsgji4y-1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="Noq5ilU5FU8ZEYIdX7iq-1">
+                <mxCell id="cIIOQEor-hzKWbsgji4y-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="Noq5ilU5FU8ZEYIdX7iq-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30" y="320" as="sourcePoint"/>
                         <mxPoint x="110" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="cIIOQEor-hzKWbsgji4y-2" value="「ベンチマークマスタ情報」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cIIOQEor-hzKWbsgji4y-1">
+                <mxCell id="cIIOQEor-hzKWbsgji4y-2" value="「ベンチマークマスタ情報」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="cIIOQEor-hzKWbsgji4y-1" vertex="1" connectable="0">
                     <mxGeometry x="0.2118" y="-2" relative="1" as="geometry">
                         <mxPoint x="-9" y="10" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="cIIOQEor-hzKWbsgji4y-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="Noq5ilU5FU8ZEYIdX7iq-1">
+                <mxCell id="cIIOQEor-hzKWbsgji4y-3" value="" style="endArrow=classic;html=1;rounded=0;" parent="Noq5ilU5FU8ZEYIdX7iq-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30" y="320" as="sourcePoint"/>
                         <mxPoint x="110" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="cIIOQEor-hzKWbsgji4y-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="Noq5ilU5FU8ZEYIdX7iq-1">
+                <mxCell id="cIIOQEor-hzKWbsgji4y-5" value="" style="endArrow=classic;html=1;rounded=0;" parent="Noq5ilU5FU8ZEYIdX7iq-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30" y="320" as="sourcePoint"/>
                         <mxPoint x="110" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="cIIOQEor-hzKWbsgji4y-7" value="ベンチマーク情報&lt;br&gt;を選択" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cIIOQEor-hzKWbsgji4y-5">
+                <mxCell id="cIIOQEor-hzKWbsgji4y-7" value="ベンチマーク情報&lt;br&gt;を選択" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="cIIOQEor-hzKWbsgji4y-5" vertex="1" connectable="0">
                     <mxGeometry x="0.3238" y="1" relative="1" as="geometry">
                         <mxPoint x="-13" y="1" as="offset"/>
                     </mxGeometry>
@@ -223,7 +223,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="8uVS_xQF8xlp2i3T6R5J" name="*ベンチマークマスタ管理_編集">
-        <mxGraphModel dx="2074" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2340" dy="1075" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="Vqz1aeMNSxQNZWVuaeiP-0"/>
                 <mxCell id="Vqz1aeMNSxQNZWVuaeiP-1" parent="Vqz1aeMNSxQNZWVuaeiP-0"/>
@@ -290,7 +290,7 @@
                         <mxPoint x="110" y="640" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="GpFUuZaesWNY-ZoGWfIf-2" value="ベンチマーク情報を入力" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="z9AlBpr7LHTCgQyZx6nX-3">
+                <mxCell id="GpFUuZaesWNY-ZoGWfIf-2" value="ベンチマーク情報を入力" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="z9AlBpr7LHTCgQyZx6nX-3" vertex="1" connectable="0">
                     <mxGeometry x="0.2655" y="2" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -319,7 +319,7 @@
                         <mxPoint x="520" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="GpFUuZaesWNY-ZoGWfIf-3" value="ベンチマーク情報を&lt;br&gt;更新する" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="z9AlBpr7LHTCgQyZx6nX-8">
+                <mxCell id="GpFUuZaesWNY-ZoGWfIf-3" value="ベンチマーク情報を&lt;br&gt;更新する" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="z9AlBpr7LHTCgQyZx6nX-8" vertex="1" connectable="0">
                     <mxGeometry x="-0.2157" y="4" relative="1" as="geometry">
                         <mxPoint x="-1" as="offset"/>
                     </mxGeometry>
@@ -333,43 +333,43 @@
                 <mxCell id="6e0Y1z3ff_5MrrpyJy39-0" value="ベンチマークマスタ管理_編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="Vqz1aeMNSxQNZWVuaeiP-1" vertex="1">
                     <mxGeometry x="-160" y="60" width="250" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-0" value="管理者&lt;br&gt;正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="Vqz1aeMNSxQNZWVuaeiP-1">
+                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-0" value="管理者&lt;br&gt;正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="Vqz1aeMNSxQNZWVuaeiP-1" vertex="1">
                     <mxGeometry x="-70" y="280" width="30" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="Vqz1aeMNSxQNZWVuaeiP-1">
+                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="Vqz1aeMNSxQNZWVuaeiP-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30" y="320" as="sourcePoint"/>
                         <mxPoint x="110" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-2" value="「ベンチマークマスタ情報」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="o6zD_Jn4FmB_m7PJLo_p-1">
+                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-2" value="「ベンチマークマスタ情報」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="o6zD_Jn4FmB_m7PJLo_p-1" vertex="1" connectable="0">
                     <mxGeometry x="0.2118" y="-2" relative="1" as="geometry">
                         <mxPoint x="-9" y="10" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="Vqz1aeMNSxQNZWVuaeiP-1">
+                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-3" value="" style="endArrow=classic;html=1;rounded=0;" parent="Vqz1aeMNSxQNZWVuaeiP-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30" y="320" as="sourcePoint"/>
                         <mxPoint x="110" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="GpFUuZaesWNY-ZoGWfIf-1" value="「編集」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="o6zD_Jn4FmB_m7PJLo_p-3">
+                <mxCell id="GpFUuZaesWNY-ZoGWfIf-1" value="「編集」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="o6zD_Jn4FmB_m7PJLo_p-3" vertex="1" connectable="0">
                     <mxGeometry x="0.1529" y="1" relative="1" as="geometry">
                         <mxPoint x="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="Vqz1aeMNSxQNZWVuaeiP-1">
+                <mxCell id="o6zD_Jn4FmB_m7PJLo_p-5" value="" style="endArrow=classic;html=1;rounded=0;" parent="Vqz1aeMNSxQNZWVuaeiP-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30" y="320" as="sourcePoint"/>
                         <mxPoint x="110" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="GpFUuZaesWNY-ZoGWfIf-0" value="ベンチマーク情報&lt;br&gt;を選択" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="o6zD_Jn4FmB_m7PJLo_p-5">
+                <mxCell id="GpFUuZaesWNY-ZoGWfIf-0" value="ベンチマーク情報&lt;br&gt;を選択" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="o6zD_Jn4FmB_m7PJLo_p-5" vertex="1" connectable="0">
                     <mxGeometry x="0.5476" y="-1" relative="1" as="geometry">
                         <mxPoint x="-38" y="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="1Og1dZIsNvZaiem4P9cS-0" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="Vqz1aeMNSxQNZWVuaeiP-1">
+                <mxCell id="1Og1dZIsNvZaiem4P9cS-0" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="Vqz1aeMNSxQNZWVuaeiP-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="520" y="460" as="sourcePoint"/>
                         <mxPoint x="520" y="170" as="targetPoint"/>
@@ -382,7 +382,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="Ufez5nXvk2XaxpIsFsRu" name="*ベンチマークマスタ管理_削除">
-        <mxGraphModel dx="1707" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2340" dy="1075" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="DMxsckBU2M_JoR_AKvYi-0"/>
                 <mxCell id="DMxsckBU2M_JoR_AKvYi-1" parent="DMxsckBU2M_JoR_AKvYi-0"/>
@@ -449,7 +449,7 @@
                         <mxPoint x="530" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2Z8oQqjoqmFL6WJPvkfP-1" value="ベンチマーク情報を&lt;br&gt;削除する" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="auUNiC2Mis4MEqBHwmfJ-18">
+                <mxCell id="2Z8oQqjoqmFL6WJPvkfP-1" value="ベンチマーク情報を&lt;br&gt;削除する" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="auUNiC2Mis4MEqBHwmfJ-18" vertex="1" connectable="0">
                     <mxGeometry x="0.1143" y="2" relative="1" as="geometry">
                         <mxPoint x="38" y="-59" as="offset"/>
                     </mxGeometry>
@@ -457,43 +457,43 @@
                 <mxCell id="la75sHiAkwk_fY0pO1k2-0" value="ベンチマークマスタ管理_削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="DMxsckBU2M_JoR_AKvYi-1" vertex="1">
                     <mxGeometry x="-160" y="70" width="250" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="p75JA5eRPVBYtpdVAzYU-0" value="管理者&lt;br&gt;正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="DMxsckBU2M_JoR_AKvYi-1">
+                <mxCell id="p75JA5eRPVBYtpdVAzYU-0" value="管理者&lt;br&gt;正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="DMxsckBU2M_JoR_AKvYi-1" vertex="1">
                     <mxGeometry x="-70" y="280" width="30" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="p75JA5eRPVBYtpdVAzYU-1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="DMxsckBU2M_JoR_AKvYi-1">
+                <mxCell id="p75JA5eRPVBYtpdVAzYU-1" value="" style="endArrow=classic;html=1;rounded=0;" parent="DMxsckBU2M_JoR_AKvYi-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30.000000000000227" y="320" as="sourcePoint"/>
                         <mxPoint x="110" y="159.9999999999999" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="p75JA5eRPVBYtpdVAzYU-2" value="「ベンチマークマスタ情報」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="p75JA5eRPVBYtpdVAzYU-1">
+                <mxCell id="p75JA5eRPVBYtpdVAzYU-2" value="「ベンチマークマスタ情報」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="p75JA5eRPVBYtpdVAzYU-1" vertex="1" connectable="0">
                     <mxGeometry x="0.2118" y="-2" relative="1" as="geometry">
                         <mxPoint x="-9" y="10" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="p75JA5eRPVBYtpdVAzYU-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="DMxsckBU2M_JoR_AKvYi-1">
+                <mxCell id="p75JA5eRPVBYtpdVAzYU-3" value="" style="endArrow=classic;html=1;rounded=0;" parent="DMxsckBU2M_JoR_AKvYi-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30.000000000000227" y="320" as="sourcePoint"/>
                         <mxPoint x="110" y="480" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="p75JA5eRPVBYtpdVAzYU-4" value="「削除」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="p75JA5eRPVBYtpdVAzYU-3">
+                <mxCell id="p75JA5eRPVBYtpdVAzYU-4" value="「削除」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="p75JA5eRPVBYtpdVAzYU-3" vertex="1" connectable="0">
                     <mxGeometry x="0.1529" y="1" relative="1" as="geometry">
                         <mxPoint x="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="p75JA5eRPVBYtpdVAzYU-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="DMxsckBU2M_JoR_AKvYi-1">
+                <mxCell id="p75JA5eRPVBYtpdVAzYU-5" value="" style="endArrow=classic;html=1;rounded=0;" parent="DMxsckBU2M_JoR_AKvYi-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30.000000000000227" y="320" as="sourcePoint"/>
                         <mxPoint x="110" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="p75JA5eRPVBYtpdVAzYU-6" value="ベンチマーク情報&lt;br&gt;を選択" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="p75JA5eRPVBYtpdVAzYU-5">
+                <mxCell id="p75JA5eRPVBYtpdVAzYU-6" value="ベンチマーク情報&lt;br&gt;を選択" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="p75JA5eRPVBYtpdVAzYU-5" vertex="1" connectable="0">
                     <mxGeometry x="0.5476" y="-1" relative="1" as="geometry">
                         <mxPoint x="-38" y="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2Z8oQqjoqmFL6WJPvkfP-0" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="DMxsckBU2M_JoR_AKvYi-1">
+                <mxCell id="2Z8oQqjoqmFL6WJPvkfP-0" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" parent="DMxsckBU2M_JoR_AKvYi-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="520" y="460" as="sourcePoint"/>
                         <mxPoint x="520" y="169.9999999999999" as="targetPoint"/>
