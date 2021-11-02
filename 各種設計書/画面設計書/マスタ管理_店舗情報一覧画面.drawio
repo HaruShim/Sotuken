@@ -1,0 +1,28 @@
+<mxfile host="65bd71144e" modified="2021-11-02T06:07:49.260Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.6.5" etag="ddLs7n8TVWPC0y0nVmQf" type="embed">
+    <diagram id="x_AiSt1qKT379AZeaK5t" name="ページ1">
+        <mxGraphModel dx="734" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="600" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="タ&lt;br&gt;ブ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="60" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="店舗一覧" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="285" y="50" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="新規登録" style="labelPosition=center;verticalLabelPosition=middle;align=center;html=1;shape=mxgraph.basic.shaded_button;dx=10;fillColor=#E6E6E6;strokeColor=none;fontSize=20;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="70" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width: 100% ; height: 100% ; border-collapse: collapse&quot;&gt;&lt;tbody&gt;&lt;tr style=&quot;background-color: rgb(167 , 201 , 66) ; border: 1px solid rgb(152 , 191 , 33)&quot;&gt;&lt;th align=&quot;left&quot;&gt;店舗ID&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;店舗名&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;店長&lt;/th&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 1px solid #98bf21&quot;&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background-color: #eaf2d3 ; border: 1px solid #98bf21&quot;&gt;&lt;td&gt;Value 4&lt;/td&gt;&lt;td&gt;Value 5&lt;/td&gt;&lt;td&gt;Value 6&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 1px solid #98bf21&quot;&gt;&lt;td&gt;Value 7&lt;/td&gt;&lt;td&gt;Value 8&lt;/td&gt;&lt;td&gt;Value 9&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background-color: #eaf2d3 ; border: 1px solid #98bf21&quot;&gt;&lt;td&gt;Value 10&lt;/td&gt;&lt;td&gt;Value 11&lt;/td&gt;&lt;td&gt;Value 12&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;overflow=fill;rounded=0;fontSize=20;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="150" width="420" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="1 &amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="340" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
