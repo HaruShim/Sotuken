@@ -4,9 +4,7 @@ hide footbox
 ' ヘッダー
 header 営業情報管理システム
 ' タイトル
-title 人事情報管理/勤務店舗状況を更新する
-
-
+title 人事情報管理/勤務店舗状況を編集する
 
 ' actor "" as 
 actor "正規社員\n非正規社員" as a1
@@ -64,9 +62,5 @@ deactivate c1
 activate b2
 b2 --> a1 : 画面を表示する
 deactivate b2
-
-
-
-
 
 @enduml
