@@ -2,7 +2,7 @@
 
 hide footbox
 header 営業情報管理システム
-title 人事情報管理/セット商品情報を参照する
+title 商品情報管理/セット商品情報を参照する
 
 ' actor "" as a
 actor "正規社員\n非正規社員" as a1
