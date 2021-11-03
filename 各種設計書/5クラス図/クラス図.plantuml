@@ -1,10 +1,10 @@
 @startuml クラス図
-left to right direction
+' left to right direction
 
 title 営業情報管理
 
 
-package マスタ管理{
+package "マスタ管理" as mastermana {
     package 従業員情報マスタ{
         ' 従業員情報
         ' モデル
@@ -20,7 +20,7 @@ package マスタ管理{
             -店舗
         }
     }
-    package 店舗情報マスタ{
+    package "店舗情報マスタ"{
         ' 店舗情報
         ' モデル
         class 店舗情報{
@@ -53,6 +53,14 @@ package マスタ管理{
             -販売価格
             ' 保留中
         }
+        class カテゴリ{
+            -ノートPC
+            -デスクトップPC
+            -モニター
+            -メモリ
+            -HDD
+            -SSD
+        }
         ' コントローラ
         class セット商品情報一覧(商品情報一覧){}
         class 新規登録(新規登録)){}
@@ -69,9 +77,11 @@ package マスタ管理{
     ' package 売上情報マスタ{
         ' 売上情報
         ' モデル
-        class 売上情報{}
+        
 }
-package 商品情報管理{
+
+
+package "商品情報管理" as itemmana {
     package 在庫管理{
         ' 商品情報管理
         ' モデル
@@ -79,12 +89,17 @@ package 商品情報管理{
             -販売価格
             ' 保留中
         }
+        class 倉庫情報{
+        -倉庫名
+        ' +移動指示()
+        }
     }
     package 検索機能{
         ' ベンチマークマスタ
         ' モデル
-        class ベンチマーク情報{
+        class ベンチマーク情報2{
             ' 保留中
+            -空で大丈夫
         }
     }
     package 取置予約管理{
@@ -92,51 +107,66 @@ package 商品情報管理{
         ' モデル
         class 取置商品情報{}
     }
-    package 見積{}
+    package 見積{
+        class 見積情報2{
+            -空で大丈夫
+        }
+    }
     package 売上{
         ' 売上情報
         ' モデル
         class 売上情報{}
     }
+    
+    
 }
-package 人事情報管理{
+
+
+package "人事情報管理" as huremana {
     package 従業員情報参照{
+        class 従業員情報2{
+            -空で大丈夫
+        }
     }
     package 店舗情報参照{
+        class 店舗情報2{
+            -空で大丈夫
+        }
     }
     package 勤務店舗状況編集{
         class 勤務店舗状況{
+            -従業員ID
+            -権限
+            -氏名
+            -住所
+            -電話番号
+            -店舗
         }
     }
     package ログイン{
         ' ログイン'
         ' モデル
-        class ログイン{}
+        ' class "django-allauth(ログイン)" as da{
+        '     -従業員ID
+        '     -パスワード
+        '     ' +ログイン()
+        ' }
+        class CustomUser(ログイン){
+            -従業員ID
+            -パスワード
+        }
     }
 }
 
-class 倉庫情報{
-    -倉庫名
-    +移動指示()
-}
-class CustomUser{
-    -従業員ID
-    -パスワード
-}
-class Meta{
-    -保留
-}
-class "django-allauth(ログイン)" as Da {
-    +ログイン()
-}
-class カテゴリ{
-    -ノートPC
-    -デスクトップPC
-    -モニター
-    -メモリ
-    -HDD
-    -SSD
-}
+
+
+' class Meta{
+'     -保留
+' }
+
+' itemmana -[hidden]- huremana
+' mastermana -[hidden]down- itemmana
+' mastermana -[hidden]down- huremana
 
 ' 要素の書き出しから
 
