@@ -164,6 +164,8 @@ package "人事情報管理" as huremana {
 '     -保留
 ' }
 
+mastermana -[hidden]down- itemmana
+itemmana -[hidden]down- huremana
 ' itemmana -[hidden]- huremana
 ' mastermana -[hidden]down- itemmana
 ' mastermana -[hidden]down- huremana
