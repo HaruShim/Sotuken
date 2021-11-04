@@ -1,4 +1,5 @@
-@startuml domainmodel
+@startuml ドメインモデル図_商品情報管理
+
 left to right direction
 
 hide circle
