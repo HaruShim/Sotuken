@@ -22,7 +22,7 @@ hide method
 '   ' 正規社員 - ベンチマークマスタ
 ' }
 
-package 在庫管理_ドメインモデル図 {
+package 商品情報管理_ドメインモデル図 {
 
   class 商品情報 #F5A9BC
   class カテゴリ

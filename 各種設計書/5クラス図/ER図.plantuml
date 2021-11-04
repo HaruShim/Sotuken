@@ -15,6 +15,7 @@ package "マスタ管理" as mastermana {
       *氏名(カナ)
       *電話番号
       *性別
+      *生年月日
       *年齢
       *無効フラグ
     }
@@ -68,6 +69,8 @@ package "マスタ管理" as mastermana {
       *型番[FK]
       --
       *取置店舗名[FK]
+      *予約者氏名
+      *連絡先
       *予約日時
       *最終更新日時
     }
@@ -133,20 +136,40 @@ package "マスタ管理" as mastermana {
     }
   }
 }
+
+package "勤務店舗状況編集"{
+  entity "勤務状況モデル" as M15{
+    *従業員ID[FK]
+    --
+    *従業員名[FK]
+    *勤務店舗名[FK]
+    *勤務フラグ
+    *最終更新日時
+    *
+    
+  }
+}
+
+ベンチマークマスタ -[hidden]up- 商品情報マスタ
+
 M02 ||--|| M03
 M02 }|-r-|{ M04
 M02 ||-u-|| M05
 M13 ||--o{ M06
 M08 }|--o{ M01
 M09 }|--o{ M01
-M10 -[hidden]down- M11
-M11 -[hidden]down- M12
+M07 -[hidden]right-M11
+M11 -[hidden]right-M12
+' M10 -[hidden]down- M11
+' M11 -[hidden]down- M12
 M06 ||--|{ M01
 M10 ||-l-|{ M01
 M11 ||-l-|{ M01
-M12 ||-d-|{ M01 
+M12 ||-u-|{ M01 
 M14 ||-r-|{ M01 
 M07 ||-u-|{ M01
+M15 ||--|{ M02
+M15 }o--o{ M04
 
 
 ' M08 -[hidden]down- M09
