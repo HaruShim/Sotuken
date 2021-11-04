@@ -1,0 +1,122 @@
+<mxfile host="65bd71144e" modified="2021-11-04T05:06:43.716Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.6.8" etag="vnBjxZvlXkaI1npV059z" type="embed">
+    <diagram id="Zg0ZL4xOnNSr-WJDlwvn" name="ページ1">
+        <mxGraphModel dx="1740" dy="1675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="50" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="15" y="36.5" width="680" height="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="従業員情報編集" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="282.5" y="50" width="145" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="従業員ID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="123" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="氏名" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="161.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="220" y="161.5" width="290" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="氏名（カナ）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="205" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="220" y="205" width="290" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="電話番号" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="253" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="220" y="250" width="290" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="性別" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="293" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="男性" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.radioButton2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;checked=1;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;sketch=0;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="300" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="女性" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.radioButton2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;sketch=0;" vertex="1" parent="1">
+                    <mxGeometry x="385" y="300" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="生年月日" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="329" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="220" y="326" width="100" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.calendar;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="330" width="30" height="29" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="雇用店舗" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="370" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="雇用形態" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="410" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="" style="rounded=1;arcSize=9;fillColor=#ffffff;strokeColor=#4C9AFF;html=1;strokeWidth=2;spacingLeft=30;fontColor=#000000;align=left" vertex="1" parent="1">
+                    <mxGeometry x="220" y="370" width="270" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="" style="shape=step;whiteSpace=wrap;html=1;rounded=0;strokeColor=none;strokeWidth=2;fillColor=#0A1E43;gradientColor=none;fontFamily=Verdana;fontSize=14;fontColor=#000000;align=left;direction=south;size=0.65;" vertex="1" parent="67">
+                    <mxGeometry x="1" y="0.5" width="10" height="7" relative="1" as="geometry">
+                        <mxPoint x="-24" y="-3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="69" value="" style="rounded=1;arcSize=9;fillColor=#ffffff;strokeColor=#4C9AFF;html=1;strokeWidth=2;spacingLeft=30;fontColor=#000000;align=left" vertex="1" parent="1">
+                    <mxGeometry x="220" y="410" width="270" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="" style="shape=step;whiteSpace=wrap;html=1;rounded=0;strokeColor=none;strokeWidth=2;fillColor=#0A1E43;gradientColor=none;fontFamily=Verdana;fontSize=14;fontColor=#000000;align=left;direction=south;size=0.65;" vertex="1" parent="69">
+                    <mxGeometry x="1" y="0.5" width="10" height="7" relative="1" as="geometry">
+                        <mxPoint x="-24" y="-3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="71" value="&lt;span style=&quot;font-size: 27px&quot;&gt;&lt;span style=&quot;font-size: 19px&quot;&gt;更新&lt;/span&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="454" width="130" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="&lt;span style=&quot;font-size: 19px&quot;&gt;削除&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="454" width="130" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="②" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="-44" y="120" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="①" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="-44" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="④" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="160" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="⑤" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="210" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="⑥" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="270" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="⑨" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="320" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="⑩" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="370" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="⑪" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="420" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="⑫" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="-44" y="440" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="⑧" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="-44" y="320" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="⑦" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="-44" y="254" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="⑬" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=21;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="470" width="44" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="1234567891234" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="249" y="120" width="100" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
