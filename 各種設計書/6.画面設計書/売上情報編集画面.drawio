@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e" modified="2021-11-05T03:34:52.463Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.6.8" etag="HO1h0wr6jcC-k7JcZjJ1" type="embed">
+    <diagram id="-rYmXwlPA6e48w3ofCKy" name="ページ1">
+        <mxGraphModel dx="561" dy="445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="22.5" y="36.5" width="680" height="403.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="売上情報編集" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+                    <mxGeometry x="282.5" y="55" width="162.5" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;span style=&quot;font-size: 19px&quot;&gt;更新&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="298.75" y="389" width="130" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="118" y="157" width="214" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="商品コード" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="22.5" y="157" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="453" y="157" width="107" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="マイナス" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="377" y="157" width="66" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="円" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="157" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+                    <mxGeometry x="118" y="198" width="214" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="仕入価格" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="22.5" y="201" width="100" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
