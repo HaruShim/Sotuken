@@ -1,16 +1,16 @@
-<mxfile host="65bd71144e" modified="2021-11-04T06:28:32.944Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="jUP-Cj7ZtcWlNG3R8eKL" version="15.6.8" type="embed">
+<mxfile host="65bd71144e">
     <diagram name="お客様見積画面" id="rgbgES4tJEKVGF54ZIPd">
-        <mxGraphModel dx="974" dy="437" grid="1" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="1">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="1">
             <root>
                 <mxCell id="jopfzJTQR7Z_EkR9QJMv-0"/>
                 <object label="背景" id="jopfzJTQR7Z_EkR9QJMv-1">
-                    <mxCell style="locked=1;" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
+                    <mxCell style="" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
                 </object>
                 <mxCell id="jopfzJTQR7Z_EkR9QJMv-2" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;" parent="jopfzJTQR7Z_EkR9QJMv-1" vertex="1">
                     <mxGeometry x="80" y="50" width="420" height="210" as="geometry"/>
                 </mxCell>
                 <object label="パーツ" id="jopfzJTQR7Z_EkR9QJMv-3">
-                    <mxCell style="locked=1;" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
+                    <mxCell style="" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
                 </object>
                 <mxCell id="jopfzJTQR7Z_EkR9QJMv-4" value="お見積り" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jopfzJTQR7Z_EkR9QJMv-3" vertex="1">
                     <mxGeometry x="260" y="50" width="60" height="30" as="geometry"/>
@@ -325,7 +325,7 @@
                     </mxGeometry>
                 </mxCell>
                 <object label="矢印" id="jopfzJTQR7Z_EkR9QJMv-74">
-                    <mxCell style="locked=1;" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
+                    <mxCell style="" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
                 </object>
                 <mxCell id="jopfzJTQR7Z_EkR9QJMv-75" value="①" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;" parent="jopfzJTQR7Z_EkR9QJMv-74" vertex="1">
                     <mxGeometry x="200" y="10" width="20" height="20" as="geometry"/>
