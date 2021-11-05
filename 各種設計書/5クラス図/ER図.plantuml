@@ -43,12 +43,8 @@ package "マスタ管理" as mastermana {
       *最終更新日時
     }
   }
-  ' package "ユーザ権限マスタ"{
-  '   ' entity "権限情報" as M05{
-  '   '   *雇用形態
-  '   '   --
-  '   ' }
-  ' }
+  package "ユーザ権限マスタ"{
+  }
   package "商品情報マスタ"{
     entity "商品情報モデル" as M01 {
       *商品コード
@@ -63,6 +59,13 @@ package "マスタ管理" as mastermana {
       *仕入価格
       *商品画像
       *メーカー
+      *備考
+      *作成日時
+      *最終更新日時
+    }
+    entity "商品詳細モデル" as M100000{
+      *商品コード
+      --
       *CPU
       *RAM
       *HDD
@@ -78,9 +81,7 @@ package "マスタ管理" as mastermana {
       ' 0:無 1:有
       *グラフィック
       *OS
-      *備考
-      *作成日時
-      *最終更新日時
+      *
     }
 
     entity "セット商品モデル" as M14{
