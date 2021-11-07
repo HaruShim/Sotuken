@@ -1,9 +1,17 @@
 <mxfile host="65bd71144e">
-    <diagram id="lw6pO6twJt8JmFApKvV1" name="S00-01 ログイン">
+    <diagram id="lw6pO6twJt8JmFApKvV1" name="S00-01 ホーム">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="1T1dOmD-smIcMy2qDZ4Y" name="S00-02 ログイン済ホーム">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="wJvTpsNsSxPnNVpldQmP-0"/>
+                <mxCell id="wJvTpsNsSxPnNVpldQmP-1" parent="wJvTpsNsSxPnNVpldQmP-0"/>
             </root>
         </mxGraphModel>
     </diagram>
