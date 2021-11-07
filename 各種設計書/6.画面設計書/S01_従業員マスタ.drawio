@@ -24,10 +24,84 @@
         </mxGraphModel>
     </diagram>
     <diagram id="-5XlGvyMNI4YQo4kTnu4" name="S01-04 従業員編集">
-        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="jRSMvbaGAu0SlTpMGheo-0"/>
-                <mxCell id="jRSMvbaGAu0SlTpMGheo-1" parent="jRSMvbaGAu0SlTpMGheo-0"/>
+                <mxCell id="jRSMvbaGAu0SlTpMGheo-1" style="locked=1;" parent="jRSMvbaGAu0SlTpMGheo-0"/>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="15" y="36.5" width="680" height="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-2" value="従業員情報編集" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=20;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="282.5" y="50" width="145" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-3" value="従業員ID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="120" y="123" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-4" value="氏名" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="120" y="161.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-5" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="220" y="161.5" width="290" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-6" value="氏名（カナ）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="100" y="205" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-7" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="220" y="205" width="290" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-8" value="電話番号" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="120" y="253" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-9" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="220" y="250" width="290" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-10" value="性別" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="120" y="293" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-11" value="男性" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.radioButton2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;checked=1;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;sketch=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="220" y="300" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-12" value="女性" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.radioButton2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;sketch=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="385" y="300" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-13" value="生年月日" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="120" y="329" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-14" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="220" y="326" width="100" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-15" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.calendar;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="330" y="330" width="30" height="29" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-16" value="雇用店舗" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="120" y="370" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-17" value="雇用形態" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="120" y="410" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-18" value="" style="rounded=1;arcSize=9;fillColor=#ffffff;strokeColor=#4C9AFF;html=1;strokeWidth=2;spacingLeft=30;fontColor=#000000;align=left" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="220" y="370" width="270" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-19" value="" style="shape=step;whiteSpace=wrap;html=1;rounded=0;strokeColor=none;strokeWidth=2;fillColor=#0A1E43;gradientColor=none;fontFamily=Verdana;fontSize=14;fontColor=#000000;align=left;direction=south;size=0.65;" parent="caIzG-m1jP1CFUBGOVnT-18" vertex="1">
+                    <mxGeometry x="1" y="0.5" width="10" height="7" relative="1" as="geometry">
+                        <mxPoint x="-24" y="-3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-20" value="" style="rounded=1;arcSize=9;fillColor=#ffffff;strokeColor=#4C9AFF;html=1;strokeWidth=2;spacingLeft=30;fontColor=#000000;align=left" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="220" y="410" width="270" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-21" value="" style="shape=step;whiteSpace=wrap;html=1;rounded=0;strokeColor=none;strokeWidth=2;fillColor=#0A1E43;gradientColor=none;fontFamily=Verdana;fontSize=14;fontColor=#000000;align=left;direction=south;size=0.65;" parent="caIzG-m1jP1CFUBGOVnT-20" vertex="1">
+                    <mxGeometry x="1" y="0.5" width="10" height="7" relative="1" as="geometry">
+                        <mxPoint x="-24" y="-3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-22" value="&lt;span style=&quot;font-size: 27px&quot;&gt;&lt;span style=&quot;font-size: 19px&quot;&gt;更新&lt;/span&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="220" y="454" width="130" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-23" value="&lt;span style=&quot;font-size: 19px&quot;&gt;削除&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
+                    <mxGeometry x="360" y="454" width="130" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="caIzG-m1jP1CFUBGOVnT-0" value="名称未設定レイヤ" parent="jRSMvbaGAu0SlTpMGheo-0"/>
             </root>
         </mxGraphModel>
     </diagram>
