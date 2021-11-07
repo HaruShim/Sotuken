@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="znmtoh_Rew6AvxUfO1l-" name="S11-01 売上情報一覧">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="CG2l1j2Y_ZrnI2pfxLDU" name="S11-02 売上情報新規登録">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="HScyXAetF7ITzDGVpUrP-0"/>
+                <mxCell id="HScyXAetF7ITzDGVpUrP-1" parent="HScyXAetF7ITzDGVpUrP-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="1-ES8_izyVrFDtUZnd5H" name="S11-03 売上情報詳細">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="x3jnUuihddM3j5C1OmND-0"/>
+                <mxCell id="x3jnUuihddM3j5C1OmND-1" parent="x3jnUuihddM3j5C1OmND-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="LKUBFczZzwIafTxsZgwj" name="S11-04 売上情報編集(返金・返品)">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="LXnZenP4vCsTqy4sJP9I-0"/>
+                <mxCell id="LXnZenP4vCsTqy4sJP9I-1" parent="LXnZenP4vCsTqy4sJP9I-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

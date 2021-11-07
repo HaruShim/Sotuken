@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="DPl1PjUfLh3Job8icvtv" name="S02-01 店舗情報一覧">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="A3Q3lcUJCPUDSYFU90Ge" name="S02-02 店舗情報新規登録">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="eWoq72N2SN23J38T62mb-0"/>
+                <mxCell id="eWoq72N2SN23J38T62mb-1" parent="eWoq72N2SN23J38T62mb-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="bK47HYImk5hpBSsjFyJ5" name="S02-03 店舗情報詳細">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="1orTbbOIFc5g9HCdonoh-0"/>
+                <mxCell id="1orTbbOIFc5g9HCdonoh-1" parent="1orTbbOIFc5g9HCdonoh-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="jSfkOUDPXIi2WiB1VF7b" name="(どうする？)S02-04 店舗情報編集">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="JPv67TlJx9QXm954AAcY-0"/>
+                <mxCell id="JPv67TlJx9QXm954AAcY-1" parent="JPv67TlJx9QXm954AAcY-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

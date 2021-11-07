@@ -1,5 +1,5 @@
 <mxfile host="65bd71144e">
-    <diagram id="SRbu9WIoCtEo2R0tmvOP" name="S08-01 商品情報検索">
+    <diagram id="4NH9tEQc1eG1I5E5bK21" name="S04-01 売上情報一覧">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
@@ -7,19 +7,19 @@
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram id="xUxYUeE3ronR0FQCtkyY" name="S08-02 ボトルネック検索">
+    <diagram id="Z5SJw_GvAEAV7101kWWx" name="S04-02 売上情報詳細">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
-                <mxCell id="Ew2Icu9jrgo6xF9pl-kO-0"/>
-                <mxCell id="Ew2Icu9jrgo6xF9pl-kO-1" parent="Ew2Icu9jrgo6xF9pl-kO-0"/>
+                <mxCell id="Wn177QP7VpmlNM92Ju7L-0"/>
+                <mxCell id="Wn177QP7VpmlNM92Ju7L-1" parent="Wn177QP7VpmlNM92Ju7L-0"/>
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram id="FFajQtlzlAUDvUCMnyYc" name="S08-03 ベンチマーク検索">
+    <diagram id="XU5NMbUT4Ji21RmDY1Ib" name="S04-03 売上情報編集">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
-                <mxCell id="ERHaDuIm5LUvsVNgwkY5-0"/>
-                <mxCell id="ERHaDuIm5LUvsVNgwkY5-1" parent="ERHaDuIm5LUvsVNgwkY5-0"/>
+                <mxCell id="8SYGuNyVvRYlUx0NexzL-0"/>
+                <mxCell id="8SYGuNyVvRYlUx0NexzL-1" parent="8SYGuNyVvRYlUx0NexzL-0"/>
             </root>
         </mxGraphModel>
     </diagram>

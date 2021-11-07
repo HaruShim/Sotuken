@@ -1,0 +1,26 @@
+<mxfile host="65bd71144e">
+    <diagram id="fxeHr7OyM0ABJta6uCd7" name="S05-01 ベンチマーク一覧">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="nz1pjAgawY7qsmiINmbd" name="S05-02 ベンチマーク新規登録">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="Cp8SlI8ONcyd5ualf1gh-0"/>
+                <mxCell id="Cp8SlI8ONcyd5ualf1gh-1" parent="Cp8SlI8ONcyd5ualf1gh-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="S05-03 ベンチマーク編集" id="5QFRjP-OvB2Odn7n2sEQ">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="zJ001diSXO1KbtcmnB0D-0"/>
+                <mxCell id="zJ001diSXO1KbtcmnB0D-1" parent="zJ001diSXO1KbtcmnB0D-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

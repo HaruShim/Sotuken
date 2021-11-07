@@ -1,5 +1,5 @@
 <mxfile host="65bd71144e">
-    <diagram id="2d7q4Twcdk3mc3P2LlPO" name="S10-01 見積">
+    <diagram id="X5HwtGDgar2OMqz5m4xb" name="S13-01 店舗情報一覧">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
@@ -7,11 +7,11 @@
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram id="adCL3K_38qttfaBOMlnU" name="S10-02 客用見積">
+    <diagram id="67tQ-7ENQZwjWp0TGb0x" name="S13-02 店舗情報詳細">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
-                <mxCell id="QnXR3cfc8Wpw4rfRPA1y-0"/>
-                <mxCell id="QnXR3cfc8Wpw4rfRPA1y-1" parent="QnXR3cfc8Wpw4rfRPA1y-0"/>
+                <mxCell id="5RedW3WJM9E-DbaDht19-0"/>
+                <mxCell id="5RedW3WJM9E-DbaDht19-1" parent="5RedW3WJM9E-DbaDht19-0"/>
             </root>
         </mxGraphModel>
     </diagram>

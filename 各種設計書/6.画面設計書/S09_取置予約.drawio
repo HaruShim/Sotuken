@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="K4W08yTwAg88PEcUbGW-" name="S09-01 取置予約一覧">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="hJ6PoeBV1xR7DKpLhHnH" name="S09-02 取置予約新規登録">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="eaUeBVpq3exUolBu3DuL-0"/>
+                <mxCell id="eaUeBVpq3exUolBu3DuL-1" parent="eaUeBVpq3exUolBu3DuL-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="pT7FJ-pN_2OWSLN0Gr4p" name="S09-03 取置予約詳細">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="YZAfcLKVHmxV2qAa13qw-0"/>
+                <mxCell id="YZAfcLKVHmxV2qAa13qw-1" parent="YZAfcLKVHmxV2qAa13qw-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="_vI2pD9Gbq5UdkS1BRRV" name="S09-04 取置予約編集">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="M8V1lJCJl-_Va2_Hlphw-0"/>
+                <mxCell id="M8V1lJCJl-_Va2_Hlphw-1" parent="M8V1lJCJl-_Va2_Hlphw-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

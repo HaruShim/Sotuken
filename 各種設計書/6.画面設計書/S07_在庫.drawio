@@ -1,5 +1,5 @@
 <mxfile host="65bd71144e">
-    <diagram id="awf3vW1adkNEcoZk_ail" name="S01-01 従業員一覧">
+    <diagram id="V50MMmBf-fGds3Pl8mPp" name="S07-01 セット商品一覧">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
@@ -7,35 +7,27 @@
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram id="ZipYO3x2CSQ8b-4YCx3I" name="S01-02 従業員新規登録">
+    <diagram id="2Kg3kUkvsL5vaza5gHSN" name="S07-02 セット商品新規登録">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
-                <mxCell id="iQXZzTeZplkwyJJvV2N7-0"/>
-                <mxCell id="iQXZzTeZplkwyJJvV2N7-1" parent="iQXZzTeZplkwyJJvV2N7-0"/>
+                <mxCell id="qx6JEb7jcFffDPEy_rV1-0"/>
+                <mxCell id="qx6JEb7jcFffDPEy_rV1-1" parent="qx6JEb7jcFffDPEy_rV1-0"/>
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram id="R6QMF_Pb3Kf62Q887VUA" name="S01-03 従業員詳細">
+    <diagram id="TYo6GsyhUv01ZijpFa_X" name="S07-03 セット商品詳細">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
-                <mxCell id="cEOJRVkmyvD1ovo1MWaK-0"/>
-                <mxCell id="cEOJRVkmyvD1ovo1MWaK-1" parent="cEOJRVkmyvD1ovo1MWaK-0"/>
+                <mxCell id="FAcWNw91510_4n9ptFaX-0"/>
+                <mxCell id="FAcWNw91510_4n9ptFaX-1" parent="FAcWNw91510_4n9ptFaX-0"/>
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram id="-5XlGvyMNI4YQo4kTnu4" name="S01-04 従業員編集">
+    <diagram id="qe5yLTuS4tZD8fJ8QvLe" name="S07-04 セット商品編集">
         <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
-                <mxCell id="jRSMvbaGAu0SlTpMGheo-0"/>
-                <mxCell id="jRSMvbaGAu0SlTpMGheo-1" parent="jRSMvbaGAu0SlTpMGheo-0"/>
-            </root>
-        </mxGraphModel>
-    </diagram>
-    <diagram id="Q6D3abXERs3BGHWYDyFU" name="S01-05 従業員登録完了">
-        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            <root>
-                <mxCell id="XR2JbObqEv2TeyNu8etc-0"/>
-                <mxCell id="XR2JbObqEv2TeyNu8etc-1" parent="XR2JbObqEv2TeyNu8etc-0"/>
+                <mxCell id="Q7d7jdvgqoW5-ucXWQ3b-0"/>
+                <mxCell id="Q7d7jdvgqoW5-ucXWQ3b-1" parent="Q7d7jdvgqoW5-ucXWQ3b-0"/>
             </root>
         </mxGraphModel>
     </diagram>
