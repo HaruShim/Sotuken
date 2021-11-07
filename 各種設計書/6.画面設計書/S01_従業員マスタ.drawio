@@ -7,4 +7,12 @@
             </root>
         </mxGraphModel>
     </diagram>
+    <diagram id="ZipYO3x2CSQ8b-4YCx3I" name="S01-02 従業員新規登録">
+        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="iQXZzTeZplkwyJJvV2N7-0"/>
+                <mxCell id="iQXZzTeZplkwyJJvV2N7-1" parent="iQXZzTeZplkwyJJvV2N7-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
