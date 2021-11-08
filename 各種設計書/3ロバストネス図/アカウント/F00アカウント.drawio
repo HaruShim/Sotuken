@@ -1,0 +1,177 @@
+<mxfile host="65bd71144e">
+    <diagram id="iHAmE9tPRXu_R2L8gTPu" name="*ログイン">
+        <mxGraphModel dx="1196" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="70" value="管理者&lt;br&gt;正規社員&lt;br&gt;非正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-60" y="290" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="登録を&lt;br&gt;検証する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="410" y="170" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="従業員情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="290" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="" style="endArrow=classic;html=1;rounded=0;endFill=1;startArrow=classic;startFill=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="330" as="sourcePoint"/>
+                        <mxPoint x="490" y="209.9999999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="74" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-20" y="330" as="sourcePoint"/>
+                        <mxPoint x="110" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="75" value="ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="170" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-20" y="330" as="sourcePoint"/>
+                        <mxPoint x="120" y="209.9999999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="77" value="ログインフォームに&lt;br&gt;ID・パスワードを入力し&lt;br&gt;「ログイン」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="76" vertex="1" connectable="0">
+                    <mxGeometry x="0.182" relative="1" as="geometry">
+                        <mxPoint x="-13" y="3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="78" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="209.29000000000008" as="sourcePoint"/>
+                        <mxPoint x="390" y="209.29000000000008" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="79" value="ログイン済&lt;br&gt;ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="410" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="エラー時はホーム画面で&lt;br&gt;メッセージを表示" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="160" width="140" height="42.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="" style="endArrow=none;html=1;rounded=0;endFill=0;startArrow=classic;startFill=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="450" as="sourcePoint"/>
+                        <mxPoint x="400" y="249.9999999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="82" value="ログイン" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="1" vertex="1">
+                    <mxGeometry x="-110" y="160" width="189" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="ログイン成功時&lt;br&gt;ログイン完了メッセージを表示" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=default;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="315" width="170" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="-g-JyxEut5_m3j0BCl9_" name="*ユーザ権限編集">
+        <mxGraphModel dx="1623" dy="339" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-0"/>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-1" parent="dJEIKiLl5nL28aXN8n3M-0"/>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-2" value="管理者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry x="-70" y="250" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-3" value="ログイン済&lt;br&gt;ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry x="120" y="120" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-4" value="権限編集&lt;br&gt;画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry x="120" y="360" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-20" y="280" as="sourcePoint"/>
+                        <mxPoint x="110" y="159.9999999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-6" value="「ユーザ権限マスタ」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJEIKiLl5nL28aXN8n3M-5">
+                    <mxGeometry x="-0.2157" y="1" relative="1" as="geometry">
+                        <mxPoint x="15" y="-16" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-7" value="権限情報を取得する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry x="460" y="120" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-8" value="更新する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry x="460" y="280" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="159.9999999999999" as="sourcePoint"/>
+                        <mxPoint x="440" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-10" value="権限情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry x="690" y="200" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-11" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" edge="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="160" as="sourcePoint"/>
+                        <mxPoint x="680" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-12" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-20" y="280" as="sourcePoint"/>
+                        <mxPoint x="110" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-13" value="従業員の選択、&lt;br&gt;権限の選択をし&lt;br&gt;「保存」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJEIKiLl5nL28aXN8n3M-12">
+                    <mxGeometry x="-0.1784" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-14" value="更新内容を検証する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry x="460" y="440" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-15" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="399.5" as="sourcePoint"/>
+                        <mxPoint x="450" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="494.71000000000004" y="425" as="sourcePoint"/>
+                        <mxPoint x="494.71000000000004" y="375" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-17" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" edge="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="320" as="sourcePoint"/>
+                        <mxPoint x="680" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-18" value="権限情報を&lt;br&gt;更新する" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJEIKiLl5nL28aXN8n3M-17">
+                    <mxGeometry x="0.1518" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="440" y="170" as="sourcePoint"/>
+                        <mxPoint x="240" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-20" value="選択内容に問題があればエラーメッセージを&lt;br&gt;表示する" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=default;" vertex="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry x="270" y="430" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-21" value="ユーザ権限編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry x="-120" y="80" width="189" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="dJEIKiLl5nL28aXN8n3M-22" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="dJEIKiLl5nL28aXN8n3M-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="540" y="300" as="sourcePoint"/>
+                        <mxPoint x="540" y="170" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="560" y="270"/>
+                            <mxPoint x="580" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
