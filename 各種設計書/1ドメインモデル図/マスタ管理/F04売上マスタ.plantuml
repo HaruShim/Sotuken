@@ -1,8 +1,8 @@
-@startuml images/マスタ管理/従業員マスタ
+@startuml images/マスタ管理/売上マスタ
 ' ヘッダー
 header 営業情報管理システム
 ' タイトル
-title マスタ管理/従業員マスタ
+title マスタ管理/売上マスタ
 ' 
 hide circle
 ' 
