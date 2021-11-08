@@ -7,6 +7,36 @@ title マスタ管理/従業員マスタ
 hide circle
 ' 
 hide method
+hide members
+left to right direction
+
+package "アカウント"{
+    class "ログイン"
+}
+
+package "従業員マスタ"{
+    mix_actor "ユーザ"
+    class "登録"
+    class "編集"
+    class "参照"
+    class "削除"
+    class "従業員情報"
+    class "店舗情報"
+    class "勤務店舗状況"
+
+    "ユーザ" -- "参照"
+    "ユーザ" -- "登録"
+    "ユーザ" -- "編集"
+    "ユーザ" -- "削除"
+    "参照" -- "従業員情報"
+    "登録" -- "従業員情報"
+    "編集" -- "従業員情報"
+    "削除" -- "従業員情報"
+    "従業員情報" -- "店舗情報"
+    "従業員情報" -- "勤務店舗状況"
+}
+
+"ユーザ" -- "ログイン"
 
 
 
