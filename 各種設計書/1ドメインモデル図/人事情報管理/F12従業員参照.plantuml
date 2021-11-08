@@ -7,8 +7,31 @@ title 人事情報管理/従業員参照
 hide circle
 ' 
 hide method
+left to right direction
 
+package "アカウント"{
+    class "ログイン" #A9C6F6
+}
 
+package "従業員参照" {
+    'ユーザや外部システム
+    mix_actor "ユーザ"
+    class "登録" #98fb98
+    class "編集" #98fb98
+    class "参照" #98fb98
+    class "削除" #98fb98
+    ' class "" #F5A9BC
+    ' class "" #ffd700
+
+    'モデル同士の関係
+    ユーザ -- 参照
+    ユーザ -- 登録
+    ユーザ -- 編集
+    ユーザ -- 削除
+
+    'ドメインクラスの属性
+
+}
 
 
 

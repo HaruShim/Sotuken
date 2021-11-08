@@ -7,7 +7,11 @@ title 商品情報管理/見積
 hide circle
 ' 
 hide method
+left to right direction
 
+package "アカウント"{
+    class "ログイン" #A9C6F6
+}
 
 
 
