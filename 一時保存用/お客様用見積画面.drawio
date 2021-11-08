@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e">
+<mxfile host="65bd71144e" modified="2021-11-08T01:10:49.064Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.0 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.6.8" etag="Arlsa8Y_Y4rki5jQc1Mh" type="embed">
     <diagram name="お客様見積画面" id="rgbgES4tJEKVGF54ZIPd">
-        <mxGraphModel dx="814" dy="339" grid="1" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="1">
+        <mxGraphModel dx="747" dy="437" grid="1" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="1">
             <root>
                 <mxCell id="jopfzJTQR7Z_EkR9QJMv-0"/>
                 <object label="背景" id="jopfzJTQR7Z_EkR9QJMv-1">
@@ -325,7 +325,7 @@
                     </mxGeometry>
                 </mxCell>
                 <object label="矢印" id="jopfzJTQR7Z_EkR9QJMv-74">
-                    <mxCell style="" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
+                    <mxCell style="" parent="jopfzJTQR7Z_EkR9QJMv-0" visible="0"/>
                 </object>
                 <mxCell id="jopfzJTQR7Z_EkR9QJMv-75" value="①" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;" parent="jopfzJTQR7Z_EkR9QJMv-74" vertex="1">
                     <mxGeometry x="200" y="10" width="20" height="20" as="geometry"/>

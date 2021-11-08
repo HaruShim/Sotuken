@@ -1,0 +1,26 @@
+<mxfile host="65bd71144e" modified="2021-11-08T01:31:41.627Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.0 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.7.0" etag="HysZ_UQ5k1rm47d6nA3B" type="embed">
+    <diagram id="S6g8ovHBDiSqP972IV9r" name="ページ1">
+        <mxGraphModel dx="5735" dy="2985" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" style="" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1671" y="-304" width="1218" height="876" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="名称未設定レイヤ" style="" parent="0"/>
+                <mxCell id="5" value="&lt;font style=&quot;font-size: 22px&quot; color=&quot;#cccccc&quot;&gt;従業員ID&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="3" vertex="1">
+                    <mxGeometry x="-1311" y="20" width="439" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font color=&quot;#cccccc&quot;&gt;&lt;span style=&quot;font-size: 22px&quot;&gt;パスワード&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="3" vertex="1">
+                    <mxGeometry x="-1311" y="117" width="439" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 27px&quot;&gt;ログイン&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" parent="3" vertex="1">
+                    <mxGeometry x="-1194" y="226" width="241" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;font style=&quot;font-size: 27px&quot;&gt;ホーム画面&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="-1643" y="-403" width="413" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
