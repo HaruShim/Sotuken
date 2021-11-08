@@ -157,6 +157,9 @@ package "人事情報管理" as huremana {
         }
     }
 }
+
+
+
 ' class Meta{
 '     -保留
 ' }

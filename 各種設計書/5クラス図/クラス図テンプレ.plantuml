@@ -1,0 +1,99 @@
+' ToDo
+' 
+' ベンチマークマスタを検索マスタにする
+' or
+' ボトルネックマスタを追加する
+' ユーザ権限マスタ消してログインに組み込んでもいいかも
+' 
+
+@startuml class_diagrams
+' ヘッダー
+header 営業情報管理システム
+' タイトル
+title クラス図要素
+
+
+package "マスタ管理" as mastermana {
+  ' 機能名 ログイン
+  ' 機能ID F00
+  package "ログイン" as F00{
+    class "DjangoAllauth\n(ログイン)" as djangoallauth{
+    }
+  }
+
+  ' 機能名 従業員マスタ
+  ' 機能ID F01
+  package "従業員マスタ" as F01{
+    class "(従業員情報モデル)" {}
+  }
+
+  ' 機能名 店舗マスタ
+  ' 機能ID F02
+  package "店舗マスタ" as F02{
+    class "(店舗情報モデル)" {}
+  }
+
+  ' 機能名 商品マスタ
+  ' 機能ID F03
+  package "商品マスタ" as F03{
+    class "(商品情報モデル)" {}
+  }
+  
+  ' 機能名 売上マスタ
+  ' 機能ID F04
+  package "売上マスタ" as F04{
+    class "(売上情報モデル)" {}
+  }
+  
+  ' 機能名 ベンチマークマスタ
+  ' 機能ID F05
+  package "ベンチマークマスタ" as M05{
+    class "(CPUベンチマークモデル)" {}
+    class "(GPUベンチマークモデル)"
+  }
+  
+  ' 機能名 ユーザ権限マスタ
+  ' 機能ID F06
+  package "ユーザ権限マスタ" {}
+
+}
+
+package "商品情報管理" {
+  ' 機能名 在庫
+  ' 機能ID F07
+  package "在庫" {}
+  
+  ' 機能名 検索
+  ' 機能ID F08
+  package "検索" {}
+  
+  ' 機能名 取置予約
+  ' 機能ID F09
+  package "取置予約" {}
+  
+  ' 機能名 見積
+  ' 機能ID F10
+  package "見積" {}
+  
+  ' 機能名 売上
+  ' 機能ID F11
+  package "売上" {}
+}
+
+package "人事情報管理" {
+  ' 機能名 従業員参照
+  ' 機能ID F12
+  package "従業員参照" {}
+  
+  ' 機能名 店舗参照
+  ' 機能ID F13
+  package "店舗参照" {}
+  
+  ' 機能名 勤務状況
+  ' 機能ID F14
+  package "勤務状況" {}
+}
+
+
+
+@enduml
