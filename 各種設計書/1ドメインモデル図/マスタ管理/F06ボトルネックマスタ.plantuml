@@ -1,0 +1,15 @@
+@startuml images/マスタ管理/ボトルネックマスタ
+' ヘッダー
+header 営業情報管理システム
+' タイトル
+title マスタ管理/ボトルネックマスタ
+' 
+hide circle
+' 
+hide method
+
+
+
+
+
+@enduml
