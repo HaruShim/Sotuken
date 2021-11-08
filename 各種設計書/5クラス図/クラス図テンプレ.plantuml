@@ -48,14 +48,16 @@ package "マスタ管理" as mastermana {
   
   ' 機能名 ベンチマークマスタ
   ' 機能ID F05
-  package "ベンチマークマスタ" as M05{
+  package "ベンチマークマスタ" as F05{
     class "(CPUベンチマークモデル)" {}
-    class "(GPUベンチマークモデル)"
+    class "(GPUベンチマークモデル)" {}
   }
   
   ' 機能名 ボトルネックマスタ
   ' 機能ID F06
-  package "ボトルネックマスタ" {}
+  package "ボトルネックマスタ" as F06{
+    class "(ボトルネックモデル)" {}
+  }
 
 }
 
