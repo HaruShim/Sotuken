@@ -1,8 +1,8 @@
-@startuml images/商品情報管理/在庫
+@startuml images/人事情報管理/従業員参照
 ' ヘッダー
 header 営業情報管理システム
 ' タイトル
-title 商品情報管理/在庫
+title 人事情報管理/従業員参照
 ' 
 hide circle
 ' 
