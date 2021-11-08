@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-08T01:17:59.673Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.0 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.7.0" etag="E3AM1k6BALVhbRKi5i05" type="embed" pages="4">
+<mxfile host="65bd71144e" modified="2021-11-08T01:31:25.034Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.0 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.7.0" etag="BYCvBEApcW00OO0PQgbH" type="embed" pages="4">
     <diagram id="znmtoh_Rew6AvxUfO1l-" name="S11-01 売上情報一覧">
-        <mxGraphModel dx="660" dy="524" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1144" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -207,13 +207,13 @@
                     <mxGeometry x="321.45" y="400" width="84.6" height="24.08" as="geometry"/>
                 </mxCell>
                 <mxCell id="erOUjaFX1RZhE_HRu80H-1" value="&lt;span style=&quot;font-size: 19px&quot;&gt;新規登録&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-                    <mxGeometry x="530" y="63" width="130" height="34" as="geometry"/>
+                    <mxGeometry x="530" y="71" width="130" height="34" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="CG2l1j2Y_ZrnI2pfxLDU" name="S11-02 売上情報新規登録">
-        <mxGraphModel dx="801" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1144" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="HScyXAetF7ITzDGVpUrP-0"/>
                 <mxCell id="HScyXAetF7ITzDGVpUrP-1" style="" parent="HScyXAetF7ITzDGVpUrP-0"/>
@@ -352,7 +352,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="1-ES8_izyVrFDtUZnd5H" name="S11-03 売上情報詳細">
-        <mxGraphModel dx="561" dy="445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="801" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="x3jnUuihddM3j5C1OmND-0"/>
                 <mxCell id="x3jnUuihddM3j5C1OmND-1" parent="x3jnUuihddM3j5C1OmND-0"/>
@@ -360,10 +360,10 @@
         </mxGraphModel>
     </diagram>
     <diagram id="LKUBFczZzwIafTxsZgwj" name="S11-04 売上情報編集(返金・返品)">
-        <mxGraphModel dx="801" dy="636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1144" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="LXnZenP4vCsTqy4sJP9I-0"/>
-                <mxCell id="LXnZenP4vCsTqy4sJP9I-1" style="locked=1;" parent="LXnZenP4vCsTqy4sJP9I-0"/>
+                <mxCell id="LXnZenP4vCsTqy4sJP9I-1" style="" parent="LXnZenP4vCsTqy4sJP9I-0"/>
                 <mxCell id="h1aahPK3rIeyOdhq3c5Y-43" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="LXnZenP4vCsTqy4sJP9I-1" vertex="1">
                     <mxGeometry x="33.75" y="40" width="680" height="403.5" as="geometry"/>
                 </mxCell>
