@@ -1,10 +1,10 @@
-<mxfile host="65bd71144e" modified="2021-11-04T07:36:12.416Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="B2Hy3lRMKyLlq5hKj_-0" version="15.6.8" type="embed">
+<mxfile host="65bd71144e" modified="2021-11-08T01:16:41.060Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.0 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="_EPuO0xHncxHe-CzT7wC" version="15.6.8" type="embed">
     <diagram name="ベンチマーク" id="rgbgES4tJEKVGF54ZIPd">
         <mxGraphModel dx="747" dy="437" grid="1" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="1">
             <root>
                 <mxCell id="jopfzJTQR7Z_EkR9QJMv-0"/>
                 <object label="背景" id="jopfzJTQR7Z_EkR9QJMv-1">
-                    <mxCell style="locked=1;" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
+                    <mxCell style="" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
                 </object>
                 <mxCell id="jopfzJTQR7Z_EkR9QJMv-2" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;" parent="jopfzJTQR7Z_EkR9QJMv-1" vertex="1">
                     <mxGeometry x="80" y="60" width="390" height="230" as="geometry"/>
@@ -16,7 +16,7 @@
                     <mxGeometry x="290" y="230" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <object label="パーツ" id="jopfzJTQR7Z_EkR9QJMv-3">
-                    <mxCell style="locked=1;" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
+                    <mxCell style="" parent="jopfzJTQR7Z_EkR9QJMv-0"/>
                 </object>
                 <mxCell id="jopfzJTQR7Z_EkR9QJMv-4" value="ベンチマーク検索" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="jopfzJTQR7Z_EkR9QJMv-3" vertex="1">
                     <mxGeometry x="220" y="70" width="110" height="30" as="geometry"/>
