@@ -1,0 +1,15 @@
+@startuml images/マスタ管理
+' ヘッダー
+header 営業情報管理システム
+' タイトル
+title マスタ管理
+' 
+hide circle
+' 
+hide method
+
+
+
+
+
+@enduml
