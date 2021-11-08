@@ -12,14 +12,15 @@ header 営業情報管理システム
 ' タイトル
 title クラス図要素
 
+' 機能名 ログイン
+' 機能ID F00
+package "ログイン" as F00{
+  class "DjangoAllauth\n(ログイン)" as djangoallauth{
+  }
+}
+
 
 package "マスタ管理" as mastermana {
-  ' 機能名 ログイン
-  ' 機能ID F00
-  package "ログイン" as F00{
-    class "DjangoAllauth\n(ログイン)" as djangoallauth{
-    }
-  }
 
   ' 機能名 従業員マスタ
   ' 機能ID F01
@@ -52,9 +53,9 @@ package "マスタ管理" as mastermana {
     class "(GPUベンチマークモデル)"
   }
   
-  ' 機能名 ユーザ権限マスタ
+  ' 機能名 ボトルネックマスタ
   ' 機能ID F06
-  package "ユーザ権限マスタ" {}
+  package "ボトルネックマスタ" {}
 
 }
 
