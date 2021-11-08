@@ -11,7 +11,7 @@ hide members
 left to right direction
 
 package "アカウント"{
-    class "ログイン"
+    class "ログイン" #A9C6F6
 }
 
 package "従業員マスタ"{
@@ -20,9 +20,9 @@ package "従業員マスタ"{
     class "編集"
     class "参照"
     class "削除"
-    class "従業員情報"
-    class "店舗情報"
-    class "勤務店舗状況"
+    class "従業員情報" #F5A9BC
+    class "店舗情報" #F5A9BC
+    class "勤務店舗状況" #F5A9BC
 
     "ユーザ" -- "参照"
     "ユーザ" -- "登録"
