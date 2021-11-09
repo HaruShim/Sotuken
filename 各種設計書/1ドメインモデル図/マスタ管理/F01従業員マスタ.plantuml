@@ -7,7 +7,7 @@ title マスタ管理/従業員マスタ
 hide circle
 ' 
 hide method
-hide members
+' hide members
 left to right direction
 
 package "アカウント"{
