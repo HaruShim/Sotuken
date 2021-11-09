@@ -12,8 +12,27 @@ left to right direction
 package "アカウント"{
     class "ログイン" #A9C6F6
 }
+package "マスタ" {
+    mix_actor "ユーザ"
+        class "参照(お客様用)" #98fb98
+        class "参照" #98fb98
+        class "見積" #F5A9BC
+        class "取置予約" 
+}
+        package "マスタ管理"{
+            }
 
 
+        ' class "" #F5A9BC
+        ' class "" #ffd700
 
+        'モデル同士の関係
+        ユーザ -- 参照
+        ユーザ -- "参照(お客様用)"
+        ユーザ -- ログイン
+        参照 -- 見積
+        "参照(お客様用)" -- 見積
+        見積 -- 取置予約
+        見積-- マスタ管理
 
 @enduml
