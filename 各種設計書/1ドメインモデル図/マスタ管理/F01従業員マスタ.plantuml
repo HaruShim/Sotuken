@@ -21,8 +21,8 @@ package "従業員マスタ"{
     class "参照" #98fb98
     class "削除" #98fb98
     class "従業員情報" #F5A9BC
-    class "店舗情報モデル" #ffd700
-    class "勤務店舗状況" #ffd700
+    class "店舗情報モデル"
+    class "勤務店舗状況"
 
     ユーザ -- 参照
     ユーザ -- 登録
