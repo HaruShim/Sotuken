@@ -1,2 +1,2 @@
-﻿cpu_bench_id,cpu_name,passmark,core,thread,tdp,rated_clock,max_clock,cost_performance,list_price
+cpu_bench_id,cpu_name,passmark,core,thread,tdp,rated_clock,max_clock,cost_performance,list_price
 0,Ryzen9 5950X,46132,16,32,105,3.4,4.9,106500,0.43
