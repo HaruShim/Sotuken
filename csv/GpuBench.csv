@@ -1,2 +1,2 @@
-gpu_bench_id,gpu_name,3dmarktimespygraphics,tdp,cost_performance,wattage_performance,list_price
-0,RTX 3090,19867,350,0.099,56.8,200000
+gpu_bench_id,gpu_name,marktimespygraphics,tdp,cost_performance,wattage_performance,list_price,created_at ,updated_at 
+0,RTX 3090,19867,350,0.099,56.8,200000,2021-11-10 12:14:00,2021-11-10 12:14:00
