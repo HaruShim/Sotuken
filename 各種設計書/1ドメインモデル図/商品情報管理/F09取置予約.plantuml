@@ -24,15 +24,11 @@ package "取置商品モデル" {
     class "取置商品モデル" #F5A9BC
     class "商品情報モデル"
 }
-    package "マスタ管理"{
-        ' package ""{}
-        ' package ""{}
-        ' package ""{}
-        }
-
-
-    ' class "" #F5A9BC
-    ' class "" #ffd700
+    ' package "マスタ管理"{
+    '     ' package ""{}
+    '     ' package ""{}
+    '     ' package ""{}
+    '     }
 
     'モデル同士の関係
     ユーザ --> 参照
@@ -45,7 +41,7 @@ package "取置商品モデル" {
     編集 --o 取置商品モデル
     詳細 --o 取置商品モデル : > has-many
     取置商品モデル o-- 商品情報モデル
-    取置商品モデル -down- マスタ管理
+    ' 取置商品モデル -down- マスタ管理
 
     'ドメインクラスの属性
     取置商品モデル : 取置商品ID
