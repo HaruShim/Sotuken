@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-08T05:41:30.652Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.0 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="1Oey5xIRNh-3V_w2u-c4" version="15.7.0" type="embed" pages="5">
+<mxfile host="65bd71144e" modified="2021-11-11T05:38:30.770Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="q1orsMEuVqBk-crScPKk" version="15.7.3" type="embed" pages="5">
     <diagram id="awf3vW1adkNEcoZk_ail" name="S01-01 従業員一覧">
-        <mxGraphModel dx="1576" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1336" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" style="" parent="0"/>
@@ -115,7 +115,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="ZipYO3x2CSQ8b-4YCx3I" name="S01-02 従業員新規登録">
-        <mxGraphModel dx="2309" dy="1014" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2752" dy="1260" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="iQXZzTeZplkwyJJvV2N7-0"/>
                 <mxCell id="iQXZzTeZplkwyJJvV2N7-1" parent="iQXZzTeZplkwyJJvV2N7-0"/>
@@ -595,6 +595,9 @@
                 <mxCell id="7zq30-xhf97ZdsahjQY3-14" value="000-0000-0000" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=center;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" parent="iQXZzTeZplkwyJJvV2N7-1" vertex="1">
                     <mxGeometry x="1480" y="287" width="430" height="50" as="geometry"/>
                 </mxCell>
+                <mxCell id="OaUqCMjIOk5TD6Cpk6o--2" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="iQXZzTeZplkwyJJvV2N7-1">
+                    <mxGeometry x="1130" y="22.5" width="47.5" height="47.5" as="geometry"/>
+                </mxCell>
                 <mxCell id="Qg0whrGEm0efhjvUUm9--0" value="名称未設定レイヤ" parent="iQXZzTeZplkwyJJvV2N7-0"/>
                 <mxCell id="Qg0whrGEm0efhjvUUm9--1" value="名称未設定レイヤ" parent="iQXZzTeZplkwyJJvV2N7-0"/>
             </root>
@@ -724,11 +727,14 @@
                 <mxCell id="bLcOWMKjYQ_ck6U9k27U-41" value="&lt;span style=&quot;font-size: 19px&quot;&gt;削除&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" parent="cEOJRVkmyvD1ovo1MWaK-1" vertex="1">
                     <mxGeometry x="1598.1200000000001" y="640" width="130" height="34" as="geometry"/>
                 </mxCell>
+                <mxCell id="hgTIeZnG2_hMNtnLsuH8-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="cEOJRVkmyvD1ovo1MWaK-1">
+                    <mxGeometry x="1130" y="22.5" width="47.5" height="47.5" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="-5XlGvyMNI4YQo4kTnu4" name="S01-04 従業員編集">
-        <mxGraphModel dx="752" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="-24" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="jRSMvbaGAu0SlTpMGheo-0"/>
                 <mxCell id="jRSMvbaGAu0SlTpMGheo-1" style="" parent="jRSMvbaGAu0SlTpMGheo-0"/>
@@ -885,13 +891,16 @@
                 <mxCell id="idyW3DM3zMU885ks8ddH-39" value="田中太郎" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=center;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" parent="jRSMvbaGAu0SlTpMGheo-1" vertex="1">
                     <mxGeometry x="1485" y="150" width="430" height="50" as="geometry"/>
                 </mxCell>
+                <mxCell id="9DCtda7pHUUqYgyP7_0m-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="jRSMvbaGAu0SlTpMGheo-1">
+                    <mxGeometry x="1130" y="22.5" width="47.5" height="47.5" as="geometry"/>
+                </mxCell>
                 <mxCell id="caIzG-m1jP1CFUBGOVnT-0" value="名称未設定レイヤ" parent="jRSMvbaGAu0SlTpMGheo-0"/>
                 <mxCell id="b3KyxXW6OtHEHXa37fTk-0" value="名称未設定レイヤ" parent="jRSMvbaGAu0SlTpMGheo-0"/>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="Q6D3abXERs3BGHWYDyFU" name="S01-05 従業員登録完了">
-        <mxGraphModel dx="1576" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1336" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="XR2JbObqEv2TeyNu8etc-0"/>
                 <mxCell id="XR2JbObqEv2TeyNu8etc-1" parent="XR2JbObqEv2TeyNu8etc-0"/>

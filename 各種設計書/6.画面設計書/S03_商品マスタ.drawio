@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2021-11-11T01:34:27.866Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="fjcUhx6VuNBk3FX2cVvY" version="15.7.3" type="embed" pages="4">
+<mxfile host="65bd71144e" modified="2021-11-11T05:48:49.653Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="UwZ0AvGurzZTOSdMV3U7" version="15.7.3" type="embed" pages="4">
     <diagram id="giCwQEhyX9l9AkNv27Gq" name="S03-01 商品情報一覧">
         <mxGraphModel dx="1109" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -326,7 +326,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="i9D_LmfXx12iWns-8bgw" name="S03-02 商品情報新規登録">
-        <mxGraphModel dx="1109" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1552" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="5waYa05MdNRa4GO8auUW-0"/>
                 <mxCell id="5waYa05MdNRa4GO8auUW-1" style="" parent="5waYa05MdNRa4GO8auUW-0"/>
@@ -738,13 +738,16 @@
                         <mxPoint x="-24" y="-3" as="offset"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="Rt2LPgPr8ernMINcLx2Q-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="5waYa05MdNRa4GO8auUW-1">
+                    <mxGeometry x="970" y="47.75" width="47.5" height="47.5" as="geometry"/>
+                </mxCell>
                 <mxCell id="uWSUC-EtuYWxjQPfYkuc-0" value="名称未設定レイヤ" parent="5waYa05MdNRa4GO8auUW-0"/>
                 <mxCell id="uWSUC-EtuYWxjQPfYkuc-1" value="名称未設定レイヤ" parent="5waYa05MdNRa4GO8auUW-0"/>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="W6pb3q564Ygwx2bgVUcs" name="S03-03 商品情報詳細">
-        <mxGraphModel dx="1623" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1940" dy="1075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="C3HflQgmAhdzuo5FPhKC-0"/>
                 <mxCell id="C3HflQgmAhdzuo5FPhKC-1" parent="C3HflQgmAhdzuo5FPhKC-0"/>
@@ -1011,11 +1014,14 @@
                 <mxCell id="FOp6DPOOL3Ny1IoZy-ec-161" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.navigation.scrollBar;strokeColor=#999999;barPos=0;fillColor2=#99ddff;strokeColor2=none;direction=north;" parent="C3HflQgmAhdzuo5FPhKC-1" vertex="1">
                     <mxGeometry x="920" y="120" width="20" height="770" as="geometry"/>
                 </mxCell>
+                <mxCell id="tcYtALcszmTWf5b77dOn-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="C3HflQgmAhdzuo5FPhKC-1">
+                    <mxGeometry x="30" y="55" width="47.5" height="47.5" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="7nTcUT3nNSXF52jksGTK" name="S03-04 商品情報編集">
-        <mxGraphModel dx="2218" dy="1783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1603" dy="1599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="uz75ES0rGtJtOTAgmC8l-0"/>
                 <mxCell id="uz75ES0rGtJtOTAgmC8l-1" style="" parent="uz75ES0rGtJtOTAgmC8l-0"/>
@@ -1550,8 +1556,11 @@
                         <mxPoint x="-24" y="-3" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="4Zca7228okxMN1RmrTmT-0" value="型番" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=20;" vertex="1" parent="uz75ES0rGtJtOTAgmC8l-1">
+                <mxCell id="4Zca7228okxMN1RmrTmT-0" value="型番" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=20;" parent="uz75ES0rGtJtOTAgmC8l-1" vertex="1">
                     <mxGeometry x="1360" y="172" width="420" height="29" as="geometry"/>
+                </mxCell>
+                <mxCell id="B6rubmXd87eqN_53OW8e-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="uz75ES0rGtJtOTAgmC8l-1">
+                    <mxGeometry x="970" y="47.75" width="47.5" height="47.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="d1XyCpcThGXRjQN6B1KP-0" value="名称未設定レイヤ" parent="uz75ES0rGtJtOTAgmC8l-0"/>
                 <mxCell id="d1XyCpcThGXRjQN6B1KP-1" value="名称未設定レイヤ" parent="uz75ES0rGtJtOTAgmC8l-0"/>

@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-10T02:36:44.797Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.0 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="WATulaAyY0YxOWUSeiOo" version="15.7.1" type="embed" pages="4">
+<mxfile host="65bd71144e" modified="2021-11-11T05:59:12.669Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="HRkk768l45rDW2gAMP9X" version="15.7.3" type="embed" pages="4">
     <diagram id="V50MMmBf-fGds3Pl8mPp" name="S07-01 セット商品一覧">
-        <mxGraphModel dx="536" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="776" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" style="" parent="0"/>
@@ -115,7 +115,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="2Kg3kUkvsL5vaza5gHSN" name="S07-02 セット商品新規登録">
-        <mxGraphModel dx="536" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="913" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="qx6JEb7jcFffDPEy_rV1-0"/>
                 <mxCell id="qx6JEb7jcFffDPEy_rV1-1" style="" parent="qx6JEb7jcFffDPEy_rV1-0"/>
@@ -247,6 +247,9 @@
                         <mxRectangle width="72" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="Ox4fYSXzbJToOGc6uDPX-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="qx6JEb7jcFffDPEy_rV1-1">
+                    <mxGeometry x="40" y="40" width="47.5" height="47.5" as="geometry"/>
+                </mxCell>
                 <mxCell id="NPkj-ZwMBPe3MQKiZd1j-0" value="背景(旧)" style="locked=1;" parent="qx6JEb7jcFffDPEy_rV1-0"/>
                 <mxCell id="a4SA_uhSGRJQ-TSPSmY3-0" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="NPkj-ZwMBPe3MQKiZd1j-0" vertex="1">
                     <mxGeometry x="42" y="475" width="600" height="360" as="geometry"/>
@@ -335,7 +338,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="TYo6GsyhUv01ZijpFa_X" name="S07-03 セット商品詳細">
-        <mxGraphModel dx="536" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="776" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="FAcWNw91510_4n9ptFaX-0"/>
                 <mxCell id="FAcWNw91510_4n9ptFaX-1" style="" parent="FAcWNw91510_4n9ptFaX-0"/>
@@ -461,13 +464,16 @@
                 <mxCell id="x0sE5ICCdaCRkhuNuR0C-31" value="&lt;span style=&quot;font-size: 19px&quot;&gt;削除&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" parent="FAcWNw91510_4n9ptFaX-1" vertex="1">
                     <mxGeometry x="369" y="390" width="130" height="34" as="geometry"/>
                 </mxCell>
+                <mxCell id="42kfKswVlwDohOF5pFsx-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="FAcWNw91510_4n9ptFaX-1">
+                    <mxGeometry x="15" y="36.5" width="47.5" height="47.5" as="geometry"/>
+                </mxCell>
                 <mxCell id="x0sE5ICCdaCRkhuNuR0C-0" value="名称未設定レイヤ" parent="FAcWNw91510_4n9ptFaX-0"/>
                 <mxCell id="x0sE5ICCdaCRkhuNuR0C-1" value="名称未設定レイヤ" parent="FAcWNw91510_4n9ptFaX-0"/>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="qe5yLTuS4tZD8fJ8QvLe" name="S07-04 セット商品編集">
-        <mxGraphModel dx="536" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="776" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="Q7d7jdvgqoW5-ucXWQ3b-0"/>
                 <mxCell id="Q7d7jdvgqoW5-ucXWQ3b-1" style="locked=1;" parent="Q7d7jdvgqoW5-ucXWQ3b-0"/>
@@ -640,6 +646,9 @@
                 </mxCell>
                 <mxCell id="Sq48pKflPVlT8sKMxIAO-12" value="&lt;span style=&quot;font-size: 19px&quot;&gt;削除&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GXk3dVSevLYIWPS17cjd-0" vertex="1">
                     <mxGeometry x="340" y="750" width="150" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="jre3jMl1aCGiimKgdzbH-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="GXk3dVSevLYIWPS17cjd-0">
+                    <mxGeometry x="40" y="40" width="47.5" height="47.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="Q0vID0pSFLZ21DJ6V8ol-0" value="名称未設定レイヤ" parent="Q7d7jdvgqoW5-ucXWQ3b-0"/>
             </root>
