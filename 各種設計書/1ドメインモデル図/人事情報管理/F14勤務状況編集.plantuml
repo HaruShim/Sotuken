@@ -5,7 +5,7 @@
 
 
 
-@startuml images/人事情報管理/勤務状況編集
+@startuml ../images/人事情報管理/勤務状況編集
 ' ヘッダー
 header 営業情報管理システム
 ' タイトル
