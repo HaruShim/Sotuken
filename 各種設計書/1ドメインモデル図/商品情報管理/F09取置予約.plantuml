@@ -1,4 +1,4 @@
-@startuml images/商品情報モデル管理/取置商品モデル
+@startuml ../images/商品情報モデル管理/取置商品モデル
 ' ヘッダー
 header 営業情報管理システム
 ' タイトル
