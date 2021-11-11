@@ -1,2 +1,2 @@
-earning_id,model_number,store_id,employee_id,selling_price,gross_profit,gross_profit_margin
-0,0,0,ABC123DEF4567,47800,19120,40
+earning_id,model_number,store_id,employee_id,selling_price,gross_profit,gross_profit_margin,created_at ,updated_at 
+0,541234157,0,23184921830,47800,19120,40,2021/11/10 12:14,2021/11/10 12:14
