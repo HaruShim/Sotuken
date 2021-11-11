@@ -1,1 +1,7 @@
-set_intermediate_id,item_code,set_item_id,created_at,updated_at
+set_intermediate_id,item_code,set_item_id
+1,541234157,1
+2,541234158,2
+3,541234159,1
+4,541234160,2
+5,541234161,2
+6,541234158,1
