@@ -1,2 +1,2 @@
-item_code,store_id,model_number,manufacturer_name,stock_location,category,item-status,purchase_price,remarks,created_at,updated_at
-541234157,0,X1 Carbon,Lenovo,souko,0,0,35000,‚ ‚è,2021/11/10 12:14,2021/11/10 12:14
+item_code,store_id,model_number,category,manufacturer_name,item-status,purchase_price,item_image,remarks,created_at,updated_at
+541234157,0,X1 Carbon,0,Lenovo,0,35000,,‚ ‚è,2021/11/10 12:14,2021/11/10 12:14
