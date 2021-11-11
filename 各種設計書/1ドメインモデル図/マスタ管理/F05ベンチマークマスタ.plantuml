@@ -37,7 +37,7 @@ package "ベンチマークマスタ" {
     詳細 --o CPUベンチマークモデル
 
     'ドメインクラスの属性
-    GPUベンチマークモデル : GPUベンチマークID[FK]
+    GPUベンチマークモデル : GPUベンチマークID
     GPUベンチマークモデル : GPU名称[型番]
     GPUベンチマークモデル : 3DMark time spy graphics
     GPUベンチマークモデル : TDP
@@ -47,7 +47,7 @@ package "ベンチマークマスタ" {
     GPUベンチマークモデル : 作成日時
     GPUベンチマークモデル : 最終更新日時
 
-    CPUベンチマークモデル : CPUベンチマークID[FK]
+    CPUベンチマークモデル : CPUベンチマークID
     CPUベンチマークモデル : CPU名称[型番]
     CPUベンチマークモデル : PassMark
     CPUベンチマークモデル : コア
