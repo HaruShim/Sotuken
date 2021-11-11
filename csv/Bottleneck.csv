@@ -1,2 +1,2 @@
-bottleneck_id,cpu_name,gpu_name,balance,wqhd,4k,game_appropriate,game_delivery,video_editing,encode,created_at,updated_at
+bottleneck_id,cpu_name,gpu_name,balance,wqhd,four_k,game_appropriate,game_delivery,video_editing,encode,created_at,updated_at
 0,RTX 3090,Corei9 11900K,4,4,4,S+,0,4,4,2021/11/10 0:00,2021/11/10 0:00
