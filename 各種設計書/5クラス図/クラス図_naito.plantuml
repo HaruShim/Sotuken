@@ -1,19 +1,18 @@
 @startuml 仮作成
 package "アカウント"{
     class "（ログイン）"
-    
 }
 
 
-    class "M01_EmployeeInfo(従業員情報モデル)" as 従業員情報モデル
-    class "M02_StoreInfo(店舗情報モデル)" as 店舗情報モデル
-    class "M03_ItemInfo(商品情報モデル)" as 商品情報モデル
-    class "M04_ItemSpecification(商品スペック)" as 商品スペック
-    class "M06_EarningInfo(売上情報モデル)" as 売上情報モデル
-    class "M07_CpuBench(CPUベンチマークモデル)" as CPUベンチマークモデル
-    class "M08_GpuBench(GPUベンチマークモデル)" as GPUベンチマークモデル
-    class "M09_Bottleneck(ボトルネックモデル)" as ボトルネックモデル
-    class "M10_Reserve(取置商品モデル)" as 取置商品モデル
-    class "M11_SetItem(セット商品モデル)" as セット商品モデル
-    class "M12_SetIntermediate(セット商品中間モデル)" as セット商品中間モデル
+    class "M01_EmployeeInfo\n(従業員情報モデル)" as 従業員情報モデル
+    class "M02_StoreInfo\n(店舗情報モデル)" as 店舗情報モデル
+    class "M03_ItemInfo\n(商品情報モデル)" as 商品情報モデル
+    class "M04_ItemSpecification\n(商品スペック)" as 商品スペック
+    class "M06_EarningInfo\n(売上情報モデル)" as 売上情報モデル
+    class "M07_CpuBench\n(CPUベンチマークモデル)" as CPUベンチマークモデル
+    class "M08_GpuBench\n(GPUベンチマークモデル)" as GPUベンチマークモデル
+    class "M09_Bottleneck\n(ボトルネックモデル)" as ボトルネックモデル
+    class "M10_Reserve\n(取置商品モデル)" as 取置商品モデル
+    class "M11_SetItem\n(セット商品モデル)" as セット商品モデル
+    class "M12_SetIntermediate\n(セット商品中間モデル)" as セット商品中間モデル
 @enduml
