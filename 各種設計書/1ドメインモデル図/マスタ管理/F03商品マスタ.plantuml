@@ -22,12 +22,7 @@ package "商品マスタ" {
     class "参照" #98fb98
     class "詳細" #98fb98
     ' メインのモデルは赤
-    ' class "商品情報モデル" #F5A9BC
-    ' package "ベンチマークマスタ"{
-    '     class "GPUベンチマークモデル"
-    '     class "CPUベンチマークモデル"
-    ' }
-    class "商品情報モデル"
+    class "商品情報モデル" #F5A9BC
     class "売上情報モデル" 
     class "セット商品モデル"
     class "取置商品モデル"
