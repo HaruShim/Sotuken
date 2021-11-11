@@ -22,7 +22,6 @@ package "ベンチマークマスタ" {
     class "参照" #98fb98
     class "GPUベンチマークモデル" #F5A9BC 
     class "CPUベンチマークモデル" #F5A9BC 
-    class "商品情報モデル"
     }
 
     'モデル同士の関係
@@ -36,11 +35,9 @@ package "ベンチマークマスタ" {
     参照 --o CPUベンチマークモデル
     編集 --o CPUベンチマークモデル
     詳細 --o CPUベンチマークモデル
-    GPUベンチマークモデル o-- 商品情報モデル
-    CPUベンチマークモデル o-- 商品情報モデル
 
     'ドメインクラスの属性
-    GPUベンチマークモデル : GPUベンチマークID
+    GPUベンチマークモデル : GPUベンチマークID[FK]
     GPUベンチマークモデル : GPU名称[型番]
     GPUベンチマークモデル : 3DMark time spy graphics
     GPUベンチマークモデル : TDP
@@ -50,7 +47,7 @@ package "ベンチマークマスタ" {
     GPUベンチマークモデル : 作成日時
     GPUベンチマークモデル : 最終更新日時
 
-    CPUベンチマークモデル : CPUベンチマークID
+    CPUベンチマークモデル : CPUベンチマークID[FK]
     CPUベンチマークモデル : CPU名称[型番]
     CPUベンチマークモデル : PassMark
     CPUベンチマークモデル : コア
