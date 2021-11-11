@@ -1,1 +1,3 @@
-set_item_id,item_code,store_id,set_name,quanity
+set_item_id,store_id,set_name,created_at,updated_at
+1,0,セットA,2021/11/13 12:14,2021/11/13 12:14
+2,0,セットB,2021/11/14 12:14,2021/11/14 12:14
