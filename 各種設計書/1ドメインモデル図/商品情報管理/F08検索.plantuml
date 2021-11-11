@@ -26,13 +26,13 @@ package "検索"{
     class "店舗情報モデル"
     
 }
-    ' package "マスタ管理"{
-    '     ' package ベンチマークマスタ{
-    '     '     ' class "CPUベンチマークモデル"
-    '     '     ' class "GPUベンチマークモデル"
-    '     ' } 
-    '     ' class "ボトルネックモデル"
-    ' }
+    package "マスタ管理"{
+        package ベンチマークマスタ{
+            ' class "CPUベンチマークモデル"
+            ' class "GPUベンチマークモデル"
+        } 
+        class "ボトルネックモデル" {}
+    }
     ' class "" #F5A9BC
     ' class "" #ffd700
 
