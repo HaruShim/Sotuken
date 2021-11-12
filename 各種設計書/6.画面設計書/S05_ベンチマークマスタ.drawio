@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-11T05:53:12.706Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="e929FUnziaANUCMBU7S5" version="15.7.3" type="embed" pages="3">
+<mxfile host="65bd71144e" modified="2021-11-12T01:53:18.803Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="9JBYNAs2VU8lhDfWdxs7" version="15.7.3" type="embed" pages="3">
     <diagram id="fxeHr7OyM0ABJta6uCd7" name="S05-01 ベンチマーク一覧">
-        <mxGraphModel dx="1313" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1791" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -1562,7 +1562,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="nz1pjAgawY7qsmiINmbd" name="S05-02 ベンチマーク新規登録">
-        <mxGraphModel dx="1109" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="974" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="Cp8SlI8ONcyd5ualf1gh-0"/>
                 <mxCell id="Cp8SlI8ONcyd5ualf1gh-1" value="背景(CPU)" style="" parent="Cp8SlI8ONcyd5ualf1gh-0"/>
@@ -1878,10 +1878,10 @@
                 <mxCell id="_7dZavo3Z1UDMoz7ftaW-45" value="" style="rounded=1;arcSize=9;fillColor=#F7F8F9;align=left;spacingLeft=5;strokeColor=#DEE1E6;html=1;strokeWidth=2;fontSize=12" parent="Cp8SlI8ONcyd5ualf1gh-1" vertex="1">
                     <mxGeometry x="1080" y="650" width="160" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="tHHjOFzPBqer5QnsPxSI-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="Cp8SlI8ONcyd5ualf1gh-1">
+                <mxCell id="tHHjOFzPBqer5QnsPxSI-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" parent="Cp8SlI8ONcyd5ualf1gh-1" vertex="1">
                     <mxGeometry x="680" y="40" width="47.5" height="47.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="tHHjOFzPBqer5QnsPxSI-1" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="Cp8SlI8ONcyd5ualf1gh-1">
+                <mxCell id="tHHjOFzPBqer5QnsPxSI-1" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" parent="Cp8SlI8ONcyd5ualf1gh-1" vertex="1">
                     <mxGeometry x="680" y="440" width="47.5" height="47.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="2fWqN8Z2qnStaaif6Qmj-0" value="背景(GPU)" parent="Cp8SlI8ONcyd5ualf1gh-0"/>
@@ -1929,7 +1929,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="S05-03 ベンチマーク編集" id="5QFRjP-OvB2Odn7n2sEQ">
-        <mxGraphModel dx="776" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="974" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="zJ001diSXO1KbtcmnB0D-0"/>
                 <mxCell id="zJ001diSXO1KbtcmnB0D-1" value="背景(CPU)" style="" parent="zJ001diSXO1KbtcmnB0D-0"/>
@@ -2296,10 +2296,10 @@
                 <mxCell id="8-9UJimfyy-Muz_BlbHP-65" value="&lt;span style=&quot;font-size: 19px&quot;&gt;削除&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" parent="zJ001diSXO1KbtcmnB0D-1" vertex="1">
                     <mxGeometry x="987.25" y="750" width="130" height="34" as="geometry"/>
                 </mxCell>
-                <mxCell id="MzI_sPo_rgxCPBSFUsQL-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="zJ001diSXO1KbtcmnB0D-1">
+                <mxCell id="MzI_sPo_rgxCPBSFUsQL-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" parent="zJ001diSXO1KbtcmnB0D-1" vertex="1">
                     <mxGeometry x="680" y="40" width="47.5" height="47.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="MzI_sPo_rgxCPBSFUsQL-1" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="zJ001diSXO1KbtcmnB0D-1">
+                <mxCell id="MzI_sPo_rgxCPBSFUsQL-1" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" parent="zJ001diSXO1KbtcmnB0D-1" vertex="1">
                     <mxGeometry x="680" y="440" width="47.5" height="47.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="RzHcROCK9rWjgWf3flJ6-0" value="背景(GPU)" parent="zJ001diSXO1KbtcmnB0D-0"/>
