@@ -19,7 +19,7 @@ control "詳細\nコントローラ" as c2
 control "編集\nコントローラ" as c3
 
 ' entity "" as e
-entity "ベンチマーク情報" as e1
+entity "ベンチマークモデル" as e1
 
 a1 -> b1 : 「ベンチマークマスタ」を押下する
 activate b1

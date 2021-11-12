@@ -21,7 +21,8 @@ control "従業員情報一覧\nコントローラ" as c1
 control "詳細\nコントローラ" as c2
 
 ' entity "" as
-entity "従業員情報" as e1
+entity "従業員情報モデル" as e1
+entity "店舗情報モデル" as e2
 
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス

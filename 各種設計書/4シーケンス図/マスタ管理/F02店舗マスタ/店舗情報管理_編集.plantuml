@@ -23,7 +23,7 @@ control "詳細\nコントローラ" as c2
 control "編集\nコントローラ" as c3
 
 ' entity "" as
-entity "店舗情報" as e1
+entity "店舗情報モデル" as e1
 
 
 ' ログイン済みホーム画面から一覧表示までのシーケンス

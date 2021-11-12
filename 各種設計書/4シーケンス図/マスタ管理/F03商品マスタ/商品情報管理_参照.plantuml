@@ -17,7 +17,8 @@ control "商品情報一覧\nコントローラ" as c1
 control "詳細\nコントローラ" as c2
 
 ' entity "" as e
-entity "商品情報" as e1
+entity "商品情報モデル" as e1
+entity "店舗情報モデル" as e2
 
 a1 -> b1 : 「商品情報マスタ」を押下する
 activate b1

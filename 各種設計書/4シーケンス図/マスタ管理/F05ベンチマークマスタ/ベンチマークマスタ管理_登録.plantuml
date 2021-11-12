@@ -17,7 +17,7 @@ control "ベンチマーク情報\n一覧コントローラ" as c1
 control "新規登録\nコントローラ" as c2
 
 ' entity "" as e
-entity "ベンチマーク情報" as e1
+entity "ベンチマークモデル" as e1
 
 a1 -> b1 : 「ベンチマークマスタ」を押下する
 activate b1
