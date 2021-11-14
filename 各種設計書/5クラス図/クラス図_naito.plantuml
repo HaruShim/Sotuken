@@ -1,18 +1,67 @@
 @startuml 仮作成
-package "アカウント"{
-    class "（ログイン）"
+' package "アカウント"{
+'     class "（ログイン）"
+' }
+
+class "View"
+package model <<Rectangle>> {
+    ' Django でモデルがなにを継承しているのかを検索する。
+    class "EmployeeInfo\n(従業員情報モデル)" as 従業員情報モデル
+    class "StoreInfo\n(店舗情報モデル)" as 店舗情報モデル
+    class "ItemInfo\n(商品情報モデル)" as 商品情報モデル
+    class "ItemSpecification\n(商品スペック)" as 商品スペック
+    class "EarningInfo\n(売上情報モデル)" as 売上情報モデル
+    class "CpuBench\n(CPUベンチマークモデル)" as CPUベンチマークモデル
+    class "GpuBench\n(GPUベンチマークモデル)" as GPUベンチマークモデル
+    class "Bottleneck\n(ボトルネックモデル)" as ボトルネックモデル
+    class "Reserve\n(取置商品モデル)" as 取置商品モデル
+    class "SetItem\n(セット商品モデル)" as セット商品モデル
+    class "SetIntermediate\n(セット商品中間モデル)" as セット商品中間モデル
 }
+package "django.db.models"{
+    class Model
+}
+class Meta
 
 
-    class "M01_EmployeeInfo\n(従業員情報モデル)" as 従業員情報モデル
-    class "M02_StoreInfo\n(店舗情報モデル)" as 店舗情報モデル
-    class "M03_ItemInfo\n(商品情報モデル)" as 商品情報モデル
-    class "M04_ItemSpecification\n(商品スペック)" as 商品スペック
-    class "M06_EarningInfo\n(売上情報モデル)" as 売上情報モデル
-    class "M07_CpuBench\n(CPUベンチマークモデル)" as CPUベンチマークモデル
-    class "M08_GpuBench\n(GPUベンチマークモデル)" as GPUベンチマークモデル
-    class "M09_Bottleneck\n(ボトルネックモデル)" as ボトルネックモデル
-    class "M10_Reserve\n(取置商品モデル)" as 取置商品モデル
-    class "M11_SetItem\n(セット商品モデル)" as セット商品モデル
-    class "M12_SetIntermediate\n(セット商品中間モデル)" as セット商品中間モデル
+' サンプル属性
+Meta : verbose_name_plural
+Meta : __str__()
+' サンプル属性
+RedirectView : url
+RedirectView : pattern_name
+RedirectView : query_string
+RedirectView : permanent
+RedirectView : head()
+RedirectView : options()
+RedirectView : put()
+RedirectView : get()
+RedirectView : post()
+RedirectView : delete()
+
+' モデル属性
+従業員情報モデル : -employee_id : CHAR[13]
+従業員情報モデル : -store_id : SMALLINT[3]
+従業員情報モデル : -employment_status : CHAR[5]
+従業員情報モデル : -name : CHAR[30]
+従業員情報モデル : -ruby_name : CHAR[30]
+従業員情報モデル : -tel_num : CHAR[13]
+従業員情報モデル : -gender : SMALLINT[3]
+従業員情報モデル : -birthday : TIMESTAMP
+従業員情報モデル : -invalid_flg : SMALLINT[1]
+従業員情報モデル : -created_at : TIMESTAMP
+従業員情報モデル : -lastlogin_at : TIMESTAMP
+従業員情報モデル : -updated_at : TIMESTAMP
+
+
+
+
+
+View <|-- RedirectView
+Model <|-- model
+model -- Meta
+
+
+
+
 @enduml
