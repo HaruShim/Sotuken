@@ -1,21 +1,114 @@
-@startuml 仮作成
+' ToDo
+'   とりあえずモデルの要素を書いてありますが、機能の中にモデルがないことはないはずなので
+'   わかるところは入力してください、またプロパティ、メソッドは入力後回しで大丈夫です。
+'   
+' 
+
+@startuml class_diagrams
+' ヘッダー
+header 営業情報管理システム
+' タイトル
+title クラス図
+
+    ' 機能名 アカウント
+    ' 機能ID F00
 package "アカウント"{
-    class "（ログイン）"
+    class "djangoallauth\n(ログイン)" as djangoallauth{
+    }
 }
 
+package "マスタ管理" {
 
-    class "EmployeeInfo\n(従業員情報モデル)" as 従業員情報モデル
-    class "StoreInfo\n(店舗情報モデル)" as 店舗情報モデル
-    class "ItemInfo\n(商品情報モデル)" as 商品情報モデル
-    package 商品情報モデル <<Database>> {
-        class "ItemInfo\n(商品情報モデル)" as 商品情報モデル2
+    ' 機能名 従業員マスタ
+    ' 機能ID F01
+    package "従業員マスタ" as F01{
+        class "EmployeeInfo\n(従業員情報モデル)" as 従業員情報モデル{}
     }
+
+    ' 機能名 店舗マスタ
+    ' 機能ID F02
+    package "店舗マスタ" as F02{
+        class "StoreInfo\n(店舗情報モデル)" as 店舗情報モデル
+    }
+
+    ' 機能名 商品マスタ
+    ' 機能ID F03
+    package "商品マスタ" as F03{
+        package 商品情報モデル <<Database>> {
+            class "ItemInfo" as 商品情報モデル
+        }
     class "ItemSpecification\n(商品スペック)" as 商品スペック
-    class "EarningInfo\n(売上情報モデル)" as 売上情報モデル
-    class "CpuBench\n(CPUベンチマークモデル)" as CPUベンチマークモデル
-    class "GpuBench\n(GPUベンチマークモデル)" as GPUベンチマークモデル
-    class "Bottleneck\n(ボトルネックモデル)" as ボトルネックモデル
-    class "Reserve\n(取置商品モデル)" as 取置商品モデル
-    class "SetItem\n(セット商品モデル)" as セット商品モデル
-    class "SetIntermediate\n(セット商品中間モデル)" as セット商品中間モデル
+    }
+    ' class "ItemInfo\n(商品情報モデル)" as 商品情報モデル
+
+    ' 機能名 売上マスタ
+    ' 機能ID F04
+    package "売上マスタ" as F04{
+        class "EarningInfo\n(売上情報モデル)" as 売上情報モデル
+    }
+
+    ' 機能名 ベンチマークマスタ
+    ' 機能ID F05
+    package "ベンチマークマスタ" as F05{
+        class "CpuBench\n(CPUベンチマークモデル)" as CPUベンチマークモデル
+        class "GpuBench\n(GPUベンチマークモデル)" as GPUベンチマークモデル
+    } 
+    
+    ' 機能名 ボトルネックマスタ
+    ' 機能ID F06
+    package "ボトルネックマスタ" as F06{
+        class "Bottleneck\n(ボトルネックモデル)" as ボトルネックモデル
+    }
+    
+    
+    
+}
+
+package "商品情報管理" {
+
+    ' 機能名 在庫
+    ' 機能ID F07
+    package "在庫" {
+        class "SetItem\n(セット商品モデル)" as セット商品モデル
+        class "SetIntermediate\n(セット商品中間モデル)" as セット商品中間モデル
+    }
+    
+    ' 機能名 検索
+    ' 機能ID F08
+    package "検索" {}
+    
+    ' 機能名 取置予約
+    ' 機能ID F09
+    package "取置予約" {
+        class "Reserve\n(取置商品モデル)" as 取置商品モデル
+    }
+    
+    ' 機能名 見積
+    ' 機能ID F10
+    package "見積" {}
+    
+    ' 機能名 売上
+    ' 機能ID F11
+    package "売上" {}
+}
+
+package "人事情報管理" {
+
+    ' 機能名 従業員参照
+    ' 機能ID F12
+    package "従業員参照" {}
+    
+    ' 機能名 店舗参照
+    ' 機能ID F13
+    package "店舗参照" {}
+    
+    ' 機能名 勤務状況編集
+    ' 機能ID F14
+    package "勤務状況編集" {}
+}
+
+アカウント -[hidden]do- マスタ管理
+マスタ管理 -[hidden]do- 商品情報管理
+商品情報管理 -[hidden]do- 人事情報管理
+
 @enduml
