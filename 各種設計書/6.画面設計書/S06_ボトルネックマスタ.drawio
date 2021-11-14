@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-11T05:56:23.112Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="x9iP-NYrhmFTIK4ZBFSN" version="15.7.3" type="embed" pages="3">
+<mxfile host="65bd71144e" modified="2021-11-12T02:45:38.816Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="e_LYS5ItgrZZmlmQgCKU" version="15.7.3" type="embed" pages="3">
     <diagram id="AcfQv27ruQDgGUEOMnrh" name="S06-01ボトルネック一覧">
-        <mxGraphModel dx="1395" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1109" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -526,7 +526,7 @@
                 <mxCell id="kNGcDv0Nl-ACztjbNGzc-122" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontColor=default;" parent="1" vertex="1">
                     <mxGeometry x="1100" y="353" width="720" height="427" as="geometry"/>
                 </mxCell>
-                <mxCell id="kNGcDv0Nl-ACztjbNGzc-123" value="ボトルネック検索" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=20;" parent="1" vertex="1">
+                <mxCell id="kNGcDv0Nl-ACztjbNGzc-123" value="ボトルネック一覧" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=20;" parent="1" vertex="1">
                     <mxGeometry x="1347.5" y="363" width="225" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="kNGcDv0Nl-ACztjbNGzc-124" value="CPU" style="rounded=1;arcSize=9;fillColor=#ffffff;strokeColor=#4C9AFF;html=1;strokeWidth=2;spacingLeft=30;fontColor=#808080;align=left" parent="1" vertex="1">
@@ -1016,14 +1016,11 @@
                 <mxCell id="t0h9rC67l5lAUXatwZtI-130" value="新規登録" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
                     <mxGeometry x="1709.41" y="735.04" width="90" height="34" as="geometry"/>
                 </mxCell>
-                <mxCell id="123" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="1">
-                    <mxGeometry x="1100" y="353" width="47.5" height="47.5" as="geometry"/>
-                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="LU1uJSENxtgn-csx_99E" name="S06-02ボトルネック新規登録">
-        <mxGraphModel dx="359" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="-51" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="aIwGOZAPpcHZK0lGAuw6-0"/>
                 <mxCell id="aIwGOZAPpcHZK0lGAuw6-1" parent="aIwGOZAPpcHZK0lGAuw6-0"/>
@@ -1221,14 +1218,14 @@
                         <mxPoint x="-24" y="-3" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="tFKZ3TPzXS5YNcK3o98n-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="aIwGOZAPpcHZK0lGAuw6-1">
+                <mxCell id="tFKZ3TPzXS5YNcK3o98n-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" parent="aIwGOZAPpcHZK0lGAuw6-1" vertex="1">
                     <mxGeometry x="1100" y="353" width="47.5" height="47.5" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="VbuBDjv671F5p_nlOdsC" name="S06-03ボトルネック編集">
-        <mxGraphModel dx="359" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="-51" dy="430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="At8U5PF5Pt4MWLP7UrOK-0"/>
                 <mxCell id="At8U5PF5Pt4MWLP7UrOK-1" parent="At8U5PF5Pt4MWLP7UrOK-0"/>
@@ -1429,7 +1426,7 @@
                 <mxCell id="wgYgvYQ15GblxiFiAw72-48" value="削除" style="rounded=1;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#d5e8d4;strokeColor=#82b366;" parent="At8U5PF5Pt4MWLP7UrOK-1" vertex="1">
                     <mxGeometry x="1467.5" y="700" width="90" height="34" as="geometry"/>
                 </mxCell>
-                <mxCell id="eaQ58DSJg80Vz323Bxxj-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="At8U5PF5Pt4MWLP7UrOK-1">
+                <mxCell id="eaQ58DSJg80Vz323Bxxj-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" parent="At8U5PF5Pt4MWLP7UrOK-1" vertex="1">
                     <mxGeometry x="1100" y="353" width="47.5" height="47.5" as="geometry"/>
                 </mxCell>
             </root>

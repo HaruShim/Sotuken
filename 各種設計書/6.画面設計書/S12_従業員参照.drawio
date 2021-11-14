@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2021-11-08T05:41:37.983Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.0 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" etag="JFyS5OK_UhjAwLu8Oy1N" version="15.7.0" type="embed" pages="2">
+<mxfile host="65bd71144e" modified="2021-11-12T02:53:09.488Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="urGpP9in4iuZE51LaTfG" version="15.7.3" type="embed" pages="2">
     <diagram id="owvQPqy146tOp0aBp-Dt" name="S12-01 従業員情報一覧">
         <mxGraphModel dx="1603" dy="1599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -226,6 +226,9 @@
                     <mxGeometry x="220" width="440" height="65" as="geometry">
                         <mxRectangle width="440" height="65" as="alternateBounds"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="khqJ08S3dOev9QMVAe9j-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ui-essentials-14/32/UI_Essentials_button_circle_round_arrow_previous-128.png" vertex="1" parent="AkZxitWeGRhTtYOAeKr6-1">
+                    <mxGeometry x="1110" y="2.5" width="40" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
