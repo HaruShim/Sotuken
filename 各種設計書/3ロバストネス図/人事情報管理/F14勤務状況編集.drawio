@@ -33,7 +33,7 @@
                         <mxPoint x="399.9999999999993" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="7" value="勤務店舗状況" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="TD7p9iA7MllBgANEwws7-1" vertex="1">
+                <mxCell id="7" value="従業員情報&lt;br&gt;マスタ" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="TD7p9iA7MllBgANEwws7-1" vertex="1">
                     <mxGeometry x="640" y="200" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" parent="TD7p9iA7MllBgANEwws7-1" edge="1">
