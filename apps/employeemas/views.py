@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.views import generic
 
-# Create your views here.
+class EmployeeView(generic.TemplateView):
+    template_name = "sample_master.html"
+
