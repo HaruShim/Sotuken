@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="4">
     <diagram id="zRWkxzNCmzS7zqm-mONb" name="*商品情報管理_登録">
-        <mxGraphModel dx="1214" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1428" dy="459" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -51,7 +51,7 @@
                         <mxPoint x="110" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="34" value="「商品情報マスタ」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="13" vertex="1" connectable="0">
+                <mxCell id="34" value="「商品マスタ」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="13" vertex="1" connectable="0">
                     <mxGeometry x="-0.3542" y="1" relative="1" as="geometry">
                         <mxPoint x="26" y="-38" as="offset"/>
                     </mxGeometry>
@@ -122,7 +122,7 @@
                         <mxPoint x="474.71" y="580" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="26" value="商品情報管理_登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="1" vertex="1">
+                <mxCell id="26" value="商品マスタ_登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="1" vertex="1">
                     <mxGeometry x="-120" y="80" width="189" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="29" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="1" edge="1">
@@ -167,7 +167,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="oxx0aPTfE0HgOdgYFnXd" name="*商品情報管理_参照">
-        <mxGraphModel dx="1214" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1428" dy="459" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="6h30WmC1kWDwmjAZNorG-0"/>
                 <mxCell id="6h30WmC1kWDwmjAZNorG-1" parent="6h30WmC1kWDwmjAZNorG-0"/>
@@ -210,7 +210,7 @@
                         <mxPoint x="430" y="330" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2tyA72wgHynPA6pTtvVA-0" value="商品情報管理_参照" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="6h30WmC1kWDwmjAZNorG-1" vertex="1">
+                <mxCell id="2tyA72wgHynPA6pTtvVA-0" value="商品マスタ_参照" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="6h30WmC1kWDwmjAZNorG-1" vertex="1">
                     <mxGeometry x="-120" y="80" width="189" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="2eUk3a0ytb1yrxvzriBP-0" value="管理者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="6h30WmC1kWDwmjAZNorG-1" vertex="1">
@@ -222,7 +222,7 @@
                         <mxPoint x="110" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2eUk3a0ytb1yrxvzriBP-2" value="「商品情報マスタ」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="2eUk3a0ytb1yrxvzriBP-1" vertex="1" connectable="0">
+                <mxCell id="2eUk3a0ytb1yrxvzriBP-2" value="「商品マスタ」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="2eUk3a0ytb1yrxvzriBP-1" vertex="1" connectable="0">
                     <mxGeometry x="-0.3542" y="1" relative="1" as="geometry">
                         <mxPoint x="26" y="-38" as="offset"/>
                     </mxGeometry>
@@ -275,7 +275,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="uA1Vm-JMy-6dObAZWppL" name="*商品情報管理_編集">
-        <mxGraphModel dx="1214" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1428" dy="459" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="LbgHs6ZPHBYUlUjT8pi--0"/>
                 <mxCell id="LbgHs6ZPHBYUlUjT8pi--1" parent="LbgHs6ZPHBYUlUjT8pi--0"/>
@@ -367,7 +367,7 @@
                         <mxPoint x="240" y="470" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="8IdQaAR0gUEuD1F1gpQq-0" value="商品情報管理_編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="LbgHs6ZPHBYUlUjT8pi--1" vertex="1">
+                <mxCell id="8IdQaAR0gUEuD1F1gpQq-0" value="商品マスタ_編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="LbgHs6ZPHBYUlUjT8pi--1" vertex="1">
                     <mxGeometry x="-120" y="80" width="189" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="evplZlJPhuFjfd-mW5nh-0" value="管理者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="LbgHs6ZPHBYUlUjT8pi--1" vertex="1">
@@ -379,7 +379,7 @@
                         <mxPoint x="110" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="evplZlJPhuFjfd-mW5nh-2" value="「商品情報マスタ」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="evplZlJPhuFjfd-mW5nh-1" vertex="1" connectable="0">
+                <mxCell id="evplZlJPhuFjfd-mW5nh-2" value="「商品マスタ」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="evplZlJPhuFjfd-mW5nh-1" vertex="1" connectable="0">
                     <mxGeometry x="-0.3542" y="1" relative="1" as="geometry">
                         <mxPoint x="26" y="-38" as="offset"/>
                     </mxGeometry>
@@ -457,7 +457,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="Bju-Oied4lOsdnA-EONm" name="*商品情報管理_削除">
-        <mxGraphModel dx="1214" dy="339" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1428" dy="459" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="XnX9uZomtcTrIy8l5btS-0"/>
                 <mxCell id="XnX9uZomtcTrIy8l5btS-1" parent="XnX9uZomtcTrIy8l5btS-0"/>
@@ -520,7 +520,7 @@
                         <mxPoint x="240.00000000000045" y="490" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="HKyX9XFVA0ahOkuL98Ae-0" value="商品情報管理_削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="XnX9uZomtcTrIy8l5btS-1" vertex="1">
+                <mxCell id="HKyX9XFVA0ahOkuL98Ae-0" value="商品マスタ_削除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="XnX9uZomtcTrIy8l5btS-1" vertex="1">
                     <mxGeometry x="-120" y="80" width="189" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="V_krTcSORAs8nTF55Go0-0" value="管理者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="XnX9uZomtcTrIy8l5btS-1" vertex="1">
@@ -532,7 +532,7 @@
                         <mxPoint x="110" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="V_krTcSORAs8nTF55Go0-2" value="「商品情報マスタ」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="V_krTcSORAs8nTF55Go0-1" vertex="1" connectable="0">
+                <mxCell id="V_krTcSORAs8nTF55Go0-2" value="「商品マスタ」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="V_krTcSORAs8nTF55Go0-1" vertex="1" connectable="0">
                     <mxGeometry x="-0.3542" y="1" relative="1" as="geometry">
                         <mxPoint x="26" y="-38" as="offset"/>
                     </mxGeometry>

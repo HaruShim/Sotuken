@@ -1,88 +1,88 @@
-<mxfile host="65bd71144e" modified="2021-11-02T00:44:29.515Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.61.2 Chrome/91.0.4472.164 Electron/13.5.1 Safari/537.36" version="15.6.4" etag="GDIPpH54t97DqLqY5xb4" type="embed">
+<mxfile host="65bd71144e">
     <diagram id="Nu1HsQQRUUZ-k-Noi1yZ" name="勤務店舗状況編集">
-        <mxGraphModel dx="1693" dy="717" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1428" dy="459" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="TD7p9iA7MllBgANEwws7-0"/>
                 <mxCell id="TD7p9iA7MllBgANEwws7-1" parent="TD7p9iA7MllBgANEwws7-0"/>
-                <mxCell id="0" value="正規社員&lt;br&gt;非正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="0" value="正規社員&lt;br&gt;非正規社員" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="TD7p9iA7MllBgANEwws7-1" vertex="1">
                     <mxGeometry x="-70" y="280" width="30" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="1" value="ログイン済&lt;br&gt;ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="1" value="ログイン済&lt;br&gt;ホーム画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="TD7p9iA7MllBgANEwws7-1" vertex="1">
                     <mxGeometry x="120" y="120" width="100" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="勤務店舗状況&lt;br&gt;編集画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="2" value="勤務店舗状況&lt;br&gt;編集画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="TD7p9iA7MllBgANEwws7-1" vertex="1">
                     <mxGeometry x="120" y="280" width="100" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="3" value="" style="endArrow=classic;html=1;rounded=0;" parent="TD7p9iA7MllBgANEwws7-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30.000000000000682" y="320" as="sourcePoint"/>
                         <mxPoint x="109.99999999999932" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="4" value="「勤務店舗状況」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3">
+                <mxCell id="4" value="「勤務店舗状況」&lt;br&gt;を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="3" vertex="1" connectable="0">
                     <mxGeometry x="0.1841" y="-1" relative="1" as="geometry">
                         <mxPoint x="-5" y="9" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="5" value="勤務店舗&lt;br&gt;状況を&lt;br&gt;取得する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="5" value="勤務店舗&lt;br&gt;状況を&lt;br&gt;取得する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="TD7p9iA7MllBgANEwws7-1" vertex="1">
                     <mxGeometry x="414" y="120" width="70" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" edge="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="6" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" parent="TD7p9iA7MllBgANEwws7-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="239.99999999999932" y="160" as="sourcePoint"/>
                         <mxPoint x="399.9999999999993" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="7" value="勤務店舗状況" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="7" value="勤務店舗状況" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="TD7p9iA7MllBgANEwws7-1" vertex="1">
                     <mxGeometry x="640" y="200" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" edge="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="8" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;" parent="TD7p9iA7MllBgANEwws7-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="500.00000000000045" y="160" as="sourcePoint"/>
                         <mxPoint x="630.0000000000005" y="240" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="9" value="" style="endArrow=classic;html=1;rounded=0;" parent="TD7p9iA7MllBgANEwws7-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="-30.000000000000682" y="320" as="sourcePoint"/>
                         <mxPoint x="109.99999999999932" y="320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="10" value="店舗を選択し&lt;br&gt;「完了」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9">
+                <mxCell id="10" value="店舗を選択し&lt;br&gt;「完了」を押下" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="9" vertex="1" connectable="0">
                     <mxGeometry x="0.319" relative="1" as="geometry">
                         <mxPoint x="-13" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="11" value="" style="endArrow=classic;html=1;rounded=0;" parent="TD7p9iA7MllBgANEwws7-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="399.9999999999993" y="170" as="sourcePoint"/>
                         <mxPoint x="239.99999999999932" y="310" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="12" value="更新する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="12" value="更新する" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="TD7p9iA7MllBgANEwws7-1" vertex="1">
                     <mxGeometry x="414" y="280" width="70" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;startFill=0;" edge="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="13" value="" style="endArrow=classic;html=1;rounded=0;startArrow=none;startFill=0;" parent="TD7p9iA7MllBgANEwws7-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="239.99999999999932" y="319.28999999999985" as="sourcePoint"/>
                         <mxPoint x="399.9999999999993" y="319.28999999999985" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;strokeColor=default;labelBackgroundColor=default;fontColor=default;" edge="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="14" value="" style="endArrow=classic;html=1;rounded=0;startArrow=classic;startFill=1;labelBackgroundColor=default;fontColor=default;" parent="TD7p9iA7MllBgANEwws7-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="499.9999999999993" y="319.28999999999985" as="sourcePoint"/>
                         <mxPoint x="630" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="勤務店舗状況&lt;br&gt;を更新" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=default;" vertex="1" connectable="0" parent="14">
+                <mxCell id="15" value="勤務店舗状況&lt;br&gt;を更新" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=default;" parent="14" vertex="1" connectable="0">
                     <mxGeometry x="0.2959" y="1" relative="1" as="geometry">
                         <mxPoint x="-13" y="6" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="16" value="勤務店舗状況編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" vertex="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="16" value="勤務店舗状況編集" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=18;" parent="TD7p9iA7MllBgANEwws7-1" vertex="1">
                     <mxGeometry x="-140" y="105" width="189" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="" style="curved=1;endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;fontColor=default;strokeColor=default;" edge="1" parent="TD7p9iA7MllBgANEwws7-1">
+                <mxCell id="17" value="" style="curved=1;endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;fontColor=default;" parent="TD7p9iA7MllBgANEwws7-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="490" y="300" as="sourcePoint"/>
                         <mxPoint x="490" y="170" as="targetPoint"/>
