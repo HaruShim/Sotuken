@@ -1,3 +1,13 @@
+"""小林君用のdisplay.urls
+
+* htmlの画面を一つのアプリでルーティングするモジュール
+
+Todo:
+
+    * displayアプリのtenplatesにhtmlをコピーしたら下のコメントアウト外してね!
+
+"""
+
 from django.urls import path,include
 from django.views.generic import TemplateView 
 
@@ -7,6 +17,31 @@ from . import views
 appname = 'display'
 urlpatterns = [
     path('',TemplateView.as_view(template_name = 'base.html'), name='base'),
+    # path('S00-01/',TemplateView.as_view(template_name = 'home.html'), name='S00-01'),
+    # path('S00-02/',TemplateView.as_view(template_name = 'loghome.html'), name='S00-02'),
+    # path('S00-03/',TemplateView.as_view(template_name = 'ysuu.html'), name='S00-03'),
+    # path('S01-01/',TemplateView.as_view(template_name = 'mas_employee_list.html'), name='S01-01'),
+    # path('S01-02/',TemplateView.as_view(template_name = 'mas_employee_register.html'), name='S01-02'),
+    # path('S01-03/',TemplateView.as_view(template_name = 'mas_employee_detail.html'), name='S01-03'),
+    # path('S01-04/',TemplateView.as_view(template_name = 'mas_employee_edit.html'), name='S01-04'),
+    # path('S01-05/',TemplateView.as_view(template_name = 'mas_employee_completion.html'), name='S01-05'),
+    # path('S02-01/',TemplateView.as_view(template_name = 'mas_store_list.html'), name='S02-01'),
+    # path('S02-02/',TemplateView.as_view(template_name = 'mas_store_register.html'), name='S02-02'),
+    # path('S02-03/',TemplateView.as_view(template_name = 'mas_store_detail.html'), name='S02-03'),
+    # path('S02-04/',TemplateView.as_view(template_name = 'mas_store_edit.html'), name='S02-04'),
+    # path('S03-01/',TemplateView.as_view(template_name = 'mas_goods_list.html'), name='S03-01'),
+    # path('S03-02/',TemplateView.as_view(template_name = 'mas_goods_register.html'), name='S03-02'),
+    # path('S03-03/',TemplateView.as_view(template_name = 'mas_goods_detail.html'), name='S03-03'),
+    # path('S03-04/',TemplateView.as_view(template_name = 'mas_goods_edit.html'), name='S03-04'),
+    # path('S04-01/',TemplateView.as_view(template_name = 'mas_profit_list.html'), name='S04-01'),
+    # path('S04-02/',TemplateView.as_view(template_name = 'mas_profit_detail.html'), name='S04-02'),
+    # path('S04-03/',TemplateView.as_view(template_name = 'mas_profit_edit.html'), name='S04-03'),
+    # path('S05-01/',TemplateView.as_view(template_name = 'mas_benchmark_list.html'), name='S05-01'),
+    # path('S05-02/',TemplateView.as_view(template_name = 'mas_benchmark_register.html'), name='S05-02'),
+    # path('S05-03/',TemplateView.as_view(template_name = 'mas_benchmark_edit.html'), name='S05-03'),
+    # path('S06-01/',TemplateView.as_view(template_name = 'mas_bottleneck_list.html'), name='S06-01'),
+    # path('S06-02/',TemplateView.as_view(template_name = 'mas_bottleneck_register.html'), name='S06-02'),
+    # path('S06-03/',TemplateView.as_view(template_name = 'mas_bottleneck_edit.html'), name='S06-03'),
     path('S07-01/',TemplateView.as_view(template_name = 'set_item_list.html'), name='S07-01'),
     path('S07-02/',TemplateView.as_view(template_name = 'set_item_register.html'), name='S07-02'),
     path('S07-03/',TemplateView.as_view(template_name = 'set_item_detail.html'), name='S07-03'),
