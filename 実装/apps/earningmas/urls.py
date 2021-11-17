@@ -4,8 +4,8 @@
 
 Todo:
 
-    * このアプリで使用するhtmlのpathを全て追加
-    * pathのurlpatternsを矢印の下のもので統一してください!
+    このアプリで使用するhtmlのpathを全て追加
+    pathのurlpatternsを矢印の下のもので統一してください!
 
 """
 from django.urls import path
