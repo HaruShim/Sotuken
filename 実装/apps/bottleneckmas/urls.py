@@ -16,5 +16,7 @@ from . import views
 appname = 'bottleneckmas'
 urlpatterns = [
     path('S06-01/',views.S0601View.as_view(),name = "S06-01"),
+    path('S06-02/',views.S0602View.as_view(),name = "S06-02"),
+    path('S06-03/',views.S0603View.as_view(),name = "S06-03"),
 ]
 
