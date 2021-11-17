@@ -4,6 +4,6 @@ class S1001View(generic.TemplateView):
     template_name = "mas_bottleneck_list.html"
 
 class S1002View(generic.TemplateView):
-    template_name = "mas_bottleneck_register.html"
+    template_name = "mas_bottleneck_.html"
 
 

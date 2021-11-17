@@ -15,9 +15,9 @@ from . import views
 
 appname = 'earning'
 urlpatterns = [
-    path('S011-01/',views.S01101View.as_view(),name = "S011-01"),
-    path('S011-02/',views.S01102View.as_view(),name = "S011-02"),
-    path('S011-03/',views.S01103View.as_view(),name = "S011-03"),
-    path('S011-04/',views.S01104View.as_view(),name = "S011-04"),
+    path('S11-01/',views.S1101View.as_view(),name = "S11-01"),
+    path('S11-02/',views.S1102View.as_view(),name = "S11-02"),
+    path('S11-03/',views.S1103View.as_view(),name = "S11-03"),
+    path('S11-04/',views.S1104View.as_view(),name = "S11-04"),
 ]
 

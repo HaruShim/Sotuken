@@ -7,12 +7,12 @@ class S0102View(generic.TemplateView):
     template_name = "mas_bottleneck_register.html"
 
 class S0103View(generic.TemplateView):
-    template_name = "mas_bottleneck_edit.html"
+    template_name = "mas_bottleneck_detail.html"
 
 class S0104View(generic.TemplateView):
     template_name = "mas_bottleneck_edit.html"
 
 class S0105View(generic.TemplateView):
-    template_name = "mas_bottleneck_edit.html"
+    template_name = "mas_bottleneck_completion.html"
 
 
