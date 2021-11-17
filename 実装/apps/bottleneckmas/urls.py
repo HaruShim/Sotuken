@@ -15,9 +15,6 @@ from . import views
 
 appname = 'bottleneckmas'
 urlpatterns = [
-    path('',views.BottleneckView.as_view(),name = "master_bottleneck"),
-    # ↓
-    path('S06-01/',views.BottleneckView.as_view(),name = "mas_bottleneck_list"),
-    path('S06-02/',views.BottleneckView.as_view(),name = "S06-01"),
+    path('S06-01/',views.S0601View.as_view(),name = "S06-01"),
 ]
 
