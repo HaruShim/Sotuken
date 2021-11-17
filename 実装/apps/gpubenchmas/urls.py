@@ -3,5 +3,5 @@ from . import views
 
 appname = 'gpu_bottleneck'
 urlpatterns = [
-    path('',views.GpuBottleneckView.as_view(),name = "master_gpu_bottleneck"),
+    path('S01-01/',views.S0101View.as_view(),name = "S01-01"),
 ]
