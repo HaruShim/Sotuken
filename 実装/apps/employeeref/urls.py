@@ -15,6 +15,6 @@ from . import views
 
 appname = 'employeeref'
 urlpatterns = [
-    path('S012-01/',views.S01201View.as_view(),name = "S012-01"),
-    path('S012-02/',views.S01202View.as_view(),name = "S012-02"),
+    path('S12-01/',views.S1201View.as_view(),name = "S12-01"),
+    path('S12-02/',views.S1202View.as_view(),name = "S12-02"),
 ]
