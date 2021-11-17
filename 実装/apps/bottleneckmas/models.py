@@ -24,7 +24,7 @@ class Bottleneck(models.Model):
         (3,'〇'),
         (4,'◎'),
     )
-
+    id = models.AutoField(verbose_name='GPUベンチマークID',db_column='gpu_bench_id', primary_key=True, editable=False)
     bottleneck_id = models.IntegerField(verbose_name='ボトルネックID')
     cpu_name = models.CharField(verbose_name='CPU名', max_length=30)
     gpu_name = models.CharField(verbose_name='GPU名', max_length=30)
