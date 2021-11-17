@@ -1,19 +1,19 @@
-"""earning.urls
+"""earning.urls.py
 
 * 売上の画面をルーティングするモジュール
 
 Todo:
 
-    * これ見てgitのappsのurls全部変更お願いします
-    * このアプリで使用するhtmlのpathを全て追加
-    * pathのurlpatternsを矢印の下のもので統一してください!
+    * これ見てgitのappsのurls全部変更お願いします　〇
+    * このアプリで使用するhtmlのpathを全て追加　〇
+    * pathのurlpatternsを矢印の下のもので統一してください!　〇
     * nameはhtml組と要相談
 
 """
 from django.urls import path
 from . import views
 
-appname = ''
+appname = 'earning'
 urlpatterns = [
     path('S011-01/',views.S01101View.as_view(),name = "S011-01"),
     path('S011-02/',views.S01102View.as_view(),name = "S011-02"),
