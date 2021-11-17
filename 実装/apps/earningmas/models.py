@@ -20,7 +20,7 @@ class EarningInfo(models.Model):
     selling_price = models.IntegerField(verbose_name='販売価格', max_length=8)
     gross_profit = models.IntegerField(verbose_name='粗利', max_length=8)
     gross_profit_margin = models.IntegerField(verbose_name='粗利率', max_length=4)
-    sale_date = models.DateTimeField(verbose_name='販売日',)
+    sale_date = models.DateTimeField(verbose_name='販売日', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='最終更新日時', auto_now=True)
 
     class Meta:

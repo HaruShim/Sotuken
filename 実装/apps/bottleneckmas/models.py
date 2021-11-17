@@ -29,7 +29,7 @@ class Bottleneck(models.Model):
     game_delivery = models.SmallIntegerField(verbose_name='ゲーム配信')
     video_editing = models.SmallIntegerField(verbose_name='動画編集')
     encode = models.SmallIntegerField(verbose_name='エンコード')
-    created_at = models.DateTimeField(verbose_name='作成日時')
+    created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='最終更新日時', auto_now=True)
 
     class Meta:
