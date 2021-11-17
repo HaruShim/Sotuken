@@ -1,8 +1,28 @@
+"""bottleneckmas.models.py
+
+* 
+
+Todo:
+
+    * conf.pyの``todo_include_todos = True``にしないと表示されない
+
+"""
+
 from re import VERBOSE
 from django.db import models
 
 
 class Bottleneck(models.Model):
+    """Bottleneck
+
+    ボトルネックモデル
+
+    Attributes:
+        属性の名前 (属性の型): 属性の説明
+        属性の名前 (:obj:`属性の型`): 属性の説明.
+
+    """
+
     bottleneck_id = models.IntegerField(verbose_name='ボトルネックID')
     cpu_name = models.CharField(verbose_name='CPU名', max_length=30)
     gpu_name = models.CharField(verbose_name='GPU名', max_length=30)
