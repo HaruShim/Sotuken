@@ -2,7 +2,7 @@
 *
 Todo:
 
-    * conf.pyの``todo_include_todos = True``にしないと表示されない
+    *確認待ち
 
 """
 
@@ -14,10 +14,6 @@ class StoreInfo(models.Model):
     """StoreInfo
 
     店舗情報モデル
-
-    Attributes:
-        属性の名前 (属性の型): 属性の説明
-        属性の名前 (:obj:`属性の型`): 属性の説明.
 
     """
 
