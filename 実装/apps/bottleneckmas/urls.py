@@ -4,9 +4,9 @@
 
 Todo:
 
-    * これ見てgitのappsのurls全部変更お願いします
-    * このアプリで使用するhtmlのpathを全て追加
-    * pathのurlpatternsを矢印の下のもので統一してください!
+    これ見てgitのappsのurls全部変更お願いします
+    このアプリで使用するhtmlのpathを全て追加
+    pathのurlpatternsを矢印の下のもので統一してください!
     * nameはhtml組と要相談
 
 """
