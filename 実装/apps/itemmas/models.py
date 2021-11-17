@@ -1,3 +1,28 @@
+"""itemmas.models.py
+
+Todo:
+
+    *確認待ち
+"""
 from django.db import models
 
-# Create your models here.
+
+class ItemInfo(models.Model):
+    """
+    ItemInfo
+    商品情報モデル
+    """
+    item_code = models.CharField(verbose_name='商品コード', max_length=9)
+    store_id = models.IntegerField(verbose_name='店舗ID', max_length=3)
+    model_number = models.CharField(verbose_name='型番', max_length=30)
+    category = models.SmallIntegerField(verbose_name='カテゴリ', max_length=1)
+    manufacturer_name = models.CharField(verbose_name='メーカー名', max_length=30)
+    item_status = models.CharField(verbose_name='商品状態', max_length=10)
+    purchase_price = models.IntegerField(verbose_name='仕入価格', max_length=20)
+    item_image = models.ImageField(verbose_name='商品画像')
+    remarks = models.TimeField(verbose_name='備考')
+    created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
+    updated_at = models.DateTimeField(verbose_name='最終更新日時', auto_now=True)
+
+    class Meta:
+        verbose_name_plural = '商品情報モデル'
