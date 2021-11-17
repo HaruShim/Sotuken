@@ -1,12 +1,12 @@
 from django.views import generic
 
 class S0801View(generic.TemplateView):
-    template_name = "mas_bottleneck_list.html"
+    template_name = "benhmark_search.html"
 
 class S0802View(generic.TemplateView):
-    template_name = "mas_bottleneck_register.html"
+    template_name = "bottleneck_search.html"
 
 class S0803View(generic.TemplateView):
-    template_name = "mas_bottleneck_edit.html"
+    template_name = "item_search.html"
 
 
