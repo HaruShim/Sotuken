@@ -23,7 +23,7 @@ class StoreInfo(models.Model):
     address = models.TextField(verbose_name='住所')
     tel = models.CharField(verbose_name='連絡先', max_length=13)
     invalid_flg = models.SmallIntegerField(verbose_name='無効フラグ')
-    created_at = models.DateTimeField(verbose_name='作成日時')
+    created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='最終更新日時', auto_now=True)
 
     class Meta:
