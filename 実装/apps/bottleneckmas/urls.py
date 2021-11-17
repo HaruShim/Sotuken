@@ -13,7 +13,7 @@ Todo:
 from django.urls import path
 from . import views
 
-appname = 'bottleneck'
+appname = 'bottleneckmas'
 urlpatterns = [
     path('',views.BottleneckView.as_view(),name = "master_bottleneck"),
     # ↓
