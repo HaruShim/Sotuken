@@ -1,6 +1,6 @@
-"""bottleneckmas.urls
+"""employeeref.urls
 
-* ボトルネックマスタの画面をルーティングするモジュール
+* 従業員情報の画面をルーティングするモジュール
 
 Todo:
 
@@ -13,7 +13,7 @@ Todo:
 from django.urls import path
 from . import views
 
-appname = ''
+appname = 'employeeref'
 urlpatterns = [
     path('S012-01/',views.S01201View.as_view(),name = "S012-01"),
     path('S012-02/',views.S01202View.as_view(),name = "S012-02"),

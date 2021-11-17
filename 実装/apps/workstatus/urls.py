@@ -3,5 +3,5 @@ from . import views
 
 appname = 'storeref'
 urlpatterns = [
-    path('S18-01/',views.S1801View.as_view(),name = "S18-01"),
+    path('S14-01/',views.S1401View.as_view(),name = "S14-01"),
 ]
