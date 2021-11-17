@@ -17,10 +17,6 @@ class Bottleneck(models.Model):
 
     ボトルネックモデル
 
-    Attributes:
-        属性の名前 (属性の型): 属性の説明
-        属性の名前 (:obj:`属性の型`): 属性の説明.
-
     """
 
     bottleneck_id = models.IntegerField(verbose_name='ボトルネックID')
