@@ -1,11 +1,21 @@
+"""sales_information_management.urls
+
+* システムとアプリをルーティングするモジュール
+
+Todo:
+
+    * conf.pyの``sphinx.ext.todo`` を有効にしないと使用できない
+    * conf.pyの``todo_include_todos = True``にしないと表示されない
+
+"""
 
 from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',include('home.urls')),
-    # path('tamesi/',include('bottletamesi.urls')),
+    path('admin/', admin.site.urls),# 管理者サイト
+
+    path('',include('home.urls')),#ホーム画面
     
     path('F01/',include('employeemas.urls')),# 従業員マスタ
     path('F02/',include('storemas.urls')),# 店舗マスタ
