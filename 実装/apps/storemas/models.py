@@ -21,7 +21,7 @@ class StoreInfo(models.Model):
     """
 
     store_id = models.SmallIntegerField(verbose_name='店舗ID')
-    place_category = models.CharField(verbose_name='場所カテゴリ', max_length=4)
+    place_category = models.SmallIntegerField(verbose_name='場所カテゴリ',choices=pcchoice)
     store_name = models.CharField(verbose_name='店舗名', max_length=20)
     address = models.TextField(verbose_name='住所')
     tel = models.CharField(verbose_name='連絡先', max_length=13)

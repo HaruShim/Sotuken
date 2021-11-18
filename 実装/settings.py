@@ -46,14 +46,14 @@ INSTALLED_APPS = [
     'employeemas.apps.EmployeemasConfig', # 従業員マスタ
     'storemas.apps.StoremasConfig', # 店舗マスタ
     'itemmas.apps.ItemmasConfig', # 商品マスタ
-    'earningmas.apps.ProfitmasConfig', # 売上マスタ
+    'earningmas.apps.EarningmasConfig', # 売上マスタ
     'benchmas.apps.BenchmasConfig', # ベンチマークマスタ
     'bottleneckmas.apps.BottleneckmasConfig', # ボトルネックマスタ
     'stock.apps.StockConfig', # 在庫
     'search.apps.SearchConfig', # 検索
     'reserve.apps.ReserveConfig', # 取置予約
     'estimate.apps.EstimateConfig', # 見積
-    'earning.apps.ProfitConfig', # 売上
+    'earning.apps.EarningConfig', # 売上
     'employeeref.apps.EmployeerefConfig', # 従業員参照
     'storeref.apps.StorerefConfig', # 店舗参照
     'workstatus.apps.WorkstatusConfig', # 勤務状況参照
