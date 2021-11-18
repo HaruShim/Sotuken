@@ -11,9 +11,7 @@ Todo:
 
 """
 
-from re import VERBOSE
 from django.db import models
-
 
 class StoreInfo(models.Model):
     """StoreInfo

@@ -14,10 +14,11 @@ from django.db import models
 
 
 class ItemInfo(models.Model):
+    
     """ ItemInfo
 
     商品情報モデル
-    
+
     """
     item_code = models.CharField(verbose_name='商品コード', max_length=9)
     store_id = models.IntegerField(verbose_name='店舗ID', max_length=3)
