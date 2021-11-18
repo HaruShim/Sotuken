@@ -4,8 +4,10 @@
 
 Todo:
 
-    * conf.pyの``todo_include_todos = True``にしないと表示されない
-
+    新満の確認
+    *マイグレーションができるか確認
+    *CSVファイルからデータをコピーできる
+    *新満の最終確認
 """
 
 from django.db import models

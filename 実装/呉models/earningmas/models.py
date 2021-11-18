@@ -1,4 +1,11 @@
 """earningmas.models.py
+
+Todo:
+
+    新満の確認
+    *マイグレーションができるか確認
+    *CSVファイルからデータをコピーできる
+    *新満の最終確認
 """
 
 from re import VERBOSE
