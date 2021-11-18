@@ -1,16 +1,24 @@
 """itemmas.models.py
 
+* DBの商品情報モデルにアクセスするためのモジュール
+
 Todo:
 
-    *確認待ち
+    新満の確認
+    *マイグレーションができるか確認
+    *CSVファイルからデータをコピーできる
+    *新満の最終確認
+
 """
 from django.db import models
 
 
 class ItemInfo(models.Model):
-    """
-    ItemInfo
+    
+    """ ItemInfo
+
     商品情報モデル
+
     """
     item_code = models.CharField(verbose_name='商品コード', max_length=9)
     store_id = models.IntegerField(verbose_name='店舗ID', max_length=3)
