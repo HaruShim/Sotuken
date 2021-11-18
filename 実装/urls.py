@@ -4,8 +4,8 @@
 
 Todo:
 
-    * conf.pyの``sphinx.ext.todo`` を有効にしないと使用できない
-    * conf.pyの``todo_include_todos = True``にしないと表示されない
+    ※追加(各自で試すアプリ)はそれぞれで追加してください
+    ※各自で追加したものはローカルでのみ使用
 
 """
 
