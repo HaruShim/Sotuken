@@ -10,19 +10,18 @@ Todo:
     *新満の最終確認
 """
 
-from re import VERBOSE
 from django.db import models
 from django.db.models.manager import ManagerDescriptor
 
 
 class EarningInfo(models.Model):
+
     """EarningInfo
 
     売上情報モデル
 
     """
     
-
     id = models.AutoField(verbose_name='売上情報ID',db_column='earning_id ', primary_key=True, editable=False)
     item_code = models.CharField(verbose_name='商品コード', max_length=9)
     store_id = models.SmallIntegerField(verbose_name='店舗ID')
