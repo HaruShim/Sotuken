@@ -4,16 +4,19 @@
 Todo:
 
     新満の確認
+    *〇〇_idは基本外部(ForeignKey)キーに修正
+    *int型のfieldにはmax_lengthをつけないでください
+    
     *マイグレーションができるか確認
     *CSVファイルからデータをコピーできる
     *新満の最終確認
 
+
 """
 from django.db import models
 
-
-
 class GpuBench(models.Model):
+
     """GpuBench
 
     Gpuベンチマーク
@@ -34,6 +37,7 @@ class GpuBench(models.Model):
 
 
 class CpuBench(models.Model):
+    
     """CpuBench
 
     Cpuベンチマーク
@@ -48,6 +52,7 @@ class CpuBench(models.Model):
     rated_clock = models.FloatField(verbose_name='定格クロック', max_length=4)
     max_clock = models.FloatField(verbose_name='最大クロック',max_length=4)
     list_price = models.IntegerField(verbose_name='定価',max_length=8)
+    cost_performance = models.FloatField(verbose_name='定格クロック')
     created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='更新日時', auto_now=True)
 

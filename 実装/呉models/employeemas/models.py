@@ -2,18 +2,26 @@
 
 Todo:
 
-    Todo:
-
     新満の確認
+    *〇〇_idは基本外部(ForeignKey)キーに修正
+    *choiceのオプションは必要なところにつけて下さい
+    *商品状態はchoiceのオプションをつけて下さい
+    *invalid_flgはbooleanのフィールドに変更してください(設計時からの変更)
+    
     *マイグレーションができるか確認
     *CSVファイルからデータをコピーできる
     *新満の最終確認
+
 """
 from django.db import models
 
 
 class Employeemas(models.Model):
-    """従業員情報モデル
+
+    """Employeemas
+    
+    従業員情報モデル
+    
     """
 
     balancechoices = (
@@ -33,10 +41,8 @@ class Employeemas(models.Model):
     tel_num = models.CharField(verbose_name='電話番号', max_length=13)
     gender = models.SmallIntegerField(verbose_name='従業員ID', choices=balancechoices)
     birthday = models.TimeField(verbose_name='生年月日')
-    invalid_flg = models.SmallIntegerField(
-        verbose_name='無効フラグ', choices=balancechoices)
+    invalid_flg = models.SmallIntegerField(verbose_name='無効フラグ', choices=balancechoices)
     created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
-    # 最終ログイン日時修正予定
     lastlogin_at = models.DateTimeField(verbose_name='最終ログイン日時', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='更新日時', auto_now=True)
 

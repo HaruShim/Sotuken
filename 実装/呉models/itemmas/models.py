@@ -5,10 +5,15 @@
 Todo:
 
     新満の確認
+    *〇〇_idは基本外部(ForeignKey)キーに修正
+    *カテゴリはchoiceのオプションをつけて下さい
+    *商品状態はchoiceのオプションをつけて下さい
+    *備考はTimeFieldではないので修正してください
+    
     *マイグレーションができるか確認
     *CSVファイルからデータをコピーできる
     *新満の最終確認
-1
+
 """
 from django.db import models
 
@@ -20,8 +25,7 @@ class ItemInfo(models.Model):
     商品情報モデル
 
     """
-    id = models.AutoField(
-        verbose_name='商品コード', db_column='item_code', primary_key=True, editable=False)
+    id = models.AutoField(verbose_name='商品コード', db_column='item_code', primary_key=True, editable=False)
     store_id = models.IntegerField(verbose_name='店舗ID')
     model_number = models.CharField(verbose_name='型番', max_length=30)
     category = models.SmallIntegerField(verbose_name='カテゴリ')
