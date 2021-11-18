@@ -23,7 +23,7 @@ class EarningInfo(models.Model):
 
     id = models.AutoField(verbose_name='売上情報ID',db_column='earning_id ', primary_key=True, editable=False)
     item_code = models.CharField(verbose_name='商品コード', max_length=9)
-    store_id = models.SmallIntegerField(verbose_name='店舗ID', max_length=3)
+    store_id = models.SmallIntegerField(verbose_name='店舗ID')
     employee_id = models.CharField(verbose_name='従業員ID', max_length=13)
     selling_price = models.IntegerField(verbose_name='販売価格')
     gross_profit = models.IntegerField(verbose_name='粗利')

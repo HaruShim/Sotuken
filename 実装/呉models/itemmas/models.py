@@ -24,7 +24,7 @@ class ItemInfo(models.Model):
         verbose_name='商品コード', db_column='item_code', primary_key=True, editable=False)
     store_id = models.IntegerField(verbose_name='店舗ID')
     model_number = models.CharField(verbose_name='型番', max_length=30)
-    category = models.SmallIntegerField(verbose_name='カテゴリ', max_length=1)
+    category = models.SmallIntegerField(verbose_name='カテゴリ')
     manufacturer_name = models.CharField(verbose_name='メーカー名', max_length=30)
     item_status = models.CharField(verbose_name='商品状態', max_length=10)
     purchase_price = models.IntegerField(verbose_name='仕入価格')
