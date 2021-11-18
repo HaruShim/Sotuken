@@ -8,19 +8,20 @@ Todo:
     *マイグレーションができるか確認
     *CSVファイルからデータをコピーできる
     *新満の最終確認
-
+1
 """
 from django.db import models
 
 
 class ItemInfo(models.Model):
-    
+
     """ ItemInfo
 
     商品情報モデル
 
     """
-    id = models.AutoField(verbose_name='商品コード', db_column='item_code', primary_key=True, editable=False)
+    id = models.AutoField(
+        verbose_name='商品コード', db_column='item_code', primary_key=True, editable=False)
     store_id = models.IntegerField(verbose_name='店舗ID', max_length=3)
     model_number = models.CharField(verbose_name='型番', max_length=30)
     category = models.SmallIntegerField(verbose_name='カテゴリ', max_length=1)
