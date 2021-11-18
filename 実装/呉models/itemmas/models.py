@@ -22,12 +22,12 @@ class ItemInfo(models.Model):
     """
     id = models.AutoField(
         verbose_name='商品コード', db_column='item_code', primary_key=True, editable=False)
-    store_id = models.IntegerField(verbose_name='店舗ID', max_length=3)
+    store_id = models.IntegerField(verbose_name='店舗ID')
     model_number = models.CharField(verbose_name='型番', max_length=30)
     category = models.SmallIntegerField(verbose_name='カテゴリ', max_length=1)
     manufacturer_name = models.CharField(verbose_name='メーカー名', max_length=30)
     item_status = models.CharField(verbose_name='商品状態', max_length=10)
-    purchase_price = models.IntegerField(verbose_name='仕入価格', max_length=20)
+    purchase_price = models.IntegerField(verbose_name='仕入価格')
     item_image = models.ImageField(verbose_name='商品画像')
     remarks = models.TimeField(verbose_name='備考')
     created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
