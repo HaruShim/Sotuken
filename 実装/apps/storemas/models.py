@@ -1,14 +1,17 @@
 """storemas.models.py
-*
+
+* DBの店舗情報モデルにアクセスするためのモジュール
+
 Todo:
 
-    *確認待ち
+    新満の確認
+    *マイグレーションができるか確認
+    *CSVファイルからデータをコピーできる
+    *新満の最終確認
 
 """
 
-from re import VERBOSE
 from django.db import models
-
 
 class StoreInfo(models.Model):
     """StoreInfo
