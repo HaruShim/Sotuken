@@ -20,7 +20,7 @@ class ItemInfo(models.Model):
     商品情報モデル
 
     """
-    item_code = models.CharField(verbose_name='商品コード', max_length=9)
+    id = models.AutoField(verbose_name='商品コード', db_column='item_code', primary_key=True, editable=False)
     store_id = models.IntegerField(verbose_name='店舗ID', max_length=3)
     model_number = models.CharField(verbose_name='型番', max_length=30)
     category = models.SmallIntegerField(verbose_name='カテゴリ', max_length=1)
