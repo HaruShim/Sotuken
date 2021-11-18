@@ -12,7 +12,6 @@ from re import VERBOSE
 from django.db import models
 from django.db.models.manager import ManagerDescriptor
 
-
 class EarningInfo(models.Model):
     """EarningInfo
 
