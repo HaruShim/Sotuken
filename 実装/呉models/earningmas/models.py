@@ -21,9 +21,9 @@ class EarningInfo(models.Model):
     
 
     id = models.AutoField(verbose_name='売上情報ID',db_column='earning_id ', primary_key=True, editable=False)
-    item_code = models.ForeignKey(verbose_name='商品コード', max_length=9)
-    store_id = models.ForeignKey(verbose_name='店舗ID', max_length=3)
-    employee_id = models.ForeignKey(verbose_name='従業員ID', max_length=13)
+    # item_code = models.ForeignKey(verbose_name='商品コード', max_length=9)
+    # store_id = models.ForeignKey(verbose_name='店舗ID', max_length=3)
+    # employee_id = models.ForeignKey(verbose_name='従業員ID', max_length=13)
     selling_price = models.IntegerField(verbose_name='販売価格', max_length=8)
     gross_profit = models.IntegerField(verbose_name='粗利', max_length=8)
     gross_profit_margin = models.IntegerField(verbose_name='粗利率', max_length=4)
