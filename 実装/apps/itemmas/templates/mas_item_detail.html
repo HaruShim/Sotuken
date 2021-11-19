@@ -1,8 +1,12 @@
 <!-- S03-03 商品情報詳細
 
     ToDo
-        *画面の制作お願いします
-        *
+        画面の制作お願いします
+        画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
 
 -->
 
@@ -11,4 +15,101 @@
 {% block title %}SIMS | 商品情報詳細{% endblock %}
 
 {% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">商品管理</h1>
+
+        <div class="row">
+            <div class="card mb-4">
+
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    商品情報詳細
+                </div>
+
+                <div class="itemmas-table item-table">
+                    <div class="item-image">
+                        <img border="1" class="image-content" src="../images/img001.gif" width="128px" height="128px" alt="イラスト1">
+                    </div>
+                    <h2>型番</h2>
+                        <table>
+                            <thead class="tablecolumn">
+                        
+                                <tr>
+                                    <th>商品コード</th>
+                                    <td>38000513</td>
+                                    <th>型番</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>カテゴリ</th>
+                                    <td></td>
+                                    <th>仕入価格</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>在庫場所</th>
+                                    <td></td>
+                                    <th>備考</th>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                    <div class="itemmas-table spec-table">
+                        <table>
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <th>メーカー</th>
+                                    <td></td>
+                                    <th>モニタサイズ</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>CPU</th>
+                                    <td></td>
+                                    <th>モニタ解像度(縦)</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>HDD</th>
+                                    <td></td>
+                                    <th>モニタ解像度(横)</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>SSD</th>
+                                    <td></td>
+                                    <th>カメラ</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>OS</th>
+                                    <td></td>
+                                    <th>光学ドライブ</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Wi-Fi</th>
+                                    <td></td>
+                                    <th>グラフィック</th>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                        </table>
+                    <div class="center-button">
+                        <a class="btn btn-primary" href="#">編集</a>
+                        <a class="btn btn-primary" href="#">削除</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
 {% endblock %}

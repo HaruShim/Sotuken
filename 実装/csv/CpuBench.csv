@@ -1,4 +1,4 @@
-cpu_bench_id,cpu_name,passmark,core,thread,tdp,rated_clock,max_clock,cost_performance,list_price,created_at,updated_at
+cpu_bench_id,cpu_name,passmark,core,thread,tdp,rated_clock,max_clock,list_price,cost_performance,created_at,updated_at
 1,Ryzen 9 5950X,46132,16,32,105,3.4,4.9,106500,0.43,2021/11/12 12:14,2021/11/12 12:14
 2,Ryzen 9 5900X,39641,12,24,105,3.7,4.8,71500,0.55,2021/11/12 12:14,2021/11/12 12:14
 3,Ryzen 9 3950X,39314,16,32,105,3.5,4.7,73000,0.54,2021/11/12 12:14,2021/11/12 12:14
