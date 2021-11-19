@@ -1,0 +1,66 @@
+<!-- S-05-02 ベンチマーク登録
+
+    ToDo
+        画面の制作お願いします
+        *長谷川
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | ベンチマーク登録{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">商品管理</h1>
+
+        <div class="row">
+            <div class="card mb-4">
+
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    GPUベンチマーク新規登録
+                </div>
+
+                <div class="itemmas-table item-table">
+                    <table>
+                        <thead class="tablecolumn">
+                    
+                            <tr>
+                                <th>GPU名称</th>
+                                <td><input type="text" id="ugpu-name" name="gpu-name" placeholder="GeForce RTX 3090"></td>
+                                <th>ワットパフォーマンス</th>
+                                <td><input type="text" id="" name="" placeholder="56.8"></td>
+                            </tr>
+                            <tr>
+                                <th>3DMark Time Spy Graphics</th>
+                                <td><input type="text" id="" name="" placeholder="19867"></td>
+                                <th>定価</th>
+                                <td><input type="text" id="" name="" placeholder="200,000">円</td>
+                            </tr>
+                            <tr>
+                                <th>TDP</th>
+                                <td><input type="text" id="" name="" placeholder="350">W</td>
+                                <th>コスパ</th>
+                                <td><input type="text" id="" name="" placeholder="0.099"></td>
+                            </tr>
+                        </thead>
+                    </table>
+
+                    <div class="center-button">
+                        <a class="btn btn-primary" href="#">登録</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+
+{% endblock %}
