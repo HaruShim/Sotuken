@@ -1,0 +1,76 @@
+<!-- S09-01 取置予約一覧
+
+    ToDo
+        画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 取置予約一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">取置予約管理</h1>
+        <!-- <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="# url 'home:index' %}">Dashboard</a></li>
+            <li class="breadcrumb-item active">Tables</li>
+        </ol> -->
+        <!-- <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body">新規登録</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="#">従業員情報の追加</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    取置予約一覧
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-touroku" href="#">新規登録</a>
+                    <table class="listtable sub1">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>ID</th>
+                                <th>型番</th>
+                                <th>取置店舗名</th>
+                                <th>予約者名</th>
+                                <th>連絡先</th>
+                                <th>予約日時</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>FMVU75EUV1</td>
+                                <td>店舗C</td>
+                                <td>佐藤祐樹</td>
+                                <td>000-0000-0000</td>
+                                <td>2021/12/11</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>FVMU75EUV1</td>
+                                <td>店舗A</td>
+                                <td>田中太郎</td>
+                                <td>000-0000-0000</td>
+                                <td>2021/12/13</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
