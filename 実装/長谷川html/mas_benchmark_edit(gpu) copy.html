@@ -1,13 +1,14 @@
-<!-- S-05-02 ベンチマーク登録
+<!-- S05-03 ベンチマーク編集
 
     ToDo
         画面の制作お願いします
         *長谷川　gpu表示のために勝手にurl仮設定してるので・・・・お願いします
+
 -->
 
 {% extends 'base.html' %}
 
-{% block title %}SIMS | ベンチマーク登録{% endblock %}
+{% block title %}SIMS | ベンチマーク編集{% endblock %}
 
 {% block main_contents %}
 <main>
@@ -19,7 +20,7 @@
 
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    GPUベンチマーク新規登録
+                    GPUベンチマーク編集
                 </div>
 
                 <div class="itemmas-table item-table">
@@ -48,18 +49,14 @@
                     </table>
 
                     <div class="center-button">
-                        <a class="btn btn-primary" href="#">登録</a>
+                        <a class="btn btn-primary" href="#">更新</a>
+                        <a class="btn btn-primary" href="#">削除</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
-
-
-
-
-
 
 
 {% endblock %}
