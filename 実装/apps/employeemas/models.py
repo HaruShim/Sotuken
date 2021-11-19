@@ -10,13 +10,14 @@ Todo:
 
 """
 from django.db import models
+from django.contrib.auth.models import StoreInfo
 
 
 class Employeemas(models.Model):
     """従業員情報モデル
     """
     id = models.AutoField(verbose_name='従業員ID', db_column='employee_id', primary_key=True, editable=False)
-    store_id = models.SmallIntegerField(verbose_name='店舗ID')
+    store_id = models.ForeignKey(StoreInfo, verbose_name='店舗ID', on_delete=models.CASCADE)
     employment_status = models.CharField(verbose_name='雇用形態', max_length=5)
     name = models.CharField(verbose_name='氏名', max_length=30)
     ruby_name = models.CharField(verbose_name='氏名(カナ)', max_length=30)
