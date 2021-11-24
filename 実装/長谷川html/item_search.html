@@ -3,6 +3,7 @@
     ToDo
         画面の制作お願いします
         *長谷川
+        *カメラ、光学ドライブ、Wi-Fiをラジオボタンにしたい
 
 -->
 
@@ -108,8 +109,12 @@
                             <tr>
                                 <th>Wi-Fi</th>
                                 <td>
-                                    <select name="" class="">
-                                        <option value="" selected>-</option>
+                                    <group class="inline-radio">
+                                        <div><input type="radio" name="member"><label>Yes</label></div>
+                                        <div><input type="radio" name="member" checked><label>No</label></div>
+                                    </group>
+                                    <!-- <select name="" class="">
+                                        <option value="" selected>-</option> -->
                                 </td>
                             </tr>
                         </thead>

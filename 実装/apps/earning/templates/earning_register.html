@@ -1,7 +1,7 @@
 <!-- S11-02 売上情報新規登録
 
     ToDo
-        *画面の制作お願いします
+        画面の制作お願いします
         *
 
 -->
@@ -11,4 +11,82 @@
 {% block title %}SIMS | 売上情報新規登録{% endblock %}
 
 {% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">売上管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    売上情報新規登録
+                </div>
+                <div class="card-body">
+                    <table class="cleannesstable" frame="border">
+                        <tr>
+                            <td>商品コード
+                                <input type="text" id="name" name="itemcode">
+                            </td>
+                            <td>販売店舗
+                                <select name="store">
+                                    <option hidden>店舗選択</option>
+                                    <option value="">店舗A</option>
+                                    <option value="">店舗B</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>担当者
+                                <select name="employee">
+                                    <option hidden>担当者選択</option>
+                                    <option value="">大原太郎</option>
+                                    <option value="">豊臣秀吉</option>
+                                </select>
+                            </td>
+                            <td>
+                                販売日<input type="date" name="saledate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>販売価格
+                                <input type="text" id="price" name="price">
+                            </td>
+                            <td><a class="btn btn-touroku" href="#">追加</a></td>
+                        </tr>
+                    </table>
+                    <table class="earningtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>ID</th>
+                                <th>販売日</th>
+                                <th>商品コード</th>
+                                <th>型番</th>
+                                <th>仕入価格</th>
+                                <th>販売価格</th>
+                                <th>粗利</th>
+                                <th>粗利率</th>
+                                <th>販売店舗</th>
+                                <th>担当者</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tabletbody">
+                            <tr>
+                                <td></td>
+                                <td>2020/10/31</td>
+                                <td>123456789</td>
+                                <td>123456789</td>
+                                <td>3000円</td>
+                                <td>4000円</td>
+                                <td></td>
+                                <td></td>
+                                <td>店舗A</td>
+                                <td>大原太郎</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-touroku" href="#">新規登録</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 {% endblock %}
