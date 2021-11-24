@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}タイトルが入ります{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Tables</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="{% url 'home:index' %}">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'table:table' %}">Tables</a></li>
+            <li class="breadcrumb-item active">Table Detail</li>
+        </ol>
+        <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">データ詳細</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body">データ追加</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="{% url 'table:table_create' %}">View
+                            Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-success text-white mb-4">
+                    <div class="card-body">データ更新</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="{% url 'table:table_update' object.pk %}">View
+                            Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-danger text-white mb-4">
+                    <div class="card-body">データ削除</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="{% url 'table:table_delete' object.pk %}">View
+                            Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="my-div-style">
+                <div class="row">
+                    <div class="col-3">
+                        <strong>タイトル</strong>
+                    </div>
+                    <div class="col-9">
+                        {{ object.title }}
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-3">
+                        <strong>本文</strong>
+                    </div>
+                    <div class="col-9">
+                        {{ object.get_choice_display }}
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <strong>本文</strong>
+                    </div>
+                    <div class="col-9">
+                        {{ object.date }}
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <strong>追加したユーザー</strong>
+                    </div>
+                    <div class="col-9">
+                        {{ object.user }}
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <strong>本文</strong>
+                    </div>
+                    <div class="col-9">
+                        {{ object.get_genre_display }}
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <strong>本文</strong>
+                    </div>
+                    <div class="col-9">
+                        {{ object.quanity }}
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <strong>本文</strong>
+                    </div>
+                    <div class="col-9">
+                        ¥ {{ object.money }}
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <strong>本文</strong>
+                    </div>
+                    <div class="col-9">
+                        {{ object.content }}
+                    </div>
+                </div>
+
+                <hr>
+            </div>
+
+            <!-- <hr> -->
+
+            <div class="row">
+                <div class="col-3">
+                    <strong>作成日時</strong>
+                </div>
+                <div class="col-9">
+                    {{ object.created_at }}
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-3">
+                    <strong>更新日時</strong>
+                </div>
+                <div class="col-9">
+                    {{ object.updated_at }}
+                </div>
+            </div>
+            <a class="btn btn-success mt-5 mb-3" href="{% url 'table:table_update' object.pk %}">編集</a>
+            <a class="btn btn-danger mt-5 ml-2 mb-3" href="{% url 'table:table_delete' object.pk %}">削除</a>
+        </div>
+    </div>
+</main>
+{% endblock %}
