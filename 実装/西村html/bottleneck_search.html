@@ -1,0 +1,106 @@
+<!-- S08-02 ボトルネック検索
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | ボトルネック検索{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">ボトルネック検索</h1>
+        <!-- <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="# url 'home:index' %}">Dashboard</a></li>
+            <li class="breadcrumb-item active">Tables</li>
+        </ol> -->
+        <!-- <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body">新規登録</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="#">従業員情報の追加</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    ボトルネック検索
+                </div>
+                <div class="card-body">
+                    <table frame="void">
+                        <tr>
+                            <td>
+                                <input type="text" name="cpuselect" list="cpulist" placeholder="CPU" autocomplete="off">
+                                <datalist id="cpulist">
+                                    <option value="サンプル1">
+                                    <option value="サンプル2">
+                                    <option value="サンプル3">
+                                </datalist>
+                                <label>×</label>
+                                <input type="text" name="gpulist" list="gpulist" placeholder="GPU" autocomplete="off">
+                                <datalist id="gpulist">
+                                    <option value="サンプル1">
+                                    <option value="サンプル2">
+                                    <option value="サンプル3">
+                                </datalist>
+                                <a class="btn btn-touroku" href="#">検索</a>
+                                <input type="checkbox" name="stock-only"><label>在庫に限定する</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="listtable sub1">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>CPU</th>
+                                <th>GPU</th>
+                                <th>バランス</th>
+                                <th>WQHD</th>
+                                <th>4K解像度</th>
+                                <th>ゲーム適正</th>
+                                <th>ゲーム配信</th>
+                                <th>動画編集</th>
+                                <th>エンコード</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tabletbody">
+                            <tr>
+                                <td>Core i7-10700K</td>
+                                <td>RTX2080 Ti</td>
+                                <td>○</td>
+                                <td></td>
+                                <td>◎</td>
+                                <td>S+</td>
+                                <td>◎</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Core i7-10700K</td>
+                                <td>RTX2080 Ti</td>
+                                <td>○</td>
+                                <td></td>
+                                <td>◎</td>
+                                <td>S+</td>
+                                <td>◎</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-touroku" href="#">新規登録</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
