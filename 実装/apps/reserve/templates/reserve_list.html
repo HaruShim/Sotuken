@@ -1,8 +1,8 @@
 <!-- S09-01 取置予約一覧
 
     ToDo
-        *画面の制作お願いします
-        *画面の確認
+        画面の制作お願いします
+        画面の確認
         *views.py、forms.pyの埋め込みタグを記述
         *画面の確認
         *画面のスタイル最終調整
@@ -15,4 +15,50 @@
 {% block title %}SIMS | 取置予約一覧{% endblock %}
 
 {% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">取置予約管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    取置予約一覧
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-touroku" href="#">新規登録</a>
+                    <table class="listtable sub1">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>ID</th>
+                                <th>型番</th>
+                                <th>取置店舗名</th>
+                                <th>予約者名</th>
+                                <th>連絡先</th>
+                                <th>予約日時</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>FMVU75EUV1</td>
+                                <td>店舗C</td>
+                                <td>佐藤祐樹</td>
+                                <td>000-0000-0000</td>
+                                <td>2021/12/11</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>FVMU75EUV1</td>
+                                <td>店舗A</td>
+                                <td>田中太郎</td>
+                                <td>000-0000-0000</td>
+                                <td>2021/12/13</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 {% endblock %}
