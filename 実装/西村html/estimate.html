@@ -42,7 +42,11 @@
                 </div>
                 <a class="btn btn-touroku estimate" href="#">お客様用見積画面へ</a>
                 <div class="card-body">
-                    <p>商品コード<input type="text" name="itemcode" placeholder="商品コード"><a class="btn btn-touroku" href="#">追加</a></p>
+                    <p>商品コード<input type="text" name="itemcode" placeholder="商品コード" autocomplete="on" list="itemcodelist">
+                        <datalist id="itemcodelist">
+                            <option value="aaa"></option>
+                        </datalist>
+                    <a class="btn btn-touroku" href="#">追加</a></p>
                     <table class="listtable">
                         <thead class="tablecolumn">
                             <tr>
