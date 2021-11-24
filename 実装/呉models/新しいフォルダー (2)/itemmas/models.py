@@ -3,15 +3,19 @@
 * DBの商品情報モデルにアクセスするためのモジュール
 
 Todo:
-    新満の確認
 
+    新満の確認
+    *〇〇_idは基本外部(ForeignKey)キーに修正
+    *カテゴリはchoiceのオプションをつけて下さい
+    *商品状態はchoiceのオプションをつけて下さい
+    *備考はTimeFieldではないので修正してください
+    
     *マイグレーションができるか確認
     *CSVファイルからデータをコピーできる
     *新満の最終確認
 
 """
 from django.db import models
-from django.contrib.auth.models import StoreInfo
 
 
 class ItemInfo(models.Model):
@@ -22,7 +26,7 @@ class ItemInfo(models.Model):
 
     """
     id = models.AutoField(verbose_name='商品コード', db_column='item_code', primary_key=True, editable=False)
-    store_id = models.ForeignKey(StoreInfo, verbose_name='店舗ID', on_delete=models.CASCADE)
+    store_id = models.IntegerField(verbose_name='店舗ID')
     model_number = models.CharField(verbose_name='型番', max_length=30)
     category = models.SmallIntegerField(verbose_name='カテゴリ')
     manufacturer_name = models.CharField(verbose_name='メーカー名', max_length=30)
