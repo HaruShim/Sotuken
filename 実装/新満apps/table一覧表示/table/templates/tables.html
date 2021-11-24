@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load humanize %}
+
+{% block title %}Tables - SB Admin{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Tables</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="{% url 'home:index' %}">Dashboard</a></li>
+            <li class="breadcrumb-item active">Tables</li>
+        </ol>
+        <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body">データ追加</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="{% url 'table:table_create' %}">View Details</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i>
+                DataTable Example
+            </div>
+            <div class="card-body">
+                <table id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>出入金</th>
+                            <th>日付</th>
+                            <th>品名</th>
+                            <th>ジャンル</th>
+                            <th>数量</th>
+                            <th>金額</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>出入金</th>
+                            <th>日付</th>
+                            <th>品名</th>
+                            <th>ジャンル</th>
+                            <th>数量</th>
+                            <th>金額</th>
+                        </tr>
+                    </tfoot>
+                    
+                    <tbody>
+                        {% for i in object_list %}
+                            <tr>
+                                <td><a href="{% url 'table:table_detail' i.pk %}">{{ i.get_choice_display }}</a></td>
+                                <td>{{i.date | date:"Y/m/d"}}</td>
+                                <td>{{i.title}}</td>
+                                <td>{{i.get_genre_display}}</td>
+                                <td>{{i.quanity}}</td>
+                                <td>{{ i.money }}¥</td>
+                                </a>
+                            </tr>
+                            {% empty %}
+                            <p>テーブルはありません。</p>
+                            {% endfor %}
+                        </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
