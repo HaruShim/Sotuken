@@ -19,6 +19,11 @@ class StoreInfo(models.Model):
     店舗情報モデル
 
     """
+    pcchoice = (
+        (0,'倉庫'),
+        (1,'店舗'),
+        (2,'その他'),
+    )
 
     store_id = models.SmallIntegerField(verbose_name='店舗ID')
     place_category = models.SmallIntegerField(verbose_name='場所カテゴリ',choices=pcchoice)
