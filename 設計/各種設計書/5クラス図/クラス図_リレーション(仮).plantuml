@@ -60,6 +60,8 @@ package "マスタ管理" as mastermana {
             -メモリ
             -HDD
             -SSD
+            -Office
+            -その他
         }
         ' コントローラ
         entity "セット商品情報一覧(商品情報一覧)" as セット一覧{}
