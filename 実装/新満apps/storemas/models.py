@@ -27,8 +27,7 @@ class StoreInfo(models.Model):
         (2,'その他'),
     )
 
-    # id = models.AutoField(verbose_name='店舗ID', db_column='store_id', primary_key=True, editable=False)
-    store_id = models.CharField(verbose_name='店舗名',max_length=3,editable=False)
+    id = models.CharField(verbose_name='店舗ID',db_column='store_id',max_length=3,primary_key=True,editable=False)
     place_category = models.SmallIntegerField(verbose_name='場所カテゴリ',choices=pcchoice)
     store_name = models.CharField(verbose_name='店舗名', max_length=40)
     address = models.TextField(verbose_name='住所')
