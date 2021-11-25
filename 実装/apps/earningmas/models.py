@@ -12,7 +12,12 @@
 """
 
 from django.db import models
-from django.contrib.auth.models import StoreInfo, ItemInfo, Employeemas
+# storemas から StoreInfoをインポート
+from storemas.models import StoreInfo
+# itemmasからItemInfoをインポート
+from itemmas.models import ItemInfo
+# employeemasからEmployeemasをインポート
+from employeemas.models import Employeemas
 
 class EarningInfo(models.Model):
 
