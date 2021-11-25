@@ -10,10 +10,11 @@ Todo:
 
 """
 from django.db import models
-from django.contrib.auth.models import StoreInfo
+#storemas から storeinfo をインポート
+from storemas.models import StoreInfo
 
 
-class Employeemas(models.Model):
+class EmployeeInfo(models.Model):
     """従業員情報モデル
     """
     id = models.AutoField(verbose_name='従業員ID', db_column='employee_id', primary_key=True, editable=False)
