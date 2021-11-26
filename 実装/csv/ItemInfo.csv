@@ -1,5 +1,5 @@
-id,model_number,category,manufacturer_name,item-status,purchase_price,item_image,remarks,created_at,updated_at,store_id
-541234157,X1 Carbon,0,Lenovo1,0,35000,,‚ ‚è,2021/11/10 12:14,2021/11/10 12:14,010
+item_code,model_number,category,manufacturer_name,item-status,purchase_price,item_image,remarks,created_at,updated_at,store_id
+041234157,X1 Carbon,0,Lenovo1,0,35000,,‚ ‚è,2021/11/10 12:14,2021/11/10 12:14,010
 541234158,X2 Carbon,1,Lenovo2,1,36000,,‚«‚ê‚¢,2021/11/11 12:14,2021/11/11 12:14,011
 541234159,X3 Carbon,2,Lenovo3,2,37000,,‚«‚½‚È‚¢,2021/11/12 12:14,2021/11/12 12:14,012
 541234160,X4 Carbon,3,Lenovo4,3,38000,,‚©‚í‚¢‚¢,2021/11/13 12:14,2021/11/13 12:14,013
