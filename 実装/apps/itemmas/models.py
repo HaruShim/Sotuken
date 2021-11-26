@@ -34,7 +34,7 @@ class ItemInfo(models.Model):
 
     # id = models.AutoField(verbose_name='商品コード', db_column='item_code', primary_key=True, editable=False)
     id = models.CharField(verbose_name='商品コード',db_column='item_code',max_length=9,primary_key=True,editable=False)
-    model_number = models.CharField(verbose_name='型番', max_length=60)
+    model_number = models.CharField(verbose_name='型番', max_length=30)
     category = models.SmallIntegerField(verbose_name='カテゴリ', choices=catchoice)
     manufacturer_name = models.CharField(verbose_name='メーカー名', max_length=30)
     item_status = models.CharField(verbose_name='商品状態', max_length=10)
