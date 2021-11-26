@@ -1,2 +1,5 @@
-model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,camera,wifi,optical_drive,graphic,os,remarks
-X1 Carbon,Corei5 8365U,0,256,12.1,1080,1920,1,1,0,intel HD graphics655,Windows10 Pro,kizu
+spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,camera,wifi,optical_drive,graphic,os
+0,X1 Carbon,Corei5 8365U,0,256,12.1,1080,1920,1,1,0,intel HD graphics655,Windows10 Pro
+1,X2 Carbon,Corei5 8366U,3.5,0,13,7680,4320,0,1,1,intel HD graphics656,–³‚µ
+2,X3 Carbon,Corei5 8367U,0,512,13.3,3840,2160,0,0,0,intel HD graphics657,Windows10 Pro
+3,–³‚µ,Corei5 8368U,1.8,0,0,0,0,1,0,1,intel HD graphics658,–³‚µ
