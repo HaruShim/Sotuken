@@ -34,7 +34,7 @@ class EmployeeInfo(models.Model):
 
 
     id = models.CharField(verbose_name='従業員ID',max_length=13,db_column='employee_id',primary_key=True,editable=False)
-    employment_status = models.CharField(verbose_name='雇用形態', max_length=5,choices=estachoice)
+    employment_status = models.SmallIntegerField(verbose_name='雇用形態',choices=estachoice)
     name = models.CharField(verbose_name='氏名',max_length=30)
     ruby_name = models.CharField(verbose_name='氏名(カナ)', max_length=30)
     tel_num = models.CharField(verbose_name='電話番号', max_length=13)
