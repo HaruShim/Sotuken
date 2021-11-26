@@ -1,6 +1,6 @@
-id,item_code,store_id,model_number,category,manufacturer_name,item-status,purchase_price,item_image,remarks,created_at,updated_at
-0,541234157,0,X1 Carbon,0,Lenovo1,0,35000,,èùÇ†ÇË,2021/11/10 12:14,2021/11/10 12:14
-1,541234158,0,X2 Carbon,1,Lenovo2,1,36000,,Ç´ÇÍÇ¢,2021/11/11 12:14,2021/11/11 12:14
-2,541234159,0,X3 Carbon,2,Lenovo3,2,37000,,Ç´ÇΩÇ»Ç¢,2021/11/12 12:14,2021/11/12 12:14
-3,541234160,0,X4 Carbon,3,Lenovo4,3,38000,,Ç©ÇÌÇ¢Ç¢,2021/11/13 12:14,2021/11/13 12:14
-4,541234161,0,X5 Carbon,4,Lenovo5,1,39000,,Ç≤Ç›,2021/11/14 12:14,2021/11/14 12:14
+id,model_number,category,manufacturer_name,item-status,purchase_price,item_image,remarks,created_at,updated_at,store_id
+541234157,X1 Carbon,0,Lenovo1,0,35000,,èùÇ†ÇË,2021/11/10 12:14,2021/11/10 12:14,010
+541234158,X2 Carbon,1,Lenovo2,1,36000,,Ç´ÇÍÇ¢,2021/11/11 12:14,2021/11/11 12:14,011
+541234159,X3 Carbon,2,Lenovo3,2,37000,,Ç´ÇΩÇ»Ç¢,2021/11/12 12:14,2021/11/12 12:14,012
+541234160,X4 Carbon,3,Lenovo4,3,38000,,Ç©ÇÌÇ¢Ç¢,2021/11/13 12:14,2021/11/13 12:14,013
+541234161,X5 Carbon,4,Lenovo5,1,39000,,Ç≤Ç›,2021/11/14 12:14,2021/11/14 12:14,013
