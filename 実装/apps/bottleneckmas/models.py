@@ -13,7 +13,6 @@ Todo:
 
 from django.db import models
 
-
 class Bottleneck(models.Model):
     
     """Bottleneck
