@@ -1,0 +1,412 @@
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.sidebar-search {
+    padding: 15px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+}
+
+/* サイドメニュー幅 */
+.sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
+    width: 225px;
+}
+
+li.sidebar-search {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+    padding: 0.5rem 1rem 0.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+    color: #9d9d9d;
+}
+.navbar-dark .navbar-brand {
+    color: #9d9d9d;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.py-4 {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+}
+
+
+/* サイドバーの項目のパディングを変更 */
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.sb-nav-fixed #layoutSidenav #layoutSidenav_content {
+    padding-left: 245px;
+    top: 56px;
+}
+
+.sb-sidenav .sb-sidenav-footer {
+    padding: 5px 5px 0px 5px;
+    flex-shrink: 0;
+}
+
+.mgl-12{
+    font-size: 18px;
+    margin-left: 12px;
+}
+.mgl-15{
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.sb-sidenav-footer .small{
+    padding-bottom: 15px;
+}
+
+.heading h1 {
+    text-align: center
+}
+
+thead.tablecolumn th{
+    background-color: #B0E3E6;
+}
+
+.dataTable-table th{
+    background-color: #B0E3E6;
+}
+
+/* 一覧テーブル */
+.listtable{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+.listtable th, td{
+    border: solid 1px;
+    padding: 10px;
+    font-size: 50%;
+}
+/* 商品一覧テーブル */
+.itemtable {
+    width: 500px;
+}
+/* .listtable.sub1{
+    width: 900px;
+} */
+/* .dataright {
+    text-align: right;
+} */
+.table-tbody td{
+    border: solid 1px;
+}
+/* #clear {
+    background-color: transparent;
+} */
+
+
+/* 詳細テーブル */
+/* .registertable th, td{
+    border: solid 1px;
+    padding: 10px;  
+}
+.registertable td {
+    width: 400px;
+}
+.registertable th {
+    background-color: #B0E3E6;
+    width: 160px;
+}
+.registertable{
+    border-collapse:  collapse;
+    width:  50%;
+    table-layout: fixed;
+} */
+
+/* 売上テーブル */
+/* .earningtable th, td{
+    border: solid 1px;
+    padding: 10px;  
+} */
+/* .earningtable td {
+    width: 300px;
+} */
+/* .earningtable th {
+    background-color: #B0E3E6;
+}
+.earningtable{
+    border-collapse:  collapse;
+    width:  100%;
+    table-layout: fixed;
+    font-size: 80%;
+} */
+
+/*  */
+/* .cleannesstable {
+    width: 800px;
+}
+.cleannesstable td{
+    border-width: 0;
+} */
+
+/* 登録完了テーブル */
+/* .tourokutable td {
+    background-color: #B0E3E6;
+    border: none;
+} */
+
+/* 背景 */
+/* .background {
+    background-color: #66CCCC;
+} */
+
+/* ボタン */
+.btn-main {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    width: 100px;
+}
+/* .btn-main.estimate {
+    width: 150px;
+} */
+.btn-small {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    width: 40px;
+    font-size: 5px;
+}
+.placement {
+    text-align: right;
+}
+
+/* 移動指示入力 */
+/* 移動先テーブル */
+.deliverytable td,th {
+    border: solid 1px;
+    font-size: 10%;
+}
+.deliverytable th {
+    background-color: #B0E3E6;
+}
+.deliverytable td {
+    height: 20px;
+}
+
+
+aside {
+    float: right;
+    position: relative;
+    width: 30%;
+}
+
+.summary {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 1rem;
+    position: fixed;
+    width: 300px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.summary-total-items {
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.summary-subtotal,
+.summary-total {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    clear: both;
+    margin: 1rem 0;
+    overflow: hidden;
+    padding: 0.5rem 0;
+}
+
+.subtotal-title,
+.subtotal-value,
+.total-title,
+.total-value,
+.promo-title,
+.promo-value {
+    color: #111;
+    float: left;
+    width: 50%;
+}
+
+.summary-promo {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.promo-title {
+    float: left;
+    width: 70%;
+}
+
+.promo-value {
+    color: #8B0000;
+    float: left;
+    text-align: right;
+    width: 30%;
+}
+  
+.summary-delivery {
+    padding-bottom: 3rem;
+}
+  
+.subtotal-value,
+  .total-value {
+    text-align: right;
+}
+
+.total-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+.summary-checkout {
+    display: block;
+}
+
+.checkout-cta {
+    display: block;
+    float: none;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.625rem 0;
+    width: 100%;
+}
+
+.summary-delivery-selection {
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    display: block;
+    font-size: 1rem;
+    height: 34px;
+    width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    aside,
+    .basket,
+    .summary,
+    .item,
+    .remove {
+        width: 100%;
+    }
+    .basket-labels {
+        display: none;
+    }
+    .basket-module {
+        margin-bottom: 1rem;
+    }
+    .item {
+        margin-bottom: 1rem;
+    }
+    .product-image {
+        width: 40%;
+    }
+    .product-details {
+        width: 60%;
+    }
+    .price,
+    .subtotal {
+        width: 33%;
+    }
+    .quantity {
+        text-align: center;
+        width: 34%;
+    }
+    .quantity-field {
+        float: none;
+    }
+    .remove {
+        bottom: 0;
+        text-align: left;
+        margin-top: 0.75rem;
+        position: relative;
+    }
+    .remove button {
+        padding: 0;
+    }
+    .summary {
+        margin-top: 1.25rem;
+        position: relative;
+    }
+}
+
+/* コンテンツの横並び */
+.contents {
+    overflow: hidden;
+}
+.item {
+    float: left;
+    padding: 20px 10px;
+    text-align: center;
+}
+.item_beside {
+    display: inline-block;
+}
+
+/* お客様用見積テーブル */
+/* .estimatetable th,td{
+    border: none;
+}
+.estimatetable {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+} */
+
