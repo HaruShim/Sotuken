@@ -11,12 +11,12 @@ Todo:
     *CSVファイルからデータをコピーできる
     *新満の最終確認
 
+
 """
 from django.db import models
 
-
-
 class GpuBench(models.Model):
+
     """GpuBench
 
     Gpuベンチマーク
@@ -37,6 +37,7 @@ class GpuBench(models.Model):
 
 
 class CpuBench(models.Model):
+    
     """CpuBench
 
     Cpuベンチマーク

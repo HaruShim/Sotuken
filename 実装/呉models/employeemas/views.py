@@ -1,6 +1,9 @@
+from django.db import models
 from django.views import generic
+from .models import EmployeeInfo
 
 class S0101View(generic.TemplateView):
+    models = EmployeeInfo
     template_name = "mas_employee_list.html"
 
 class S0102View(generic.TemplateView):
