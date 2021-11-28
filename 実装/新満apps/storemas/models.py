@@ -35,6 +35,7 @@ class StoreInfo(models.Model):
     invalid_flg = models.BooleanField(verbose_name='無効フラグ')
     created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='最終更新日時', auto_now=True)
+    
 
     class Meta:
         verbose_name_plural = '店舗情報モデル'
