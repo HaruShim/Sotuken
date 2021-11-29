@@ -112,6 +112,8 @@ li.sidebar-search {
 
 thead.tablecolumn th{
     background-color: #B0E3E6;
+    font-size: 90%;
+    text-align: center;
 }
 
 .dataTable-table th{
@@ -129,9 +131,24 @@ thead.tablecolumn th{
     padding: 10px;
     font-size: 50%;
 }
+/* 従業員一覧テーブル */
+.listtable.sub1 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.listtable.sub1 td {
+    text-align: center;
+}
 /* 商品一覧テーブル */
 .itemtable {
-    width: 500px;
+    width: 600px;
+    table-layout: fixed;
+}
+.itemtable th,td {
+    border: solid 1px;
+    padding: 10px;
+    font-size: 75%;
 }
 /* .listtable.sub1{
     width: 900px;
@@ -216,24 +233,38 @@ thead.tablecolumn th{
     color: #fff;
     background-color: #0d6efd;
     border-color: #0d6efd;
-    width: 40px;
     font-size: 5px;
+    border-radius: 50%;
 }
-.placement {
+/* テーブル内のボタンを配置したセルに適用 */
+#btn-cell {
+    padding: 2px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+/* 右に寄せる */
+.placement-right {
     text-align: right;
+    padding-bottom: 5px;
 }
 
 /* 移動指示入力 */
 /* 移動先テーブル */
+.deliverytable {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
 .deliverytable td,th {
     border: solid 1px;
+    padding: 10px;
     font-size: 10%;
 }
-.deliverytable th {
-    background-color: #B0E3E6;
-}
-.deliverytable td {
-    height: 20px;
+.scroll {
+    height: 200px;
+    width: 280px;
+    overflow: auto;
 }
 
 
@@ -249,6 +280,7 @@ aside {
     padding: 1rem;
     position: fixed;
     width: 300px;
+    height: 320px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -301,7 +333,8 @@ aside {
 }
   
 .summary-delivery {
-    padding-bottom: 3rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
   
 .subtotal-value,
