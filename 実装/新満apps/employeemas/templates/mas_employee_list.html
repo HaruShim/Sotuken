@@ -38,11 +38,12 @@
                                 <td>大原太郎</td>
                                 <td>店舗C</td>
                             </tr>
+                            <!-- EmployeeInfoモデルの一覧を表示 -->
                             {% for item in EmployeeInfo %}
                             <tr>
-                                <td>{{ item.id }}</td>
-                                <td>{{ item.name }}</td>
-                                <td>{{ item.store_id.store_name }}</td>
+                                <td>{{ item.id }}</td><!--従業員ID-->
+                                <td>{{ item.name }}</td><!--従業員名-->
+                                <td>{{ item.store_id.store_name }}</td><!--店舗-->
                             </tr>
                             {% endfor %}
                             <!-- <tr>

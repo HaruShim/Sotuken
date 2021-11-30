@@ -18,10 +18,11 @@
             <th>title</th>
             <th>author</th>
         </tr>
+        <!-- object_listモデルの一覧を表示 -->
         {% for book in object_list %}
         <tr>
-            <td>{{ book.title }}</td>
-            <td>{{ book.author }}</td>
+            <td>{{ book.title }}</td><!--title-->
+            <td>{{ book.author }}</td><!--author-->
         </tr>
         {% endfor %}
     </table>

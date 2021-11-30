@@ -60,18 +60,20 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- bottleneckモデルの一覧を表示 -->
                             {% for item in bottleneck %}
                             <tr>
-                                <td>{{ item.cpu_name }}</td>
-                                <td>{{ item.gpu_name }}</td>
-                                <td>{{ item.get_balance_display }}</td>
-                                <td>{{ item.get_wqhd_display  }}</td>
-                                <td>{{ item.get_four_k_display  }}</td>
-                                <td>{{ item.get_game_appropriate_display  }}</td>
-                                <td>{{ item.get_game_delivery_display  }}</td>
-                                <td>{{ item.get_video_editing_display  }}</td>
-                                <td>{{ item.get_encode_display  }}</td>
+                                <td>{{ item.cpu_name }}</td><!--CPU-->
+                                <td>{{ item.gpu_name }}</td><!--GPU-->
+                                <td>{{ item.get_balance_display }}</td><!--バランス-->
+                                <td>{{ item.get_wqhd_display  }}</td><!--WQHD-->
+                                <td>{{ item.get_four_k_display  }}</td><!--4K解像度-->
+                                <td>{{ item.get_game_appropriate_display  }}</td><!--ゲーム適性-->
+                                <td>{{ item.get_game_delivery_display  }}</td><!--ゲーム配信-->
+                                <td>{{ item.get_video_editing_display  }}</td><!--動画編集-->
+                                <td>{{ item.get_encode_display  }}</td><!--エンコード-->
                             </tr>
+                            <!-- DBが空だった場合 -->
                             {% empty %}
                             <p>空です</p>
                             {% endfor %}
