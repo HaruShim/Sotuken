@@ -42,11 +42,12 @@
                                 <td>店舗A</td>
                                 <td>佐藤太郎</td>
                             </tr>
+                            <!-- StoreInfoモデルの一覧を表示 -->
                             {% for item in StoreInfo %}
                             <tr>
-                                <td>{{ item.id }}</td>
-                                <td>{{ item.store_name }}</td>
-                                <td>{{ item.store_manager }}</td>
+                                <td>{{ item.id }}</td><!--店舗ID-->
+                                <td>{{ item.store_name }}</td><!--店舗名-->
+                                <td>{{ item.store_manager }}</td><!--店長-->
                             </tr>
                             {% endfor %}
                             <!-- { store_manager }} -->

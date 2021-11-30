@@ -39,6 +39,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- reserve_listモデルの一覧を表示 -->
                             {% for item in reserve_list %}
                             <tr>
                                 <td>{{ item.id }}</td> <!--ID-->
@@ -49,6 +50,7 @@
                                 <td>{{ item.reserver_tel }}</td> <!--連絡先-->
                                 <td>{{ item.reserve_at }}</td> <!--予約日時-->
                             </tr>
+                            <!-- DBが空だった場合 -->
                             {% empty %}
                             空です
                             {% endfor %}
