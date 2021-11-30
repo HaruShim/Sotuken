@@ -17,6 +17,7 @@
     background-color: #fff;
 }
 
+/* サイドメニュー幅 */
 .sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
     width: 225px;
 }
@@ -48,6 +49,11 @@ li.sidebar-search {
     border-radius: 4px;
     margin: 10px;
 }
+
+/* .card-body{
+    width: %;
+    vertical-align: middle;
+} */
 
 .sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
     padding: 0.5rem 1rem 0.5rem;
@@ -110,160 +116,367 @@ li.sidebar-search {
     text-align: center
 }
 
-
-
-
-
-
-.datatablesSimple th{
-    height: 700px;
-}
-
-.employee-table th,td{
-    border: solid 1px;
-    padding: 10px;
-}
-.employee-table th{
-    width: 160px;
-}
-.employee-table td{
-    width: 400px;
-}
-.employee-table{
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 560px;
-}
 thead.tablecolumn th{
+    background-color: #B0E3E6;
+    font-size: 90%;
+    text-align: center;
+}
+
+.dataTable-table th{
     background-color: #B0E3E6;
 }
 
-.card-body{
-    width: 560px;
-    vertical-align: middle;
+/* 一覧テーブル */
+.listtable{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
 }
-.center-button{
-    text-align:center;
-}
-
-
-.store-table th,td{
+.listtable th, td{
     border: solid 1px;
     padding: 10px;
+    font-size: 50%;
 }
-.store-table th{
+/* 従業員一覧テーブル */
+.listtable.sub1 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.listtable.sub1 td {
+    text-align: center;
+}
+/* 商品一覧テーブル */
+.itemtable {
+    width: 70%;
+    table-layout: fixed;
+}
+.itemtable th,td {
+    border: solid 1px;
+    padding: 10px;
+    font-size: 75%;
+}
+/* .listtable.sub1{
+    width: 900px;
+} */
+/* .dataright {
+    text-align: right;
+} */
+/* .table-tbody{
+    width: 30%;
+} */
+.table-tbody td{
+    border: solid 1px;
+    height: 5%;
+}
+/* #clear {
+    background-color: transparent;
+} */
+
+
+/* 詳細テーブル */
+/* .registertable th, td{
+    border: solid 1px;
+    padding: 10px;  
+}
+.registertable td {
+    width: 400px;
+}
+.registertable th {
+    background-color: #B0E3E6;
     width: 160px;
 }
-.store-table td{
-    width: 500px;
-}
-.store-table{
-    border-collapse: collapse;
+.registertable{
+    border-collapse:  collapse;
+    width:  50%;
     table-layout: fixed;
-    width: 660px;
+} */
+
+/* 売上テーブル */
+/* .earningtable th, td{
+    border: solid 1px;
+    padding: 10px;  
+} */
+/* .earningtable td {
+    width: 300px;
+} */
+/* .earningtable th {
+    background-color: #B0E3E6;
+}
+.earningtable{
+    border-collapse:  collapse;
+    width:  100%;
+    table-layout: fixed;
+    font-size: 80%;
+} */
+
+/*  */
+/* .cleannesstable {
+    width: 800px;
+}
+.cleannesstable td{
+    border-width: 0;
+} */
+
+/* 登録完了テーブル */
+/* .tourokutable td {
+    background-color: #B0E3E6;
+    border: none;
+} */
+
+/* 背景 */
+/* .background {
+    background-color: #66CCCC;
+} */
+
+/* ボタン */
+.btn-main {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    width: 100px;
+}
+/* .btn-main.estimate {
+    width: 150px;
+} */
+.btn-small {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    font-size: 5px;
+    border-radius: 50%;
+}
+/* テーブル内のボタンを配置したセルに適用 */
+#btn-cell {
+    padding: 2px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+/* 右に寄せる */
+.placement-right {
+    text-align: right;
+    padding-bottom: 5px;
 }
 
-.scorelist{
-    width: 150px;
+/* 移動指示入力 */
+/* 移動先テーブル */
+.deliverytable {
+    /* margin-top: 9%; */
+    margin-bottom: 9%;
+    margin-left: 0%;
 }
-.score-table th,td{
+.deliverytable td,th {
     border: solid 1px;
     padding: 10px;
-    height: 80px;
+    font-size: 10%;
 }
-.score-table th{
-    width: 150px;
+.deliverytable th {
+    background-color: #B0E3E6;
 }
-.score-table td{
-    width: 500px;
-}
-.score-table{
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 1000px;
-    padding: 50px;
-}
-
-
-
-/* itemmas */
-.item-image{
-    height: 250px;
-    width: 250px;
-}
-.image-content{
-    position: absolute;
-    text-align: center;
-    /* max-width:100%;
-    max-height:100%; */
-}
-
-.itemmas-table th,td{
-    border: solid 1px;
-    padding: 5px;
-    height: 50px;
-}
-.itemmas-table th{
-    width: 260px;
-}
-.itemmas-table td{
-    width: 500px;
-}
-
-.item-table{
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 760px;
-    /* padding: 50px; */
-}
-.spec-table{
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 760px;
-    padding-top: 20px;
-}
-
-.benchmark-table{
-    margin-left: 100px;
-    padding-top: 100px;
-    width: 900px;
-    height: 400px;
-}
-
-
-
-
-/* S07 */
-.my-container{
-    margin: 50px;
-}
-
-.parallel li{
-    list-style: none;
-    margin: 20px
-}
-
-.left-container{
-    position: relative;
-    float: left;
-    width: 45%;
-}
-.right-container{
-    float: right;
-    width: 55%;
-}
-
-
-.item-register-add{
-    border-collapse: collapse;
+.scroll {
     height: 200px;
-
-    position: absolute;
-    left: 50px;
-    bottom: 50px;
+    width: 280px;
+    overflow: auto;
 }
 
-/* center */
-.center{
+
+aside {
+    float: right;
+    position: relative;
+    width: 30%;
+}
+
+.summary {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 1rem;
+    position: fixed;
+    width: 300px;
+    height: 350px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 15%;
+}
+
+.summary-total-items {
+    color: #666;
+    font-size: 1rem;
     text-align: center;
 }
+
+.summary-subtotal,
+.summary-total {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    clear: both;
+    margin: 1rem 0;
+    overflow: hidden;
+    padding: 0.5rem 0;
+}
+
+.subtotal-title,
+.subtotal-value,
+.total-title,
+.total-value,
+.promo-title,
+.promo-value {
+    color: #111;
+    float: left;
+    width: 50%;
+}
+
+.summary-promo {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.promo-title {
+    float: left;
+    width: 70%;
+}
+
+.promo-value {
+    color: #8B0000;
+    float: left;
+    text-align: right;
+    width: 30%;
+}
+  
+.summary-delivery {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+  
+.subtotal-value,
+  .total-value {
+    text-align: right;
+}
+
+.total-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+.summary-checkout {
+    display: block;
+}
+
+.checkout-cta {
+    display: block;
+    float: none;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.625rem 0;
+    width: 100%;
+}
+
+.summary-delivery-selection {
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    display: block;
+    font-size: 1rem;
+    height: 34px;
+    width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    aside,
+    .basket,
+    .summary,
+    .item,
+    .remove {
+        width: 100%;
+    }
+    .basket-labels {
+        display: none;
+    }
+    .basket-module {
+        margin-bottom: 1rem;
+    }
+    .item {
+        margin-bottom: 1rem;
+    }
+    .product-image {
+        width: 40%;
+    }
+    .product-details {
+        width: 60%;
+    }
+    .price,
+    .subtotal {
+        width: 33%;
+    }
+    .quantity {
+        text-align: center;
+        width: 34%;
+    }
+    .quantity-field {
+        float: none;
+    }
+    .remove {
+        bottom: 0;
+        text-align: left;
+        margin-top: 0.75rem;
+        position: relative;
+    }
+    .remove button {
+        padding: 0;
+    }
+    .summary {
+        margin-top: 1.25rem;
+        position: relative;
+        float: left;
+        padding: 10% 10%;
+        text-align: center;
+    }
+}
+
+/* コンテンツの横並び */
+.contents {
+    overflow: hidden;
+}
+.item {
+    float: left;
+    padding: 20px 10px;
+    text-align: center;
+    width: 60%;
+}
+.item-cart {
+    float: left;
+    padding: 10% 5%;
+    text-align: center;
+    /* height: 30%;  */
+    /* width: 30%; */
+    /* margin-bottom: 60%; */
+}
+.item_beside {
+    display: inline-block;
+}
+.fixed01{
+    position: sticky;
+    top: 0;
+    /* &:before{
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ccc;
+    } */
+  }
+/* お客様用見積テーブル */
+/* .estimatetable th,td{
+    border: none;
+}
+.estimatetable {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+} */
