@@ -49,6 +49,7 @@
                             </tr>
                         </thead>
                         <tbody class="tabletbody">
+                            <!-- benchmark_searchモデルの一覧を表示 -->
                             {% for item in cpubench_list %}
                             <tr>
                                 <td>{{ item.cpu_name }}</td> <!--CPU名称-->
@@ -61,6 +62,7 @@
                                 <td>{{ item.list_price }}¥</td> <!--定価-->
                                 <td>{{ item.cost_performance }}<td> <!--コスパ-->
                             </tr>
+                            <!-- DBが空だった場合 -->
                             {% empty %}
                             空です
                             {% endfor %}
