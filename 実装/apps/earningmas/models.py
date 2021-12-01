@@ -30,7 +30,7 @@ class EarningInfo(models.Model):
     selling_price = models.IntegerField(verbose_name='販売価格')
     gross_profit = models.IntegerField(verbose_name='粗利')
     gross_profit_margin = models.FloatField(verbose_name='粗利率')
-    sale_date = models.DateTimeField(verbose_name='販売日', auto_now_add=True)
+    sale_date = models.DateField(verbose_name='販売日', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='最終更新日時', auto_now=True)
     item_code = models.ForeignKey(ItemInfo,db_column='item_code',verbose_name='商品コード', on_delete=models.CASCADE)
     store_id = models.ForeignKey(StoreInfo,db_column='store_id',verbose_name='店舗ID', on_delete=models.CASCADE)

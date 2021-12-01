@@ -46,6 +46,9 @@ class ItemInfo(models.Model):
 
     class Meta:
         verbose_name_plural = '商品情報モデル'
+    
+    def __str__(self):
+        return self.id
 
 class ItemSpecification(models.Model):
 
@@ -67,3 +70,6 @@ class ItemSpecification(models.Model):
     optical_drive = models.BooleanField(verbose_name='光学ドライブ',default=0)
     graphic = models.CharField(verbose_name='グラフィック',default='無し',blank=True,max_length=40)
     os = models.CharField(verbose_name='OS',default='無し',blank=True,max_length=40)
+
+    class Meta:
+        verbose_name_plural = '商品スペックモデル'
