@@ -8,8 +8,8 @@ Todo:
 
 from django.views import generic
 
-class S0701View(generic.TemplateView):
-    """S0701View
+class S0801View(generic.TemplateView):
+    """S0801View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
 
@@ -19,8 +19,8 @@ class S0701View(generic.TemplateView):
     """
     template_name = "set_item_list.html"
 
-class S0702View(generic.TemplateView):
-    """S0702View
+class S0802View(generic.TemplateView):
+    """S0802View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
 
@@ -30,8 +30,8 @@ class S0702View(generic.TemplateView):
     """
     template_name = "set_item_register.html"
 
-class S0703View(generic.TemplateView):
-    """S0703View
+class S0803View(generic.TemplateView):
+    """S0803View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
 
@@ -41,8 +41,8 @@ class S0703View(generic.TemplateView):
     """
     template_name = "set_item_detail.html"
 
-class S0704View(generic.TemplateView):
-    """S0704View
+class S0804View(generic.TemplateView):
+    """S0804View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
 

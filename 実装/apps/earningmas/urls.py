@@ -11,7 +11,7 @@ Todo:
 from django.urls import path
 from . import views
 
-appname = 'earningmas'
+app_name = 'earningmas'
 urlpatterns = [
     path('S04-01/',views.S0401View.as_view(),name = "S04-01"),
     path('S04-02/',views.S0402View.as_view(),name = "S04-02"),

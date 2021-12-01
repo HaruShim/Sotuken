@@ -13,7 +13,7 @@ Todo:
 from django.urls import path
 from . import views
 
-appname = 'itemmas'
+app_name = 'itemmas'
 urlpatterns = [
     path('S03-01/',views.S0301View.as_view(),name = "S03-01"),
     # path('S03-02/',views.S0302View.as_view(),name = "S03-02"),
