@@ -1,21 +1,55 @@
-from django.views.generic import TemplateView,ListView
-from benchmas.models import CpuBench,GpuBench
-from bottleneckmas.models import Bottleneck
-from itemmas.models import ItemInfo
+"""stock.views
+* リクエストに対してhtml形式のレスポンスを返す
 
-class S0801View(ListView):
-    template_name = "item_search.html"
-    model = ItemInfo
-    paginate_by = 12
+Todo:
+    * 
 
-class S0802View(ListView):
-    template_name = "bottleneck_search.html"
-    model = Bottleneck
-    paginate_by = 12
+"""
 
-class S0803View(ListView):
-    template_name = "benchmark_search.html"
-    model = CpuBench
-    paginate_by = 12
+from django.views import generic
+
+class S0701View(generic.TemplateView):
+    """S0701View
+
+    レスポンスをフォーム、モデル、テンプレートなどから生成する
+
+    Attributes:
+        name (): 
+
+    """
+    template_name = "set_item_list.html"
+
+class S0702View(generic.TemplateView):
+    """S0702View
+
+    レスポンスをフォーム、モデル、テンプレートなどから生成する
+
+    Attributes:
+        name (): 
+
+    """
+    template_name = "set_item_register.html"
+
+class S0703View(generic.TemplateView):
+    """S0703View
+
+    レスポンスをフォーム、モデル、テンプレートなどから生成する
+
+    Attributes:
+        name (): 
+
+    """
+    template_name = "set_item_detail.html"
+
+class S0704View(generic.TemplateView):
+    """S0704View
+
+    レスポンスをフォーム、モデル、テンプレートなどから生成する
+
+    Attributes:
+        name (): 
+
+    """
+    template_name = "set_item_edit.html"
 
 
