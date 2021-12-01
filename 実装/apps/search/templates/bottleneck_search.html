@@ -57,28 +57,23 @@
                             </tr>
                         </thead>
                         <tbody class="tabletbody">
+                            {% for item in bottleneck_list %}
                             <tr>
-                                <td>Core i7-10700K</td>
-                                <td>RTX2080 Ti</td>
-                                <td>○</td>
-                                <td></td>
-                                <td>◎</td>
-                                <td>S+</td>
-                                <td>◎</td>
-                                <td></td>
-                                <td></td>
+                                <td>{{ item.cpu_name }}</td>
+                                <td>{{ item.gpu_name }}</td>
+                                <td>{{ item.get_balance_display }}</td>
+                                <td>{{ item.get_wqhd_display  }}</td>
+                                <td>{{ item.get_four_k_display  }}</td>
+                                <td>{{ item.get_game_appropriate_display  }}</td>
+                                <td>{{ item.get_game_delivery_display  }}</td>
+                                <td>{{ item.get_video_editing_display  }}</td>
+                                <td>{{ item.get_encode_display  }}</td>
                             </tr>
-                            <tr>
-                                <td>Core i7-10700K</td>
-                                <td>RTX2080 Ti</td>
-                                <td>○</td>
-                                <td></td>
-                                <td>◎</td>
-                                <td>S+</td>
-                                <td>◎</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            {% empty %}
+                            <p>空です</p>
+                            {% endfor %}
+                            <!-- <tr><td>Core i7-10700K</td><td>RTX2080 Ti</td><td>○</td><td></td><td>◎</td><td>S+</td><td>◎</td><td></td><td></td></tr>
+                            <tr><td>Core i7-10700K</td><td>RTX2080 Ti</td><td>○</td><td></td><td>◎</td><td>S+</td><td>◎</td><td></td><td></td></tr> -->
                         </tbody>
                     </table>
                     <a class="btn btn-touroku" href="#">新規登録</a>
