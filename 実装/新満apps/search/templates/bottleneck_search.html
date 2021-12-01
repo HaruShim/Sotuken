@@ -57,6 +57,7 @@
                             </tr>
                         </thead>
                         <tbody class="tabletbody">
+                            <!-- bottleneck_searchモデルの一覧を表示 -->
                             {% for item in bottleneck_list %}
                             <tr>
                                 <td>{{ item.cpu_name }}</td>
@@ -69,6 +70,7 @@
                                 <td>{{ item.get_video_editing_display  }}</td>
                                 <td>{{ item.get_encode_display  }}</td>
                             </tr>
+                            <!-- DBが空だった場合 -->
                             {% empty %}
                             <p>空です</p>
                             {% endfor %}
