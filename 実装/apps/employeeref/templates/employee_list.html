@@ -28,22 +28,24 @@
                     <table class="listtable">
                         <thead class="tablecolumn">
                             <tr>
+                                <th style="width:50px;" ></th>
                                 <th>従業員ID</th>
                                 <th>従業員名</th>
                                 <th>店舗</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- employeeinfo_listモデルの一覧を表示 -->
+                            {% for item in employeeinfo_list %}
                             <tr>
-                                <td>123456789</td>
-                                <td>大原太郎</td>
-                                <td>店舗C</td>
+                                <td style="text-align: center;"></td>
+                                <td>{{ item.id }}</td><!--従業員ID-->
+                                <td>{{ item.name }}</td><!--従業員名-->
+                                <td>{{ item.store_id.store_name }}</td><!--店舗-->
                             </tr>
-                            <tr>
-                                <td>012345678</td>
-                                <td>田中太郎</td>
-                                <td>店舗A</td>
-                            </tr>
+                            {% endfor %}
+                            <!-- <tr><td>123456789</td><td>大原太郎</td><td>店舗C</td>                            </tr>
+                            <tr><td>012345678</td><td>田中太郎</td><td>店舗A</td>                            </tr> -->
                         </tbody>
                     </table>
                 </div>

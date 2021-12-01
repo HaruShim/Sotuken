@@ -8,6 +8,7 @@
 
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %}
 {% block title %}SIMS | ベンチマーク一覧{% endblock %}
 
 {% block main_contents %}
@@ -42,7 +43,7 @@
                         <table id="example" class="display">
                             <thead>
                                 <tr>
-                                    <th style="width:50px;">CPU名称</th>
+                                    <th>CPU名称</th>
                                     <th>PassMark</th>
                                     <th>コア</th>
                                     <th>スレッド</th>
@@ -54,12 +55,27 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>Raizen 9 5950X</td><td>46132</td><td>16</td><td>32</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>106500円</td><td>0.43</td></tr>
+                                <!-- CpuBenchモデルの一覧を表示 -->
+                                {% for item in cpubench_list %}
+                                <tr>
+                                    <td>{{ item.cpu_name }}</td> <!--CPU名称-->
+                                    <td>{{ item.passmark }}</td> <!--PassMark-->
+                                    <td>{{ item.core }}</td> <!--コア-->
+                                    <td>{{ item.thread }}</td> <!--スレッド-->
+                                    <td>{{ item.tdp }} W</td> <!--TDP-->
+                                    <td>{{ item.rated_clock }} GHz</td> <!--定格クロック-->
+                                    <td>{{ item.max_clock }} GHz</td> <!--最大クロック-->
+                                    <td>{{ item.list_price }}¥</td> <!--定価-->
+                                    <td>{{ item.cost_performance }}<td> <!--コスパ-->
+                                </tr>
+                                <!-- DBが空だった場合 -->
+                                {% empty %}
+                                空です
+                                {% endfor %}
+                                <!-- <tr><td>Raizen 9 5950X</td><td>46132</td><td>16</td><td>32</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>106500円</td><td>0.43</td></tr>
                                 <tr><td>Raizen 8</td><td>30000</td><td>8</td><td>16</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>5000円</td><td>0.43</td></tr>
                                 <tr><td>Raiznsikasiran</td><td>20222</td><td>16</td><td>32</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>3744円</td><td>0.43</td></tr>
-                                <tr><td>cpuwakaran</td><td>11111</td><td>16</td><td>32</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>106500円</td><td>0.43</td></tr>
-
-            
+                                <tr><td>cpuwakaran</td><td>11111</td><td>16</td><td>32</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>106500円</td><td>0.43</td></tr> -->
                             </tbody>
                         </table>
                     </div>

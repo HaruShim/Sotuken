@@ -74,7 +74,35 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- EarningInfoモデルの一覧を表示 -->
+                            {% for item in EarningInfo %}
                             <tr>
+                                <td class="tamesi-id">{{ item.id }}</td>        <!--伝票番号-->
+                                <td>{{ item.sale_date | date:"Y/m/d"}}</td> <!--販売日(2021/11/11)-->
+                                <!-- <td>{ item.sale_date}}</td> -->        <!--販売日(2021年11月11日)-->
+                                <td>{{ item.item_code }}</td><!--商品コード-->
+                                <td>{{ item.item_code.model_number }}</td><!--型番-->
+                                <td class="td-right">{{ item.item_code.purchase_price }}¥</td><!--仕入価格-->
+                                <td class="td-right">{{ item.selling_price }}¥</td><!--販売価格-->
+                                <td class="td-right">{{ item.gross_profit }}¥</td><!--粗利-->
+                                <td>{{ item.gross_profit_margin }}%</td><!--粗利率-->
+                                <td>{{ item.store_id.store_name }}</td><!--販売店舗-->
+                                <td>{{ item.employee_id.name }}</td><!--担当者-->
+                            </tr>
+                            {% endfor %}
+                            <!-- <tr>
+                                <td>123456789</td>
+                                <td>2020/10/31</td>
+                                <td>123456789</td>
+                                <td>123456789</td>
+                                <td>3000円</td>
+                                <td>4000円</td>
+                                <td></td>
+                                <td></td>
+                                <td>店舗A</td>
+                                <td>大原太郎</td>
+                            </tr> -->
+                            <!-- <tr>
                                 <td>123456789</td>
                                 <td>2020/10/31</td>
                                 <td>123456789</td>
@@ -97,18 +125,7 @@
                                 <td></td>
                                 <td>店舗A</td>
                                 <td>大原太郎</td>
-                            </tr><tr>
-                                <td>123456789</td>
-                                <td>2020/10/31</td>
-                                <td>123456789</td>
-                                <td>123456789</td>
-                                <td>3000円</td>
-                                <td>4000円</td>
-                                <td></td>
-                                <td></td>
-                                <td>店舗A</td>
-                                <td>大原太郎</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
