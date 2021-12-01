@@ -1,22 +1,17 @@
-"""sales_information_management.urls
-
-* システムとアプリをルーティングするモジュール
-
-Todo:
-
-    ※追加(各自で試すアプリ)はそれぞれで追加してください
-    ※各自で追加したものはローカルでのみ使用
-
-"""
 
 from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),# 管理者サイト
-
-    path('',include('home.urls')),#ホーム画面
+    path('admin/', admin.site.urls),
+    path('',include('home.urls')),
     
+    #システムで使う予定のないアプリ  
+    path('tamesi/',include('tamesi.urls')),
+    path('aa/',include('aaaaa.urls')),
+    path('book/',include('books.urls')),
+    
+    # システムでしようするアプリ
     path('F01/',include('employeemas.urls')),# 従業員マスタ
     path('F02/',include('storemas.urls')),# 店舗マスタ
     path('F03/',include('itemmas.urls')),# 商品マスタ

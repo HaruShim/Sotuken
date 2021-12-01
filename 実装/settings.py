@@ -27,7 +27,7 @@ SECRET_KEY = 'h$coddi+k_sflw77$1_kiaj-jpxbt6*rb1lskrl-srtuqn%ki6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 
     # システムで使用するアプリ
     'home.apps.HomeConfig', # アカウント
-    'accounts.apps.AccountsConfig', # アカウント
+    # 'accounts.apps.AccountsConfig', # アカウント
     'employeemas.apps.EmployeemasConfig', # 従業員マスタ
     'storemas.apps.StoremasConfig', # 店舗マスタ
     'itemmas.apps.ItemmasConfig', # 商品マスタ
@@ -59,10 +59,18 @@ INSTALLED_APPS = [
     'workstatus.apps.WorkstatusConfig', # 勤務状況参照
     
 
+    # 個人の試しアプリケーション
+    # 'bottletamesi.apps.BottletamesiConfig',
+    'tamesi.apps.TamesiConfig',
+    'aaaaa.apps.AaaaaConfig',
+    'books.apps.BooksConfig',
+
     # django-allauthに必要なもの
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -108,12 +116,21 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     },
+    #     'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'database-1',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'SIMUserShin',
+    #     'HOST': '34.199.194.170',
+    #     'PORT': '5432',
+    # },
+    # 外部DBに接続するための変数
     # 'otherdb': {
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'sales_information_management',
+    #     'NAME': 'SIM',
     #     'USER': 'postgres',
-    #     'PASSWORD': 'postgres',
-    #     'HOST': '10.250.2.53',
+    #     'PASSWORD': 'Postgres',
+    #     'HOST': '10.250.2.87',
     #     'PORT': '5432',
     # }
 }
@@ -168,7 +185,9 @@ MEDIA_DIR = (
     os.path.join(BASE_DIR, "media"),
 )
 
-
+# 表示する数値に3桁のカンマ区切りを自動で入れる
+NUMBER_GROUPING = 3
+USE_THOUSAND_SEPARATOR = True
 
 # ロギング設定
 LOGGING = {
