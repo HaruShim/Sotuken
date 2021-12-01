@@ -1,0 +1,54 @@
+<!-- S12-01 従業員情報一覧
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 従業員情報一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">従業員一覧</h1>        
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    従業員情報一覧
+                </div>
+                <div class="card-body">
+                    <table class="listtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>従業員ID</th>
+                                <th>従業員名</th>
+                                <th>店舗</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>123456789</td>
+                                <td>大原太郎</td>
+                                <td>店舗C</td>
+                            </tr>
+                            <tr>
+                                <td>012345678</td>
+                                <td>田中太郎</td>
+                                <td>店舗A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
