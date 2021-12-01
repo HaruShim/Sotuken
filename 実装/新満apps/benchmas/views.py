@@ -1,5 +1,4 @@
 """benchmas.views
-
 * リクエストに対してhtml形式のレスポンスを返す
 
 Todo:
