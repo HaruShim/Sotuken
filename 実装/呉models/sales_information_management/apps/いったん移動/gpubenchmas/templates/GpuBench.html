@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+{% for GpuBench in gpubenchmas_gpubench %}
+<p>{{ GpuBench.gpu_bench_id }}</p>
+<p>{{ GpuBench.gpu_name }}</p>
+<p>{{ GpuBench.marktimespygraphics }}</p>
+<p>{{ GpuBench.tdp }}</p>
+{% endfor %}
+{% endblock %}

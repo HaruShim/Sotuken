@@ -1,0 +1,112 @@
+<!-- S03-01 商品情報一覧
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 商品情報一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">商品管理</h1>
+        <!-- <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="# url 'home:index' %}">Dashboard</a></li>
+            <li class="breadcrumb-item active">Tables</li>
+        </ol> -->
+        <!-- <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body">新規登録</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="#">従業員情報の追加</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    商品情報一覧
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-touroku" href="#">検索</a>
+                    <a class="btn btn-touroku" href="#">新規登録</a>
+                    <div class="content">
+                        <div class="item">
+                            <table class="listtable">
+                                <thead class="tablecolumn">
+                                    <tr>
+                                        <th>商品コード</th>
+                                        <th>型番</th>
+                                        <th>カテゴリ</th>
+                                        <th>在庫場所</th>
+                                        <th>仕入価格</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>123456789</td>
+                                        <td>FMVU75EUV1</td>
+                                        <td>ノートPC</td>
+                                        <td>店舗A</td>
+                                        <td>12,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>234567891</td>
+                                        <td>FMVU75DFV1</td>
+                                        <td>デスクトップ</td>
+                                        <td>店舗B</td>
+                                        <td>23,500</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="item">
+                            <aside>
+                                <div class="summary">
+                                    <div class="summary-total-items"><span class="total-items"></span>移動指示入力</div>
+                                    <table class="deliverytable">
+                                        <thead>
+                                            <tr>
+                                                <th>商品コード</th>
+                                                <th>型番</th>
+                                                <th>在庫場所</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>123456789</td>
+                                                <td>FMVU75EUV1</td>
+                                                <td>店舗A</td>
+                                                <td style="border:none;">
+                                                    <a class="btn btn-small" href="#">削除</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="summary-delivery">
+                                        <select name="delivery-collection" class="summary-delivery-selection">
+                                            <option hidden>移動先選択</option>
+                                            <option value="">店舗A</option>
+                                            <option value="">店舗B</option>
+                                        </select>
+                                    </div>
+                                    <a class="btn btn-touroku" href="#">決定</a>
+                                  </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
