@@ -336,6 +336,19 @@ thead.tablecolumn th{
     font-size: 5px;
     border-radius: 50%;
 }
+.btn-add {
+    color: #fff;
+    background-color: #ff7f50;
+    border-color: #ff7f50;
+    font-size: 5px;
+    border-radius: 50%;
+}
+td.btn-add-cell {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    width: 10%;
+}
 /* テーブル内のボタンを配置したセルに適用 */
 #btn-cell {
     padding: 2px;
