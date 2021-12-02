@@ -15,6 +15,6 @@ from . import views
 
 app_name = 'employeeref'
 urlpatterns = [
-    path('S12-01/',views.S1201View.as_view(),name = "S12-01"),
-    path('S12-02/',views.S1202View.as_view(),name = "S12-02"),
+    path('S12-01/',views.S1201View.as_view(),name = "S12-01"), #従業員情報一覧
+    path('S12-02/',views.S1202View.as_view(),name = "S12-02"), #従業員情報詳細
 ]
