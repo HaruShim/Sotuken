@@ -75,7 +75,7 @@
                             マスタ管理
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse2" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 <a class="nav-link" href="{% url 'employeemas:S01-01' %}">
                                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
@@ -101,11 +101,12 @@
                                     <div class="sb-nav-link-icon"><i class="fas fa-random"></i></div>
                                     ボトルネックマスタ
                                 </a> 
+                            </nav>
                         </div>
 
 
                         <div class="sb-sidenav-menu-heading">商品情報管理</div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages2" aria-expanded="false" aria-controls="collapsePages">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages2" aria-expanded="false" aria-controls="collapsePages2">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             商品情報管理
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -137,13 +138,12 @@
                         </div>
 
                         <div class="sb-sidenav-menu-heading">人事情報管理</div>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages3" aria-expanded="false" aria-controls="collapsePages">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages3" aria-expanded="false" aria-controls="collapsePages3">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             人事情報管理
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapsePages3" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 <a class="nav-link" href="{% url 'employeeref:S12-01' %}">
                                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
@@ -161,7 +161,7 @@
                         </div>
 
                         
-                        <!-- { if user.is_superuser %} -->
+                        {% if user.is_superuser %}
                         <!-- S00 飛ばしてるよ-->
                         <!-- <a class="nav-link" href="{% url 'home:home' %}">
                             <div class="sb-nav-link-icon"></div>
@@ -179,250 +179,389 @@
                         </a> -->
 
                         <!-- S01 -->
-                        <a class="nav-link" href="{% url 'employeemas:S01-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            従業員一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S01" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            従業員マスタ
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S01" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'employeemas:S01-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    従業員一覧
+                                </a>
 
-                        <a class="nav-link" href="{% url 'employeemas:S01-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            従業員新規登録
-                        </a>
+                                <a class="nav-link" href="{% url 'employeemas:S01-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    従業員新規登録
+                                </a>
 
-                        <a class="nav-link" href="{% url 'employeemas:S01-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            従業員詳細
-                        </a>
+                                <a class="nav-link" href="{% url 'employeemas:S01-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    従業員詳細
+                                </a>
 
-                        <a class="nav-link" href="{% url 'employeemas:S01-04' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            従業員編集
-                        </a>
+                                <a class="nav-link" href="{% url 'employeemas:S01-04' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    従業員編集
+                                </a>
 
-                        <a class="nav-link" href="{% url 'employeemas:S01-05' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            従業員登録完了
-                        </a>
+                                <a class="nav-link" href="{% url 'employeemas:S01-05' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    従業員登録完了
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S02 -->
-                        <a class="nav-link" href="{% url 'storemas:S02-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            店舗情報一覧
-                        </a>
                         
-                        <a class="nav-link" href="{% url 'storemas:S02-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            店舗情報新規登録
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S02" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            店舗マスタ
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S02" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'storemas:S02-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    店舗情報一覧
+                                </a>
+                                
+                                <a class="nav-link" href="{% url 'storemas:S02-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    店舗情報新規登録
+                                </a>
 
-                        <a class="nav-link" href="{% url 'storemas:S02-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            店舗情報詳細
-                        </a>
+                                <a class="nav-link" href="{% url 'storemas:S02-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    店舗情報詳細
+                                </a>
 
-                        <a class="nav-link" href="{% url 'storemas:S02-04' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            編集
-                        </a>
+                                <a class="nav-link" href="{% url 'storemas:S02-04' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    編集
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S03 -->
-                        <a class="nav-link" href="{% url 'itemmas:S03-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            商品情報一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S03" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            商品マスタ
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S03" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'itemmas:S03-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    商品情報一覧
+                                </a>
 
-                        <a class="nav-link" href="{% url 'itemmas:S03-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            商品情報新規登録
-                        </a>
+                                <a class="nav-link" href="{% url 'itemmas:S03-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    商品情報新規登録
+                                </a>
 
-                        <a class="nav-link" href="{% url 'itemmas:S03-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            商品情報詳細
-                        </a>
+                                <a class="nav-link" href="{% url 'itemmas:S03-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    商品情報詳細
+                                </a>
 
-                        <a class="nav-link" href="{% url 'itemmas:S03-04' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            商品情報編集
-                        </a>
+                                <a class="nav-link" href="{% url 'itemmas:S03-04' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    商品情報編集
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S04 -->
-                        <a class="nav-link" href="{% url 'earningmas:S04-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            売上情報一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S04" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            売上マスタ
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S04" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'earningmas:S04-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    売上情報一覧
+                                </a>
 
-                        <a class="nav-link" href="{% url 'earningmas:S04-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            売上情報詳細(画面無し)
-                        </a>
+                                <a class="nav-link" href="{% url 'earningmas:S04-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    売上情報詳細(画面無し)
+                                </a>
 
-                        <a class="nav-link" href="{% url 'earningmas:S04-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            売上情報編集 (返品・返金)
-                        </a>
+                                <a class="nav-link" href="{% url 'earningmas:S04-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    売上情報編集 (返品・返金)
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S05 -->
-                        <a class="nav-link" href="{% url 'benchmas:S05-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            ベンチマーク一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S05" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            ベンチマークスタ
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S05" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'benchmas:S05-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    ベンチマーク一覧
+                                </a>
 
-                        <a class="nav-link" href="{% url 'benchmas:S05-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            CPUベンチマーク新規登録
-                        </a>
+                                <a class="nav-link" href="{% url 'benchmas:S05-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    CPUベンチマーク新規登録
+                                </a>
 
-                        <a class="nav-link" href="{% url 'benchmas:S05-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            GPUベンチマーク新規登録
-                        </a>
+                                <a class="nav-link" href="{% url 'benchmas:S05-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    GPUベンチマーク新規登録
+                                </a>
 
-                        <a class="nav-link" href="{% url 'benchmas:S05-04' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            CPUベンチマーク編集
-                        </a>
+                                <a class="nav-link" href="{% url 'benchmas:S05-04' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    CPUベンチマーク編集
+                                </a>
 
-                        <a class="nav-link" href="{% url 'benchmas:S05-05' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            GPUベンチマーク編集
-                        </a>
+                                <a class="nav-link" href="{% url 'benchmas:S05-05' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    GPUベンチマーク編集
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S06 -->
-                        <a class="nav-link" href="{% url 'bottleneckmas:S06-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            ボトルネック一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S06" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            ボトルネックマスタ
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S06" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'bottleneckmas:S06-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    ボトルネック一覧
+                                </a>
 
-                        <a class="nav-link" href="{% url 'bottleneckmas:S06-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            ボトルネック新規登録
-                        </a>
+                                <a class="nav-link" href="{% url 'bottleneckmas:S06-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    ボトルネック新規登録
+                                </a>
 
-                        <a class="nav-link" href="{% url 'bottleneckmas:S06-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            ボトルネック編集
-                        </a>
+                                <a class="nav-link" href="{% url 'bottleneckmas:S06-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    ボトルネック編集
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S07 -->
-                        <a class="nav-link" href="{% url 'stock:S07-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            セット商品一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S07" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            在庫
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S07" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'stock:S07-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    セット商品一覧
+                                </a>
 
-                        <a class="nav-link" href="{% url 'stock:S07-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            セット商品新規登録
-                        </a>
+                                <a class="nav-link" href="{% url 'stock:S07-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    セット商品新規登録
+                                </a>
 
-                        <a class="nav-link" href="{% url 'stock:S07-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            セット商品詳細
-                        </a>
+                                <a class="nav-link" href="{% url 'stock:S07-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    セット商品詳細
+                                </a>
 
-                        <a class="nav-link" href="{% url 'stock:S07-04' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            セット商品編集
-                        </a>
+                                <a class="nav-link" href="{% url 'stock:S07-04' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    セット商品編集
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S08 -->
-                        <a class="nav-link" href="{% url 'search:S08-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            商品検索
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S08" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            検索
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S08" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'search:S08-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    商品検索
+                                </a>
 
-                        <a class="nav-link" href="{% url 'search:S08-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            ボトルネック検索
-                        </a>
+                                <a class="nav-link" href="{% url 'search:S08-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    ボトルネック検索
+                                </a>
 
-                        <a class="nav-link" href="{% url 'search:S08-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            ベンチマーク検索
-                        </a>
+                                <a class="nav-link" href="{% url 'search:S08-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    ベンチマーク検索
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S09 -->
-                        <a class="nav-link" href="{% url 'reserve:S09-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            取置予約一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S09" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            取置予約
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S09" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'reserve:S09-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    取置予約一覧
+                                </a>
 
-                        <a class="nav-link" href="{% url 'reserve:S09-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            取置予約新規登録
-                        </a>
+                                <a class="nav-link" href="{% url 'reserve:S09-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    取置予約新規登録
+                                </a>
 
-                        <a class="nav-link" href="{% url 'reserve:S09-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            取置予約詳細
-                        </a>
+                                <a class="nav-link" href="{% url 'reserve:S09-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    取置予約詳細
+                                </a>
 
-                        <a class="nav-link" href="{% url 'reserve:S09-04' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            取置予約編集
-                        </a>
+                                <a class="nav-link" href="{% url 'reserve:S09-04' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    取置予約編集
+                                </a>
+                            </nav>
+                        </div>
                         
                         <!-- S10 -->
-                        <a class="nav-link" href="{% url 'estimate:S10-01' %}">
-                            <div class="sb-nav-link-icon"></div>
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S10" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             見積
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S10" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'estimate:S10-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    見積
+                                </a>
 
-                        <a class="nav-link" href="{% url 'estimate:S10-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            客用見積
-                        </a>
+                                <a class="nav-link" href="{% url 'estimate:S10-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    客用見積
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S11 -->
-                        <a class="nav-link" href="{% url 'earning:S11-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            売上情報一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S11" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            売上
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S11" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'earning:S11-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    売上情報一覧
+                                </a>
 
-                        <a class="nav-link" href="{% url 'earning:S11-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            売上情報新規登録
-                        </a>
+                                <a class="nav-link" href="{% url 'earning:S11-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    売上情報新規登録
+                                </a>
 
-                        <a class="nav-link" href="{% url 'earning:S11-03' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            売上情報詳細(※ページ無し)
-                        </a>
+                                <a class="nav-link" href="{% url 'earning:S11-03' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    売上情報詳細(※ページ無し)
+                                </a>
 
-                        <a class="nav-link" href="{% url 'earning:S11-04' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            売上情報編集 (返品・返金)
-                        </a>
+                                <a class="nav-link" href="{% url 'earning:S11-04' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    売上情報編集 (返品・返金)
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S12 -->
-                        <a class="nav-link" href="{% url 'employeeref:S12-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            従業員情報一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S12" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            従業員参照
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S12" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'employeeref:S12-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    従業員情報一覧
+                                </a>
 
-                        <a class="nav-link" href="{% url 'employeeref:S12-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            従業員情報詳細
-                        </a>
+                                <a class="nav-link" href="{% url 'employeeref:S12-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    従業員情報詳細
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S13 -->
-                        <a class="nav-link" href="{% url 'storeref:S13-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            店舗情報一覧
-                        </a>
                         
-                        <a class="nav-link" href="{% url 'storeref:S13-02' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            店舗情報詳細
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S09" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            店舗参照
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S09" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'storeref:S13-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    店舗情報一覧
+                                </a>
+                                
+                                <a class="nav-link" href="{% url 'storeref:S13-02' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    店舗情報詳細
+                                </a>
+                            </nav>
+                        </div>
 
                         <!-- S14 -->
-                        <a class="nav-link" href="{% url 'workstatus:S14-01' %}">
-                            <div class="sb-nav-link-icon"></div>
-                            勤務状況一覧
+                        
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#S14" aria-expanded="false" aria-controls="S01">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            勤務状況管理
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="S14" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="{% url 'workstatus:S14-01' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    勤務状況一覧
+                                </a>
+                            </nav>
+                        </div>
 
-                        <!-- { endif %} -->
+                        {% endif %}
                         
 
 
@@ -449,7 +588,7 @@
                         </a>
                         {% endif %}
 
-                        <div class="sb-sidenav-menu-heading">Addons</div>
+                        
                         <a class="nav-link" href=" 'table:table' %}">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Tables
