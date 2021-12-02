@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>TAG index Webサイト</title>
+
+<script type="text/javascript">
+
+function keisan(){
+
+	// 設定開始
+
+	var tax = 10; // 消費税率
+
+	// 商品1
+	var price1 = document.form1.goods1.selectedIndex * 500; // 単価を設定
+	document.form1.field1.value = price1; // 小計を表示
+
+	// 商品2
+	var price2 = document.form1.goods2.selectedIndex * 1000; // 単価を設定
+	document.form1.field2.value = price2; // 小計を表示
+
+	// 商品3
+	var price3 = document.form1.goods3.selectedIndex * 3000; // 単価を設定
+	document.form1.field3.value = price3; // 小計を表示
+
+	// 合計を計算
+	var total1 = price1 + price2 + price3;
+
+	// 設定終了
+
+
+	document.form1.field_total1.value = total1; // 合計を表示
+
+	var tax2 = Math.round((total1 * tax) / 100);
+	document.form1.field_tax.value = tax2; // 消費税を表示
+
+	document.form1.field_total2.value = total1 + tax2; // 税込合計を表示
+
+}
+
+// --> 
+</script> 
+
+</head>
+<body>
+
+<form action="#" name="form1">
+
+<table border="1" style="background-color: #ffffff;">
+<tr>
+<th>商品名</th>
+<th>単価</th>
+<th>数量</th>
+<th>金額</th>
+</tr>
+<tr>
+<td>商品サンプル1</td>
+<td align="right">500円</td>
+<td><select name="goods1" onChange="keisan()">
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select></td>
+<td><input type="text" name="field1" size="8" value="0"> 円</td>
+</tr>
+<tr>
+<td>商品サンプル2</td>
+<td align="right">1,000円</td>
+<td><select name="goods2" onChange="keisan()">
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select></td>
+<td><input type="text" name="field2" size="8" value="0"> 円</td>
+</tr>
+<tr>
+<td>商品サンプル3</td>
+<td align="right">3,000円</td>
+<td><select name="goods3" onChange="keisan()">
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select></td>
+<td><input type="text" name="field3" size="8" value="0"> 円</td>
+</tr>
+<tr>
+<td align="right" colspan="3">合計</td>
+<td><input type="text" name="field_total1" size="8" value="0"> 円</td>
+</tr>
+<tr>
+<td align="right" colspan="3">消費税</td>
+<td><input type="text" name="field_tax" size="8" value="0"> 円</td>
+</tr>
+<tr>
+<td align="right" colspan="3"><strong>税込合計</strong></td>
+<td><input type="text" name="field_total2" size="8" value="0"> 円</td>
+</tr>
+</table>
+
+</form>
+
+</body>
+</html>
