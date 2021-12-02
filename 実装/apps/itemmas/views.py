@@ -24,13 +24,37 @@ class S0301View(ListView):
     context_object_name = 'ItemList'
     model = ItemInfo
 
-# class S0302View(TemplateView):
-#     template_name = "mas_item_register.html"
+class S0302View(TemplateView):
+    """S0302View
 
-# class S0303View(TemplateView):
-#     template_name = "mas_item_detail.html"
+    レスポンスをフォーム、モデル、テンプレートなどから生成する
 
-# class S0304View(TemplateView):
-#     template_name = "mas_item_edit.html"
+    Attributes:
+        name (): 
+
+    """
+    template_name = "mas_item_register.html"
+
+class S0303View(TemplateView):
+    """S0303View
+
+    レスポンスをフォーム、モデル、テンプレートなどから生成する
+
+    Attributes:
+        name (): 
+
+    """
+    template_name = "mas_item_detail.html"
+
+class S0304View(TemplateView):
+    """S0304View
+
+    レスポンスをフォーム、モデル、テンプレートなどから生成する
+
+    Attributes:
+        name (): 
+
+    """
+    template_name = "mas_item_edit.html"
 
 
