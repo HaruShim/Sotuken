@@ -17,7 +17,7 @@ class S0801View(generic.TemplateView):
         name (): 
 
     """
-    template_name = "set_item_list.html"
+    template_name = "item_search.html"
 
 class S0802View(generic.TemplateView):
     """S0802View
@@ -28,7 +28,7 @@ class S0802View(generic.TemplateView):
         name (): 
 
     """
-    template_name = "set_item_register.html"
+    template_name = "bottleneck_search.html"
 
 class S0803View(generic.TemplateView):
     """S0803View
@@ -39,17 +39,17 @@ class S0803View(generic.TemplateView):
         name (): 
 
     """
-    template_name = "set_item_detail.html"
+    template_name = "benchmark_search.html"
 
-class S0804View(generic.TemplateView):
-    """S0804View
+# class S0804View(generic.TemplateView):
+#     """S0804View
 
-    レスポンスをフォーム、モデル、テンプレートなどから生成する
+#     レスポンスをフォーム、モデル、テンプレートなどから生成する
 
-    Attributes:
-        name (): 
+#     Attributes:
+#         name (): 
 
-    """
-    template_name = "set_item_edit.html"
+#     """
+#     template_name = ".html"
 
 
