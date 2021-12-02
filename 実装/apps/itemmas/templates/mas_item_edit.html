@@ -74,8 +74,11 @@
                     </div>
 
                     <div class="itemmas-table spec-table">
-                        <table>
-                            <thead class="tablecolumn">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                        <table class="table">
+                            {{ form.as_table }}
+                            <!-- <thead class="tablecolumn">
                                 <tr>
                                     <th>メーカー</th>
                                     <td><input type="text" id="" name="" placeholder="メーカー"></td>
@@ -112,11 +115,12 @@
                                     <th>グラフィック</th>
                                     <td><input type="text" id="" name="" placeholder="グラフィック"></td>
                                 </tr>
-                            </thead>
+                            </thead> -->
                         </table>
-                    <div class="center-button">
-                        <a class="btn btn-primary" href="#">更新</a>
-                    </div>
+                        <div class="center-button">
+                            <button class="btn btn-primary" type="submit">更新</button>
+                        </div>
+                    </form>
 
 
                 </div>

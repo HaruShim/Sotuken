@@ -39,3 +39,5 @@ class StoreInfo(models.Model):
 
     class Meta:
         verbose_name_plural = '店舗情報モデル'
+    def __str__(self):
+        return self.store_name
