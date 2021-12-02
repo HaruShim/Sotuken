@@ -40,37 +40,37 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # システムで使用するアプリ
-    'home.apps.HomeConfig', # アカウント
-    # 'accounts.apps.AccountsConfig', # アカウント
-    'employeemas.apps.EmployeemasConfig', # 従業員マスタ
-    'storemas.apps.StoremasConfig', # 店舗マスタ
-    'itemmas.apps.ItemmasConfig', # 商品マスタ
-    'earningmas.apps.EarningmasConfig', # 売上マスタ
-    'benchmas.apps.BenchmasConfig', # ベンチマークマスタ
+    # # システムで使用するアプリ
+    # 'home.apps.HomeConfig', # アカウント
+    # # 'accounts.apps.AccountsConfig', # アカウント
+    # 'employeemas.apps.EmployeemasConfig', # 従業員マスタ
+    # 'storemas.apps.StoremasConfig', # 店舗マスタ
+    # 'itemmas.apps.ItemmasConfig', # 商品マスタ
+    # 'earningmas.apps.EarningmasConfig', # 売上マスタ
+    # 'benchmas.apps.BenchmasConfig', # ベンチマークマスタ
     'bottleneckmas.apps.BottleneckmasConfig', # ボトルネックマスタ
-    'stock.apps.StockConfig', # 在庫
-    'search.apps.SearchConfig', # 検索
-    'reserve.apps.ReserveConfig', # 取置予約
-    'estimate.apps.EstimateConfig', # 見積
-    'earning.apps.EarningConfig', # 売上
-    'employeeref.apps.EmployeerefConfig', # 従業員参照
-    'storeref.apps.StorerefConfig', # 店舗参照
-    'workstatus.apps.WorkstatusConfig', # 勤務状況参照
+    # 'stock.apps.StockConfig', # 在庫
+    # 'search.apps.SearchConfig', # 検索
+    # 'reserve.apps.ReserveConfig', # 取置予約
+    # 'estimate.apps.EstimateConfig', # 見積
+    # 'earning.apps.EarningConfig', # 売上
+    # 'employeeref.apps.EmployeerefConfig', # 従業員参照
+    # 'storeref.apps.StorerefConfig', # 店舗参照
+    # 'workstatus.apps.WorkstatusConfig', # 勤務状況参照
     
 
-    # 個人の試しアプリケーション
-    # 'bottletamesi.apps.BottletamesiConfig',
-    'tamesi.apps.TamesiConfig',
-    'aaaaa.apps.AaaaaConfig',
-    'books.apps.BooksConfig',
+    # # 個人の試しアプリケーション
+    # # 'bottletamesi.apps.BottletamesiConfig',
+    # 'tamesi.apps.TamesiConfig',
+    # 'aaaaa.apps.AaaaaConfig',
+    # 'books.apps.BooksConfig',
 
-    # django-allauthに必要なもの
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
+    # # django-allauthに必要なもの
+    # 'django.contrib.sites',
+    # 'allauth',
+    # 'allauth.account',
 
-    'django.contrib.humanize',
+    # 'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -88,7 +88,7 @@ ROOT_URLCONF = 'sales_information_management2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
