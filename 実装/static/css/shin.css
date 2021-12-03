@@ -1,7 +1,7 @@
 /* サイドバーの項目のパディングを変更 */
 .sb-sidenav .sb-sidenav-menu .nav .nav-link {
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 
 .sb-nav-fixed #layoutSidenav #layoutSidenav_content {
@@ -15,7 +15,7 @@
 }
 
 .mgl-12{
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 12px;
 }
 .mgl-15{
@@ -23,9 +23,9 @@
     margin-left: 15px;
 }
 
-.sb-sidenav-footer .small{
+/* .sb-sidenav-footer .small{
     padding-bottom: 15px;
-}
+} */
 
 .heading h1 {
     text-align: center
@@ -65,4 +65,12 @@ tbody tr{
 }
 tbody tr td:first-child::before{
     content: counter(rowCount);
+}
+
+.sb-sidenav-footer {
+    position: fixed; /* 要素の位置を固定する */
+    bottom: 0; /* 基準の位置を画面の一番下に指定する */
+    /* right: 0; 基準の位置を画面の一番右に指定する */
+    /* width: 300px; 幅を指定する */
+    /* border: 3px solid #326693; ボーダーを指定する */
 }
