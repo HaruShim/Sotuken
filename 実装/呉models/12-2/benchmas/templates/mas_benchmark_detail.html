@@ -1,0 +1,77 @@
+<!-- S-05-01 ベンチマーク一覧
+
+    ToDo
+        画面の制作お願いします
+        *長谷川　製作中
+
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | ベンチマーク一覧{% endblock %}
+
+{% block main_contents %}
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>DataTables example</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'js/datatables/datatables.min.css' %}"/>
+	<script type="text/javascript" language="javascript" src="{% static 'js/datatables/jquery-3.6.0.min.js' %}"></script>
+	<script type="text/javascript" language="javascript" src="{% static 'js/datatables/datatables.min.js' %}"></script>
+</head>
+<body>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">商品管理</h1>
+        <h2>詳細画面</h2>
+            
+                        <table id="example" class="display" >
+                            <thead>
+                                <tr>
+                                    <th>GPU名称</th>
+                                    <th>Mark Time Spy Graphics</th>
+                                    <th>TDP</th>
+                                    <th>コスパ</th>
+                                    <th>ワットパフォーマンス</th>
+                                    <th>定価</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{ object.gpu_name }}</td> <!--CPU名称-->
+                                    <td>{{ object.marktimespygraphics }}</td> <!--PassMark-->
+                                    <td>{{ object.tdp }}</td> <!--コア-->
+                                    <td>{{ object.cost_performance }}</td> <!--スレッド-->
+                                    <td>{{ object.wattage_performance }} </td> <!--定格クロック-->
+                                    <td>¥{{ object.list_price }}</td> <!--定価-->
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+
+
+
+    <form method="POST">
+        {% csrf_token %}
+        <button class="btn btn-primary mt-5" type="submit">削除</button>
+        <a class="btn btn-primary mt-5" type="submit" href="{% url 'benchamas:S05-03' object.pk %}">編集</a>
+        <a class="btn btn-primary mt-5" type="submit" href="{% url 'benchamas:S05-01' %}">戻る</a>
+    </form>
+
+<script>
+$(document).ready(function(){
+   $('#example').DataTable({
+		lengthChange: false,	// 1画面内の件数切替
+		searching: true,		// 検索窓
+		ordering: true,			// ソート機能
+		info: false,			// 件数の表示
+		paging: true			// ページング機能
+   });
+});
+</script>
+</html>
+
+{% endblock %}
