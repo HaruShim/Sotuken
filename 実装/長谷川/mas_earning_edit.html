@@ -1,0 +1,227 @@
+<!-- S04-03 売上情報編集
+
+    ToDo
+        画面の制作お願いします
+        * 長谷川　CSSお願いします　いろいろあると思うので言って下さい
+        *   できれば販売価格、担当者のセルに色付けるとかそれ以外のセルの文字を透明OR薄くするとかした方がユーザに優しいかなと思います
+        *   販売価格の入力不可は許してください　後でやります
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | 売上情報編集{% endblock %}
+
+{% block main_contents %}
+<head>
+    <script type="text/javascript" language="javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script>
+        // 必要数以上行追加させないためのフラグ falseなら行未追加－＞追加できる
+        var flg = 0;
+        // 行追加
+        function insertEarningRow(id) {
+            var today = new Date();
+            // テーブル取得
+            var table = document.getElementById(id);
+            if (flg == 0) {
+                if (document.getElementById("earning_select").value == "repayment"||document.getElementById("earning_select").value == "returnItem") {
+                    // 行を行末に追加
+                    var row = table.insertRow(-1);
+                    flg = 1;
+                    // セルの挿入
+                    var cell1 = row.insertCell(-1);
+                    var cell2 = row.insertCell(-1);
+                    var cell3 = row.insertCell(-1);
+                    var cell4 = row.insertCell(-1);
+                    var cell5 = row.insertCell(-1);
+                    var cell6 = row.insertCell(-1);
+                    var cell7 = row.insertCell(-1);
+                    var cell8 = row.insertCell(-1);
+                    var cell9 = row.insertCell(-1);
+                    var cell10 = row.insertCell(-1);
+                    var cell11 = row.insertCell(-1);
+                    // ボタン用 HTML
+                    var button = '<a id="deleteBtn" class="btn btn-small" onclick="deleteRow(this)">取消</a>';
+                    // 行数取得
+                    var row_len = table.rows.length;
+                    // セルの内容入力
+                    // 見づらければCSSで販売価格以外の文字を透明にしますか？？？？？？？？？？？？？？
+                    cell1.innerHTML = document.getElementsByTagName("td")[0].textContent;
+                    cell2.innerHTML = today.getFullYear() + "/" + (today.getMonth()+1) + "/" + ("0"+today.getDate()).slice(-2);
+                    cell3.innerHTML = document.getElementsByTagName("td")[2].textContent;
+                    cell4.innerHTML = document.getElementsByTagName("td")[3].textContent;
+                    cell5.innerHTML = document.getElementsByTagName("td")[4].textContent;
+                    cell6.innerHTML = parseInt(document.getElementsByTagName("td")[5].textContent) * -1 + " 円";
+                    cell7.innerHTML = 0;
+                    cell8.innerHTML = (parseInt(cell7.innerHTML) / parseInt(cell5.innerHTML)).toFixed(2) + " %";
+                    cell9.innerHTML = document.getElementsByTagName("td")[8].textContent;
+                    cell10.innerHTML = "大原太郎";
+                    cell11.innerHTML = button;
+                // 金額修正------------------------------------------------------------------------------------------------------------------
+                } else if (document.getElementById("earning_select").value == "fixEarning" && document.getElementById("umoney").value != 0){
+                    // 行を行末に追加
+                    row = table.insertRow(-1);
+                    flg = 2;
+                    // セルの挿入
+                    var cell1 = row.insertCell(-1);
+                    var cell2 = row.insertCell(-1);
+                    var cell3 = row.insertCell(-1);
+                    var cell4 = row.insertCell(-1);
+                    var cell5 = row.insertCell(-1);
+                    var cell6 = row.insertCell(-1);
+                    var cell7 = row.insertCell(-1);
+                    var cell8 = row.insertCell(-1);
+                    var cell9 = row.insertCell(-1);
+                    var cell10 = row.insertCell(-1);
+                    // 行数取得
+                    var row_len = table.rows.length;
+                    // セルの内容入力
+                    // 見づらければCSSで販売価格以外の文字を透明にしますか？？？？？？？
+                    cell1.innerHTML = document.getElementsByTagName("td")[0].textContent;
+                    cell2.innerHTML = today.getFullYear() + "/" + (today.getMonth()+1) + "/" + ("0"+today.getDate()).slice(-2);
+                    cell3.innerHTML = document.getElementsByTagName("td")[2].textContent;
+                    cell4.innerHTML = document.getElementsByTagName("td")[3].textContent;
+                    cell5.innerHTML = document.getElementsByTagName("td")[4].textContent;
+                    cell6.innerHTML = parseInt(document.getElementsByTagName("td")[5].textContent) * -1 + " 円";
+                    cell7.innerHTML = 0;
+                    cell8.innerHTML = (parseInt(cell7.innerHTML) / parseInt(cell5.innerHTML)).toFixed(2) + " %";
+                    cell9.innerHTML = document.getElementsByTagName("td")[8].textContent;
+                    cell10.innerHTML = "大原太郎";
+                    // 行を行末に追加
+                    var row = table.insertRow(-1);
+                    // セルの挿入
+                    var cell1 = row.insertCell(-1);
+                    var cell2 = row.insertCell(-1);
+                    var cell3 = row.insertCell(-1);
+                    var cell4 = row.insertCell(-1);
+                    var cell5 = row.insertCell(-1);
+                    var cell6 = row.insertCell(-1);
+                    var cell7 = row.insertCell(-1);
+                    var cell8 = row.insertCell(-1);
+                    var cell9 = row.insertCell(-1);
+                    var cell10 = row.insertCell(-1);
+                    var cell11 = row.insertCell(-1);
+                    // ボタン用 HTML
+                    var button = '<a id="deleteBtn" class="btn btn-small" onclick="deleteRow(this)">取消</a>';
+                    // 行数取得
+                    var row_len = table.rows.length;
+                    // セルの内容入力
+                    // 見づらければCSSで販売価格以外の文字を透明にしますか？？？？？？？？？？？？？？
+                    cell1.innerHTML = document.getElementsByTagName("td")[0].textContent;
+                    cell2.innerHTML = today.getFullYear() + "/" + (today.getMonth()+1) + "/" + ("0"+today.getDate()).slice(-2);
+                    cell3.innerHTML = document.getElementsByTagName("td")[2].textContent;
+                    cell4.innerHTML = document.getElementsByTagName("td")[3].textContent;
+                    cell5.innerHTML = document.getElementsByTagName("td")[4].textContent;
+                    cell6.innerHTML = (document.getElementById("umoney")).value + " 円";
+                    cell7.innerHTML = (parseInt(cell6.innerHTML)) - (parseInt(cell5.innerHTML));
+                    cell8.innerHTML = (parseInt(cell7.innerHTML) / parseInt(cell5.innerHTML)).toFixed(2) + " %";
+                    cell9.innerHTML = document.getElementsByTagName("td")[8].textContent;
+                    cell10.innerHTML = "大原太郎";
+                    cell11.innerHTML = button;
+                }
+            }
+        }
+        // 行削除
+        function deleteRow(obj) {
+            if (flg == 1) {
+                // 削除ボタンを押下された行を取得
+                tr = obj.parentNode.parentNode;
+                // trのインデックスを取得して行を削除する
+                tr.parentNode.deleteRow(tr.sectionRowIndex);
+            } else if (flg == 2) {
+                // 削除ボタンを押下された行を取得
+                tr = obj.parentNode.parentNode;
+                // trのインデックスを取得して行を削除する
+                tr.parentNode.deleteRow((tr.sectionRowIndex)-1);
+                tr.parentNode.deleteRow(tr.sectionRowIndex);
+
+            }
+            flg = 0;
+        }
+    </script>
+    <!-- 作業切り替えで追加内容の削除 ここでバグーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー-->
+    <script>
+        function rowCheck() {
+            document.getElementById("deleteBtn").click();
+            // // 返品返金で販売価格の入力不可
+            // if (document.getElementById("earning_select").value == "fixEarning"){
+            //     // disabled属性を削除
+            //     document.getElementById("umoney").removeAttribute("disabled");
+            //     document.getElementById("umoney").style.color = "black";
+            // }else if(document.getElementById("earning_select").value == "returnItem"||document.getElementById("earning_select").value == "repayment"){
+            //     // disabled属性を設定
+            //     document.getElementById("umoney").setAttribute("disabled", true);
+            //     document.getElementById("umoney").style.color = "White";
+            // }
+        }
+    </script>
+    <!-- textboxに半角数字のみを入力させる -->
+    <script>
+        $(function() {
+            $('#umoney').on('input', function(e) {
+                let value = $(e.currentTarget).val();
+                value = value
+                    .replace(/[０-９]/g, function(s) {
+                        return String.fromCharCode(s.charCodeAt(0) - 65248);
+                    })
+                    .replace(/[^0-9]/g, '');
+                $(e.currentTarget).val(value);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">売上管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    売上情報編集
+                </div>
+                <div class="card-body">
+                    <div class="item_beside">
+                        <select id="earning_select" onchange="rowCheck()">
+                            <option value="fixEarning">打ち直し</option>
+                            <option value="repayment">返金</option>
+                            <option value="returnItem">返品</option>
+                        </select>
+                        販売価格<input type="text" id="umoney" name="money">円
+                        <button class="btn btn-main" onclick="insertEarningRow('earning_table')">確定</button>
+                    </div>
+                    <table id="earning_table" class="earningtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th nowrap>伝票番号</th>
+                                <th nowrap>販売日</th>
+                                <th nowrap>商品コード</th>
+                                <th nowrap>型番</th>
+                                <th nowrap>仕入価格</th>
+                                <th nowrap>販売価格</th>
+                                <th nowrap>粗利</th>
+                                <th nowrap>粗利率</th>
+                                <th nowrap>販売店舗</th>
+                                <th nowrap>担当者</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tabletbody">
+                            <tr>
+                                <td>123456789</td>
+                                <td>2020/10/31</td>
+                                <td>937590552</td>
+                                <td>123456789</td>
+                                <td>3000 円</td>
+                                <td>4000 円</td>
+                                <td>1000</td>
+                                <td>25%</td>
+                                <td>店舗A</td>
+                                <td>大原太郎</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-touroku" href="#">更新</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

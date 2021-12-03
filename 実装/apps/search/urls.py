@@ -15,7 +15,7 @@ from . import views
 
 app_name = 'search'
 urlpatterns = [
-    path('S08-01/',views.S0801View.as_view(),name = "S08-01"),
-    path('S08-02/',views.S0802View.as_view(),name = "S08-02"),
-    path('S08-03/',views.S0803View.as_view(),name = "S08-03"),
+    path('S08-01/',views.S0801View.as_view(),name = "S08-01"), #商品情報検索
+    path('S08-02/',views.S0802View.as_view(),name = "S08-02"), #ボトルネック検索
+    path('S08-03/',views.S0803View.as_view(),name = "S08-03"), #ベンチマーク検索
 ]

@@ -31,12 +31,18 @@ class ItemInfo(models.Model):
         (6,'Office'),
         (7,'その他')
     )
+    ischoice = (
+        (0,'販売中'),
+        (1,'販売済み'),
+        (2,'修理中'),
+        (3,'取置'),
+    )
 
-    id = models.CharField(verbose_name='商品コード',db_column='item_code',max_length=9,primary_key=True,editable=False)
+    id = models.CharField(verbose_name='商品コード',db_column='item_code',max_length=9,primary_key=True)
     model_number = models.CharField(verbose_name='型番', max_length=60)
     category = models.SmallIntegerField(verbose_name='カテゴリ', choices=catchoice)
     manufacturer_name = models.CharField(verbose_name='メーカー名', max_length=30)
-    item_status = models.CharField(verbose_name='商品状態', max_length=10)
+    item_status = models.SmallIntegerField(verbose_name='商品状態', choices=ischoice)
     purchase_price = models.IntegerField(verbose_name='仕入価格')
     item_image = models.ImageField(verbose_name='商品画像',blank=True,null=True)
     remarks = models.TextField(verbose_name='備考')

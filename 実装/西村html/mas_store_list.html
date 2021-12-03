@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | 店舗一覧画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="contents">
+                        <div class="item head">
+                            <i class="fas fa-table me-1"></i>
+                        </div>
+                        <div class="item head">
+                            店舗情報一覧
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="placement-right">
+                        <a class="btn btn-main" href="#">新規登録</a>
+                    </div>
+                    <div class="colum-num">
+                        <table class="listtable sub1 column-color">
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <th class="table-num">No.</th>
+                                    <th>店舗ID</th>
+                                    <th>店舗名</th>
+                                    <th>店長</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>0100</td>
+                                    <td>店舗A</td>
+                                    <td>佐藤太郎</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>0200</td>
+                                    <td>店舗B</td>
+                                    <td>大原健二</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- ページネーション処理 -->
+                    <!-- if is_paginated %} -->
+                        <!-- <ul class="pagination"> -->
+                            <!-- 前ページへのリンク -->
+                             <!-- if page_obj.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                                        <span aria-hidden="true">
+                                            &laquo;
+                                        </span>
+                                    </a>
+                                </li>
+                             endif %} -->
+
+                            <!-- ページ数表示 -->
+                             <!-- for page_num in page_obj.pagination.page_range %}
+                                 if page_obj.number == page_num %}
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">
+                                            {{ page_num }}
+                                        </a>
+                                    </li>
+                                 else %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ page_num }}">
+                                            {{ page_num }}
+                                        </a>
+                                    </li>
+                                 endif %}
+                             endfor %} -->
+
+                            <!-- 次ページへのリンク -->
+                             <!-- if page_obj.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{page_obj.next_page_number}}">
+                                        <sapn aria-hidden="true">
+                                            &raquo;
+                                        </sapn>
+                                    </a>
+                                </li>
+                             endif %}
+                        </ul>
+                     endif %} -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

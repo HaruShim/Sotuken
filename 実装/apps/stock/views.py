@@ -51,5 +51,3 @@ class S0704View(generic.TemplateView):
 
     """
     template_name = "set_item_edit.html"
-
-
