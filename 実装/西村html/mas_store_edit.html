@@ -1,0 +1,77 @@
+<!-- S02-04 店舗情報編集
+
+    ToDo
+        画面の制作お願いします
+        *長谷川
+
+-->
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 店舗情報編集{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="contents">
+                        <div class="item head">
+                            <i class="fas fa-table me-1"></i>
+                        </div>
+                        <div class="item head">
+                            店舗情報編集
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="registertable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>店舗ID</th>
+                                <td>001</td>
+                            </tr>
+                            <tr>
+                                <th>店舗名</th>
+                                <td>
+                                    <input type="text" class="m-form-text" name="name" placeholder="店舗を選択">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>店長</th>
+                                <td>
+                                    <div class="m-form-select">
+                                        <select name="example">
+                                            <option hidden>店長を選択</option>
+                                            <option value="選択肢1">青山祐樹</option>
+                                            <option value="選択肢2">伊藤平永</option>
+                                            <option value="選択肢3">島田孝弘</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>住所</th>
+                                <td>
+                                    <input type="text" class="m-form-text" name="name" size=45 placeholder="例)東京都千代田区西神田1－1－1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>連絡先</th>
+                                <td>
+                                    <input type="text" class="m-form-text" name="name" placeholder="000-0000-0000">
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="placement-center">
+                    <a class="btn btn-main" href="#">更新</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
