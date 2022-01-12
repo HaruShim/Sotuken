@@ -63,7 +63,7 @@
                             <!-- bottleneckモデルの一覧を表示 -->
                             {% for item in bottleneck %}
                             <tr>
-                                <td>{{ item.cpu_name }}</td><!--CPU-->
+                                <td><a href="{% url 'bottleneckmas:S06-03' item.pk %}">{{ item.cpu_name }}</a></td><!--CPU-->
                                 <td>{{ item.gpu_name }}</td><!--GPU-->
                                 <td>{{ item.get_balance_display }}</td><!--バランス-->
                                 <td>{{ item.get_wqhd_display  }}</td><!--WQHD-->
@@ -79,7 +79,7 @@
                             {% endfor %}
                         </tbody>
                     </table>
-                    <a class="btn btn-touroku" href="#">新規登録</a>
+                    <a class="btn btn-touroku" href="{% url 'bottleneckmas:S06-02' %}">新規登録</a>
                 </div>
             </div>
         </div>

@@ -27,27 +27,26 @@
                     店舗情報一覧
                 </div>
                 <div class="card-body">
-                    <a class="btn btn-touroku" href="#">新規登録</a>
+                    <a class="btn btn-touroku" href="{% url 'storemas:S02-02' %}">新規登録</a>
                     <table class="listtable">
                         <thead class="tablecolumn">
                             <tr>
                                 <th>店舗ID</th>
                                 <th>店舗名</th>
-                                <th>店長</th>
+                                <th>場所カテゴリ</th>
+                                <th>連絡先</th>
+                                <!-- <th>店長</th> -->
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>0100</td>
-                                <td>店舗A</td>
-                                <td>佐藤太郎</td>
-                            </tr>
                             <!-- StoreInfoモデルの一覧を表示 -->
                             {% for item in StoreInfo %}
                             <tr>
-                                <td>{{ item.id }}</td><!--店舗ID-->
+                                <td><a href="{% url 'storemas:S02-03' item.pk %}">{{ item.id }}</a></td><!--店舗ID-->
                                 <td>{{ item.store_name }}</td><!--店舗名-->
-                                <td>{{ item.store_manager }}</td><!--店長-->
+                                <td>{{ item.get_place_category_display }}</td><!--場所カテゴリ-->
+                                <td>{{ item.tel }}</td><!--連絡先-->
+                                <!--<td>{ item.store_manager }}</td><!--店長-->
                             </tr>
                             {% endfor %}
                             <!-- { store_manager }} -->

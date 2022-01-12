@@ -15,6 +15,6 @@ from . import views
 
 app_name = 'home'
 urlpatterns = [
-    path('',views.HomeView.as_view(),name="home"),
+    path('',views.home_page,name="home"),
     path('trial_table/',views.TrialtableView.as_view(),name="trial_table"),
 ]

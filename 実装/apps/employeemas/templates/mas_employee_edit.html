@@ -24,65 +24,49 @@
                 </div>
                 <div class="card-body">
                     <table class="registertable">
-                        <thead class="tablecolumn">
-                            <tbody>
-                                <tr>
-                                    <th>従業員ID</th>
-                                    <td>12345689</td>
-                                </tr>
-                                <tr>
-                                    <th>従業員名</th>
-                                    <td>
-                                        <input type="text" id="name" name="name">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>従業員名(カナ)</th>
-                                    <td>
-                                        <input type="text" id="name" name="name_kana">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>電話番号</th>
-                                    <td>
-                                        <input type="text" id="name" name="phone">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>性別</th>
-                                    <td>
-                                        <input type="radio" name="gender" value="male" checked>
-                                        <label>男性</label>
-                                        <input type="radio" name="gender" value="female">
-                                        <label>女性</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>生年月日</th>
-                                    <td>
-                                        <input type="date" name="birth">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>所属店舗</th>
-                                    <td>
-                                        <select name="store">
-                                            <option value="A">店舗A</option>
-                                            <option value="B">店舗B</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>雇用形態</th>
-                                    <td>
-                                        <select name="status">
-                                            <option value="regular_employees">正規社員</option>
-                                            <option value="nonregular_employees">非正規社員</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </thead>
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                        <table class="table">
+                            
+                            <tr>
+                                <th>従業員名</th>
+                                <td>{{ form.name }}</td>
+                            </tr>
+                            <tr>
+                                <th>従業員名(カナ)</th>
+                                <td>{{ form.ruby_name }}</td>
+                            </tr>
+                            <tr>
+                                <th>電話番号</th>
+                                <td>{{ form.tel_num }}</td>
+                            </tr>
+                            <tr>
+                                <th>性別</th>
+                                <!-- <td>{{ form.gender }</td> -->
+                                <td>
+                                {% for radiobutton in form.gender %}
+                                {{ radiobutton }}
+                                {% endfor %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>生年月日</th>
+                                <td>{{ form.birthday }}</td>
+                            </tr>
+                            <tr>
+                                <th>所属店舗</th>
+                                <td>{{ form.store_id }}</td>
+                            </tr>
+                            <tr>
+                                <th>雇用形態</th>
+                                <td>{{ form.employment_status }}</td>
+                            </tr>
+                        </table>
+                        <div class="center-button">
+                            <button class="btn btn-primary" type="submit">更新</button>
+                        </div>
+                        </form>
+                        
                         <!-- <tfoot>
                             <tr>
                                 <th>従業員ID</th>
@@ -125,8 +109,7 @@
                         {% endfor %}
                         </tbody> -->
                     </table>
-                </div>
-                <a class="btn btn-touroku" href="#">更新</a>
+                </div>  
             </div>
         </div>
     </div>

@@ -32,6 +32,7 @@
                             <table class="listtable">
                                 <thead class="tablecolumn">
                                     <tr>
+                                        <th>id</th>
                                         <th>商品コード</th>
                                         <th>型番</th>
                                         <th>カテゴリ</th>
@@ -45,6 +46,7 @@
                                 
                                 <tr>
                                     <th><a href="{% url 'itemmas:S03-03' item.pk %}">{{ item.id }}</a></th> <!--商品コード-->
+                                    <td>{{ item.item_code }}</td> <!--型番-->
                                     <td>{{ item.model_number }}</td> <!--型番-->
                                     <td>{{ item.get_category_display }}</td> <!--カテゴリ-->
                                     <td>{{ item.store_id.store_name }}</td> <!--在庫場所-->
@@ -69,8 +71,7 @@
                                         <!-- ページ数表示 -->
                                         {% for page_num in page_obj.paginator.page_range %}
                                         {% if page_obj.number == page_num %}
-                                        <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a>
-                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
                                         {% else %}
                                         <li class="page-item"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
                                         {% endif %}
@@ -86,20 +87,6 @@
                                         {% endif %}
                                     </ul>
                                     {% endif %}
-                                    <!-- <tr>
-                                        <td>123456789</td>
-                                        <td>FMVU75EUV1</td>
-                                        <td>ノートPC</td>
-                                        <td>店舗A</td>
-                                        <td>12,000</td>
-                                    </tr> -->
-                                    <!-- <tr>
-                                        <td>234567891</td>
-                                        <td>FMVU75DFV1</td>
-                                        <td>デスクトップ</td>
-                                        <td>店舗B</td>
-                                        <td>23,500</td>
-                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>

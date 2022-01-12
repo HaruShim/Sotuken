@@ -9,8 +9,8 @@ Todo:
 from django.db import models
 # from django.views.generic import ListView,TemplateView
 from django.views.generic import TemplateView,ListView,DetailView,CreateView,DeleteView,UpdateView
-from .forms import S0302Form
 from django.urls import reverse_lazy
+from .forms import S0302Form
 from .models import ItemInfo
 
 class S0301View(ListView):

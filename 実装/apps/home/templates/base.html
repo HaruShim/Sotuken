@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +26,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href=" url 'home:index' %}">
+        <a class="navbar-brand ps-3" href="{% url 'home:home' %}">
             {% if user.is_superuser %}
             管理者ページ
             {% else %}
@@ -94,7 +95,7 @@
                                     <div class="sb-nav-link-icon"><i class="fas fa-yen-sign"></i></div>
                                     売上マスタ
                                 </a>
-                                <a class="nav-link" href="{% url 'benchmas:S05-01' %}">
+                                <a class="nav-link" href="{% url 'benchmas:S05-01CPU' %}">
                                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                     ベンチマークマスタ
                                 </a>
@@ -188,18 +189,18 @@
                                     <div class="sb-nav-link-icon"></div>
                                     従業員新規登録
                                 </a>
-                                <a class="nav-link" href="{% url 'employeemas:S01-03' %}">
-                                    <div class="sb-nav-link-icon"></div>
+                                <!-- <a class="nav-link" href="{% url 'employeemas:S01-03' }"> -->
+                                    <!-- <div class="sb-nav-link-icon"></div>
                                     従業員詳細
-                                </a>
-                                <a class="nav-link" href="{% url 'employeemas:S01-04' %}">
+                                </a> -->
+                                <!-- <a class="nav-link" href="{% url 'employeemas:S01-04' }">
                                     <div class="sb-nav-link-icon"></div>
                                     従業員編集
-                                </a>
-                                <a class="nav-link" href="{% url 'employeemas:S01-05' %}">
+                                </a> -->
+                                <!-- <a class="nav-link" href="{% url 'employeemas:S01-05' }">
                                     <div class="sb-nav-link-icon"></div>
                                     従業員登録完了
-                                </a>
+                                </a> -->
                             </nav>
                         </div>
                         <!-- S02 -->
@@ -218,14 +219,14 @@
                                     <div class="sb-nav-link-icon"></div>
                                     店舗情報新規登録
                                 </a>
-                                <a class="nav-link" href="{% url 'storemas:S02-03' %}">
+                                <!-- <a class="nav-link" href="{% url 'storemas:S02-03' }">
                                     <div class="sb-nav-link-icon"></div>
                                     店舗情報詳細
                                 </a>
-                                <a class="nav-link" href="{% url 'storemas:S02-04' %}">
+                                <a class="nav-link" href="{% url 'storemas:S02-04' }">
                                     <div class="sb-nav-link-icon"></div>
                                     編集
-                                </a>
+                                </a> -->
                             </nav>
                         </div>
                         <!-- S03 -->
@@ -287,23 +288,27 @@
                         </a>
                         <div class="collapse" id="S05" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link" href="{% url 'benchmas:S05-01' %}">
+                                <a class="nav-link" href="{% url 'benchmas:S05-01CPU' %}">
                                     <div class="sb-nav-link-icon"></div>
-                                    ベンチマーク一覧
+                                    CPUベンチマーク一覧
                                 </a>
-                                <a class="nav-link" href="{% url 'benchmas:S05-02' %}">
+                                <a class="nav-link" href="{% url 'benchmas:S05-01GPU' %}">
+                                    <div class="sb-nav-link-icon"></div>
+                                    GPUベンチマーク一覧
+                                </a>
+                                <a class="nav-link" href="{% url 'benchmas:S05-02CPU' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     CPUベンチマーク新規登録
                                 </a>
-                                <a class="nav-link" href="{% url 'benchmas:S05-03' %}">
+                                <a class="nav-link" href="{% url 'benchmas:S05-02GPU' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     GPUベンチマーク新規登録
                                 </a>
-                                <a class="nav-link" href="#{ url 'benchmas:S05-04' %}">
+                                <a class="nav-link" href="#{ url 'benchmas:S05-03CPU' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     CPUベンチマーク編集
                                 </a>
-                                <a class="nav-link" href="#{ url 'benchmas:S05-05' %}">
+                                <a class="nav-link" href="#{ url 'benchmas:S05-03GPU' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     GPUベンチマーク編集
                                 </a>
@@ -326,7 +331,7 @@
                                     <div class="sb-nav-link-icon"></div>
                                     ボトルネック新規登録
                                 </a>
-                                <a class="nav-link" href="{% url 'bottleneckmas:S06-03' %}">
+                                <a class="nav-link" href="#{% url 'bottleneckmas:S06-03' }">
                                     <div class="sb-nav-link-icon"></div>
                                     ボトルネック編集
                                 </a>
@@ -349,11 +354,11 @@
                                     <div class="sb-nav-link-icon"></div>
                                     セット商品新規登録
                                 </a>
-                                <a class="nav-link" href="{% url 'stock:S07-03' %}">
+                                <a class="nav-link" href="#% url 'stock:S07-03' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     セット商品詳細
                                 </a>
-                                <a class="nav-link" href="{% url 'stock:S07-04' %}">
+                                <a class="nav-link" href="#% url 'stock:S07-04' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     セット商品編集
                                 </a>
@@ -398,11 +403,11 @@
                                     <div class="sb-nav-link-icon"></div>
                                     取置予約新規登録
                                 </a>
-                                <a class="nav-link" href="{% url 'reserve:S09-03' %}">
+                                <a class="nav-link" href="#% url 'reserve:S09-03' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     取置予約詳細
                                 </a>
-                                <a class="nav-link" href="{% url 'reserve:S09-04' %}">
+                                <a class="nav-link" href="#% url 'reserve:S09-04' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     取置予約編集
                                 </a>
@@ -476,12 +481,12 @@
                         </div>
                         <!-- S13 -->
                         
-                        <a class="nav-link collapsed"  data-bs-toggle="collapse" data-bs-target="#S09" aria-expanded="false" aria-controls="S01">
+                        <a class="nav-link collapsed"  data-bs-toggle="collapse" data-bs-target="#S13" aria-expanded="false" aria-controls="S01">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             店舗参照
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="S09" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="S13" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 <a class="nav-link" href="{% url 'storeref:S13-01' %}">
                                     <div class="sb-nav-link-icon"></div>

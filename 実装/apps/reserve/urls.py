@@ -17,6 +17,6 @@ app_name = 'reserve'
 urlpatterns = [
     path('S09-01/',views.S0901View.as_view(),name = "S09-01"), #取置予約一覧
     path('S09-02/',views.S0902View.as_view(),name = "S09-02"), #取置予約新規登録
-    path('S09-03/',views.S0903View.as_view(),name = "S09-03"), #取置予約詳細
-    path('S09-04/',views.S0904View.as_view(),name = "S09-04"), #取置予約編集
+    path('S09-03/<int:pk>',views.S0903View.as_view(),name = "S09-03"), #取置予約詳細
+    path('S09-04/<int:pk>',views.S0904View.as_view(),name = "S09-04"), #取置予約編集
 ]
