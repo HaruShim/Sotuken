@@ -1,0 +1,56 @@
+<!-- S13-02 店舗情報参照
+
+    ToDo
+        画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 店舗情報参照{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">店舗詳細</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    店舗情報詳細
+                </div>
+                <div class="card-body">
+                    <table class="registertable">
+                        <thead class="tablecolumn">
+                            <tbody>
+                                <tr>
+                                    <th>店舗ID</th>
+                                    <td>12345689</td>
+                                </tr>
+                                <tr>
+                                    <th>店舗名</th>
+                                    <td>店舗A</td>
+                                </tr>
+                                <tr>
+                                    <th>店長</th>
+                                    <td>大原太郎</td>
+                                </tr>
+                                <tr>
+                                    <th>住所</th>
+                                    <td>東京都</td>
+                                </tr>
+                                <tr>
+                                    <th>連絡先</th>
+                                    <td>000-0000-0000</td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

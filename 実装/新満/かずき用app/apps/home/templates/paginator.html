@@ -1,0 +1,106 @@
+{% load mathfilters %}
+{% if object_list.paginator.num_pages > 1 %}
+<div class="pager">
+    <ul class="pagination">
+        <li class="pre">
+            {% if object_list.number == 1 %}
+            <a class="active" href="{% url l_page num=1 %}?{{get_request}}">
+                <span>&laquo;</span>
+            </a>
+            {% elif object_list.number < 4 %} <a href="{% url l_page num=1 %}?{{get_request}}">
+                <span>&laquo;</span>
+                </a>
+                {% else %}
+                <a href="{% url l_page num=1 %}?{{get_request}}">
+                    <span>1</span>
+                </a>
+                {% endif %}
+        </li>
+        {% if object_list.paginator.num_pages > 5 %}
+        {% if object_list.paginator.num_pages|sub:object_list.number < 2 %} {% with '' |center:5 as range %} {% for list
+            in range %} {% if object_list.paginator.num_pages|sub:4|add:forloop.counter0==object_list.number %} <li>
+            <a class="active"
+                href="{% url l_page num=object_list.paginator.num_pages|sub:4|add:forloop.counter0 %}?{{get_request}}">
+                <span>{{object_list.paginator.num_pages|sub:4|add:forloop.counter0}}</span>
+            </a>
+            </li>
+            {% else %}
+            <li>
+                <a
+                    href="{% url l_page num=object_list.paginator.num_pages|sub:4|add:forloop.counter0 %}?{{get_request}}">
+                    <span>{{object_list.paginator.num_pages|sub:4|add:forloop.counter0}}</span>
+                </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% endwith %}
+            {% elif object_list.number < 3 %} {% with '' |center:5 as range %} {% for list in range %} {% if
+                forloop.counter==object_list.number %} <li>
+                <a class="active" href="{% url l_page num=forloop.counter %}?{{get_request}}">
+                    <span>{{forloop.counter}}</span>
+                </a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{% url l_page num=forloop.counter %}?{{get_request}}">
+                        <span>{{forloop.counter}}</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                {% endwith %}
+                {% else %}
+                {% with ''|center:5 as range %}
+                {% for list in range %}
+                {% if object_list.number|sub:2|add:forloop.counter0 == object_list.number %}
+                <li>
+                    <a class="active"
+                        href="{% url l_page num=object_list.number|sub:2|add:forloop.counter0 %}?{{get_request}}">
+                        <span>{{object_list.number|sub:2|add:forloop.counter0}}</span>
+                    </a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{% url l_page num=object_list.number|sub:2|add:forloop.counter0 %}?{{get_request}}">
+                        <span>{{object_list.number|sub:2|add:forloop.counter0}}</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                {% endwith %}
+                {% endif %}
+                {% else %}
+                {% for page_num in object_list.paginator.page_range %}
+                {% if object_list.number == page_num %}
+                <li>
+                    <a href="{% url l_page num=page_num %}?{{get_request}}" class="active">
+                        <span>{{page_num}}</span>
+                    </a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{% url l_page num=page_num %}?{{get_request}}">
+                        <span>{{page_num}}</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor%}
+                {% endif %}
+                <li class="last">
+                    {% if object_list.number == object_list.paginator.num_pages %}
+                    <a class="active" href="{% url l_page object_list.paginator.num_pages %}?{{get_request}}">
+                        <span>&raquo;</span>
+                    </a>
+                    {% elif object_list.paginator.num_pages|sub:object_list.number < 3 %} <a
+                        href="{% url l_page object_list.paginator.num_pages %}?{{get_request}}">
+                        <span>&raquo;</span>
+                        </a>
+                        {% else %}
+                        <a href="{% url l_page object_list.paginator.num_pages %}?{{get_request}}">
+                            <span>{{object_list.paginator.num_pages}}</span>
+                        </a>
+                        {% endif %}
+                </li>
+    </ul>
+</div>
+{% endif %}
