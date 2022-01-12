@@ -1,0 +1,18 @@
+<!-- <!doctype html>
+{% extends "testbase.html" %}
+
+{% block title %}ユーザー登録{% endblock %}
+
+{% block content %}
+<h2>ユーザー登録</h2>
+<form method="post" action="{ url 'account_signup' }">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+
+    {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <p><a href="{% url 'login' %}"><button class="btn btn-primary" type="submit">ユーザー登録</button></a></p>
+</form>
+{% endblock %} -->

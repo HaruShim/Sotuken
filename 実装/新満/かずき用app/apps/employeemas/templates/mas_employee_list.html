@@ -1,0 +1,128 @@
+<!-- S01-01 従業員一覧画面
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | 従業員一覧画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">従業員一覧</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    従業員情報一覧
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-touroku" href="{% url 'employeemas:S01-02' %}">新規登録</a>
+                    <table class="listtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>従業員ID</th>
+                                <th>従業員名</th>
+                                <th>店舗</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr>
+                                <td>123456789</td>
+                                <td>大原太郎</td>
+                                <td>店舗C</td>
+                            </tr> -->
+                            <!-- EmployeeInfoモデルの一覧を表示 -->
+                            {% for item in EmployeeInfo %}
+                            <tr>
+                                <td><a href="{% url 'employeemas:S01-03' item.pk %}">{{ item.id }}</a></td><!--従業員ID-->
+                                <td>{{ item.name }}</td><!--従業員名-->
+                                <td>{{ item.store_id.store_name }}</td><!--店舗-->
+                            </tr>
+                            {% endfor %}
+                            <!-- <tr>
+                                <td>012345678</td>
+                                <td>田中太郎</td>
+                                <td>店舗A</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <!-- <table id="datatablesSimple">
+                        <thead class="tablecolumn">
+                            <div class="tablecolumn2">
+                                <tr>
+                                    <th>従業員ID</th>
+                                    <th>従業員名</th>
+                                    <th>店舗</th>
+                                </tr>
+                            </div>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>従業員ID</th>
+                                <th>従業員名</th>
+                                <th>店舗</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>123456789</td>
+                                <td>大原太郎</td>
+                                <td>店舗C</td>
+                            </tr>
+                            <tr>
+                                <td>012345678</td>
+                                <td>田中太郎</td>
+                                <td>店舗A</td>
+                            </tr>
+                            <tr>
+                                <td>463979429</td>
+                                <td>伊藤博文</td>
+                                <td>店舗A</td>
+                            </tr>
+                            <tr>
+                                <td>148175986</td>
+                                <td>大原健二</td>
+                                <td>店舗A</td>
+                            </tr>
+                            <tr>
+                                <td>148175986</td>
+                                <td>大原健一</td>
+                                <td>店舗B</td>
+                            </tr><tr>
+                                <td>674675965</td>
+                                <td>大野太郎</td>
+                                <td>店舗A</td>
+                            </tr>
+                        </tbody>
+                        
+                        
+                        <tbody>
+                            {% for i in object_list %}
+                            <tr>
+                                <td><a href="# url 'table:table_detail' i.pk %}">{{ i.get_choice_display }}</a></td>
+                                <td>{{i.date | date:"Y/m/d"}}</td>
+                                <td>{{i.title}}</td>
+                                <td>{{i.get_genre_display}}</td>
+                                <td>{{i.quanity}}</td>
+                                <td>{{ i.money }}¥</td>
+                            </a>
+                        </tr>
+                        {% empty %}
+                        <p>テーブルはありません。</p>
+                        {% endfor %}
+                        </tbody>
+                    </table> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

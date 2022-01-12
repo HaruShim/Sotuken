@@ -1,0 +1,21 @@
+****重要****
+csvファイルは開いてもかまいませんが絶対に保存しないように
+
+
+データベースにデータを挿入したい場合
+
+1.仮想環境(venv)にはいり、manage.pyのディレクトリまで移動
+
+2.「py manage.py dbshell」 コマンドを打つ(\dでテーブル名確認できます)
+
+3.入力の左が「sales_information_management=#」であることを確認
+
+4.「\copy テーブル名 from 'csvファイルまでのフルパス' with csv header」コマンドを打つ
+	※例 \copy reserve_reserve from 
+	'C:\Users\h_shimmitsu\Documents\Sotuken\実装\csv\reserve_reserve.csv' with csv header
+
+5.「COPY 〇」と出れば成功
+
+
+既にcsvファイルをコピーしている場合上書きできないので、テーブルの中身を削除してからもう一度
+コピーしてください
