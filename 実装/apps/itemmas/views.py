@@ -11,7 +11,8 @@ from django.db import models
 from django.views.generic import TemplateView,ListView,DetailView,CreateView,DeleteView,UpdateView
 from django.urls import reverse_lazy
 from .forms import S0302Form
-from .models import ItemInfo
+from django.shortcuts import render
+from .models import ItemInfo,ItemSpecification
 
 class S0301View(ListView):
     """S0301View
@@ -61,8 +62,17 @@ class S0303View(DetailView,DeleteView):
     template_name = "mas_item_detail.html"
     success_url = reverse_lazy('itemmas:S03-01')
 
-    def delete(self,request,*args,**kwargs):
-        return super().delete(request,*args,**kwargs)
+    # def get_success_url(self):
+    #     return reverse_lazy('itemmas:S03-01',kwargs={'pk':self.kwargs['pk']})
+    # def form_valid(self,form):
+    #     return super().form_valid(form)
+    # def itemdetail(request,self,pk):
+    #     itemInfo = ItemInfo.objects.all()
+    #     #itemInfo = ItemInfo.objects.order_by('id')
+    #     context = {'itemInfo': itemInfo}
+    #     return render(request, 'mas_item_detail.html', context,kwargs={'pk':self.pk})
+    # def delete(self,request,*args,**kwargs):
+    #     return super().delete(request,*args,**kwargs)
 
 class S0304View(UpdateView):
     """S0304View

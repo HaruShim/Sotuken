@@ -6,8 +6,11 @@ Todo:
 
 """
 
-from django.views.generic import TemplateView,ListView
+from django.db import models
+from django.views.generic import TemplateView,ListView,DetailView,DeleteView,UpdateView
 from employeemas.models import EmployeeInfo
+# from .forms import S0102Form
+from django.urls import reverse_lazy
 
 class S1201View(ListView):
     """S1201View
@@ -22,7 +25,7 @@ class S1201View(ListView):
     model = EmployeeInfo
     paginate_by = 12
 
-class S1202View(TemplateView):
+class S1202View(DetailView):
     """S1202View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -31,6 +34,8 @@ class S1202View(TemplateView):
         name (): 
 
     """
+    model = EmployeeInfo
     template_name = "employee_detail.html"
+    success_url = reverse_lazy('employeemas:S01-01')
 
 

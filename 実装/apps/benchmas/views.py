@@ -76,7 +76,7 @@ class S0502GPUView(CreateView):
         item.save()
         return super().form_valid(form)
 
-class S0503CPUView(UpdateView,DeleteView):
+class S0503CPUView(UpdateView):
     """S0501View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -91,13 +91,11 @@ class S0503CPUView(UpdateView,DeleteView):
     form_class = S0502CPUForm
 
     def get_success_url(self):
-        return reverse_lazy('benchmas:S01-03',kwargs={'pk':self.kwargs['pk']})
+        return reverse_lazy('benchmas:S05-03CPU',kwargs={'pk':self.kwargs['pk']})
     def form_valid(self,form):
         return super().form_valid(form)
-    def delete(self,request,*args,**kwargs):
-        return super().delete(request,*args,**kwargs)
 
-class S0503GPUView(UpdateView,DeleteView):
+class S0503GPUView(UpdateView):
     """S0501View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -112,10 +110,7 @@ class S0503GPUView(UpdateView,DeleteView):
     form_class = S0502GPUForm
 
     def get_success_url(self):
-        return reverse_lazy('benchmas:S01-03',kwargs={'pk':self.kwargs['pk']})
+        return reverse_lazy('benchmas:S05-03GPU',kwargs={'pk':self.kwargs['pk']})
     def form_valid(self,form):
         return super().form_valid(form)
-    def delete(self,request,*args,**kwargs):
-        return super().delete(request,*args,**kwargs)
-
 

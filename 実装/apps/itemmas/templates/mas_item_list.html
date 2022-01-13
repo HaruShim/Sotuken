@@ -32,7 +32,7 @@
                             <table class="listtable">
                                 <thead class="tablecolumn">
                                     <tr>
-                                        <th>id</th>
+                                        <!-- <th>id</th> -->
                                         <th>商品コード</th>
                                         <th>型番</th>
                                         <th>カテゴリ</th>
@@ -46,7 +46,7 @@
                                 
                                 <tr>
                                     <th><a href="{% url 'itemmas:S03-03' item.pk %}">{{ item.id }}</a></th> <!--商品コード-->
-                                    <td>{{ item.item_code }}</td> <!--型番-->
+                                    <!-- <td>{{ item.item_code }</td> 型番 -->
                                     <td>{{ item.model_number }}</td> <!--型番-->
                                     <td>{{ item.get_category_display }}</td> <!--カテゴリ-->
                                     <td>{{ item.store_id.store_name }}</td> <!--在庫場所-->

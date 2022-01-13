@@ -11,6 +11,9 @@ from django.views.generic import TemplateView,ListView,DetailView,CreateView,Del
 from django.urls import reverse_lazy
 from .forms import S0602Form
 from .models import Bottleneck
+from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 class S0601View(ListView):
     """S0601View
@@ -21,10 +24,23 @@ class S0601View(ListView):
         name (): 
 
     """
-    template_name = "mas_bottleneck_list.html"
-    context_object_name = 'bottleneck'
-    model = Bottleneck
-    paginate_by = 12
+    # template_name = "mas_bottleneck_list.html"
+    # context_object_name = 'bottleneck'
+    # model = Bottleneck
+    # paginate_by = 3
+
+    def mylist(request):
+        Bottlenecks = Bottleneck.objects.order_by('id')
+        paginator = Paginator(Bottlenecks, 12)
+        page = request.GET.get('page', 1)
+        try:
+            bottleneck = paginator.page(page)
+        except PageNotAnInteger:
+            bottleneck = paginator.page(1)
+        except EmptyPage:
+            bottleneck = paginator.page(1)
+        context = {'bottleneck': bottleneck}
+        return render(request, 'mas_bottleneck_list.html', context)
 
 class S0602View(CreateView):
     """S0602View
@@ -46,7 +62,7 @@ class S0602View(CreateView):
         return super().form_valid(form)
 
 
-class S0603View(UpdateView,DeleteView):
+class S0603View(UpdateView):
     """S0603View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -57,13 +73,12 @@ class S0603View(UpdateView,DeleteView):
     """
     model = Bottleneck
     template_name = "mas_bottleneck_edit.html"
-    success_url = reverse_lazy('bottleneckmas:S06-01CPU')
+    # success_url = reverse_lazy('bottleneckmas:S06-01')
     form_class = S0602Form
 
     def get_success_url(self):
-        return reverse_lazy('bottleneckmas:S06-03',kwargs={'pk':self.kwargs['pk']})
+        return reverse_lazy('bottleneckmas:S06-01')
     def form_valid(self,form):
         return super().form_valid(form)
-    def delete(self,request,*args,**kwargs):
-        return super().delete(request,*args,**kwargs)
+
 
