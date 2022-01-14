@@ -1,0 +1,76 @@
+<!-- S04-03 売上情報編集
+
+    ToDo
+        画面の制作お願いします
+        * 長谷川　CSSお願いします　伝票番号の先頭一文字は多分CSSの影響なので修正お願いします
+        *   できれば販売価格、担当者のセルに色付けるとかそれ以外のセルの文字を透明OR薄くするとかした方がユーザに優しいかなと思います
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | 売上情報編集{% endblock %}
+
+{% block main_contents %}
+<head>
+    <!-- jQuery -->
+    <script type="text/javascript" language="javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <!-- 04-03用の行追加削除 -->
+    <script type="text/javascript" src="{% static 'js\myscript\04_eaning_cells.js' %}"></script>
+    <!-- textboxに半角数字のみを入力させる -->
+    <script type="text/javascript" src="{% static 'js\myscript\num_alp_only.js' %}"></script>
+</head>
+<body>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">売上管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    売上情報編集
+                </div>
+                <div class="card-body">
+                    <div class="item_beside">
+                        <select id="earning_select" onchange="rowCheck()">
+                            <option value="fixEarning">打ち直し</option>
+                            <option value="returnItem">返品</option>
+                        </select>
+                        販売価格<input type="text" id="umoney" name="money">円
+                        <button class="btn btn-main" onclick="insertEarningRow('earning_table')">確定</button>
+                    </div>
+                    <table id="earning_table" class="earningtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th nowrap>伝票番号</th>
+                                <th nowrap>販売日</th>
+                                <th nowrap>商品コード</th>
+                                <th nowrap>型番</th>
+                                <th nowrap>仕入価格</th>
+                                <th nowrap>販売価格</th>
+                                <th nowrap>粗利</th>
+                                <th nowrap>粗利率</th>
+                                <th nowrap>販売店舗</th>
+                                <th nowrap>担当者</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tabletbody">
+                            <tr>
+                                <td>123456789</td>
+                                <td>2020/10/31</td>
+                                <td>937590552</td>
+                                <td>123456789</td>
+                                <td>3000 円</td>
+                                <td>4000 円</td>
+                                <td>1000</td>
+                                <td>25%</td>
+                                <td>店舗A</td>
+                                <td>大原太郎</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-touroku" href="#">更新</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
