@@ -1,22 +1,20 @@
-@startuml class_diagrams
+@startuml ログインからの流れ
 
 ' 属性・メソッドを非表示にする
 ' hide members
 hide empty members
 ' skinparam groupInheritance 2
 
-circle "ユーザ"
-class "ログイン"
 class "StoreInfo\n(店舗情報モデル)" as 店舗情報モデル
     class "S0201View\n(情報一覧)" as 店舗情報一覧
     class "S0202View\n(新規作成)" as 店舗新規作成
     class "S0203View\n(詳細・削除)" as 店舗詳細削除
     class "S0204View\n(更新)" as 店舗更新
     ' 流れ
-    店舗情報モデル "1.." -d- "1" 店舗情報一覧
-    店舗情報モデル "0.." -d- "1" 店舗新規作成
-    店舗情報モデル "1.." -d- "1" 店舗詳細削除
-    店舗情報モデル "1.." -d- "1" 店舗更新
+    店舗情報モデル -d- 店舗情報一覧
+    店舗情報モデル -d- 店舗新規作成
+    店舗情報モデル -d- 店舗詳細削除
+    店舗情報モデル -d- 店舗更新
 class "EmployeeInfo\n(従業員情報モデル)" as 従業員情報モデル
     class "S0101View\n(情報一覧)" as 従業員情報一覧
     class "S0102View\n(新規作成)" as 従業員新規作成
@@ -25,20 +23,20 @@ class "EmployeeInfo\n(従業員情報モデル)" as 従業員情報モデル
     '必要？↓
     ' class "S0105View" as 従業員参照
     ' 流れ
-    従業員情報モデル "1.." -d- "1" 従業員情報一覧
-    従業員情報モデル "0.." -d- "1" 従業員新規作成
-    従業員情報モデル "1.." -d- "1" 従業員詳細削除
-    従業員情報モデル "1.." -d- "1" 従業員更新
+    従業員情報モデル -d- 従業員情報一覧
+    従業員情報モデル -d- 従業員新規作成
+    従業員情報モデル -d- 従業員詳細削除
+    従業員情報モデル -d- 従業員更新
     class "ItemInfo\n(商品情報モデル)" as 商品情報モデル
     class "S0301View\n(情報一覧)" as 商品情報一覧
     class "S0302View\n(新規作成)" as 商品新規作成
     class "S0303View\n(詳細・削除)" as 商品詳細削除
     class "S0304View\n(更新)" as 商品更新
     ' 流れ
-    商品情報モデル "1.." -d- "1" 商品情報一覧
-    商品情報モデル "0.." -d- "1" 商品新規作成
-    商品情報モデル "1.." -d- "1" 商品詳細削除
-    商品情報モデル "1.." -d- "1" 商品更新
+    商品情報モデル -d- 商品情報一覧
+    商品情報モデル -d- 商品新規作成
+    商品情報モデル -d- 商品詳細削除
+    商品情報モデル -d- 商品更新
 class "ItemSpecification\n(商品スペック)" as 商品スペック
 ' なし
 class "SetItem\n(セット商品モデル)" as セット商品モデル
@@ -51,10 +49,10 @@ class "Reserve\n(取置商品モデル)" as 取置商品モデル
     class "S0903View\n(詳細・削除)" as 取置商品詳細削除
     class "S0904View\n(更新)" as 取置商品更新
     ' 流れ
-    取置商品モデル "1.." -d-- "1" 取置商品情報一覧
-    取置商品モデル "0.." -d-- "1" 取置商品新規作成
-    取置商品モデル "1.." -d-- "1" 取置商品詳細削除
-    取置商品モデル "1.." -d-- "1" 取置商品更新
+    取置商品モデル -d- 取置商品情報一覧
+    取置商品モデル -d- 取置商品新規作成
+    取置商品モデル -d- 取置商品詳細削除
+    取置商品モデル -d- 取置商品更新
 class "EarningInfo\n(売上情報モデル)" as 売上情報モデル
 ' なし
 class "CpuBench\n(CPUベンチマークモデル)" as CPUベンチマークモデル
@@ -62,53 +60,62 @@ class "CpuBench\n(CPUベンチマークモデル)" as CPUベンチマークモ�
     class "S0502CPUView\n(新規作成)" as CPUベンチマーク新規作成
     class "S0503CPUView\n(更新)" as CPUベンチマーク更新
     ' 流れ
-    CPUベンチマークモデル "1.." -d- "1" CPUベンチマーク情報一覧
-    CPUベンチマークモデル "0.." -d- "1" CPUベンチマーク新規作成
-    CPUベンチマークモデル "1.." -d- "1" CPUベンチマーク更新
+    CPUベンチマークモデル -d-- CPUベンチマーク情報一覧
+    CPUベンチマークモデル -d-- CPUベンチマーク新規作成
+    CPUベンチマークモデル -d-- CPUベンチマーク更新
 class "GpuBench\n(GPUベンチマークモデル)" as GPUベンチマークモデル
     class "S0501GPUView\n(情報一覧)" as GPUベンチマーク情報一覧
     class "S0502GPUView\n(新規作成)" as GPUベンチマーク新規作成
     class "S0503GPUView\n(更新)" as GPUベンチマーク更新
     ' 流れ
-    GPUベンチマークモデル "1.." -d- "1" GPUベンチマーク情報一覧
-    GPUベンチマークモデル "0.." -d- "1" GPUベンチマーク新規作成
-    GPUベンチマークモデル "1.." -d- "1" GPUベンチマーク更新
+    GPUベンチマークモデル -d- GPUベンチマーク情報一覧
+    GPUベンチマークモデル -d- GPUベンチマーク新規作成
+    GPUベンチマークモデル -d- GPUベンチマーク更新
 class "Bottleneck\n(ボトルネックモデル)" as ボトルネックモデル
     class "S0601View\n(情報一覧)" as ボトルネック情報一覧
     class "S0602View\n(新規作成)" as ボトルネック新規作成
     class "S0603View\n(更新)" as ボトルネック更新
     ' 流れ
-    ボトルネックモデル "1.." -d- "1" ボトルネック情報一覧
-    ボトルネックモデル "0.." -d- "1" ボトルネック新規作成
-    ボトルネックモデル "1.." -d- "1" ボトルネック更新
+    ボトルネックモデル -d-- ボトルネック情報一覧
+    ボトルネックモデル -d-- ボトルネック新規作成
+    ボトルネックモデル -d-- ボトルネック更新
+class 商品詳細 << (D,orchid) >>
 
 ' 流れ
-ユーザ -- ログイン
-ログイン "0.." -- "1" 従業員情報モデル
+ログイン -d- 従業員情報モデル
 従業員情報モデル "0.." --- "1" 店舗情報モデル
-店舗情報モデル "1" -l- "1.." 商品情報モデル
-商品情報モデル "1" -l- "1" 売上情報モデル
-class 商品詳細 << (D,orchid) >>
-商品詳細削除 "1" --- "1" 商品詳細
-商品詳細 "0" -l- "1.." 商品スペック
+店舗情報モデル "1" -- "0.." 商品情報モデル
+店舗情報モデル "1" -- "0.." 売上情報モデル
+店舗情報モデル "1" -- "0.." 取置商品モデル
+店舗情報モデル "1" - "0.." セット商品モデル
+商品情報モデル "1.." -- "1.." ベンチマーク
+商品情報モデル "1.." -- "1.." 商品スペック
+商品情報モデル "1.." -- "1.." ボトルネックモデル
+商品情報モデル "1.." -- "0.." セット商品中間モデル
+商品情報モデル "1.." -- "0.." セット商品モデル
+商品詳細削除 "1" -- "1" 商品詳細
+商品詳細 "0" -- "1.." 商品スペック
 商品詳細 "1" -- "1" セット商品中間モデル
-商品詳細 "0" -r- "1.." カテゴリ
-セット商品中間モデル "1" -d- "1.." セット商品モデル
 商品詳細 "1" -- "1.." 取置商品モデル
 商品詳細 "0" -- "1.." ボトルネックモデル
-商品情報モデル "1" -d-- "1" ベンチマーク
-ベンチマーク "1" -d- "1"  CPUベンチマークモデル  
+ベンチマーク "1" -d- "1"  CPUベンチマークモデル
 ベンチマーク "1" -d- "1"  GPUベンチマークモデル
+セット商品中間モデル "1" -u- "1.." セット商品モデル
+取置商品モデル "0.." -- "1.." 商品情報モデル
+売上情報モデル "1" -- "1" 商品情報モデル
 
 
 
 ' /属性/
 ' 店舗情報モデル
-店舗情報モデル : 店舗名
-店舗情報モデル : 住所
-店舗情報モデル : 連絡先
-店舗情報モデル : 店長
-店舗情報モデル : 主な従業員
+店舗情報モデル : -M02_PK01_store_id:Char[PK]
+店舗情報モデル : -M02_FD01_place_category:smallint
+店舗情報モデル : -M02_FD02_store_name:Char
+店舗情報モデル : -M02_FD03_address:Text
+店舗情報モデル : -M02_FD04_tel:Char
+店舗情報モデル : -M02_FD05_invalid_flg:Boolean
+店舗情報モデル : -M02_FD06_created_at:DateTime
+店舗情報モデル : -M02_FD07_updated_at:DateTime
 店舗情報一覧 : -template_name
 店舗情報一覧 : -model
 店舗情報一覧 : -context_object_name
@@ -129,15 +136,19 @@ class 商品詳細 << (D,orchid) >>
 店舗更新 : +form_valid()
 
 '従業員情報モデル
-従業員情報モデル : 従業員ID
-従業員情報モデル : 権限
-従業員情報モデル : 氏名
-従業員情報モデル : 住所
-従業員情報モデル : 電話番号
-従業員情報モデル : 性別
-従業員情報モデル : 年齢
-従業員情報モデル : 生年月日
-従業員情報モデル : 店舗
+従業員情報モデル : -M01_ PK01_id:integer[PK]
+従業員情報モデル : -M01_PK01_employee_id:Char[PK]
+従業員情報モデル : -M01_FK01_store_id:Char[FK]
+従業員情報モデル : -M01_FD01_employment_status:smallint
+従業員情報モデル : -M01_FD02_name:Char
+従業員情報モデル : -M01_FD03_ruby_name:Char
+従業員情報モデル : -M01_FD04_tel_num:Char
+従業員情報モデル : -M01_FD05_gender:Smallint
+従業員情報モデル : -M01_FD06_birthday:Date
+従業員情報モデル : -M01_FD07_invalid_flg:Boolean
+従業員情報モデル : -M01_FD08_created_at:DateTime
+従業員情報モデル : -M01_FD09_lastlogin_at:DateTime
+従業員情報モデル : -M01_FD10_updated_at:DateTime
 従業員情報一覧 : -template_name
 従業員情報一覧 : -model
 従業員情報一覧 : -context_object_name
@@ -158,17 +169,18 @@ class 商品詳細 << (D,orchid) >>
 従業員更新 : +form_valid()
 
 ' 商品情報モデル
-商品情報モデル : 商品コード
-商品情報モデル : 店舗ID
-商品情報モデル : 型番
-商品情報モデル : カテゴリ
-商品情報モデル : メーカー名
-商品情報モデル : 商品状態
-商品情報モデル : 仕入価格
-商品情報モデル : 商品画像
-商品情報モデル : 備考
-商品情報モデル : 作成日時
-商品情報モデル : 最終更新日時
+
+商品情報モデル : M03_PK01_item_code:character varying[PK]
+商品情報モデル : M03_FK02_store_id:Char[FK]
+商品情報モデル : M03_FK01_model_number:character varying
+商品情報モデル : M03_FK03_category:smallint
+商品情報モデル : M03_FD01_manufacturer_name:character varying
+商品情報モデル : M03_FD02_item_status:smallint
+商品情報モデル : M03_FD03_purchase_price:Integer
+商品情報モデル : M03_FD04_item_image:character varying
+商品情報モデル : M03_FD05_remarks:text
+商品情報モデル : M03_FD06_created_at:timestamp with time zone
+商品情報モデル : M03_FD07_updated_at:timestamp with time zone
 商品情報一覧 : -template_name
 商品情報一覧 : -model
 商品情報一覧 : -context_object_name
@@ -189,27 +201,28 @@ class 商品詳細 << (D,orchid) >>
 商品更新 : +form_valid()
 
 ' 商品スペック
-商品スペック : 型番
-商品スペック : CPU
-商品スペック : HDD
-商品スペック : SSD
-商品スペック : モニタサイズ
-商品スペック : モニタ解像度:縦
-商品スペック : モニタ解像度:横
-商品スペック : カメラ
-商品スペック : Wi-Fi
-商品スペック : 光学ドライブ
-商品スペック : グラフィック
-商品スペック : OS
+商品スペック : -M04_PK01_spec_id:integer
+商品スペック : -M04_PK01_model_number:character varying[PK]
+商品スペック : -M04_FD01_cpu:character varying
+商品スペック : -M04_FD02_hdd:double precision
+商品スペック : -M04_FD03_ssd:smallint
+商品スペック : -M04_FD04_monitor_size:double precision
+商品スペック : -M04_FD05_monitor_vertical:smallint
+商品スペック : -M04_FD06_monitor_horizon:smallint
+商品スペック : -M04_FD07_camera:boolean
+商品スペック : -M04_FD08_wifi:boolean
+商品スペック : -M04_FD09_optical_drive:boolean
+商品スペック : -M04_FD10_graphic:character:varying
+商品スペック : -M04_FD11_os	character:varying
 
 ' 取置商品モデル
-取置商品モデル : 取置商品ID
-取置商品モデル : 商品コード
-取置商品モデル : 店舗ID
-取置商品モデル : 予約者氏名
-取置商品モデル : 連絡先
-取置商品モデル : 予約日時
-取置商品モデル : 最終更新日時
+取置商品モデル : -M09_PK01_reserve_id:INTEGER[PK]
+取置商品モデル : -M09_PK01_item_code:CHAR(9)[FK]
+取置商品モデル : -M09_PK01_store_id:INTEGER[FK]
+取置商品モデル : -M09_FD02_reserver_name:CHAR(30)
+取置商品モデル : -M09_FD03_reserver_tel:CHAR(13)
+取置商品モデル : -M09_FD04_reserve_at:TIMESTAMP
+取置商品モデル : -M09_FD05_updated_at:TIMESTAMP
 取置商品情報一覧 : -template_name
 取置商品情報一覧 : -model
 取置商品情報一覧 : -context_object_name
@@ -230,37 +243,41 @@ class 商品詳細 << (D,orchid) >>
 取置商品更新 : +form_valid()
 
 ' セット商品モデル
-セット商品モデル : 販売価格
+セット商品モデル : -M10_PK01_set_item_id:INTEGER[PK]
+セット商品モデル : -M10_FK02_store_id:INTEGER[FK]
+セット商品モデル : -M10_FD01_set_name:char(30)
+セット商品モデル : -M10_FD02_created_at:TIMESTAMP
+セット商品モデル : -M10_FD03_updated_at:TIMESTAMP
 
 ' セット商品中間モデル
-セット商品中間モデル : セット中間ID
-セット商品中間モデル : 商品コード
-セット商品中間モデル : セット商品ID
+セット商品中間モデル : -M11_PK01_set_intermediate_id:INTEGER[PK]
+セット商品中間モデル : -M11_FK02_item_code:CHAR(9)[FK]
+セット商品中間モデル : -M11_FK01_set_item_id:INTEGER[FK]
 
 ' 売上情報モデル
-売上情報モデル : 売上情報ID
-売上情報モデル : 商品コード
-売上情報モデル : 店舗ID
-売上情報モデル : 従業員ID
-売上情報モデル : 販売価格
-売上情報モデル : 粗利
-売上情報モデル : 粗利率
-売上情報モデル : 販売日
-売上情報モデル : 最終更新日時
+売上情報モデル : -M05_PK01_earning_id:Auto[PK]
+売上情報モデル : -M05_PK02_item_code:Char[FK]
+売上情報モデル : -M02_PK01_store_id:Char[FK]
+売上情報モデル : -M01_PK01_employee_id:Char[FK]
+売上情報モデル : -M05_FD02_selling_price:Integer
+売上情報モデル : -M05_FD03_gross_profit:Integer
+売上情報モデル : -M05_FD04_gross_profit_margin:Float
+売上情報モデル : -M05_FD07_sale_date:DateTime
+売上情報モデル : -M05_FD08_updated_at:DateTime
 
 ' CPUベンチマークモデル
-CPUベンチマークモデル : CPUベンチマークID
-CPUベンチマークモデル : CPU名称
-CPUベンチマークモデル : PassMark
-CPUベンチマークモデル : コア
-CPUベンチマークモデル : スレッド
-CPUベンチマークモデル : TDP
-CPUベンチマークモデル : 定格クロック
-CPUベンチマークモデル : 最大クロック
-CPUベンチマークモデル : 定価
-CPUベンチマークモデル : コスパ
-CPUベンチマークモデル : 作成日時
-CPUベンチマークモデル : 最終更新日時
+CPUベンチマークモデル : -M06_PK01_cpu_bench_id:Auto[PK]
+CPUベンチマークモデル : -M06_PK02_cpu_name:Char
+CPUベンチマークモデル : -M06_FD01_passmark:Integer
+CPUベンチマークモデル : -M06_FD02_core:Integer
+CPUベンチマークモデル : -M06_FD03_thread:Integer
+CPUベンチマークモデル : -M06_FD04_tdp:Integer
+CPUベンチマークモデル : -M06_FD05_rated_clock:Float
+CPUベンチマークモデル : -M06_FD06_max_clock:Float
+CPUベンチマークモデル : -M06_FD07_list_price:Integer
+CPUベンチマークモデル : -M06_FD08_cost_performance:Float
+CPUベンチマークモデル : -M06_FD09_created_at:DateTime
+CPUベンチマークモデル : -M06_FD10_updated_at:DateTime
 CPUベンチマーク情報一覧 : -template_name
 CPUベンチマーク情報一覧 : -model
 CPUベンチマーク情報一覧 : -context_object_name
@@ -277,15 +294,15 @@ CPUベンチマーク更新 : +get_success_url()
 CPUベンチマーク更新 : +form_valid()
 
 ' GPUベンチマークモデル
-GPUベンチマークモデル : GPUベンチマークID
-GPUベンチマークモデル : GPU名称
-GPUベンチマークモデル : Mark Time Spy Graphics
-GPUベンチマークモデル : TDP
-GPUベンチマークモデル : コスパ
-GPUベンチマークモデル : ワットパフォーマンス
-GPUベンチマークモデル : 定価
-GPUベンチマークモデル : 作成日時
-GPUベンチマークモデル : 最終更新日時
+GPUベンチマークモデル : -M07_PK01_gpu_bench_id:Auto[PK]
+GPUベンチマークモデル : -M07_PK02_gpu_name:Char
+GPUベンチマークモデル : -M07_FD01_marktimespygraphics:Integer
+GPUベンチマークモデル : -M07_FD02_tdp:Integer
+GPUベンチマークモデル : -M07_FD03_cost_performance:Float
+GPUベンチマークモデル : -M07_FD04_wattage_performance:Float
+GPUベンチマークモデル : -M07_FD05_list_price:Integer
+GPUベンチマークモデル : -M07_FD06_created_at:DateTime
+GPUベンチマークモデル : -M07_FD07_updated_at:DateTime
 GPUベンチマーク情報一覧 : -template_name
 GPUベンチマーク情報一覧 : -model
 GPUベンチマーク情報一覧 : -context_object_name
@@ -302,18 +319,18 @@ GPUベンチマーク更新 : +get_success_url()
 GPUベンチマーク更新 : +form_valid()
 
 ' ボトルネックモデル
-ボトルネックモデル : ボトルネックID
-ボトルネックモデル : CPU名
-ボトルネックモデル : GPU名
-ボトルネックモデル : バランス
-ボトルネックモデル : WQHD
-ボトルネックモデル : 4K解像度
-ボトルネックモデル : ゲーム適正
-ボトルネックモデル : ゲーム配信
-ボトルネックモデル : 動画編集
-ボトルネックモデル : エンコード
-ボトルネックモデル : 作成日時
-ボトルネックモデル : 最終更新日時
+ボトルネックモデル : -M08_PK01_bottleneck_id:integer[PK]
+ボトルネックモデル : -M08_FD01_cpu_name:character varying
+ボトルネックモデル : -M08_FD02_gpu_name:character varying
+ボトルネックモデル : -M08_FD03_balance:smallint
+ボトルネックモデル : -M08_FD04_wqhd:smallint
+ボトルネックモデル : -M08_FD05_four_k:smallint
+ボトルネックモデル : -M08_FD06_game_appropriate:smallint
+ボトルネックモデル : -M08_FD07_game_delivery:smallint
+ボトルネックモデル : -M08_FD08_video_editing:smallint
+ボトルネックモデル : -M08_FD09_encode:smallint
+ボトルネックモデル : -M08_FD10_created_at:timestamp with time zone
+ボトルネックモデル : -M08_FD11_updated_at:timestamp with time zone
 ボトルネック情報一覧 : -template_name
 ボトルネック情報一覧 : -model
 ボトルネック情報一覧 : -context_object_name
@@ -329,3 +346,348 @@ GPUベンチマーク更新 : +form_valid()
 ボトルネック更新 : +get_success_url()
 ボトルネック更新 : +form_valid()
 @enduml
+
+' ーーーーーーーーーーーーーーーーーー
+' @startuml 主キー、外部キーの関連
+
+' ' 属性・メソッドを非表示にする
+' hide members
+' hide empty members
+' ' skinparam groupInheritance 2
+
+' circle "ユーザ"
+' class "ログイン"
+' class "StoreInfo\n(店舗情報モデル)" as 店舗情報モデル
+'     class "S0201View\n(情報一覧)" as 店舗情報一覧
+'     class "S0202View\n(新規作成)" as 店舗新規作成
+'     class "S0203View\n(詳細・削除)" as 店舗詳細削除
+'     class "S0204View\n(更新)" as 店舗更新
+'     ' 流れ
+'     店舗情報モデル "1.." -d- "1" 店舗情報一覧
+'     店舗情報モデル "0.." -d- "1" 店舗新規作成
+'     店舗情報モデル "1.." -d- "1" 店舗詳細削除
+'     店舗情報モデル "1.." -d- "1" 店舗更新
+' class "EmployeeInfo\n(従業員情報モデル)" as 従業員情報モデル
+'     class "S0101View\n(情報一覧)" as 従業員情報一覧
+'     class "S0102View\n(新規作成)" as 従業員新規作成
+'     class "S0103View\n(詳細・削除)" as 従業員詳細削除
+'     class "S0104View\n(更新)" as 従業員更新
+'     '必要？↓
+'     ' class "S0105View" as 従業員参照
+'     ' 流れ
+'     従業員情報モデル "1.." -d- "1" 従業員情報一覧
+'     従業員情報モデル "0.." -d- "1" 従業員新規作成
+'     従業員情報モデル "1.." -d- "1" 従業員詳細削除
+'     従業員情報モデル "1.." -d- "1" 従業員更新
+'     class "ItemInfo\n(商品情報モデル)" as 商品情報モデル
+'     class "S0301View\n(情報一覧)" as 商品情報一覧
+'     class "S0302View\n(新規作成)" as 商品新規作成
+'     class "S0303View\n(詳細・削除)" as 商品詳細削除
+'     class "S0304View\n(更新)" as 商品更新
+'     ' 流れ
+'     商品情報モデル "1.." -d- "1" 商品情報一覧
+'     商品情報モデル "0.." -d- "1" 商品新規作成
+'     商品情報モデル "1.." -d- "1" 商品詳細削除
+'     商品情報モデル "1.." -d- "1" 商品更新
+' class "ItemSpecification\n(商品スペック)" as 商品スペック
+' ' なし
+' class "SetItem\n(セット商品モデル)" as セット商品モデル
+' ' なし
+' class "SetIntermediate\n(セット商品中間モデル)" as セット商品中間モデル
+' ' なし
+' class "Reserve\n(取置商品モデル)" as 取置商品モデル
+'     class "S0901View\n(情報一覧)" as 取置商品情報一覧
+'     class "S0902View\n(新規作成)" as 取置商品新規作成
+'     class "S0903View\n(詳細・削除)" as 取置商品詳細削除
+'     class "S0904View\n(更新)" as 取置商品更新
+'     ' 流れ
+'     取置商品モデル "1.." -d- "1" 取置商品情報一覧
+'     取置商品モデル "0.." -d- "1" 取置商品新規作成
+'     取置商品モデル "1.." -d- "1" 取置商品詳細削除
+'     取置商品モデル "1.." -d- "1" 取置商品更新
+' class "EarningInfo\n(売上情報モデル)" as 売上情報モデル
+' ' なし
+' class "CpuBench\n(CPUベンチマークモデル)" as CPUベンチマークモデル
+'     class "S0501CPUView\n(情報一覧)" as CPUベンチマーク情報一覧
+'     class "S0502CPUView\n(新規作成)" as CPUベンチマーク新規作成
+'     class "S0503CPUView\n(更新)" as CPUベンチマーク更新
+'     ' 流れ
+'     CPUベンチマークモデル "1.." -d- "1" CPUベンチマーク情報一覧
+'     CPUベンチマークモデル "0.." -d- "1" CPUベンチマーク新規作成
+'     CPUベンチマークモデル "1.." -d- "1" CPUベンチマーク更新
+' class "GpuBench\n(GPUベンチマークモデル)" as GPUベンチマークモデル
+'     class "S0501GPUView\n(情報一覧)" as GPUベンチマーク情報一覧
+'     class "S0502GPUView\n(新規作成)" as GPUベンチマーク新規作成
+'     class "S0503GPUView\n(更新)" as GPUベンチマーク更新
+'     ' 流れ
+'     GPUベンチマークモデル "1.." -d- "1" GPUベンチマーク情報一覧
+'     GPUベンチマークモデル "0.." -d- "1" GPUベンチマーク新規作成
+'     GPUベンチマークモデル "1.." -d- "1" GPUベンチマーク更新
+' class "Bottleneck\n(ボトルネックモデル)" as ボトルネックモデル
+'     class "S0601View\n(情報一覧)" as ボトルネック情報一覧
+'     class "S0602View\n(新規作成)" as ボトルネック新規作成
+'     class "S0603View\n(更新)" as ボトルネック更新
+'     ' 流れ
+'     ボトルネックモデル "1.." -d- "1" ボトルネック情報一覧
+'     ボトルネックモデル "0.." -d- "1" ボトルネック新規作成
+'     ボトルネックモデル "1.." -d- "1" ボトルネック更新
+
+' ' 流れ
+' 従業員情報モデル --d-- 店舗情報モデル
+' 店舗情報モデル --l-- 売上情報モデル
+' 店舗情報モデル --r-- 取置商品モデル
+' 店舗情報モデル --d-- 商品情報モデル
+' 店舗情報モデル ---- セット商品モデル
+' 取置商品モデル ---- 商品情報モデル
+' 売上情報モデル ---- 商品情報モデル
+' 商品情報モデル --l-- セット商品モデル
+' 商品情報モデル --r-- ベンチマーク
+' 商品情報モデル ---- セット商品中間モデル
+' 商品情報モデル --d-- ボトルネック
+' 商品情報モデル --d-- 商品スペック
+' セット商品モデル --d-- セット商品中間モデル
+
+' ' ベンチマーク -r- CPUベンチマークモデル
+' ' ベンチマーク -r- GPUベンチマークモデル
+
+
+' ' /属性/
+' ' 店舗情報モデル
+' 店舗情報モデル : -M02_PK01_store_id:Char[PK]
+' 店舗情報モデル : -M02_FD01_place_category:smallint
+' 店舗情報モデル : -M02_FD02_store_name:Char
+' 店舗情報モデル : -M02_FD03_address:Text
+' 店舗情報モデル : -M02_FD04_tel:Char
+' 店舗情報モデル : -M02_FD05_invalid_flg:Boolean
+' 店舗情報モデル : -M02_FD06_created_at:DateTime
+' 店舗情報モデル : -M02_FD07_updated_at:DateTime
+' 店舗情報一覧 : -template_name
+' 店舗情報一覧 : -model
+' 店舗情報一覧 : -context_object_name
+' 店舗情報一覧 : +get_queryset()
+' 店舗新規作成 : -template_name
+' 店舗新規作成 : -form_class
+' 店舗新規作成 : -model
+' 店舗新規作成 : -success_url
+' 店舗新規作成 : +form_valid()
+' 店舗詳細削除 : -template_name
+' 店舗詳細削除 : -model
+' 店舗詳細削除 : -success_url
+' 店舗詳細削除 : +delete()
+' 店舗更新 : -template_name
+' 店舗更新 : -model
+' 店舗更新 : -form_class
+' 店舗更新 : +get_success_url()
+' 店舗更新 : +form_valid()
+
+' '従業員情報モデル
+' 従業員情報モデル : -M01_ PK01_id:integer[PK]
+' 従業員情報モデル : -M01_PK01_employee_id:Char[PK]
+' 従業員情報モデル : -M01_FK01_store_id:Char[FK]
+' 従業員情報モデル : -M01_FD01_employment_status:smallint
+' 従業員情報モデル : -M01_FD02_name:Char
+' 従業員情報モデル : -M01_FD03_ruby_name:Char
+' 従業員情報モデル : -M01_FD04_tel_num:Char
+' 従業員情報モデル : -M01_FD05_gender:Smallint
+' 従業員情報モデル : -M01_FD06_birthday:Date
+' 従業員情報モデル : -M01_FD07_invalid_flg:Boolean
+' 従業員情報モデル : -M01_FD08_created_at:DateTime
+' 従業員情報モデル : -M01_FD09_lastlogin_at:DateTime
+' 従業員情報モデル : -M01_FD10_updated_at:DateTime
+' 従業員情報一覧 : -template_name
+' 従業員情報一覧 : -model
+' 従業員情報一覧 : -context_object_name
+' 従業員情報一覧 : +get_queryset()
+' 従業員新規作成 : -template_name
+' 従業員新規作成 : -form_class
+' 従業員新規作成 : -model
+' 従業員新規作成 : -success_url
+' 従業員新規作成 : +form_valid()
+' 従業員詳細削除 : -template_name
+' 従業員詳細削除 : -model
+' 従業員詳細削除 : -success_url
+' 従業員詳細削除 : +delete()
+' 従業員更新 : -template_name
+' 従業員更新 : -model
+' 従業員更新 : -form_class
+' 従業員更新 : +get_success_url()
+' 従業員更新 : +form_valid()
+
+' ' 商品情報モデル
+
+' 商品情報モデル : M03_PK01_item_code:character varying[PK]
+' 商品情報モデル : M03_FK02_store_id:Char[FK]
+' 商品情報モデル : M03_FK01_model_number:character varying
+' 商品情報モデル : M03_FK03_category:smallint
+' 商品情報モデル : M03_FD01_manufacturer_name:character varying
+' 商品情報モデル : M03_FD02_item_status:smallint
+' 商品情報モデル : M03_FD03_purchase_price:Integer
+' 商品情報モデル : M03_FD04_item_image:character varying
+' 商品情報モデル : M03_FD05_remarks:text
+' 商品情報モデル : M03_FD06_created_at:timestamp with time zone
+' 商品情報モデル : M03_FD07_updated_at:timestamp with time zone
+' 商品情報一覧 : -template_name
+' 商品情報一覧 : -model
+' 商品情報一覧 : -context_object_name
+' 商品情報一覧 : +get_queryset()
+' 商品新規作成 : -template_name
+' 商品新規作成 : -form_class
+' 商品新規作成 : -model
+' 商品新規作成 : -success_url
+' 商品新規作成 : +form_valid()
+' 商品詳細削除 : -template_name
+' 商品詳細削除 : -model
+' 商品詳細削除 : -success_url
+' 商品詳細削除 : +delete()
+' 商品更新 : -template_name
+' 商品更新 : -model
+' 商品更新 : -form_class
+' 商品更新 : +get_success_url()
+' 商品更新 : +form_valid()
+
+' ' 商品スペック
+' 商品スペック : -M04_PK01_spec_id:integer
+' 商品スペック : -M04_PK01_model_number:character varying[PK]
+' 商品スペック : -M04_FD01_cpu:character varying
+' 商品スペック : -M04_FD02_hdd:double precision
+' 商品スペック : -M04_FD03_ssd:smallint
+' 商品スペック : -M04_FD04_monitor_size:double precision
+' 商品スペック : -M04_FD05_monitor_vertical:smallint
+' 商品スペック : -M04_FD06_monitor_horizon:smallint
+' 商品スペック : -M04_FD07_camera:boolean
+' 商品スペック : -M04_FD08_wifi:boolean
+' 商品スペック : -M04_FD09_optical_drive:boolean
+' 商品スペック : -M04_FD10_graphic:character:varying
+' 商品スペック : -M04_FD11_os	character:varying
+
+' ' 取置商品モデル
+' 取置商品モデル : -M09_PK01_reserve_id:INTEGER[PK]
+' 取置商品モデル : -M09_PK01_item_code:CHAR(9)[FK]
+' 取置商品モデル : -M09_PK01_store_id:INTEGER[FK]
+' 取置商品モデル : -M09_FD02_reserver_name:CHAR(30)
+' 取置商品モデル : -M09_FD03_reserver_tel:CHAR(13)
+' 取置商品モデル : -M09_FD04_reserve_at:TIMESTAMP
+' 取置商品モデル : -M09_FD05_updated_at:TIMESTAMP
+' 取置商品情報一覧 : -template_name
+' 取置商品情報一覧 : -model
+' 取置商品情報一覧 : -context_object_name
+' 取置商品情報一覧 : +get_queryset()
+' 取置商品新規作成 : -template_name
+' 取置商品新規作成 : -form_class
+' 取置商品新規作成 : -model
+' 取置商品新規作成 : -success_url
+' 取置商品新規作成 : +form_valid()
+' 取置商品詳細削除 : -template_name
+' 取置商品詳細削除 : -model
+' 取置商品詳細削除 : -success_url
+' 取置商品詳細削除 : +delete()
+' 取置商品更新 : -template_name
+' 取置商品更新 : -model
+' 取置商品更新 : -form_class
+' 取置商品更新 : +get_success_url()
+' 取置商品更新 : +form_valid()
+
+' ' セット商品モデル
+' セット商品モデル : -M10_PK01_set_item_id:INTEGER[PK]
+' セット商品モデル : -M10_FK02_store_id:INTEGER[FK]
+' セット商品モデル : -M10_FD01_set_name:char(30)
+' セット商品モデル : -M10_FD02_created_at:TIMESTAMP
+' セット商品モデル : -M10_FD03_updated_at:TIMESTAMP
+
+' ' セット商品中間モデル
+' セット商品中間モデル : -M11_PK01_set_intermediate_id:INTEGER[PK]
+' セット商品中間モデル : -M11_FK02_item_code:CHAR(9)[FK]
+' セット商品中間モデル : -M11_FK01_set_item_id:INTEGER[FK]
+
+' ' 売上情報モデル
+' 売上情報モデル : -M05_PK01_earning_id:Auto[PK]
+' 売上情報モデル : -M05_PK02_item_code:Char[FK]
+' 売上情報モデル : -M02_PK01_store_id:Char[FK]
+' 売上情報モデル : -M01_PK01_employee_id:Char[FK]
+' 売上情報モデル : -M05_FD02_selling_price:Integer
+' 売上情報モデル : -M05_FD03_gross_profit:Integer
+' 売上情報モデル : -M05_FD04_gross_profit_margin:Float
+' 売上情報モデル : -M05_FD07_sale_date:DateTime
+' 売上情報モデル : -M05_FD08_updated_at:DateTime
+
+' ' CPUベンチマークモデル
+' CPUベンチマークモデル : -M06_PK01_cpu_bench_id:Auto[PK]
+' CPUベンチマークモデル : -M06_PK02_cpu_name:Char
+' CPUベンチマークモデル : -M06_FD01_passmark:Integer
+' CPUベンチマークモデル : -M06_FD02_core:Integer
+' CPUベンチマークモデル : -M06_FD03_thread:Integer
+' CPUベンチマークモデル : -M06_FD04_tdp:Integer
+' CPUベンチマークモデル : -M06_FD05_rated_clock:Float
+' CPUベンチマークモデル : -M06_FD06_max_clock:Float
+' CPUベンチマークモデル : -M06_FD07_list_price:Integer
+' CPUベンチマークモデル : -M06_FD08_cost_performance:Float
+' CPUベンチマークモデル : -M06_FD09_created_at:DateTime
+' CPUベンチマークモデル : -M06_FD10_updated_at:DateTime
+' CPUベンチマーク情報一覧 : -template_name
+' CPUベンチマーク情報一覧 : -model
+' CPUベンチマーク情報一覧 : -context_object_name
+' CPUベンチマーク情報一覧 : +get_queryset()
+' CPUベンチマーク新規作成 : -template_name
+' CPUベンチマーク新規作成 : -form_class
+' CPUベンチマーク新規作成 : -model
+' CPUベンチマーク新規作成 : -success_url
+' CPUベンチマーク新規作成 : +form_valid()
+' CPUベンチマーク更新 : -template_name
+' CPUベンチマーク更新 : -model
+' CPUベンチマーク更新 : -form_class
+' CPUベンチマーク更新 : +get_success_url()
+' CPUベンチマーク更新 : +form_valid()
+
+' ' GPUベンチマークモデル
+' GPUベンチマークモデル : -M07_PK01_gpu_bench_id:Auto[PK]
+' GPUベンチマークモデル : -M07_PK02_gpu_name:Char
+' GPUベンチマークモデル : -M07_FD01_marktimespygraphics:Integer
+' GPUベンチマークモデル : -M07_FD02_tdp:Integer
+' GPUベンチマークモデル : -M07_FD03_cost_performance:Float
+' GPUベンチマークモデル : -M07_FD04_wattage_performance:Float
+' GPUベンチマークモデル : -M07_FD05_list_price:Integer
+' GPUベンチマークモデル : -M07_FD06_created_at:DateTime
+' GPUベンチマークモデル : -M07_FD07_updated_at:DateTime
+' GPUベンチマーク情報一覧 : -template_name
+' GPUベンチマーク情報一覧 : -model
+' GPUベンチマーク情報一覧 : -context_object_name
+' GPUベンチマーク情報一覧 : +get_queryset()
+' GPUベンチマーク新規作成 : -template_name
+' GPUベンチマーク新規作成 : -form_class
+' GPUベンチマーク新規作成 : -model
+' GPUベンチマーク新規作成 : -success_url
+' GPUベンチマーク新規作成 : +form_valid()
+' GPUベンチマーク更新 : -template_name
+' GPUベンチマーク更新 : -model
+' GPUベンチマーク更新 : -form_class
+' GPUベンチマーク更新 : +get_success_url()
+' GPUベンチマーク更新 : +form_valid()
+
+' ' ボトルネックモデル
+' ボトルネックモデル : -M08_PK01_bottleneck_id:integer[PK]
+' ボトルネックモデル : -M08_FD01_cpu_name:character varying
+' ボトルネックモデル : -M08_FD02_gpu_name:character varying
+' ボトルネックモデル : -M08_FD03_balance:smallint
+' ボトルネックモデル : -M08_FD04_wqhd:smallint
+' ボトルネックモデル : -M08_FD05_four_k:smallint
+' ボトルネックモデル : -M08_FD06_game_appropriate:smallint
+' ボトルネックモデル : -M08_FD07_game_delivery:smallint
+' ボトルネックモデル : -M08_FD08_video_editing:smallint
+' ボトルネックモデル : -M08_FD09_encode:smallint
+' ボトルネックモデル : -M08_FD10_created_at:timestamp with time zone
+' ボトルネックモデル : -M08_FD11_updated_at:timestamp with time zone
+' ボトルネック情報一覧 : -template_name
+' ボトルネック情報一覧 : -model
+' ボトルネック情報一覧 : -context_object_name
+' ボトルネック情報一覧 : +get_queryset()
+' ボトルネック新規作成 : -template_name
+' ボトルネック新規作成 : -form_class
+' ボトルネック新規作成 : -model
+' ボトルネック新規作成 : -success_url
+' ボトルネック新規作成 : +form_valid()
+' ボトルネック更新 : -template_name
+' ボトルネック更新 : -model
+' ボトルネック更新 : -form_class
+' ボトルネック更新 : +get_success_url()
+' ボトルネック更新 : +form_valid()
+' @enduml
