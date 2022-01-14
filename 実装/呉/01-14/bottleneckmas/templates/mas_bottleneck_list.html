@@ -1,0 +1,130 @@
+<!-- S-06-01 mas_bottleneck_list
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | ボトルネック一覧画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">ボトルネック一覧</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    ボトルネック一覧
+                </div>
+                <div class="card-body">
+                    <table frame="void">
+                        <tr>
+                            <td>
+                                <!-- <input type="text" name="cpuselect" list="cpulist" placeholder="CPU" autocomplete="off"> -->
+                                <input type="text" autocomplete="on" list="select_bank" name="cpuselect" placeholder="CPU" value="{{ value }}">
+                                <datalist id="cpulist">
+                                    {% for item in bottleneck %}
+                                    <option value="{{cpu_name}}">
+                                        {% endfor %}
+                                    </datalist>
+                                    <label>×</label>
+                                <input type="text" name="gpulist" list="gpulist" placeholder="GPU" autocomplete="off">
+                                <datalist id="gpulist">
+                                    {% for gpu in bottleneck %}
+                                    {{gpu_name}}
+                                    {% endfor %}
+                                </datalist>
+                                <!-- <datalist id="gpulist">
+                                    <option value="サンプル1">
+                                    <option value="サンプル2">
+                                    <option value="サンプル3">
+                                </datalist> -->
+                                            <a class="btn btn-touroku" href="#">検索</a>
+                                            <input type="checkbox" name="stock-only"><label>在庫に限定する</label>
+                                            <a class="btn btn-touroku" href="{% url 'bottleneckmas:S06-02' %}">新規登録</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="listtable sub1">
+                                    <thead class="tablecolumn">
+                            <tr>
+                                <th>CPU</th>
+                                <th>GPU</th>
+                                <th>バランス</th>
+                                <th>WQHD</th>
+                                <th>4K解像度</th>
+                                <th>ゲーム適正</th>
+                                <th>ゲーム配信</th>
+                                <th>動画編集</th>
+                                <th>エンコード</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- bottleneckモデルの一覧を表示 -->
+                            {% for item in bottleneck %}
+                            <tr>
+                                <td><a href="{% url 'bottleneckmas:S06-03' item.pk %}">{{ item.cpu_name }}</a></td><!--CPU-->
+                                <td>{{ item.gpu_name }}</td><!--GPU-->
+                                <td>{{ item.get_balance_display }}</td><!--バランス-->
+                                <td>{{ item.get_wqhd_display  }}</td><!--WQHD-->
+                                <td>{{ item.get_four_k_display  }}</td><!--4K解像度-->
+                                <td>{{ item.get_game_appropriate_display  }}</td><!--ゲーム適性-->
+                                <td>{{ item.get_game_delivery_display  }}</td><!--ゲーム配信-->
+                                <td>{{ item.get_video_editing_display  }}</td><!--動画編集-->
+                                <td>{{ item.get_encode_display  }}</td><!--エンコード-->
+                            </tr>
+                            <!-- DBが空だった場合 -->
+                            {% empty %}
+                            <p>空です</p>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <!-- ページネーション処理 -->
+                    {% if bottleneck.has_other_pages %}
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                {% if bottleneck.has_previous %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ bottleneck.previous_page_number }}"><<</a></li>
+                                {% else %}
+                                    <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
+                                {% endif %}
+                                {% if bottleneck.has_previous %}
+                                    {% if bottleneck.previous_page_number != 1 %}
+                                        <li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+                                        <li>…</li>
+                                    {% endif %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ bottleneck.previous_page_number }}">{{ bottleneck.previous_page_number }}</a></li>
+                                {% endif %}
+                                <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ bottleneck.number }}</div></li>
+                                {% if bottleneck.has_next %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ bottleneck.next_page_number }}">{{ bottleneck.next_page_number }}</a></li>
+                                    {% if bottleneck.next_page_number != bottleneck.paginator.num_pages %}
+                                        <li>…</li>
+                                        <li><a class="page-link text-primary d-inline-block" href="?page={{ bottleneck.paginator.num_pages }}">{{ bottleneck.paginator.num_pages }}</a></li>
+                                    {% endif %}
+                                {% endif %}
+                                {% if bottleneck.has_next %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ bottleneck.next_page_number }}">>></a></li>
+                                {% else %}
+                                    <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    {% endif %}
+                    <!-- ページネーション処理終了 -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
