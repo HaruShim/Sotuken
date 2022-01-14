@@ -1,0 +1,114 @@
+<!-- S14-01 勤務状況一覧
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        **60行目をDBからデータをセレクトできるように
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 勤務状況一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">人事情報管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    勤務状況一覧
+                </div>
+                <div class="card-body">
+                    <table class="listtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th style="border:none;" id="clear"></th>
+                                <th>従業員ID</th>
+                                <th>従業員名</th>
+                                <th>勤務店舗名</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="border:none;" class="dataright"><input type="checkbox"></td>
+                                <td>1234567891234</td>
+                                <td>大原太郎</td>
+                                <td>
+                                    <select name="workstatus" id="status-select">
+                                        <option value="">店舗A</option>
+                                        <option value="">店舗B</option>
+                                        <option value="">店舗C</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border:none;" class="dataright"><input type="checkbox"></td>
+                                <td>1234567894321</td>
+                                <td>佐藤太郎</td>
+                                <td>
+                                    <select name="workstatus" id="status-select">
+                                        <option value="">店舗B</option>
+                                        <option value="">店舗A</option>
+                                        <option value="">店舗C</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {% if employeeinfo.has_other_pages %}
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            {% if employeeinfo.has_previous %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ employeeinfo.previous_page_number }}">
+                                    <<</a>
+                            </li>
+                            {% else %}
+                            <li class="disabled">
+                                <div class="page-link text-secondary d-inline-block disabled" href="#">
+                                    <<</div>
+                            </li>
+                            {% endif %}
+                            {% if employeeinfo.has_previous %}
+                            {% if employeeinfo.previous_page_number != 1 %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+                            <li>…</li>
+                            {% endif %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ employeeinfo.previous_page_number }}">{{
+                                    employeeinfo.previous_page_number }}</a></li>
+                            {% endif %}
+                            <li class="disabled">
+                                <div class="page-link text-secondary d-inline-block disabled" href="#">{{ employeeinfo.number }}</div>
+                            </li>
+                            {% if employeeinfo.has_next %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ employeeinfo.next_page_number }}">{{
+                                    employeeinfo.next_page_number }}</a></li>
+                            {% if employeeinfo.next_page_number != employeeinfo.paginator.num_pages %}
+                            <li>…</li>
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ employeeinfo.paginator.num_pages }}">{{
+                                    employeeinfo.paginator.num_pages }}</a></li>
+                            {% endif %}
+                            {% endif %}
+                            {% if employeeinfo.has_next %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ employeeinfo.next_page_number }}">>></a></li>
+                            {% else %}
+                            <li class="disabled">
+                                <div class="page-link text-secondary d-inline-block disabled" href="#">>></div>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                    {% endif %}
+                    <a class="btn btn-touroku" href="#">完了</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
