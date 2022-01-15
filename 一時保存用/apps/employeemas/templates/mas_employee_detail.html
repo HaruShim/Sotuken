@@ -21,52 +21,51 @@
                     従業員情報詳細
                 </div>
                 <div class="card-body">
+                    <a class="btn btn-primary" href="{% url 'employeemas:S01-01' %}">戻る</a>
                     <table class="employee-table">
                         <thead class="tablecolumn">
                             <tr>
                                 <th>従業員ID</th>
-                                <td>38000513</td>
+                                <td>{{ object.employee_id }}</td>
                             </tr>
                             <tr>
                                 <th>従業員名</th>
-                                <td>田中太郎</td>
+                                <td>{{ object.name }}</td>
                             </tr>
                             <tr>
                                 <th>従業員名(カナ)</th>
-                                <td>タナカタロウ</td>
+                                <td>{{ object.ruby_name }}</td>                            
                             </tr>
                             <tr>
                                 <th>電話番号</th>
-                                <td>000-0000-0000</td>
+                                <td>{{ object.tel_num }}</td>
                             </tr>
                             <tr>
                                 <th>性別</th>
-                                <td>
-                                    <label>男性</label>
-                                </td>
+                                <td>{{ object.get_gender_display }}</td>
                             </tr>
                             <tr>
                                 <th>生年月日</th>
-                                <td>2000/08/09</td>
+                                <td>{{ object.birthday }}</td>
                             </tr>
                             <tr>
                                 <th>所属店舗</th>
-                                <td>
-                                    店舗A
-                                </td>
+                                <td>{{ object.store_id }}</td>
                             </tr>
                             <tr>
                                 <th>雇用形態</th>
-                                <td>
-                                    非正規社員
-                                </td>
+                                <td>{{ object.get_employment_status_display }}</td>
                             </tr>
                         </thead>
                     </table>
-                    <div class="center-button">
-                        <a class="btn btn-primary" href="#">編集</a>
-                        <a class="btn btn-primary" href="#">削除</a>
-                    </div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="center-button">
+                            <a class="btn btn-primary" href="{% url 'employeemas:S01-04' object.pk %}">編集</a>
+                            <button class="btn btn-primary" type="submit">削除</button>
+                        </div>
+                    </form>
+                    
                 </div>
             </div>
         </div>

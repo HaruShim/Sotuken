@@ -45,10 +45,10 @@ class ItemInfo(models.Model):
     item_status = models.SmallIntegerField(verbose_name='商品状態', choices=ischoice)
     purchase_price = models.IntegerField(verbose_name='仕入価格')
     item_image = models.ImageField(verbose_name='商品画像',blank=True,null=True)
-    remarks = models.TextField(verbose_name='備考')
+    remarks = models.TextField(verbose_name='備考',blank=True,null=True)
     created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='最終更新日時', auto_now=True)
-    store_id = models.ForeignKey(StoreInfo,verbose_name='店舗ID', db_column='store_id', on_delete=models.CASCADE)
+    store_id = models.ForeignKey(StoreInfo,verbose_name='店舗名', db_column='store_id', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural = '商品情報モデル'

@@ -16,5 +16,5 @@ from . import views
 app_name = 'storeref'
 urlpatterns = [
     path('S13-01/',views.S1301View.as_view(),name = "S13-01"), #店舗情報一覧
-    path('S13-02/',views.S1302View.as_view(),name = "S13-02"), #店舗情報詳細
+    path('S13-02/<int:pk>',views.S1302View.as_view(),name = "S13-02"), #店舗情報詳細
 ]

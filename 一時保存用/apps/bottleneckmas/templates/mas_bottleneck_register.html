@@ -23,115 +23,71 @@
                     <i class="fas fa-table me-1"></i>
                     ボトルネック新規登録
                 </div>
+                <form method="POST" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    <table class="table">
+                        {% if form.errors %}
+                        <div class="errorlist">
+                            {% for errors in form.errors.values %}
+                            {% for error in errors %}
+                            {{ error }}<br>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
 
-                <div  class="score-table">
+                        
+                        
+                        <div  class="score-table">
 
                     <table>
                         <thead class="tablecolumn">
-                     
                             <tr>
                                 <th>CPU</th>
-                                <td>
-                                    <input type="text" id="ucpu" name="cpu" placeholder="CPU型番">
-                                </td>
+                                <td>{{ form.cpu_name }}</td>
 
                                 <th>GPU</th>
-                                <td>
-                                    <input type="text" id="ugpu" name="gpu" placeholder="GPU型番">
-                                </td>
+                                <td>{{ form.gpu_name }}</td>
                             </tr>
-
+                            
                             <tr>
                                 <th>バランス</th>
-                                <td>
-                                    <select name="balance_score" class="scorelist">
-                                        <option value="4">◎</option>
-                                        <option value="3">○</option>
-                                        <option value="2">△</option>
-                                        <option value="1">×</option>
-                                        <option value="0" selected>-</option>
-                                    </select>
-                                </td>
+                                <td>{{ form.balance }}</td>
 
                                 <th>WQHD</th>
-                                <td>
-                                    <select name="wqhd_score" class="scorelist">
-                                        <option value="4">◎</option>
-                                        <option value="3">○</option>
-                                        <option value="2">△</option>
-                                        <option value="1">×</option>
-                                        <option value="0" selected>-</option>
-                                    </select>
-                                </td>
+                                <td>{{ form.wqhd }}</td>
+
                             </tr>
 
                             <tr>
                                 <th>4K</th>
-                                <td>
-                                    <select name="4k_score" class="scorelist">
-                                        <option value="4">◎</option>
-                                        <option value="3">○</option>
-                                        <option value="2">△</option>
-                                        <option value="1">×</option>
-                                        <option value="0" selected>-</option>
-                                    </select>
-                                </td>
+                                <td>{{ form.four_k }}</td>
 
                                 <th>ゲーム適性</th>
-                                <td>
-                                    <select name="game_play_score" class="scorelist">
-                                        <option value="4">◎</option>
-                                        <option value="3">○</option>
-                                        <option value="2">△</option>
-                                        <option value="1">×</option>
-                                        <option value="0" selected>-</option>
-                                    </select>
-                                </td>
-                            </tr>
+                                <td>{{ form.game_appropriate }}</td>
 
+                            </tr>
+                            
                             <tr>
                                 <th>ゲーム配信</th>
-                                <td>
-                                    <select name="game_delivery_score" class="scorelist">
-                                        <option value="4">◎</option>
-                                        <option value="3">○</option>
-                                        <option value="2">△</option>
-                                        <option value="1">×</option>
-                                        <option value="0" selected>-</option>
-                                    </select>
-                                </td>
+                                <td>{{ form.game_delivery }}</td>
 
                                 <th>動画編集</th>
-                                <td>
-                                    <select name="videoedit_score" class="scorelist">
-                                        <option value="4">◎</option>
-                                        <option value="3">○</option>
-                                        <option value="2">△</option>
-                                        <option value="1">×</option>
-                                        <option value="0" selected>-</option>
-                                    </select>
-                                </td>
+                                <td>{{ form.video_editing }}</td>
                             </tr>
-
+                            
                             <tr>
                                 <th>エンコード</th>
-                                <td>
-                                    <select name="encode_score" class="scorelist">
-                                        <option value="4">◎</option>
-                                        <option value="3">○</option>
-                                        <option value="2">△</option>
-                                        <option value="1">×</option>
-                                        <option value="0" selected>-</option>
-                                    </select>
-                                </td>
+                                <td>{{ form.encode }}</td>
                             </tr>
                         </thead>
                     </table>
-
+                    
                     <div class="center-button">
-                        <a class="btn btn-primary" href="#">新規登録</a>
+                        <button class="btn btn-primary" type="submit">新規登録</button>
                     </div>
-
+                    
+                </form> 
                 </div>
             </div>
         </div>

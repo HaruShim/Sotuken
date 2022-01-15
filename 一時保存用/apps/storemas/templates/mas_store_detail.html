@@ -28,29 +28,39 @@
                             <tbody>
                                 <tr>
                                     <th>店舗ID</th>
-                                    <td>12345689</td>
+                                    <td>{{ object.id }}</td>
+                                </tr>
+                                <tr>
+                                    <th>場所カテゴリ</th>
+                                    <td>{{ object.place_category }}</td>
+                                    
                                 </tr>
                                 <tr>
                                     <th>店舗名</th>
-                                    <td>店舗A</td>
-                                </tr>
-                                <tr>
-                                    <th>店長</th>
-                                    <td>大原太郎</td>
+                                    <td>{{ object.store_name }}</td>
+                                    
                                 </tr>
                                 <tr>
                                     <th>住所</th>
-                                    <td>東京都</td>
+                                    <td>{{ object.address }}</td>
+                                    
                                 </tr>
                                 <tr>
                                     <th>連絡先</th>
-                                    <td>000-0000-0000</td>
+                                    <td>{{ object.tel }}</td>
+                                    
                                 </tr>
                             </tbody>
                         </thead>
                     </table>
-                    <a class="btn btn-touroku" href="#">編集</a>
-                    <a class="btn btn-touroku" href="#">削除</a>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="center-button">
+                            <a class="btn btn-primary" href="{% url 'storemas:S02-04' object.pk %}">編集</a>
+                            <button class="btn btn-primary mt-5" type="submit">削除</button>
+                        </div>
+                    </form>
+                        
                     <!-- <table id="datatablesSimple">
                         <thead class="tablecolumn">
                             <div class="tablecolumn2">

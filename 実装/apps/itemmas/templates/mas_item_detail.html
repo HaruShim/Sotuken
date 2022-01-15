@@ -29,13 +29,10 @@
                 </div>
 
                 <div class="itemmas-table item-table">
-                    <div class="item-image">
-                        <img border="1" class="image-content" src="../images/img001.gif" width="128px" height="128px" alt="イラスト1">
-                    </div>
-                    <h2>型番</h2>
+                    
+                    <h2>{{ object.model_number }}</h2>
                         <table>
                             <thead class="tablecolumn">
-                        
                                 <tr>
                                     <th>商品コード</th>
                                     <td>{{ object.id }}</td>
@@ -56,7 +53,11 @@
                                 </tr>
                                 <tr>
                                     <th>商品画像</th>
-                                    <td>{{ object.item_image }}</td>
+                                    <td>
+                                    {% if object.item_image %}
+                                        <img src="{{ object.item_image.url }}" width="200" height="200">
+                                    {% endif %}
+                                    </td>
                                     <th>店舗名(在庫場所)</th>
                                     <td>{{ object.store_id }}</td>
                                 </tr>
@@ -69,44 +70,46 @@
                             <thead class="tablecolumn">
                                 <tr>
                                     <th>モニタサイズ</th>
-                                    <td></td>
+                                    <td>{{object_detail.monitor_size}}</td>
                                     <th>OS</th>
-                                    <td></td>
+                                    <td>{{object_detail.os}}</td>
                                 </tr>
                                 <tr>
                                     <th>CPU</th>
-                                    <td></td>
+                                    <td>{{object_detail.cpu}}</td>
                                     <th>モニタ解像度(縦)</th>
-                                    <td></td>
+                                    <td>{{object_detail.monitor_vertical}}</td>
                                 </tr>
                                 <tr>
                                     <th>HDD</th>
-                                    <td></td>
+                                    <td>{{object_detail.hdd}}</td>
                                     <th>モニタ解像度(横)</th>
-                                    <td></td>
+                                    <td>{{object_detail.monitor_horizon}}</td>
                                 </tr>
                                 <tr>
                                     <th>SSD</th>
-                                    <td></td>
+                                    <td>{{object_detail.ssd}}</td>
                                     <th>カメラ</th>
-                                    <td></td>
+                                    <td>{{object_detail.camera}}</td>
                                 </tr>
                                 <tr>
                                     <th>光学ドライブ</th>
-                                    <td></td>
+                                    <td>{{object_detail.optical_drive}}</td>
                                     <th>Wi-Fi</th>
-                                    <td></td>
+                                    <td>{{object_detail.wifi}}</td>
                                 </tr>
                                 <tr>
                                     <th>グラフィック</th>
-                                    <td></td>
+                                    <td>{{object_detail.graphic}}</td>
+                                    <th>型番</th>
+                                    <td>{{object_detail.model_number}}</td>
                                 </tr>
                             </thead>
                         </table>
                     <form method="POST">
                         {% csrf_token %}
                         <div class="center-button">
-                            <a class="btn btn-primary" href="{% url 'itemmas:S03-04' object.pk %}">編集</a>
+                            <!-- <a class="btn btn-primary" href="#{ url 'itemmas:S03-04' object.pk %}">編集</a> -->
                             <button class="btn btn-primary" type="submit">削除</button>
                         </div>
                     </form>

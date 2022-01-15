@@ -49,7 +49,7 @@ class S0302View(CreateView):
         return super().form_valid(form)
 
 
-class S0303View(DetailView,DeleteView):
+class S0303View(DetailView):
     """S0303View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -58,19 +58,40 @@ class S0303View(DetailView,DeleteView):
         name (): 
 
     """
-    model = ItemInfo
-    template_name = "mas_item_detail.html"
-    success_url = reverse_lazy('itemmas:S03-01')
-
+    # itemtamesi = ItemInfo.objects.get(id=1)
+    
     # def get_success_url(self):
     #     return reverse_lazy('itemmas:S03-01',kwargs={'pk':self.kwargs['pk']})
+    # def get_context_data(self, **kwargs):
+    #     queryset = ItemSpecification.objects.filter(model_number='asdfghjkl').values()
+    #     print(queryset)
+    #     return reverse_lazy({'itemmas:S03-01',{'pk':self.kwargs['pk']}})
+    # def tamesi(request):
+    #     context = {
+    #         'test_list': ItemInfo.objects.all(),
+    #     }
+    #     return render(request, 'mas_item_detail.html', context)
+
     # def form_valid(self,form):
     #     return super().form_valid(form)
-    # def itemdetail(request,self,pk):
-    #     itemInfo = ItemInfo.objects.all()
-    #     #itemInfo = ItemInfo.objects.order_by('id')
-    #     context = {'itemInfo': itemInfo}
-    #     return render(request, 'mas_item_detail.html', context,kwargs={'pk':self.pk})
+    def itemdetail(request,pk):
+        model = ItemInfo
+        model2 = ItemSpecification
+        template_name = "mas_item_detail.html"  
+        # get_model_num = 
+        # success_url = reverse_lazy('itemmas:S03-01')
+        object = model.objects.filter(id = pk).first()
+        tamesi = model.objects.values_list('model_number').get(id=pk)[0]
+        try:
+            object_detail = model2.objects.get(model_number = tamesi)
+        except model2.DoesNotExist:
+            object_detail = None
+        # object_detail = model2.objects.get(model_number = tamesi.model_number)
+        itemInfo = ItemInfo.objects.all()
+        #itemInfo = ItemInfo.objects.order_by('id')
+        # context = {'itemInfo': itemInfo}
+        context = {'object': object,'object_detail':object_detail}
+        return render(request,template_name,context)
     # def delete(self,request,*args,**kwargs):
     #     return super().delete(request,*args,**kwargs)
 

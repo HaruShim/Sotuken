@@ -40,19 +40,25 @@
                                     <th>商品コード</th>
                                     <td>{{ object.id }}</td>
                                     <th>型番</th>
-                                    <td></td>
+                                    <td>{{ object.model_number }}</td>
                                 </tr>
                                 <tr>
                                     <th>カテゴリ</th>
                                     <td>{{ object.get_category_display }}</td>
                                     <th>仕入価格</th>
-                                    <td></td>
+                                    <td>{{ object.purchase_price }}</td>
                                 </tr>
                                 <tr>
-                                    <th>在庫場所</th>
-                                    <td></td>
+                                    <th>メーカー名</th>
+                                    <td>{{ object.manufacturer_name }}</td>
                                     <th>備考</th>
-                                    <td></td>
+                                    <td>{{ object.remarks }}</td>
+                                </tr>
+                                <tr>
+                                    <th>商品画像</th>
+                                    <td>{{ object.item_image }}</td>
+                                    <th>店舗名(在庫場所)</th>
+                                    <td>{{ object.store_id }}</td>
                                 </tr>
                             </thead>
                         </table>
@@ -62,9 +68,9 @@
                         <table>
                             <thead class="tablecolumn">
                                 <tr>
-                                    <th>メーカー</th>
-                                    <td></td>
                                     <th>モニタサイズ</th>
+                                    <td></td>
+                                    <th>OS</th>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -86,14 +92,12 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <th>OS</th>
-                                    <td></td>
                                     <th>光学ドライブ</th>
+                                    <td></td>
+                                    <th>Wi-Fi</th>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <th>Wi-Fi</th>
-                                    <td></td>
                                     <th>グラフィック</th>
                                     <td></td>
                                 </tr>

@@ -1,0 +1,54 @@
+<!-- S01-01 従業員一覧画面
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | 従業員一覧画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">従業員一覧</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    従業員情報一覧
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-touroku" href="{% url 'employeemas:S01-02' %}">新規登録</a>
+                    <table class="listtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th style="width:50px;" >番号</th>
+                                <th>従業員ID</th>
+                                <th>従業員名</th>
+                                <th>店舗</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- EmployeeInfoモデルの一覧を表示 -->
+                            {% for item in EmployeeInfo %}
+                            <tr>
+                                <td style="text-align: center;"></td>
+                                <td><a href="{% url 'employeemas:S01-03' item.pk %}">{{ item.employee_id }}</a></td><!--従業員ID-->
+                                <td>{{ item.name }}</td><!--従業員名-->
+                                <td>{{ item.store_id.store_name }}</td><!--店舗-->
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

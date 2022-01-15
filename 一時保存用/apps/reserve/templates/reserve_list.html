@@ -25,11 +25,11 @@
                     取置予約一覧
                 </div>
                 <div class="card-body">
-                    <a class="btn btn-touroku" href="#">新規登録</a>
+                    <a class="btn btn-touroku" href="{% url 'reserve:S09-02' %}">新規登録</a>
                     <table class="listtable sub1">
                         <thead class="tablecolumn">
                             <tr>
-                                <th>ID</th>
+                                <th style="width:50px;" >番号</th>
                                 <th>商品コード</th>
                                 <th>型番</th>
                                 <th>取置店舗名</th>
@@ -43,6 +43,7 @@
                             {% for item in reserve_list %}
                             <tr>
                                 <td>{{ item.id }}</td> <!--ID-->
+                                <!-- <td style="text-align: center;"></td> -->
                                 <td>{{ item.item_code }}</td> <!--商品コード-->
                                 <td>{{ item.item_code.model_number }}</td> <!--型番-->
                                 <td>{{ item.store_id.store_name }}</td> <!--取置店舗名-->
