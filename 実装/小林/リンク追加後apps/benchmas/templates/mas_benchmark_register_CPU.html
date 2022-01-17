@@ -1,0 +1,118 @@
+<!-- S-05-02 ベンチマーク登録
+
+    ToDo
+        画面の制作お願いします
+        *長谷川
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | ベンチマーク登録{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'benchmas:S05-01CPU' %}">商品管理</a></h1>
+
+        <div class="row">
+            <div class="card mb-4">
+
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    CPUベンチマーク新規登録
+                </div>
+
+                <div class="itemmas-table item-table">
+                    <table>
+                        <form method="POST" enctype='multipart/form-data'>
+                            {% csrf_token %}
+                            <table class="table">
+                                {% if form.errors %}
+                                <div class="errorlist">
+                                    {% for errors in form.errors.values %}
+                                    {% for error in errors %}
+                                    {{ error }}<br>
+                                    {% endfor %}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+
+                                <thead class="tablecolumn">
+                    
+                                    <tr>
+                                        <th>CPU名称</th>
+                                        <td>{{ form.cpu_name }}</td>                                        
+                                        <th>PassMark</th>
+                                        <td>{{ form.passmark }}</td>                                    
+                                    </tr>
+                                    <tr>
+                                        <th>コア</th>
+                                        <td>{{ form.core }}</td>                                        
+                                        <th>スレッド</th>
+                                        <td>{{ form.thread }}</td>                                    
+                                    </tr>
+                                    <tr>
+                                        <th>TDP</th>
+                                        <td>{{ form.tdp }}</td>                                    
+                                        <th>定格クロック</th>
+                                        <td>{{ form.rated_clock }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>最大クロック</th>
+                                        <td>{{ form.max_clock }}</td>                                
+                                        <th>定価</th>
+                                        <td>{{ form.list_price }}</td>                        
+                                    </tr>
+                                    <tr>
+                                        <th>コスパ</th>
+                                        <td>{{ form.cost_performance }}</td>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <button class="btn btn-primary" type="submit">登録</button>
+                        </form>
+                        <!-- <thead class="tablecolumn">
+                    
+                            <tr>
+                                <th>CPU名称</th>
+                                <td><input type="text" id="ucpu-name" name="cpu-name" placeholder="Raizen 9 5950X"></td>
+                                <th>TDP</th>
+                                <td><input type="text" id="" name="" placeholder="105">W</td>
+                            </tr>
+                            <tr>
+                                <th>PassMark</th>
+                                <td><input type="text" id="" name="" placeholder="46132"></td>
+                                <th>定格クロック</th>
+                                <td><input type="text" id="" name="" placeholder="3.4">GHz</td>
+                            </tr>
+                            <tr>
+                                <th>コア</th>
+                                <td><input type="text" id="" name="" placeholder="16"></td>
+                                <th>最大クロック</th>
+                                <td><input type="text" id="" name="" placeholder="4.9">GHz</td>
+                            </tr>
+                            <tr>
+                                <th>スレッド</th>
+                                <td><input type="text" id="" name="" placeholder="32"></td>
+                                <th>定価</th>
+                                <td><input type="text" id="" name="" placeholder="106,500">円</td>
+                            </tr>
+                            <tr>
+                                <th>コスパ</th>
+                                <td><input type="text" id="" name="" placeholder="0.43"></td>
+                            </tr>
+                        </thead> -->
+                    </table>
+
+                    <!-- <div class="center-button">
+                        <a class="btn btn-primary" href="#">登録</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

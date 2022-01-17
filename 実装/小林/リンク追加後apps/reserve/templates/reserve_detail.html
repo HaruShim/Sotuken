@@ -1,0 +1,74 @@
+<!-- S09-03 取置予約詳細
+
+    ToDo
+        画面の制作お願いします
+        *長谷川
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 取置予約詳細{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'reserve:S09-01' %}">取置予約</a></h1>
+
+        <div class="row">
+            <div class="card mb-4">
+
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    取置予約詳細
+                </div>
+
+                <div class="card-body">
+
+                    <table class="employee-table">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>商品コード</th>
+                                <td>48595844</td>
+                            </tr>
+
+                            <tr>
+                                <th>型番</th>
+                                <td>Raizen 9 5950X</td>
+                            </tr>
+
+                            <tr>
+                                <th>取置店舗名</th>
+                                <td>
+                                    店舗B
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>予約者氏名(カナ)</th>
+                                <td>今村尚人</td>
+                            </tr>
+
+                            <tr>
+                                <th>連絡先</th>
+                                <td>090-8586-4848</td>
+                            </tr>
+
+                            <tr>
+                                <th>予約日時</th>
+                                <td>2001/11/19</td>
+                            </tr>
+                        </thead>
+                    </table>
+
+                    <div class="center-button">
+                        <a class="btn btn-primary" href="#">更新</a>
+                        <a class="btn btn-primary" href="#">削除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

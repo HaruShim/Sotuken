@@ -1,0 +1,167 @@
+<!-- S03-01 商品情報一覧
+
+    ToDo
+        *画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+        
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 商品情報一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">商品管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    商品情報一覧
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-touroku" href="#">検索</a>
+                    <a class="btn btn-touroku" href="{% url 'itemmas:S03-02' %}">新規登録</a>
+                    <div class="content">
+                        <div class="item">
+                            <table class="listtable">
+                                <thead class="tablecolumn">
+                                    <tr>
+                                        <!-- <th>id</th> -->
+                                        <th>商品コード</th>
+                                        <th>型番</th>
+                                        <th>カテゴリ</th>
+                                        <th>在庫場所</th>
+                                        <th>仕入価格</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <!-- ItemListモデルの一覧を表示 -->
+                                {% for item in iteminfo %}
+                                
+                                <tr>
+                                    <th><a href="{% url 'itemmas:S03-03' item.pk %}">{{ item.id }}</a></th> <!--商品コード-->
+                                    <!-- <td>{{ item.item_code }</td> 型番 -->
+                                    <td>{{ item.model_number }}</td> <!--型番-->
+                                    <td>{{ item.get_category_display }}</td> <!--カテゴリ-->
+                                    <td>{{ item.store_id.store_name }}</td> <!--在庫場所-->
+                                    <td>{{ item.purchase_price }}¥</td> <!--仕入価格-->
+                                </tr>   
+                                {% empty %}
+                                <p>空です</p>
+                                {% endfor %}
+
+                                    <!-- ページネーション処理 -->
+                                    {% if is_paginated %}
+                                    <ul class="pagination">
+                                        <!-- 前ページへのリンク -->
+                                        {% if page_obj.has_previous %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        {% endif %}
+
+                                        <!-- ページ数表示 -->
+                                        {% for page_num in page_obj.paginator.page_range %}
+                                        {% if page_obj.number == page_num %}
+                                        <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
+                                        {% else %}
+                                        <li class="page-item"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
+                                        {% endif %}
+                                        {% endfor %}
+
+                                        <!-- 次ページへのリンク -->
+                                        {% if page_obj.has_next %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                        {% endif %}
+                                    </ul>
+                                    {% endif %}
+                                </tbody>
+                            </table>
+                            
+<!-- ページネーション処理 -->
+{% if iteminfo.has_other_pages %}
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+{% if iteminfo.has_previous %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.previous_page_number }}"><<</a></li>
+{% else %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
+{% endif %}
+{% if iteminfo.has_previous %}
+{% if iteminfo.previous_page_number != 1 %}
+<li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+<li>…</li>
+{% endif %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.previous_page_number }}">{{ iteminfo.previous_page_number }}</a></li>
+{% endif %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ iteminfo.number }}</div></li>
+{% if iteminfo.has_next %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.next_page_number }}">{{ iteminfo.next_page_number }}</a></li>
+{% if iteminfo.next_page_number != iteminfo.paginator.num_pages %}
+<li>…</li>
+<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.paginator.num_pages }}">{{ iteminfo.paginator.num_pages }}</a></li>
+{% endif %}
+{% endif %}
+{% if iteminfo.has_next %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.next_page_number }}">>></a></li>
+{% else %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
+{% endif %}
+</ul>
+</nav>
+{% endif %}
+<!-- ページネーション処理終了 -->
+                        </div>
+                        <!-- <div class="item">
+                            <aside>
+                                <div class="summary">
+                                    <div class="summary-total-items"><span class="total-items"></span>移動指示入力</div>
+                                    <table class="deliverytable">
+                                        <thead>
+                                            <tr>
+                                                <th>商品コード</th>
+                                                <th>型番</th>
+                                                <th>在庫場所</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>123456789</td>
+                                                <td>FMVU75EUV1</td>
+                                                <td>店舗A</td>
+                                                <td style="border:none;">
+                                                    <a class="btn btn-small" href="#">削除</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="summary-delivery">
+                                        <select name="delivery-collection" class="summary-delivery-selection">
+                                            <option hidden>移動先選択</option>
+                                            <option value="">店舗A</option>
+                                            <option value="">店舗B</option>
+                                        </select>
+                                    </div>
+                                    <a class="btn btn-touroku" href="#">決定</a>
+                                </div>
+                            </aside>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
