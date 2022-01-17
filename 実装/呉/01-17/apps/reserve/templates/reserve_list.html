@@ -59,6 +59,49 @@
                             <tr><td>002</td><td>FVMU75EUV1</td><td>店舗A</td><td>田中太郎</td><td>000-0000-0000</td><td>2021/12/13</td>                            </tr> -->
                         </tbody>
                     </table>
+                    {% if reserve.has_other_pages %}
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            {% if reserve.has_previous %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ reserve.previous_page_number }}">
+                                    <<< /a>
+                            </li>
+                            {% else %}
+                            <li class="disabled">
+                                <div class="page-link text-secondary d-inline-block disabled" href="#">
+                                    <<< /div>
+                            </li>
+                            {% endif %}
+                            {% if reserve.has_previous %}
+                            {% if reserve.previous_page_number != 1 %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+                            <li>…</li>
+                            {% endif %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ reserve.previous_page_number }}">{{
+                                    reserve.previous_page_number }}</a></li>
+                            {% endif %}
+                            <li class="disabled">
+                                <div class="page-link text-secondary d-inline-block disabled" href="#">{{ reserve.number }}</div>
+                            </li>
+                            {% if reserve.has_next %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ reserve.next_page_number }}">{{
+                                    reserve.next_page_number }}</a></li>
+                            {% if reserve.next_page_number != reserve.paginator.num_pages %}
+                            <li>…</li>
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ reserve.paginator.num_pages }}">{{
+                                    reserve.paginator.num_pages }}</a></li>
+                            {% endif %}
+                            {% endif %}
+                            {% if reserve.has_next %}
+                            <li><a class="page-link text-primary d-inline-block" href="?page={{ reserve.next_page_number }}">>></a></li>
+                            {% else %}
+                            <li class="disabled">
+                                <div class="page-link text-secondary d-inline-block disabled" href="#">>></div>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                    {% endif %}
                 </div>
             </div>
         </div>

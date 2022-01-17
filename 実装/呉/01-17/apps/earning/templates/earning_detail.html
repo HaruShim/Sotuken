@@ -8,63 +8,7 @@
 
 {% extends 'base.html' %}
 
-{% load static %}
-
 {% block title %}SIMS | 売上情報詳細{% endblock %}
 
 {% block main_contents %}
-
-<main>
-    <div class="container-fluid px-4">
-        <h1 class="mt-4"><a class="backlist" href="{% url 'earning:S11-01' %}">店舗詳細</a></h1>
-        <div class="row">
-            <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    店舗情報詳細
-                </div>
-                <div class="card-body">
-                    <table class="registertable">
-                        <thead class="tablecolumn">
-                            <tbody>
-                                <tr>
-                                    <th>店舗ID</th>
-                                    <td>{{ object.id }}</td>
-                                </tr>
-                                <tr>
-                                    <th>場所カテゴリ</th>
-                                    <td>{{ object.place_category }}</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th>店舗名</th>
-                                    <td>{{ object.store_name }}</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th>住所</th>
-                                    <td>{{ object.address }}</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th>連絡先</th>
-                                    <td>{{ object.tel }}</td>
-                                    
-                                </tr>
-                            </tbody>
-                        </thead>
-                    </table>
-                    <form method="POST">
-                        {% csrf_token %}
-                        <div class="center-button">
-                            <a class="btn btn-primary" href="{% url 'earning:S11-04' object.pk %}">編集</a>
-                            <button class="btn btn-primary mt-5" type="submit">削除</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
 {% endblock %}
