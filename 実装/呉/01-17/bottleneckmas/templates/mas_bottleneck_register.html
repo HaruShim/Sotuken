@@ -1,0 +1,98 @@
+<!-- S-06-02 ボトルネック新規登録
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+
+{% block title %}SIMS | ボトルネック新規登録画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist"  style="text-decoration :none" href="{% url 'bottleneckmas:S06-01' %}">ボトルネック管理</a></h1>
+
+        <div class="row">
+            <div class="card mb-4">
+
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    ボトルネック新規登録
+                </div>
+                <form method="POST" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    <table class="table">
+                        {% if form.errors %}
+                        <div class="errorlist">
+                            {% for errors in form.errors.values %}
+                            {% for error in errors %}
+                            {{ error }}<br>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        
+                        
+                        <div  class="score-table">
+
+                    <table>
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>CPU</th>
+                                <td>{{ form.cpu_name }}</td>
+
+                                <th>GPU</th>
+                                <td>{{ form.gpu_name }}</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>バランス</th>
+                                <td>{{ form.balance }}</td>
+
+                                <th>WQHD</th>
+                                <td>{{ form.wqhd }}</td>
+
+                            </tr>
+
+                            <tr>
+                                <th>4K</th>
+                                <td>{{ form.four_k }}</td>
+
+                                <th>ゲーム適性</th>
+                                <td>{{ form.game_appropriate }}</td>
+
+                            </tr>
+                            
+                            <tr>
+                                <th>ゲーム配信</th>
+                                <td>{{ form.game_delivery }}</td>
+
+                                <th>動画編集</th>
+                                <td>{{ form.video_editing }}</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>エンコード</th>
+                                <td>{{ form.encode }}</td>
+                            </tr>
+                        </thead>
+                    </table>
+                    
+                    <div class="center-button">
+                    	<a class="btn btn-primary" href="{% url 'bottleneckmas:S06-01'%}">戻る</a>
+                        <button class="btn btn-primary" type="submit">新規登録</button>
+                    </div>
+                    
+                </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
