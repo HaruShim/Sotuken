@@ -1,0 +1,73 @@
+<!-- S10-01 見積
+
+    ToDo
+        画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満) 
+        
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 見積{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">見積</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    見積
+                </div>
+                <a class="btn btn-touroku estimate" href="#">お客様用見積画面へ</a>
+                <div class="card-body">
+                    <p>商品コード<input type="text" name="itemcode" placeholder="商品コード"><a class="btn btn-touroku" href="#">追加</a></p>
+                    <table class="listtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>商品コード</th>
+                                <th>型番</th>
+                                <th>仕入価格</th>
+                                <th>粗利率</th>
+                                <th>粗利</th>
+                                <th>販売価格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <th style="border:none;">
+                                    <a class="btn btn-touroku" href="#">削除</a>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Office
+                        <input type="text" name="offciceselect" list="officelist" placeholder="office" autocomplete="off">
+                                <datalist id="officelist">
+                                    <option value="サンプル1">
+                                    <option value="サンプル2">
+                                    <option value="サンプル3">
+                                </datalist>
+                        ○○○○○円
+                    </p>
+                    <p>SSD <input type="text" name="SSD" placeholder="SSD">GB ○○○○○円</p>
+                    <p>メモリ <input type="text" name="memory" placeholder="メモリ">GB × <input type="number" name="">枚 ○○○○○円</p>
+                    <p>その他<input type="text" name=""> ○○○○○円</p>
+                    <p>合計○○○○○円</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

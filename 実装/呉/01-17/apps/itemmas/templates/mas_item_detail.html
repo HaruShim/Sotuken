@@ -1,0 +1,125 @@
+<!-- S03-03 商品情報詳細
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 商品情報詳細{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'itemmas:S03-01' %}">商品管理</a></h1>
+
+        <div class="row">
+            <div class="card mb-4">
+
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    商品情報詳細
+                </div>
+
+                <div class="itemmas-table item-table">
+                    
+                    <h2>{{ object.model_number }}</h2>
+                        <table>
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <th>商品コード</th>
+                                    <td>{{ object.id }}</td>
+                                    <th>型番</th>
+                                    <td>{{ object.model_number }}</td>
+                                </tr>
+                                <tr>
+                                    <th>カテゴリ</th>
+                                    <td>{{ object.get_category_display }}</td>
+                                    <th>仕入価格</th>
+                                    <td>{{ object.purchase_price }}</td>
+                                </tr>
+                                <tr>
+                                    <th>メーカー名</th>
+                                    <td>{{ object.manufacturer_name }}</td>
+                                    <th>備考</th>
+                                    <td>{{ object.remarks }}</td>
+                                </tr>
+                                <tr>
+                                    <th>商品画像</th>
+                                    <td>
+                                    {% if object.item_image %}
+                                        <img src="{{ object.item_image.url }}" width="200" height="200">
+                                    {% endif %}
+                                    </td>
+                                    <th>店舗名(在庫場所)</th>
+                                    <td>{{ object.store_id }}</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+
+                    <div class="itemmas-table spec-table">
+                        <table>
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <th>モニタサイズ</th>
+                                    <td>{{object_detail.monitor_size}}</td>
+                                    <th>OS</th>
+                                    <td>{{object_detail.os}}</td>
+                                </tr>
+                                <tr>
+                                    <th>CPU</th>
+                                    <td>{{object_detail.cpu}}</td>
+                                    <th>モニタ解像度(縦)</th>
+                                    <td>{{object_detail.monitor_vertical}}</td>
+                                </tr>
+                                <tr>
+                                    <th>HDD</th>
+                                    <td>{{object_detail.hdd}}</td>
+                                    <th>モニタ解像度(横)</th>
+                                    <td>{{object_detail.monitor_horizon}}</td>
+                                </tr>
+                                <tr>
+                                    <th>SSD</th>
+                                    <td>{{object_detail.ssd}}</td>
+                                    <th>カメラ</th>
+                                    <td>{{object_detail.camera}}</td>
+                                </tr>
+                                <tr>
+                                    <th>光学ドライブ</th>
+                                    <td>{{object_detail.optical_drive}}</td>
+                                    <th>Wi-Fi</th>
+                                    <td>{{object_detail.wifi}}</td>
+                                </tr>
+                                <tr>
+                                    <th>グラフィック</th>
+                                    <td>{{object_detail.graphic}}</td>
+                                    <th>型番</th>
+                                    <td>{{object_detail.model_number}}</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="center-button">
+                            <!-- <a class="btn btn-primary" href="#{ url 'itemmas:S03-04' object.pk %}">編集</a> -->
+                            <button class="btn btn-primary" type="submit">削除</button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}

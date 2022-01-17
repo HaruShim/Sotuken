@@ -1,0 +1,41 @@
+<!-- S05-03 ベンチマーク編集
+
+    ToDo
+        画面の制作お願いします
+        *長谷川　gpu表示のために勝手にurl仮設定してるので・・・・お願いします
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | ベンチマーク編集{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'benchmas:S05-01GPU' %}">商品管理</a></h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    GPUベンチマーク編集
+                </div>
+                <div class="itemmas-table item-table">
+                    <!-- 編集フォームを表示 -->
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <table class="table">
+                            {{ form.as_table }}
+                        </table>
+                        <div class="center-button">
+                            <button class="btn btn-primary" type="submit">更新</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
