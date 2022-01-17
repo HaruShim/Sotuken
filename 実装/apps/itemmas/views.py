@@ -13,6 +13,9 @@ from django.urls import reverse_lazy
 from .forms import S0302Form
 from django.shortcuts import render
 from .models import ItemInfo,ItemSpecification
+from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 class S0301View(ListView):
     """S0301View
@@ -23,10 +26,19 @@ class S0301View(ListView):
         name (): 
 
     """
-    template_name = "mas_item_list.html"
-    context_object_name = 'ItemList'
-    model = ItemInfo
-    paginate_by = 12
+    def mylist(request):
+        ItemInfos = ItemInfo.objects.all()
+        #ItemInfos = ItemInfo.objects.order_by('id')
+        paginator = Paginator(ItemInfos, 3)
+        page = request.GET.get('page', 1)
+        try:
+            iteminfo = paginator.page(page)
+        except PageNotAnInteger:
+            iteminfo = paginator.page(1)
+        except EmptyPage:
+            iteminfo = paginator.page(1)
+        context = {'iteminfo': iteminfo}
+        return render(request, 'mas_item_list.html', context)
 
 class S0302View(CreateView):
     """S0302View

@@ -57,6 +57,40 @@
                             </tr> -->
                         </tbody>
                     </table>
+                                        <!-- ページネーション処理 -->
+{% if storeInfo.has_other_pages %}
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+{% if storeInfo.has_previous %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ storeInfo.previous_page_number }}"><<</a></li>
+{% else %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
+{% endif %}
+{% if storeInfo.has_previous %}
+{% if storeInfo.previous_page_number != 1 %}
+<li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+<li>…</li>
+{% endif %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ storeInfo.previous_page_number }}">{{ storeInfo.previous_page_number }}</a></li>
+{% endif %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ storeInfo.number }}</div></li>
+{% if storeInfo.has_next %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ storeInfo.next_page_number }}">{{ storeInfo.next_page_number }}</a></li>
+{% if storeInfo.next_page_number != storeInfo.paginator.num_pages %}
+<li>…</li>
+<li><a class="page-link text-primary d-inline-block" href="?page={{ storeInfo.paginator.num_pages }}">{{ storeInfo.paginator.num_pages }}</a></li>
+{% endif %}
+{% endif %}
+{% if storeInfo.has_next %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ storeInfo.next_page_number }}">>></a></li>
+{% else %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
+{% endif %}
+</ul>
+</nav>
+{% endif %}
+<!-- ページネーション処理終了 -->
+
                     <!-- <table id="datatablesSimple">
                         <thead class="tablecolumn">
                             <div class="tablecolumn2">

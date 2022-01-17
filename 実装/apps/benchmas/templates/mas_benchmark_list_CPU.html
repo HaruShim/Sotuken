@@ -75,6 +75,41 @@
                                 {% endfor %}
                             </tbody>
                         </table>
+                                                
+<!-- ページネーション処理 -->
+{% if cpubench.has_other_pages %}12:03 2022/01/13
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+{% if cpubench.has_previous %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ cpubench.previous_page_number }}"><<</a></li>
+{% else %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
+{% endif %}
+{% if cpubench.has_previous %}
+{% if cpubench.previous_page_number != 1 %}
+<li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+<li>…</li>
+{% endif %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ cpubench.previous_page_number }}">{{ cpubench.previous_page_number }}</a></li>
+{% endif %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ cpubench.number }}</div></li>
+{% if cpubench.has_next %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ cpubench.next_page_number }}">{{ cpubench.next_page_number }}</a></li>
+{% if cpubench.next_page_number != cpubench.paginator.num_pages %}
+<li>…</li>
+<li><a class="page-link text-primary d-inline-block" href="?page={{ cpubench.paginator.num_pages }}">{{ cpubench.paginator.num_pages }}</a></li>
+{% endif %}
+{% endif %}
+{% if cpubench.has_next %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ cpubench.next_page_number }}">>></a></li>
+{% else %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
+{% endif %}
+</ul>
+</nav>
+{% endif %}
+<!-- ページネーション処理終了 -->
+
                     </div>
                 </div>
             </div>
