@@ -47,9 +47,19 @@ class S0501GPUView(ListView):
         name (): 
 
     """
-    template_name = "mas_benchmark_list_GPU.html"
-    model = GpuBench
-    paginate_by = 12
+    def mylist(request):
+        GpuBenchs = GpuBench.objects.all()
+        #GpuBenchs = GpuBench.objects.order_by('id')
+        paginator = Paginator(GpuBenchs, 12)
+        page = request.GET.get('page', 1)
+        try:
+            gpubench = paginator.page(page)
+        except PageNotAnInteger:
+            gpubench = paginator.page(1)
+        except EmptyPage:
+            gpubench = paginator.page(1)
+        context = {'gpubench': gpubench}
+        return render(request, 'mas_benchmark_list_GPU.html', context)
 
 class S0502CPUView(CreateView):
     """S0501View
