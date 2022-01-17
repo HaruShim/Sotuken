@@ -19,22 +19,14 @@
         <div class="row">
             <div class="card mb-4">
                 <div class="card-header">
-                    <div class="contents">
-                        <div class="item head">
-                            <i class="fas fa-table me-1"></i>
-                        </div>
-                        <div class="item head font-1">    
-                            従業員情報編集
-                        </div>
-                    </div>
+                    <i class="fas fa-table me-1"></i>
+                    従業員情報編集
                 </div>
                 <div class="card-body">
                     <table class="registertable">
                         <form method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                         <table class="table">
-                        <thead class="tablecolumn">
-                            <tbody>
                             
                             <tr>
                                 <th>従業員名</th>
@@ -71,12 +63,9 @@
                             </tr>
                         </table>
                         <div class="center-button">
-                        	<a class="btn btn-primary" href="{% url 'employeemas:S01-01'%}">キャンセル</a>
                             <button class="btn btn-primary" type="submit">更新</button>
                         </div>
                         </form>
-                        </tbody>
-                        </thead>
                         
                         <!-- <tfoot>
                             <tr>

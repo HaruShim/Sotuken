@@ -13,6 +13,11 @@ class S0502CPUForm(ModelForm):
                 # 'text': forms.Textarea(attrs={'class': 'editable'})
                 # cssクラスの追加(titleにtextinputclass, textにeditableクラスが追加されるようになる)
             }
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # ラベルの：を非表示に
+        self.label_suffix = " "
 
 class S0502GPUForm(ModelForm):
     class Meta:

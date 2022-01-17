@@ -74,18 +74,21 @@
                             </tr>
                         </thead>
                         <tbody class="tabletbody">
+                            {% for item  in earninginfo_list %}
                             <tr>
-                                <td></td>
-                                <td>2020/10/31</td>
-                                <td>123456789</td>
-                                <td>123456789</td>
-                                <td>3000円</td>
-                                <td>4000円</td>
-                                <td></td>
-                                <td></td>
-                                <td>店舗A</td>
-                                <td>大原太郎</td>
-                            </tr>
+                                {{item.item_code}}
+                                <!-- <td></td>
+                                    <td>2020/10/31</td>
+                                    <td>123456789</td>
+                                    <td>123456789</td>
+                                    <td>3000円</td>
+                                    <td>4000円</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>店舗A</td>
+                                    <td>大原太郎</td> -->
+                                </tr>
+                                {% endfor %}
                         </tbody>
                     </table>
                     <a class="btn btn-primary" href="{% url 'earning:S11-01'%}">戻る</a>

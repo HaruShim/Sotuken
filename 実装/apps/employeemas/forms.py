@@ -7,7 +7,7 @@ from .models import EmployeeInfo
 class S0102Form(ModelForm):
     class Meta:
         model = EmployeeInfo
-        fields = ('employment_status','name','ruby_name','tel_num','gender','birthday','invalid_flg','store_id',)
+        fields = ('employee_id','employment_status','name','ruby_name','tel_num','gender','birthday','invalid_flg','store_id',)
 
         widgets = {
                 'gender':forms.RadioSelect

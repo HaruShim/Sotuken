@@ -1,7 +1,85 @@
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.sidebar-search {
+    padding: 15px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+}
+
+.sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
+    width: 260px;
+}
+
+li.sidebar-search {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+    padding: 0.5rem 1rem 0.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+    color: #9d9d9d;
+}
+.navbar-dark .navbar-brand {
+    color: #9d9d9d;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.py-4 {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+}
+
+
 /* サイドバーの項目のパディングを変更 */
 .sb-sidenav .sb-sidenav-menu .nav .nav-link {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
 }
 
 .sb-nav-fixed #layoutSidenav #layoutSidenav_content {
@@ -15,7 +93,7 @@
 }
 
 .mgl-12{
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 12px;
 }
 .mgl-15{
@@ -23,9 +101,9 @@
     margin-left: 15px;
 }
 
-/* .sb-sidenav-footer .small{
+.sb-sidenav-footer .small{
     padding-bottom: 15px;
-} */
+}
 
 .heading h1 {
     text-align: center
@@ -33,44 +111,12 @@
 
 thead.tablecolumn th{
     background-color: #B0E3E6;
-    text-align: center;
 }
 
-table{
-    border-collapse:collapse;
+#id_gender{
+    list-style:none;
 }
 
-table th{
-    border:1px solid #000066;
-    /* background:royalblue; */
-}
-
-table td{
-    border:1px solid #000066;
-    /* background:#ffffff; */
-}
-
-table.earningtable tbody tr:nth-child(odd){
-    background-color: #eee
-}
-
-.tamesi-id {text-align: center;}
-.td-right {text-align: right;}
-
-table{
-    counter-reset: rowCount;
-}
-tbody tr{
-    counter-increment: rowCount;
-}
-tbody tr td:first-child::before{
-    content: counter(rowCount);
-}
-
-.sb-sidenav-footer {
-    position: fixed; /* 要素の位置を固定する */
-    bottom: 0; /* 基準の位置を画面の一番下に指定する */
-    /* right: 0; 基準の位置を画面の一番右に指定する */
-    /* width: 300px; 幅を指定する */
-    /* border: 3px solid #326693; ボーダーを指定する */
+.detailtable td{
+    font-size: x-large;
 }

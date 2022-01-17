@@ -34,7 +34,8 @@ li.sidebar-search {
 .btn {
     display: inline-block;
     padding: 6px 12px;
-    margin-bottom: 0;
+    /* margin-bottom: 0; ←サイドメニュー検索欄の入力欄とボタンのズレ、サイドメニューの表示非表示ボタンの配置のズレの原因？*/
+    margin: 0;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.42857143;
@@ -214,7 +215,7 @@ thead.tablecolumn th{
 }
 .detailtable td {
     width: 400px;
-    font-size: 100%;
+    /* font-size: 100%; */
     text-align: center;
     padding: 10px;
 }
@@ -262,6 +263,7 @@ thead.tablecolumn th{
 .cleannesstable td{
     border-width: 0;
     width: 40%;
+    padding: 10px;
 }
 .cleannesstable.sub1 {
     width: 80%;
@@ -558,10 +560,17 @@ aside {
 .item.head {
     padding: 5px 5px;
     font-weight: bold;
+    text-align: left;
 }
 .item_beside {
     display: inline-block;
-    background-color: #666;
+    background-color: #eee;
+	padding: 20px 10px;
+}
+
+/* 検索欄 */
+.search-box {
+    background-color: #eee;
 }
 
 /* ページネーション */

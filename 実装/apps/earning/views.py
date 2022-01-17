@@ -26,7 +26,7 @@ class S1101View(ListView):
     model = EarningInfo
     paginate_by = 12
 
-class S1102View(CreateView):
+class S1102View(CreateView,ListView):
     """S1102View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
