@@ -11,6 +11,9 @@ from django.views.generic import TemplateView,ListView,DetailView,DeleteView,Upd
 from employeemas.models import EmployeeInfo
 # from .forms import S0102Form
 from django.urls import reverse_lazy
+from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 class S1201View(ListView):
     """S1201View
@@ -21,9 +24,19 @@ class S1201View(ListView):
         name (): 
 
     """
-    template_name = "employee_list.html"
-    model = EmployeeInfo
-    paginate_by = 12
+    def mylist(request):
+        EmployeeInfos = EmployeeInfo.objects.all()
+        #EmployeeInfos = EmployeeInfo.objects.order_by('id')
+        paginator = Paginator(EmployeeInfos, 3)
+        page = request.GET.get('page', 1)
+        try:
+            employeeinfo = paginator.page(page)
+        except PageNotAnInteger:
+            employeeinfo = paginator.page(1)
+        except EmptyPage:
+            employeeinfo = paginator.page(1)
+        context = {'employeeinfo': employeeinfo}
+        return render(request, 'employee_list.html', context)
 
 class S1202View(DetailView):
     """S1202View

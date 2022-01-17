@@ -12,7 +12,8 @@ from .models import EmployeeInfo
 from django.shortcuts import render
 from .forms import S0102Form
 from django.urls import reverse_lazy
-
+from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class S0101View(ListView):
     """S0101View
@@ -23,9 +24,19 @@ class S0101View(ListView):
         name (): 
 
     """
-    template_name = "mas_employee_list.html"
-    model = EmployeeInfo
-    context_object_name = 'EmployeeInfo'
+    def mylist(request):
+        EmployeeInfos = EmployeeInfo.objects.all()
+        #EmployeeInfos = EmployeeInfo.objects.order_by('id')
+        paginator = Paginator(EmployeeInfos, 2)
+        page = request.GET.get('page', 1)
+        try:
+            employeeInfo = paginator.page(page)
+        except PageNotAnInteger:
+            employeeInfo = paginator.page(1)
+        except EmptyPage:
+            employeeInfo = paginator.page(1)
+        context = {'employeeInfo': employeeInfo}
+        return render(request, 'mas_employee_list.html', context)
 
 class S0102View(CreateView):
     """S0102View

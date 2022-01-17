@@ -11,6 +11,9 @@ from django.views.generic import TemplateView,ListView,DetailView,CreateView,Del
 from django.urls import reverse_lazy
 from .forms import S0502CPUForm,S0502GPUForm
 from .models import CpuBench,GpuBench
+from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 class S0501CPUView(ListView):
     """S0501View
@@ -21,9 +24,19 @@ class S0501CPUView(ListView):
         name (): 
 
     """
-    template_name = "mas_benchmark_list_CPU.html"
-    model = CpuBench
-    paginate_by = 12
+    def mylist(request):
+        CpuBenchs = CpuBench.objects.all()
+        #CpuBenchs = CpuBench.objects.order_by('id')
+        paginator = Paginator(CpuBenchs, 3)
+        page = request.GET.get('page', 1)
+        try:
+            cpubench = paginator.page(page)
+        except PageNotAnInteger:
+            cpubench = paginator.page(1)
+        except EmptyPage:
+            cpubench = paginator.page(1)
+        context = {'cpubench': cpubench}
+        return render(request, 'mas_benchmark_list_CPU.html', context)
 
 class S0501GPUView(ListView):
     """S0501View
@@ -34,9 +47,19 @@ class S0501GPUView(ListView):
         name (): 
 
     """
-    template_name = "mas_benchmark_list_GPU.html"
-    model = GpuBench
-    paginate_by = 12
+    def mylist(request):
+        GpuBenchs = GpuBench.objects.all()
+        #GpuBenchs = GpuBench.objects.order_by('id')
+        paginator = Paginator(GpuBenchs, 12)
+        page = request.GET.get('page', 1)
+        try:
+            gpubench = paginator.page(page)
+        except PageNotAnInteger:
+            gpubench = paginator.page(1)
+        except EmptyPage:
+            gpubench = paginator.page(1)
+        context = {'gpubench': gpubench}
+        return render(request, 'mas_benchmark_list_GPU.html', context)
 
 class S0502CPUView(CreateView):
     """S0501View

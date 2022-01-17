@@ -7,7 +7,7 @@ Todo:
 """
 
 from django.db import models
-from django.views.generic import TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView
+from django.views.generic import TemplateView,ListView,DetailView,CreateView,DeleteView,UpdateView
 from django.urls import reverse_lazy
 from .forms import S0602Form
 from .models import Bottleneck
@@ -31,7 +31,7 @@ class S0601View(ListView):
 
     def mylist(request):
         Bottlenecks = Bottleneck.objects.order_by('id')
-        paginator = Paginator(Bottlenecks, 3)
+        paginator = Paginator(Bottlenecks, 12)
         page = request.GET.get('page', 1)
         try:
             bottleneck = paginator.page(page)
@@ -41,7 +41,6 @@ class S0601View(ListView):
             bottleneck = paginator.page(1)
         context = {'bottleneck': bottleneck}
         return render(request, 'mas_bottleneck_list.html', context)
-
 
 class S0602View(CreateView):
     """S0602View
@@ -79,6 +78,7 @@ class S0603View(UpdateView):
 
     def get_success_url(self):
         return reverse_lazy('bottleneckmas:S06-01')
-
-    def form_valid(self, form):
+    def form_valid(self,form):
         return super().form_valid(form)
+
+

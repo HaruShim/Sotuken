@@ -21,28 +21,24 @@ class Bottleneck(models.Model):
 
     """
     balancechoices=(
-        (0,'-'),
         (1,'✕'),
         (2,'△'),
         (3,'〇'),
         (4,'◎'),
     )
     wqhdchoices=(
-        (0,'-'),
         (1,'✕'),
         (2,'△'),
         (3,'〇'),
         (4,'◎'),
     )
     four_kchoices=(
-        (0,'-'),
         (1,'✕'),
         (2,'△'),
         (3,'〇'),
         (4,'◎'),
     )
     game_appropriatechoices=(
-        (0,'-'),
         (1,'S+'),
         (2,'S'),
         (3,'S-'),
@@ -61,21 +57,18 @@ class Bottleneck(models.Model):
         
     )
     game_deliverychoices=(
-        (0,'-'),
         (1,'✕'),
         (2,'△'),
         (3,'〇'),
         (4,'◎'),
     )
     video_editingchoices=(
-        (0,'-'),
         (1,'✕'),
         (2,'△'),
         (3,'〇'),
         (4,'◎'),
     )
     encodechoices=(
-        (0,'-'),
         (1,'✕'),
         (2,'△'),
         (3,'〇'),
