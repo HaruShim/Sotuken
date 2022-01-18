@@ -1,0 +1,107 @@
+<!-- S03-02 商品情報新規登録
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        *長谷川　画像プレビュー出しましたが
+        *画像選んでないときにNOIMAGE画像を出したかった　力尽きた
+
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | 商品情報新規登録{% endblock %}
+{% block main_contents %}
+<head>
+    <script>
+        function imgPreView(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            var preview = document.getElementById("preview");
+            var previewImage = document.getElementById("previewImage");
+            // NO IMAGEアイコンを出したかった
+            // img.setAttribute("id", "{% static 'assets/img/noimage-icon'%}");
+            if(previewImage != null) {
+                preview.removeChild(previewImage);
+            }
+            reader.onload = function(event) {
+                var img = document.createElement("img");
+                img.setAttribute("src", reader.result);
+                img.setAttribute("id", "previewImage");
+                preview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+            }
+    </script>
+</head>
+<body>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">商品管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <!-- <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    商品情報新規登録
+                </div> -->
+                <!-- image -->
+                <div class="card-body">
+                    <div class="itemmas-table spec-table">
+                        <table class="listtable sub2">
+                            <form method="POST" enctype='multipart/form-data'>
+                                {% csrf_token %}
+                                {{form.as_p}}
+                                <button class="btn btn-primary" type="submit">登録</button>
+                                
+                            </form>
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <th>メーカー</th>
+                                    <td><input type="text" id="" name="" placeholder="メーカー"></td>
+                                    <th>モニタサイズ</th>
+                                    <td><input type="text" id="" name="" placeholder="モニタサイズ"></td>
+                                </tr>
+                                <tr>
+                                    <th>CPU</th>
+                                    <td><input type="text" id="" name="" placeholder="CPU"></td>
+                                    <th>モニタ解像度(縦)</th>
+                                    <td><input type="text" id="" name="" placeholder="解像度(縦)"></td>
+                                </tr>
+                                <tr>
+                                    <th>HDD</th>
+                                    <td><input type="text" id="" name="" placeholder="HDD"></td>
+                                    <th>モニタ解像度(横)</th>
+                                    <td><input type="text" id="" name="" placeholder="解像度(横)"></td>
+                                </tr>
+                                <tr>
+                                    <th>SSD</th>
+                                    <td><input type="text" id="" name="" placeholder="SSD"></td>
+                                    <th>カメラ</th>
+                                    <td><input type="text" id="" name="" placeholder="カメラ"></td>
+                                </tr>
+                                <tr>
+                                    <th>OS</th>
+                                    <td><input type="text" id="" name="" placeholder="OS"></td>
+                                    <th>光学ドライブ</th>
+                                    <td><input type="text" id="" name="" placeholder="光学ドライブ"></td>
+                                </tr>
+                                <tr>
+                                    <th>Wi-Fi</th>
+                                    <td><input type="text" id="" name="" placeholder="Wi-Fi"></td>
+                                    <th>グラフィック</th>
+                                    <td><input type="text" id="" name="" placeholder="グラフィック"></td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="placement-center">
+                            <button class="btn btn-primary" type="submit">登録</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
