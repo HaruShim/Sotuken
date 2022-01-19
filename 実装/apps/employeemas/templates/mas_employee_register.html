@@ -43,7 +43,7 @@
                             <tbody>
                                 <tr>
                                     <th>従業員ID</th>
-                                    <td>{{ form.employee_id }}</td>
+                                    <td>{{ form.username }}</td>
                                     <!-- あとで[店舗] + [個人番号] +a で作る -->
                                 </tr>
                                 <tr>
@@ -79,15 +79,32 @@
                                     <th>雇用形態</th>
                                     <td>{{ form.employment_status }}</td>
                                 </tr>
+                                <tr><th>パスワード</th><td>{{form.password}}</td></tr>
                             </tbody>
                         </thead>
                     </table>
                 </div>
-                <button class="btn btn-primary" type="submit">新規登録</button>
+                現在登録できません
+                <!-- <button class="btn btn-primary" type="submit">新規登録</button> -->
             </form>
             </div>
         </div>
     </div>
 </main>
 
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    $(function () {
+        // 日付は、年-月-日 の形式でお願いする。
+        let dateFormat = 'yy-mm-dd';
+        $('#id_birthday').datepicker({
+            dateFormat: dateFormat,
+            changeYear: true,  // 年選択をプルダウン化
+            changeMonth: true,  // 月選択をプルダウン化
+            yearRange: "-60:+1" // 現在日付の２年前～５年後まで選択可能
+        });
+    });
+</script>
 {% endblock %}

@@ -7,13 +7,13 @@
 -->
 
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}SIMS | 取置予約新規登録{% endblock %}
 
 {% block main_contents %}
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4"><a class="backlist" href="{% url 'reserve:S09-01' %}">取置予約</a></h1>
+        <h1 class="mt-4">取置予約</h1>
 
         <div class="row">
             <div class="card mb-4">
@@ -24,54 +24,31 @@
                 </div>
 
                 <div class="card-body">
-
-                    <table class="employee-table">
-                        <thead class="tablecolumn">
-                            <tr>
-                                <th>商品コード</th>
-                                <td><input type="text" id="syouhin" name="" placeholder="商品コード"></td>
-                            </tr>
-
-                            <!-- <tr>
-                                <th>型番</th>
-                                <td>
-                                    商品コードから型番を取得
-                                    商品コードから型番を取得するJSほしいですう
-                                </td>
-                            </tr> -->
-
-                            <tr>
-                                <th>取置店舗名</th>
-                                <td>
-                                    <select name="store">
-                                        <option value="選択肢1">-</option>
-                                        <option value="選択肢2">店舗A</option>
-                                        <option value="選択肢3">店舗B</option>
-                                        <option value="選択肢4">店舗C</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <th>予約者氏名(カナ)</th>
-                                <td><input type="text" id="" name="" placeholder="ヤマダタロウ"></td>
-                            </tr>
-
-                            <tr>
-                                <th>連絡先</th>
-                                <td><input type="text" id="" name="" placeholder="000-0000-0000"></td>
-                            </tr>
-
-                            <tr>
-                                <th>予約日時</th>
-                                <td><input type="date"></input></td>
-                            </tr>
-                        </thead>
-                    </table>
-
-                    <div class="center-button">
-                        <a class="btn btn-primary" href="#">登録</a>
-                    </div>
+                    <form method="POST" enctype='multipart/form-data'>
+                        <table class="employee-table">
+                        {% csrf_token %}
+                        {{form.item_image}}
+                        
+                            {% if form.errors %}
+                            <div class="errorlist">
+                                {% for errors in form.errors.values %}
+                                {% for error in errors %}
+                                {{ error }}<br>
+                                {% endfor %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            <thead class="tablecolumn">
+                                <tr><th>商品コード</th><td>{{form.item_code}}</td></tr>
+                                <tr><th>取置店舗名</th><td>{{form.store_id}}</td></tr>
+                                <tr><th>予約者氏名(カナ)</th><td>{{form.reserver_name}}</td></tr>
+                                <tr><th>連絡先</th><td>{{form.reserver_tel}}</td></tr>
+                            </thead>
+                        </table>
+                            <div class="center-button">
+                                <button class="btn btn-primary" type="submit">登録</button>
+                            </div>
+                    </form>
                 </div>
             </div>
         </div>

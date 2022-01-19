@@ -9,16 +9,14 @@
         *最終確認(新満)
 
 -->
-<!-- 粗利計算のフィルター -->
 
 {% extends 'base.html' %}
 
+<!-- 粗利計算のフィルター -->
 {% load utils %}
 {% block title %}SIMS | 売上情報一覧{% endblock %}
 
 {% block main_contents %}
-
-
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">売上管理</h1>
@@ -87,10 +85,7 @@
                                 <td>{{ item.item_code.model_number }}</td><!--型番-->
                                 <td class="td-right">{{ item.item_code.purchase_price }}¥</td><!--仕入価格-->
                                 <td class="td-right">{{ item.selling_price }}¥</td><!--販売価格-->
-                                
                                 <td class="td-right">¥{{ item.selling_price|grass_profit:item.item_code.purchase_price}}</td><!-- 粗利 -->
-                                <!-- <td class="td-right">¥{ item.selling_price|multiply:item.gross_profit_margin}}</td>粗利 -->
-                                <!-- <td>{ item.gross_profit_margin }}%</td>粗利率 -->
                                 <td class="td-right">{{ item.selling_price|grass_profit_margin:item.item_code.purchase_price}}%</td><!-- 粗利 -->
                                 <td>{{ item.store_id.store_name }}</td><!--販売店舗-->
                                 <td>{{ item.employee_id.name }}</td><!--担当者-->

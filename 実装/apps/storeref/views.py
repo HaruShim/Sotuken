@@ -14,9 +14,6 @@ from storemas.models import StoreInfo
 from django.urls import reverse_lazy
 from employeemas.models import EmployeeInfo
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
 
 class S1301View(ListView):
     """S1301View
@@ -27,18 +24,20 @@ class S1301View(ListView):
         name (): 
 
     """
-    def mylist(request):
-        EmployeeInfos = EmployeeInfo.objects.all()
-        #EmployeeInfos = EmployeeInfo.objects.order_by('id')
-        paginator = Paginator(EmployeeInfos, 3)
+    template_name = "store_list.html"
+    model = StoreInfo
+    context_object_name = 'StoreInfo'
+    def index(request):
+        Posts = Post.objects.order_by('id').reverse()
+        paginator = Paginator(Posts, 3)
         page = request.GET.get('page', 1)
         try:
-            employeeinfo = paginator.page(page)
+            pages = paginator.page(page)
         except PageNotAnInteger:
-            employeeinfo = paginator.page(1)
+            pages = paginator.page(1)
         except EmptyPage:
-            employeeinfo = paginator.page(1)
-        context = {'employeeinfo': employeeinfo}
+            pages = paginator.page(1)
+        context = {'pages': pages}
         return render(request, 'store_list.html', context)
 
 class S1302View(DetailView):

@@ -17,7 +17,7 @@
 {% block main_contents %}
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4"><a class="backlist" href="{% url 'earingmas:S04-03' %}">売上管理</a></h1>
+        <h1 class="mt-4">売上管理</h1>
         <div class="row">
             <div class="card mb-4">
                 <div class="card-header">
@@ -90,40 +90,6 @@
                             {% endfor %}
                         </tbody>
                     </table>
- <!-- ページネーション処理 -->
-{% if earningnfo.has_other_pages %}12:03 2022/01/13
-<nav aria-label="Page navigation example">
-<ul class="pagination">
-{% if earningnfo.has_previous %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ earningnfo.previous_page_number }}"><<</a></li>
-{% else %}
-<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
-{% endif %}
-{% if earningnfo.has_previous %}
-{% if earningnfo.previous_page_number != 1 %}
-<li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
-<li>…</li>
-{% endif %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ earningnfo.previous_page_number }}">{{ earningnfo.previous_page_number }}</a></li>
-{% endif %}
-<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ earningnfo.number }}</div></li>
-{% if earningnfo.has_next %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ earningnfo.next_page_number }}">{{ earningnfo.next_page_number }}</a></li>
-{% if earningnfo.next_page_number != earningnfo.paginator.num_pages %}
-<li>…</li>
-<li><a class="page-link text-primary d-inline-block" href="?page={{ earningnfo.paginator.num_pages }}">{{ earningnfo.paginator.num_pages }}</a></li>
-{% endif %}
-{% endif %}
-{% if earningnfo.has_next %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ earningnfo.next_page_number }}">>></a></li>
-{% else %}
-<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
-{% endif %}
-</ul>
-</nav>
-{% endif %}
-<!-- ページネーション処理終了 -->
-                   
                 </div>
             </div>
         </div>

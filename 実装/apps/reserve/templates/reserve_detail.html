@@ -14,7 +14,7 @@
 
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4"><a class="backlist" href="{% url 'reserve:S09-01' %}">取置予約</a></h1>
+        <h1 class="mt-4">取置予約</h1>
 
         <div class="row">
             <div class="card mb-4">
@@ -28,44 +28,22 @@
 
                     <table class="employee-table">
                         <thead class="tablecolumn">
-                            <tr>
-                                <th>商品コード</th>
-                                <td>48595844</td>
-                            </tr>
-
-                            <tr>
-                                <th>型番</th>
-                                <td>Raizen 9 5950X</td>
-                            </tr>
-
-                            <tr>
-                                <th>取置店舗名</th>
-                                <td>
-                                    店舗B
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <th>予約者氏名(カナ)</th>
-                                <td>今村尚人</td>
-                            </tr>
-
-                            <tr>
-                                <th>連絡先</th>
-                                <td>090-8586-4848</td>
-                            </tr>
-
-                            <tr>
-                                <th>予約日時</th>
-                                <td>2001/11/19</td>
-                            </tr>
+                                <tr><th>商品コード</th><td>{{ object.item_code }}</td></tr>
+                                <tr><th>型番</th><td>{{ object.item_code.model_number }}</td></tr>
+                                <tr><th>取置店舗名</th><td>{{ object.store_id }}</td></tr>
+                                <tr><th>予約者氏名(カナ)</th><td>{{ object.reserver_name }}</td></tr>
+                                <tr><th>連絡先</th><td>{{ object.reserver_tel }}</td></tr>
+                                <tr><th>予約日時</th><td>{{ object.reserve_at }}</td></tr>
                         </thead>
                     </table>
 
-                    <div class="center-button">
-                        <a class="btn btn-primary" href="#">更新</a>
-                        <a class="btn btn-primary" href="#">削除</a>
-                    </div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="center-button">
+                            <a class="btn btn-primary" href="{% url 'reserve:S09-04' object.pk %}">編集</a>
+                            <!-- <button class="btn btn-primary" type="submit">削除</button> -->
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

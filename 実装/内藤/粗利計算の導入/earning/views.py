@@ -12,16 +12,8 @@ from django.urls import reverse_lazy
 from .forms import S1102Form,S1104Form
 from django.shortcuts import render
 from earningmas.models import EarningInfo
+from itemmas.models import ItemInfo
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
-# テスト
-
-
-
-
-
-
-
 
 class S1101View(ListView):
     """S1101View
@@ -32,22 +24,22 @@ class S1101View(ListView):
         name (): 
 
     """
-    model = EarningInfo
-    paginate_by = 12
-
     def mylist(request):
-        template_name = "earning_list.html"
-        Earnings = EarningInfo.objects.order_by('id')
-        paginator = Paginator(Earnings, 12)
+        template_name = 'earning_list.html'
+        EarningInfos = EarningInfo.objects.order_by('id')
+        paginator = Paginator(EarningInfos, 12)
         page = request.GET.get('page', 1)
         try:
-            earning = paginator.page(page)
+            earninginfo = paginator.page(page)
         except PageNotAnInteger:
-            earning = paginator.page(1)
+            earninginfo = paginator.page(1)
         except EmptyPage:
-            earning = paginator.page(1)
-        context = {'earning': earning}
+            earninginfo = paginator.page(1)
+        # gross_profit_tamesi = EarningInfo.objects.values_list("gross_profit_margin", flat=True)
+        context = {'earninginfo': earninginfo,}
         return render(request, template_name, context)
+    # 一覧表示する関数
+
 
 class S1102View(CreateView,ListView):
     """S1102View
@@ -65,8 +57,14 @@ class S1102View(CreateView,ListView):
 
     def form_valid(self, form):
         item = form.save(commit=False)  # 保存処理など
-        # messages.add_message(self.request, messages.SUCCESS, '登録しました！')  # メッセージ出力
+        # formで入力された商品コードと一致するレコードをItemInfoから取得
+        record = ItemInfo.objects.get(id=item.item_code)
+        # 上記の商品の商品状態を1(販売済み)に変更
+        record.item_status = 1
+        # EarningInfoのデータを保存
         item.save()
+        # ItemInfoのデータを保存
+        record.save()
         return super().form_valid(form)
 
 

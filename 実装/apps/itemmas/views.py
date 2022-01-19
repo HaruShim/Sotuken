@@ -10,12 +10,10 @@ from django.db import models
 # from django.views.generic import ListView,TemplateView
 from django.views.generic import TemplateView,ListView,DetailView,CreateView,DeleteView,UpdateView
 from django.urls import reverse_lazy
-from .forms import S0302Form
+from .forms import S0302Form,S0304Form,S0305Form
 from django.shortcuts import render
+from django.db.models import Q
 from .models import ItemInfo,ItemSpecification
-from django.shortcuts import render
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
 
 class S0301View(ListView):
     """S0301View
@@ -26,19 +24,10 @@ class S0301View(ListView):
         name (): 
 
     """
-    def mylist(request):
-        ItemInfos = ItemInfo.objects.all()
-        #ItemInfos = ItemInfo.objects.order_by('id')
-        paginator = Paginator(ItemInfos, 3)
-        page = request.GET.get('page', 1)
-        try:
-            iteminfo = paginator.page(page)
-        except PageNotAnInteger:
-            iteminfo = paginator.page(1)
-        except EmptyPage:
-            iteminfo = paginator.page(1)
-        context = {'iteminfo': iteminfo}
-        return render(request, 'mas_item_list.html', context)
+    template_name = "mas_item_list.html"
+    context_object_name = 'ItemList'
+    model = ItemInfo
+    paginate_by = 12
 
 class S0302View(CreateView):
     """S0302View
@@ -57,7 +46,11 @@ class S0302View(CreateView):
     def form_valid(self, form):
         item = form.save(commit=False)  # 保存処理など
         # messages.add_message(self.request, messages.SUCCESS, '登録しました！')  # メッセージ出力
+        products = ItemInfo.objects.filter(Q(item_status="1")|Q(item_status="2")|Q(item_status="3")) # 条件を設定してから
+        products.update(item_status="0") 
+
         item.save()
+        # record.save()
         return super().form_valid(form)
 
 
@@ -123,6 +116,26 @@ class S0304View(UpdateView):
     def get_success_url(self):
         return reverse_lazy('itemmas:S03-03',kwargs={'pk':self.kwargs['pk']})
     def form_valid(self,form):
+        return super().form_valid(form)
+
+class S0305View(CreateView):
+    """S0302View
+
+    レスポンスをフォーム、モデル、テンプレートなどから生成する
+
+    Attributes:
+        name (): 
+
+    """
+    model = ItemSpecification
+    template_name = "mas_item_register1.html"
+    form_class = S0305Form
+    success_url = reverse_lazy('itemmas:S03-01')
+
+    def form_valid(self, form):
+        item = form.save(commit=False)  # 保存処理など
+        # messages.add_message(self.request, messages.SUCCESS, '登録しました！')  # メッセージ出力
+        item.save()
         return super().form_valid(form)
     
 

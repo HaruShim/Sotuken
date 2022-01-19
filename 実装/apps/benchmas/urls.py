@@ -15,8 +15,8 @@ from . import views
 
 app_name = 'benchmas'
 urlpatterns = [
-    path('S05-01CPU/',views.S0501CPUView.mylist,name = "S05-01CPU"),
-    path('S05-01GPU/',views.S0501GPUView.mylist,name = "S05-01GPU"),
+    path('S05-01CPU/',views.S0501CPUView.as_view(),name = "S05-01CPU"),
+    path('S05-01GPU/',views.S0501GPUView.as_view(),name = "S05-01GPU"),
     path('S05-02CPU/',views.S0502CPUView.as_view(),name = "S05-02CPU"),
     path('S05-02GPU/',views.S0502GPUView.as_view(),name = "S05-02GPU"),
     path('S05-03CPU/<int:pk>',views.S0503CPUView.as_view(),name = "S05-03CPU"),

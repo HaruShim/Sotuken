@@ -1,5 +1,5 @@
 spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,camera,wifi,optical_drive,graphic,os,memory
-0,ñ¢ê›íË,-,0,0,0,0,0,f,f,f,-,-,0
+0,ÔøΩÔøΩÔøΩ›íÔøΩ,-,0,0,0,0,0,f,f,f,-,-,0
 1,X1 Carbon 6gn,Corei5 8365U,0,0,14,1920,1080,t,t,f,intel UHD Graphics 620,Windows10 Pro,8
 2,X270,Corei5 7300U,0,512,12.5,1920,1080,t,t,f,intel HD Graphics 620,Windows10 Pro,8
 3,X260,Corei5 6300U,0,256,12.5,1366,768,t,t,f,intel HD Graphics 520,Windows10 Pro,8
@@ -46,8 +46,8 @@ spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,c
 44,ESPRIMO Q558/B,Corei5 9500T,0,256,0,0,0,t,t,t,intel UHD Graphics 630,Windows10 Pro,16
 45,OptiPlex 790 SFF,Corei5 2400,500,0,0,0,0,f,f,t,intel HD Graphics 2000,Windows xp Pro 32bit,4
 46,ProOne 600 G4 Aio,Corei5 8500T,500,250,21.5,1920,1080,t,f,t,intel UHD Graphics 630,Windows10 Pro,16
-47,é©çÏ1,Pentium G2020,500,0,0,0,0,f,f,t,intel HD Graphics ,Windows7 Pro 32bit,4
-48,é©çÏ2,Ryzen7 2700,6000,500,0,0,0,f,t,t,GTX 1060 6GB,Windows10 Pro,32
+47,ÔøΩÔøΩÔøΩÔøΩ1,Pentium G2020,500,0,0,0,0,f,f,t,intel HD Graphics ,Windows7 Pro 32bit,4
+48,ÔøΩÔøΩÔøΩÔøΩ2,Ryzen7 2700,6000,500,0,0,0,f,t,t,GTX 1060 6GB,Windows10 Pro,32
 49,TIC PC-I,Corei9 12900K,8000,2000,0,0,0,t,t,t,RTX 3090,Windows11 Pro,128
 50,TIC PC-A,Ryzen9 5950X,8000,2000,0,0,0,t,t,t,RADEON 6900XT,Windows11 Pro,128
 51,ColorEdge CG277,-,0,0,27,2560,1440,f,f,f,-,-,-
