@@ -47,7 +47,7 @@ spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,c
 45,OptiPlex 790 SFF,Corei5 2400,500,0,0,0,0,f,f,t,intel HD Graphics 2000,Windows xp Pro 32bit,4
 46,ProOne 600 G4 Aio,Corei5 8500T,500,250,21.5,1920,1080,t,f,t,intel UHD Graphics 630,Windows10 Pro,16
 47,,Pentium G2020,500,0,0,0,0,f,f,t,intel HD Graphics ,Windows7 Pro 32bit,4
-48,ÅEΩÅEΩÅEΩÅEΩ2,Ryzen7 2700,6000,500,0,0,0,f,t,t,GTX 1060 6GB,Windows10 Pro,32
+48,ÔøΩEÔøΩÔøΩEÔøΩÔøΩEÔøΩÔøΩEÔøΩ2,Ryzen7 2700,6000,500,0,0,0,f,t,t,GTX 1060 6GB,Windows10 Pro,32
 49,TIC PC-I,Corei9 12900K,8000,2000,0,0,0,t,t,t,RTX 3090,Windows11 Pro,128
 50,TIC PC-A,Ryzen9 5950X,8000,2000,0,0,0,t,t,t,RADEON 6900XT,Windows11 Pro,128
 51,ColorEdge CG277,-,0,0,27,2560,1440,f,f,f,-,-,-
@@ -88,3 +88,4 @@ spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,c
 86,2021 Personal,-,0,0,0,0,0,f,f,f,-,-,4
 87,2021 Home & Business,-,0,0,0,0,0,f,f,f,-,-,5
 88,WPS Office 2,-,0,0,0,0,0,f,f,f,-,-,6
+spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,camera,wifi,optical_drive,graphic,os,category,memory
