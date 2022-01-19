@@ -2,7 +2,7 @@ spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,c
 0,ñ¢ê›íË,-,0,0,0,0,0,f,f,f,-,-,0
 1,X1 Carbon 6gn,Corei5 8365U,0,0,14,1920,1080,t,t,f,intel UHD Graphics 620,Windows10 Pro,8
 2,X270,Corei5 7300U,0,512,12.5,1920,1080,t,t,f,intel HD Graphics 620,Windows10 Pro,8
-3,X260,Corei5 6300U,0,0,12.5,1366,768,t,t,f,intel HD Graphics 520,Windows10 Pro,8
+3,X260,Corei5 6300U,0,256,12.5,1366,768,t,t,f,intel HD Graphics 520,Windows10 Pro,8
 4,X250,Corei5 5300U,0,256,12.5,1366,768,t,t,f,intel HD Graphics 5500,Windows10 Pro,8
 5,T460,Corei5 6300U,0,256,14,1920,1080,t,t,f,intel HD Graphics 520,Windows10 Pro,16
 6,X61,Core2Duo T7300,0,128,12.1,1024,768,f,t,f,-,Windows7 Home 32bit,8
@@ -15,7 +15,7 @@ spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,c
 13,U938,Corei5 8350U,0,256,13.3,1920,1080,t,t,f,intel UHD Graphics 620,Windows10 Pro,8
 14,A746/N,Corei5 6300U,0,128,15.6,1366,768,t,t,t,intel HD Graphics 520,Windows10 Pro,8
 15,A748/TX,Corei5 8250U,0,256,15.6,1366,768,f,t,t,intel UHD Graphics 620,Windows10 Pro,32
-16,VAIO VJS111D12N,Corei5 6200U,0,256,11.6,1920,1080,t,t,f,intel HD Graphics 520,Windows10 Pro,8
+16,VJS111D12N,Corei5 6200U,0,256,11.6,1920,1080,t,t,f,intel HD Graphics 520,Windows10 Pro,8
 17,ideapad 310S-11IAP,Celeron N3350,500,0,11.6,1366,768,t,t,f,intel HD Graphics 500,Windows10 Home,4
 18,ProBook 470 G5,Corei5 8250U,0,512,17.3,1600,900,t,t,f,GEForce 930MX,Windows10 Pro,16
 19,T65/CG,Corei7 7500U,0,256,15.6,1920,1080,t,t,t,intel HD Graphics 620,Windows10 Home,16
@@ -46,7 +46,90 @@ spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,c
 44,ESPRIMO Q558/B,Corei5 9500T,0,256,0,0,0,t,t,t,intel UHD Graphics 630,Windows10 Pro,16
 45,OptiPlex 790 SFF,Corei5 2400,500,0,0,0,0,f,f,t,intel HD Graphics 2000,Windows xp Pro 32bit,4
 46,ProOne 600 G4 Aio,Corei5 8500T,500,250,21.5,1920,1080,t,f,t,intel UHD Graphics 630,Windows10 Pro,16
-47,é©çÏ,Pentium G2020,500,0,0,0,0,f,f,t,intel HD Graphics ,Windows7 Pro 32bit,4
-48,é©çÏ,Ryzen7 2700,6000,500,0,0,0,f,t,t,GTX 1060 6GB,Windows10 Pro,32
+47,é©çÏ1,Pentium G2020,500,0,0,0,0,f,f,t,intel HD Graphics ,Windows7 Pro 32bit,4
+48,é©çÏ2,Ryzen7 2700,6000,500,0,0,0,f,t,t,GTX 1060 6GB,Windows10 Pro,32
 49,TIC PC-I,Corei9 12900K,8000,2000,0,0,0,t,t,t,RTX 3090,Windows11 Pro,128
 50,TIC PC-A,Ryzen9 5950X,8000,2000,0,0,0,t,t,t,RADEON 6900XT,Windows11 Pro,128
+51,ColorEdge CG277,-,0,0,27,2560,1440,f,f,f,-,-,-
+52,323E7Q,-,0,0,31.5,1920,1080,f,f,f,-,-,-
+53,E2213Hb,-,0,0,21.5,1920,1080,f,f,f,-,-,-
+54,Z24n,-,0,0,24,1920,1200,f,f,f,-,-,-
+55,ThinkVision T24i,-,0,0,23.8,1920,1080,f,f,f,-,-,-
+56,E231,-,0,0,23,1920,1080,f,f,f,-,-,-
+57,FlexScan EV2451,-,0,0,23,1920,1080,f,f,f,-,-,-
+58,P2317H,-,0,0,23,1920,1080,f,f,f,-,-,-
+59,34WL500-B,-,0,0,34,2560,1080,f,f,f,-,-,-
+60,U4919DW,-,0,0,49,5120,1440,f,f,f,-,-,-
+61,1GB,-,0,0,0,0,0,f,f,f,-,-,1
+62,2GB,-,0,0,0,0,0,f,f,f,-,-,2
+63,4GB,-,0,0,0,0,0,f,f,f,-,-,4
+64,8GB,-,0,0,0,0,0,f,f,f,-,-,8
+67,16GB,-,0,0,0,0,0,f,f,f,-,-,16
+68,32GB,-,0,0,0,0,0,f,f,f,-,-,32
+69,64GB,-,0,0,0,0,0,f,f,f,-,-,64
+70,128GB,-,0,0,0,0,0,f,f,f,-,-,128
+71,320GB,-,320,0,0,0,0,f,f,f,-,-,0
+72,500GB,-,500,0,0,0,0,f,f,f,-,-,0
+73,1TB,-,1000,0,0,0,0,f,f,f,-,-,0
+74,2TB,-,2000,0,0,0,0,f,f,f,-,-,0
+75,3TB,-,3000,0,0,0,0,f,f,f,-,-,0
+76,4TB,-,4000,0,0,0,0,f,f,f,-,-,0
+77,6TB,-,6000,0,0,0,0,f,f,f,-,-,0
+78,8TB,-,8000,0,0,0,0,f,f,f,-,-,0
+79,10TB,-,10000,0,0,0,0,f,f,f,-,-,0
+80,128GB,-,0,128,0,0,0,f,f,f,-,-,0
+81,256GB,-,0,256,0,0,0,f,f,f,-,-,0
+82,512GB,-,0,512,0,0,0,f,f,f,-,-,0
+83,1TB,-,0,1000,0,0,0,f,f,f,-,-,0
+84,2010 Personal,-,0,0,0,0,0,f,f,f,-,-,0
+85,2010 Home & Business,-,0,0,0,0,0,f,f,f,-,-,1
+86,2019 Personal,-,0,0,0,0,0,f,f,f,-,-,2
+87,2019 Home & Business,-,0,0,0,0,0,f,f,f,-,-,3
+88,2021 Personal,-,0,0,0,0,0,f,f,f,-,-,4
+89,2021 Home & Business,-,0,0,0,0,0,f,f,f,-,-,5
+90,WPS Office 2,-,0,0,0,0,0,f,f,f,-,-,6
+91,,,,,,,,,,,,,
+92,,,,,,,,,,,,,
+93,,,,,,,,,,,,,
+94,,,,,,,,,,,,,
+95,,,,,,,,,,,,,
+96,,,,,,,,,,,,,
+97,,,,,,,,,,,,,
+98,,,,,,,,,,,,,
+99,,,,,,,,,,,,,
+100,,,,,,,,,,,,,
+101,,,,,,,,,,,,,
+102,,,,,,,,,,,,,
+103,,,,,,,,,,,,,
+104,,,,,,,,,,,,,
+105,,,,,,,,,,,,,
+106,,,,,,,,,,,,,
+107,,,,,,,,,,,,,
+108,,,,,,,,,,,,,
+109,,,,,,,,,,,,,
+110,,,,,,,,,,,,,
+111,,,,,,,,,,,,,
+112,,,,,,,,,,,,,
+113,,,,,,,,,,,,,
+114,,,,,,,,,,,,,
+115,,,,,,,,,,,,,
+116,,,,,,,,,,,,,
+117,,,,,,,,,,,,,
+118,,,,,,,,,,,,,
+119,,,,,,,,,,,,,
+120,,,,,,,,,,,,,
+121,,,,,,,,,,,,,
+122,,,,,,,,,,,,,
+123,,,,,,,,,,,,,
+124,,,,,,,,,,,,,
+125,,,,,,,,,,,,,
+126,,,,,,,,,,,,,
+127,,,,,,,,,,,,,
+128,,,,,,,,,,,,,
+129,,,,,,,,,,,,,
+130,,,,,,,,,,,,,
+131,,,,,,,,,,,,,
+132,,,,,,,,,,,,,
+133,,,,,,,,,,,,,
+134,,,,,,,,,,,,,
+135,,,,,,,,,,,,,
