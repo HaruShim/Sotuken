@@ -1,6 +1,6 @@
 spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,camera,wifi,optical_drive,graphic,os,memory
 0,ñ¢ê›íË,-,0,0,0,0,0,f,f,f,-,-,0
-1,X1 Carbon 6gn,Corei5 8365U,0,0,13,7680,4320,t,t,f,intel UHD Graphics 620,Windows10 Pro,8
+1,X1 Carbon 6gn,Corei5 8365U,0,0,14,1920,1080,t,t,f,intel UHD Graphics 620,Windows10 Pro,8
 2,X270,Corei5 7300U,0,512,12.5,1920,1080,t,t,f,intel HD Graphics 620,Windows10 Pro,8
 3,X260,Corei5 6300U,0,0,12.5,1366,768,t,t,f,intel HD Graphics 520,Windows10 Pro,8
 4,X250,Corei5 5300U,0,256,12.5,1366,768,t,t,f,intel HD Graphics 5500,Windows10 Pro,8
@@ -32,7 +32,7 @@ spec_id,model_number,cpu,hdd,ssd,monitor_size,monitor_vertical,monitor_horizon,c
 30,ARROWS Tab Q737/P,Corei5 7300U,0,128,13.3,1920,1080,t,t,f,intel HD Graphics 620,Windows10 Pro,4
 31,MacBook Air Early 2015,Corei5 5250U,0,128,13.3,1440,900,t,t,f,intel Iris Graphics 540,MacOS monterey 12.0.1,8
 32,MacBook Pro Mid 2015,Corei7 4770HQ,0,1000,15.4,2880,1800,t,t,f,intel HD Graphics 4600,MacOS Big Sur 11.6.1,16
-33,MacBook Pro  2020,M1,0,512,13.3,2560,1600,t,t,f,,MacOS Big Sur 11.6.1,16
+33,MacBook Pro  2020,M1,0,512,13.3,2560,1600,t,t,f,M1,MacOS Big Sur 11.6.1,16
 34,MacBook ,Core m3 6Y30,0,256,12,2304,1440,t,t,f,intel HD Graphics 515,MacOs sierra 10.12.6,8
 35,OMEN 15-cd016TX,Corei7 7700HQ,1000,256,15.6,1920,1080,t,t,f,GTX 1060 mobile,Windows10 Pro,16
 36,ProDesk 600 G3 SFF,Corei5 6500,500,128,0,0,0,f,f,t,intel HD Graphics 530,Windows10 Pro,8
