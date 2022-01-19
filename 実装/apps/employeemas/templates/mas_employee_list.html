@@ -35,17 +35,17 @@
                         </thead>
                         <tbody>
                             <!-- EmployeeInfoモデルの一覧を表示 -->
-                            {% for item in EmployeeInfo %}
+                            {% for item in customuser %}
                             <tr>
-                                <td style="text-align: center;"></td>
-                                <td><a href="{% url 'employeemas:S01-03' item.pk %}">{{ item.employee_id }}</a></td><!--従業員ID-->
+                                <td style="text-align: center;">{{item.id}}</td>
+                                <td><a href="{% url 'employeemas:S01-03' item.pk %}">{{ item.username }}</a></td><!--従業員ID-->
                                 <td>{{ item.name }}</td><!--従業員名-->
                                 <td>{{ item.store_id.store_name }}</td><!--店舗-->
                             </tr>
                             {% endfor %}
                         </tbody>
                     </table>
-                    {% if employeeInfo.has_other_pages %}
+{% if employeeInfo.has_other_pages %}
 <nav aria-label="Page navigation example">
 <ul class="pagination">
 {% if employeeInfo.has_previous %}

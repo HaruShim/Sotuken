@@ -12,9 +12,7 @@ from .models import StoreInfo
 from .forms import S0202Form
 from django.urls import reverse_lazy
 from employeemas.models import EmployeeInfo
-from django.shortcuts import render
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+from accounts.models import CustomUser
 
 class S0201View(ListView):
     """S0201View
@@ -25,19 +23,10 @@ class S0201View(ListView):
         name (): 
 
     """
-    def mylist(request):
-        StoreInfos = StoreInfo.objects.all()
-        #StoreInfos = StoreInfo.objects.order_by('id')
-        paginator = Paginator(StoreInfos, 4)
-        page = request.GET.get('page', 1)
-        try:
-            storeInfo = paginator.page(page)
-        except PageNotAnInteger:
-            storeInfo = paginator.page(1)
-        except EmptyPage:
-            storeInfo = paginator.page(1)
-        context = {'storeInfo': storeInfo}
-        return render(request, 'mas_store_list.html', context)
+    template_name = "mas_store_list.html"
+    model = StoreInfo
+    model2 = CustomUser
+    context_object_name = 'StoreInfo'
 
     # def get_queryset(self):
     #     store_manager = EmployeeInfo.objects.filter(name = '竹井 一馬')
