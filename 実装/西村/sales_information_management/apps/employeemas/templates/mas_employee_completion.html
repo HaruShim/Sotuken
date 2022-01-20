@@ -1,0 +1,48 @@
+<!-- S01-05 従業員登録完了
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | 従業員登録完了画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">従業員管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    従業員情報登録完了
+                </div>
+                <div class="card-body">
+                    <p>従業員情報の登録が完了しました</p>
+                    <table class="detailtable">
+                        <thead class="tablecolumn">
+                            <tbody>
+                                <tr><th>従業員番号</th><td style="font-size: x-large;">{{employee_id}}</td></tr>
+                                <tr><th>従業員名</th><td>{{name}}</td></tr>
+                                <tr><th>パスワード</th><td>{{birthday_pass}}</td></tr>
+							</tbody>
+                        </thead>
+                    </table>
+                    <div class="placement-center">
+                        <a class="btn btn-main" href="{% url 'employeemas:S01-01' %}">閉じる</a>
+                    </div>
+                </div>
+                    
+            </div>
+            
+        </div>
+    </div>
+</main>
+
+{% endblock %}

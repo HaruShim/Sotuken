@@ -1,0 +1,108 @@
+<!-- S02-03 店舗情報詳細
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | 店舗詳細画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">店舗詳細</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    店舗情報詳細
+                </div>
+                <div class="card-body">
+                    <table class="registertable">
+                        <thead class="tablecolumn">
+                            <tbody>
+                                <tr>
+                                    <th>店舗ID</th>
+                                    <td>{{ object.id }}</td>
+                                </tr>
+                                <tr>
+                                    <th>場所カテゴリ</th>
+                                    <td>{{ object.get_place_category_display }}</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>店舗名</th>
+                                    <td>{{ object.store_name }}</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>住所</th>
+                                    <td>{{ object.address }}</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>連絡先</th>
+                                    <td>{{ object.tel }}</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="placement-center">
+                            <a class="btn btn-main" href="{% url 'storemas:S02-04' object.pk %}">編集</a>
+                            <button class="btn btn-main" type="submit">削除</button>
+                        </div>
+                    </form>
+                        
+                    <!-- <table id="datatablesSimple">
+                        <thead class="tablecolumn">
+                            <div class="tablecolumn2">
+                                <tr>
+                                    <th>従業員ID</th>
+                                    <th>従業員名</th>
+                                    <th>店舗</th>
+                                </tr>
+                            </div>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>従業員ID</th>
+                                <th>従業員名</th>
+                                <th>店舗</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            
+                        </tbody>
+                        
+                        
+                        <tbody>
+                            {% for i in object_list %}
+                            <tr>
+                                <td><a href="# url 'table:table_detail' i.pk %}">{{ i.get_choice_display }}</a></td>
+                                <td>{{i.date | date:"Y/m/d"}}</td>
+                                <td>{{i.title}}</td>
+                                <td>{{i.get_genre_display}}</td>
+                                <td>{{i.quanity}}</td>
+                                <td>{{ i.money }}¥</td>
+                            </a>
+                        </tr>
+                        {% empty %}
+                        <p>テーブルはありません。</p>
+                        {% endfor %}
+                        </tbody>
+                    </table> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
