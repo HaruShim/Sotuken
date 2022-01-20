@@ -1,0 +1,106 @@
+<!-- S11-01 売上情報一覧
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 売上情報一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">売上管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    売上一覧
+                </div>
+                <div class="card-body">
+                    <table class="cleannesstable" frame="border">
+                        <tr>
+                            <td>商品コード
+                                <input type="text" id="name" name="itemcode">
+                            </td>
+                            <td>販売店舗
+                                <select name="store">
+                                    <option hidden>店舗選択</option>
+                                    <option value="">店舗A</option>
+                                    <option value="">店舗B</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>型番
+                                <input type="text" id="name" name="modelnumber">
+                            </td>
+                            <td>担当者
+                                <select name="employee">
+                                    <option hidden>担当者選択</option>
+                                    <option value="">大原太郎</option>
+                                    <option value="">豊臣秀吉</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                販売日<input type="date" name="saledate">～<input type="date" name="saledate">
+                            </td>
+                            <td><a class="btn btn-touroku" href="#">検索</a></td>
+                        </tr>
+                    </table>
+                    <table class="earningtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>伝票番号</th>
+                                <th>販売日</th>
+                                <th>商品コード</th>
+                                <th>型番</th>
+                                <th>仕入価格</th>
+                                <th>販売価格</th>
+                                <th>粗利</th>
+                                <th>粗利率</th>
+                                <th>販売店舗</th>
+                                <th>担当者</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- earninginfo_listモデルの一覧を表示 -->
+                            {% for item in earninginfo_list %}
+                            <tr>
+                                <td class="tamesi-id"><a href="{% url 'earning:S11-04' item.pk %}">{{ item.id }}</a></td>        <!--伝票番号-->
+                                <td>{{ item.sale_date | date:"Y/m/d"}}</td> <!--販売日(2021/11/11)-->
+                                <!-- <td>{ item.sale_date}}</td> -->        <!--販売日(2021年11月11日)-->
+                                <td>{{ item.item_code }}</td><!--商品コード-->
+                                <td>{{ item.item_code.model_number }}</td><!--型番-->
+                                <td class="td-right">{{ item.item_code.purchase_price }}¥</td><!--仕入価格-->
+                                <td class="td-right">{{ item.selling_price }}¥</td><!--販売価格-->
+                                <td class="td-right">500¥</td><!--粗利-->
+                                <td>{{ item.gross_profit_margin }}%</td><!--粗利率-->
+                                <td>{{ item.store_id.store_name }}</td><!--販売店舗-->
+                                <td>{{ item.employee_id.name }}</td><!--担当者-->
+                            </tr>
+                            <!-- DBが空だった場合 -->
+                            {% empty %}
+                            空です
+                            {% endfor %}
+                            <!-- <tr><td>123456789</td><td>2020/10/31</td><td>123456789</td><td>123456789</td><td>3000円</td><td>4000円</td><td></td><td></td><td>店舗A</td><td>大原太郎</td>                            </tr>
+                            <tr><td>123456789</td><td>2020/10/31</td><td>123456789</td><td>123456789</td><td>3000円</td><td>4000円</td><td></td><td></td><td>店舗A</td><td>大原太郎</td>                            </tr>
+                            <tr><td>123456789</td><td>2020/10/31</td><td>123456789</td><td>123456789</td><td>3000円</td><td>4000円</td><td></td><td></td><td>店舗A</td><td>大原太郎</td>                            </tr> -->
+                        </tbody>
+                    </table>
+                    <a class="btn btn-touroku" href="{% url 'earning:S11-02' %}">新規登録</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

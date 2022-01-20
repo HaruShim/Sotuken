@@ -1,0 +1,66 @@
+<!-- S02-04 店舗情報編集
+
+    ToDo
+        画面の制作お願いします
+        *長谷川
+
+-->
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 店舗情報編集{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">店舗管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    店舗情報編集
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <table class="detailtable">
+                            {{ form.as_table }}
+                        </table>
+                        <div class="placement-center">
+                            <button class="btn btn-main" type="submit">更新</button>
+                        </div>
+                    </form>
+                    <!-- <table class="store-table">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>店舗ID</th>
+                                <td>{{ form.store_id }}</td>
+                            </tr>
+                            <tr>
+                                <th>店舗名</th>
+                                <td>{{ form.store_name }}</td>
+                            </tr>
+                            <tr>
+                                <th>場所カテゴリ</th>
+                                <td>{{ form.place_category }}</td>                        
+                            </tr>
+                            <tr>
+                                <th>住所</th>
+                                <td>{{ form.address }}</td>
+                            </tr>
+                            <tr>
+                                <th>連絡先</th>
+                                <td>{{ form.tel }}</td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="center-button">
+                        <button class="btn btn-primary" type="submit">更新</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
