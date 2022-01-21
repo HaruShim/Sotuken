@@ -7,7 +7,7 @@ from .models import ItemInfo,ItemSpecification
 class S0302Form(ModelForm):
     class Meta:
         model = ItemInfo
-        fields = ('model_number', 'category', 'manufacturer_name','purchase_price','item_image','remarks','store_id' )
+        fields = ('id','model_number', 'category', 'manufacturer_name','purchase_price','item_image','remarks','store_id' )
 
         widgets = {
                 
@@ -28,7 +28,7 @@ class S0302Form(ModelForm):
 class S0304Form(ModelForm):
     class Meta:
         model = ItemInfo
-        fields = ('id', 'model_number', 'category', 'manufacturer_name','purchase_price','item_image','remarks','store_id' )
+        fields = ('id','model_number', 'category', 'manufacturer_name','purchase_price','item_image','remarks','store_id' )
 
         widgets = {
                 'id': forms.TextInput(attrs={'placeholder': "商品コード",'id':'item-code'}),

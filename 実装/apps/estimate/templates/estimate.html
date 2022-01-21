@@ -52,7 +52,39 @@
                             </tr>
                         </tbody>
                     </table>
-                    <p>Office
+                    <table class="ProductTable">
+                        <tr><th>Office</th>
+                            <td><input type="text" name="offciceselect" placeholder="office" autocomplete="off"></td>
+                            <td></td>
+                            <td style="width: 60%;"></td>
+                            <td class="therd-td">○○○○○円</td>
+                        </tr>
+                        <tr><th>SSD</th>
+                            <td><input type="text" name="SSD" placeholder="SSD">GB</td>
+                            <td class="therd-td"></td><td></td><td>○○○○○円</td>
+                        </tr>
+                        <tr><th>メモリ</th><td><input type="text" name="memory" placeholder="メモリ"></td><td class="therd-td"><select name="example">
+                            <option value="サンプル1">1枚</option>
+                            <option value="サンプル2">2枚</option>
+                            <option value="サンプル3">3枚</option>
+                        </select></td><td></td><td>○○○○○円</td></tr>
+                        <tr><th>その他</th><td><input type="text" name="" placeholder="直接金額を入力して下さい"></td><td class="therd-td"></td><td></td><td>○○○○○円</td></tr>
+                        <tr><th></th><td></td><td class="therd-td"></td><td></td><td>合計○○○○○円</td></tr>
+                    </table>
+                    <style>
+                        .ProductTable {
+    border: solid 1px ;
+    border-collapse: separate;
+    border-spacing: 8px 0px;
+    border:none;
+}
+
+.ProductTable td {
+    border: solid 1px ;
+    border: solid 1px ;
+}
+                    </style>
+                    <!-- <p>Office
                         <input type="text" name="offciceselect" list="officelist" placeholder="office" autocomplete="off">
                                 <datalist id="officelist">
                                     <option value="サンプル1">
@@ -62,9 +94,15 @@
                         ○○○○○円
                     </p>
                     <p>SSD <input type="text" name="SSD" placeholder="SSD">GB ○○○○○円</p>
-                    <p>メモリ <input type="text" name="memory" placeholder="メモリ">GB × <input type="number" name="">枚 ○○○○○円</p>
+                    <p>メモリ <input type="text" name="memory" placeholder="メモリ">GB × </p>
+                    <select name="example">
+                        <option value="サンプル1">1枚</option>
+                        <option value="サンプル2">2枚</option>
+                        <option value="サンプル3">3枚</option>
+                    </select>
+                    <p>○○○○○円</p>
                     <p>その他<input type="text" name=""> ○○○○○円</p>
-                    <p>合計○○○○○円</p>
+                    <p>合計○○○○○円</p> -->
                 </div>
             </div>
         </div>

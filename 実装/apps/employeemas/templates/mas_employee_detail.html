@@ -40,7 +40,8 @@
                         {% csrf_token %}
                         <div class="center-button">
                             <a class="btn btn-primary" href="{% url 'employeemas:S01-04' object.pk %}">編集</a>
-                            <button class="btn btn-primary" type="submit">削除</button>
+                            <!-- ↓削除した際、フラグをオフにしたいためいったんコメント -->
+                            <!-- <button class="btn btn-primary" type="submit">削除</button> -->
                         </div>
                     </form>
                 </div>

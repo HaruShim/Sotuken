@@ -1,7 +1,6 @@
 from django import forms
 from django.forms import ModelForm
 
-from .models import EmployeeInfo
 from accounts.models import CustomUser
 
 class S0102Form(ModelForm):

@@ -8,7 +8,6 @@ Todo:
 
 from django.db import models
 from django.views.generic import TemplateView,ListView,DetailView,CreateView,DeleteView,UpdateView
-from .models import EmployeeInfo
 from accounts.models import CustomUser
 from earningmas.models import EarningInfo
 from django.shortcuts import render
@@ -28,7 +27,6 @@ class S0101View(ListView):
     """
     CustomUser
     def mylist(request):
-        # EmployeeInfos = CustomUser.objects.all()
         CustomUsers = CustomUser.objects.order_by('id')
         paginator = Paginator(CustomUsers, 10)
         page = request.GET.get('page', 1)
@@ -40,19 +38,6 @@ class S0101View(ListView):
             customuser = paginator.page(1)
         context = {'customuser': customuser,}
         return render(request, 'mas_employee_list.html', context)
-    # def mylist(request):
-    #     # EmployeeInfos = EmployeeInfo.objects.all()
-    #     EmployeeInfos = EmployeeInfo.objects.order_by('id')
-    #     paginator = Paginator(EmployeeInfos, 10)
-    #     page = request.GET.get('page', 1)
-    #     try:
-    #         employeeInfo = paginator.page(page)
-    #     except PageNotAnInteger:
-    #         employeeInfo = paginator.page(1)
-    #     except EmptyPage:
-    #         employeeInfo = paginator.page(1)
-    #     context = {'employeeInfo': employeeInfo,}
-    #     return render(request, 'mas_employee_list.html', context)
 
 class S0102View(CreateView):
     """S0102View

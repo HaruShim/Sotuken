@@ -14,6 +14,7 @@ from .forms import S0302Form,S0304Form,S0305Form
 from django.shortcuts import render
 from django.db.models import Q
 from .models import ItemInfo,ItemSpecification
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class S0301View(ListView):
     """S0301View
@@ -24,10 +25,23 @@ class S0301View(ListView):
         name (): 
 
     """
-    template_name = "mas_item_list.html"
-    context_object_name = 'ItemList'
-    model = ItemInfo
-    paginate_by = 12
+    # context_object_name = 'ItemList'
+    # model = ItemInfo
+    # paginate_by = 12
+    def mylist(request):
+        template_name = "mas_item_list.html"
+        # template_name = 'earning_list.html'
+        iteminfo = ItemInfo.objects.order_by('id')
+        paginator = Paginator(iteminfo, 12)
+        page = request.GET.get('page', 1)
+        try:
+            iteminfo = paginator.page(page)
+        except PageNotAnInteger:
+            iteminfo = paginator.page(1)
+        except EmptyPage:
+            iteminfo = paginator.page(1)
+        context = {'iteminfo': iteminfo,}
+        return render(request, template_name, context)
 
 class S0302View(CreateView):
     """S0302View
@@ -86,11 +100,11 @@ class S0303View(DetailView):
         # get_model_num = 
         # success_url = reverse_lazy('itemmas:S03-01')
         object = model.objects.filter(id = pk).first()
-        tamesi = model.objects.values_list('model_number').get(id=pk)[0]
+        tamesi = model.objects.values_list('model_number','category').get(id=pk)
         try:
-            object_detail = model2.objects.get(model_number = tamesi)
+            object_detail = model2.objects.get(model_number = tamesi,category = tamesi[1])
         except model2.DoesNotExist:
-            object_detail = None
+            object_detail = model2.objects.get(id = '0')
         # object_detail = model2.objects.get(model_number = tamesi.model_number)
         itemInfo = ItemInfo.objects.all()
         #itemInfo = ItemInfo.objects.order_by('id')

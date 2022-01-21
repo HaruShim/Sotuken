@@ -35,10 +35,8 @@ class S1101View(ListView):
             earninginfo = paginator.page(1)
         except EmptyPage:
             earninginfo = paginator.page(1)
-        # gross_profit_tamesi = EarningInfo.objects.values_list("gross_profit_margin", flat=True)
         context = {'earninginfo': earninginfo,}
         return render(request, template_name, context)
-    # 一覧表示する関数
 
 
 class S1102View(CreateView,ListView):

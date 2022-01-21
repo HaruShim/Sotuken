@@ -18,7 +18,7 @@
 
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">商品管理</h1>
+        <h1 class="mt-4"><a class="backlist" href="{% url 'itemmas:S03-01' %}">商品管理</a></h1>
 
         <div class="row">
             <div class="card mb-4">
@@ -29,8 +29,8 @@
                 </div>
 
                 <div class="itemmas-table item-table">
-                    
-                    <h2>{{ object.model_number }}</h2>
+                    {# 型番の見出し表示はいらないかも？ #}
+                    <!-- <h2>{ object.model_number }}</h2> -->
                         <table>
                             <thead class="tablecolumn">
                                 <tr>
@@ -38,6 +38,8 @@
                                     <td>{{ object.id }}</td>
                                     <th>型番</th>
                                     <td>{{ object.model_number }}</td>
+                                    <th>モニタサイズ</th>
+                                    <td>{{object_detail.monitor_size}}</td>
                                 </tr>
                                 <tr>
                                     <th>カテゴリ</th>
@@ -69,8 +71,6 @@
                         <table>
                             <thead class="tablecolumn">
                                 <tr>
-                                    <th>モニタサイズ</th>
-                                    <td>{{object_detail.monitor_size}}</td>
                                     <th>OS</th>
                                     <td>{{object_detail.os}}</td>
                                 </tr>
@@ -93,16 +93,14 @@
                                     <td>{{object_detail.camera}}</td>
                                 </tr>
                                 <tr>
-                                    <th>光学ドライブ</th>
-                                    <td>{{object_detail.optical_drive}}</td>
-                                    <th>Wi-Fi</th>
-                                    <td>{{object_detail.wifi}}</td>
+                                    <th>光学ドライブ</th>{% if object_detail.optical_drive %}<td>有</td>{% else %}<td>無</td>{% endif %}
+                                    <th>Wi-Fi</th>{% if object_detail.wifi %}<td>有</td>{% else %}<td>無</td>{% endif %}
                                 </tr>
                                 <tr>
                                     <th>グラフィック</th>
                                     <td>{{object_detail.graphic}}</td>
-                                    <th>型番</th>
-                                    <td>{{object_detail.model_number}}</td>
+                                    <td>{{object_detail.category}}</td>
+                                    <!-- <td>{object_detail.}}</td> -->
                                 </tr>
                             </thead>
                         </table>

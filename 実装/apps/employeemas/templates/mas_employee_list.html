@@ -23,7 +23,7 @@
                     従業員情報一覧
                 </div>
                 <div class="card-body">
-                    <a class="btn btn-touroku" href="{% url 'employeemas:S01-02' %}">新規登録</a>
+                    <a class="btn btn-touroku" href="{% url 'account_signup' %}">新規登録</a>
                     <table class="listtable">
                         <thead class="tablecolumn">
                             <tr>
@@ -34,7 +34,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- EmployeeInfoモデルの一覧を表示 -->
+                            <!-- CustomUser -->
                             {% for item in customuser %}
                             <tr>
                                 <td style="text-align: center;">{{item.id}}</td>
@@ -45,31 +45,31 @@
                             {% endfor %}
                         </tbody>
                     </table>
-{% if employeeInfo.has_other_pages %}
+{% if customuser.has_other_pages %}
 <nav aria-label="Page navigation example">
 <ul class="pagination">
-{% if employeeInfo.has_previous %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ employeeInfo.previous_page_number }}"><<</a></li>
+{% if customuser.has_previous %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ customuser.previous_page_number }}"><<</a></li>
 {% else %}
 <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
 {% endif %}
-{% if employeeInfo.has_previous %}
-{% if employeeInfo.previous_page_number != 1 %}
+{% if customuser.has_previous %}
+{% if customuser.previous_page_number != 1 %}
 <li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
 <li>…</li>
 {% endif %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ employeeInfo.previous_page_number }}">{{ employeeInfo.previous_page_number }}</a></li>
+<li><a class="page-link text-primary d-inline-block" href="?page={{ customuser.previous_page_number }}">{{ customuser.previous_page_number }}</a></li>
 {% endif %}
-<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ employeeInfo.number }}</div></li>
-{% if employeeInfo.has_next %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ employeeInfo.next_page_number }}">{{ employeeInfo.next_page_number }}</a></li>
-{% if employeeInfo.next_page_number != employeeInfo.paginator.num_pages %}
+<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ customuser.number }}</div></li>
+{% if customuser.has_next %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ customuser.next_page_number }}">{{ customuser.next_page_number }}</a></li>
+{% if customuser.next_page_number != customuser.paginator.num_pages %}
 <li>…</li>
-<li><a class="page-link text-primary d-inline-block" href="?page={{ employeeInfo.paginator.num_pages }}">{{ employeeInfo.paginator.num_pages }}</a></li>
+<li><a class="page-link text-primary d-inline-block" href="?page={{ customuser.paginator.num_pages }}">{{ customuser.paginator.num_pages }}</a></li>
 {% endif %}
 {% endif %}
-{% if employeeInfo.has_next %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ employeeInfo.next_page_number }}">>></a></li>
+{% if customuser.has_next %}
+<li><a class="page-link text-primary d-inline-block" href="?page={{ customuser.next_page_number }}">>></a></li>
 {% else %}
 <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
 {% endif %}

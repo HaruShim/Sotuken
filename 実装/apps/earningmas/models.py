@@ -16,8 +16,6 @@ from django.db import models
 from storemas.models import StoreInfo
 # itemmasからItemInfoをインポート
 from itemmas.models import ItemInfo
-# employeemasからEmployeemasをインポート
-from employeemas.models import EmployeeInfo
 
 from accounts.models import CustomUser
 

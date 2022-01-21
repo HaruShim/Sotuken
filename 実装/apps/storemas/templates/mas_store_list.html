@@ -35,28 +35,56 @@
                                 <th>店舗名</th>
                                 <th>場所カテゴリ</th>
                                 <th>連絡先</th>
-                                <!-- <th>店長</th> -->
+                                <th>店長</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- StoreInfoモデルの一覧を表示 -->
-                            {% for item in StoreInfo %}
+                            {% for item in st_list %}
                             <tr>
-                                <td><a href="{% url 'storemas:S02-03' item.pk %}">{{ item.id }}</a></td><!--店舗ID-->
-                                <td>{{ item.store_name }}</td><!--店舗名-->
-                                <td>{{ item.get_place_category_display }}</td><!--場所カテゴリ-->
-                                <td>{{ item.tel }}</td><!--連絡先-->
-                                <!-- <td>{ item.employeeInfo_list_set.all }}</td>店長 -->
+                                <td><a href="{% url 'storemas:S02-03' item.list.pk %}">{{ item.list.id }}</a></td><!--店舗ID-->
+                                <td>{{ item.list.store_name }}</td><!--店舗名-->
+                                <td>{{ item.list.get_place_category_display }}</td><!--場所カテゴリ-->
+                                <td>{{ item.list.tel }}</td><!--連絡先-->
+                                <td>{{item.store_manager}}</td><!--店長-->
                             </tr>
                             {% endfor %}
-                            <!-- { store_manager }} -->
-                            <!-- <tr>
-                                <td>0200</td>
-                                <td>店舗B</td>
-                                <td>大原健二</td>
-                            </tr> -->
+                            
                         </tbody>
                     </table>
+                    {# ページネーション処理 #}
+                    {% if st_list.has_other_pages %}
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                {% if st_list.has_previous %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ st_list.previous_page_number }}"><<</a></li>
+                                {% else %}
+                                    <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
+                                {% endif %}
+                                {% if st_list.has_previous %}
+                                    {% if st_list.previous_page_number != 1 %}
+                                        <li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+                                        <li>…</li>
+                                    {% endif %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ st_list.previous_page_number }}">{{ st_list.previous_page_number }}</a></li>
+                                {% endif %}
+                                <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ st_list.number }}</div></li>
+                                {% if st_list.has_next %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ st_list.next_page_number }}">{{ st_list.next_page_number }}</a></li>
+                                    {% if st_list.next_page_number != st_list.paginator.num_pages %}
+                                        <li>…</li>
+                                        <li><a class="page-link text-primary d-inline-block" href="?page={{ st_list.paginator.num_pages }}">{{ st_list.paginator.num_pages }}</a></li>
+                                    {% endif %}
+                                {% endif %}
+                                {% if st_list.has_next %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ st_list.next_page_number }}">>></a></li>
+                                {% else %}
+                                    <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    {% endif %}
+                    {# ページネーション処理終了 #}
                     <!-- <table id="datatablesSimple">
                         <thead class="tablecolumn">
                             <div class="tablecolumn2">
@@ -80,7 +108,7 @@
                         
                         
                         <tbody>
-                            {% for i in object_list %}
+                            {% for i in storeinfo2 %}
                             <tr>
                                 <td><a href="# url 'table:table_detail' i.pk %}">{{ i.get_choice_display }}</a></td>
                                 <td>{{i.date | date:"Y/m/d"}}</td>

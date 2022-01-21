@@ -53,11 +53,14 @@
                             </tbody>
                         </thead>
                     </table>
-                    <form method="POST">
+                    <form method="POST" action="{% url 'storemas:tamesi' object.pk %}">
                         {% csrf_token %}
                         <div class="center-button">
                             <a class="btn btn-primary" href="{% url 'storemas:S02-04' object.pk %}">編集</a>
-                            <button class="btn btn-primary mt-5" type="submit">削除</button>
+                            <!-- <button class="btn btn-primary mt-5" type="submit">削除</button> -->
+                            <button class="btn btn-primary mt-5" name="button_1" type="submit">削除</button>
+                            <!-- <input type="submit" name="button_1" value="ボタン1">  -->
+                            <!-- <input type="submit" name="button_2" value="ボタン2">  -->
                         </div>
                     </form>
                         
@@ -105,4 +108,6 @@
     </div>
 </main>
 
+
 {% endblock %}
+
