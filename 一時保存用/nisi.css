@@ -178,27 +178,6 @@ thead.tablecolumn th{
     padding: 10px;
     font-size: 75%;
 }
-/* 商品詳細テーブル */
-.item-detailtable {
-    border-collapse: collapse;
-    table-layout: fixed;
-    margin-top: 20px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-}
-.item-detailtable th,td {
-    width: 20%;
-    font-size: 20px;
-}
-.item-detailtable.sub1 {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.item-detailtable.sub1 th {
-    width: 10%;
-}
 /* .dataright {
     text-align: right;
 } */
@@ -588,9 +567,6 @@ aside {
     float: left;
     padding: 20px 10px;
     text-align: center;
-}
-.item.img {
-    width: 50%;
 }
 .item.head {
     padding: 5px 5px;
