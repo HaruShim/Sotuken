@@ -27,7 +27,7 @@ class ItemInfo(models.Model):
         (2,'モニター'),
         (3,'メモリ'),
         (4,'HDD'),
-        (5,'SDD'),
+        (5,'SSD'),
         (6,'Office'),
         (7,'その他')
     )
@@ -42,7 +42,7 @@ class ItemInfo(models.Model):
     model_number = models.CharField(verbose_name='型番', max_length=60)
     category = models.SmallIntegerField(verbose_name='カテゴリ', choices=catchoice)
     manufacturer_name = models.CharField(verbose_name='メーカー名', max_length=30)
-    item_status = models.SmallIntegerField(verbose_name='商品状態', choices=ischoice)
+    item_status = models.SmallIntegerField(verbose_name='商品状態', choices=ischoice,default=0,blank=True,)
     purchase_price = models.IntegerField(verbose_name='仕入価格')
     item_image = models.ImageField(verbose_name='商品画像',blank=True,null=True)
     remarks = models.TextField(verbose_name='備考',blank=True,null=True)

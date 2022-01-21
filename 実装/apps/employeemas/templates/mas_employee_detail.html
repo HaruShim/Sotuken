@@ -24,15 +24,15 @@
                     <a class="btn btn-primary" href="{% url 'employeemas:S01-01' %}">戻る</a>
                     <table class="detailtable">
                         <thead class="tablecolumn">
-                        	<tbody>
-                            	<tr><th>従業員ID</th><td>{{ object.employee_id }}</td></tr>
-                            	<tr><th>従業員名</th><td>{{ object.name }}</td></tr>
-                            	<tr><th>従業員名(カナ)</th><td>{{ object.ruby_name }}</td></tr>
+                            <tbody>
+                                <tr><th>従業員ID</th><td style="width:100%">{{ object.username }}</td></tr>
+                                <tr><th>従業員名</th><td>{{ object.name }}</td></tr>
+                                <tr><th>従業員名(カナ)</th><td>{{ object.ruby_name }}</td></tr>
                                 <tr><th>電話番号</th><td>{{ object.tel_num }}</td></tr>
-                            	<tr><th>性別</th><td>{{ object.get_gender_display }}</td></tr>
-                            	<tr><th>生年月日</th><td>{{ object.birthday }}</td></tr>
-                            	<tr><th>所属店舗</th><td>{{ object.store_id }}</td></tr>
-                            	<tr><th>雇用形態</th><td>{{ object.get_employment_status_display }}</td></tr>
+                                <tr><th>性別</th><td>{{ object.get_gender_display }}</td></tr>
+                                <tr><th>生年月日</th><td>{{ object.birthday }}</td></tr>
+                                <tr><th>所属店舗</th><td>{{ object.store_id }}</td></tr>
+                                <tr><th>雇用形態</th><td>{{ object.get_employment_status_display }}</td></tr>
 							</tbody>
                         </thead>
                     </table>

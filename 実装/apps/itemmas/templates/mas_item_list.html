@@ -27,6 +27,7 @@
                 <div class="card-body">
                     <a class="btn btn-touroku" href="#">検索</a>
                     <a class="btn btn-touroku" href="{% url 'itemmas:S03-02' %}">新規登録</a>
+                    <button class="btn btn-primary" type="submit"><a href="{% url 'itemmas:S03-05' %}">詳細登録</a></button>
                     <div class="content">
                         <div class="item">
                             <table class="listtable">
@@ -38,6 +39,7 @@
                                         <th>カテゴリ</th>
                                         <th>在庫場所</th>
                                         <th>仕入価格</th>
+                                        <th>取扱</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -51,6 +53,7 @@
                                     <td>{{ item.get_category_display }}</td> <!--カテゴリ-->
                                     <td>{{ item.store_id.store_name }}</td> <!--在庫場所-->
                                     <td>{{ item.purchase_price }}¥</td> <!--仕入価格-->
+                                    <td>{{ item.get_item_status_display }}</td>
                                 </tr>   
                                 {% empty %}
                                 <p>空です</p>
@@ -89,41 +92,6 @@
                                     {% endif %}
                                 </tbody>
                             </table>
-
-                            <!-- ページネーション処理 -->
-{% if iteminfo.has_other_pages %}
-<nav aria-label="Page navigation example">
-<ul class="pagination">
-{% if iteminfo.has_previous %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.previous_page_number }}"><<</a></li>
-{% else %}
-<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
-{% endif %}
-{% if iteminfo.has_previous %}
-{% if iteminfo.previous_page_number != 1 %}
-<li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
-<li>…</li>
-{% endif %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.previous_page_number }}">{{ iteminfo.previous_page_number }}</a></li>
-{% endif %}
-<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ iteminfo.number }}</div></li>
-{% if iteminfo.has_next %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.next_page_number }}">{{ iteminfo.next_page_number }}</a></li>
-{% if iteminfo.next_page_number != iteminfo.paginator.num_pages %}
-<li>…</li>
-<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.paginator.num_pages }}">{{ iteminfo.paginator.num_pages }}</a></li>
-{% endif %}
-{% endif %}
-{% if iteminfo.has_next %}
-<li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.next_page_number }}">>></a></li>
-{% else %}
-<li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
-{% endif %}
-</ul>
-</nav>
-{% endif %}
-<!-- ページネーション処理終了 -->
-
                         </div>
                         <!-- <div class="item">
                             <aside>

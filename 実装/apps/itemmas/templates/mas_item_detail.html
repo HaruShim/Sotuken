@@ -18,7 +18,7 @@
 
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4"><a class="backlist" href="{% url 'itemmas:S03-01' %}">商品管理</a></h1>
+        <h1 class="mt-4">商品管理</h1>
 
         <div class="row">
             <div class="card mb-4">
@@ -109,7 +109,7 @@
                     <form method="POST">
                         {% csrf_token %}
                         <div class="center-button">
-                            <!-- <a class="btn btn-primary" href="#{ url 'itemmas:S03-04' object.pk %}">編集</a> -->
+                            <a class="btn btn-primary" href="{% url 'itemmas:S03-04' object.pk %}">編集</a>
                             <button class="btn btn-primary" type="submit">削除</button>
                         </div>
                     </form>
