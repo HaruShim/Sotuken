@@ -16,12 +16,8 @@
         <h1 class="mt-4"><a class="backlist" href="{% url 'employeemas:S01-01' %}">従業員管理</a></h1>
         <div class="row">
             <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    従業員情報詳細
-                </div>
                 <div class="card-body">
-                    <a class="btn btn-primary" href="{% url 'employeemas:S01-01' %}">戻る</a>
+                    <a class="btn btn-main" href="{% url 'employeemas:S01-01' %}">戻る</a>
                     <table class="detailtable">
                         <thead class="tablecolumn">
                             <tbody>
@@ -38,8 +34,8 @@
                     </table>
                     <form method="POST">
                         {% csrf_token %}
-                        <div class="center-button">
-                            <a class="btn btn-primary" href="{% url 'employeemas:S01-04' object.pk %}">編集</a>
+                        <div class="placement-center">
+                            <a class="btn btn-main" href="{% url 'employeemas:S01-04' object.pk %}">編集</a>
                             <!-- ↓削除した際、フラグをオフにしたいためいったんコメント -->
                             <!-- <button class="btn btn-primary" type="submit">削除</button> -->
                         </div>
