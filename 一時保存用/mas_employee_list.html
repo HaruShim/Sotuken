@@ -1,3 +1,10 @@
+<!-- S01-01 従業員一覧画面
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
 {% extends 'base.html' %}
 
 {% load static %}
@@ -8,90 +15,34 @@
 
 <main>
     <div class="container-fluid px-4">
+        <h1 class="mt-4">従業員一覧</h1>
         <div class="row">
             <div class="card mb-4">
-                <div class="card-header">
-                    <div class="contents">
-                        <div class="item head">
-                            <i class="fas fa-table me-1"></i>
-                        </div>
-                        <div class="item head">
-                            従業員情報一覧
-                        </div>
-                    </div>
-                </div>
                 <div class="card-body">
                     <div class="placement-right">
-                        <a class="btn btn-main" href="#">新規登録</a>
+                        <a class="btn btn-main" href="{% url 'employeemas:S01-02' %}">新規登録</a>
                     </div>
-                    <table class="listtable sub1 column-color">
+                    <table class="listtable">
                         <thead class="tablecolumn">
                             <tr>
-                                <th class="table-num">No.</th>
+                                <th style="width:50px;" >番号</th>
                                 <th>従業員ID</th>
                                 <th>従業員名</th>
                                 <th>店舗</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- EmployeeInfoモデルの一覧を表示 -->
+                            {% for item in EmployeeInfo %}
                             <tr>
-                                <td></td>
-                                <td>123456789</td>
-                                <td>大原太郎</td>
-                                <td>店舗C</td>
+                                <td style="text-align: center;"></td>
+                                <td><a href="{% url 'employeemas:S01-03' item.pk %}">{{ item.employee_id }}</a></td><!--従業員ID-->
+                                <td>{{ item.name }}</td><!--従業員名-->
+                                <td>{{ item.store_id.store_name }}</td><!--店舗-->
                             </tr>
-                            <tr>
-                                <td></td>
-                                <td>012345678</td>
-                                <td>田中太郎</td>
-                                <td>店舗A</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
-
-                    <!-- ページネーション処理 -->
-                    <!-- if is_paginated %} -->
-                        <!-- <ul class="pagination"> -->
-                            <!-- 前ページへのリンク -->
-                             <!-- if page_obj.has_previous %}
-                                <li class="page-item">
-                                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
-                                        <span aria-hidden="true">
-                                            &laquo;
-                                        </span>
-                                    </a>
-                                </li>
-                             endif %} -->
-
-                            <!-- ページ数表示 -->
-                             <!-- for page_num in page_obj.pagination.page_range %}
-                                 if page_obj.number == page_num %}
-                                    <li class="page-item active">
-                                        <a class="page-link" href="#">
-                                            {{ page_num }}
-                                        </a>
-                                    </li>
-                                 else %}
-                                    <li class="page-item">
-                                        <a class="page-link" href="?page={{ page_num }}">
-                                            {{ page_num }}
-                                        </a>
-                                    </li>
-                                 endif %}
-                             endfor %} -->
-
-                            <!-- 次ページへのリンク -->
-                             <!-- if page_obj.has_next %}
-                                <li class="page-item">
-                                    <a class="page-link" href="?page={{page_obj.next_page_number}}">
-                                        <sapn aria-hidden="true">
-                                            &raquo;
-                                        </sapn>
-                                    </a>
-                                </li>
-                             endif %}
-                        </ul>
-                     endif %} -->
                 </div>
             </div>
         </div>

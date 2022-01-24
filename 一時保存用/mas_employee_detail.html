@@ -16,58 +16,29 @@
         <h1 class="mt-4">従業員管理</h1>
         <div class="row">
             <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    従業員情報詳細
-                </div>
                 <div class="card-body">
-                    <table class="employee-table">
+                    <a class="btn btn-main" href="{% url 'employeemas:S01-01' %}">戻る</a>
+                    <table class="detailtable">
                         <thead class="tablecolumn">
-                            <tr>
-                                <th>従業員ID</th>
-                                <td>38000513</td>
-                            </tr>
-                            <tr>
-                                <th>従業員名</th>
-                                <td>田中太郎</td>
-                            </tr>
-                            <tr>
-                                <th>従業員名(カナ)</th>
-                                <td>タナカタロウ</td>
-                            </tr>
-                            <tr>
-                                <th>電話番号</th>
-                                <td>000-0000-0000</td>
-                            </tr>
-                            <tr>
-                                <th>性別</th>
-                                <td>
-                                    <label>男性</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>生年月日</th>
-                                <td>2000/08/09</td>
-                            </tr>
-                            <tr>
-                                <th>所属店舗</th>
-                                <td>
-                                    店舗A
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>雇用形態</th>
-                                <td>
-                                    非正規社員
-                                </td>
-                            </tr>
+                        	<tbody>
+                            	<tr><th>従業員ID</th><td>{{ object.employee_id }}</td></tr>
+                            	<tr><th>従業員名</th><td>{{ object.name }}</td></tr>
+                            	<tr><th>従業員名(カナ)</th><td>{{ object.ruby_name }}</td></tr>
+                                <tr><th>電話番号</th><td>{{ object.tel_num }}</td></tr>
+                            	<tr><th>性別</th><td>{{ object.get_gender_display }}</td></tr>
+                            	<tr><th>生年月日</th><td>{{ object.birthday }}</td></tr>
+                            	<tr><th>所属店舗</th><td>{{ object.store_id }}</td></tr>
+                            	<tr><th>雇用形態</th><td>{{ object.get_employment_status_display }}</td></tr>
+							</tbody>
                         </thead>
                     </table>
-                    <div class="center-button">
-                        <a class="btn btn-primary" href="{% url 'employeemas:S01-01'%}">戻る</a>
-                        <a class="btn btn-primary" href="#">編集</a>
-                        <a class="btn btn-primary" href="#">削除</a>
-                    </div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="placement-center">
+                            <a class="btn btn-main" href="{% url 'employeemas:S01-04' object.pk %}">編集</a>
+                            <button class="btn btn-main" type="submit">削除</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
