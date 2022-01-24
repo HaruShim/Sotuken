@@ -53,6 +53,7 @@ class S0601View(ListView):
         else:
             object_list = Bottleneck.objects.all()
         return object_list
+        return render(request, 'mas_bottleneck_list.html', context)
 
 class S0602View(CreateView):
     """S0602View

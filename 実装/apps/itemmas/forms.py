@@ -22,20 +22,24 @@ class S0302Form(ModelForm):
         for field in self.fields.values():
             # self.field["name"].required = True  #必須項目のフォームに変更する
             # self.fields["category"].label = "URL"  #ユーザ視点でフォームの入力名が変わる。
+            # self.fields["id"].widget.attrs["type"] = "hidden"
             self.fields["category"].widget.attrs["placeholder"] = "コメントを書"
             self.fields["item_image"].widget.attrs["onChange"] = "imgPreView(event)"
 
 class S0304Form(ModelForm):
     class Meta:
         model = ItemInfo
-        fields = ('id','model_number', 'category', 'manufacturer_name','purchase_price','item_image','remarks','store_id' )
+        fields = ('model_number', 'category', 'manufacturer_name','purchase_price','item_image','remarks','store_id' )
 
-        widgets = {
-                'id': forms.TextInput(attrs={'placeholder': "商品コード",'id':'item-code'}),
-                # 'item_image':
-                # 'text': forms.Textarea(attrs={'class': 'editable'})
-                # cssクラスの追加(titleにtextinputclass, textにeditableクラスが追加されるようになる)
-            }
+        # widgets = {
+    #             'id': forms.TextInput(attrs={'placeholder': "商品コード",'id':'item-code'}),
+    #             # 'item_image':
+    #             # 'text': forms.Textarea(attrs={'class': 'editable'})
+    #             # cssクラスの追加(titleにtextinputclass, textにeditableクラスが追加されるようになる)
+    #         }
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.fields['id'].widget = forms.HiddenInput()
 
 
     # class Meta():

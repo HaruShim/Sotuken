@@ -36,12 +36,14 @@
 							</tbody>
                         </thead>
                     </table>
-                    <form method="POST">
+                    <form method="POST" action="{% url 'employeemas:tamesi' object.pk %}">
                         {% csrf_token %}
                         <div class="center-button">
                             <a class="btn btn-primary" href="{% url 'employeemas:S01-04' object.pk %}">編集</a>
                             <!-- ↓削除した際、フラグをオフにしたいためいったんコメント -->
                             <!-- <button class="btn btn-primary" type="submit">削除</button> -->
+                            {# 01/21 削除した際フラグを無効にする #}
+                            <button class="btn btn-primary mt-5" name="button_1" type="submit">削除</button>
                         </div>
                     </form>
                 </div>
