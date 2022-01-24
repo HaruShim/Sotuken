@@ -23,7 +23,7 @@ class S0902Form(ModelForm):
 class S0904Form(ModelForm):
     class Meta:
         model = Reserve
-        fields = ('item_code', 'store_id', 'reserver_name', 'reserver_tel','reserve_at')
+        fields = ('store_id', 'reserver_name', 'reserver_tel','reserve_at')
 
         widgets = {
                 # 'id': forms.TextInput(attrs={'placeholder': "商品コード",'id':'item-code'}),

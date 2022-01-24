@@ -11,6 +11,12 @@ from django.views.generic import TemplateView,ListView,DetailView,DeleteView,Upd
 from employeemas.models import EmployeeInfo
 # from .forms import S0102Form
 from django.urls import reverse_lazy
+from accounts.models import CustomUser
+# 01/24
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.shortcuts import redirect,render
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 class S1201View(ListView):
     """S1201View
@@ -22,8 +28,18 @@ class S1201View(ListView):
 
     """
     template_name = "employee_list.html"
-    model = EmployeeInfo
-    paginate_by = 12
+    def mylist(request):
+        CustomUsers = CustomUser.objects.filter(is_active=True).order_by('id')
+        paginator = Paginator(CustomUsers, 3)
+        page = request.GET.get('page', 1)
+        try:
+            customuser = paginator.page(page)
+        except PageNotAnInteger:
+            customuser = paginator.page(1)
+        except EmptyPage:
+            customuser = paginator.page(1)
+        context = {'customuser': customuser,}
+        return render(request, 'employee_list.html', context)
 
 class S1202View(DetailView):
     """S1202View

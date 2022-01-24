@@ -21,19 +21,22 @@
 </head>-->
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">商品管理</h1>
+        <!-- <h1 class="mt-4">商品管理</h1> -->
         <div class="row">
-            <div class="card mb-4">
-                <div class="card-header">
+            
+                <!-- <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     GPUベンチマーク一覧
-                </div>
+                </div> -->
                 <div class="card-body">
-                    <a class="btn btn-primary" href="{% url 'benchmas:S05-02CPU' %}">新規登録</a>
+                    <h2>GPUベンチマーク一覧</h2>
+                    <a class="btn btn-primary" href="{% url 'benchmas:S05-02GPU' %}">新規登録</a>
                     <a class="btn btn-primary " href="{% url 'benchmas:S05-01CPU' %}">CPU</a>
-                    <h2>GPU</h2>
                     <div class="benchmark-table">
-                        <table class="listtable sub1">
+                        {# ↓新満が使用していたもの #}
+                        <!-- <table class="listtable sub1"> -->
+                        {# 西村さんが使用していたもの #}
+                        <table id="example" class="display">
                             <thead class="tablecolumn">
                                 <tr>
                                     <th>GPU名称</th>
@@ -46,7 +49,7 @@
                             </thead>
                             <tbody>
                                 <!-- CpuBenchモデルの一覧を表示 -->
-                                {% for item in gpubench_list %}
+                                {% for item in object_list %}
                                 <tr>
                                     <td><a href="{% url 'benchmas:S05-03GPU' item.pk %}">{{ item.gpu_name }}</a></td> <!--GPU名称-->
                                     <td>{{ item.marktimespygraphics }}</td> <!--Mark Time Spy Graphics-->
@@ -61,7 +64,7 @@
                                 {% endfor %}
                             </tbody>
                         </table>
-<!-- ページネーション処理 -->
+                    {# ページネーション処理 #}
                     {% if object_list.has_other_pages %}
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
@@ -93,11 +96,10 @@
                             </ul>
                         </nav>
                     {% endif %}
-                    <!-- ページネーション処理終了 -->
+                    {# ページネーション処理終了 #}
 
                 </div>
                 </div>
-            </div>
         </div>
     </div>
 </main>

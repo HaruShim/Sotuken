@@ -125,7 +125,7 @@ class S0304View(UpdateView):
     """
     model = ItemInfo
     template_name = "mas_item_edit.html"
-    form_class = S0302Form
+    form_class = S0304Form
     
     def get_success_url(self):
         return reverse_lazy('itemmas:S03-03',kwargs={'pk':self.kwargs['pk']})

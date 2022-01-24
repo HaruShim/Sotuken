@@ -15,6 +15,10 @@ from .forms import S0102Form,S0104Form
 from django.urls import reverse_lazy
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+# 01/21
+from django.shortcuts import redirect,render
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 class S0101View(ListView):
     """S0101View
@@ -25,10 +29,10 @@ class S0101View(ListView):
         name (): 
 
     """
-    CustomUser
+    # @login_required
     def mylist(request):
-        CustomUsers = CustomUser.objects.order_by('id')
-        paginator = Paginator(CustomUsers, 10)
+        CustomUsers = CustomUser.objects.filter(is_active=True).order_by('id')
+        paginator = Paginator(CustomUsers, 3)
         page = request.GET.get('page', 1)
         try:
             customuser = paginator.page(page)
@@ -39,7 +43,7 @@ class S0101View(ListView):
         context = {'customuser': customuser,}
         return render(request, 'mas_employee_list.html', context)
 
-class S0102View(CreateView):
+class S0102View(LoginRequiredMixin,CreateView,):
     """S0102View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -57,7 +61,7 @@ class S0102View(CreateView):
         item.save()
         return super().form_valid(form)
 
-class S0103View(DetailView,DeleteView):
+class S0103View(DetailView):
     """S0103View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -70,8 +74,15 @@ class S0103View(DetailView,DeleteView):
     template_name = "mas_employee_detail.html"
     success_url = reverse_lazy('employeemas:S01-01')
 
-    def delete(self,request,*args,**kwargs):
-        return super().delete(request,*args,**kwargs)
+    # 削除(フラグをオフに) 01/20
+    def invalid(request,pk):
+        if request.method == 'POST':
+            if 'button_1' in request.POST:
+                # ボタン1がクリックされた場合の処理
+                record = CustomUser.objects.get(id = pk)
+                record.is_active = False
+                record.save()
+                return redirect('employeemas:S01-01')
 
 
 

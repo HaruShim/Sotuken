@@ -13,7 +13,9 @@ from . import views
 
 app_name = 'estimate'
 urlpatterns = [
+    # path('',views.ItemsJsonView.as_view(), name='ItemsJson'),
     path('S10-01/',views.S1001View.as_view(),name = "S10-01"), #見積
     path('S10-02/',views.S1002View.as_view(),name = "S10-02"), #客用見積
+    path('ajax/',views.ajax_post_add,name="ajax_post_add"),
 ]
 
