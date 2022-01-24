@@ -26,7 +26,7 @@ class CustomUser(AbstractUser):
 
     username = models.CharField('従業員番号',validators=[alphanumeric],max_length=13,unique=True,null=True,blank=True)
     employment_status = models.SmallIntegerField(verbose_name='雇用形態',choices=estachoice,null=True,blank=True)
-    name = models.CharField(verbose_name='氏名',max_length=30)
+    name = models.CharField(verbose_name='氏名',max_length=30,null=True,blank=True)
     ruby_name = models.CharField(verbose_name='氏名(カナ)', max_length=30,null=True,blank=True)
     tel_num = models.CharField(verbose_name='電話番号', max_length=13,null=True,blank=True)
     gender = models.SmallIntegerField(verbose_name='性別',choices=genderchoice,null=True,blank=True)

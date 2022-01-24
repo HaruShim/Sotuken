@@ -13,7 +13,6 @@ from .forms import S0202Form
 from django.urls import reverse_lazy
 from accounts.models import CustomUser
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
 # 01/20
 from django.shortcuts import redirect,render
 

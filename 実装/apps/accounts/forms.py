@@ -47,22 +47,12 @@ class MySignupForm(SignupForm):
         self.fields['password1'].widget.attrs['placeholder'] = '任意の文字'
 
 class MyLoginForm(LoginForm):
-    username = forms.CharField(
-        max_length=30,
-        # required=False,
-        label='従業員番号'
-    )
-    class Meta:
-        model = CustomUser
-        fields = ('username','password')
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        #classにbootstrapのform-controlを指定したい場合
-        self.fields['username'].widget.attrs['class'] = 'form-control'
+        #classにbootstrapのform-controlを指定
+        self.fields['login'].widget.attrs['class'] = 'form-control'
         self.fields['password'].widget.attrs['class'] = 'form-control'
-        # #placeholderを設定したい場合
-        self.fields['username'].widget.attrs['placeholder'] = 'name@example.com'
-        self.fields['password'].widget.attrs['placeholder'] = 'Password'
-        # #labelを設定したい場合
-        self.fields['username'].widget.attrs['id'] = "inputEmail"
-        self.fields['password'].widget.attrs['id'] = 'inputPassword'
+        #idを設定
+        self.fields['login'].widget.attrs['id'] = "inputUsername"
+        self.fields['password'].widget.attrs['id'] = "inputPassword"
+
