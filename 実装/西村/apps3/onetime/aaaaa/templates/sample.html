@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for item in articles %}
+    <p>{{ item.name }}</p>
+    <p>{{ item.get_balance_display }}</p>
+    <p>{{ item.get_wqhd_display }}</p>
+    <p>{{ item.get_four_k_display }}</p>
+
+    {% empty %}
+    <p>データが表示されません</p>
+    {% endfor %}
+
+    <p>アルファベットの最初の三文字は「{{ aiueo }}」です。</p>
+
+    contextの中身は{{ wara }}
+
+    {{ text }}
+</body>
+</html>
