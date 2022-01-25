@@ -125,13 +125,14 @@ def ajax_post_search(request):
     # 検索キーワードがあればそれで絞り込み、なければ全ての記事
     # JSONシリアライズするには、Querysetをリストにする必要あり
     if keyword:
-        title_list = [post.title for post in Post.objects.filter(title__icontains=keyword)]  # タイトルにキーワードを含む。大文字小文字の区別なし
+        title_list = [post.title for post in ItemInfo.objects.filter(id__icontains=keyword)]  # タイトルにキーワードを含む。大文字小文字の区別なし
     else:
-        title_list = [post.title for post in Post.objects.all()]
+        title_list = [post.title for post in ItemInfo.objects.all()]
 
     d = {
         'title_list': title_list,
     }
+    print(title_list)
     return JsonResponse(d)
 
 class S1002View(TemplateView):
@@ -143,4 +144,7 @@ class S1002View(TemplateView):
         name (): 
 
     """
-    template_name = "customer_estimate.html"
+    model = ItemInfo
+    template_name = "ajax2.html"
+    # form_class = S1001Form
+    success_url = reverse_lazy('estimate:S10-02')

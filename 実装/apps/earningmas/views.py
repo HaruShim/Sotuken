@@ -7,7 +7,7 @@ Todo:
 """
 
 from django.db import models
-from django.views.generic import TemplateView,ListView
+from django.views.generic import TemplateView,ListView,DetailView,CreateView,DeleteView,UpdateView
 from .models import EarningInfo
 
 class S0401View(ListView):

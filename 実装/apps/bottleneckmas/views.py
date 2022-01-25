@@ -25,35 +25,42 @@ class S0601View(ListView):
         name (): 
 
     """
-    template_name = "mas_bottleneck_list.html"
-    paginate_by = 10
-    # page_kwarg = 'p'
-    # context_object_name = 'bottleneck'
-    # model = Bottleneck
-    # paginate_by = 3
-
-    # def mylist(request):
-    #     Bottlenecks = Bottleneck.objects.order_by('id')
-    #     paginator = Paginator(Bottlenecks, 12)
-    #     page = request.GET.get('page', 1)
-    #     try:
-    #         bottleneck = paginator.page(page)
-    #     except PageNotAnInteger:
-    #         bottleneck = paginator.page(1)
-    #     except EmptyPage:
-    #         bottleneck = paginator.page(1)
-    #     context = {'bottleneck': bottleneck}
-    #     return render(request, 'mas_bottleneck_list.html', context)
-
-    def get_queryset(self):
-        q_word = self.request.GET.get('query')
+    def mylist(request):
+        # レンダリングするテンプレートのディレクトリを指定
+        template_name = "mas_bottleneck_list.html"
+        # name="query"から値を取得してq_wordに代入
+        q_word = request.GET.get('query') 
+        # print(request.GET)
+        # print(q_word)
+        # q_wordが値を取得している場合
         if q_word:
+            # object_listにBottleneckモデルからq_wordの検索結果
+            # id降順でクエリセットを代入
             object_list = Bottleneck.objects.filter(
-                Q(cpu_name__icontains=q_word) | Q(gpu_name__icontains=q_word))
+                Q(cpu_name__icontains=q_word) | Q(gpu_name__icontains=q_word)).order_by('id')
+            paginator = Paginator(object_list, 12)
+            # page = request.GET.get('page', 1)
+            try:
+                object_list = paginator.page(page)
+            except PageNotAnInteger:
+                object_list = paginator.page(1)
+            except EmptyPage:
+                object_list = paginator.page(1)
+        # q_wordが未取得の場合
         else:
-            object_list = Bottleneck.objects.all()
-        return object_list
-        return render(request, 'mas_bottleneck_list.html', context)
+            # object_listにBottleneckモデルから全件ID降順でクエリセットを代入
+            object_list = Bottleneck.objects.all().order_by('id')
+            paginator = Paginator(object_list, 12)
+            page = request.GET.get('page', 1)
+            try:
+                object_list = paginator.page(page)
+            except PageNotAnInteger:
+                object_list = paginator.page(1)
+            except EmptyPage:
+                object_list = paginator.page(1)
+        context = {'object_list': object_list,}
+        # リクエスト元にtemplate_nameや、辞書型の変数を返す
+        return render(request,template_name,context)
 
 class S0602View(CreateView):
     """S0602View

@@ -77,7 +77,7 @@
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
                                 {% if object_list.has_previous %}
-                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.previous_page_number }}"><<</a></li>
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.previous_page_number }}&?query={{request.GET.query}}"><<</a></li>
                                 {% else %}
                                     <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
                                 {% endif %}

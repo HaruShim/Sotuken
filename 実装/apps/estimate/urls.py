@@ -17,5 +17,6 @@ urlpatterns = [
     path('S10-01/',views.S1001View.as_view(),name = "S10-01"), #見積
     path('S10-02/',views.S1002View.as_view(),name = "S10-02"), #客用見積
     path('ajax/',views.ajax_post_add,name="ajax_post_add"),
+    path('ajax2/',views.ajax_post_search,name="ajax_post_search"),
 ]
 
