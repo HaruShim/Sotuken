@@ -29,7 +29,8 @@ class S0601View(ListView):
         # レンダリングするテンプレートのディレクトリを指定
         template_name = "mas_bottleneck_list.html"
         # name="query"から値を取得してq_wordに代入
-        q_word = request.GET.get('query') 
+        q_word = request.GET.get('query')
+        print(q_word) 
         # q_wordが値を取得している場合
         if q_word:
             # object_listにBottleneckモデルからq_wordの検索結果
