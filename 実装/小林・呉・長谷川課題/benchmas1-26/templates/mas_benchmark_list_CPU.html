@@ -1,0 +1,147 @@
+<!-- S-05-01 ベンチマーク一覧
+
+    ToDo
+        画面の制作お願いします
+        長谷川　製作中
+        *01/23 新満 ⇒ 西村 40,42 タグの確認  
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}SIMS | CPUベンチマーク一覧{% endblock %}
+
+{% block main_contents %}
+<!--<head>
+    <meta charset="UTF-8">
+    <title>DataTables example</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'js/datatables/datatables.min.css' %}" />
+    <script type="text/javascript" language="javascript"
+        src="{% static 'js/datatables/jquery-3.6.0.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'js/datatables/datatables.min.js' %}"></script>
+</head>-->
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">商品管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    CPUベンチマーク一覧
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-primary" href="{% url 'benchmas:S05-02CPU' %}">新規登録</a>
+                    <a class="btn btn-primary" href="{% url 'benchmas:S05-01GPU' %}">GPU</a>
+                    <h2>CPU</h2>
+                    <div class="benchmark-table">
+                        <form action="" method="get">
+                            <input name="query" value="{{ request.GET.query }}" type="text">
+                            <button type="submit">検索する</button>
+                        </form>
+                        
+                        {# ↓新満が使用していたもの #}
+                        <table class="listtable sub1">
+                        {# 西村さんが使用していたもの #}
+                        <!-- <table id="example" class="display"> -->
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <th>CPU名称</th>
+                                    <th>PassMark</th>
+                                    <th>コア</th>
+                                    <th>スレッド</th>
+                                    <th>TDP</th>
+                                    <th>定格クロック</th>
+                                    <th>最大クロック</th>
+                                    <th>定価</th>
+                                    <th>コスパ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- CpuBenchモデルの一覧を表示 -->
+                                {% for item in object_list %}
+                                <tr>
+                                    <td><a href="{% url 'benchmas:S05-03CPU' item.pk %}">{{ item.cpu_name }}</a></td><!--CPU名称-->
+                                    <td>{{ item.passmark }}</td><!--PassMark-->
+                                    <td>{{ item.core }}</td><!--コア-->
+                                    <td>{{ item.thread }}</td><!--スレッド-->
+                                    <td>{{ item.tdp }} W</td><!--TDP-->
+                                    <td>{{ item.rated_clock }} GHz</td><!--定格クロック-->
+                                    <td>{{ item.max_clock }} GHz</td><!--最大クロック-->
+                                    <td>{{ item.list_price }}¥</td><!--定価-->
+                                    <td>{{ item.cost_performance }}</tr><!--コスパ-->
+                                </tr>
+                                <!-- DBが空だった場合 -->
+                                {% empty %}
+                                空です
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    <!-- ページネーション処理 -->
+                    {% if object_list.has_other_pages %}
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                {% if object_list.has_previous %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.previous_page_number }}&query={{ request.GET.query }}"><<</a></li>
+                                {% else %}
+                                    <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
+                                {% endif %}
+
+
+
+                                {% if object_list.has_previous %}
+                                    {% if object_list.previous_page_number != 1 %}
+                                        <li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+                                        <li>…</li>
+                                    {% endif %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.previous_page_number }}&query={{ request.GET.query }}">{{ object_list.previous_page_number }}</a></li>
+                                {% endif %}
+
+
+                                <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ object_list.number }}</div></li>
+
+
+
+                                {% if object_list.has_next %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.next_page_number }}&query={{ request.GET.query }}">{{ object_list.next_page_number }}</a></li>
+                                    {% if object_list.next_page_number != object_list.paginator.num_pages %}
+                                        <li>…</li>
+                                        <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.paginator.num_pages }}">{{ object_list.paginator.num_pages }}</a></li>
+                                    {% endif %}
+                                {% endif %}
+
+
+
+                                {% if object_list.has_next %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.next_page_number }}&query={{ request.GET.query }}">>></a></li>
+                                {% else %}
+                                    <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    {% endif %}
+                    <!-- ページネーション処理終了 -->
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--<script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+            lengthChange: false,	// 1画面内の件数切替
+            searching: true,		// 検索窓
+            ordering: true,			// ソート機能
+            info: false,			// 件数の表示
+            paging: true			// ページング機能
+        });
+    });
+</script>-->
+
+</html>
+
+{% endblock %}

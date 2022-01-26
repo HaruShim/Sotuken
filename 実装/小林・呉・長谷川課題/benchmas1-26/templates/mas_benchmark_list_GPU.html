@@ -1,0 +1,128 @@
+<!-- S-05-01 ベンチマーク一覧
+
+    ToDo
+        画面の制作お願いします
+        *長谷川　製作中
+
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %}SIMS | GPUベンチマーク一覧{% endblock %}
+
+{% block main_contents %}
+<!--<head>
+	<meta charset="UTF-8">
+	<title>DataTables example</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'js/datatables/datatables.min.css' %}"/>
+	<script type="text/javascript" language="javascript" src="{% static 'js/datatables/jquery-3.6.0.min.js' %}"></script>
+	<script type="text/javascript" language="javascript" src="{% static 'js/datatables/datatables.min.js' %}"></script>
+</head>-->
+<main>
+    <div class="container-fluid px-4">
+        <!-- <h1 class="mt-4">商品管理</h1> -->
+        <div class="row">
+            
+                <!-- <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    GPUベンチマーク一覧
+                </div> -->
+                <div class="card-body">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        GPUベンチマーク一覧
+                    </div>
+                    <a class="btn btn-primary" href="{% url 'benchmas:S05-02GPU' %}">新規登録</a>
+                    <a class="btn btn-primary " href="{% url 'benchmas:S05-01CPU' %}">CPU</a>
+                    <h2>GPU</h2>
+                    <div class="benchmark-table">
+                        <form action="" method="get">
+                            <input name="query" value="{{ request.GET.query }}" type="text">
+                            <button type="submit">検索する</button>
+                        </form>
+                        {# ↓新満が使用していたもの #}
+                        <!-- <table class="listtable sub1"> -->
+                        {# 西村さんが使用していたもの #}
+                        <table id="example" class="display">
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <th>GPU名称</th>
+                                    <th>Mark Time Spy Graphics</th>
+                                    <th>TDP</th>
+                                    <th>コスパ</th>
+                                    <th>ワットパフォーマンス</th>
+                                    <th>定価</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- CpuBenchモデルの一覧を表示 -->
+                                {% for item in object_list %}
+                                <tr>
+                                    <td><a href="{% url 'benchmas:S05-03GPU' item.pk %}">{{ item.gpu_name }}</a></td> <!--GPU名称-->
+                                    <td>{{ item.marktimespygraphics }}</td> <!--Mark Time Spy Graphics-->
+                                    <td>{{ item.tdp }} W</td> <!--TDP-->
+                                    <td>{{ item.cost_performance }}</td> <!--コスパ-->
+                                    <td>{{ item.wattage_performance }}</td> <!--ワットパフォーマンス-->
+                                    <td>{{ item.list_price }}¥</td> <!--定価-->
+                                </tr>
+                                <!-- DBが空だった場合 -->
+                                {% empty %}
+                                空です
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {# ページネーション処理 #}
+                    {% if object_list.has_other_pages %}
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                {% if object_list.has_previous %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.previous_page_number }}&query={{ request.GET.query }}"><<</a></li>
+                                {% else %}
+                                    <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
+                                {% endif %}
+                                {% if object_list.has_previous %}
+                                    {% if object_list.previous_page_number != 1 %}
+                                        <li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+                                        <li>…</li>
+                                    {% endif %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.previous_page_number }}&query={{ request.GET.query }}">{{ object_list.previous_page_number }}</a></li>
+                                {% endif %}
+                                <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ object_list.number }}</div></li>
+                                {% if object_list.has_next %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.next_page_number }}&query={{ request.GET.query }}">{{ object_list.next_page_number }}</a></li>
+                                    {% if object_list.next_page_number != object_list.paginator.num_pages %}
+                                        <li>…</li>
+                                        <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.paginator.num_pages }}&query={{ request.GET.query }}">{{ object_list.paginator.num_pages }}</a></li>
+                                    {% endif %}
+                                {% endif %}
+                                {% if object_list.has_next %}
+                                    <li><a class="page-link text-primary d-inline-block" href="?page={{ object_list.next_page_number }}&query={{ request.GET.query }}">>></a></li>
+                                {% else %}
+                                    <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    {% endif %}
+                    {# ページネーション処理終了 #}
+
+                </div>
+                </div>
+        </div>
+    </div>
+</main>
+
+<!--<script>
+$(document).ready(function(){
+    $('#example').DataTable({
+		lengthChange: false,	// 1画面内の件数切替
+		searching: true,		// 検索窓
+		ordering: true,			// ソート機能
+		info: false,			// 件数の表示
+		paging: true			// ページング機能
+    });
+});
+</script>-->
+</html>
+
+{% endblock %}
