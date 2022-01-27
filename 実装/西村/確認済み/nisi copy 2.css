@@ -801,11 +801,11 @@ a {
     text-align: center;
     text-decoration: none;
     width: 20%;
-    height: 100px;
+    height: 90px;
     padding: 30px 30px 30px 0px;
     background-color: #ffffff;
-    border: 0px solid #ffc107;
-    background-color: #ffc107;
+    border: 0px solid #219F94;
+    background-color: #219F94;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
@@ -830,7 +830,7 @@ a {
 }
 .btn_09:hover {
     color: #ffffff;
-    background-color: #ffc107;
+    background-color: #e4ab00;
 }
 
 .btn_07 {
@@ -841,7 +841,7 @@ a {
     text-align: center;
     text-decoration: none;
     width: 40%;
-    height: 150px;
+    height: 90px;
     padding: 30px 30px 30px 0px;
     background-color: #ffffff;
     border: 0px solid #ffc107;
@@ -850,7 +850,12 @@ a {
     box-sizing: border-box;
     position: relative;
     transition-duration: 0.3s;
-    margin: 30px 10px;
+    margin: 10px;
+}
+.btn_07.sub1 {
+    background-color: #ffffff;
+    border: 0px solid #ffc107;
+    background-color: #3abe36;
 }
 .btn_07::before {
     content: "";
@@ -873,18 +878,22 @@ a {
     background-color: #ffc107;
 }
 .main-menu1 {
-    background-color: #0d6efd;
+    background-color: #C1DEAE;
     border-radius: 10px;
     margin-top: 10px;
     padding: 0px 10px;
+    /* width: 90%; */
 }
 .main-menu2 {
     background-color: #337ab7;
     border-radius: 10px;
     width: 500px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 0px 10px;
     text-align: left;
+}
+.main-menu2.sub1 {
+    background-color: #795548;
 }
 .main-menu3 {
     background-color: #7dd11d;
@@ -896,7 +905,6 @@ a {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    margin: 20px 0;
     padding-top: 10px;
 }
 
@@ -906,4 +914,5 @@ a {
     border-left: 4px solid #fff;
     font-size: 20px;
     color: #fff;
+    margin-bottom: 10px;
 }
