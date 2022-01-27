@@ -802,15 +802,16 @@ a {
     text-decoration: none;
     width: 20%;
     height: 90px;
-    padding: 30px 30px 30px 0px;
+    padding: 20px 30px 30px 30px;
     background-color: #ffffff;
     border: 0px solid #219F94;
-    background-color: #219F94;
+    background-color: #B2DFDB;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
     transition-duration: 0.3s;
     margin: 10px 10px;
+    font-weight: bold;
 }
 .btn_09::before {
     content: "";
@@ -823,14 +824,14 @@ a {
     background-size: contain;
     background-repeat: no-repeat;
 }
-.btn_09 span {
+/* .btn_09 span {
     font-size: 20px;
     font-weight: bold;
-    /* line-height: 1; */
-}
+    line-height: 1;
+} */
 .btn_09:hover {
     color: #ffffff;
-    background-color: #e4ab00;
+    background-color: #4DB6AC;
 }
 
 .btn_07 {
@@ -842,20 +843,22 @@ a {
     text-decoration: none;
     width: 40%;
     height: 90px;
-    padding: 30px 30px 30px 0px;
+    padding: 20px 30px 30px 30px;
     background-color: #ffffff;
-    border: 0px solid #ffc107;
-    background-color: #ffc107;
+    /* border: 0px solid #ffc107; */
+    background-color: #C8E6C9;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
     transition-duration: 0.3s;
     margin: 10px;
+    font-weight:bold;
+    
 }
 .btn_07.sub1 {
     background-color: #ffffff;
-    border: 0px solid #ffc107;
-    background-color: #3abe36;
+    /* border: 0px solid #ffc107; */
+    background-color: #DCEDC8;
 }
 .btn_07::before {
     content: "";
@@ -868,24 +871,31 @@ a {
     background-size: contain;
     background-repeat: no-repeat;
 }
-.btn_07 span {
+/* .btn_07 span {
     font-size: 20px;
     font-weight: bold;
-    /* line-height: 1; */
-}
+    line-height: 1;
+} */
 .btn_07:hover {
     color: #ffffff;
-    background-color: #ffc107;
+    background-color: #81C784;
 }
+.btn_07.sub1:hover {
+    color: #ffffff;
+    background-color: #AED581;
+}
+
 .main-menu1 {
-    background-color: #C1DEAE;
+    background-color: #009688;
     border-radius: 10px;
     margin-top: 10px;
     padding: 0px 10px;
     /* width: 90%; */
+    margin-right: 20px;
+    margin-left: 5px;
 }
 .main-menu2 {
-    background-color: #337ab7;
+    background-color: #4CAF50;
     border-radius: 10px;
     width: 500px;
     margin-bottom: 10px;
@@ -893,13 +903,13 @@ a {
     text-align: left;
 }
 .main-menu2.sub1 {
-    background-color: #795548;
+    background-color: #8BC34A;
 }
-.main-menu3 {
+/* .main-menu3 {
     background-color: #7dd11d;
     border-radius: 10px;
     width: 500px;
-}
+} */
 .main-menu {
     display: flex;
     flex-wrap: wrap;
@@ -915,4 +925,8 @@ a {
     font-size: 20px;
     color: #fff;
     margin-bottom: 10px;
+}
+
+.box-anchor {
+    text-decoration: none;
 }
