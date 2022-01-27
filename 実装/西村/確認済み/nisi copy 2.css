@@ -801,19 +801,19 @@ a {
     text-align: center;
     text-decoration: none;
     width: 20%;
-    height: 150px;
-    padding: 20px 20px 20px 75px;
+    height: 100px;
+    padding: 30px 30px 30px 0px;
     background-color: #ffffff;
-    border: 5px solid #FFC107;
-    background-color: #FFC107;
+    border: 0px solid #ffc107;
+    background-color: #ffc107;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
     transition-duration: 0.3s;
-    margin: 30px 10px;
+    margin: 10px 10px;
 }
 .btn_09::before {
-    content: '';
+    content: "";
     width: 60px;
     height: 60px;
     position: absolute;
@@ -828,12 +828,82 @@ a {
     font-weight: bold;
     /* line-height: 1; */
 }
-/* a.btn_09 span span {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 7px;
-} */
 .btn_09:hover {
     color: #ffffff;
-    background-color: #FFC107;
+    background-color: #ffc107;
+}
+
+.btn_07 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: #795548;
+    text-align: center;
+    text-decoration: none;
+    width: 40%;
+    height: 150px;
+    padding: 30px 30px 30px 0px;
+    background-color: #ffffff;
+    border: 0px solid #ffc107;
+    background-color: #ffc107;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    transition-duration: 0.3s;
+    margin: 30px 10px;
+}
+.btn_07::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.btn_07 span {
+    font-size: 20px;
+    font-weight: bold;
+    /* line-height: 1; */
+}
+.btn_07:hover {
+    color: #ffffff;
+    background-color: #ffc107;
+}
+.main-menu1 {
+    background-color: #0d6efd;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+.main-menu2 {
+    background-color: #337ab7;
+    border-radius: 10px;
+    width: 500px;
+    margin-bottom: 30px;
+    padding: 0px 10px;
+    text-align: left;
+}
+.main-menu3 {
+    background-color: #7dd11d;
+    border-radius: 10px;
+    width: 500px;
+}
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
+    padding-top: 10px;
+}
+
+/* ホーム見出し */
+.cap {
+    padding: 1rem 2rem;
+    border-left: 4px solid #fff;
+    font-size: 20px;
+    color: #fff;
 }
