@@ -6,7 +6,7 @@ from earningmas.models import EarningInfo
 class S1102Form(ModelForm):
     class Meta:
         model = EarningInfo
-        fields = ('selling_price','gross_profit_margin','item_code','store_id','employee_id' )
+        fields = ('selling_price','item_code','store_id','employee_id' )
 
         widgets = {
                 # 'id': forms.TextInput(attrs={'placeholder': "商品コード",'id':'item-code'}),
@@ -17,4 +17,4 @@ class S1102Form(ModelForm):
 class S1104Form(ModelForm):
     class Meta:
         model = EarningInfo
-        fields = ('selling_price','gross_profit_margin','store_id','employee_id' )
+        fields = ('selling_price','store_id','employee_id' )

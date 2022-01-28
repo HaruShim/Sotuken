@@ -40,9 +40,9 @@
                         </thead>
                         <tbody>
                             <!-- reserve_listモデルの一覧を表示 -->
-                            {% for item in reserve_list %}
+                            {% for item in reserve %}
                             <tr>
-                                <td>{{ item.id }}</td> <!--ID-->
+                                <td><a href="{% url 'reserve:S09-03' item.pk %}">{{ item.id }}</a></td> <!--ID-->
                                 <!-- <td style="text-align: center;"></td> -->
                                 <td>{{ item.item_code }}</td> <!--商品コード-->
                                 <td>{{ item.item_code.model_number }}</td> <!--型番-->

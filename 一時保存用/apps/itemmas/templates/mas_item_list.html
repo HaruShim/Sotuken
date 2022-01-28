@@ -27,6 +27,7 @@
                 <div class="card-body">
                     <a class="btn btn-touroku" href="#">検索</a>
                     <a class="btn btn-touroku" href="{% url 'itemmas:S03-02' %}">新規登録</a>
+                    <button class="btn btn-primary" type="submit"><a href="{% url 'itemmas:S03-05' %}">詳細登録</a></button>
                     <div class="content">
                         <div class="item">
                             <table class="listtable">
@@ -38,6 +39,7 @@
                                         <th>カテゴリ</th>
                                         <th>在庫場所</th>
                                         <th>仕入価格</th>
+                                        <th>取扱</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -51,6 +53,7 @@
                                     <td>{{ item.get_category_display }}</td> <!--カテゴリ-->
                                     <td>{{ item.store_id.store_name }}</td> <!--在庫場所-->
                                     <td>{{ item.purchase_price }}¥</td> <!--仕入価格-->
+                                    <td>{{ item.get_item_status_display }}</td>
                                 </tr>   
                                 {% empty %}
                                 <p>空です</p>

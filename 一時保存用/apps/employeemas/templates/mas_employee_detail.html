@@ -13,7 +13,7 @@
 
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">従業員管理</h1>
+        <h1 class="mt-4"><a class="backlist" href="{% url 'employeemas:S01-01' %}">従業員管理</a></h1>
         <div class="row">
             <div class="card mb-4">
                 <div class="card-header">
@@ -22,40 +22,18 @@
                 </div>
                 <div class="card-body">
                     <a class="btn btn-primary" href="{% url 'employeemas:S01-01' %}">戻る</a>
-                    <table class="employee-table">
+                    <table class="detailtable">
                         <thead class="tablecolumn">
-                            <tr>
-                                <th>従業員ID</th>
-                                <td>{{ object.employee_id }}</td>
-                            </tr>
-                            <tr>
-                                <th>従業員名</th>
-                                <td>{{ object.name }}</td>
-                            </tr>
-                            <tr>
-                                <th>従業員名(カナ)</th>
-                                <td>{{ object.ruby_name }}</td>                            
-                            </tr>
-                            <tr>
-                                <th>電話番号</th>
-                                <td>{{ object.tel_num }}</td>
-                            </tr>
-                            <tr>
-                                <th>性別</th>
-                                <td>{{ object.get_gender_display }}</td>
-                            </tr>
-                            <tr>
-                                <th>生年月日</th>
-                                <td>{{ object.birthday }}</td>
-                            </tr>
-                            <tr>
-                                <th>所属店舗</th>
-                                <td>{{ object.store_id }}</td>
-                            </tr>
-                            <tr>
-                                <th>雇用形態</th>
-                                <td>{{ object.get_employment_status_display }}</td>
-                            </tr>
+                            <tbody>
+                                <tr><th>従業員ID</th><td style="width:100%">{{ object.username }}</td></tr>
+                                <tr><th>従業員名</th><td>{{ object.name }}</td></tr>
+                                <tr><th>従業員名(カナ)</th><td>{{ object.ruby_name }}</td></tr>
+                                <tr><th>電話番号</th><td>{{ object.tel_num }}</td></tr>
+                                <tr><th>性別</th><td>{{ object.get_gender_display }}</td></tr>
+                                <tr><th>生年月日</th><td>{{ object.birthday }}</td></tr>
+                                <tr><th>所属店舗</th><td>{{ object.store_id }}</td></tr>
+                                <tr><th>雇用形態</th><td>{{ object.get_employment_status_display }}</td></tr>
+							</tbody>
                         </thead>
                     </table>
                     <form method="POST">
@@ -65,7 +43,6 @@
                             <button class="btn btn-primary" type="submit">削除</button>
                         </div>
                     </form>
-                    
                 </div>
             </div>
         </div>

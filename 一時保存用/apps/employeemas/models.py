@@ -12,6 +12,7 @@ Todo:
 from django.db import models
 #storemas から storeinfo をインポート
 from storemas.models import StoreInfo
+from django.urls import reverse
 
 
 class EmployeeInfo(models.Model):
@@ -48,3 +49,13 @@ class EmployeeInfo(models.Model):
 
     class Meta:
         verbose_name_plural = '従業員情報モデル'
+
+    def __str__(self):
+        return self.name
+    def get_absolute_url(self):
+        return reverse("employeemas:S01-05", kwargs={
+            'pk': self.pk,
+            'name': self.name,
+            'employee_id': self.employee_id,
+            'birthday': self.birthday,
+            })

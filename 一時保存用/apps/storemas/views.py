@@ -12,6 +12,7 @@ from .models import StoreInfo
 from .forms import S0202Form
 from django.urls import reverse_lazy
 from employeemas.models import EmployeeInfo
+from accounts.models import CustomUser
 
 class S0201View(ListView):
     """S0201View
@@ -24,6 +25,7 @@ class S0201View(ListView):
     """
     template_name = "mas_store_list.html"
     model = StoreInfo
+    model2 = CustomUser
     context_object_name = 'StoreInfo'
 
     # def get_queryset(self):
