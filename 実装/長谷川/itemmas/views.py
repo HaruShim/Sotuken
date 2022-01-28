@@ -5,7 +5,7 @@ Todo:
     * 
 
 """
-
+import json
 from django.db import models
 # from django.views.generic import ListView,TemplateView
 from django.views.generic import TemplateView,ListView,DetailView,CreateView,DeleteView,UpdateView
@@ -15,6 +15,9 @@ from django.shortcuts import redirect,render
 from django.db.models import Q
 from .models import ItemInfo,ItemSpecification
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+# 01/28
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 class S0301View(ListView):
     """S0301View
@@ -26,64 +29,83 @@ class S0301View(ListView):
 
     """
     # context_object_name = 'ItemList'
+    # model = ItemInfo
+	# def mylist(request):
+    #     form = S0301Form
+    #     template_name = "mas_item_list.html"
+    #     # template_name = 'earning_list.html'
+    #     iteminfo = ItemInfo.objects.order_by('id')
+    #     item_word= request.GET.get('q_item') #商品コードを受け取る
+    #     num_word= request.GET.get('q_num') #型番
+    #     category_word= request.GET.get('q_cat') #カテゴリ
+    #     store_word=request.GET.get('store_id') #在庫場所
+    #     lowpur_word=request.GET.get('q_lowpur') #仕入価格下限
+    #     uppur_word=request.GET.get('q_uppur') #仕入価格上限
+    #     status_word=request.GET.get('q_stat') #取扱ステータス
 
-    # template_name = "mas_item_list.html"
-    model = ItemInfo
+    #     # ind= 0
+
+    #     if item_word or num_word or category_word or store_word or lowpur_word or uppur_word or status_word: #入力があれば
+    #         if item_word:
+    #             iteminfo = ItemInfo.objects.filter(
+    #                 Q(id__icontains=item_word)) #商品コードでフィルタ(検索)
+    #         if num_word:
+    #             iteminfo = iteminfo.filter(
+    #                 Q(model_number__icontains=num_word)) #型番
+    #         if category_word:
+    #             iteminfo = iteminfo.filter(
+    #                 Q(category__icontains=category_word)) #カテゴリ
+    #         if store_word:
+    #             iteminfo = iteminfo.filter(
+    #                 Q(store_id__id__icontains=store_word)) #在庫場所
+    #             # ind= category_word
+    #         if lowpur_word:
+    #             iteminfo = iteminfo.filter(
+    #                 Q(purchase_price__gte=lowpur_word)) #仕入価格下限
+    #         if uppur_word:
+    #             iteminfo = iteminfo.filter(
+    #                 Q(purchase_price__lte=uppur_word)) #仕入価格上限
+    #         if status_word:
+    #             iteminfo = iteminfo.filter(
+    #                 Q(item_status__icontains=status_word)) #取扱ステータス
+    #     else:
+    #         iteminfo = ItemInfo.objects.all()
+
+    #     paginator = Paginator(iteminfo, 400)
+    #     page = request.GET.get('page', 1)
+    #     try:
+    #         iteminfo = paginator.page(page)
+    #     except PageNotAnInteger:
+    #         iteminfo = paginator.page(1)
+    #     except EmptyPage:
+    #         iteminfo = paginator.page(1)
+    #     context = {'iteminfo': iteminfo,'form':form}
+    #     return render(request, template_name, context)
     # paginate_by = 12
+    @login_required
     def mylist(request):
-        form = S0301Form
         template_name = "mas_item_list.html"
         # template_name = 'earning_list.html'
-        iteminfo = ItemInfo.objects.order_by('id')
-        item_word= request.GET.get('q_item') #商品コードを受け取る
-        num_word= request.GET.get('q_num') #型番
-        category_word= request.GET.get('q_cat') #カテゴリ
-        store_word=request.GET.get('store_id') #在庫場所
-        lowpur_word=request.GET.get('q_lowpur') #仕入価格下限
-        uppur_word=request.GET.get('q_uppur') #仕入価格上限
-        status_word=request.GET.get('q_stat') #取扱ステータス
-
-        # ind= 0
-
-        if item_word or num_word or category_word or store_word or lowpur_word or uppur_word or status_word: #入力があれば
-            if item_word:
-                iteminfo = ItemInfo.objects.filter(
-                    Q(id__icontains=item_word)) #商品コードでフィルタ(検索)
-            if num_word:
-                iteminfo = iteminfo.filter(
-                    Q(model_number__icontains=num_word)) #型番
-            if category_word:
-                iteminfo = iteminfo.filter(
-                    Q(category__icontains=category_word)) #カテゴリ
-            if store_word:
-                iteminfo = iteminfo.filter(
-                    Q(store_id__id__icontains=store_word)) #在庫場所
-                # ind= category_word
-            if lowpur_word:
-                iteminfo = iteminfo.filter(
-                    Q(purchase_price__gte=lowpur_word)) #仕入価格下限
-            if uppur_word:
-                iteminfo = iteminfo.filter(
-                    Q(purchase_price__lte=uppur_word)) #仕入価格上限
-            if status_word:
-                iteminfo = iteminfo.filter(
-                    Q(item_status__icontains=status_word)) #取扱ステータス
-        else:
-            iteminfo = ItemInfo.objects.all()
-
-        paginator = Paginator(iteminfo, 400)
+        object_list = ItemInfo.objects.order_by('id')
+        paginator = Paginator(object_list, 8)
         page = request.GET.get('page', 1)
+        js_list = {}
+        ob_list = []
         try:
-            iteminfo = paginator.page(page)
+            object_list = paginator.page(page)
         except PageNotAnInteger:
-            iteminfo = paginator.page(1)
+            object_list = paginator.page(1)
         except EmptyPage:
-            iteminfo = paginator.page(1)
-        context = {'iteminfo': iteminfo,'form':form}
+            object_list = paginator.page(1)
+        for data in object_list:
+            js_list['list'] = data
+            js_list['data'] = data.id
+            ob_list.append(js_list)
+        # object_list2 = {}
+        context = {'object_list': object_list,'ob_list':ob_list}
         return render(request, template_name, context)
 
-
-class S0302View(CreateView):
+class S0302View(LoginRequiredMixin,CreateView):
     """S0302View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -133,6 +155,7 @@ class S0303View(DetailView):
 
     # def form_valid(self,form):
     #     return super().form_valid(form)
+    @login_required
     def itemdetail(request,pk):
         model = ItemInfo
         model2 = ItemSpecification
@@ -153,8 +176,44 @@ class S0303View(DetailView):
         return render(request,template_name,context)
     # def delete(self,request,*args,**kwargs):
     #     return super().delete(request,*args,**kwargs)
+    # 有効・無効化(フラグの変更) 01/27
+    def invalid(request,pk):
+        if request.method == 'POST':
+            if 'button_1' in request.POST:
+                # ボタン1がクリックされた場合の処理
+                # 呼び出された情報のIDと一致する店舗のレコードを取得
+                record = ItemInfo.objects.get(id = pk)
+                # フラグがオンならオフ、オフならオンに
+                if record.item_status == 0 or record.item_status == 1 or record.item_status == 2 or record.item_status == 3:
+                    record.item_status = 4
+                elif record.item_status == 4:
+                    record.item_status = 0
+                # レコードを保存
+                record.save()
+                return redirect('itemmas:S03-01')
 
-class S0304View(UpdateView):
+    # DBからレコードを削除 01/27
+    def del_record(request,pk):
+        """ del_record
+
+        DBから選択されたレコードを削除する
+        Args:   request(WSGIRequest): HttpRequestオブジェクト
+                pk(str):主キー(商品コード)
+        Returns: redirect('itemmas:S03-01')
+        Note: 例外処理未定義
+        """
+        # request.methodがPOSTかつrequest.POSTにdel_buttonが含まれる場合
+        if request.method == 'POST':
+            if 'del_button' in request.POST:
+                # del_buttonがクリックされた場合の処理
+                # 呼び出された情報のIDと一致する商品のレコードを取得
+                delete_record = ItemInfo.objects.filter(id = pk)
+                # レコードを削除
+                delete_record.delete()
+                # 処理を実行し、下記のURLを参照して遷移する
+                return redirect('itemmas:S03-01')
+
+class S0304View(LoginRequiredMixin,UpdateView):
     """S0304View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -172,7 +231,7 @@ class S0304View(UpdateView):
     def form_valid(self,form):
         return super().form_valid(form)
 
-class S0305View(CreateView):
+class S0305View(LoginRequiredMixin,CreateView):
     """S0302View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
