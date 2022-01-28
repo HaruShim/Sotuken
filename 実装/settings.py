@@ -255,7 +255,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 SITE_ID = 1 #django-allauthがsitesフレームワークを使っているため
 
 LOGIN_REDIRECT_URL = 'home:home'
-ACCOUNT_LOGOUT_REDIRECT_URL = '/F00/login/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 ACCOUNT_LOGOUT_ON_GET = True
 
 
