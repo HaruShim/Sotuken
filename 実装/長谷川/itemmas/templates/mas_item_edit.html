@@ -1,0 +1,85 @@
+<!-- S03-04 商品情報編集
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+{% extends 'base.html' %}
+{% block title %}SIMS | 商品情報編集{% endblock %}
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'itemmas:S03-01' %}">商品管理 編集</a></h1>
+        <div class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'itemmas:S03-01' %}">一覧に戻る</a>
+            </div>
+            <div class="st-right">
+                <p>最終更新日：{{ object.updated_at }}</p>
+            </div>
+        </div>
+        <div class="itemmas-table item-table">
+            <form method="POST" enctype='multipart/form-data'>
+                {% csrf_token %}
+
+                <div class="itemmas-table item-table">
+                    {% if form.errors %}
+                    <div class="errorlist">
+                        {% for errors in form.errors.values %}
+                        {% for error in errors %}
+                        {{ error }}<br>
+                        {% endfor %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <table class="listtable sub2">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>商品コード</th>
+                                <td>{{object.pk}}</td>
+                            </tr>
+                            <tr>
+                                <th>カテゴリ</th>
+                                <td>{{form.category}}</td>
+                            </tr>
+                            <tr>
+                                <th>仕入価格</th>
+                                <td>{{form.purchase_price}}</td>
+                            </tr>
+                            <tr>
+                                <th>在庫場所</th>
+                                <td>{{form.store_id}}</td>
+                            </tr>
+                            <tr>
+                                <th>メーカー名</th>
+                                <td>{{form.manufacturer_name}}</td>
+                            </tr>
+                            <tr>
+                                <th>商品画像</th>
+                                <td>{{form.item_image}}</td>
+                            </tr>
+                            <tr>
+                                <th>型番</th>
+                                <td>{{form.model_number}}</td>
+                            </tr>
+                            <tr>
+                                <th>備考</th>
+                                <td>{{form.remarks}}</td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="placement-center">
+                        <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'itemmas:S03-01' %}">キャンセル</a>
+                        <button class="btn btn--orange btn--cubic btn--shadow" type="submit">登録</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,157 @@
+<!-- S03-01 商品情報一覧
+
+    ToDo
+        *画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+        
+-->
+{% extends 'base.html' %}
+{% block title %}SIMS | 商品情報一覧{% endblock %}
+{% load static %}
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">商品管理</h1>
+        <div class="card-body">
+            <div class="placement-right">
+                <a class="btn btn--orange btn--cubic btn--shadow" href="#">検索</a>
+                <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'itemmas:S03-02' %}">新規登録</a>
+                <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'itemmas:S03-05' %}">詳細登録</a>
+                <form action="" method="get">
+                    <!-- 商品コード -->
+                    <input name="q_item" id="item-box" placeholder="商品コード" value="{{ request.GET.q_item }}" type="text">
+                    <!-- 型番 -->
+                    <input name="q_num" id="num-box" placeholder="型番" value="{{ request.GET.q_num }}" type="text">
+                    <!-- カテゴリ -->
+                    <select name="q_cat" id="category-select">
+                        <option value="">------</option>
+                        <option value="0">ノートPC</option>
+                        <option value="1">デスクトップ</option>
+                        <option value="2">モニター</option>
+                        <option value="3">メモリ</option>
+                        <option value="4">HDD</option>
+                        <option value="5">SSD</option>
+                        <option value="6">Office</option>
+                        <option value="7">その他</option>
+                    </select>
+                    <!-- 販売場所 -->
+                    {{form.store_id}}
+                    <!-- 仕入価格　範囲指定 -->
+                    <input name="q_lowpur" id="lowpur-box" value="{{ request.GET.q_lowpur }}" type="text">～
+                    <input name="q_uppur" id="uppur-box" value="{{ request.GET.q_uppur }}" type="text">
+                    <!-- 取扱ステータス -->
+                    <select name="q_stat" id="status-select">
+                        <option value="0">販売中</option>
+                        <option value="1">販売済み</option>
+                        <option value="2">修理中</option>
+                        <option value="3">取置</option>
+                        <option value="" selected>------</option>
+                    </select>
+                    <!-- 検索ボタン -->
+                    <button type="button" id="clear-btn" class="btn btn-main">クリア</button>
+                    <button type="submit" id="search-btn" class="btn btn-main">検索する</button>
+                </form>
+            </div>
+            <table class="listtable column-color listthtd-2">
+                <thead class="tablecolumn">
+                    <tr>
+                        <!-- <th>id</th> -->
+                        <th class="dis-non-tdth">商品コード</th>
+                        <th class="id-tdth">ID</th>
+                        <th class="th-20part">商品コード</th>
+                        <th class="th-25part">型番</th>
+                        <th class="th-15part">カテゴリ</th>
+                        <th class="th-15part">在庫場所</th>
+                        <th class="th-15part">仕入価格</th>
+                        <th class="th-10part">取扱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ItemListモデルの一覧を表示 -->
+                    {% for item in object_list %}
+                    <tr tr-link="itemlist">
+                        <td class="dis-non-tdth">{{ item.id }}</td>
+                        <!--商品コード-->
+                        <td class="id-tdth"></td>
+                        <td>{{ item.id }}</td>
+                        <!--商品コード-->
+                        <td id="model-number-td">{{ item.model_number }}</td>
+                        <!--型番-->
+                        <td>{{ item.get_category_display }}</td>
+                        <!--カテゴリ-->
+                        <td>{{ item.store_id.store_name }}</td>
+                        <!--在庫場所-->
+                        <td>{{ item.purchase_price }}¥</td>
+                        <!--仕入価格-->
+                        <td>{{ item.get_item_status_display }}</td>
+                    </tr>
+                    {% empty %}
+                    <p>空です</p>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {# ページネーション処理 #}
+            {% include 'pagenavigation.html' %}
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript" language="javascript" src="{% static 'js/jquery-3.6.0.min.js' %}">
+    jQuery(function ($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加 クリックイベント
+        $('tr[tr-link]').addClass('clickable').click(function (e) {
+            //e.targetはクリックした要素自体、それがa要素以外であれば
+            if (!$(e.target).is('a')) {
+                var hiddenVal = $(this).children('td')[0].innerText;
+                //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+                window.location.href = "{% url 'itemmas:S03-03' 100 %}".replace(100, hiddenVal);
+            }
+        });
+    });
+    // 検索ボタン押してもプルダウンリスト値保持するJavaScript-------------------------------------------------------------------------------------------------
+    $(function () {
+        const url = new URL(window.location.href); //url取って
+        const q_cat = url.searchParams.get('q_cat'); //特定のクエリの値を変数に取って(カテゴリ)
+        const store_id = url.searchParams.get('store_id'); //(販売場所)
+        const q_stat = url.searchParams.get('q_stat'); //(商品ステータス)
+
+        if (url.searchParams.get('q_cat')) { //もしクエリに値を取れたら(=値があれば)
+            $("#category-select").val(q_cat); //セレクトボックスのidを指定してセレクトボックスの値をvalで指定
+        }
+        if (url.searchParams.get('store_id')) { //販売場所
+            $("#id_store_id").val(store_id);
+        }
+        if (url.searchParams.get('q_stat')) { //商品ステータス
+            $("#status-select").val(q_stat);
+        }
+
+        $('#search-btn').click(function () { //検索ボタン押下イベント--------------------------------------------------------------------------
+            const category_selected = $('#category-select').val(); //変数〇〇_selectedに現在のセレクトボックスの値を取る(カテゴリ)
+            url.searchParams.set('q_cat', category_selected); //特定のクエリの値にselected値をセット
+
+            const store_selected = $('#id_store_id').val(); //(販売場所)
+            url.searchParams.set('store_id', store_selected);
+
+            const status_selected = $('#status-select').val(); //(商品ステータス)
+            url.searchParams.set('q_stat', status_selected);
+
+            location.href = url; //は？よくわからないけどできてるからヨシ！location.href …… 現在ページURLを参照する
+        });
+    });
+    $('#clear-btn').click(function () { //クリアボタン押下イベント 各ボックス値をクリア------------------------------
+        document.getElementById('item-box').value = '';
+        document.getElementById('num-box').value = '';
+        $("#category-select").val('');
+        $("#id_store_id").val('');
+        document.getElementById('lowpur-box').value = '';
+        document.getElementById('uppur-box').value = '';
+        $("#status-select").val('');
+    });
+</script>
+{% endblock %}
