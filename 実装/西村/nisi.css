@@ -105,9 +105,9 @@ li.sidebar-search {
     margin-left: 15px;
 }
 
-.sb-sidenav-footer .small{
-    /* padding-bottom: 15px; */
-}
+/* .sb-sidenav-footer .small{
+    padding-bottom: 15px;
+} */
 
 .heading h1 {
     text-align: center
@@ -423,6 +423,10 @@ td.btn-add-cell {
     color: #fff;
 }*/
 
+/* 左に寄せる */
+.placement-left {
+    text-align: left;
+}
 /* 右に寄せる */
 .placement-right {
     text-align: right;
@@ -1060,4 +1064,20 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.btn-login {
+    color: #fff;
+    background-color: #337ab7;
+    width: 50%;
+}
+.placement-right-login {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.card-body.sub1 {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
 }
