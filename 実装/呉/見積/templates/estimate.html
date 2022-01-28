@@ -1,0 +1,169 @@
+<!-- S10-01 見積
+
+    ToDo
+        画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満) 
+        
+-->
+{% extends 'base.html' %} {% load static %} {% block title %}SIMS | 見積{%
+endblock %} {% block main_contents %}
+<main>
+  <div class="container-fluid px-4">
+    <h1 class="mt-4">見積</h1>
+    <div class="row">
+      <div class="card mb-4">
+        <div class="card-body">
+          <form method="POST" name="form">
+            {% csrf_token %} {# 客用はJSで表示非表示にする #}
+            <div class="p1 placement-right">
+              <input
+                class="btn btn--orange btn--cubic btn--shadow estimate"
+                type="button"
+                value="お客様用見積画面へ"
+                onclick="clickBtn1()"
+              />
+              <!-- <a class="btn btn--orange btn--cubic btn--shadow estimate" href="#">お客様用見積画面へ</a> -->
+            </div>
+            <p>商品コード{{params.form.id}}</p>
+            <!-- 隠しデータを設定しておく部分 -->
+            <input
+              type="hidden"
+              name="hidden_data"
+              value="{{params.post_hidden_data}}"
+            />
+            <input type="submit" />
+          </form>
+
+          <!-- <table class="listtable sub3" id="p1"> -->
+          <table class="p1 listtable sub3">
+            <thead class="tablecolumn">
+              <tr>
+                <th>商品コード</th>
+                <th>型番</th>
+                <th>仕入価格</th>
+                <th>粗利率</th>
+                <th>粗利</th>
+                <th>販売価格</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in view_tamesi %}
+              <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.model_number}}</td>
+                <td>{{item.purchase_price}}円</td>
+                <td>
+                  <input
+                    value=""
+                    name="textbox01"
+                    type="text"
+                    id="{{item.id}}"
+                    class="sample_input"
+                    style="width: 104px"
+                  />
+                </td>
+                <td>{{item.}}</td>
+                <td>
+                  <input
+                    value=""
+                    name="textbox02"
+                    type="text"
+                    id="{{item.id}}2"
+                    class="sample_input"
+                    readonly
+                  />
+                </td>
+                <th style="border: none">
+                  <a class="btn btn--orange btn--cubic btn--shadow" href="#"
+                    >削除</a
+                  >
+                </th>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <table class="ProductTable">
+            <b>実行結果</b>
+            <p></p>
+            <p>{{ post_hidden_data }}</p>
+
+            {{view_tamesi}}
+
+            <!-- <tr><th>Office</th>
+                            <td style="width: 35%;" class="sub2"><input type="text" name="offciceselect" placeholder="office" autocomplete="off"></td>
+                            <td style="width: 15%;"></td>
+                            <td style="width: 30%;"></td>
+                            <td class="therd-td sub1" style="width: 20%;">○○○○○円</td>
+                        </tr>
+                        <tr><th>HDD</th>
+                            <td class="sub2"><input type="text" name="HDD" placeholder="HDD"></td>
+                            <td class="therd-td"></td><td></td><td class="sub1">○○○○○円</td>
+                        </tr>
+                        <tr><th>SSD</th>
+                            <td class="sub2"><input type="text" name="SSD" placeholder="SSD"></td>
+                            <td class="therd-td"></td><td></td><td class="sub1">○○○○○円</td>
+                        </tr>
+                        <tr><th>メモリ</th>
+                            <td class="sub2"><input type="text" name="memory" placeholder="メモリ"></td>
+                            <td class="therd-td">×<select name="example">
+                            <option value="サンプル1">1枚</option>
+                            <option value="サンプル2">2枚</option>
+                            <option value="サンプル3">3枚</option>
+                        </select></td><td></td><td class="sub1">○○○○○円</td></tr>
+                        <tr><th>その他</th>
+                            <td class="sub2"><input type="text" name="" placeholder="直接金額を入力して下さい"></td><td class="therd-td"></td><td></td><td class="sub1">○○○○○円</td></tr> -->
+            <!-- <tr><th></th><td></td><td class="therd-td"></td><td></td><td>合計○○○○○円</td></tr> -->
+            <tr>
+              <td colspan="5" class="sub1">合計{{ sumre }}円</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %} {% block extrajs %}
+<script src="{% static 'js/estimate.js' %}"></script>
+<script>
+  //初期表示は非表示
+  document.getElementsByClassName("p1").style.display = "block";
+
+  function clickBtn1() {
+    const p1 = document.getElementsByClassName("p1")[0];
+
+    if (p1.style.display == "block") {
+      // noneで非表示
+      p1.style.display = "none";
+    } else {
+      // blockで表示
+      p1.style.display = "block";
+    }
+  }
+  $(function () {
+    var value = 300; // りんごの単品価格
+    var maxNum = 100; // 注文できる個数の上限
+    var tagInput = $("#101240004"); // 入力対象のinputタグID名
+    var tagOutput = $("#1012400042"); // 出力対象のinputタグID名
+    tagInput.on("change", function () {
+      var str = $(this).val();
+      var num = Number(str.replace(/[^0-9]/g, "")); // 整数以外の文字列を削除
+      if (num == 0) {
+        num = "";
+      } else if (num > maxNum) {
+        // 上限を超える個数を入力した場合
+        num = maxNum;
+      }
+      $(this).val(num);
+      if (num != 0) {
+        var price = num * value;
+        tagOutput.val(price);
+      }
+    });
+  });
+</script>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+<!-- S07-03 セット商品詳細
+
+    ToDo
+        画面の制作お願いします
+        *長谷川
+
+-->
+{% extends 'base.html' %}
+{% block title %}SIMS | セット商品詳細{% endblock %}
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">セット商品</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    セット商品詳細
+                </div>
+                <div class="">
+                    <p class="set-name">セット名： セット名</p>
+                    <p class="set-quantity">商品数 ： 3個</p>
+                </div>
+                <div class="card-body">
+                    <label for="listtable">商品 ：</label>
+                    <table class="listtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>ID</th>
+                                <th>商品コード</th>
+                                <th>型番</th>
+                                <th>販売価格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>0001</td>
+                                <td>MV4576GKADL</td>
+                                <td>○○○○円</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0002</td>
+                                <td>JGEKT385D</td>
+                                <td>○○○○円</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>0003</td>
+                                <td>DJGAK58203</td>
+                                <td>○○○○円</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn btn-primary" href="#">編集</a>
+                    <a class="btn btn-primary" href="#">削除</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
