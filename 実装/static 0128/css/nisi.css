@@ -34,7 +34,8 @@ li.sidebar-search {
 .btn {
     display: inline-block;
     padding: 6px 12px;
-    margin-bottom: 0;
+    /* margin-bottom: 0; ←サイドメニュー検索欄の入力欄とボタンのズレ、サイドメニューの表示非表示ボタンの配置のズレの原因？*/
+    margin: 0;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.42857143;
@@ -47,13 +48,7 @@ li.sidebar-search {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-	margin: 10px;
 }
-
-/* .card-body{
-    width: %;
-    vertical-align: middle;
-} */
 
 .sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
     padding: 0.5rem 1rem 0.5rem;
@@ -97,6 +92,8 @@ li.sidebar-search {
 .sb-sidenav .sb-sidenav-footer {
     padding: 5px 5px 0px 5px;
     flex-shrink: 0;
+    width: 225px;
+    height: 18%;
 }
 
 .mgl-12{
@@ -109,7 +106,7 @@ li.sidebar-search {
 }
 
 .sb-sidenav-footer .small{
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
 }
 
 .heading h1 {
@@ -139,6 +136,7 @@ thead.tablecolumn th{
     border: solid 1px;
     padding: 10px;
     font-size: 50%;
+	text-align: center;
 }
 /* 従業員一覧テーブル */
 .listtable.sub1 {
@@ -157,6 +155,10 @@ thead.tablecolumn th{
 /* 商品情報新規登録テーブル */
 .listtable.sub2 {
     width: 100%;
+	margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .listtable.sub2 th {
     width: 20%;
@@ -164,10 +166,22 @@ thead.tablecolumn th{
 .listtable.sub2 td {
     padding: 0%;
 }
+/* 商品一覧 */
+/*.listtable.sub4 td {
+    font-size: 120%;
+    padding: 0px;
+}*/
+/* 見積 */
+.listtable.sub3 {
+    margin-bottom: 10px;
+}
+/* ボトルネック一覧 */
+/* .listtable.sub4 {
+
+} */
 /* 商品一覧テーブル */
 .itemtable {
-    width: 70%;
-    /*width: 600px;*/
+    width: 600px;
     table-layout: fixed;
 }
 .itemtable th,td {
@@ -175,26 +189,40 @@ thead.tablecolumn th{
     padding: 10px;
     font-size: 75%;
 }
-/* .listtable.sub1{
-    width: 900px;
-} */
+/* 商品詳細テーブル */
+.item-detailtable {
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.item-detailtable th,td {
+    width: 20%;
+    font-size: 20px;
+}
+.item-detailtable.sub1 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item-detailtable.sub1 th {
+    width: 10%;
+}
 /* .dataright {
     text-align: right;
 } */
-/* .table-tbody{
-    width: 30%;
-} */
 .table-tbody td{
     border: solid 1px;
-    height: 5%;
 }
 /* #clear {
     background-color: transparent;
 } */
 /* 新規登録テーブル */
 .registertable{
-    border-collapse:  collapse;
-    width:  50%;
+    border-collapse: collapse;
+    width: 50%;
     table-layout: fixed;
     margin-left: auto;
     margin-right: auto;
@@ -203,15 +231,10 @@ thead.tablecolumn th{
     border: solid 1px;
     padding: 10px;  
 }
-/* 詳細テーブル */
-.registertable th, td{
-    border: solid 1px;
-    padding: 10px;  
-}
 .registertable td {
-    width: 400px;
+    width: 250px;
     font-size: 100%;
-    padding: 0%;
+    /* padding: 2%; */
 }
 .registertable th {
     background-color: #B0E3E6;
@@ -233,9 +256,9 @@ thead.tablecolumn th{
 }
 .detailtable td {
     width: 400px;
-    font-size: 100%;
+    /* font-size: 100%; */
     text-align: center;
-    /* padding: 10px; */
+    /*padding: 10px;*/
 }
 .detailtable th {
     background-color: #B0E3E6;
@@ -243,28 +266,11 @@ thead.tablecolumn th{
     text-align: center;
     font-size: 100%;
 }
-/*.registertable{
-    border-collapse:  collapse;
-    width:  50%;
-    table-layout: fixed;
-} */
-
 /* 売上テーブル */
-/* .earningtable th, td{
-    border: solid 1px;
-    padding: 10px;  
-} */
-/* .earningtable td {
-    width: 300px;
-} */
-/* .earningtable th {
-    background-color: #B0E3E6;
-}
 .earningtable{
     border-collapse:  collapse;
     width:  100%;
     table-layout: fixed;
-    font-size: 80%;
 }
 .earningtable th, td{
     border: solid 1px;
@@ -289,22 +295,39 @@ thead.tablecolumn th{
     font-size: 16px;
     text-align: center;
     border: none;
+    margin-bottom: 10px;
 }
 .cleannesstable th {
     font-weight: bold;
     font-size: 16px;
     border: none;
 }
-.cleannesstable {
-    width: 800px;
-}
 .cleannesstable td{
     border-width: 0;
-    /* width: 40%; */
+    padding: 10px;
+	width: 40%;
 }
 .cleannesstable.sub1 {
     width: 80%;
 }
+/* .cleannesstable.sub2 {
+    width: 90%;
+} */
+/*.td-size {
+    width: 10%;
+}*/
+
+/* 検索テーブル */
+/*.searchtable {
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.searchtable th {
+    width: 15%;
+}*/
+
 
 /* 登録完了テーブル */
 .tourokutable {
@@ -332,6 +355,7 @@ thead.tablecolumn th{
     width: 100%;
     text-align: center;
 } */
+
 /* テーブル列背景色,枠線の色 */
 .column-color td {
     background-color: #eee;
@@ -364,9 +388,9 @@ thead.tablecolumn th{
     border-color: #0d6efd;
     width: 100px;
 }
-/* .btn-main.estimate {
+.btn-main.estimate {
     width: 150px;
-} */
+}
 .btn-small {
     color: #fff;
     background-color: #999;
@@ -394,6 +418,11 @@ td.btn-add-cell {
     border-right-style: none;
     border-bottom-style: none;
 }
+/*  */
+/*.btn-sub1 {
+    color: #fff;
+}*/
+
 /* 右に寄せる */
 .placement-right {
     text-align: right;
@@ -406,20 +435,23 @@ td.text-right {
 .placement-center {
     text-align: center;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
-
+/*.btn-placement-center {
+    text-align: center;
+}*/
 
 /* 移動指示入力 */
 /* 移動先テーブル */
 .deliverytable {
-    /* margin-top: 9%; */
-    margin-bottom: 9%;
-    margin-left: 0%;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    margin-left: 20px;
 }
 .deliverytable td,th {
     border: solid 1px;
-    padding: 10px;
-    font-size: 10%;
+    padding: 5px;
+    font-size: 10px;
 }
 .deliverytable th {
     background-color: #B0E3E6;
@@ -447,7 +479,6 @@ aside {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin-bottom: 15%;
 }
 
 .summary-total-items {
@@ -581,9 +612,6 @@ aside {
     .summary {
         margin-top: 1.25rem;
         position: relative;
-        float: left;
-        padding: 10% 10%;
-        text-align: center;
     }
 }
 
@@ -595,27 +623,40 @@ aside {
     float: left;
     padding: 20px 10px;
     text-align: center;
-    width: 60%;
 }
-.item-cart {
+/*.item.sub1 {
     float: left;
-    padding: 10% 5%;
+    padding: 5px 5px;
     text-align: center;
-    /* height: 30%;  */
-    /* width: 30%; */
-    /* margin-bottom: 60%; */
+    width: 80%;
+}
+.item.sub2 {
+    float: left;
+    padding: 13px 5px;
+    text-align: center;
+    width: 20%;
+}*/
+.item.img {
+    width: 50%;
 }
 .item.head {
     padding: 5px 5px;
     font-weight: bold;
+    text-align: left;
 }
 .item_beside {
     display: inline-block;
-    background-color: #666;
+    background-color: #eee;
+	padding: 20px 10px;
+}
+
+/* 検索欄 */
+.search-box {
+    background-color: #eee;
 }
 
 /* ページネーション */
-.pagination {
+/*.pagination {
     display: flex;
     padding-left: 0;
     list-style: none;
@@ -702,10 +743,9 @@ aside {
 .pagination-sm .page-item:last-child .page-link {
     border-top-right-radius: 0.2rem;
     border-bottom-right-radius: 0.2rem;
-}
-
+}*/
 /* 入力欄 */
-.m-form-text {
+/* .m-form-text {
     height: 2.4em;
     width: 100%;
     padding: 0 16px;
@@ -722,10 +762,10 @@ aside {
 .m-form-text:focus {
     outline: 0;
     box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
-}
+} */
 
 /* セレクトボックス */
-.m-form-select {
+/* .m-form-select {
     position: relative;
 }
 .m-form-select:before {
@@ -760,7 +800,7 @@ aside {
 .m-form-select select:focus {
     outline: 0;
     box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
-}
+} */
 
 /* 登録完了 */
 .completion p {
@@ -778,35 +818,246 @@ aside {
 .text-initial {
     color: gray;
 }
-a.backlist {
-    color:#000;
-    text-decoration: none;
 
+/* 画像サイズ */
+.img-size {
+    width: 100px;
+    height: 100px;
 }
 
-a.backlist:hover{
-    color:#000;
-    text-decoration: none;
-}
-.fixed01{
-    position: sticky;
-    top: 0;
-    /* &:before{
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: -1px;
-      width: 100%;
-      height: 100%;
-      border: 1px solid #ccc;
-    } */
-  }
-/* お客様用見積テーブル */
-/* .estimatetable th,td{
+/* フォーム入力欄 */
+/* inputタグ(form)の幅をtdのサイズに合わせる */
+#id_employee_id,#id_name,#id_ruby_name,#id_tel_num,#id_store_id,#id_employment_status,#id_item_code,#id_reserver_name,#id_reserver_tel,#id_store_name,#id_place_category,#id_address,#id_tel,#uitem-code,#model_number,#category,#remarks,#id_model_number,#id_category,#id_manufacturer_name,#id_purchase_price,#id_remarks.inputsize {
+    padding: 10px;
+    width: 100%;
     border: none;
 }
-.estimatetable {
-    margin: auto;
+#id_birthday{
+    padding: 10px;
     width: 100%;
+    border: none;
+}
+
+/* 見積 */
+.ProductTable {
+    border: solid 1px ;
+    border-collapse: separate;
+    border-spacing: 8px 0px;
+    font-size: 20px;
     text-align: center;
+    border: none;
+    margin-bottom: 10px;
+    width: 80%;
+}
+.ProductTable th {
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+.ProductTable td {
+    border: solid 1px ;
+    border: solid 1px ;
+    padding: 10px;
+    border: none;
+}
+.sub1{
+    text-align: right;
+}
+.sub2{
+    text-align: left;
+}
+
+/* ホバーの下線を消す */
+/*a {
+    text-decoration:none; 
+}*/
+
+/* ホーム画面ボタン */
+section {
+    max-width: 300px;
+    margin: 60px auto;
+}
+.btn_09 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: #795548;
+    text-align: center;
+    text-decoration: none;
+    width: 20%;
+    height: 90px;
+    padding: 20px 30px 30px 30px;
+    background-color: #ffffff;
+    border: 0px solid #219F94;
+    background-color: #B2DFDB;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    transition-duration: 0.3s;
+    margin: 10px 10px;
+    font-weight: bold;
+
+    /* 影 */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.5s;
+}
+.btn_09::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* .btn_09 span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
 } */
+.btn_09:hover {
+    color: #ffffff;
+    background-color: #4DB6AC;
+
+    /*--影の複数指定--*/
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+	transition: background-color 0.5s;
+}
+
+.btn_07 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: #795548;
+    text-align: center;
+    text-decoration: none;
+    width: 40%;
+    height: 90px;
+    padding: 20px 30px 30px 30px;
+    background-color: #ffffff;
+    /* border: 0px solid #ffc107; */
+    background-color: #C8E6C9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    transition-duration: 0.3s;
+    margin: 10px;
+    font-weight:bold;
+
+    /* 影 */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.5s;
+}
+.btn_07.sub1 {
+    background-color: #ffffff;
+    /* border: 0px solid #ffc107; */
+    background-color: #DCEDC8;
+
+    /* 影 */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.5s;
+}
+.btn_07::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* .btn_07 span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+} */
+.btn_07:hover {
+    color: #ffffff;
+    background-color: #81C784;
+
+    /*--影の複数指定--*/
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+	transition: background-color 0.5s;
+}
+.btn_07.sub1:hover {
+    color: #ffffff;
+    background-color: #AED581;
+
+    /*--影の複数指定--*/
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+	transition: background-color 0.5s;
+}
+
+.main-menu1 {
+    background-color: #009688;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0px 10px;
+    /* width: 90%; */
+    margin-right: 30px;
+    /* margin-left: 5px; */
+}
+.main-menu2 {
+    background-color: #4CAF50;
+    border-radius: 10px;
+    width: 48%;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+    text-align: left;
+}
+.main-menu2.sub1 {
+    background-color: #8BC34A;
+    margin-left: 10px;
+}
+/* .main-menu3 {
+    background-color: #7dd11d;
+    border-radius: 10px;
+    width: 500px;
+} */
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    width: 100%;
+    padding-top: 10px;
+    /* margin-right: 20px; */
+}
+
+/* ホーム見出し */
+.cap {
+    padding: 1rem 2rem;
+    border-left: 4px solid #fff;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.box-anchor {
+    text-decoration: none;
+}
+
+/* ホームメニュースクロール */
+.nav-scroll {
+    height: 80%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+}
+.nav-scroll::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+}
+
+/* 数字入力欄のスピンボタン削除 */
+/* Chrome/Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
