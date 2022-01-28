@@ -11471,8 +11471,8 @@ body {
   padding: 0.75rem;
   flex-shrink: 0;
   position: absolute;
-  bottom: 0; 
- }
+  bottom: 0;
+}
 
 .sb-sidenav-dark {
   background-color: #f8f8f8;

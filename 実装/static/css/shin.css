@@ -17,9 +17,9 @@
     background-color: #fff;
 }
 
-/* .sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
-    width: 260px;
-} */
+.sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
+    width: 225px;
+}
 
 li.sidebar-search {
     border-bottom: 1px solid #e7e7e7;
@@ -90,7 +90,7 @@ li.sidebar-search {
 .sb-sidenav .sb-sidenav-footer {
     padding: 5px 5px 0px 5px;
     flex-shrink: 0;
-    width: 225px;
+	width: 225px;/* 追加 */
 }
 
 .mgl-12{
@@ -112,7 +112,7 @@ li.sidebar-search {
 
 thead.tablecolumn th {
     background-color: #2a5199;
-    color: #e7e7e7;
+	color: #e7e7e7;
     font-size: 20px;
     text-align: center;
     height: 50px;
@@ -134,9 +134,9 @@ thead.tablecolumn th {
     list-style:none;
 }
 
-/* .detailtable td{
+/*.detailtable td{
     font-size: x-large;
-} */
+}*/
 
 /* inputタグ(form)の幅をtdのサイズに合わせる */
 #id_employee_id,#id_name,#id_ruby_name,#id_tel_num,#id_store_id,#id_employment_status,#id_item_code,#id_reserver_name,#id_reserver_tel,#id_password,#id_username.inputsize {
@@ -199,7 +199,6 @@ select.ui-datepicker-month{
 /* #id_gender_0.inputsize {
     width:100%;
 } */
-
 #item_1.item-detailtable {
     width: 100%;
     /* margin-left: auto;
@@ -560,4 +559,3 @@ registertable td {
 }
 
 /* https://proengineer.internous.co.jp/content/columnfeature/3883 */
-
