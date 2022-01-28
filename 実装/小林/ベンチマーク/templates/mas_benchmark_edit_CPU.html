@@ -1,0 +1,71 @@
+<!-- S05-03 ベンチマーク編集
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | CPUベンチマーク編集{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'benchmas:S05-01CPU' %}">CPUベンチマーク編集</a></h1>
+        <div class="searchtable">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'benchmas:S05-01CPU' %}">一覧に戻る</a>
+            </div>
+            <div class="st-right">
+                <p>最終更新日：{{ object.updated_at }}</p>
+            </div>
+        </div>
+        <!-- 編集フォームを表示 -->
+        <form method="POST" enctype="multipart/form-data">
+            <table class="registertable">
+                {% csrf_token %}
+                <thead class="tablecolumn">
+                <tbody>
+                    <tr>
+                        <th>CPU名称</th>
+                        <td>{{ form.cpu_name }}</td>
+                        <th>PassMark</th>
+                        <td>{{ form.passmark }}</td>
+                    </tr>
+                    <tr>
+                        <th>コア</th>
+                        <td>{{ form.core }}</td>
+                        <th>スレッド</th>
+                        <td>{{ form.thread }}</td>
+                    </tr>
+                    <tr>
+                        <th>定格クロック</th>
+                        <td>{{ form.rated_clock }}</td>
+                        <th>最大クロック</th>
+                        <td>{{ form.max_clock }}</td>
+                    </tr>
+                    <tr>
+                        <th>TDP</th>
+                        <td>{{ form.tdp }}</td>
+                        <th>定価</th>
+                        <td>{{ form.list_price }}</td>
+                    </tr>
+                    <tr>
+                        <th>コスパ</th>
+                        <td>{{ form.cost_performance }}</td>
+                    </tr>
+                </tbody>
+                </thead>
+            </table>
+            <div class="placement-center">
+                <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'benchmas:S05-01CPU' %}">キャンセル</a>
+                <button class="btn btn--orange btn--cubic btn--shadow" type="submit">更新</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+{% endblock %}
