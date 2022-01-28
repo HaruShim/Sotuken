@@ -101,9 +101,6 @@
         </div>
     </div>
 </main>
-{% endblock %}
-    
-{% block extrajs %}
 
 <!-- jquery -->
 <script type="text/javascript" language="javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>

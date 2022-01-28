@@ -11,9 +11,9 @@ from django.db import models
 from django.views.generic import TemplateView,ListView,DetailView,CreateView,DeleteView,UpdateView
 from django.urls import reverse_lazy
 from .forms import S0301Form,S0302Form,S0304Form,S0305Form
-from django.shortcuts import redirect,render
-from django.db.models import Q
+from django.shortcuts import render
 from .models import ItemInfo,ItemSpecification
+from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class S0301View(ListView):

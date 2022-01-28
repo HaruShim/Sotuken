@@ -1,0 +1,61 @@
+<!-- S01-03 従業員詳細画面
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 従業員詳細画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'employeemas:S01-01' %}">従業員管理</a></h1>
+            <div class="edit-ditail-table">
+                <div class="st-left">
+                    <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'employeemas:S01-01' %}">一覧に戻る</a>
+                </div>
+                <div class="vis-hid">
+                <div class="st-right">
+                    <p>最終更新日：{{ object.updated_at }}</p>
+                </div>
+            </div>
+            </div>
+                    <table class="detailtable">
+                        <thead class="tablecolumn">
+                            <tbody>
+                                <tr>
+                                    <th>従業員ID</th><td style="width: 250px;">{% if object.username != None %}{{ object.username }}{% else %}未設定{% endif %}</td>
+                                    <th>雇用形態</th><td style="width: 250px;">{% if object.employment_status != None %}{{ object.get_employment_status_display }}{% else %}未設定{% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>従業員名</th><td>{% if object.name != None %}{{ object.name }}{% else %}未設定{% endif %}</td>
+                                    <th>従業員名(カナ)</th><td>{% if object.ruby_name != None %}{{ object.ruby_name }}{% else %}未設定{% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>電話番号</th><td>{% if object.tel_num != None %}{{ object.tel_num }}{% else %}未設定{% endif %}</td>
+                                    <th>性別</th><td>{% if object.gender != None %}{{ object.get_gender_display }}{% else %}未設定{% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>生年月日</th><td>{% if object.birthday != None %}{{ object.birthday }}{% else %}未設定{% endif %}</td>
+                                    <th>所属店舗</th><td>{% if object.store_id != None %}{{ object.store_id }}{% else %}未設定{% endif %}</td>
+                                </tr>
+							</tbody>
+                        </thead>
+                    </table>
+                    <form method="POST" action="{% url 'employeemas:tamesi' object.pk %}">
+                        {% csrf_token %}
+                        <div class="placement-center">
+                            <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'employeemas:S01-04' object.pk %}">編集</a>
+                            {# 01/21 削除した際フラグを無効にする #}
+                            <button class="btn btn--orange btn--cubic btn--shadow" name="button_1" type="submit">削除</button>
+                        </div>
+                    </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
