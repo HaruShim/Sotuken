@@ -659,7 +659,7 @@ aside {
     border-color: #ee0979;
 }
 .page-item.disabled .page-link {
-    color: #6c757d;
+    color: #fff;
     pointer-events: none;
     background-color: #fff;
     border-color: #dee2e6;
