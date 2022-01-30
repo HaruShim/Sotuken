@@ -11,9 +11,9 @@ from django.db import models
 from django.views.generic import TemplateView,ListView,DetailView,CreateView,DeleteView,UpdateView
 from django.urls import reverse_lazy
 from .forms import S0301Form,S0302Form,S0304Form,S0305Form
-from django.shortcuts import render
-from .models import ItemInfo,ItemSpecification
+from django.shortcuts import redirect,render
 from django.db.models import Q
+from .models import ItemInfo,ItemSpecification
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class S0301View(ListView):
@@ -83,7 +83,7 @@ class S0301View(ListView):
         return render(request, template_name, context)
 
 
-class S0302View(CreateView):
+class S0302View(LoginRequiredMixin,CreateView):
     """S0302View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -133,6 +133,7 @@ class S0303View(DetailView):
 
     # def form_valid(self,form):
     #     return super().form_valid(form)
+    @login_required
     def itemdetail(request,pk):
         model = ItemInfo
         model2 = ItemSpecification
@@ -154,7 +155,7 @@ class S0303View(DetailView):
     # def delete(self,request,*args,**kwargs):
     #     return super().delete(request,*args,**kwargs)
 
-class S0304View(UpdateView):
+class S0304View(LoginRequiredMixin,UpdateView):
     """S0304View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -172,7 +173,7 @@ class S0304View(UpdateView):
     def form_valid(self,form):
         return super().form_valid(form)
 
-class S0305View(CreateView):
+class S0305View(LoginRequiredMixin,CreateView):
     """S0302View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
