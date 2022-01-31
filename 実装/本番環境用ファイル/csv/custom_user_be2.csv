@@ -1,0 +1,8 @@
+id,password,last_login,is_superuser,first_name,last_name,email,is_staff,is_active,date_joined,username,employment_status,name,ruby_name,tel_num,gender,birthday,invalid_flg,store_id
+2,119,,f,first_name,last_name,a@mail.com,f,t,2022-01-19 02:45:21.349404+09,10001001,1,新満 遥,シンミツ ハルカ,,0,2000-04-27,f,102
+20,pbkdf2_sha256$150000$YlgUOTkQfjbG$hsNV8fbQpGEeNUMheXNOYIQbHQ/Z6AIJ3RvFTcNiIFo=,2022-01-21 14:40:10.956796+09,f,"","","",f,t,2022-01-21 14:40:10.726551+09,10001002,2,西村帆夏,ニシムラホノカ,000-0000-0000,1,2000-06-08,f,106
+1,pbkdf2_sha256$150000$pyJfXVGcN0p1$Q/1SLWNkCvsBBcC2yX+XEFDTmkJUnY/wx5hhl4Lv5mI=,2022-01-20 23:42:32.268848+09,t,first_name,last_name,a@mail.com,t,t,2022-01-19 02:43:28.249573+09,99999999,0,管理者,,000-0000-0000,0,2000-04-27,f,
+21,pbkdf2_sha256$150000$wGMembYSNIng$EhA4BO72ziRgtLTs/xlqb228ZFbuUWrSLlMHxcgIgh8=,2022-01-21 14:42:17.266153+09,f,"","","",f,t,2022-01-21 14:42:16.938813+09,10001003,2,内藤壱成,ナイトウイッセイ,0904351423,0,2000-12-26,f,103
+22,pbkdf2_sha256$150000$VMnzDz2RisES$GpLjWqxTiWXe+w/QHzweCox8Mb+IoZazQH3vnJ9aWlg=,2022-01-21 14:44:30.706567+09,f,"","","",f,t,2022-01-21 14:44:30.479089+09,10001004,0,小林 隼大,コバヤシ ハヤタ,080-9999-9999,0,1999-06-02,f,111
+23,pbkdf2_sha256$150000$e5wox2XoCbCX$JkM3gtsrCaFsjC4J5JUMuDlPFrO9Q8pe5Li+lxFjrOU=,2022-01-21 14:49:13.205097+09,f,"","","",f,t,2022-01-21 14:49:12.977522+09,10001005,2,呉 天賜,ゴ テンシ,090-0000-0101,0,1998-04-10,f,102
+24,pbkdf2_sha256$150000$TSzBf35nC3lz$YGxCEEShUO4wSjTwKMZtW3lLmIPhaTSxDdbQBg7J9wk=,2022-01-21 14:52:18.820607+09,f,"","","",f,t,2022-01-21 14:52:18.535868+09,10001006,2,長谷川 和貴,ハセガワカズキ,09037473373,0,2001-12-15,f,100
