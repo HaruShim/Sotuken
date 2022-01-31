@@ -31,10 +31,10 @@ item_code,model_number,category,manufacturer_name,item_status,purchase_price,ite
 104240005,Surface Pro4,0,Microsoft,0,27890,Surface_Pro4.png,,2022/1/19,2022/1/20,104
 104240007,Z24n,2,hp,0,3240,Z24n_rFCrAOn.png,,2022/1/19,2022/1/20,104
 105240001,ThinkPad X270,0,Lenovo,0,12000,ThinkPad_X270_P7CngDj.png,,2022/1/19,2022/1/20,105
-105240006,自佁E,1,不�E,0,20000,zisakupc1.jpg,,2022/1/19,2022/1/20,105
+105240006,自作1,1,不明,0,20000,zisakupc1.jpg,,2022/1/19,2022/1/20,105
 105240005,Surface Pro4,0,Microsoft,0,27890,Surface_Pro4_5oj19k3.png,,2022/1/19,2022/1/20,105
 105240007,Z24n,2,hp,0,3240,Z24n_2kXGbgR.png,,2022/1/19,2022/1/20,105
-106240006,自佁E,1,不�E,0,160000,zisakups2.jpg,,2022/1/19,2022/1/20,106
+106240006,自作2,1,不明,0,160000,zisakups2.jpg,,2022/1/19,2022/1/20,106
 106240001,ThinkPad X270,0,Lenovo,0,12000,ThinkPad_X270_2AiZBMG.png,,2022/1/19,2022/1/20,106
 107240003,LIFEBOOK U938,0,FUJITSU,0,35803,,,2022/1/19,2022/1/20,107
 106240005,MacBook Air Early 2015,0,Apple,0,37800,MacBook_Air_Early_2015.png,,2022/1/19,2022/1/20,106
@@ -72,6 +72,7 @@ item_code,model_number,category,manufacturer_name,item_status,purchase_price,ite
 112240005,OptiPlex 5040 SFF,1,DELL,0,24800,OptiPlex_5040_SFF.png,,2022/1/19,2022/1/20,112
 112240004,Inspiron17 5759,0,DELL,0,24000,Inspiron17_5759_D8rY4T3.jpg,,2022/1/19,2022/1/20,112
 102240001,ThinkPad X1 Carbon 6gn,0,Lenovo,0,25000,ThinkPadX1Carbon6gn_8wloRId.png,,2022/1/19,2022/1/20,102
+100240001,ThinkPad X1 Carbon 6gn,0,Lenovo,0,25000,ThinkPadX1Carbon6gn_IjPRjb0.png,未入力,2022/1/19,2022/1/20,100
 100240005,Latitude 5580,0,DELL,0,16325,Latitude_5580.png,,2022/1/19,2022/1/20,100
 100240008,P2317H,2,hp,0,100,P2317H.jpg,,2022/1/19,2022/1/20,100
 100240012,2019 Home & Business,6,Microsoft,0,25000,2019_Home__Business.jpg,,2022/1/19,2022/1/20,100
@@ -79,7 +80,7 @@ item_code,model_number,category,manufacturer_name,item_status,purchase_price,ite
 101240006,Optiplex 3040 Micro,1,DELL,0,12579,Optiplex_3040_Micro_tYKB3Ya.jpg,,2022/1/19,2022/1/20,101
 101240008,323E7Q,2,PHILIPS,0,4000,323E7Q.jpg,,2022/1/19,2022/1/20,101
 100240011,1TB,5,-,0,12000,1TB_SSD.png,,2022/1/19,2022/1/20,100
-100240010,128GB,5,-,0,0,ssd_kari129gb.png,,2022/1/19,2022/1/20,100
+100240010,129GB,5,-,0,0,ssd_kari129gb.png,,2022/1/19,2022/1/20,100
 100240013,WPS Office 2,6,KINGSOFT,0,216,WPS_Office_2.png,,2022/1/19,2022/1/20,100
 101240010,130GB,5,-,0,0,ssd_kari130gb.jpg,,2022/1/19,2022/1/20,101
 101240012,2021 Personal,6,Microsoft,0,26000,2021_Personal.jpg,,2022/1/19,2022/1/20,101
