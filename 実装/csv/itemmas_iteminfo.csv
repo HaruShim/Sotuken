@@ -1,6 +1,5 @@
 item_code,model_number,category,manufacturer_name,item_status,purchase_price,item_image,remarks,created_at,updated_at,store_id
 101240001,ThinkPad X1 Carbon 6gn,0,Lenovo,0,25000,ThinkPadX1Carbon6gn_kpIi8mz.png,,2022/1/19,2022/1/20,101
-100240001,ThinkPad X1 Carbon 6gn,0,Lenovo,0,25000,ThinkPadX1Carbon6gn_IjPRjb0.png,–¢“ü—Í,2022/1/19,2022/1/20,100
 101240002,Let'sNote SZ6,0,Panasonic,0,17836,LetsNote_SZ6.jpg,,2022/1/19,2022/1/20,101
 100240002,ThinkPad X61,0,IBM,1,0,ThinkPad_X61.jpg,,2022/1/19,2022/1/20,100
 100240003,Let'sNote NX3,0,Panasonic,1,8534,LetsNote_NX3.jpg,,2022/1/19,2022/1/20,100
