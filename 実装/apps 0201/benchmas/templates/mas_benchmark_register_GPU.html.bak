@@ -1,0 +1,54 @@
+<!-- S-05-02 ベンチマーク登録
+
+    ToDo
+        画面の制作お願いします
+        *長谷川 gpu表示のために勝手にurl仮設定してるので・・・・お願いします
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | ベンチマーク登録{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'benchmas:S05-01GPU' %}">GPUベンチマーク新規登録</h1>
+        <div class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'benchmas:S05-01GPU' %}">一覧に戻る</a>
+            </div>
+        </div>
+                <form method="POST" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    <table class="table">
+                        {% if form.errors %}
+                        <div class="errorlist">
+                            {% for errors in form.errors.values %}
+                            {% for error in errors %}
+                            {{ error }}<br>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+						<table class="registertable">
+                            <thead class="tablecolumn">
+                            <thead class="tablecolumn">
+                            {% for field in form %}
+                                <tr>
+                                    <th>{{field.label_tag}}</th>
+                                    <td>{{field}}</td>
+                                </tr>
+                            {% endfor %}
+                            </thead>
+                        </table>
+                            <div class="placement-center">
+                                <button class="btn btn--orange btn--cubic btn--shadow" type="submit">登録</button>
+                            </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

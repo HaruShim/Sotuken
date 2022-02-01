@@ -1,0 +1,74 @@
+<!-- S07-01 セット商品一覧
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        **テーブルの列に合計金額を追加
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | セット商品一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">在庫</h1>
+        <!-- <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="# url 'home:index' %}">Dashboard</a></li>
+            <li class="breadcrumb-item active">Tables</li>
+        </ol> -->
+        <!-- <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body">新規登録</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-white stretched-link" href="#">従業員情報の追加</a>
+                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+                <div class="card-body">
+<div class="placement-right">
+                        <a class="btn btn--orange btn--cubic btn--shadow" href="#">新規登録</a>
+                    </div>                    <table class="listtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>ID</th>
+                                <th>セット名</th>
+                                <th>商品数</th>
+                                <th>合計金額</th>
+                            </tr>
+                        </thead>
+                        
+                            <tr>
+                                <td>1</td>
+                                <td>セットA</td>
+                                <td>2個</td>
+                                <td>○○○○円</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>セットB</td>
+                                <td>3個</td>
+                                <td>○○○○円</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>セットC</td>
+                                <td>2個</td>
+                                <td>○○○○円</td>
+                            </tr>
+                        
+                    </table>
+        </div>
+    </div>
+</main>
+{% endblock %}
