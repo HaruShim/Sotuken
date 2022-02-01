@@ -28,101 +28,46 @@
                 </div>
 
                 <div class="itemmas-table item-table">
-                    <div class="item-image">
-                        <img border="1" class="image-content" src="../images/img001.gif" width="128px" height="128px" alt="イラスト1">
-
-                    </div>
-                    <input type="file">
-                    
                     <h2>型番</h2>
-                        <table>
-                            <thead class="tablecolumn">
+                    <form method="POST" enctype='multipart/form-data'>
+                        {% csrf_token %}
                         
-                                <tr>
-                                    <th>商品コード</th>
-                                    <td><input type="text" id="uitem-code" name="item-code" placeholder="商品コード"></td>
-                                    <th>型番</th>
-                                    <td><input type="text" id="" name="" placeholder="型番"></td>
-                                </tr>
-                                <tr>
-                                    <th>カテゴリ</th>
-                                    <td>
-                                        <select name="category" class="categorylist">
-                                            <option value="note">ノートPC</option>
-                                            <option value="cpu">CPU</option>
-                                            <option value="gpu">GPU</option>
-                                            <option value="pc">PC</option>
-                                            <option value="" selected>-</option>
-                                    </td>
-                                    <th>仕入価格</th>
-                                    <td><input type="text" id="" name="" placeholder="仕入価格"></td>
-                                </tr>
-                                <tr>
-                                    <th>在庫場所</th>
-                                    <td>
-                                        <select name="balance_score" class="scorelist">
-                                            <option value="A">店舗A</option>
-                                            <option value="B">店舗B</option>
-                                            <option value="C">店舗C</option>
-                                            <option value="" selected>-</option>
-                                    </td>
-                                    <th>備考</th>
-                                    <td><input type="text" id="" name="" placeholder="備考"></td>
-                                </tr>
-                            </thead>
+                        <div class="itemmas-table item-table">
+                            {% if form.errors %}
+                            <div class="errorlist">
+                                {% for errors in form.errors.values %}
+                                {% for error in errors %}
+                                {{ error }}<br>
+                                {% endfor %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            <table class="listtable sub2">
+                                <thead class="tablecolumn">
+                                    <tr><th>商品コード</th><td>{{object.pk}}</td></tr>
+                                    <tr>
+                                        <th>カテゴリ</th><td>{{form.category}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>仕入価格</th><td>{{form.purchase_price}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>在庫場所</th><td>{{form.store_id}}</td>
+                                    </tr>
+                                    <tr><th>メーカー名</th><td>{{form.manufacturer_name}}</td></tr>
+                                    <tr><th>商品画像</th><td>{{form.item_image}}</td></tr>
+                                    <tr><th>型番</th><td>{{form.model_number}}</td></tr>
+                                    <tr>
+                                        <th>備考</th><td>{{form.remarks}}</td>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="placement-center">
+                                <button class="btn btn-main" type="submit">登録</button>
+                                <!-- <button class="btn btn-primary" type="submit"><a href="#{ url 'itemmas:S03-05' %}">詳細登録</a></button> -->
+                            </div>
                         </table>
-                    </div>
-
-                    <div class="itemmas-table spec-table">
-                        <form method="POST" enctype="multipart/form-data">
-                            {% csrf_token %}
-                        <table class="table">
-                            {{ form.as_table }}
-                            <!-- <thead class="tablecolumn">
-                                <tr>
-                                    <th>メーカー</th>
-                                    <td><input type="text" id="" name="" placeholder="メーカー"></td>
-                                    <th>モニタサイズ</th>
-                                    <td><input type="text" id="" name="" placeholder="モニタサイズ"></td>
-                                </tr>
-                                <tr>
-                                    <th>CPU</th>
-                                    <td><input type="text" id="" name="" placeholder="CPU"></td>
-                                    <th>モニタ解像度(縦)</th>
-                                    <td><input type="text" id="" name="" placeholder="解像度(縦)"></td>
-                                </tr>
-                                <tr>
-                                    <th>HDD</th>
-                                    <td><input type="text" id="" name="" placeholder="HDD"></td>
-                                    <th>モニタ解像度(横)</th>
-                                    <td><input type="text" id="" name="" placeholder="解像度(横)"></td>
-                                </tr>
-                                <tr>
-                                    <th>SSD</th>
-                                    <td><input type="text" id="" name="" placeholder="SSD"></td>
-                                    <th>カメラ</th>
-                                    <td><input type="text" id="" name="" placeholder="カメラ"></td>
-                                </tr>
-                                <tr>
-                                    <th>OS</th>
-                                    <td><input type="text" id="" name="" placeholder="OS"></td>
-                                    <th>光学ドライブ</th>
-                                    <td><input type="text" id="" name="" placeholder="光学ドライブ"></td>
-                                </tr>
-                                <tr>
-                                    <th>Wi-Fi</th>
-                                    <td><input type="text" id="" name="" placeholder="Wi-Fi"></td>
-                                    <th>グラフィック</th>
-                                    <td><input type="text" id="" name="" placeholder="グラフィック"></td>
-                                </tr>
-                            </thead> -->
-                        </table>
-                        <div class="center-button">
-                            <button class="btn btn-primary" type="submit">更新</button>
-                        </div>
-                    </form>
-
-
+                    </form>   
                 </div>
             </div>
         </div>

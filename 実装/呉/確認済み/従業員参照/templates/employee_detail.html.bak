@@ -1,0 +1,49 @@
+<!-- S12-02 従業員情報詳細
+
+    ToDo
+        画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 従業員情報詳細{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'employeeref:S12-01' %}">従業員管理</a></h1>
+        <div class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'employeeref:S12-01' %}">一覧に戻る</a>
+            </div>
+        </div>
+                    <table class="detailtable">
+                        <thead class="tablecolumn">
+                            <tbody>
+                                <tr>
+                                    <th>従業員ID</th><td style="width: 250px;">{% if object.username != None %}{{ object.username }}{% else %}未設定{% endif %}</td>
+                                    <th>雇用形態</th><td style="width: 250px;">{% if object.employment_status != None %}{{ object.get_employment_status_display }}{% else %}未設定{% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>従業員名</th><td>{% if object.name != None %}{{ object.name }}{% else %}未設定{% endif %}</td>
+                                    <th>従業員名(カナ)</th><td>{% if object.ruby_name != None %}{{ object.ruby_name }}{% else %}未設定{% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>電話番号</th><td>{% if object.tel_num != None %}{{ object.tel_num }}{% else %}未設定{% endif %}</td>
+                                    <th>性別</th><td>{% if object.gender != None %}{{ object.get_gender_display }}{% else %}未設定{% endif %}</td>
+                                </tr>
+                                <tr>
+                                    <th>生年月日</th><td>{% if object.birthday != None %}{{ object.birthday }}{% else %}未設定{% endif %}</td>
+                                    <th>所属店舗</th><td>{% if object.store_id != None %}{{ object.store_id }}{% else %}未設定{% endif %}</td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table>
+    </div>
+    <!-- </div> -->
+</main>
+
+{% endblock %}

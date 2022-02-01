@@ -1,0 +1,37 @@
+<!-- S13-02 店舗情報参照
+
+    ToDo
+        画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 店舗情報参照{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">店舗詳細</h1>
+        <div class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'storemas:S02-01' %}">一覧に戻る</a>
+            </div>
+        </div>
+                    <table class="registertable">
+                        <thead class="tablecolumn">
+                            <tbody>
+                                <tr><th>店舗ID</th><td>{{ object.id }}</td></tr>
+                                <tr><th>場所カテゴリ</th><td>{{ object.get_place_category_display }}</td></tr>
+                                <tr><th>店舗名</th><td>{{ object.store_name }}</td></tr>
+                                <tr><th>住所</th><td>{{ object.address }}</td></tr>
+                                <tr><th>連絡先</th><td>{{ object.tel }}</td></tr>
+                            </tbody>
+                        </thead>
+                    </table>
+    </div>
+   
+</main>
+
+{% endblock %}

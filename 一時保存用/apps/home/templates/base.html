@@ -17,10 +17,19 @@
     <link href="{% static 'css/shin.css' %}" rel="stylesheet" />
     <link href="{% static 'css/hase.css' %}" rel="stylesheet" />
     <link href="{% static 'css/nisi.css' %}" rel="stylesheet" />
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+    <link href="{% static 'js/myfunc.js' %}" rel="stylesheet" />
 </head>
 
 <body class="sb-nav-fixed">
@@ -450,11 +459,11 @@
                                     <div class="sb-nav-link-icon"></div>
                                     売上情報新規登録
                                 </a>
-                                <a class="nav-link" href="{% url 'earning:S11-03' %}">
+                                <a class="nav-link" href="#{ url 'earning:S11-03' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     売上情報詳細(※ページ無し)
                                 </a>
-                                <a class="nav-link" href="{% url 'earning:S11-04' %}">
+                                <a class="nav-link" href="#{ url 'earning:S11-04' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     売上情報編集 (返品・返金)
                                 </a>
@@ -473,7 +482,7 @@
                                     <div class="sb-nav-link-icon"></div>
                                     従業員情報一覧
                                 </a>
-                                <a class="nav-link" href="{% url 'employeeref:S12-02' %}">
+                                <a class="nav-link" href="#{ url 'employeeref:S12-02' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     従業員情報詳細
                                 </a>
@@ -493,7 +502,7 @@
                                     店舗情報一覧
                                 </a>
                                 
-                                <a class="nav-link" href="{% url 'storeref:S13-02' %}">
+                                <a class="nav-link" href="#{ url 'storeref:S13-02' %}">
                                     <div class="sb-nav-link-icon"></div>
                                     店舗情報詳細
                                 </a>
@@ -536,7 +545,9 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="{% static 'js/datatables-simple-demo.js' %}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-
+    
+    
+    {% block extrajs %}{% endblock %}
 
 </body>
 

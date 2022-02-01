@@ -1,0 +1,8 @@
+id,password,last_login,is_superuser,first_name,last_name,email,is_staff,is_active,date_joined,username,employment_status,name,ruby_name,tel_num,gender,birthday,invalid_flg,store_id
+1,pbkdf2_sha256$150000$Wj0rmTo26FqJ$WmTaV7+2pm2iDsNuHNbGmZj2a7gCTRQVuhuppYXDzbI=,2022-01-19 03:05:45.726089+09,t,first_name,last_name,a@mail.com,t,t,2022-01-19 02:43:28.249573+09,99999999,0,管理者,,000-0000-0000,0,2000/4/27,f,
+2,119,,f,first_name,last_name,a@mail.com,f,t,2022-01-19 02:45:21.349404+09,10001001,1,新満 遥,シンミツ ハルカ,,0,2000/4/27,f,100
+3,119,,t,first_name,last_name,a@mail.com,f,t,2022-01-19 02:52:23.260284+09,10001002,2,西村 帆夏,ニシムラ ホノカ,,1,,f,100
+4,119,,t,first_name,last_name,a@mail.com,f,t,2022-01-19 02:53:56.112676+09,10001003,3,内藤 壱成,ナイトウ イッセイ,,0,,f,100
+5,119,,t,first_name,last_name,a@mail.com,f,t,2022-01-19 02:55:08.777335+09,10001004,3,長谷川 和貴,ハセガワ カズキ,,0,,f,100
+6,119,,t,first_name,last_name,a@mail.com,f,t,2022-01-19 02:56:02.724744+09,10001005,3,呉 天賜,ゴ,,0,,f,100
+7,119,,t,first_name,last_name,a@mail.com,f,t,2022-01-19 02:56:58.435748+09,10001006,3,小林 隼大,コバヤシ ハヤタ,,0,,f,100

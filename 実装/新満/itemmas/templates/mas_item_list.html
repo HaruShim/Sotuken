@@ -1,0 +1,140 @@
+<!-- S03-01 商品情報一覧
+
+    ToDo
+        *画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+        
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 商品情報一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">商品管理</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <!-- ↓このdivを右に置いてほしいお気持ち -->
+                    <!-- 検索欄 -->
+                    <div class="replace-right">
+                        <form action="" method="get">
+                            <!-- 商品コード -->
+                            <input name="query" placeholder="商品コード" value="{{ request.GET.query }}" type="text">
+                            <!-- 型番 -->
+                            <input name="query_2" placeholder="型番" value="{{ request.GET.query_2 }}" type="text">
+                            <!-- カテゴリ -->
+                            <select name="query_3" value="{{ request.GET.query_3 }}">
+                                <option value="0">ノートPC</option>
+                                <option value="1">デスクトップ</option>
+                                <option value="2">モニター</option>
+                                <option value="3">メモリ</option>
+                                <option value="4">HDD</option>
+                                <option value="5">SSD</option>
+                                <option value="6">Office</option>
+                                <option value="7">その他</option>
+                                <option value="" selected>------</option>
+                            </select>
+                            <!-- 販売場所　↓店舗マスタから持ってくる -->
+                            <select name="query_4" placeholder="在庫場所" value="{{ request.GET.query_4 }}">
+                                <option value="0">コトブキシティ</option>
+                                <option value="1">クロガネシティ</option>
+                                <option value="2">ズイタウン</option>
+                                <option value="3">トバリシティ</option>
+                                <option value="" selected>------</option>
+                            </select>
+                            <!-- 仕入れ価格　余裕があったら範囲指定 -->
+                            <input name="query_5" placeholder="仕入価格" value="{{ request.GET.query_5 }}" type="text">
+                            <!-- 取扱ステータス -->
+                            <select name="query_4" placeholder="取扱" value="{{ request.GET.query_4 }}">
+                                <option value="0">販売中</option>
+                                <option value="1">販売済み</option>
+                                <option value="2">修理中</option>
+                                <option value="3">取置</option>
+                                <option value="" selected>------</option>
+                            </select>
+                            <!-- 検索ボタン -->
+                            <button type="submit" class="btn btn-main">検索する</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <a class="btn btn-main" href="#">検索</a> -->
+                <a class="btn btn-main" href="{% url 'itemmas:S03-02' %}">新規登録</a>
+                <button class="btn btn-primary" type="submit"><a href="{% url 'itemmas:S03-05' %}">詳細登録</a></button>
+                <div class="content">
+                    <div class="item">
+                        <table class="listtable">
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <!-- <th>id</th> -->
+                                    <th>商品コード</th>
+                                    <th>型番</th>
+                                    <th>カテゴリ</th>
+                                    <th>在庫場所</th>
+                                    <th>仕入価格</th>
+                                    <th>取扱</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <!-- ItemListモデルの一覧を表示 -->
+                            {% for item in iteminfo %}
+                            
+                            <tr>
+                                <th><a href="{% url 'itemmas:S03-03' item.pk %}">{{ item.id }}</a></th> <!--商品コード-->
+                                <td>{{ item.model_number }}</td> <!--型番-->
+                                <td>{{ item.get_category_display }}</td> <!--カテゴリ-->
+                                <td>{{ item.store_id.store_name }}</td> <!--在庫場所-->
+                                <td>{{ item.purchase_price }}¥</td> <!--仕入価格-->
+                                <td>{{ item.get_item_status_display }}</td>
+                            </tr>   
+                            {% empty %}
+                            <p>空です</p>
+                            {% endfor %}
+                            </tbody>
+                            <!-- ページネーション処理 -->
+                            {% if iteminfo.has_other_pages %}
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        {% if iteminfo.has_previous %}
+                                            <li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.previous_page_number }}"><<</a></li>
+                                        {% else %}
+                                            <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#"><<</div></li>
+                                        {% endif %}
+                                        {% if iteminfo.has_previous %}
+                                            {% if iteminfo.previous_page_number != 1 %}
+                                                <li><a class="page-link text-primary d-inline-block" href="?page=1">1</a></li>
+                                                <li>…</li>
+                                            {% endif %}
+                                            <li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.previous_page_number }}">{{ iteminfo.previous_page_number }}</a></li>
+                                        {% endif %}
+                                        <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">{{ iteminfo.number }}</div></li>
+                                        {% if iteminfo.has_next %}
+                                            <li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.next_page_number }}">{{ iteminfo.next_page_number }}</a></li>
+                                            {% if iteminfo.next_page_number != iteminfo.paginator.num_pages %}
+                                                <li>…</li>
+                                                <li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.paginator.num_pages }}">{{ iteminfo.paginator.num_pages }}</a></li>
+                                            {% endif %}
+                                        {% endif %}
+                                        {% if iteminfo.has_next %}
+                                            <li><a class="page-link text-primary d-inline-block" href="?page={{ iteminfo.next_page_number }}">>></a></li>
+                                        {% else %}
+                                            <li class="disabled"><div class="page-link text-secondary d-inline-block disabled" href="#">>></div></li>
+                                        {% endif %}
+                                    </ul>
+                                </nav>
+                            {% endif %}
+                            <!-- ページネーション処理終了 -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

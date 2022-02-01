@@ -1,0 +1,112 @@
+<!-- S10-01 見積
+
+    ToDo
+        画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満) 
+        NaNでるけど
+        いつの間にか他の人がやってる古いやつなんで消していいよ
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | 見積{% endblock %}
+
+{% block main_contents %}
+<script type="text/javascript" language="javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+<script type="text/javascript" language="javascript" src="{% static 'js/datatables/datatables.min.js' %}"></script>
+
+<script>
+    function insertRow(id) {
+        // テーブル取得
+        var table = document.getElementById(id);
+        // 行を行末に追加
+        var row = table.insertRow(-1);
+        // セルの挿入
+        var cell1 = row.insertCell(-1);
+        var cell2 = row.insertCell(-1);
+        var cell3 = row.insertCell(-1);
+        var cell4 = row.insertCell(-1);
+        var cell5 = row.insertCell(-1);
+        var cell6 = row.insertCell(-1);
+        var cell7 = row.insertCell(-1);
+        // ボタン用 HTML
+        var button = '<a class="btn btn-small" onclick="deleteRow(this)">削除</a>';
+        cell7.innerHTML = button;
+        
+    }
+    // 行削除
+    function deleteRow(obj) {
+        // 削除ボタンを押下された行を取得
+        tr = obj.parentNode.parentNode;
+        // trのインデックスを取得して行を削除する
+        tr.parentNode.deleteRow(tr.sectionRowIndex);
+        //　行数をリアルタイムで削除したらカウントし直したかった　断念中↓==================!
+        for (let index= 0; index < table.length; index++){
+            table[0].cell1=row_len-1;
+        }
+    }
+    // 金額合計　NaNでるけど
+    function price() {
+        var officePrice = document.getElementById('office-price').value;
+        var ssdPrice = document.getElementById('ssd-price').value;
+        var memoriPrice = document.getElementById('memori-price').value;
+        var othersPrice = document.getElementById('others-price').value;
+        var ans = parseInt(officePrice) + parseInt(ssdPrice) + parseInt(memoriPrice) + parseInt(othersPrice);
+        document.getElementById('estimate-sum').innerHTML = "合計 " + ans + "円";
+    }
+</script>
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">見積</h1>
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    見積
+                </div>
+                <a class="btn btn-touroku estimate" href="#">お客様用見積画面へ</a>
+                <div class="card-body">
+                    <p>商品コード：<input type="text" name="itemcode" placeholder="商品コード"><button class="btn btn-touroku" onclick="insertRow('listtable')">追加</button></p>
+
+                    <table class="listtable" id="listtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>商品コード</th>
+                                <th>型番</th>
+                                <th>仕入価格</th>
+                                <th>粗利率</th>
+                                <th>粗利</th>
+                                <th>販売価格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <p>Office 
+                        <input type="text" name="offciceselect" list="officelist" placeholder="office" autocomplete="off">
+                        <datalist id="officelist">
+                            <option value="サンプル1">
+                            <option value="サンプル2">
+                            <option value="サンプル3">
+                        </datalist>
+                        <input type="number" name="office_price" id=office-price placeholder="0" onfocus="price()" onkeyup="price()">円
+                    </p>
+                    <p>SSD 
+                        <input type="text" name="SSD" placeholder="SSD">GB 
+                        <input type="number" name="ssd_price" id=ssd-price placeholder="0" onfocus="price()" onkeyup="price()">円
+                    </p>
+                    <p>メモリ <input type="text" name="memory" placeholder="メモリ">GB × <input type="number" name="">枚 
+                        <input type="number" name="memori_price" id=memori-price placeholder="0" onfocus="price()" onkeyup="price()">円
+                    </p>
+                    <p>その他<input type="text" name=""> <input type="number" name="others_price" id=others-price placeholder="0" onfocus="price()" onkeyup="price()">円</p>
+                    <p id="estimate-sum">合計 0 円</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

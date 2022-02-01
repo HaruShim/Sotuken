@@ -12,10 +12,6 @@
 {% block title %}SIMS | GPUベンチマーク一覧{% endblock %}
 
 {% block main_contents %}
-
-
-<!DOCTYPE html>
-<html lang="ja">
 <head>
 	<meta charset="UTF-8">
 	<title>DataTables example</title>
@@ -33,11 +29,8 @@
                     GPUベンチマーク一覧
                 </div>
                 <div class="card-body">
-
                     <a class="btn btn-primary" href="{% url 'benchmas:S05-02CPU' %}">新規登録</a>
                     <a class="btn btn-primary " href="{% url 'benchmas:S05-01CPU' %}">CPU</a>
-                    <a class="btn btn-primary">GPU</a>
-
                     <h2>GPU</h2>
                     <div class="benchmark-table">
                         <table id="example" class="display">
@@ -66,10 +59,6 @@
                                 {% empty %}
                                 空です
                                 {% endfor %}
-                                <!-- <tr><td>Raizen 9 5950X</td><td>46132</td><td>16</td><td>32</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>106500円</td><td>0.43</td></tr>
-                                <tr><td>Raizen 8</td><td>30000</td><td>8</td><td>16</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>5000円</td><td>0.43</td></tr>
-                                <tr><td>Raiznsikasiran</td><td>20222</td><td>16</td><td>32</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>3744円</td><td>0.43</td></tr>
-                                <tr><td>cpuwakaran</td><td>11111</td><td>16</td><td>32</td><td>105W</td><td>3.4GHz</td><td>4.9GHz</td><td>106500円</td><td>0.43</td></tr> -->
                             </tbody>
                         </table>
                     </div>

@@ -1,0 +1,83 @@
+<!-- S03-03 商品情報詳細
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        views.py、forms.pyの埋め込みタグを記述
+        画面の確認
+        画面のスタイル最終調整
+        最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | 商品情報詳細{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+    <h1 class="mt-4"><a class="backlist" href="{% url 'itemmas:S03-01' %}">商品管理</a></h1>
+        <div class="row">
+            <div class="itemmas-table item-table">
+                <div class="contents">
+                    <table class="item-detailtable" id="item_1">
+                        <thead class="tablecolumn">
+                        <tr>
+                            <th>商品コード</th>
+                            <td>{{ object.id }}</td>
+                            <th>型番</th>
+                            <td>{{ object.model_number }}</td>
+                        </tr>
+                        </thead>
+                    </table>
+                <div class="item img" id="mid">
+                {% if object.item_image %}
+                    <img src="{{ object.item_image.url }}" width="200" height="200">
+                {% else %}
+                    <img src="{% static 'photo/noimage.jpg' %}" width="200" height="200">
+                {% endif %}
+                </div>
+                <table class="item-detailtable right" id="item_2">
+                    <thead class="tablecolumn">
+                        <tr><th>カテゴリ</th><td>{{ object.get_category_display }}</td></tr>
+                        <tr><th>メーカー名</th><td>{{ object.manufacturer_name }}</td></tr>
+                        <tr><th>仕入価格</th><td>{{ object.purchase_price }}</td></tr>
+                        <tr><th>店舗名</th><td>{{ object.store_id }}</td></tr>
+                        <tr><th>モニタサイズ</th><td>{{object_detail.monitor_size}}</td></tr>
+                        <tr><th>モニタ解像度(縦)</th><td>{{object_detail.monitor_vertical}}</td></tr>
+                        <tr><th>モニタ解像度(横)</th><td>{{object_detail.monitor_horizon}}</td></tr>
+                        <tr><th>OS</th><td>{{object_detail.os}}</td></tr>
+                        <tr><th>CPU</th><td>{{object_detail.cpu}}</td></tr>
+                    </thead>
+                </table>
+                </div>
+                <div class="itemmas-table spec-table">
+                <table class="item-detailtable left" id="item_3">
+                    <thead class="tablecolumn">
+                        <tr><th>備考</th><td>{{ object.remarks }}</td></tr>
+                    </thead>
+                </table>
+                <table class="item-detailtable right" id="item_4">
+                    <thead class="tablecolumn">
+                        <tr><th>HDD</th><td>{{object_detail.hdd}}</td></tr>
+                        <tr><th>SSD</th><td>{{object_detail.ssd}}</td></tr>
+                        <tr><th>カメラ</th><td>{% if object_detail.camera %}有り{% else %}無し{% endif %}</td></tr>
+                        <tr><th>光学ドライブ</th><td>{% if object_detail.optical_drive %}有り{% else %}無し{% endif %}</td></tr>
+                        <tr><th>Wi-Fi</th><td>{% if object_detail.wifi %}有り{% else %}無し{% endif %}</td></tr>
+                        <tr><th>グラフィック</th><td>{{object_detail.graphic}}</td></tr>
+                    </thead>
+                </table>
+                    <form method="POST">
+                    {% csrf_token %}
+                        <div class="placement-center">
+                            <a class="btn btn-main" href="{% url 'itemmas:S03-04' object.pk %}">編集</a>
+                            <button class="btn btn-main" type="submit">削除</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

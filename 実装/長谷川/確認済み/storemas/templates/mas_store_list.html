@@ -1,0 +1,76 @@
+<!-- S02-01 店舗情報一覧
+
+    ToDo
+        *画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | 店舗一覧画面{% endblock %}
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">店舗管理一覧</h1>
+        <div class="card-body">
+            <div class="placement-right">
+                <a href="{% url 'storemas:S02-02' %}" class="btn btn--orange btn--cubic btn--shadow">新規登録</a>
+            </div>
+            <table class="listtable column-color listthtd-2">
+                <thead class="tablecolumn">
+                    <tr>
+                        <th class="dis-non-tdth">店舗ID</th>
+                        <th class="id-tdth">ID</th>
+                        <th>店舗名</th>
+                        <th>場所カテゴリ</th>
+                        <th>連絡先</th>
+                        <th>店長</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- StoreInfoモデルの一覧を表示 -->
+                    {% for item in object_list %}
+                    <tr tr-link="storelist">
+                        <td class="dis-non-tdth">{{ item.list.id }}</td>
+                        <!--店舗ID-->
+                        <td class="id-tdth"></td>
+                        <td>{{ item.list.store_name }}</td>
+                        <!--店舗名-->
+                        <td>{{ item.list.get_place_category_display }}</td>
+                        <!--場所カテゴリ-->
+                        <td>{{ item.list.tel }}</td>
+                        <!--連絡先-->
+                        <td>{{ item.store_manager }}</td>
+                        <!--店長-->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {# ページネーション処理 #}
+            {% include 'pagenavigation.html' %}
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript">
+    jQuery(function ($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+            //クリックイベント
+            .click(function (e) {
+                //e.targetはクリックした要素自体、それがa要素以外であれば
+                if (!$(e.target).is('a')) {
+                    var hiddenVal = $(this).children('td')[0].innerText;
+                    //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+                    window.location.href = "{% url 'storemas:S02-03' 100 %}".replace(100, Number(hiddenVal));
+                }
+            });
+    });
+</script>
+{% endblock %}

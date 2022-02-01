@@ -1,0 +1,54 @@
+<!-- S10-02 客用見積
+
+    ToDo
+        画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %} {% block title %}SIMS | 客用見積{% endblock %} {%
+block main_contents %}
+<main>
+  <div class="container-fluid px-4">
+    <h1 class="mt-4">見積</h1>
+    <div class="row">
+      <div class="card mb-4">
+        <div class="card-header">
+          <i class="fas fa-table me-1"></i>
+          お見積
+        </div>
+        <div class="card-body">
+          <table class="estimatetable">
+            <tr>
+              <th>パソコン本体</th>
+              <td>型番</td>
+              <td>○○○○円</td>
+            </tr>
+            <tr>
+              <th>Office</th>
+              <td>バージョン</td>
+              <td>○○○○円</td>
+            </tr>
+            <tr>
+              <th>SSD</th>
+              <td>○○GB</td>
+              <td>○○○○円</td>
+            </tr>
+            <tr>
+              <th>メモリ</th>
+              <td>○○GB×○枚</td>
+              <td>○○○○円</td>
+            </tr>
+            <tr>
+              <th>その他</th>
+              <td>○○</td>
+              <td>○○○○円</td>
+            </tr>
+          </table>
+          <p>○○○○円</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

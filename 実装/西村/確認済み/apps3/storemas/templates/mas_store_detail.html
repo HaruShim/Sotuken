@@ -1,0 +1,63 @@
+<!-- S02-03 店舗情報詳細
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | 店舗詳細画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">店舗詳細</h1>
+        <div class="row">
+                <div class="card-body">
+                    <table class="registertable">
+                        <thead class="tablecolumn">
+                            <tbody>
+                                <tr>
+                                    <th>店舗ID</th>
+                                    <td>{{ object.id }}</td>
+                                </tr>
+                                <tr>
+                                    <th>場所カテゴリ</th>
+                                    <td>{{ object.get_place_category_display }}</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>店舗名</th>
+                                    <td>{{ object.store_name }}</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>住所</th>
+                                    <td>{{ object.address }}</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>連絡先</th>
+                                    <td>{{ object.tel }}</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table>
+                    <form method="POST" action="{% url 'storemas:tamesi' object.pk %}">
+                        {% csrf_token %}
+                        <div class="placement-center">
+                            <a class="btn btn-main" href="{% url 'storemas:S02-04' object.pk %}">編集</a>
+                            <button class="btn btn-main" name="button_1" type="submit">削除</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+

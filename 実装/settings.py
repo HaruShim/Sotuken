@@ -24,9 +24,17 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 SECRET_KEY = 'l5*jt#l(#sv6mkkv#%yl7-l!vsjkywyhkypry%ebz^!p&7#^_#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+
+# 静的ファイルを配置する場所
+STATIC_ROOT = '/usr/share/nginx/html/static'
+MEDIA_ROOT = '/usr/share/nginx/html/media'
+
+# Amazon SES関連設定
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = '/home/app_admin/log'
 
 
 # Application definition
@@ -60,6 +68,7 @@ INSTALLED_APPS = [
 
     # 個人の試しアプリケーション
     'tamesiform.apps.TamesiformConfig',
+    'jstamesi.apps.JstamesiConfig',
     # 'bottletamesi.apps.BottletamesiConfig',
     # 'tamesi.apps.TamesiConfig',
     # 'aaaaa.apps.AaaaaConfig',
@@ -67,9 +76,9 @@ INSTALLED_APPS = [
     # 'print.apps.PrintConfig',
 
     # django-allauthに必要なもの
-    # 'django.contrib.sites',
-    # 'allauth',
-    # 'allauth.account',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
 
     # 数字3桁区切りで表示するため
     'django.contrib.humanize',
@@ -114,10 +123,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'sales_information_management',
-        'USER': 'postgres',
-        'PASSWORD': 'HaruYou0427',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': '',
+        'PORT': '',
     },
     #     'default': {
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -148,14 +157,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS':{"min_length":4},
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
 ]
+
+
+
 
 
 # Internationalization
@@ -184,7 +194,13 @@ STATICFILES_DIRS = (
 # MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = "/media/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+#MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MESSAGE_TAGS = {
+    messages.ERROR: 'alert alert-danger',
+    messages.WARNING: 'alert alert-warning',
+    messages.SUCCESS: 'alert alert-success',
+    messages.INFO: 'alert alert-info',
+}
 
 # 表示する数値に3桁のカンマ区切りを自動で入れる
 NUMBER_GROUPING = 3
@@ -199,28 +215,32 @@ LOGGING = {
     'loggers': {
         # Djangoが利用するロガー
         'django': {
-            'handlers': ['console'],
+            'handlers': ['file'],
             'level': 'INFO',
         },
         # homeアプリケーションが利用するロガー
         'home': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
+            'handlers': ['file'],
+            'level': 'INFO',
         },
     },
 
     # ハンドラの設定
     'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'dev'
+         'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/django.log'),
+            'formatter': 'prod',
+            'when': 'D',  # ログローテーション(新しいファイルへの切り替え)間隔の単位(D=日)
+            'interval': 1,  # ログローテーション間隔(1日単位)
+            'backupCount': 7,  # 保存しておくログファイル数
         },
     },
 
     # フォーマッタの設定
     'formatters': {
-        'dev': {
+        'prod': {
             'format': '\t'.join([
                 '%(asctime)s',
                 '[%(levelname)s]',
@@ -231,39 +251,52 @@ LOGGING = {
     }
 }
 
-# AUTHENTICATION_BACKENDS = (
-#     'django.contrib.auth.backends.ModelBackend',
-#     'allauth.accounts.auth_backends.AuthenticationBackend',
-# )
+# 01/20 allauthの設定で追加
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 
 # # 認証方式を「メールアドレスとパスワード」に変更
 # # ACCOUNT_AUTHENTICATION_METHOD = 'email'
 # # ユーザー名を使用する
 ACCOUNT_USERNAME_REQUIRED = True
 
-# # ユーザー登録確認メールは送信しない
-# ACCOUNT_EMAIL_VERIFICATION = 'none'
+# ユーザー登録確認メールは送信しない
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 # # メールアドレスを必須項目にしない
 ACCOUNT_EMAIL_REQUIRED = False
 
-# #ユーザーモデルの拡張(customuser)
+#ユーザーモデルの拡張(customuser)
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 SITE_ID = 1 #django-allauthがsitesフレームワークを使っているため
-ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-# LOGIN_REDIRECT_URL = 'home'
-# ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
-# ACCOUNT_LOGOUT_ON_GET = True
+LOGIN_REDIRECT_URL = 'home:home'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
+ACCOUNT_LOGOUT_ON_GET = True
 
-# ACCOUNT_AUTHENTICATION_METHOD = 'employee_id'
 
 # #signupformを指定
-# ACCOUNT_FORMS = {
-#     'signup' : 'accounts.forms.CustomSignupForm',
-# }
-# #signupformからの情報をcustomusermodelに保存するのに必要
-# ACCOUNT_ADAPTER = 'accounts.adapter.AccountAdapter'
+ACCOUNT_FORMS = {
+    'signup': 'accounts.forms.MySignupForm',
+    'login': 'accounts.forms.MyLoginForm',
+    # 'reset_password': 'accounts.forms.MyResetPasswordForm',
+    # 'reset_password_from_key': 'accounts.forms.MyResetPasswordKeyForm',
+    # 'change_password': 'accounts.forms.MyChangePasswordForm',
+    # 'add_email': 'accounts.forms.MyAddEmailForm',
+    # 'set_password': 'accounts.forms.MySetPasswordForm',
+}
+
+
+# signupformからの情報をcustomusermodelに保存するのに必要
+ACCOUNT_ADAPTER = 'accounts.adapter.AccountAdapter'
 # #passwordの入力を一回に
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+# 認証方式を「username(従業員番号)とパスワード」に変更
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
+
+
+# バックアップバッチ用
+BACKUP_PATH = 'backup/'
+NUM_SAVED_BACKUP = 30
