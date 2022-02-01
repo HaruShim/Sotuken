@@ -82,56 +82,14 @@
                                                         </tr>
                                                         
                                                         <!-- セットの内容を設定する -->
-                                                        <!-- <tr>
+                                                        <tr>
                                                             <th>セット名</th>
                                                             <td>{{ form.set_item }}</td>
-                                                        </tr> -->
+                                                        </tr>
                                                     </tbody>
                                                 </thead>
                                             </table>
                                             <br>
-                                        </div>
-                                        <div class="card-body">
-                                            <table class="registertable">
-                                                <thead class="tablecolumn">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>ノートPC</th>
-                                                            <td>{{ form.set_name }}</td>
-                                                            <!-- あとで[店舗] + [個人番号] +a で作る -->
-                                                        </tr>
-                                                        <tr>
-                                                            <th>デスクトップ</th>
-                                                            <td>{{ form.set_name }}</td>
-                                                            <!-- あとで[店舗] + [個人番号] +a で作る -->
-                                                        </tr>
-                                                        <tr>
-                                                            <th>セットアイテム</th>
-                                                            <td>{{ set_item }}</td>
-                                                        </tr>
-                                                        {%for item in object.set_item.all%}
-                                                        <p>{{item}}</p>
-                                                        {%endfor%}
-                                                        {% for item in object.set_item.all %}
-                                                        {{ item }}
-                                                        {% empty %}
-                                                        <p>データナシ</p>
-                                                        {% endfor %}
-                                                        <!-- セットの内容を設定する
-                                                        ※ただし表示する時にoptionに空欄が表示される
-                                                            <tr>
-                                                            <th>セット名</th>
-                                                            <td>
-                                                                <select>
-                                                                    {%for item in form.set_item%}
-                                                                    <option>{{ item }}</option>
-                                                                    {%endfor%}
-                                                                </select>
-                                                            </td>
-                                                        </tr> -->
-                                                    </tbody>
-                                                </thead>
-                                            </table>
                                         </div>
                                         <button class="btn btn-primary" type="submit">新規登録</button>
                                     </form>
