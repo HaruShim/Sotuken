@@ -5,7 +5,10 @@
         *長谷川　CSSも後半scriptもないです
 
 -->
+
 {% extends 'base.html' %}
+{% load stock_filter %}
+{% load static %}
 {% block title %}SIMS | セット商品新規登録{% endblock %}
 {% block main_contents %}
 <script>
@@ -51,12 +54,156 @@
                     <div class="row">
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
+                                <div class="fas fa-table me-1"></div>
                                 セット商品新規登録
                             </div>
                             <div class="my-container">
                                 <div class="left-container">
-                                    <form method="POST" enctype='multipart/form-data'>
+                                    <!-- <form method="POST" enctype='multipart/form-data' action="{ url 'stock:S07-02regi' %}"> -->
+                                    <!-- <form method="POST" enctype='multipart/form-data'> -->
+                                    <form action="" method="get">
+                                            {% if form.errors %}
+                                            <div class="errorlist">
+                                                {% for errors in form.errors.values %}
+                                                {% for error in errors %}
+                                                {{ error }}<br>
+                                                {% endfor %}
+                                                {% endfor %}
+                                            </div>
+                                            {% endif %}
+                                            
+                                        <div class="card-body">
+                                            <table class="registertable">
+                                                <thead class="tablecolumn">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>セット名</th>
+                                                            <td>{{form.set_name}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>店舗名</th>
+                                                            <td>{{form.store_id}}</td>
+                                                        </tr>
+                                                        
+                                                        {# カテゴリ #}
+                                                        <tr>
+                                                            <th>ノートPC</th>
+                                                            <td>
+                                                                
+                                                                <select name="notePC">
+                                                                    <option value    selected>---------</option>
+                                                                    {%for item in 0|category_filter%}
+                                                                    <option>
+                                                                        {{item}}
+                                                                    </option>
+                                                                    {%endfor%}
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>デスクトップ</th>
+                                                            <td>
+                                                                <select name="decttop">
+                                                                    <option value selected>---------</option>
+                                                                    {%for item in 1|category_filter%}
+                                                                        <option>
+                                                                            {{item}}
+                                                                        </option>
+                                                                    {%endfor%}
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>モニター</th>
+                                                            <td>
+                                                                <select name="monitor">
+                                                                    <option value selected>---------</option>
+                                                                    {%for item in 2|category_filter%}
+                                                                        <option>
+                                                                            {{item}}
+                                                                        </option>
+                                                                    {%endfor%}
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>メモリ</th>
+                                                            <td>
+                                                                <select name="memory">
+                                                                    <option value selected>---------</option>
+                                                                    {%for item in 3|category_filter%}
+                                                                        <option>
+                                                                            {{item}}
+                                                                        </option>
+                                                                    {%endfor%}
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>HDD</th>
+                                                            <td>
+                                                                <select name="hdd">
+                                                                    <option value selected>---------</option>
+                                                                    {%for item in 4|category_filter%}
+                                                                        <option>
+                                                                            {{item}}
+                                                                        </option>
+                                                                    {%endfor%}
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>SDD</th>
+                                                            <td>
+                                                                <select name="ssd">
+                                                                    <option value selected>---------</option>
+                                                                    {%for item in 5|category_filter%}
+                                                                        <option>
+                                                                            {{item}}
+                                                                        </option>
+                                                                    {%endfor%}
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Office</th>
+                                                            <td>
+                                                                <select name="office">
+                                                                    <option value selected>---------</option>
+                                                                    {%for item in 6|category_filter%}
+                                                                        <option>
+                                                                            {{item}}
+                                                                        </option>
+                                                                    {%endfor%}
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>その他</th>
+                                                            <td>
+                                                                <select name="others">
+                                                                    <option value selected>---------</option>
+                                                                    {%for item in 7|category_filter%}
+                                                                        <option>
+                                                                            {{item}}
+                                                                        </option>
+                                                                    {%endfor%}
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                
+                                                    </tbody>
+                                                </thead>
+                                            </table>
+                                            <br>
+                                        </div>
+                                        {#テスト用#}
+                                        <!-- <button class="btn btn-primary mt-5" name="button_1 " type="submit">テスト用登録</button> -->
+                                        <button class="btn btn-primary mt-5" type="submit" name="button_1">新規登録</button>
+                                        <button class="btn btn-primary mt-5" type="submit" onclick="clearFormAll()">クリア</button>
+                                    </form>
+
+                                    <!-- <form method="POST" enctype='multipart/form-data'>
                                         {% csrf_token %}
                                             {% if form.errors %}
                                             <div class="errorlist">
@@ -71,27 +218,16 @@
                                             <table class="registertable">
                                                 <thead class="tablecolumn">
                                                     <tbody>
-                                                        <tr>
-                                                            <th>セット名</th>
-                                                            <td>{{ form.set_name }}</td>
-                                                            <!-- あとで[店舗] + [個人番号] +a で作る -->
-                                                        </tr>
-                                                        <tr>
-                                                            <th>取置店舗名</th>
-                                                            <td>{{ form.store_id }}</td>
-                                                        </tr>
-                                                        
-                                                        <!-- セットの内容を設定する -->
-                                                        <tr>
-                                                            <th>セット名</th>
-                                                            <td>{{ form.set_item }}</td>
-                                                        </tr>
                                                     </tbody>
                                                 </thead>
                                             </table>
-                                            <br>
                                         </div>
-                                        <button class="btn btn-primary" type="submit">新規登録</button>
+                                        <button class="btn btn-primary mt-5" type="submit" name="button_1">新規登録</button>
+                                    </form> -->
+                                    <!-- <form method="post" action="{url 'stock:S07-02test'}">
+                                        {%csrf_token%}
+                                        {{store_id}}
+                                        <!-- <button class="btn btn-primary mt-5" type="submit" name="button_1">新規登録</button> -->
                                     </form>
                                 </div>
                             </div>
@@ -103,6 +239,37 @@
 
 
 {% endblock %}
+{% block extrajs %}
+{# 新満追記 #}
+<script></script>
+{% endblock %}
+
+<!-- セット名・取置店舗名・商品一覧 -->
+<!-- <div class="card-body">
+    <table class="registertable">
+        <thead class="tablecolumn">
+            <tbody>
+                <tr>
+                    <th>セット名</th>
+                    <td>{{ form.set_name }}</td>
+                    あとで[店舗] + [個人番号] +a で作る -->
+                <!-- </tr>
+                <tr>
+                    <th>取置店舗名</th>
+                    <td>{{ form.store_id }}</td>
+                </tr> -->
+                
+                <!-- セットの内容を設定する -->
+                <!-- <tr>
+                    <th>セット名</th>
+                    <td>{{ form.set_item }}</td>
+                </tr>
+            </tbody>
+        </thead>
+    </table>
+    <br>
+</div> -->
+
 
 <!-- <form method="POST" enctype='multipart/form-data'>
                     {% csrf_token %}

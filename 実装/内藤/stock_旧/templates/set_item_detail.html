@@ -25,26 +25,16 @@
                                 <tr><th>ID</th><td>{{ object.id }}</td></tr>
                                 <tr><th>セット名</th><td>{{ object.set_name }}</td></tr>
                                 <tr><th>店舗名</th><td>{{ object.store_id }}</td></tr>
-                                <!-- <tr> -->
-                                    <!-- <th>中身</th> -->
-                                    <!-- <td> -->
-                                    <!-- { for item in object.set_item.all %} -->
-                                    <!-- {{object.set_item.all}} -->
-                                    <!-- {{ item }}<br> -->
-                                    {#object.set_item.all#}
+                                <tr>
+                                    <th>中身</th>
+                                    <td>
                                     {% for item in object.set_item.all %}
-                                    <tr>
-                                    <th>{{ forloop.counter }}つめの商品</th>
-                                    <td>{{item.model_number}}</td>
-                                </tr>
+                                    {{ item.model_number }}<br>
+                                    {% empty %}
+                                    <p>データナシ</p>
                                     {% endfor %}
-                                    <!-- { empty %} -->
-                                    <!-- <p>データナシ</p> -->
-                                    <!-- {endfor %} -->
-                                <!-- </td> -->
-                                <!-- </tr> -->
-                                
-                                
+                                    </td>
+                                </tr>
                                 <tr><th>作成日時</th><td>{{ object.created_at }}</td></tr>
                                 <tr><th>最終更新日時</th><td>{{ object.updated_at }}</td></tr>
                             </tbody>

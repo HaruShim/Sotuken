@@ -1,31 +1,13 @@
-from cProfile import label
-from unicodedata import category
+from django import forms
 from django.forms import ModelForm
 # from django.core.mail import EmailMessage
 
 from .models import SetItem
-from itemmas.models import ItemInfo
-from django import forms
 
 class S0701Form(ModelForm):
-    # category = forms.ModelChoiceField(queryset=ItemInfo.objects.values_list("category",flat=True),label = "カテゴリ")
-
     class Meta:
         model = SetItem
-        fields = (
-                "store_id",
-                "set_name",
-                "set_item",
-                )
-        labels = {
-            "set_item" : "中身",
-        }
-
-
-# class S0701Form2(ModelForm):
-#     class Meta:
-#         model = ItemInfo
-#         fields = "__all__"
+        fields = "__all__"
         # fields = ("store_id","set_name","set_item")
         
         # widgets = {

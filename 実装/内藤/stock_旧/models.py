@@ -7,7 +7,6 @@
 
 """
 
-from unicodedata import category
 from django.db import models
 # storemas から StoreInfoをインポート
 from storemas.models import StoreInfo
