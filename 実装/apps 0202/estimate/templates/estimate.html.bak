@@ -1,0 +1,503 @@
+<!-- S10-01 見積
+
+    ToDo
+        画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満) 
+        
+-->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | 見積{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">見積</h1>
+        <!-- <form method="POST" name="form"> -->
+        {# csrf_token #}
+        {# 客用はJSで表示非表示にする #}
+        <div class="p1 placement-right">
+            <input class="btn btn--orange btn--cubic btn--shadow estimate" type="button" value="お客様用見積画面へ" onclick="clickBtn1()" />
+            <!-- <a class="btn btn--orange btn--cubic btn--shadow estimate" href="#">お客様用見積画面へ</a> -->
+        </div>
+        <form id="ajax_ch_servings" action="{% url 'estimate:ajax_ch_servings'%}" method="GET">
+            {{form.category}}
+            {{ form.id }}
+            <!-- <select name="servings" id="id_servings" onclick='document.getElementById("ch_servings_submit").click();'>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>人前 -->
+            <input type="text" id="item_code_input">
+            <input type="submit" value="送信" id="ch_servings_submit">
+            <!-- 隠しデータを設定しておく部分 -->
+            <input type="hidden" name="hidden_data" value="{{params.post_hidden_data}}">
+        </form>
+
+        <!-- <table class="listtable sub3" id="p1"> -->
+        <table style="width:100%; margin-bottom: 70px;" class="estimatetable" id="esttable">
+            <thead class="tablecolumn">
+                <tr>
+                    <th style="width:13;">商品コード</th>
+                    <th style="width:25%;">型番</th>
+                    <th style="width:15%;">販売価格</th>
+                    <th style="width:15%;">仕入価格</th>
+                    <th style="width:15%;">粗利</th>
+                    <th style="width:8%;">粗利率</th>
+                    <th style="width:9%;">取消</th>
+                </tr>
+            </thead>
+
+
+
+        <!-- </table>
+        <table border="1" id="targetTable">
+            <thead>
+                <tr>
+                    <td>名前</td>
+                    <td>年齢</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>鈴木</td>
+                    <td>12</td>
+                </tr>
+            <tbody> -->
+        </table>
+        <!-- <table class="ProductTable">
+            <b>実行結果</b>
+            <p></p>
+            <p>{# post_hidden_data }}</p>
+
+            {{view_tamesi#}
+
+        </table> -->
+        <div id="result"></div>
+        <div class="onoffields">
+            <h3 class=""><i class="fas fa-shopping-cart"></i> <span id="kosuu"></span>/<span id="nedan"></span>円</h3>
+        </div>
+        <p class="dis-non-tdth">id：<span id="id"></span></p>
+        <p class="dis-non-tdth">title：<span id="title"></span></p>
+        <p class="dis-non-tdth">json：<span id="json"></span></p>
+    </div>
+</main>
+{% endblock %}
+
+{% block extrajs %}
+
+<script>
+    //初期表示は非表示
+    // document.getElementsByClassName("p1").style.display = "block";
+
+    // function clickBtn1() {
+    //     const p1 = document.getElementsByClassName("p1")[0];
+
+    //     if (p1.style.display == "block") {
+    //         // noneで非表示
+    //         p1.style.display = "none";
+    //     } else {
+    //         // blockで表示
+    //         p1.style.display = "block";
+    //     }
+    // }
+    $(function () {
+        var value = 300; // りんごの単品価格
+        var maxNum = 100; // 注文できる個数の上限
+        var tagInput = $('#101240004'); // 入力対象のinputタグID名
+        var tagOutput = $('#1012400042'); // 出力対象のinputタグID名
+        tagInput.on('change', function () {
+            var str = $(this).val();
+            var num = Number(str.replace(/[^0-9]/g, '')); // 整数以外の文字列を削除
+            if (num == 0) {
+                num = '';
+            } else if (num > maxNum) { // 上限を超える個数を入力した場合
+                num = maxNum;
+            }
+            $(this).val(num);
+            if (num != 0) {
+                var price = num * value;
+                tagOutput.val(price);
+            }
+        });
+    });
+</script>
+
+
+
+<script>
+    $('#ajax_ch_servings').on('submit', e => {
+        e.preventDefault();
+
+        $.ajax({
+            'url': '{% url "estimate:ajax_ch_servings" %}',
+            'type': 'GET',
+            'data': {
+                'servings': $('#id_servings').val(),
+                'item_code':$('#item_code_input').val(),
+            },
+            'dataType': 'json'
+        }).done(response => {
+            $('#id_ingredient').empty();
+            // alert(response.datalist)
+            var selecteddata = response.datalist[0];
+            // alert(JSON.stringify(selecteddata));
+            var item_code = JSON.stringify(selecteddata.item_code).replace(/"/g, '');
+            var model_number = JSON.stringify(selecteddata.model_number).replace(/"/g, '');
+            var purchase_price = JSON.stringify(selecteddata.purchase_price).replace(/"/g, '');
+            var gross_profit_margin = 0.4;
+            var selling_price = parseInt(parseInt(purchase_price) * (1 + gross_profit_margin));
+            var gross_profit = selling_price - parseInt(purchase_price);
+            // * parseInt()
+            // var item = JSON.parse(dataname);
+            var table = document.getElementById('esttable');
+            // 行を行末に追加
+            var row = table.insertRow(-1);
+            // セルの挿入
+            var cell1 = row.insertCell(-1);
+            var cell2 = row.insertCell(-1);
+            var cell3 = row.insertCell(-1);
+            var cell4 = row.insertCell(-1);
+            var cell5 = row.insertCell(-1);
+            var cell6 = row.insertCell(-1);
+            var cell7 = row.insertCell(-1);
+            // ボタン用 HTML
+            // onChange
+            var button = '<input type="button" value="削除" onclick="deleteRow(this)" />';
+            var in_pp = purchase_price + '¥';
+            var in_gpm = '<input name="in_gpm" style="width:30px; border: none; outline: none;" type="text" value="'+String(gross_profit_margin * 100)+'" onChange="chengecell(this)"/>%';
+            var in_gp = gross_profit + '¥';
+            var in_sp = '<input name="in_sp" style="width:100px; border: none; outline: none;" type="text" value="'+selling_price+'" onChange="chengecell(this)"/>¥';
+            // c5.setAttribute("value",valuetamesi);
+            
+            // 行数取得
+            var row_len = table.rows.length;
+            // var name = JSON.stringify(ingredient.item_code)
+            // セルの内容入力
+            cell1.innerHTML = item_code;
+            cell2.innerHTML = model_number;
+            cell3.innerHTML = in_sp;
+            cell4.innerHTML = in_pp;
+            cell5.innerHTML = in_gp
+            cell6.innerHTML = in_gpm;
+            cell7.innerHTML = button;
+            cell1.classList.add('th-13part');
+            cell2.classList.add('th-25part');
+            cell3.classList.add('th-15part');
+            cell4.classList.add('th-15part');
+            cell5.classList.add('th-15part');
+            cell6.classList.add('th-8part');
+            cell7.classList.add('th-9part');
+            // getTableData();
+            document.getElementById("nedan").textContent = countsp();
+            
+        });
+    });
+
+function chengecell(obj){
+    tr = obj.parentNode.parentNode;
+    trind = tr.sectionRowIndex
+    if (obj.name == "in_gpm"){
+        // alert('if gpm');
+        // alert(obj.parentNode.parentNode.cells[5].getElementsByTagName("input")[0].value)
+        var new_gpm = 1 + (parseInt(obj.value) / 100);
+        // alert(new_gpm);
+        // alert(obj.parentNode.parentNode.cells[3].innerHTML.replace('¥',''));
+        var new_sp = parseInt(parseInt(obj.parentNode.parentNode.cells[3].innerHTML.replace('¥','')) * new_gpm);
+        // alert(new_sp);
+        var new_gp = new_sp - parseInt(obj.parentNode.parentNode.cells[3].innerHTML.replace('¥',''));
+        // alert(new_gp);
+        obj.parentNode.parentNode.querySelector('input[name="in_sp"]').value = new_sp;
+        // alert(obj.parentNode.parentNode.cells[4].innerHTML);
+        obj.parentNode.parentNode.cells[4].innerHTML = new_gp + "¥";
+
+        document.getElementById("nedan").textContent = countsp();
+    }
+    // alert(obj.name);
+    // alert('何行目？'+obj.value);
+}
+// .cells[5].getElementsByTagName("input")[0].value
+// $('tr').chenge(function (event) {
+//     $("#result").html($(this).index() + 1 + "行目をクリックしました。");
+//     var rowIndex = this.rowIndex + 1;
+//     alert(rowIndex);         
+// });
+//     function calcrow(){
+// }
+// $('td').click(function(){
+//     //縦
+//     var row = $(this).closest('tr').index();
+//     //横
+//     var col = this.cellIndex;
+//     alert('Row: ' + row + ', Column: ' + col);
+// });
+
+let text = document.getElementById('id_category');
+text.addEventListener('change', inputChange);
+
+function inputChange(event){
+    alert(event.currentTarget.value);
+}
+
+function countsp(){
+    var tbl = document.getElementById("esttable"); //テーブルのコントロールを取得
+    var pp = 0;
+    for(var i = 1; i < tbl.children[0].children.length; i++){ //i=0はヘッダ
+        var row = tbl.children[0].children[i]; //tbl.children[0]がthead,tbodyの部分です
+        // alert(row.cells[5].getElementsByTagName("input")[0].value); //各行のコードのコントロールの値を出力
+        // alert(row.cells[1].getElementsByTagName("input")[0].value); //各行の名称のコントロールの値を出力
+        pp += parseInt(row.cells[2].getElementsByTagName("input")[0].value);
+    } 
+    return pp
+}
+
+function getTableData(){
+    // 抽出したデータを格納する配列
+    let data = [];
+    // idでhtmlからtableの要素を取得し、trタグのNodeListを取得
+    let table = document.getElementById('esttable');
+    let tbl_tr = table.querySelectorAll('tr');
+    //テーブルの1行(trタグ)毎に処理
+    tbl_tr.forEach(function(tr){
+        //tdタグのNodeListを取得
+        let cells = tr.querySelectorAll('td');
+        //テーブルのヘッダー部分は飛ばす
+        if (cells.length!=0){
+            // テーブルの1行(trタグ)のデータを格納する配列
+            let d =[];
+            let pp = [];
+            //セル(tdタグ)毎に処理
+            alert(cells[5].innerHTML);
+            cells.forEach(function(td){
+                //セルがinputタグだった場合
+                if(td.innerHTML.indexOf('input') != -1) {
+                    d.push(td.firstElementChild.value);
+                }
+                //セルがtextだった場合
+                else if(td.textContent!=""){
+                    d.push(td.textContent);
+                }
+                //セルが空白だった場合
+                else{
+                    d.push("");
+                }
+            });
+            data.push(d);
+        }
+    });
+    alert(typeof data);
+    return data
+}
+
+    /**
+ * 行削除
+ */
+function deleteRow(obj) {
+    // 削除ボタンを押下された行を取得
+    tr = obj.parentNode.parentNode;
+    // trのインデックスを取得して行を削除する
+    tr.parentNode.deleteRow(tr.sectionRowIndex);
+    // document.getElementById("kosuu").textContent = countsp();
+}
+</script>
+
+
+
+<script>
+    $(function () {
+        $.ajax({
+            url: "{% url 'estimate:sample-ajax' %}",
+            type: "GET",
+            dataType: "json",
+        })
+            .done(function (data) {
+                // alert(data);
+                // alert(typeof data);
+                // success
+                //取得jsonデータ
+                // var data_stringify = JSON.stringify(data);
+                var data_json = JSON.parse(data);
+                // alert(typeof data_json[0]);
+                // alert(data_json[0]);
+                //jsonデータから各データを取得
+                var data_id = data_json[1].name;
+                // alert(JSON.stringify(data_id));
+                var data_title = data_json[1]["model_number"];
+                // alert(data_title);
+                //出力
+                $("#id").text(data_id);
+                $("#title").text(data_title);
+                $("#json").text(JSON.stringify(data_json));
+            })
+            .fail(function (data) {
+                // error
+                alert("error");
+                console.log("error");
+            });
+    });
+    let select = document.querySelector('[name="category"]');
+
+    // select.onchange = event => {
+    //     alert(select.selectedIndex);
+    // }
+    // $(function () {
+    //     $(document.querySelector('[name="category"]').onchange)
+    //     // $.getJSON(jsonUrl, function (data) {
+    //         var data = document.getElementById('json');
+    //         alert(JSON.stringify(data))
+    //         // エリアデータをselectに表示
+    //         for (var i in data) {
+    //             for (var j in data[i]["category"]) {
+    //                 var appendObj = "<option value=" + data[i]["category"][j].area + ">" + data[i]["category"][j].name + "</option>";
+    //                 $("#area").append(appendObj);
+    //             }
+    //         }
+
+    //         // 都道府県データを全件表示する関数をセット
+    //         function prefDataAll(data) {
+    //             for (var i in data) {
+    //                 for (var j in data[i]["subCategory"]) {
+    //                     var appendObj2 = "<option value=" + data[i]["subCategory"][j].pref + ">" + data[i]["subCategory"][j].name + "</option>";
+    //                     $("#area2").append(appendObj2);
+    //                 }
+    //             }
+    //         }
+
+    //         // 都道府県データをselectに表示
+    //         prefDataAll(data);
+
+    //         // エリア選択で都道府県データを切り替える
+    //         $("#area").on('change', function () {
+
+    //             // 都道府県データをselectから一度全消去
+    //             $("#area2").empty();
+
+    //             // 選択したエリアのvalueを変数へ入れる
+    //             var areaNo = $(this).val();
+
+
+    //             if ($(this).val() == "0") {
+    //                 // 選択したエリアのvalueが0なら全表示の関数を呼び出す
+    //                 prefDataAll(data);
+    //             } else {
+    //                 // 選択したエリアのvalueが0以外ならソート表示の関数を呼び出す
+    //                 prefData(data);
+    //             }
+
+    //             // 都道府県データをソート表示する関数をセット
+    //             function prefData(data) {
+    //                 for (var i in data) {
+    //                     for (var j in data[i]["subCategory"]) {
+    //                         if (data[i]["subCategory"][j].area == areaNo) {
+    //                             var appendObj2 = "<option value=" + data[i]["subCategory"][j].pref + ">" + data[i]["subCategory"][j].name + "</option>";
+    //                             $("#area2").append(appendObj2);
+    //                         }
+    //                     }
+    //                 }
+    //             }
+
+    //         });
+
+    //     });
+    // ;
+
+
+
+
+    // (function ($) {
+    //     $(function () {
+    //         $.ajax({
+    //             url: '【jsonへのパス】',
+    //             type: 'GET',
+    //             dataType: "json",
+    //         }).done(function (data) {
+    //             // success
+    //             //取得jsonデータ
+    //             var data_stringify = JSON.stringify(data);
+    //             var data_json = JSON.parse(data_stringify);
+    //             //jsonデータから各データを取得
+    //             var data_id = data_json[0]["id"]; // jsonの構造ごとに変更してください
+    //             //出力
+    //             $("#span1").text(data_id);
+    //         }).fail(function (data) {
+    //             // error
+    //             console.log('error');
+    //         });
+    //     });
+    // })(jQuery);
+
+
+    // function clickBtn() {
+    //     var txt = document.getElementById("lend").value;
+    //     $.ajax({
+    //         url: "{ url 'library:scandisp' %}",
+    //         method: 'GET',
+    //         data: { "input_data": txt },
+    //         dataType: "json",
+    //         contentType: "application/json",
+    //         beforeSend: function (xhr, settings) {
+    //             if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+    //                 xhr.setRequestHeader("X-CSRFToken", csrf_token);
+    //             }
+    //         },
+    //         error: function (xhr, status, error) {
+    //             console.log("error")
+    //         }
+    //     })
+    //         .done(function (data) {
+    //             //document.getElementById("text").textContent = data;
+    //             alert(typeof data);
+    //             var deserialised = JSON.parse(data);
+    //             alert('deserialisedの値は');
+    //             alert(typeof deserialised);
+    //             var js = deserialised[0].fields;
+    //             alert(JSON.stringify(js));
+    //             var js2 = js.book_author;
+    //             alert(JSON.stringify(js2));
+    //             var js3 = JSON.stringify(js2);
+    //             document.getElementById("text").textContent = js3;
+    //             {% comment %} innerHTMLtxt.innerHTML = js3; {% endcomment %}
+    //             //console.log(deserialised)
+    //             //fetch('./templates/lend.html').then(res=>res.json()).then(console.log);
+    //             //fetch('text').then(res=>res.json()).then(console.log(JSON.stringify(data, null, 2)));
+    //             //JSON.parse(text)
+    //             //var aaa = document.getElementById("text").textContent = data;
+    //             //var bbb = encodeURIComponent(aaa);
+    //             //document.getElementById('text2').innerText = bbb;
+    //             //console.log("text2");
+    //             //fetch('text2').then(res=>res.json()).then(console.log);
+
+    //         });
+
+    //     // csrf_tokenの取得に使う
+    //     function getCookie(name) {
+    //         var cookieValue = null;
+    //         if (document.cookie && document.cookie !== '') {
+    //             var cookies = document.cookie.split(';');
+    //             for (var i = 0; i < cookies.length; i++) {
+    //                 var cookie = jQuery.trim(cookies[i]);
+    //                 // Does this cookie string begin with the name we want?
+    //                 if (cookie.substring(0, name.length + 1) === (name + '=')) {
+    //                     cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //         return cookieValue;
+    //     }
+
+    //     // ヘッダにcsrf_tokenを付与する関数
+    //     function csrfSafeMethod(method) {
+    //         // these HTTP methods do not require CSRF protection
+    //         return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    //     };
+    // }
+
+</script>
+
+{% endblock %}
