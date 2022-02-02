@@ -23,19 +23,20 @@
             <div class="st-left">
                 <input name="" value="{{ request.GET.query }}" type="text" placeholder="従業員名">
                 <input name="" value="{{ request.GET.query }}" type="text" placeholder="その他">
-                <select name="">
+                {{form.store_selecter}}
+                <!-- <select name="">
                     <option value="" selected>店舗を選択</option>
                     <option value="0">何とか店</option>
                     <option value="1">何とか店2</option>
                     <option value="2">修理中</option>
                     <option value="3">取置</option>
                     <option value="4">削除</option>
-                </select> 
+                </select>  -->
                 <button class="btn btn--orange btn--cubic btn--shadow" onclick="clearFormAll()">クリア</button>
                 <button class="btn btn--orange btn--cubic btn--shadow" type="submit">検索する</button>
             </div>
             <div class="st-right">
-                <a style="width: 100px;" class="modal-btn btn btn--orange btn--cubic btn--shadow">新規登録</a>
+                <a style="width: 100px;" class="modal-btn btn btn--orange btn--cubic btn--shadow">登録</a>
             </div>
         </form>
         <!-- <div class="edit-ditail-table">
@@ -48,15 +49,11 @@
         <div class="wrapper">
             <div class="modal js-modal">
                 <div class="modal_background js-modal-close"></div>
-                <div class="modal_content">
-                    <p>従業員ID：</p><input name="q_item" id="item-box" placeholder="商品コードを指定" value="{{ request.GET.q_item }}" type="text">
-                    <p>型番：{{object.model_number}}</p>
-                    <select name="workstatus" id="status-select">
-                        <option value="">店舗B</option>
-                        <option value="">店舗A</option>
-                        <option value="">店舗C</option>
-                    </select>
-                    <!-- <p>上記の商品を本当に削除しますか？</p> -->
+                <div class="modal_content-w80">
+                    <p>従業員ID:{{user.username}}</p>
+                    <p>従業員名:{{user.name}}</p>
+                    <p>勤務店舗:{{form.store_selecter}}</p>
+                    <p>勤務状況を登録しますか？</p>
                     <form method="POST" action="#">
                         {% csrf_token %}
                         <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="">戻る</a>
@@ -65,26 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper">
-            <div class="modal js-modal">
-                <div class="modal_background js-modal-close"></div>
-                <div class="modal_content">
-                    <p>従業員ID：</p><input name="q_item" id="item-box" placeholder="商品コードを指定" value="{{ request.GET.q_item }}" type="text">
-                    <p>型番：{{object.model_number}}</p>
-                    <select name="workstatus" id="status-select">
-                        <option value="">店舗B</option>
-                        <option value="">店舗A</option>
-                        <option value="">店舗C</option>
-                    </select>
-                    <!-- <p>上記の商品を本当に削除しますか？</p> -->
-                    <form method="POST" action="#">
-                        {% csrf_token %}
-                        <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="">戻る</a>
-                        <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" name="del_button" type="submit">登録</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        
                 <div class="card-body">
                     <table class="listtable">
                         <thead class="tablecolumn">
