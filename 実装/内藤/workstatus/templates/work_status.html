@@ -1,0 +1,143 @@
+<!-- S14-01 勤務状況一覧
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        **60行目をDBからデータをセレクトできるように
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 勤務状況一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">勤務状況一覧</h1>
+        <form action="" method="get" class="searchtable">
+            <div class="st-left">
+                <input name="" value="{{ request.GET.query }}" type="text" placeholder="従業員名">
+                <input name="" value="{{ request.GET.query }}" type="text" placeholder="その他">
+                <select name="">
+                    <option value="" selected>店舗を選択</option>
+                    <option value="0">何とか店</option>
+                    <option value="1">何とか店2</option>
+                    <option value="2">修理中</option>
+                    <option value="3">取置</option>
+                    <option value="4">削除</option>
+                </select> 
+                <button class="btn btn--orange btn--cubic btn--shadow" onclick="clearFormAll()">クリア</button>
+                <button class="btn btn--orange btn--cubic btn--shadow" type="submit">検索する</button>
+            </div>
+            <div class="st-right">
+                <a style="width: 100px;" class="modal-btn btn btn--orange btn--cubic btn--shadow">新規登録</a>
+            </div>
+        </form>
+        <!-- <div class="edit-ditail-table">
+            <div class="st-left">
+            </div>
+            <div class="st-right">
+                <a style="width: 100px;" class="modal-btn btn btn--orange btn--cubic btn--shadow">新規登録</a>
+            </div>
+        </div> -->
+        <div class="wrapper">
+            <div class="modal js-modal">
+                <div class="modal_background js-modal-close"></div>
+                <div class="modal_content">
+                    <p>従業員ID：</p><input name="q_item" id="item-box" placeholder="商品コードを指定" value="{{ request.GET.q_item }}" type="text">
+                    <p>型番：{{object.model_number}}</p>
+                    <select name="workstatus" id="status-select">
+                        <option value="">店舗B</option>
+                        <option value="">店舗A</option>
+                        <option value="">店舗C</option>
+                    </select>
+                    <!-- <p>上記の商品を本当に削除しますか？</p> -->
+                    <form method="POST" action="#">
+                        {% csrf_token %}
+                        <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="">戻る</a>
+                        <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" name="del_button" type="submit">登録</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="modal js-modal">
+                <div class="modal_background js-modal-close"></div>
+                <div class="modal_content">
+                    <p>従業員ID：</p><input name="q_item" id="item-box" placeholder="商品コードを指定" value="{{ request.GET.q_item }}" type="text">
+                    <p>型番：{{object.model_number}}</p>
+                    <select name="workstatus" id="status-select">
+                        <option value="">店舗B</option>
+                        <option value="">店舗A</option>
+                        <option value="">店舗C</option>
+                    </select>
+                    <!-- <p>上記の商品を本当に削除しますか？</p> -->
+                    <form method="POST" action="#">
+                        {% csrf_token %}
+                        <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="">戻る</a>
+                        <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" name="del_button" type="submit">登録</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+                <div class="card-body">
+                    <table class="listtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th style="width: 18%;">従業員ID</th>
+                                <th style="width: 18%;">従業員名</th>
+                                <th style="width: 18%;">連絡先</th>
+                                <th style="width: 18%;">雇用形態</th>
+                                <th style="width: 18%;">勤務店舗名</th>
+                                <th style="border:none; width: 20%; background-color: transparent;" id="clear"></th>
+                            </tr>
+                        </thead>
+                        
+                        <tr>
+                            <td>12345678</td>
+                            <td>大原太郎</td>
+                            <td>000-0000-0000</td>
+                            <td>アルバイト</td>
+                            <td>店舗B</td>
+                            <td style="border:none;" class="dataright"><input type="button" style="width: 100px;" value="削除"></td>
+                            <!-- <button style="width: 100px;" class="btn" name="del_button" type="submit">削除</button> -->
+                            </tr>
+                            <tr>
+                                <td>12345678</td>
+                                <td>佐藤太郎</td>
+                                <td>000-0000-0000</td>
+                                <td>店長</td>
+                                <td>店舗A</td>
+                                <td style="border:none;" class="dataright"><input type="button" style="width: 100px;" value="削除"></td>
+                            </tr>
+                        
+                    </table>
+                    <!-- <div class="placement-center">
+                        <a class="btn btn--orange btn--cubic btn--shadow" href="#">完了</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    $(function(){
+        $('.modal-btn').on('click',function(){
+        $('.js-modal').fadeIn();
+        return false;
+    });
+    $('.modal-close-btn').on('click',function(){
+        $('.js-modal').fadeOut();
+        return false;
+        });
+    });
+</script>
+{% endblock %}
