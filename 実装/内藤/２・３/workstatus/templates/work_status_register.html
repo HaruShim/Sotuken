@@ -56,6 +56,23 @@
                                 <form method="POST" enctype='multipart/form-data'>
                                     {% csrf_token %}
                                     <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="">戻る</a>
+                                    <!-- <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit" name="delete_data">削除</button> -->
+                                    <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit" name="create_data">登録</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="modal js-modal2">
+                            <div class="modal_background js-modal-close"></div>
+                            <div class="modal_content-w80">
+                                <p>従業員ID:{{user.username}}</p>
+                                <p>従業員名:{{user.name}}</p>
+                                <p>勤務店舗:{{forms.store_id}}</p>
+                                <p>勤務状況を登録しますか？</p>
+                                <form method="POST" enctype='multipart/form-data'>
+                                    {% csrf_token %}
+                                    <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="">戻る</a>
                                     <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit" name="delete_data">削除</button>
                                     <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit" name="create_data">登録</button>
                                 </form>
@@ -78,7 +95,7 @@
                                 <tr>
                                 {% for item in object_list %}
                                 <!-- string_link -->
-                                <tr>
+                                <tr tr-link="ws">
                                     <td>{{item.employee_id.username}}</td>
                                     <td>{{item.employee_id.name}}</td>
                                     <td>{{item.employee_id.tel_num}}</td>
@@ -101,6 +118,21 @@
 
 {% block extrajs %}
 <script>
+    jQuery(function($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+        //クリックイベント
+        .click(function(e) {
+            $('.js-modal2').fadeIn();
+            return false;
+        
+    });
+    $('.modal-close-btn2').on('click',function(){
+        $('.js-modal2').fadeOut();
+        return false;
+        });
+});
+
     $(function(){
         $('.modal-btn').on('click',function(){
         $('.js-modal').fadeIn();
