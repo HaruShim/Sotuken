@@ -93,7 +93,7 @@ li.sidebar-search {
     padding: 5px 5px 0px 5px;
     flex-shrink: 0;
     width: 225px;
-    height: 18%;
+    height: 20%;
 }
 
 .mgl-12{
@@ -131,6 +131,7 @@ thead.tablecolumn th{
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
+    margin-bottom: 70px;
 }
 .listtable th, td{
     border: solid 1px;
@@ -271,6 +272,8 @@ thead.tablecolumn th{
     border-collapse:  collapse;
     width:  100%;
     table-layout: fixed;
+    /* 2/01 */
+    margin-bottom: 70px;
 }
 .earningtable th, td{
     border: solid 1px;
@@ -316,6 +319,12 @@ thead.tablecolumn th{
 /*.td-size {
     width: 10%;
 }*/
+.cleannesstable.sub2 {
+    width: 100%;
+}
+.cleannesstable.sub2 th {
+    width: 20%;
+}
 
 /* 検索テーブル */
 /*.searchtable {
@@ -651,7 +660,10 @@ aside {
 .item_beside {
     display: inline-block;
     background-color: #eee;
-	padding: 20px 10px;
+	padding: 10px 10px;
+    width:50%;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /* 検索欄 */
@@ -1046,7 +1058,7 @@ section {
 
 /* ホームメニュースクロール */
 .nav-scroll {
-    height: 80%;
+    height: 75%;
     overflow-y: scroll;
     -ms-overflow-style: none;    /* IE, Edge 対応 */
     scrollbar-width: none;       /* Firefox 対応 */
@@ -1066,6 +1078,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+/* ログインボタン */
 .btn-login {
     color: #fff;
     background-color: #337ab7;
