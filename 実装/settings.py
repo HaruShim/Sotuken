@@ -24,17 +24,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 SECRET_KEY = 'l5*jt#l(#sv6mkkv#%yl7-l!vsjkywyhkypry%ebz^!p&7#^_#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
-
-# 静的ファイルを配置する場所
-STATIC_ROOT = '/usr/share/nginx/html/static'
-MEDIA_ROOT = '/usr/share/nginx/html/media'
-
-# Amazon SES関連設定
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = '/home/app_admin/log'
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -62,7 +54,7 @@ INSTALLED_APPS = [
     'estimate.apps.EstimateConfig', # 見積
     'earning.apps.EarningConfig', # 売上
     'employeeref.apps.EmployeerefConfig', # 従業員参照
-    'storeref.apps.StorerefConfig', # 店舗参照
+    # 'storeref.apps.StorerefConfig', # 店舗参照
     'workstatus.apps.WorkstatusConfig', # 勤務状況参照
     
 
@@ -123,10 +115,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'sales_information_management',
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': '',
-        'PORT': '',
+        'USER': 'postgres',
+        'PASSWORD': 'HaruYou0427',
+        'HOST': 'localhost',
+        'PORT': '5432',
     },
     #     'default': {
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -194,13 +186,7 @@ STATICFILES_DIRS = (
 # MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = "/media/"
 
-#MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-MESSAGE_TAGS = {
-    messages.ERROR: 'alert alert-danger',
-    messages.WARNING: 'alert alert-warning',
-    messages.SUCCESS: 'alert alert-success',
-    messages.INFO: 'alert alert-info',
-}
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # 表示する数値に3桁のカンマ区切りを自動で入れる
 NUMBER_GROUPING = 3
@@ -215,32 +201,28 @@ LOGGING = {
     'loggers': {
         # Djangoが利用するロガー
         'django': {
-            'handlers': ['file'],
+            'handlers': ['console'],
             'level': 'INFO',
         },
         # homeアプリケーションが利用するロガー
         'home': {
-            'handlers': ['file'],
-            'level': 'INFO',
+            'handlers': ['console'],
+            'level': 'DEBUG',
         },
     },
 
     # ハンドラの設定
     'handlers': {
-         'file': {
-            'level': 'INFO',
-            'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': os.path.join(BASE_DIR, 'logs/django.log'),
-            'formatter': 'prod',
-            'when': 'D',  # ログローテーション(新しいファイルへの切り替え)間隔の単位(D=日)
-            'interval': 1,  # ログローテーション間隔(1日単位)
-            'backupCount': 7,  # 保存しておくログファイル数
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'dev'
         },
     },
 
     # フォーマッタの設定
     'formatters': {
-        'prod': {
+        'dev': {
             'format': '\t'.join([
                 '%(asctime)s',
                 '[%(levelname)s]',
@@ -295,8 +277,3 @@ ACCOUNT_ADAPTER = 'accounts.adapter.AccountAdapter'
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 # 認証方式を「username(従業員番号)とパスワード」に変更
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
-
-
-# バックアップバッチ用
-BACKUP_PATH = 'backup/'
-NUM_SAVED_BACKUP = 30
