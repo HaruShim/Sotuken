@@ -157,7 +157,7 @@ thead.tablecolumn th {
 #id_balance,#id_wqhd,#id_four_k,#id_game_appropriate,
 #id_game_delivery,#id_video_editing,#id_encode,#id_id,#id_cpu,
 #id_ssd,#id_hdd,#id_monitor_size,#id_monitor_vertical,#id_monitor_horizon,
-#id_graphic,#id_os,#id_category,#num-box,#id_model_number
+#id_graphic,#id_os,#id_category,#num-box,#id_model_number,#itemmascategory
 {
     height: 100%;
     padding: 10px;
@@ -188,11 +188,12 @@ thead.tablecolumn th {
 }
 
 #id_remarks{
-    height: 95%;
+    height: 100px;
     padding: 10px;
     width: 100%;
     border: none;
     text-align: left;
+    font-size: 16px;
 }
 /* end inputタグ(form)の幅をtdのサイズに合わせる */
 
@@ -241,7 +242,7 @@ select.ui-datepicker-month{
 }
 
 #mid.item.img {
-    width: 34%;
+    width: 100%;
     height: 273px;
     /* 01/21 画像の周りに枠線を表示 */
     border: 10px ridge;
@@ -406,6 +407,10 @@ table.listthtd-2 > tbody > tr > :nth-child(2)::before {
 /* end 検索欄とボタンの配置 */
 
 .listtable tr:hover td{
+    background-color:#3d3dc2;
+    color: #fff;
+}
+.earningtable tr:hover td{
     background-color:#3d3dc2;
     color: #fff;
 }
@@ -657,6 +662,22 @@ div.form-floating.mb-3 {
     /* position: absolute; */
     /* bottom: 0; */
     /* right: 40px; */
+}
+
+.modal_content-w80 {
+    left: 50%;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    color: white;
+    text-align: center;
+}
+
+.sb-topnav .navbar-brand {
+    width: 300px;
+    margin: 0;
 }
 
 
