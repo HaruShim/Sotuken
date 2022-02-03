@@ -1,0 +1,126 @@
+<!-- S08-01 商品情報検索
+
+    ToDo
+        画面の制作お願いします
+        カメラ、光学ドライブ、Wi-Fiをラジオボタンにしたい
+        *コピペしときました
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 商品情報検索{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">検索</h1>
+                <div class="itemmas-table item-table">
+                    <table class="searchtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>商品コード</th>
+                                <td><input type="text" id="uitem-code" name="item-code" placeholder="商品コード"></td>
+                                <th>在庫場所</th>
+                                <td>
+                                    <select name="" class="">
+                                        <option value="A">店舗A</option>
+                                        <option value="B">店舗B</option>
+                                        <option value="C">店舗C</option>
+                                        <option value="" selected>-</option>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>カテゴリ</th>
+                                <td>
+                                    <select name="category" class="categorylist">
+                                        <option value="note">ノートPC</option>
+                                        <option value="cpu">CPU</option>
+                                        <option value="gpu">GPU</option>
+                                        <option value="pc">PC</option>
+                                        <option value="" selected>-</option>
+                                </td>
+                                <th>仕入価格</th>
+                                <td><input type="text" id="" name="" placeholder="仕入価格"></td>
+                            </tr>
+                            <tr>
+                                <th>商品状態</th>
+                                <td>
+                                    <select name="item-score" class="itemscorelist">
+                                        <option value="">良い</option>
+                                        <option value="">普通</option>
+                                        <option value="">訳あり</option>
+                                        <option value="" selected>-</option>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="itemmas-table spec-table">
+                    <table>
+                        <thead class="tablecolumn">
+                            <tr>
+                                <th>型番</th>
+                                <td><input type="text" id="" name="" placeholder="型番"></td>
+                                <th>モニタサイズ</th>
+                                <td><input type="text" id="" name="" placeholder="モニタサイズ"></td>
+                            </tr>
+                            <tr>
+                                <th>メーカー</th>
+                                <td><input type="text" id="" name="" placeholder="メーカー"></td>
+                                <th>モニタ解像度(縦)</th>
+                                <td><input type="text" id="" name="" placeholder="解像度(縦)"></td>
+                            </tr>
+                            <tr>
+                                <th>CPU</th>
+                                <td><input type="text" id="" name="" placeholder="CPU"></td>
+                                <th>モニタ解像度(横)</th>
+                                <td><input type="text" id="" name="" placeholder="解像度(横)"></td>
+                            </tr>
+                            <tr>
+                                <th>HDD</th>
+                                <td><input type="text" id="" name="" placeholder="HDD"></td>
+                                <th>カメラ</th>
+                                <td>
+                                    <group class="inline-radio">
+                                        <div><input type="radio" name="camera"><label>Yes</label></div>
+                                        <div><input type="radio" name="camera" checked><label>No</label></div>
+                                    </group>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>SSD</th>
+                                <td><input type="text" id="" name="" placeholder="SSD"></td>
+                                <th>光学ドライブ</th>
+                                <td>
+                                    <group class="inline-radio">
+                                        <div><input type="radio" name="optical-drive"><label>Yes</label></div>
+                                        <div><input type="radio" name="optical-drive" checked><label>No</label></div>
+                                    </group>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>OS</th>
+                                <td><input type="text" id="" name="" placeholder="OS"></td>
+                                <th>グラフィック</th>
+                                <td><input type="text" id="" name="" placeholder="グラフィック"></td>
+                            </tr>
+                            <tr>
+                                <th>Wi-Fi</th>
+                                <td>
+                                    <group class="inline-radio">
+                                        <div><input type="radio" name="member"><label>Yes</label></div>
+                                        <div><input type="radio" name="member" checked><label>No</label></div>
+                                    </group>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="center-button">
+                        <a class="btn btn--orange btn--cubic btn--shadow" href="#">検索</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

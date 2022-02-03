@@ -1,0 +1,81 @@
+<!-- S01-01 従業員一覧画面
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 従業員情報一覧{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">従業員一覧</h1>
+        <form action="" method="get" class="searchtable">
+            <div class="st-left">
+                <input name="" value="{{ request.GET.query }}" type="text" placeholder="従業員名">
+                <input name="" value="{{ request.GET.query }}" type="text" placeholder="その他">
+                <select name="">
+                    <option value="" selected>店舗を選択</option>
+                    <option value="0">何とか店</option>
+                    <option value="1">何とか店2</option>
+                    <option value="2">修理中</option>
+                    <option value="3">取置</option>
+                    <option value="4">削除</option>
+                </select> 
+                <button class="btn btn--orange btn--cubic btn--shadow" onclick="clearFormAll()">クリア</button>
+                <button class="btn btn--orange btn--cubic btn--shadow" type="submit">検索する</button>
+            </div>
+            <div class="st-right">
+                <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'employeemas:S01-02' %}">新規登録</a>
+            </div>
+        </form>
+            <table class="listtable column-color listthtd-2">
+                <thead class="tablecolumn">
+                    <tr>
+                        <th class="dis-non-tdth">番号</th>
+                        <th class="id-tdth">ID</th>
+                        <th>従業員ID</th>
+                        <th>従業員名</th>
+                        <th>店舗</th>
+                    </tr>
+                </thead>
+                
+                    <!-- CustomUser -->
+                    {% for item in object_list %}
+                    <tr tr-link="employeelist">
+                        <td class="dis-non-tdth" style="text-align: center;">{{item.id}}</td>
+                        <td class="id-tdth"></td>
+                        <td>{{ item.username }}</td><!--従業員ID-->
+                        <td>{{ item.name }}</td><!--従業員名-->
+                        <td>{{ item.store_id.store_name }}</td><!--店舗-->
+                    </tr>
+                    {% endfor %}
+                
+            </table>
+            {# ページネーション処理 #}
+            {% include 'pagenavigation.html' %}
+        </div>
+</main>
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript">
+    jQuery(function($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+        //クリックイベント
+        .click(function(e) {
+            //e.targetはクリックした要素自体、それがa要素以外であれば
+            if(!$(e.target).is('a')){
+                var hiddenVal = $(this).children('td')[0].innerText;
+            //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+            window.location.href = "{% url 'employeemas:S01-03' 100 %}".replace(100,hiddenVal);
+        }
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,304 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | 商品一覧画面{% endblock %}
+
+{% block main_contents %}
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'js/datatables/datatables.min.css' %}"/> -->
+    <script type="text/javascript" language="javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script type="text/javascript" language="javascript" src="{% static 'js/datatables/datatables.min.js' %}"></script>
+    <!-- カートに追加する -->
+    <script>
+    // 行追加
+        function insertRow(id) {
+            // テーブル取得
+            var table = document.getElementById(id);
+            // 行を行末に追加
+            var row = table.insertRow(-1);
+            // セルの挿入
+            var cell1 = row.insertCell(-1);
+            var cell2 = row.insertCell(-1);
+            var cell3 = row.insertCell(-1);
+            var cell4 = row.insertCell(-1);
+            // ボタン用 HTML
+            var button = '<a class="btn btn-small" onclick="deleteRow(this)">×</a>';
+            // 行数取得
+            var row_len = table.rows.length;
+            // セルの内容入力
+            cell1.innerHTML = "//商品コードを取得";
+            cell2.innerHTML = "//型番を取得";
+            cell3.innerHTML = "//仕入価格を取得";
+            cell4.innerHTML = button;
+        }
+        // 行削除
+        function deleteRow(obj) {
+            // 削除ボタンを押下された行を取得
+            tr = obj.parentNode.parentNode;
+            // trのインデックスを取得して行を削除する
+            tr.parentNode.deleteRow(tr.sectionRowIndex);
+            // 行数をリアルタイムで削除したらカウントし直したかった 断念中↓==================!
+            for (let index= 0; index < table.length; index++){
+                table[0].cell1=row_len-1;
+            }
+        }
+    </script>
+    <!-- カート移動＊ver1.13.0 -->
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script>
+        $( function() {
+            $( "#draggable" ).draggable();
+        } );
+    </script>
+    <!-- /カート移動 -->
+    <!-- 検索窓ページネーション等表示可否 -->
+    <script>
+        $(document).ready(function(){
+           $('.itemtable').DataTable({
+                lengthChange: false,	// 1画面内の件数切替
+                searching: true,		// 検索窓
+                ordering: true,			// ソート機能
+                info: false,			// 件数の表示
+                paging: true			// ページング機能
+           });
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid px-4">
+        <div class="row">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="contents">
+                        <div class="item head">
+                            <i class="fas fa-table me-1"></i>
+                        </div>
+                        <div class="item head">
+                            商品情報一覧
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="contents">
+                        <div class="item">
+                            <div class="placement-right">
+                                <a class="btn btn--orange btn--cubic btn--shadow" href="#">検索</a>
+                                <a class="btn btn--orange btn--cubic btn--shadow" href="#">新規登録</a>
+                            </div>
+                            <div class="colum-num">
+                                <table class="itemtable column-color">
+                                    <thead class="tablecolumn">
+                                        <tr>
+                                            <th class="table-num">No.</th>
+                                            <th nowrap>商品コード<i class="fa fa-sort"></i></th>
+                                            <th nowrap>型番<i class="fa fa-sort"></i></th>
+                                            <th nowrap>カテゴリ<i class="fa fa-sort"></i></th>
+                                            <th nowrap>在庫場所<i class="fa fa-sort"></i></th>
+                                            <th nowrap>仕入価格<i class="fa fa-sort"></i></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-tbody">
+                                        <tr>
+                                            <td></td>
+                                            <td>123456789</td>
+                                            <td>FMVU75EUV1</td>
+                                            <td>ノートPC</td>
+                                            <td>店舗A</td>
+                                            <td>12,000</td>
+                                            <td class="btn-add-cell">
+                                                <button class="btn btn-add" onclick="insertRow('cart')">＋</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>234567891</td>
+                                            <td>FMVU75DFV1</td>
+                                            <td>デスクトップ</td>
+                                            <td>店舗B</td>
+                                            <td>23,500</td>
+                                            <td class="btn-add-cell">
+                                                <a class="btn btn-add">＋</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>234567891</td>
+                                            <td>FMVU75DFV1</td>
+                                            <td>デスクトップ</td>
+                                            <td>店舗B</td>
+                                            <td>23,500</td>
+                                            <td class="btn-add-cell">
+                                                <a class="btn btn-add">＋</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>234567891</td>
+                                            <td>FMVU75DFV1</td>
+                                            <td>デスクトップ</td>
+                                            <td>店舗B</td>
+                                            <td>23,500</td>
+                                            <td class="btn-add-cell">
+                                                <a class="btn btn-add">＋</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>234567891</td>
+                                            <td>FMVU75DFV1</td>
+                                            <td>デスクトップ</td>
+                                            <td>店舗B</td>
+                                            <td>23,500</td>
+                                            <td class="btn-add-cell">
+                                                <a class="btn btn-add">＋</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>234567891</td>
+                                            <td>FMVU75DFV1</td>
+                                            <td>デスクトップ</td>
+                                            <td>店舗B</td>
+                                            <td>23,500</td>
+                                            <td class="btn-add-cell">
+                                                <a class="btn btn-add">＋</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>234567891</td>
+                                            <td>FMVU75DFV1</td>
+                                            <td>デスクトップ</td>
+                                            <td>店舗B</td>
+                                            <td>23,500</td>
+                                            <td class="btn-add-cell">
+                                                <a class="btn btn-add">＋</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>234567891</td>
+                                            <td>FMVU75DFV1</td>
+                                            <td>デスクトップ</td>
+                                            <td>店舗B</td>
+                                            <td>23,500</td>
+                                            <td class="btn-add-cell">
+                                                <a class="btn btn-add">＋</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>234567891</td>
+                                            <td>FMVU75DFV1</td>
+                                            <td>デスクトップ</td>
+                                            <td>店舗B</td>
+                                            <td>23,500</td>
+                                            <td class="btn-add-cell">
+                                                <a class="btn btn-add">＋</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>234567891</td>
+                                            <td>FMVU75DFV1</td>
+                                            <td>デスクトップ</td>
+                                            <td>店舗B</td>
+                                            <td>23,500</td>
+                                            <td class="btn-add-cell">
+                                                <a class="btn btn-add">＋</a>
+                                            </td>
+                                        </tr>
+                                    
+                                </table>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <aside>
+                                <div class="summary" id="draggable">
+                                    <div class="summary-total-items"><span class="total-items"></span>移動指示入力</div>
+                                    <div class="scroll">
+                                        <table class="deliverytable column-color" id="cart">
+                                            <thead>
+                                                <tr class="fixed01">
+                                                    <th nowrap>商品コード</th>
+                                                    <th nowrap>型番</th>
+                                                    <th nowrap>在庫</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-tbody">
+                                                <!-- <tr>
+                                                    <td>123456789</td>
+                                                    <td>FMVU75EUV1</td>
+                                                    <td>店舗A</td>
+                                                    <td id="btn-cell">
+                                                        <a class="btn btn-small" href="#">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>123456789</td>
+                                                    <td>FMVU75EUV1</td>
+                                                    <td>店舗A</td>
+                                                    <td id="btn-cell">
+                                                        <a class="btn btn-small" href="#">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>123456789</td>
+                                                    <td>FMVU75EUV1</td>
+                                                    <td>店舗A</td>
+                                                    <td id="btn-cell">
+                                                        <a class="btn btn-small" href="#">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>123456789</td>
+                                                    <td>FMVU75EUV1</td>
+                                                    <td>店舗A</td>
+                                                    <td id="btn-cell">
+                                                        <a class="btn btn-small" href="#">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>123456789</td>
+                                                    <td>FMVU75EUV1</td>
+                                                    <td>店舗A</td>
+                                                    <td id="btn-cell">
+                                                        <a class="btn btn-small" href="#">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>123456789</td>
+                                                    <td>FMVU75EUV1</td>
+                                                    <td>店舗A</td>
+                                                    <td id="btn-cell">
+                                                        <a class="btn btn-small" href="#">×</a>
+                                                    </td>
+                                                </tr> -->
+                                            
+                                        </table>
+                                    </div>
+                                    <div class="summary-delivery">
+                                        <select name="delivery-collection" class="summary-delivery-selection">
+                                            <option hidden>移動先選択</option>
+                                            <option value="">店舗A</option>
+                                            <option value="">店舗B</option>
+                                            <option value="">店舗C</option>
+                                            <option value="">店舗D</option>
+                                        </select>
+                                    </div>
+                                    <div class="">
+                                        <a class="btn btn--orange btn--cubic btn--shadow " href="#">決定</a>
+                                    </div>
+
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
