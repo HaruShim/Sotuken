@@ -1,0 +1,137 @@
+<!--S07-04 セット商品編集
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% load in_group %}
+
+{% block title %}SIMS | セット商品編集{% endblock %}
+
+{% block main_contents %}
+<script>
+    // 行追加
+    function insertRow(id) {
+        // テーブル取得
+        var table = document.getElementById(id);
+        // 行を行末に追加
+        var row = table.insertRow(-1);
+        // セルの挿入
+        var cell1 = row.insertCell(-1);
+        var cell2 = row.insertCell(-1);
+        var cell3 = row.insertCell(-1);
+        var cell4 = row.insertCell(-1);
+        var cell5 = row.insertCell(-1);
+        // ボタン用 HTML
+        var button = '<input type="button" value="削除" onclick="deleteRow(this)" />';
+        // 行数取得
+        var row_len = table.rows.length;
+        // セルの内容入力
+        cell1.innerHTML = row_len-1;
+        cell2.innerHTML = "//商品コードを取得";
+        cell3.innerHTML = "//型番を取得";
+        cell4.innerHTML = "//仕入価格を取得";
+        cell5.innerHTML = button;
+    }
+    // 行削除
+    function deleteRow(obj) {
+        // 削除ボタンを押下された行を取得
+        tr = obj.parentNode.parentNode;
+        // trのインデックスを取得して行を削除する
+        tr.parentNode.deleteRow(tr.sectionRowIndex);
+        //　行数をリアルタイムで削除したらカウントし直したかった　断念中↓==================!
+        for (let index= 0; index < table.length; index++){
+            table[0].cell1=row_len-1;
+        }
+    }
+</script>
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">
+            {% if user|in_group:"管理者" %}
+            セット商品管理 編集
+            {% else %}
+            セット商品 編集
+            {% endif %}
+        </h1>
+        <div class="row">
+            <div class="card-body">
+                <table class="registertable">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                    <table class="table">
+                        {{form.as_table}}
+                        <!-- <tr>
+                            <th>ID</th>
+                            <td>{ item.set_item_id }}</td>
+                        </tr>
+                        <tr>
+                            <th>セット名</th>
+                            <td>{ object.set_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>店舗名</th>
+                            <td>{ item.store_id }}</td>
+                        </tr>
+                        <tr>
+                            <th>作成日時</th>
+                            <td>{ item.created_at }}</td>
+                        </tr>
+                        <tr>
+                            <th>最終更新日時</th>
+                            <td>{ item.updated_at }}</td>
+                        </tr> -->
+                    </table>
+                    <div class="center-button">
+                        <button class="btn btn-primary" type="submit">更新</button>
+                    </div>
+                    </form>
+                </table>
+            </div>
+            <!-- <div class="my-container">
+                <div class="left-container center">
+                    <table class="parallel">
+                        <tr>
+                            <th><label for="set-name">セット名　　：</label></th>
+                            <td><input type="text" id="set-name" placeholder="セット名"></td>
+                        </tr>
+                        <tr>
+                            <th><label for="reserve-store">取置店舗名：</label></th>
+                            <td>
+                                <select name="" id="reserve-store" class="">
+                                    <option value="A" selected>店舗A</option>
+                                    <option value="B" selected>店舗B</option>
+                                    <option value="C" selected>店舗C</option>
+                                    <option value="" selected>-</option>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="set-name">商品コード：</label></th>
+                            <td><input type="text" id="set-name" placeholder="商品コード"></td>
+                        </tr>
+                    </table>
+                    <div class="center-button">
+                    <input type="button" class="btn btn-primary" value="追加" onclick="insertRow('sample1_table')" />                            
+                    </div>
+                </div>
+                <div class="right-container center">
+                    <table id="sample1_table">
+                        <tr>
+                            <td>商品数</td>
+                            <td>商品コード</td>
+                            <td>型番</td>
+                            <td>仕入価格</td>
+                        </tr>
+                    </table>
+                    <p>商品数　2個　　　　　　　合計　800円</p>
+                    <input type="button" class="btn btn-primary" value="更新">
+                </div>
+            </div> -->
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,41 @@
+<!-- S11-04 売上情報編集(返品・返金)
+
+    ToDo
+        画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% load in_group %}
+
+{% block title %}SIMS | 売上情報編集(返品・返金){% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">
+            <a class="backlist" href="{% url 'earning:S11-01' %}">
+                {% if user|in_group:"管理者" %}
+                売上管理 編集（なし）
+                {% else %}
+                売上 編集(なし)
+                {% endif %}
+            </a>
+        </h1>
+        <div class="row">
+            <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'earning:S11-01'%}">一覧に戻る</a>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table class="registertable">
+                    {{ form.as_table }}
+                </table>
+                <div class="placement-center">
+                    <button class="btn btn--orange btn--cubic btn--shadow" type="submit">更新</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

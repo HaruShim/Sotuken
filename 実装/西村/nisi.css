@@ -1,0 +1,1095 @@
+.sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.sidebar-search {
+    padding: 15px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+}
+
+/* サイドメニュー幅 */
+.sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
+    width: 225px;
+}
+
+li.sidebar-search {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    /* margin-bottom: 0; ←サイドメニュー検索欄の入力欄とボタンのズレ、サイドメニューの表示非表示ボタンの配置のズレの原因？*/
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+    padding: 0.5rem 1rem 0.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+    color: #9d9d9d;
+}
+.navbar-dark .navbar-brand {
+    color: #9d9d9d;
+}
+
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.py-4 {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+}
+
+
+/* サイドバーの項目のパディングを変更 */
+.sb-sidenav .sb-sidenav-menu .nav .nav-link {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.sb-nav-fixed #layoutSidenav #layoutSidenav_content {
+    padding-left: 245px;
+    top: 56px;
+}
+
+.sb-sidenav .sb-sidenav-footer {
+    padding: 5px 5px 0px 5px;
+    flex-shrink: 0;
+    width: 225px;
+    height: 20%;
+}
+
+.mgl-12{
+    font-size: 18px;
+    margin-left: 12px;
+}
+.mgl-15{
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+/* .sb-sidenav-footer .small{
+    padding-bottom: 15px;
+} */
+
+.heading h1 {
+    text-align: center
+}
+
+thead.tablecolumn th{
+    background-color: #B0E3E6;
+    font-size: 90%;
+    text-align: center;
+}
+
+.dataTable-table th{
+    background-color: #B0E3E6;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+/* 一覧テーブル */
+.listtable{
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+.listtable th, td{
+    border: solid 1px;
+    padding: 10px;
+    font-size: 50%;
+	text-align: center;
+}
+/* 従業員一覧テーブル */
+.listtable.sub1 {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.listtable.sub1 td {
+    text-align: center;
+    padding: 3px;
+    font-size: 16px;
+}
+.listtable.sub1 th {
+    border-color: #666;
+}
+/* 商品情報新規登録テーブル */
+.listtable.sub2 {
+    width: 100%;
+	margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.listtable.sub2 th {
+    width: 20%;
+}
+.listtable.sub2 td {
+    padding: 0%;
+}
+/* 商品一覧 */
+/*.listtable.sub4 td {
+    font-size: 120%;
+    padding: 0px;
+}*/
+/* 見積 */
+.listtable.sub3 {
+    margin-bottom: 10px;
+}
+/* ボトルネック一覧 */
+/* .listtable.sub4 {
+
+} */
+/* 商品一覧テーブル */
+.itemtable {
+    width: 600px;
+    table-layout: fixed;
+}
+.itemtable th,td {
+    border: solid 1px;
+    padding: 10px;
+    font-size: 75%;
+}
+/* 商品詳細テーブル */
+.item-detailtable {
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.item-detailtable th,td {
+    width: 20%;
+    font-size: 20px;
+}
+.item-detailtable.sub1 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item-detailtable.sub1 th {
+    width: 10%;
+}
+/* .dataright {
+    text-align: right;
+} */
+.table-tbody td{
+    border: solid 1px;
+}
+/* #clear {
+    background-color: transparent;
+} */
+/* 新規登録テーブル */
+.registertable{
+    border-collapse: collapse;
+    width: 50%;
+    table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+.registertable th, td{
+    border: solid 1px;
+    padding: 10px;  
+}
+.registertable td {
+    width: 250px;
+    font-size: 100%;
+    /* padding: 2%; */
+}
+.registertable th {
+    background-color: #B0E3E6;
+    width: 160px;
+    text-align: center;
+    font-size: 100%;
+}
+/* 詳細テーブル */
+.detailtable {
+    border-collapse: collapse;
+    width: 50%;
+    table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+.detailtable th, td{
+    border: solid 1px;
+    padding: 4px;
+}
+.detailtable td {
+    width: 400px;
+    /* font-size: 100%; */
+    text-align: center;
+    /*padding: 10px;*/
+}
+.detailtable th {
+    background-color: #B0E3E6;
+    width: 160px;
+    text-align: center;
+    font-size: 100%;
+}
+/* 売上テーブル */
+.earningtable{
+    border-collapse:  collapse;
+    width:  100%;
+    table-layout: fixed;
+    /* 2/01 */
+    margin-bottom: 70px;
+}
+.earningtable th, td{
+    border: solid 1px;
+    padding: 4px;  
+}
+.earningtable td {
+    width: 300px;
+    padding: 3px;
+    font-size: 16px;
+    text-align: center;
+}
+.earningtable th {
+    background-color: #B0E3E6;
+}
+
+/* 売上検索欄 */
+.cleannesstable {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eee;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    margin-bottom: 10px;
+}
+.cleannesstable th {
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+.cleannesstable td{
+    border-width: 0;
+    padding: 10px;
+	width: 40%;
+}
+.cleannesstable.sub1 {
+    width: 80%;
+}
+/* .cleannesstable.sub2 {
+    width: 90%;
+} */
+/*.td-size {
+    width: 10%;
+}*/
+.cleannesstable.sub2 {
+    width: 100%;
+}
+.cleannesstable.sub2 th {
+    width: 20%;
+}
+
+/* 検索テーブル */
+/*.searchtable {
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.searchtable th {
+    width: 15%;
+}*/
+
+
+/* 登録完了テーブル */
+.tourokutable {
+    width: 40%;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.tourokutable td {
+    background-color: #B0E3E6;
+    border: none;
+    font-size: 20px;
+}
+/* 背景 */
+/* .background {
+    background-color: #66CCCC;
+} */
+/* お客様用見積テーブル */
+/* .estimatetable th,td{
+    border: none;
+}
+.estimatetable {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+} */
+
+/* テーブル列背景色,枠線の色 */
+.column-color td {
+    background-color: #eee;
+}
+.column-color tr:nth-child(even) td {
+    background-color: #fff;
+}
+/* テーブル列番号 */
+.colum-num table {
+    counter-reset: rowCount;
+}
+.colum-num table > tbody > tr {
+    counter-increment: rowCount;
+}
+.colum-num  table > tbody > tr > td:first-child::before {
+    content: counter(rowCount);
+}
+/* テーブル番号列幅 */
+.table-num {
+    width: 10%;
+}
+.table-num.sub1 {
+    width: 5%;
+}
+
+/* ボタン */
+.btn-main {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    width: 100px;
+}
+.btn-main.estimate {
+    width: 150px;
+}
+.btn-small {
+    color: #fff;
+    background-color: #999;
+    border-color: #999;
+    font-size: 5px;
+    border-radius: 50%;
+}
+.btn-add {
+    color: #fff;
+    background-color: #ff7f50;
+    border-color: #ff7f50;
+    font-size: 5px;
+    border-radius: 50%;
+}
+td.btn-add-cell {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    width: 10%;
+}
+/* テーブル内のボタンを配置したセルに適用 */
+#btn-cell {
+    padding: 2px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+/*  */
+/*.btn-sub1 {
+    color: #fff;
+}*/
+
+/* 左に寄せる */
+.placement-left {
+    text-align: left;
+}
+/* 右に寄せる */
+.placement-right {
+    text-align: right;
+    padding-bottom: 5px;
+}
+td.text-right {
+    text-align: right;
+}
+/* 中央に寄せる */
+.placement-center {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+/*.btn-placement-center {
+    text-align: center;
+}*/
+
+/* 移動指示入力 */
+/* 移動先テーブル */
+.deliverytable {
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.deliverytable td,th {
+    border: solid 1px;
+    padding: 5px;
+    font-size: 10px;
+}
+.deliverytable th {
+    background-color: #B0E3E6;
+}
+.scroll {
+    height: 200px;
+    width: 280px;
+    overflow: auto;
+}
+
+
+aside {
+    float: right;
+    position: relative;
+    width: 30%;
+}
+
+.summary {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    padding: 1rem;
+    position: fixed;
+    width: 300px;
+    height: 320px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.summary-total-items {
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.summary-subtotal,
+.summary-total {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    clear: both;
+    margin: 1rem 0;
+    overflow: hidden;
+    padding: 0.5rem 0;
+}
+
+.subtotal-title,
+.subtotal-value,
+.total-title,
+.total-value,
+.promo-title,
+.promo-value {
+    color: #111;
+    float: left;
+    width: 50%;
+}
+
+.summary-promo {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.promo-title {
+    float: left;
+    width: 70%;
+}
+
+.promo-value {
+    color: #8B0000;
+    float: left;
+    text-align: right;
+    width: 30%;
+}
+  
+.summary-delivery {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+  
+.subtotal-value,
+  .total-value {
+    text-align: right;
+}
+
+.total-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+.summary-checkout {
+    display: block;
+}
+
+.checkout-cta {
+    display: block;
+    float: none;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.625rem 0;
+    width: 100%;
+}
+
+.summary-delivery-selection {
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    display: block;
+    font-size: 1rem;
+    height: 34px;
+    width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    aside,
+    .basket,
+    .summary,
+    .item,
+    .remove {
+        width: 100%;
+    }
+    .basket-labels {
+        display: none;
+    }
+    .basket-module {
+        margin-bottom: 1rem;
+    }
+    .item {
+        margin-bottom: 1rem;
+    }
+    .product-image {
+        width: 40%;
+    }
+    .product-details {
+        width: 60%;
+    }
+    .price,
+    .subtotal {
+        width: 33%;
+    }
+    .quantity {
+        text-align: center;
+        width: 34%;
+    }
+    .quantity-field {
+        float: none;
+    }
+    .remove {
+        bottom: 0;
+        text-align: left;
+        margin-top: 0.75rem;
+        position: relative;
+    }
+    .remove button {
+        padding: 0;
+    }
+    .summary {
+        margin-top: 1.25rem;
+        position: relative;
+    }
+}
+
+/* コンテンツの横並び */
+.contents {
+    overflow: hidden;
+}
+.item {
+    float: left;
+    padding: 20px 10px;
+    text-align: center;
+}
+/*.item.sub1 {
+    float: left;
+    padding: 5px 5px;
+    text-align: center;
+    width: 80%;
+}
+.item.sub2 {
+    float: left;
+    padding: 13px 5px;
+    text-align: center;
+    width: 20%;
+}*/
+.item.img {
+    width: 50%;
+}
+.item.head {
+    padding: 5px 5px;
+    font-weight: bold;
+    text-align: left;
+}
+.item_beside {
+    display: inline-block;
+    background-color: #eee;
+	padding: 10px 10px;
+    width:50%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* 検索欄 */
+.search-box {
+    background-color: #eee;
+}
+
+/* ページネーション */
+/*.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: #ee0979;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .page-link {
+        transition: none;
+    }
+}
+.page-link:hover {
+    z-index: 2;
+    color: #be0761;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+.page-link:focus {
+    z-index: 3;
+    color: #be0761;
+    background-color: #e9ecef;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(238, 9, 121, 0.25);
+}
+
+.page-item:not(:first-child) .page-link {
+    margin-left: -1px;
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #ee0979;
+    border-color: #ee0979;
+}
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.page-link {
+    padding: 0.375rem 0.75rem;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.page-item:last-child .page-link {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.pagination-lg .page-link {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+}
+.pagination-lg .page-item:first-child .page-link {
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+  .pagination-lg .page-item:last-child .page-link {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.pagination-sm .page-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+.pagination-sm .page-item:first-child .page-link {
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+.pagination-sm .page-item:last-child .page-link {
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}*/
+/* 入力欄 */
+/* .m-form-text {
+    height: 2.4em;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.m-form-text.sub1 {
+    width: 80%;
+}
+.m-form-text:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+} */
+
+/* セレクトボックス */
+/* .m-form-select {
+    position: relative;
+}
+.m-form-select:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(135deg);
+    pointer-events: none;
+}
+.m-form-select select {
+    height: 2.4em;
+    width: 100%;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+.m-form-select select::-ms-expand {
+    display: none;
+}
+.m-form-select select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+} */
+
+/* 登録完了 */
+.completion p {
+    font-size: 30px;
+}
+.touroku-name {
+    text-align: left;
+}
+.close-position{
+    position: relative;
+    left: 15%;
+}
+
+/* 入力欄初期値 */
+.text-initial {
+    color: gray;
+}
+
+/* 画像サイズ */
+.img-size {
+    width: 100px;
+    height: 100px;
+}
+
+/* フォーム入力欄 */
+/* inputタグ(form)の幅をtdのサイズに合わせる */
+#id_employee_id,#id_name,#id_ruby_name,#id_tel_num,#id_store_id,#id_employment_status,#id_item_code,#id_reserver_name,#id_reserver_tel,#id_store_name,#id_place_category,#id_address,#id_tel,#uitem-code,#model_number,#category,#remarks,#id_model_number,#id_category,#id_manufacturer_name,#id_purchase_price,#id_remarks.inputsize {
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+#id_birthday{
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+
+/* 見積 */
+.ProductTable {
+    border: solid 1px ;
+    border-collapse: separate;
+    border-spacing: 8px 0px;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    margin-bottom: 10px;
+    width: 80%;
+}
+.ProductTable th {
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+.ProductTable td {
+    border: solid 1px ;
+    border: solid 1px ;
+    padding: 10px;
+    border: none;
+}
+.sub1{
+    text-align: right;
+}
+.sub2{
+    text-align: left;
+}
+
+/* ホバーの下線を消す */
+/*a {
+    text-decoration:none; 
+}*/
+
+/* ホーム画面ボタン */
+section {
+    max-width: 300px;
+    margin: 60px auto;
+}
+.btn_09 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: #795548;
+    text-align: center;
+    text-decoration: none;
+    width: 20%;
+    height: 90px;
+    padding: 20px 30px 30px 30px;
+    background-color: #ffffff;
+    border: 0px solid #219F94;
+    background-color: #B2DFDB;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    transition-duration: 0.3s;
+    margin: 10px 10px;
+    font-weight: bold;
+
+    /* 影 */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.5s;
+}
+.btn_09::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* .btn_09 span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+} */
+.btn_09:hover {
+    color: #ffffff;
+    background-color: #4DB6AC;
+
+    /*--影の複数指定--*/
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+	transition: background-color 0.5s;
+}
+
+.btn_07 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: #795548;
+    text-align: center;
+    text-decoration: none;
+    width: 40%;
+    height: 90px;
+    padding: 20px 30px 30px 30px;
+    background-color: #ffffff;
+    /* border: 0px solid #ffc107; */
+    background-color: #C8E6C9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    transition-duration: 0.3s;
+    margin: 10px;
+    font-weight:bold;
+
+    /* 影 */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.5s;
+}
+.btn_07.sub1 {
+    background-color: #ffffff;
+    /* border: 0px solid #ffc107; */
+    background-color: #DCEDC8;
+
+    /* 影 */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.5s;
+}
+.btn_07::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* .btn_07 span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+} */
+.btn_07:hover {
+    color: #ffffff;
+    background-color: #81C784;
+
+    /*--影の複数指定--*/
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+	transition: background-color 0.5s;
+}
+.btn_07.sub1:hover {
+    color: #ffffff;
+    background-color: #AED581;
+
+    /*--影の複数指定--*/
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+	transition: background-color 0.5s;
+}
+
+.main-menu1 {
+    background-color: #009688;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0px 10px;
+    /* width: 90%; */
+    margin-right: 30px;
+    /* margin-left: 5px; */
+}
+.main-menu2 {
+    background-color: #4CAF50;
+    border-radius: 10px;
+    width: 48%;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+    text-align: left;
+}
+.main-menu2.sub1 {
+    background-color: #8BC34A;
+    margin-left: 10px;
+}
+/* .main-menu3 {
+    background-color: #7dd11d;
+    border-radius: 10px;
+    width: 500px;
+} */
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    width: 100%;
+    padding-top: 10px;
+    /* margin-right: 20px; */
+}
+
+/* ホーム見出し */
+.cap {
+    padding: 1rem 2rem;
+    border-left: 4px solid #fff;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.box-anchor {
+    text-decoration: none;
+}
+
+/* ホームメニュースクロール */
+.nav-scroll {
+    height: 75%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+}
+.nav-scroll::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+}
+
+/* 数字入力欄のスピンボタン削除 */
+/* Chrome/Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ログインボタン */
+.btn-login {
+    color: #fff;
+    background-color: #337ab7;
+    width: 50%;
+}
+.placement-right-login {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.card-body.sub1 {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}

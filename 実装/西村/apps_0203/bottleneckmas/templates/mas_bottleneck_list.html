@@ -1,0 +1,111 @@
+<!-- S-06-01 mas_bottleneck_list
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+{% load static %}
+{% load in_group %}
+
+{% block title %}SIMS | ボトルネック一覧画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">
+            {% if user|in_group:"管理者" %}
+            ボトルネック管理 一覧
+            {% else %}
+            ボトルネック 一覧
+            {% endif %}
+        </h1>
+        <form action="" method="get" class="searchtable">
+            <div class="st-left">
+                <input name="query" value="{{ request.GET.query }}" type="text" placeholder="CPU名">
+                ×
+                <input name="query" value="{{ request.GET.query }}" type="text" placeholder="GPU名">
+                <input name="query" value="{{ request.GET.query }}" type="text" placeholder="その他">
+                <button class="btn btn--orange btn--cubic btn--shadow" onclick="clearFormAll()">クリア</button>
+                <button class="btn btn--orange btn--cubic btn--shadow" type="submit">検索する</button>
+            </div>
+            <div class="st-right">
+                <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'bottleneckmas:S06-02' %}">新規登録</a>
+            </div>
+        </form>
+        <table id="bottletable" class="listtable display column-color">
+            <thead class="tablecolumn">
+                <tr>
+                    <th style="display:none;">ID</th>
+                    <th style="width: 17%;">CPU</th>
+                    <th style="width: 17%;">GPU</th>
+                    <th style="width: 9%;">バランス</th>
+                    <th style="width: 9%;">WQHD</th>
+                    <th style="width: 10%;">4K解像度</th>
+                    <th style="width: 10%;">ゲーム適正</th>
+                    <th style="width: 10%;">ゲーム配信</th>
+                    <th style="width: 10%;">動画編集</th>
+                    <th style="width: 10%;">エンコード</th>
+                </tr>
+            </thead>
+                <!-- bottleneckモデルの一覧を表示 -->
+                {% for item in object_list %}
+                <tr tr-link="bottlenecklist">
+                    <td class="dis-non-tdth">{{ item.id }}</td>
+                    <!--CPU-->
+                    <td>{{ item.cpu_name }}</td>
+                    <!--CPU-->
+                    <td>{{ item.gpu_name }}</td>
+                    <!--GPU-->
+                    <td>{{ item.get_balance_display }}</td>
+                    <!--バランス-->
+                    <td>{{ item.get_wqhd_display }}</td>
+                    <!--WQHD-->
+                    <td>{{ item.get_four_k_display }}</td>
+                    <!--4K解像度-->
+                    <td>{{ item.get_game_appropriate_display }}</td>
+                    <!--ゲーム適性-->
+                    <td>{{ item.get_game_delivery_display }}</td>
+                    <!--ゲーム配信-->
+                    <td>{{ item.get_video_editing_display }}</td>
+                    <!--動画編集-->
+                    <td>{{ item.get_encode_display }}</td>
+                    <!--エンコード-->
+                </tr>
+                <!-- DBが空だった場合 -->
+                {% empty %}
+                <p>空です</p>
+                {% endfor %}
+        </table>
+        {# ページネーション処理 #}
+        {% include 'pagenavigation.html' %}
+    </div>
+    </div>
+</main>
+
+
+{% endblock %}
+
+{% block extrajs %}
+<script src="{% static 'js/form.js' %}"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+            //クリックイベント
+            .click(function (e) {
+                //e.targetはクリックした要素自体、それがa要素以外であれば
+                if (!$(e.target).is('a')) {
+                    var hiddenVal = $(this).children('td')[0].innerText;
+                    //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+                    window.location.href = "{% url 'bottleneckmas:S06-03' 100 %}".replace(100, Number(hiddenVal));
+                }
+            });
+    });
+
+</script>
+
+{% endblock %}

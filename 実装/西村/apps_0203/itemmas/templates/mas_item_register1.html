@@ -1,0 +1,106 @@
+<!-- S03-02 商品情報新規登録
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        *長谷川 画像プレビュー出しましたが
+        *画像選んでないときにNOIMAGE画像を出したかった 力尽きた
+
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+-->
+{% extends 'base.html' %}
+{% load static %}
+{% load in_group %}
+{% block title %}SIMS | 商品情報新規登録{% endblock %}
+{% block main_contents %}
+
+<body>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">
+            <a class="backlist" href="{% url 'itemmas:S03-01' %}">
+                {% if user|in_group:"管理者" %}
+                商品管理 詳細登録
+                {% else %}
+                商品 詳細登録
+                {% endif %}
+            </a>
+        </h1>
+        <div class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'itemmas:S03-01' %}">一覧に戻る</a>
+            </div>
+        </div>
+        <form method="POST" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <table class="table">
+                {% if form.errors %}
+                <div class="errorlist">
+                    {% for errors in form.errors.values %}
+                    {% for error in errors %}
+                    {{ error }}<br>
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <table class="registertable">
+                    <thead class="tablecolumn">
+                        <tr>
+                            <th>型番</th>
+                            <td>{{ form.model_number }}</td>
+                            <th>CPU</th>
+                            <td>{{ form.cpu }}</td>
+                        </tr>
+                        <tr>
+                            <th>HDD</th>
+                            <td>{{ form.hdd }}</td>
+                            <th>SSD</th>
+                            <td>{{ form.ssd }}</td>
+                        </tr>
+                        <tr>
+                            <th>モニタサイズ</th>
+                            <td>{{ form.monitor_size }}</td>
+                            <th>モニタ解像度(縦)</th>
+                            <td>{{ form.monitor_vertical }}</td>
+                        </tr>
+                        <tr>
+                            <th>モニタ解像度(横)</th>
+                            <td>{{ form.monitor_horizon }}</td>
+                            <th>カメラ</th>
+                            <td>{% for choice in form.camera %}
+                                {{ choice.tag }}
+                            {{ choice.choice_label }}
+                            {% endfor %}</td>
+                        </tr>
+                        <tr>
+                            <th>Wi-Fi</th>
+                            <td>{% for choice in form.wifi %}
+                                {{ choice.tag }}
+                                {{ choice.choice_label }}
+                                {% endfor %}</td>
+                            <th>光学ドライブ</th>
+                            <td>{% for choice in form.optical_drive %}
+                                {{ choice.tag }}
+                                {{ choice.choice_label }}
+                                {% endfor %}</td>
+                        </tr>
+                        <tr>
+                            <th>グラフィック</th>
+                            <td>{{ form.graphic }}</td>
+                            <th>OS</th>
+                            <td>{{ form.os }}</td>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="placement-center">
+                    <button class="btn btn--orange btn--cubic btn--shadow" type="submit">登録</button>
+                    <button class="btn btn--orange btn--cubic btn--shadow" type="submit"><a class="a-under-none"
+                            href="{% url 'itemmas:S03-05' %}">詳細登録</a></button>
+                </div>
+            </table>
+        </form>
+    </div>
+</body>
+{% endblock %}
