@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-11-11T05:38:30.770Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.62.1 Chrome/91.0.4472.164 Electron/13.5.2 Safari/537.36" etag="q1orsMEuVqBk-crScPKk" version="15.7.3" type="embed" pages="5">
+<mxfile host="65bd71144e" pages="5">
     <diagram id="awf3vW1adkNEcoZk_ail" name="S01-01 従業員一覧">
-        <mxGraphModel dx="1336" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1814" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" style="" parent="0"/>
@@ -931,6 +931,14 @@
                 <mxCell id="-4QVXrP6IOHhtTmwP91M-2" value="0513" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=0;fontSize=15;" parent="XR2JbObqEv2TeyNu8etc-1" vertex="1">
                     <mxGeometry x="-430" y="60" width="100" height="30" as="geometry"/>
                 </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="L8Bkaimoo_RIfMd2RxC_" name="ページ6">
+        <mxGraphModel dx="1014" dy="459" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="9lAMKlkYgCzJ_hAjQEgQ-0"/>
+                <mxCell id="9lAMKlkYgCzJ_hAjQEgQ-1" parent="9lAMKlkYgCzJ_hAjQEgQ-0"/>
             </root>
         </mxGraphModel>
     </diagram>
