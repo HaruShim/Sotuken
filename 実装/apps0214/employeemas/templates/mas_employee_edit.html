@@ -1,0 +1,81 @@
+<!-- S01-04 従業員情報編集
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}SIMS | 従業員情報編集画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'employeemas:S01-01' %}">従業員管理 編集</a></h1>
+        <div class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'employeemas:S01-01' %}">一覧に戻る</a>
+            </div>
+        </div>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table class="table">
+                    {% if form.errors %}
+                    <div class="errorlist">
+                        {% for errors in form.errors.values %}
+                        {% for error in errors %}
+                        {{ error }}<br>
+                        {% endfor %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </table>
+
+                    <table class="registertable">
+                        <thead class="tablecolumn">
+                                <tr>
+                                    <th>従業員ID</th><td>{{ object.username }}</td>
+                                    <th>雇用形態</th><td>{{ object.get_employment_status_display }}</td>
+                                </tr>
+                                <tr>
+                                    <th>従業員名</th><td>{{ form.name }}</td>
+                                    <th>従業員名(カナ)</th><td>{{ form.ruby_name }}</td>
+                                </tr>
+                                <tr>
+                                    <th>電話番号</th><td>{{ form.tel_num }}</td>
+                                    <th>性別</th><td>{% for radiobutton in form.gender %}{{ radiobutton }}{% endfor %}</td>
+                                </tr>
+                                <tr>
+                                    <th>生年月日</th><td>{{ form.birthday }}</td>
+                                    <th>所属店舗</th><td>{{ form.store_id }}</td>
+                                </tr>
+                        </thead>
+                    </table>
+                <div class="placement-center">
+                    <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'employeemas:S01-03' object.pk %}">キャンセル</a>
+                    <button class="btn btn--orange btn--cubic btn--shadow" type="submit">更新</button>
+                </div>
+            </form>
+        </div>
+</main>
+
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    $(function () {
+        // 日付は、年-月-日 の形式でお願いする。
+        let dateFormat = 'yy-mm-dd';
+        $('#id_birthday').datepicker({
+            dateFormat: dateFormat,
+            changeYear: true,  // 年選択をプルダウン化
+            changeMonth: true,  // 月選択をプルダウン化
+            yearRange: "-60:+1" // 現在日付の２年前～５年後まで選択可能
+        });
+    });
+</script>
+{% endblock %}
