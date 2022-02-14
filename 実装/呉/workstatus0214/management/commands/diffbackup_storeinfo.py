@@ -5,42 +5,42 @@ import os
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from ...models import StoreInfo   #
+from ...models import WorkStatus   #
 
 
 class Command(BaseCommand):
-    help = "Backup StoreInfo data"
+    help = "Backup WorkStatus data"
 
     def handle(self, *args, **options):
         # 保存ディレクトリのファイルリストを取得してソート
-        full_files = os.listdir(settings.BACKUP_PATH_STOREINFO_W)
+        full_files = os.listdir(settings.BACKUP_PATH_WORKSTATUS_W)
         full_files.sort()
         # 最新(今週)のフルバックアップをオープンしてリストに代入
-        with open(settings.BACKUP_PATH_STOREINFO_W + full_files[-1], "r") as f:
+        with open(settings.BACKUP_PATH_WORKSTATUS_W + full_files[-1], "r") as f:
             beforelists = f.read().splitlines()
 
         # 実行時のYYYYMMDDを取得
         date = datetime.date.today().strftime("%Y%m%d")
 
         # 保存ファイルの相対パス
-        file_path = settings.BACKUP_PATH_STOREINFO_D + 'storeinfo_' + date + '_diff.csv'
+        file_path = settings.BACKUP_PATH_WORKSTATUS_D + 'workstatus_' + date + '_diff.csv'
 
         # 保存ディレクトリが存在しなければ作成
-        os.makedirs(settings.BACKUP_PATH_STOREINFO_D, exist_ok=True)
+        os.makedirs(settings.BACKUP_PATH_WORKSTATUS_D, exist_ok=True)
 
         # バックアップファイルの作成
         with open(file_path, 'w') as file:
             writer = csv.writer(file)
 
             # ヘッダーの書き込み
-            header = [field.name for field in StoreInfo._meta.fields]
+            header = [field.name for field in WorkStatus._meta.fields]
             writer.writerow(header)
 
             # StoreInfoテーブルの全データを取得
-            storeinfos = StoreInfo.objects.all()
+            workstatuss = WorkStatus.objects.all()
 
             # データ部分の書き込み
-            for si in storeinfos:
+            for si in workstatuss:
                 writer.writerow(
                     [str(si.id),
                      str(si.employee),
@@ -60,7 +60,7 @@ class Command(BaseCommand):
             writer = csv.writer(file)
 
             # ヘッダーの書き込み
-            header = [field.name for field in StoreInfo._meta.fields]
+            header = [field.name for field in WorkStatus._meta.fields]
             writer.writerow(header)
 
             # データ部分の差分を書き込み
@@ -70,9 +70,10 @@ class Command(BaseCommand):
                     [str(l[0]), str(l[1]), l[2], l[3], l[4], str(l[5]), str(l[6]), str(l[7]), ])
 
         # 保存ディレクトリのファイルリストを取得
-        files = os.listdir(settings.BACKUP_PATH_STOREINFO_D)
+        files = os.listdir(settings.BACKUP_PATH_WORKSTATUS_D)
         # ファイルが設定数以上あったら一番古いファイルを削除
         if len(files) >= settings.NUM_SAVED_DIFFBACKUP:
             files.sort()
-            print(settings.BACKUP_PATH_STOREINFO_D + files[0], 'このファイルを削除しました')
-            os.remove(settings.BACKUP_PATH_STOREINFO_D + files[0])
+            print(settings.BACKUP_PATH_WORKSTATUS_D +
+                  files[0], 'このファイルを削除しました')
+            os.remove(settings.BACKUP_PATH_WORKSTATUS_D + files[0])
