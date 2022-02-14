@@ -1,0 +1,103 @@
+<!-- S07-02 セット商品新規登録
+
+    ToDo
+        画面の制作お願いします
+        *長谷川　CSSも後半scriptもないです
+
+-->
+
+{% extends 'base.html' %}
+{% load stock_filter %}
+{% load static %}
+{% load in_group %}
+{% block title %}SIMS | セット商品新規登録{% endblock %}
+{% block main_contents %}
+
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">
+            {% if user|in_group:"管理者" %}
+            セット商品管理 新規登録
+            {% else %}
+            セット商品 新規登録
+            {% endif %}
+        </h1>
+        <div class="searchtable">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'setitem:S08-01' %}">一覧に戻る</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="my-container">
+                <div class="left-container">
+                    <!-- <form method="POST" enctype='multipart/form-data' action="{ url 'stock:S07-02regi' %}"> -->
+                    <!-- <form method="POST" enctype='multipart/form-data'> -->
+                    <form action="" method="get">
+                            {% if form.errors %}
+                            <div class="errorlist">
+                                {% for errors in form.errors.values %}
+                                {% for error in errors %}
+                                {{ error }}<br>
+                                {% endfor %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            
+                        <div class="card-body">
+                            <table class="registertable">
+                                <thead class="tablecolumn">
+
+                                        <tr>
+                                            <th>セット名</th>
+                                            <td>{{form.set_name}}</td>
+                                            <th>店舗名</th>
+                                            <td>{{form.store_id}}</td>
+                                        </tr>
+                                        
+                                        {# カテゴリ #}
+                                        <tr>
+                                            <th>ノートPC</th>
+                                            <td>{{form.notepc}}</td>
+                                            <th>デスクトップ</th>
+                                            <td>{{form.desktop}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>モニター</th>
+                                            <td>{{form.monitor}}</td>
+                                            <th>メモリ</th>
+                                            <td>{{form.memory}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>HDD</th>
+                                            <td>{{form.hdd}}</td>
+                                            <th>SSD</th>
+                                            <td>{{form.ssd}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Office</th>
+                                            <td>{{form.office}}</td>
+                                            <th>その他</th>
+                                            <td>{{form.others}}</td>
+                                        </tr>
+                                </thead>
+                            </table>
+                            <br>
+                        </div>
+                        <div class="placement-center">
+                            <button class="btn btn--orange btn--cubic btn--shadow" onclick="clearFormAll()">クリア</button>
+                            <button class="btn btn--orange btn--cubic btn--shadow" type="submit">新規登録</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+{% endblock %}
+{% block extrajs %}
+<script src="{% static 'js/form.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}SIMS | ホーム画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+<div class="container">
+<div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                    <div class="card-body">
+                        <form method="post" action="{% url 'account_login' %}">
+                        {% csrf_token %}
+                        {% if form.errors %}
+                        <div style="font-size: small;" class="errorlist">
+                            {% for errors in form.errors.values %}
+                            {% for error in errors %}
+                            
+                            {{ error }}<br>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <div class="form-floating mb-3">
+                            {{form.login}}
+                            <label for="inputEmail">従業員ID</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                {{form.password}}
+                                {{form.password.label_tag}}
+                            </div>
+                            <div class="placement-left">
+                                {{form.remember}}
+                                :ログインしたままにする
+                            </div>
+                            <div class="placement-center">
+                                <div class="align-items-center justify-content-between mt-4 mb-0">
+                                    <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit">Login</button>
+                                    <!-- <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="{# url 'account_signup' %}">Sign Up</a> -->
+                                </div>
+                            </div>                            
+                            </div>
+                {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+
+                
+                <!-- <p><a class="button secondaryAction" href="#{ url 'account_reset_password' %}">パスワードを忘れましたか？</a></p> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
