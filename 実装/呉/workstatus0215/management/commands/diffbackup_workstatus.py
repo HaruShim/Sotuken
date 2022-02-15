@@ -41,11 +41,11 @@ class Command(BaseCommand):
             workstatuss = WorkStatus.objects.all()
 
             # データ部分の書き込み
-            for si in workstatuss:
+            for wo in workstatuss:
                 writer.writerow(
-                    [str(si.id),
-                     str(si.employee),
-                     str(si.store_id),
+                    [str(wo.id),
+                     str(wo.employee),
+                     str(wo.store_id),
                      ])
         # 一度書き込んだ現在(今日)のデータリストを読み込んでリストに代入
         with open(file_path, 'r') as file:
