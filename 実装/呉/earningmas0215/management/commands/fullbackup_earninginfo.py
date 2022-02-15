@@ -42,7 +42,7 @@ class Command(BaseCommand):
                      str(ea.updated_at),
                      str(ea.item_code),
                      str(ea.store_id),
-                     str(ea.employee),
+                     str(ea.employee_id),
                      ])
 
         # 保存ディレクトリのファイルリストを取得

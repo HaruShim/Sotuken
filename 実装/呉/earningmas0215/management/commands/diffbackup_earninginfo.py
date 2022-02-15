@@ -12,6 +12,7 @@ class Command(BaseCommand):
     help = "Backup EarningInfo data"
 
     def handle(self, *args, **options):
+        os.makedirs(settings.BACKUP_PATH+'earninginfo_d/', exist_ok=True)
         # 保存ディレクトリのファイルリストを取得してソート
         full_files = os.listdir(settings.BACKUP_PATH+'earninginfo_w/')
         full_files.sort()
@@ -49,7 +50,7 @@ class Command(BaseCommand):
                      str(ea.updated_at),
                      str(ea.item_code),
                      str(ea.store_id),
-                     str(ea.employee),
+                     str(ea.employee_id),
                      ])
         # 一度書き込んだ現在(今日)のデータリストを読み込んでリストに代入
         with open(file_path, 'r') as file:
