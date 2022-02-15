@@ -10,7 +10,7 @@ class S0301Form(ModelForm):
         ('','カテゴリを選択'),(0,'ノートPC'),(1,'デスクトップ'),(2,'モニター'),(3,'メモリ'),(4,'HDD'),(5,'SSD'),(6,'Office'),(7,'その他')
     )
     category = forms.ChoiceField(choices = catchoice,required=False)
-    store_id = forms.ModelChoiceField(queryset=StoreInfo.objects.all(),required=False,empty_label='販売店舗を選択')
+    store_id = forms.ModelChoiceField(queryset=StoreInfo.objects.all(),required=True,empty_label='販売店舗を選択')
 
     class Meta:
         model = StoreInfo
@@ -23,21 +23,12 @@ class S0301Form(ModelForm):
         self.fields['category'].widget.attrs['id'] = 'itemmascategory'
 
 class S0302Form(ModelForm):
-    id = forms.CharField(
-        required=True,
-        disabled=False,
-        max_length=9,
-        min_length=1,
-        widget=forms.TextInput(attrs={
-            'placeholder':'000000000',
-            'pattern':'^[0-9]+$'
-        })
-    )
     catchoice = (
         ('','カテゴリを選択'),(0,'ノートPC'),(1,'デスクトップ'),(2,'モニター'),(3,'メモリ'),(4,'HDD'),(5,'SSD'),(6,'Office'),(7,'その他')
     )
     category = forms.ChoiceField(choices = catchoice,required=False)
     store_id = forms.ModelChoiceField(queryset=StoreInfo.objects.all(),required=False,empty_label='販売店舗を選択')
+    id = forms.CharField(required=True,disabled=False,max_length=9,min_length=9,widget=forms.TextInput(attrs={'placeholder':'000000000','pattern':'^[0-9]+$'}))
     class Meta:
         model = ItemInfo
         fields = ('id','model_number', 'category', 'manufacturer_name','purchase_price','item_image','remarks','store_id' )
