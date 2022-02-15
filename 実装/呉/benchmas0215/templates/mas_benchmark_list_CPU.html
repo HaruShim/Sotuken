@@ -1,0 +1,99 @@
+<!-- S-05-01 ベンチマーク一覧
+
+    ToDo
+        画面の制作お願いします
+        長谷川 製作中
+        01/23 新満 ⇒ 西村 40,42 タグの確認  
+        *01/25 新満 ⇒ 西村 45,46 タグの確認
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% load in_group %}
+
+{% block title %}SIMS | CPUベンチマーク一覧{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">
+            {% if user|in_group:"管理者" %}
+            CPUベンチマーク管理 一覧
+            {% else %}
+            CPUベンチマーク 一覧
+            {% endif %}
+        </h1>
+        <form action="" method="get" class="searchtable">
+            <div  style="position: absolute;left: 21%;width: 60%;">
+                <input name="query" value="{{ request.GET.query }}" type="text" placeholder="CPU名称">
+                <input name="query2" value="{{ request.GET.query2 }}" type="text" placeholder="その他">
+				<button class="btn btn--orange btn--cubic btn--shadow" type="submit">検索する</button>
+                <button class="btn btn--orange btn--cubic btn--shadow" onclick="clearFormAll()">クリア</button>
+                
+            </div>
+            <div style="position: absolute;right: 3%;">
+                <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="{% url 'benchmas:S05-01GPU' %}">GPU</a>
+                <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="{% url 'benchmas:S05-02CPU' %}">新規登録</a>
+            </div>
+        </form>
+                        
+                        <table id="example" class="listtable display column-color">
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <th class="dis-non-tdth"></th>
+                                    <th class="th-10part">CPU名称</th>
+                                    <th class="th-8part">PassMark</th>
+                                    <th class="th-5part">コア</th>
+                                    <th class="th-5part">スレッド</th>
+                                    <th class="th-7part">TDP</th>
+                                    <th class="th-7part" style="font-size: small;">定格<br>クロック</th>
+                                    <th class="th-7part" style="font-size: small;">最大<br>クロック</th>
+                                    <th class="th-7part">定価</th>
+                                    <th class="th-5part">コスパ</th>
+                                </tr>
+                            </thead>
+                                <!-- CpuBenchモデルの一覧を表示 -->
+                                {% for item in object_list %}
+                                <tr tr-link="cpulist">
+                                    <td class="dis-non-tdth">{{ item.id }}</td>
+                                    <td>{{ item.cpu_name }}</td><!--CPU名称-->
+                                    <td>{{ item.passmark }}</td><!--PassMark-->
+                                    <td>{{ item.core }}</td><!--コア-->
+                                    <td>{{ item.thread }}</td><!--スレッド-->
+                                    <td>{{ item.tdp }} W</td><!--TDP-->
+                                    <td>{{ item.rated_clock }} GHz</td><!--定格クロック-->
+                                    <td>{{ item.max_clock }} GHz</td><!--最大クロック-->
+                                    <td>¥{{ item.list_price }}</td><!--定価-->
+                                    <td>{{ item.cost_performance }}</tr><!--コスパ-->
+                                </tr>
+                                <!-- DBが空だった場合 -->
+                                {% empty %}
+                    </table>
+                    <h3 style="text-align: center;">一致するデータがありませんでした</h3>
+                                {% endfor %}
+                        </table>
+                    {# ページネーション処理 #}
+                    {% include 'pagenavigation2.html' %}
+                </div>
+</main>
+{% endblock %}
+
+{% block extrajs %}
+<script src="{% static 'js/form.js' %}"></script>
+<script type="text/javascript">
+    jQuery(function($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+        //クリックイベント
+        .click(function(e) {
+            //e.targetはクリックした要素自体、それがa要素以外であれば
+            if(!$(e.target).is('a')){
+                var hiddenVal = $(this).children('td')[0].innerText;
+            //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+            window.location.href = "{% url 'benchmas:S05-03CPU' 100 %}".replace(100,hiddenVal);
+        }
+    });
+});
+</script>
+{% endblock %}
