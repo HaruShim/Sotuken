@@ -5,7 +5,7 @@ import os
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from ...models import WorkStatus   #
+from ...models import WorkStatu   #
 
 
 class Command(BaseCommand):
@@ -13,20 +13,21 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         # 保存ディレクトリのファイルリストを取得してソート
-        full_files = os.listdir(settings.BACKUP_PATH_WORKSTATUS_W)
+        full_files = os.listdir(settings.BACKUP_PATH + 'workstatus_w/')
         full_files.sort()
         # 最新(今週)のフルバックアップをオープンしてリストに代入
-        with open(settings.BACKUP_PATH_WORKSTATUS_W + full_files[-1], "r") as f:
+        with open(settings.BACKUP_PATH + 'workstatus_w/' + full_files[-1], "r") as f:
             beforelists = f.read().splitlines()
 
         # 実行時のYYYYMMDDを取得
         date = datetime.date.today().strftime("%Y%m%d")
 
         # 保存ファイルの相対パス
-        file_path = settings.BACKUP_PATH_WORKSTATUS_D + 'workstatus_' + date + '_diff.csv'
+        file_path = settings.BACKUP_PATH + 'workstatus_d/' + \
+            'workstatus_' + date + '_diff.csv'
 
         # 保存ディレクトリが存在しなければ作成
-        os.makedirs(settings.BACKUP_PATH_WORKSTATUS_D, exist_ok=True)
+        os.makedirs(settings.BACKUP_PATH + 'workstatus_d/', exist_ok=True)
 
         # バックアップファイルの作成
         with open(file_path, 'w') as file:
@@ -45,8 +46,6 @@ class Command(BaseCommand):
                     [str(si.id),
                      str(si.employee),
                      str(si.store_id),
-                     str(si.created_at),
-                     str(si.updated_at),
                      ])
         # 一度書き込んだ現在(今日)のデータリストを読み込んでリストに代入
         with open(file_path, 'r') as file:
@@ -67,13 +66,13 @@ class Command(BaseCommand):
             for check in diff:
                 l = check.split(',')
                 writer.writerow(
-                    [str(l[0]), str(l[1]), l[2], l[3], l[4], str(l[5]), str(l[6]), str(l[7]), ])
+                    [str(l[0]), str(l[1]), str(l[2]), str(l[3]), str(l[4]), ])
 
         # 保存ディレクトリのファイルリストを取得
-        files = os.listdir(settings.BACKUP_PATH_WORKSTATUS_D)
+        files = os.listdir(settings.BACKUP_PATH + 'workstatus_d')
         # ファイルが設定数以上あったら一番古いファイルを削除
         if len(files) >= settings.NUM_SAVED_DIFFBACKUP:
             files.sort()
-            print(settings.BACKUP_PATH_WORKSTATUS_D +
+            print(settings.BACKUP_PATH + 'workstatus_d/' +
                   files[0], 'このファイルを削除しました')
-            os.remove(settings.BACKUP_PATH_WORKSTATUS_D + files[0])
+            os.remove(settings.BACKUP_PATH + 'workstatus_d/' + files[0])

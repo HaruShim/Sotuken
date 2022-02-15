@@ -1,0 +1,63 @@
+<!--S07-04 セット商品編集
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% load in_group %}
+
+{% block title %}SIMS | セット商品編集{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'setitem:S08-01' %}">
+            {% if user|in_group:"管理者" %}
+            セット商品管理 編集
+            {% else %}
+            セット商品 編集
+            {% endif %}
+        </a></h1>
+        <div class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'setitem:S08-01' %}">一覧に戻る</a>
+            </div>
+        </div>
+        <form method="POST" enctype="multipart/form-data">
+            <table class="registertable">
+            {% csrf_token %}
+                <thead class="tablecolumn">
+                    
+                        <tr>
+                            <th>従業員ID</th><td>{{ object.username }}</td>
+                            <th>雇用形態</th><td>{{ object.get_employment_status_display }}</td>
+                        </tr>
+                        <tr>
+                            <th>従業員名</th><td>{{ form.name }}</td>
+                            <th>従業員名(カナ)</th><td>{{ form.ruby_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>電話番号</th><td>{{ form.tel_num }}</td>
+                            <th>性別</th><td>{% for radiobutton in form.gender %}{{ radiobutton }}{% endfor %}</td>
+                        </tr>
+                        <tr>
+                            <th>生年月日</th><td>{{ form.birthday }}</td>
+                            <th>所属店舗</th><td>{{ form.store_id }}</td>
+                        </tr>
+                    
+                </thead>
+            </table>
+        <div class="placement-center">
+            <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'setitem:S08-01' %}">キャンセル</a>
+            <button class="btn btn--orange btn--cubic btn--shadow" type="submit">更新</button>
+        </div>
+    </form>
+
+            
+    </div>
+</main>
+{% endblock %}

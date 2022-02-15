@@ -1,0 +1,161 @@
+<!-- S02-01 店舗情報一覧
+
+    ToDo
+        *画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+{% extends 'base.html' %}
+
+{% load static %}
+{% load in_group %}
+
+{% block title %}SIMS | 店舗一覧画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">
+            {% if user|in_group:"管理者" %}
+            店舗管理 一覧
+            {% else %}
+            店舗 一覧
+            {% endif %}
+        </h1>
+        <!--<div class="card-body">-->
+            <form action="" method="get" class="searchtable">
+            <div  style="position: absolute;left: 21%;width: 60%;">
+                    <input name="query" value="{{ request.GET.query }}" type="text" placeholder="店舗名">
+                    <input name="others" value="{{ request.GET.others }}" type="text" placeholder="連絡先、住所">
+                    {{form.s_selecter}}
+                    <button class="btn btn--orange btn--cubic btn--shadow" type="submit">検索する</button>
+                    <button class="btn btn--orange btn--cubic btn--shadow" onclick="clearFormAll()">クリア</button>
+                </div>
+
+                {% if user|in_group:"管理者" %}
+            <div style="position: absolute;right: 3%;">
+                    <a style="width: 100px;" href="{% url 'storemas:S02-02' %}" class="btn btn--orange btn--cubic btn--shadow">新規登録</a>
+                </div>
+                {% endif %}
+            </form>
+            <table class="listtable column-color listthtd-2">
+                <thead class="tablecolumn">
+                    <tr>
+                        <th class="dis-non-tdth">店舗ID</th>
+                        <th class="id-tdth">ID</th>
+                        <th>店舗名</th>
+                        <th>場所カテゴリ</th>
+                        <th>連絡先</th>
+                        <th>店長</th>
+                        {% if user|in_group:"管理者" %}
+                        <th>状態</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                {% if user|in_group:"店長" %}
+                <!-- StoreInfoモデルの一覧を表示 -->
+                {% for item in object_list %}
+                <tr tr-link="storelist">
+                    <td class="dis-non-tdth">{{ item.list.id }}</td>
+                    <!--店舗ID-->
+                    <td class="id-tdth"></td>
+                    <td>{{ item.list.store_name }}</td>
+                    <!--店舗名-->
+                    <td>{{ item.list.get_place_category_display }}</td>
+                    <!--場所カテゴリ-->
+                    <td>{{ item.list.tel }}</td>
+                    <!--連絡先-->
+                    <td>{{ item.store_manager }}</td>
+                    <!--店長-->
+                </tr>
+                {% empty %}
+                <tr></tr>
+                <h2>一致するデータがありませんでした</h2>
+                {% endfor %}
+            </table>
+            {# ページネーション処理 #}
+            {% include 'pagenavigation2-1.html' %}
+            {% elif user|in_group:"管理者" %}
+            <!-- StoreInfoモデルの一覧を表示 -->
+            {% for item in object_list %}
+            <tr tr-link="storelist">
+                <td class="dis-non-tdth">{{ item.list.id }}</td>
+                <!--店舗ID-->
+                <td class="id-tdth"></td>
+                <!--店舗名-->
+                <td>{% if item.list.store_name != None %}{{ item.list.store_name }}{% else %}設定されていません{% endif %}</td>
+                <!--場所カテゴリ-->
+                <td>{% if item.list.place_category != None %}{{ item.list.get_place_category_display }}{% else %}設定されていません{% endif %}</td>
+                <!--連絡先-->
+                <td>{% if item.list.tel != None %}{{ item.list.tel }}{% else %}設定されていません{% endif %}</td>
+                <!--店長-->
+                <td>{% if item.list.place_category == 1 %}{{ item.store_manager }}{% else %}{% endif %}</td>
+                <!-- 状態 -->
+                <td>{% if item.list.invalid_flg == 1 %}有効{% else %}無効{% endif %}</td>
+            </tr>
+            {% empty %}
+            </table>
+            <h3 style="text-align: center;">一致するデータがありませんでした</h3>
+            {% endfor %}
+
+
+
+            </table>
+            {# ページネーション処理 #}
+            {% include 'pagenavigation2-1.html' %}
+            {% elif user|in_group:"従業員" %}
+            <!-- StoreInfoモデルの一覧を表示 -->
+            {% for item in object_list %}
+            <tr tr-link="storelist">
+                <td class="dis-non-tdth">{{ item.list.id }}</td>
+                <!--店舗ID-->
+                <td class="id-tdth"></td>
+                <td>{{ item.list.store_name }}</td>
+                <!--店舗名-->
+                <td>{{ item.list.get_place_category_display }}</td>
+                <!--場所カテゴリ-->
+                <td>{{ item.list.tel }}</td>
+                <!--連絡先-->
+                <td>{{ item.store_manager }}</td>
+                <!--店長-->
+            </tr>
+            {% empty %}
+            </table>
+            <h3 style="text-align: center;">一致するデータがありませんでした</h3>
+            {% endfor %}
+
+            </table>
+            {# ページネーション処理 #}
+            {% include 'pagenavigation2-1.html' %}
+            {% endif %}
+        </div>
+
+    </div>
+</main>
+
+{% endblock %}
+
+{% block extrajs %}
+<script src="{% static 'js/form.js' %}"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+            //クリックイベント
+            .click(function (e) {
+                //e.targetはクリックした要素自体、それがa要素以外であれば
+                if (!$(e.target).is('a')) {
+                    var hiddenVal = $(this).children('td')[0].innerText;
+                    //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+                    window.location.href = "{% url 'storemas:S02-03' 100 %}".replace(100, Number(hiddenVal));
+                }
+            });
+    });
+</script>
+
+{% endblock %}
