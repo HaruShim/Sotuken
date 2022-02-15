@@ -42,14 +42,17 @@ class Command(BaseCommand):
             # データ部分の書き込み
             for st in setitemss:
                 writer.writerow(
-                    [str(si.id),
-                     str(si.place_category),
-                     si.store_name,
-                     si.address,
-                     si.tel,
-                     str(si.invalid_flg),
-                     str(si.created_at),
-                     str(si.updated_at),
+                    [str(st.id),
+                     str(st.store_id),
+                     st.set_name,
+                     st.notepc,
+                     st.desktop,
+                     st.monitor,
+                     st.memory,
+                     st.hdd,
+                     st.ssd,
+                     st.office,
+                     st.others,
                      ])
         # 一度書き込んだ現在(今日)のデータリストを読み込んでリストに代入
         with open(file_path, 'r') as file:
@@ -70,7 +73,7 @@ class Command(BaseCommand):
             for check in diff:
                 l = check.split(',')
                 writer.writerow(
-                    [str(l[0]), str(l[1]), l[2], l[3], l[4], str(l[5]), str(l[6]), str(l[7]), ])
+                    [str(l[0]), str(l[1]), l[2], l[3], l[4], l[5], l[6], l[7], l[8], l[9], l[10],])
 
         # 保存ディレクトリのファイルリストを取得
         files = os.listdir(settings.BACKUP_PATH+'setitems_d')
