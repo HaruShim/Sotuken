@@ -1,0 +1,142 @@
+<!-- S03-03 商品情報詳細
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        views.py、forms.pyの埋め込みタグを記述
+        画面の確認
+        画面のスタイル最終調整
+        最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | 商品情報詳細{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+    <h2 class="mt-4"><a class="backlist" href="{% url 'itemmas:S03-01' %}">商品管理</a></h2>
+        <div style="height: 42px;" class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'itemmas:S03-01' %}">一覧に戻る</a>
+            </div>
+            <div class="st-right">
+                <p>最終更新日：{{ object.updated_at }}</p>
+            </div>
+        </div>
+            <div class="itemmas-table item-table">
+                <div class="contents">
+                    <table class="item-detailtable" id="item_1">
+                        <thead class="tablecolumn">
+                        <tr>
+                            <th class="th-10part">商品コード</th>
+                            <td class="th-15part">{{ object.id }}</td>
+                            <th class="th-15part">型番</th>
+                            <td style="font-size: 18px;" class="th-35part">{{ object.model_number }}</td>
+                            <th class="th-10part">店舗名</th>
+                            <td class="th-15part">{{ object.store_id }}</td>
+                        </tr>
+                        </thead>
+                    </table>
+                <div class="item img" id="mid">
+                {% if object.item_image %}
+                    <img src="{{ object.item_image.url }}" width="200" height="200">
+                {% else %}
+                    <img src="{% static 'photo/noimage.jpg' %}" width="200" height="200">
+                {% endif %}
+                </div>
+                <table class="item-detailtable right" id="item_2">
+                    <thead class="tablecolumn">
+                        <tr>
+                            <th class="th-16part">メーカー名</th><td class="th-17part">{{ object.manufacturer_name }}</td>
+                            <th>モニタサイズ</th><td>{{object_detail.monitor_size}}</td>
+                            
+                        </tr>
+                        <tr>
+                            <th >カテゴリ</th>
+                            <td >{{ object.get_category_display }}</td>
+                            <th>仕入価格</th><td>{{ object.purchase_price }}</td>
+                        </tr>
+                        <tr>
+                            <th>OS</th><td>{{object_detail.os}}</td>
+                            <th>グラフィック</th><td>{{object_detail.graphic}}</td>
+                        </tr>
+                        <tr>
+                            <th>CPU</th><td>{{object_detail.cpu}}</td>
+                            <th>HDD</th><td>{{object_detail.hdd}}</td>
+                        </tr>
+                        <tr>
+                            <th>SSD</th><td>{{object_detail.ssd}}</td>
+                            <th>カメラ</th><td>{% if object_detail.camera %}有り{% else %}無し{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <th>光学ドライブ</th><td>{% if object_detail.optical_drive %}有り{% else %}無し{% endif %}</td>
+                            <th>Wi-Fi</th><td>{% if object_detail.wifi %}有り{% else %}無し{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <th>モニタ解像度(縦)</th><td>{{object_detail.monitor_vertical}}</td>
+                            <th>モニタ解像度(横)</th><td>{{object_detail.monitor_horizon}}</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="itemmas-table spec-table">
+                <table class="item-detailtable right" id="item_4">
+                    <thead class="tablecolumn">
+                        <tr><th class="th-40part">備考</th><td style="font-size: 16px;" class="th-60part">{{ object.remarks }}</td></tr>
+                    </thead>
+                </table> 
+                <div class="placement-center">
+                <form method="POST" action="{% url 'itemmas:invalid' object.pk %}">
+                    {% csrf_token %}
+                        <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'itemmas:S03-04' object.pk %}">編集</a>
+                        {% if object.item_status == 4 %}
+                        <button class="btn btn--orange btn--cubic btn--shadow" name="button_1" type="submit">有効化</button>
+                        {% else %}
+                        <button class="btn btn--orange btn--cubic btn--shadow" name="button_1" type="submit">無効化</button>
+                        {% endif %}
+                        <button class="modal-btn btn btn--orange btn--cubic btn--shadow" type="submit">削除</button>
+                </form>
+                </div>
+                <div class="wrapper">
+                    <div class="modal js-modal">
+                        <div class="modal_background js-modal-close"></div>
+                        <div class="modal_content">
+                            <p>商品コード：{{object.id}}</p>
+                            <p>型番：{{object.model_number}}</p>
+                            <p>上記の商品を本当に削除しますか？</p>
+                            <form method="POST" action="{% url 'itemmas:del_record' object.pk %}">
+                                {% csrf_token %}
+                                <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="">いいえ</a>
+                                <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" name="del_button" type="submit">削除</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+{% block extrajs %}
+<script>
+    $(function(){
+        $('.modal-btn').on('click',function(){
+        $('.js-modal').fadeIn();
+        return false;
+    });
+    $('.modal-close-btn').on('click',function(){
+        $('.js-modal').fadeOut();
+        return false;
+        });
+    });
+</script>
+{% endblock %}
+
+
+
+</main>
+
