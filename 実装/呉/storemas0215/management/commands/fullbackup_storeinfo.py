@@ -12,6 +12,7 @@ class Command(BaseCommand):
     help = "Full Backup StoreInfo data"
 
     def handle(self, *args, **options):
+        os.makedirs(settings.BACKUP_PATH+'storeinfo_w/', exist_ok=True)
         # 実行時のYYYYMMDDを取得
         date = datetime.date.today().strftime("%Y%m%d")
 

@@ -12,6 +12,7 @@ class Command(BaseCommand):
     help = "Backup StoreInfo data"
 
     def handle(self, *args, **options):
+        os.makedirs(settings.BACKUP_PATH+'storeinfo_d/', exist_ok=True)
         # 保存ディレクトリのファイルリストを取得してソート
         full_files = os.listdir(settings.BACKUP_PATH+'storeinfo_w/')
         full_files.sort()
@@ -79,4 +80,4 @@ class Command(BaseCommand):
             files.sort()
             print(settings.BACKUP_PATH+'storeinfo_d/' +
                   files[0], 'このファイルを削除しました')
-            os.remove(settings.BACKUP_PATH+'storeinfo_d/' + files[0])
+            os.remove(settings.BACKUP_PATH +'storeinfo_d/' + files[0])
