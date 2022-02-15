@@ -5,15 +5,16 @@ import os
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from ...models import WorkStatu   #
+from ...models import WorkStatus
 
 
 class Command(BaseCommand):
     help = "Backup WorkStatus data"
 
     def handle(self, *args, **options):
+        os.makedirs(settings.BACKUP_PATH + 'workstatus_d/', exist_ok=True)
         # 保存ディレクトリのファイルリストを取得してソート
-        full_files = os.listdir(settings.BACKUP_PATH + 'workstatus_w/')
+        full_files = os.listdir(settings.BACKUP_PATH+'workstatus_w/')
         full_files.sort()
         # 最新(今週)のフルバックアップをオープンしてリストに代入
         with open(settings.BACKUP_PATH + 'workstatus_w/' + full_files[-1], "r") as f:
@@ -28,7 +29,6 @@ class Command(BaseCommand):
 
         # 保存ディレクトリが存在しなければ作成
         os.makedirs(settings.BACKUP_PATH + 'workstatus_d/', exist_ok=True)
-
         # バックアップファイルの作成
         with open(file_path, 'w') as file:
             writer = csv.writer(file)

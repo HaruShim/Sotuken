@@ -5,19 +5,20 @@ import os
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from ...models import WorkStatu
+from ...models import WorkStatus
 
 
 class Command(BaseCommand):
-    help = "Full Backup WorkStatu data"
+    help = "Full Backup WorkStatus data"
 
     def handle(self, *args, **options):
+        os.makedirs(settings.BACKUP_PATH+'workstatus_w/', exist_ok=True)
         # 実行時のYYYYMMDDを取得
         date = datetime.date.today().strftime("%Y%m%d")
 
         # 保存ファイルの相対パス
         file_path = settings.BACKUP_PATH+'workstatus_w/' + \
-            'workstatu_' + date + '_full.csv'
+            'workstatus_' + date + '_full.csv'
 
         # 保存ディレクトリが存在しなければ作成
         os.makedirs(settings.BACKUP_PATH+'workstatus_w/', exist_ok=True)
@@ -27,14 +28,14 @@ class Command(BaseCommand):
             writer = csv.writer(file)
 
             # ヘッダーの書き込み
-            header = [field.name for field in WorkStatu._meta.fields]
+            header = [field.name for field in WorkStatus._meta.fields]
             writer.writerow(header)
 
             # StoreInfoテーブルの全データを取得
-            workstatus = WorkStatu.objects.all()
+            workstatuss = WorkStatus.objects.all()
 
             # データ部分の書き込み
-            for wo in workstatus:
+            for wo in workstatuss:
                 writer.writerow(
                     [str(wo.id),
                      str(wo.employee),
