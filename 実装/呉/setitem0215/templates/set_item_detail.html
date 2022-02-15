@@ -1,0 +1,124 @@
+<!-- S07-03 セット商品詳細
+
+    ToDo
+        画面の制作お願いします
+        *長谷川
+
+-->
+{% extends 'base.html' %}
+{% load in_group %}
+{% block title %}SIMS | セット商品詳細{% endblock %}
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">
+            {% if user|in_group:"従業員" %}
+            セット商品 詳細
+            {% else %}
+            セット商品管理 詳細
+            {% endif %}
+        </h1>
+        <div class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'setitem:S08-01' %}">一覧に戻る</a>
+            </div>
+            <div class="st-right">
+                <p>作成日時:{{ object.created_at }}<br>最終更新日:{{ object.updated_at }}</p>
+            </div>
+        </div>
+        <table class="registertable">
+            <thead class="tablecolumn">
+                <tr><th>セット名</th><td>{{object.set_name}}</td><th>店舗名</th><td>{{object.store_id}}</td></tr>
+                <tr><th>ノートPC</th><td>{% if object.notepc != None %}{{object.notepc}}{% else %}設定されていません{% endif %}</td><th>デスクトップ</th><td>{% if object.desktop != None %}{{object.desktop}}{% else %}設定されていません{% endif %}</td></tr>
+                <tr><th>モニター</th><td>{% if object.monitor != None %}{{object.monitor}}{% else %}設定されていません{% endif %}</td><th>メモリ</th><td>{% if object.memory != None %}{{object.memory}}{% else %}設定されていません{% endif %}</td></tr>
+                <tr><th>HDD</th><td>{% if object.hdd != None %}{{object.hdd}}{% else %}設定されていません{% endif %}</td><th>SSD</th><td>{% if object.ssd != None %}{{object.ssd}}{% else %}設定されていません{% endif %}</td></tr>
+                <tr><th>Office</th><td>{% if object.office != None %}{{object.office}}{% else %}設定されていません{% endif %}</td><th>その他</th><td>{% if object.others != None %}{{ object.others }}{% else %}設定されていません{% endif %}</td></tr>
+            </thead>
+        </table>
+        <div class="wrapper">
+            <div class="modal js-modal">
+                <div class="modal_background js-modal-close"></div>
+                <div class="modal_content-w80" style="background-color: #f4eade">
+                    <h1 class="mt-4"><a class="backlist" href="{% url 'setitem:S08-01' %}">
+                        {% if user|in_group:"従業員" %}
+                        セット商品 編集
+                        {% else %}
+                        セット商品管理 編集
+                        {% endif %}
+                    </a></h1>
+                    <div class="edit-ditail-table">
+                        <div class="st-left">
+                            <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'setitem:S08-01' %}">一覧に戻る</a>
+                        </div>
+                    </div>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <table class="registertable">
+                            <thead class="tablecolumn">
+                                <tr><th>セット名</th><td>{{form.set_name}}</td><th>店舗名</th><td>{{form.store_id}}</td></tr>
+                                <tr><th>ノートPC</th><td>{{form.notepc}}</td><th>デスクトップ</th><td>{{form.desktop}}</td></tr>
+                                <tr><th>モニター</th><td>{{form.monitor}}</td><th>メモリ</th><td>{{form.memory}}</td></tr>
+                                <tr><th>HDD</th><td>{{form.hdd}}</td><th>SSD</th><td>{{form.ssd}}</td></tr>
+                                <tr><th>Office</th><td>{{form.office}}</td><th>その他</th><td>{{form.others}}</td></tr>
+                            </thead>
+                        </table>
+                    <div class="placement-center">
+                        <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'setitem:S08-02' object.pk%}">キャンセル</a>
+                        <button class="btn btn--orange btn--cubic btn--shadow" name="button_1" type="submit">登録</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div> <!-- <div class="wrapper"> -->
+        <div class="wrapper">
+            <div class="modal js-modal2">
+                <div class="modal_background js-modal-close"></div>
+                <div class="modal_content">
+                    <p>セット名：{{object.set_name}}</p>
+                    <p>取扱店舗名：{{object.store_id}}</p>
+                    <p>上記のセット商品を本当に削除しますか？</p>
+                    <form method="POST" action="{% url 'setitem:del_record' object.pk %}">
+                        {% csrf_token %}
+                        <a style="width: 100px;" class="modal-close-btn2 btn btn--orange btn--cubic btn--shadow" href="">いいえ</a>
+                        <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" name="del_button" type="submit">削除</button>
+                    </form>
+                </div>
+            </div>
+        </div><!-- <div class="wrapper"> -->
+            <div class="placement-center">
+            {% if user|in_group:"従業員" %}{% else %}
+            {# 管理者、店長のみ削除権限所持 #}
+            <a class="modal-btn2 btn btn--orange btn--cubic btn--shadow">削除</a>
+            {% endif %}
+            <a class="modal-btn btn btn--orange btn--cubic btn--shadow">編集</a>
+        </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+{% block extrajs %}
+<script type="text/javascript">
+$(function(){
+    $('.modal-btn').on('click',function(){
+    $('.js-modal').fadeIn();
+    return false;
+});
+$('.modal-close-btn').on('click',function(){
+    $('.js-modal').fadeOut();
+    return false;
+    });
+});
+$(function(){
+    $('.modal-btn2').on('click',function(){
+    $('.js-modal2').fadeIn();
+    return false;
+});
+$('.modal-close-btn2').on('click',function(){
+    $('.js-modal2').fadeOut();
+    return false;
+    });
+});
+</script>
+
+{% endblock %}
