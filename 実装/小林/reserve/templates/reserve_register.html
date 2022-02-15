@@ -1,0 +1,60 @@
+<!-- S09-02 取置予約新規登録
+
+    ToDo
+        画面の制作お願いします
+        *長谷川
+
+-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | 取置予約新規登録{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">取置予約</h1>
+
+        <div class="row">
+            <div class="card mb-4">
+
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    取置予約新規登録
+                </div>
+
+                <div class="card-body">
+                    <form method="POST" enctype='multipart/form-data'>
+                        <!-- <table class="employee-table"> -->
+                        <table class="detailtable">
+                        {% csrf_token %}
+                        {{form.item_image}}
+                        
+                            {% if form.errors %}
+                            <div class="errorlist">
+                                {% for errors in form.errors.values %}
+                                {% for error in errors %}
+                                {{ error }}<br>
+                                {% endfor %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            <thead class="tablecolumn">
+                                <tr><th>商品コード</th><td>{{form.item_code}}</td></tr>
+                                <tr><th>取置店舗名</th><td>{{form.store_id}}</td></tr>
+                                <tr><th>予約者氏名(カナ)</th><td>{{form.reserver_name}}</td></tr>
+                                <tr><th>連絡先</th><td>{{form.reserver_tel}}</td></tr>
+                            </thead>
+                        </table>
+<div class="placement-center">
+                            <div class="center-button">
+                                <button class="btn btn--orange btn--cubic btn--shadow" type="submit">登録</button>
+</div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
