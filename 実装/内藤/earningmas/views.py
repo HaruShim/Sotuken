@@ -154,7 +154,7 @@ class S0403View(LoginRequiredMixin, TemplateView):
     """
     template_name = "earning_detail.html"
     
-class S0404View(LoginRequiredMixin, UpdateView):
+class S0404View(LoginRequiredMixin, ListView):
     """S1104View
 
     レスポンスをフォーム、モデル、テンプレートなどから生成する
@@ -167,25 +167,29 @@ class S0404View(LoginRequiredMixin, UpdateView):
     def sample(request,pk):
         form = S1104Form
         template_name = "earning_edit.html"
+        object = EarningInfo.objects.get(pk=pk)
         object_a = EarningInfo.objects.get(pk=pk)
         object_b = EarningInfo.objects.get(pk=pk)
         object_list =EarningInfo.objects.all().order_by('-id')
         context = {'object_a': object_a,'object_b': object_b,'form':form,'object_list':object_list }
-
-
         # POSTメソッドがTrue
         if request.method == 'POST':
             # 変更ボタン押下　→　DBに保存せず、編集画面に留まる
             if 'test_data' in request.POST:
-                # object_afterを入力値に更新
-                object_a.selling_price = request.POST['selling_price']
-            # 更新(確定)ボタン押下　→　DBに保存後、一覧に戻る
-            elif 'create_data' in request.POST:
+                # if request.POST.get('selling_price') == "":
+                #     object_a.selling_price = 0
+                #     # print("実行されました")
+                # else:
+                    # object_afterを入力値に更新
+                    object_a.selling_price = request.POST['selling_price']
+            if 'create_data' in request.POST:
+                # print(request.POST['sample'])
+                # print(object)
                 template_name = "mas_earning.html"
-                object_a.selling_price = request.POST['selling_price']
+                object_a.selling_price = request.POST['sample']
                 object_a.save()
-                context = {'object_list':object_list,'form':form}
-                return render(request, template_name, context)
+                # context = {'object_list':object_list,'form':form}
+                # return render(request, template_name, context)
         return render(request, template_name, context)
 
 
