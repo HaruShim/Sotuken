@@ -1,0 +1,281 @@
+<!-- S03-01 商品情報一覧
+
+    ToDo
+        *画面の制作お願いします
+        *画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+        
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 商品情報一覧{% endblock %}
+{% load static %}
+{% load in_group %}
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">
+            {% if user|in_group:"従業員" %}
+            商品情報 一覧
+            {% else %}
+            商品情報管理 一覧
+            {% endif %}
+        </h1>
+        <div class="searchtable">
+            <div style="position: absolute;right: 3%;">
+                {% if user|in_group:"従業員" %}{% else %}
+                {# 管理者、店長のみ新規登録権限所持 #}
+                <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow"
+                    href="{% url 'itemmas:S03-02' %}">新規登録</a>
+                <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow"
+                    href="{% url 'itemmas:S03-05' %}">詳細登録</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="itemsearchtable2">
+            <form action="" method="get">
+                <div class="searchtable-input">
+                    <table style="width: 80%; margin-left: 10%; margin-top: 0.5rem;height: 155px;" class="searchtable">
+                        <thead class="tablecolumn">
+                            <tr>
+                                <!-- 商品コード -->
+                                <th class="th-15part">商品コード</th>
+                                <td colspan="2"><input name="q_item" id="item-box" placeholder="商品コードを指定" value="{{ request.GET.q_item }}" type="text"></td>
+                                <!-- 型番 -->
+                                <th class="th-15part">型番</th>
+                                <td colspan="2"><input class="inputmax" name="q_num" id="num-box" placeholder="型番を指定"
+                                        value="{{ request.GET.q_num }}" type="text"></td>
+                            </tr>
+                            <tr>
+                                <!-- カテゴリ -->
+                                <th class="th-15part">カテゴリ</th>
+                                <td colspan="2">{{form.category}}</td>
+                                <!-- 販売場所 -->
+                                <th class="th-15part">販売場所</th>
+                                <td colspan="2">{{form.store_id}}</td>
+                            </tr>
+                            <tr>
+                                <th class="th-15part">仕入価格</th>
+                                <td style="background-color: #fff;" colspan="3">¥<input style="width: 110px;"
+                                        name="q_lowpur" id="lowpur-box" value="{{ request.GET.q_lowpur }}" type="text"
+                                        placeholder="下限なし"> ～ ¥<input style="width: 110px;" name="q_uppur"
+                                        id="uppur-box" value="{{ request.GET.q_uppur }}" type="text" placeholder="上限なし">
+                                </td>
+                                <th class="th-15part">取扱</th>
+                                <td>
+                                    <select name="q_stat" id="status-select">
+                                        <option value="" selected>取扱を選択</option>
+                                        <option value="0">販売中</option>
+                                        <option value="1">販売済み</option>
+                                        <option value="2">修理中</option>
+                                        <option value="3">取置</option>
+                                        {% if user|in_group:"従業員" %}{% else %}
+                                        {# 管理者、店長のみ新規登録権限所持 #}
+                                        <option value="4">削除</option>
+                                        {% endif %}
+                                    </select>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+
+
+                    <div class="searchtable">
+                        <div style="position: absolute;right: 3%;">
+                            <!-- 検索ボタン -->
+                            <button style="width: 80px;" type="button" class="btn btn--orange btn--cubic btn--shadow" onclick="clearFormAll(); document.getElementById('search-btn').click();">クリア</button>
+                            <button style="width: 180px;" type="submit" id="search-btn" class="btn btn--orange btn--cubic btn--shadow" onclick="clickBtn1()"><i class="fas fa-search"></i> 条件を指定して検索</button>
+                        </div>
+                    </div><!-- <div class="searchtable"> -->
+                </div>
+        </div>
+        </form>
+        <!-- <div class="placement-right"> -->
+
+        <!-- </div> -->
+        <table class="listtable column-color listthtd-2">
+            <thead class="tablecolumn">
+                <tr>
+                    <!-- <th>id</th> -->
+                    <th class="dis-non-tdth">商品コード</th>
+                    <th class="id-tdth">ID</th>
+                    <th class="th-17part">商品コード</th>
+                    <th class="th-23part">型番</th>
+                    <th class="th-15part">カテゴリ</th>
+                    <th class="th-15part">取扱店舗</th>
+                    <th class="th-10part">取扱</th>
+                    <th class="th-5part">備考</th>
+                    <th class="th-15part">仕入価格</th>
+                </tr>
+            </thead>
+
+            <!-- ItemListモデルの一覧を表示 -->
+            {% for item in object_list %}
+            <tr tr-link="itemlist">
+                <td class="dis-non-tdth">{{ item.id }}</td>
+                <!--商品コード-->
+                <td class="id-tdth"></td>
+                <td>{{ item.id }}</td>
+                <!--商品コード-->
+                <td id="model-number-td">{{ item.model_number }}</td>
+                <!--型番-->
+                <td>{{ item.get_category_display }}</td>
+                <!--カテゴリ-->
+                <td>{{ item.store_id.store_name }}</td>
+                <!--在庫場所-->
+                <td>{{ item.get_item_status_display }}</td>
+                <td>{% if item.remarks == "" %}無{% elif item.remarks == None %}無{% else %}有{% endif %}
+                </td>
+                <td><p style=" text-align: left; padding-left: 0.5rem; float:left; margin-bottom: 0rem;">¥</p><p style=" text-align: right; padding-right: 0.5rem; margin-bottom: 0rem;">{{ item.purchase_price }}</p></td>
+                <!--仕入価格-->
+            </tr>
+            {% empty %}
+        </table>
+        <h3 style="text-align: center;">一致するデータがありませんでした</h3>
+        {% endfor %}
+        </table>
+        {# ページネーション処理 #}
+        {% if object_list.has_other_pages %}
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {# 前のページがあるならば前のページを表示、無ければ表示しない #}
+                {% if object_list.has_previous %}
+                <li><a class="page-link d-inline-block"
+                        href="?q_item={{ request.GET.q_item }}&q_num={{ request.GET.q_num }}&category={{ request.GET.category }}&store_id={{ request.GET.store_id }}&q_lowpur={{ request.GET.q_lowpur }}&q_uppur={{ request.GET.q_uppur }}&q_stat={{ request.GET.q_stat }}&page={{ object_list.previous_page_number }}"><<</a>
+                </li>
+                {% else %}
+                <li class="disabled">
+                    <div class="page-link d-inline-block disabled" href="#"><<</div>
+                </li>
+                {% endif %}
+
+                {# 開いている画面に前のページがある場合 #}
+                {% if object_list.has_previous %}
+                {# 前のページの番号が1でない場合 #}
+                {% if object_list.previous_page_number != 1 %}
+                <li><a class="page-link  d-inline-block" href="?q_item={{ request.GET.q_item }}&q_num={{ request.GET.q_num }}&category={{ request.GET.category }}&store_id={{ request.GET.store_id }}&q_lowpur={{ request.GET.q_lowpur }}&q_uppur={{ request.GET.q_uppur }}&q_stat={{ request.GET.q_stat }}&page=1">1</a>
+                </li>
+                <li>…</li>
+                {% endif %}
+                <li><a class="page-link  d-inline-block" href="?q_item={{ request.GET.q_item }}&q_num={{ request.GET.q_num }}&category={{ request.GET.category }}&store_id={{ request.GET.store_id }}&q_lowpur={{ request.GET.q_lowpur }}&q_uppur={{ request.GET.q_uppur }}&q_stat={{ request.GET.q_stat }}&&page={{ object_list.previous_page_number }}">{{object_list.previous_page_number }}</a></li>
+                {% endif %}
+                <li class="disabled">
+                    <div class="page-link d-inline-block disabled" href="#">{{ object_list.number }}</div>
+                </li>
+
+                {# 開いている画面に次のページがある場合 #}
+                {% if object_list.has_next %}
+                <li><a class="page-link  d-inline-block"
+                        href="?q_item={{ request.GET.q_item }}&q_num={{ request.GET.q_num }}&category={{ request.GET.category }}&store_id={{ request.GET.store_id }}&q_lowpur={{ request.GET.q_lowpur }}&q_uppur={{ request.GET.q_uppur }}&q_stat={{ request.GET.q_stat }}&&page={{ object_list.next_page_number }}">{{object_list.next_page_number }}</a></li>
+                {# 次のページの番号が最後のページでなかった場合 #}
+                {% if object_list.next_page_number != object_list.paginator.num_pages %}
+                <li>…</li>
+                <li><a class="page-link  d-inline-block"
+                        href="?q_item={{ request.GET.q_item }}&q_num={{ request.GET.q_num }}&category={{ request.GET.category }}&store_id={{ request.GET.store_id }}&q_lowpur={{ request.GET.q_lowpur }}&q_uppur={{ request.GET.q_uppur }}&q_stat={{ request.GET.q_stat }}&&page={{ object_list.paginator.num_pages }}">{{object_list.paginator.num_pages }}</a></li>
+                {% endif %}
+                {% endif %}
+
+                {# 次のページがあるならば次のページを表示、無ければ表示しない #}
+                {% if object_list.has_next %}
+                <li><a class="page-link  d-inline-block" href="?q_item={{ request.GET.q_item }}&q_num={{ request.GET.q_num }}&category={{ request.GET.category }}&store_id={{ request.GET.store_id }}&q_lowpur={{ request.GET.q_lowpur }}&q_uppur={{ request.GET.q_uppur }}&q_stat={{ request.GET.q_stat }}&&page={{ object_list.next_page_number }}">>></a>
+                </li>
+                {% else %}
+                <li class="disabled">
+                    <div class="page-link d-inline-block disabled" href="#">>></div>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+        <div class="onoffields">
+            <div class="onoffields-1">
+                <button style="width: 140px; margin: 0.5rem;" class="btn btn--orange btn--cubic btn--shadow" onclick="clickBtn1()" /><i class="fas fa-search"></i>条件を<br>指定して検索</button>
+            </div>
+            <div class="onoffields-2">
+                <button style="width: 130px; margin: 0.5rem;" class="btn btn--orange btn--cubic btn--shadow" onclick="clickBtn1()" />検索窓を閉じる</button>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extrajs %}
+<script src="{% static 'js/form.js' %}"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+            //クリックイベント
+            .click(function (e) {
+                //e.targetはクリックした要素自体、それがa要素以外であれば
+                if (!$(e.target).is('a')) {
+                    var hiddenVal = $(this).children('td')[0].innerText;
+                    //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+                    window.location.href = "{% url 'itemmas:S03-03' 100 %}".replace(100, hiddenVal);
+                }
+            });
+    });
+</script>
+<script>
+    //初期表示は非表示
+    document.getElementsByClassName("itemsearchtable2")[0].style.display = "none";
+    document.getElementsByClassName("onoffields-2")[0].style.display = "none";
+
+    function clickBtn1() {
+        const p1 = document.getElementsByClassName("itemsearchtable2")[0];
+        const class2 = document.getElementsByClassName("searchtable")[0];
+        const onoffields_1 = document.getElementsByClassName("onoffields-1")[0];
+        const onoffields_2 = document.getElementsByClassName("onoffields-2")[0];
+
+        if (p1.style.display == "block") {
+            // noneで非表示
+            p1.style.display = "none";
+            class2.style.display = "block";
+            onoffields_1.style.display = "block";
+            onoffields_2.style.display = "none";
+        } else {
+            // blockで表示
+            p1.style.display = "block";
+            class2.style.display = "none";
+            onoffields_1.style.display = "none";
+            onoffields_2.style.display = "block";
+        }
+    }
+</script>
+<script>
+    // 検索ボタン押してもプルダウンリスト値保持するJavaScript-------------------------------------------------------------------------------------------------
+    $(function () {
+        const url = new URL(window.location.href); //url取って
+        const q_cat = url.searchParams.get('category'); //特定のクエリの値を変数に取って(カテゴリ)
+        const store_id = url.searchParams.get('store_id'); //(販売場所)
+        const q_stat = url.searchParams.get('q_stat'); //(商品ステータス)
+
+        if (url.searchParams.get('category')) { //もしクエリに値を取れたら(=値があれば)
+            $("#itemmascategory").val(q_cat); //セレクトボックスのidを指定してセレクトボックスの値をvalで指定
+        }
+        if (url.searchParams.get('store_id')) { //販売場所
+            $("#id_store_id").val(store_id);
+        }
+        if (url.searchParams.get('q_stat')) { //商品ステータス
+            $("#status-select").val(q_stat);
+        }
+
+        $('#search-btn').click(function () { //検索ボタン押下イベント--------------------------------------------------------------------------
+            const category_selected = $('#itemmascategory').val(); //変数〇〇_selectedに現在のセレクトボックスの値を取る(カテゴリ)
+            url.searchParams.set('q_cat', category_selected); //特定のクエリの値にselected値をセット
+
+            const store_selected = $('#id_store_id').val(); //(販売場所)
+            url.searchParams.set('store_id', store_selected);
+
+            const status_selected = $('#status-select').val(); //(商品ステータス)
+            url.searchParams.set('q_stat', status_selected);
+
+            location.href = url; //は？よくわからないけどできてるからヨシ！location.href …… 現在ページURLを参照する
+        });
+    });
+</script>
+{% endblock %}
