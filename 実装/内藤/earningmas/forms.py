@@ -37,4 +37,10 @@ class S1104Form(ModelForm):
     class Meta:
         model = EarningInfo
         fields = ('selling_price','store_id','employee_id' )
+        
+        # 初期値の設定
+        def __init__(self, *args, **kwargs):
+            super(S1104Form, self).__init__(*args, **kwargs)
+            self.field['selling_price'].initial = 000
+            
 

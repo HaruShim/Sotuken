@@ -10,36 +10,46 @@
 
 {% block title %}SIMS | 売上編集画面{% endblock %}
 
+{% load utils %}
+{% load in_group %}
+{% load static %}
+
 {% block main_contents %}
 <main>
     <div class="container-fluid px-4">
         <h1 class="mt-4">売上編集</h1>
             <div class="searchtable">
                 <div class="st-right">
-                    <p>最終更新日:{{ object.updated_at }}</p>
+                    <p>最終更新日:{{ object_a.updated_at }}</p>
                 </div>
             </div>
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
             <div class="st-right">
-                <p>{{form.selling_price}}<button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit" name="test_data">変更</button></p>
+                <input type="text" name="selling_price"><button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit" name="test_data">変更</button>
             </div>
         <!-- 編集フォームを表示 -->
             <!-- 変更前テーブル -->
+        
             <table class="registertable">
                 <thead class="tablecolumn">
                     <tr>
-                        <p style="margin-bottom: 0;">変更前</p>
-                        <th>販売価格(変更前)</th>
                         <th>伝票番号</th>
+                        <th>販売日</th>
                         <th>商品コード</th>
-                        <th>店舗名</th>
+                        <th>仕入価格</th>
+                        <th>販売価格(変更前)</th>
+                        <th>販売店舗</th>
+                        <th>担当者</th>
                     </tr>
                     <tr>
-                        <td>{{object_b.selling_price}}</td>  <!--販売価格-->
-                        <td>{{object_b.id}}</td>  <!--伝票番号-->
+                        <td>100240{{object_b.id}}</td>  <!--伝票番号-->
+                        <td>{{ object_b.sale_date | date:"Y/m/d"}}</td> 
                         <td>{{object_b.item_code}}</td>  <!--商品コード-->
-                        <td>{{object_b.store_id }}</td>  <!--変更する販売価格-->
+                        <td class="td-right"><p style=" text-align: left; padding-left: 0.5rem; float:left; margin-bottom: 0rem;">¥</p><p style=" text-align: right; padding-right: 0.5rem; margin-bottom: 0rem;">{{ object_b.item_code.purchase_price }}</p></td>
+                        <td class="td-right"><p style=" text-align: left; padding-left: 0.5rem; float:left; margin-bottom: 0rem;">¥</p><p style=" text-align: right; padding-right: 0.5rem; margin-bottom: 0rem;">{{ object_b.selling_price }}</p></td>
+                        <td>{{ object_b.store_id.store_name }}</td>
+                        <td>{{ object_b.employee_id.name }}</td>
                     </tr>
                 </thead>
                 <!-- <button id="toggle">トグルする</button>
@@ -53,25 +63,35 @@
             <table class="registertable">
                 <thead class="tablecolumn">
                     <tr>
-                        <p style="margin-bottom: 0;">変更後</p>
-                        <th>販売価格(変更後)</th>
                         <th>伝票番号</th>
+                        <th>販売日</th>
                         <th>商品コード</th>
-                        <th>店舗名</th>
+                        <th>仕入価格</th>
+                        <th>販売価格(変更後)</th>
+                        <th>販売店舗</th>
+                        <th>担当者</th>
                     </tr>
                     <tr style="margin-bottom: 1em;">
-                        <td>{{object_a.selling_price}}</td>  <!--販売価格-->
-                        <td>{{object_a.id}}</td>  <!--伝票番号-->
+                        <td>100240{{object_a.id}}</td>  <!--伝票番号-->
+                        <td>{{ object_a.sale_date | date:"Y/m/d"}}</td>  <!--販売価格-->
                         <td>{{object_a.item_code}}</td>  <!--商品コード-->
-                        <td>{{object_a.store_id }}</td>  <!--変更する販売価格-->
+                        <td class="td-right"><p style=" text-align: left; padding-left: 0.5rem; float:left; margin-bottom: 0rem;">¥</p><p style=" text-align: right; padding-right: 0.5rem; margin-bottom: 0rem;">{{ object_a.item_code.purchase_price }}</p></td>
+                        <td class="td-right"><input name="sample" required="True" style=" width:100%; height:100%; text-align:right" value={{object_a.selling_price }}></td>
+                        <td>{{ object_a.store_id.store_name }}</td>
+                        <td>{{ object_a.employee_id.name }}</td>
                     </tr>
                 </thead>
             </table>
-            <button style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit" name="create_data">更新(確定)</button>
-            <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit" href="{% url 'earningmas:S04-01' %}">キャンセル</a>
+            <button style="width: 100px;" onclick= "foo();" class="btn btn--orange btn--cubic btn--shadow" name="create_data">登録</button>
+            <!-- <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" type="submit" name="create_data">登録</a> -->
+            <a style="width: 100px;" class="btn btn--orange btn--cubic btn--shadow" href="{% url 'earningmas:S04-01' %}">キャンセル</a>
+            <!-- <a class="dis-non-tdth" onclick="hoge();" id="btn1">遷移</a> -->
+            <a onclick="hoge();" id="btn1" href="{% url 'earningmas:S04-01' %}">遷移</a>
+            <!-- <a type="submit" href="{% url 'earningmas:S04-01' %}" class="btn btn--orange btn--cubic btn--shadow" >確定</a> -->
+            <!-- <button type="button" onclick="location.href='../mas_earning.html';">戻る</button> -->
             <!-- /変更後テーブル -->
             </form>
-    </div>
+        </div>
 </main>
 
 
@@ -85,5 +105,29 @@
             $("#text").fadeOut("slow");
         }
     })
+</script>
+
+<script>
+    // クリックされたボタンを判断するフラグ
+    var flg = 0;
+
+    function hoge() {
+
+    var obj = document.getElementsByClassName('badge-primary')[0];
+
+    if (flg == 1) {
+        obj.textContent = "別ボタンからAボタンをクリック";
+        flg = 0;
+    } else {
+        obj.textContent = "AボタンからAボタンをクリック";
+    }
+
+    }
+
+    function foo() {
+    flg = 1;
+    document.getElementById("btn1").click();
+    }
+
 </script>
 {%endblock%}

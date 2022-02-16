@@ -1,0 +1,227 @@
+<!-- S04-01 売上情報一覧
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 売上情報一覧{% endblock %}
+<!-- 粗利計算のフィルター -->
+{% load utils %}
+{% load in_group %}
+{% load static %}
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">売上</h1>
+        <div class="edit-ditail-table">
+            <div style="margin-left: 88%;">
+                <a style="width: 100px;" class="modal-btn btn btn--orange btn--cubic btn--shadow">新規登録</a>
+            </div>
+        </div>
+        {% include 'earning_search.html' %}
+        {% include 'earning_wrapper.html' %}
+            <table class="earningtable column-color listthtd-2">
+                <thead class="tablecolumn">
+                    <tr>
+                        <th class="dis-non-tdth">伝票番号</th>
+                        <th class="id-tdth">ID</th>
+                        <th class="dis-non-tdth">伝票番号</th>
+                        <th>伝票番号</th>
+                        <th>販売日</th>
+                        <th>商品コード</th>
+                        <th>仕入価格</th>
+                        <th>販売価格</th>
+                        <th>粗利</th>
+                        <th>粗利率</th>
+                        <th>販売店舗</th>
+                        <th>担当者</th>
+                    </tr>
+                </thead>
+                <!-- earninginfo_listモデルの一覧を表示 -->
+                {% for item in object_list %}
+                <tr tr-link="earninglist">
+                    <td class="dis-non-tdth">{{ item.id }}</td>
+                    <!--伝票番号-->
+                    <td class="id-tdth"></td>
+                    <td class="dis-non-tdth">{{ item.id }}</td>
+                    <!--伝票番号-->
+                    <td class="tamesi-id">1398297{{ item.id }}</td>
+                    <!--伝票番号-->
+                    <td>{{ item.sale_date | date:"Y/m/d"}}</td>
+                    <!--販売日(2021/11/11)-->
+                    <!-- <td>{ item.sale_date}}</td> -->
+                    <!--販売日(2021年11月11日)-->
+                    <td>{{ item.item_code }}</td>
+                    <!--商品コード-->
+                    <td class="td-right">¥{{ item.item_code.purchase_price }}</td>
+                    <!--仕入価格-->
+                    <td class="td-right"><p style=" text-align: left; padding-left: 0.5rem; float:left; margin-bottom: 0rem;">¥</p><p style=" text-align: right; padding-right: 0.5rem; margin-bottom: 0rem;">{{ item.selling_price }}</p></td>
+                    <!--販売価格-->
+                    <td class="td-right">¥{{ item.selling_price|grass_profit:item.item_code.purchase_price}}</td>
+                    <!-- 粗利 -->
+                    <td class="td-right">{{ item.selling_price|grass_profit_margin:item.item_code.purchase_price}}%</td>
+                    <!-- 粗利 -->
+                    <td>{{ item.store_id.store_name }}</td>
+                    <!--販売店舗-->
+                    <td>{{ item.employee_id.name }}</td>
+                    <!--担当者-->
+                </tr>
+                <!-- DBが空だった場合 -->
+                {% empty %}
+            </table>
+            <h3 style="text-align: center;">一致するデータがありませんでした</h3>
+            {% endfor %}
+            </table>
+            {# ページネーション処理 #}
+            {% include 'pagenavigation-earning.html' %}
+            <p class="dis-non-tdth">json：<span id="json"></span></p>
+            <div class="onoffields">
+                <div class="onoffields-1">
+                    <button style="width: 140px; margin: 0.5rem;" class="btn btn--orange btn--cubic btn--shadow" onclick="clickBtn1()"><i class="fas fa-search"></i>条件を<br>指定して検索</button>
+                </div>
+                <div class="onoffields-2">
+                    <button style="width: 130px; margin: 0.5rem;" class="btn btn--orange btn--cubic btn--shadow" onclick="clickBtn1()">検索窓を閉じる</button>
+                </div>
+            </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extrajs %}
+<script src="{% static 'js/form.js' %}"></script>
+<script src="{% static 'js/earning.js' %}"></script>
+<script>
+    $(function () {
+    $.ajax({
+        url: "{% url 'earningmas:send_get_json' %}",
+        type: "GET",
+        dataType: "json",
+    })
+        .done(function (data) {
+            // success
+            //取得jsonデータ
+            // var data_stringify = JSON.stringify(data);
+            var data_json = JSON.parse(data);
+            // //jsonデータから各データを取得
+            // var data_id = data_json[1].name;
+            // // alert(JSON.stringify(data_id));
+            // var data_title = data_json[1]["model_number"];
+            // // alert(data_title);
+            // //出力
+            // $("#id").text(data_id);
+            // $("#title").text(data_title);
+            $("#json").text(JSON.stringify(data_json));
+            
+        })
+        .fail(function (data) {
+            // error
+            alert(data);
+            alert("error");
+            console.log("error");
+        });
+});
+</script>
+<script type="text/javascript">
+    jQuery(function($) {
+        clearFormAll();
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+        //クリックイベント
+        .click(function(e) {
+            //e.targetはクリックした要素自体、それがa要素以外であれば
+            if (!$(e.target).is('a')) {
+                var hiddenVal = $(this).children('td')[0].innerText;
+            //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+            window.location.href = "{% url 'earningmas:S04-04' 100 %}".replace(100,hiddenVal);
+        }
+    });
+});
+    // jQuery(function ($) {
+    //     //data-hrefの属性を持つtrを選択しclassにclickableを付加
+    //     $('tr[tr-link]').addClass('clickable')
+    //         //クリックイベント
+    //         .click(function (e) {
+    //             $('.js-modal2').fadeIn();
+    //             return false;
+
+    //         });
+    //     $('.modal-close-btn2').on('click', function () {
+    //         $('.js-modal2').fadeOut();
+    //         return false;
+    //     });
+    // });
+
+    $(function () {
+        $('.modal-btn').on('click', function () {
+            $('.js-modal').fadeIn();
+            return false;
+        });
+        $('.modal-close-btn').on('click', function () {
+            $('.js-modal').fadeOut();
+            return false;
+        });
+    });
+    jQuery(function ($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+            //クリックイベント
+            .click(function (e) {
+                //e.targetはクリックした要素自体、それがa要素以外であれば
+                    // alert(hiddenitemcode);
+                    //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+                    $('.js-modals').fadeIn();
+                    return false;
+            });
+    });
+</script>
+<!-- <script>
+    // カレンダー
+    $(function () {
+        // 日付は、年-月-日 の形式でお願いする。
+        let dateFormat = 'yy-mm-dd';
+        $('#id_birthday').datepicker({
+            dateFormat: dateFormat,
+            changeYear: true,  // 年選択をプルダウン化
+            changeMonth: true,  // 月選択をプルダウン化
+            yearRange: "-60:+1" // 現在日付の２年前～５年後まで選択可能
+        });
+    });
+</script> -->
+<script>
+    //初期表示は非表示
+    document.getElementsByClassName("itemsearchtable3")[0].style.display = "none";
+    document.getElementsByClassName("onoffields-2")[0].style.display = "none";
+    // 売上新規登録画面(モーダル)の商品コードセレクトボックスにchangeハンドラを追加
+    let selcategory = document.getElementById('id_s_itemselecter');
+    selcategory.addEventListener('change', inputChange);
+
+    function clickBtn1() {
+        const p1 = document.getElementsByClassName("itemsearchtable3")[0];
+        const class2 = document.getElementsByClassName("edit-ditail-table")[0];
+        const onoffields_1 = document.getElementsByClassName("onoffields-1")[0];
+        const onoffields_2 = document.getElementsByClassName("onoffields-2")[0];
+
+        if (p1.style.display == "block") {
+            // noneで非表示
+            p1.style.display = "none";
+            class2.style.display = "block";
+            onoffields_1.style.display = "block";
+            onoffields_2.style.display = "none";
+        } else {
+            // blockで表示
+            p1.style.display = "block";
+            class2.style.display = "none";
+            onoffields_1.style.display = "none";
+            onoffields_2.style.display = "block";
+        }
+    }
+</script>
+{% endblock %}
