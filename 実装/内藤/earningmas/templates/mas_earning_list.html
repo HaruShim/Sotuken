@@ -1,0 +1,197 @@
+<!-- S04-01 売上情報一覧
+
+    ToDo
+        画面の制作お願いします
+        画面の確認
+        *views.py、forms.pyの埋め込みタグを記述
+        *画面の確認
+        *画面のスタイル最終調整
+        *最終確認(新満)
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 売上情報一覧{% endblock %}
+<!-- 粗利計算のフィルター -->
+{% load utils %}
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">売上 一覧</h1>
+        <div class="card-body">
+            <div class="itemsearchtable2">
+                <form action="" method="get">
+                    <div class="searchtable-input"> <!-- 2/01 -->
+                        <table style="width: 90%; margin-left: 5%; margin-top: 0.5rem;height: 100px;" class="searchtable">
+                            <thead class="tablecolumn">
+                                <tr>
+                                    <!-- 商品コード -->
+                                    <th class="th-20part">商品コード</th><td style="width: 30%;"><input name="q_item" id="item-box" placeholder="商品コードを指定" value="{{ request.GET.q_item }}" type="text"></td>
+                                    <!-- その他 -->
+                                    <th class="th-15part">その他</th><td><input id="others" name="query" value="{{ request.GET.query }}" type="text" placeholder="その他"></td>
+                                    <!-- 担当者 -->
+                                    <th class="th-15part">担当者</th>
+                                    <td class="th-20part">{{forms.s_employeeselectre}}</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- 販売日 -->
+                                        <th class="th-20part">販売日</th><td colspan="3" style="background-color: #fff;"><input name="q_lowpur" class="me-date" id="lowpur-box" value="{{ request.GET.q_lowpur }}" type="date"> ～ <input name="q_uppur" class="me-date" id="uppur-box" value="{{ request.GET.q_uppur }}" type="date"></td>
+                                        <!-- 販売店舗 -->
+                                        <th class="th-15part">販売店舗</th>
+                                        <td class="th-20part">{{forms.s_storeselecter}}</td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="searchtable">
+                            <div class="st-left">
+                            </div>
+                            <div style="margin-right: 1rem;" class="st-right">
+                                <!-- 検索ボタン -->
+                                <button style="width: 80px;" type="button" class="btn btn--orange btn--cubic btn--shadow" onclick="clearFormAll()">クリア</button>
+                                <button style="width: 180px;" type="submit" id="search-btn" class="btn btn--orange btn--cubic btn--shadow" onclick="clickBtn1()"><i class="fas fa-search"></i> 条件を指定して検索</button>
+                            </div>
+                        </div><!-- <div class="searchtable"> -->
+                    </div>
+                </form>
+            </div>
+            <table class="earningtable column-color listthtd-2">
+                <thead class="tablecolumn">
+                    <tr>
+                        <th class="dis-non-tdth">伝票番号</th>
+                        <th class="id-tdth">ID</th>
+                        <th>伝票番号</th>
+                        <th>販売日</th>
+                        <th>商品コード</th>
+                        <th>仕入価格</th>
+                        <th>販売価格</th>
+                        <th>粗利</th>
+                        <th>粗利率</th>
+                        <th>販売店舗</th>
+                        <th>担当者</th>
+                    </tr>
+                </thead>
+                    <!-- earninginfo_listモデルの一覧を表示 -->
+                    {% for item in earninginfo %}
+                    <tr tr-link="earninglist">
+                        <td class="dis-non-tdth">{{ item.id }}</td>        <!--伝票番号-->
+                        <td class="id-tdth"></td>
+                        <td class="tamesi-id">1398297{{ item.id }}</td>        <!--伝票番号-->
+                        <td>{{ item.sale_date | date:"Y/m/d"}}</td> <!--販売日(2021/11/11)-->
+                        <!-- <td>{ item.sale_date}}</td> -->        <!--販売日(2021年11月11日)-->
+                        <td>{{ item.item_code }}</td><!--商品コード-->
+                        <td class="td-right">¥{{ item.item_code.purchase_price }}</td><!--仕入価格-->
+                        <td class="td-right">¥{{ item.selling_price }}</td><!--販売価格-->
+                        <td class="td-right">¥{{ item.selling_price|grass_profit:item.item_code.purchase_price}}</td><!-- 粗利 -->
+                        <td class="td-right">{{ item.selling_price|grass_profit_margin:item.item_code.purchase_price}}%</td><!-- 粗利 -->
+                        <td>{{ item.store_id.store_name }}</td><!--販売店舗-->
+                        <td>{{ item.employee_id.name }}</td><!--担当者-->
+                    </tr>
+                    <!-- DBが空だった場合 -->
+                    {% empty %}
+                    </table>
+                    <h3 style="text-align: center;">一致するデータがありませんでした</h3>
+                            {% endfor %}
+            </table>
+            <div class="edit-ditail-table"></div>
+            <div class="onoffields">
+                <div class="onoffields-1">
+                    <button style="width: 140px; margin: 0.5rem;" class="btn btn--orange btn--cubic btn--shadow" onclick="clickBtn1()"><i class="fas fa-search"></i>条件を<br>指定して検索</button>
+                </div> 
+                <div class="onoffields-2">
+                    <button style="width: 130px; margin: 0.5rem;" class="btn btn--orange btn--cubic btn--shadow" onclick="clickBtn1()">検索窓を閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript">
+    jQuery(function($) {
+        //data-hrefの属性を持つtrを選択しclassにclickableを付加
+        $('tr[tr-link]').addClass('clickable')
+        //クリックイベント
+        .click(function(e) {
+            //e.targetはクリックした要素自体、それがa要素以外であれば
+            if(!$(e.target).is('a')){
+                var hiddenVal = $(this).children('td')[0].innerText;
+            //その要素の先祖要素で一番近いtrのdata-href属性の値に書かれているURLに遷移する
+            window.location.href = "{% url 'earningmas:S04-02' 100 %}".replace(100,hiddenVal);
+        }
+    });
+});
+</script>
+<script>
+    // カレンダー
+    $(function () {
+        // 日付は、年-月-日 の形式でお願いする。
+        let dateFormat = 'yy-mm-dd';
+        $('#id_birthday').datepicker({
+            dateFormat: dateFormat,
+            changeYear: true,  // 年選択をプルダウン化
+            changeMonth: true,  // 月選択をプルダウン化
+            yearRange: "-60:+1" // 現在日付の２年前～５年後まで選択可能
+        });
+    });
+</script>
+<script>
+    //初期表示は非表示
+    document.getElementsByClassName("itemsearchtable")[0].style.display ="none";
+    document.getElementsByClassName("onoffields-2")[0].style.display ="none";
+    
+    function clickBtn1(){
+        const p1 = document.getElementsByClassName("itemsearchtable")[0];
+        const class2 = document.getElementsByClassName("edit-ditail-table")[0];
+        const onoffields_1 = document.getElementsByClassName("onoffields-1")[0];
+        const onoffields_2 = document.getElementsByClassName("onoffields-2")[0];
+    
+        if(p1.style.display=="block"){
+            // noneで非表示
+            p1.style.display ="none";
+            class2.style.display ="block";
+            onoffields_1.style.display ="block";
+            onoffields_2.style.display ="none";
+        }else{
+            // blockで表示
+            p1.style.display ="block";
+            class2.style.display ="none";
+            onoffields_1.style.display ="none";
+            onoffields_2.style.display ="block";
+        }
+    }
+</script>
+<script>
+// 検索ボタン押してもプルダウンリスト値保持するJavaScript-------------------------------------------------------------------------------------------------
+    $(function(){
+        const url = new URL(window.location.href); //url取って
+        const q_cat = url.searchParams.get('category'); //特定のクエリの値を変数に取って(カテゴリ)
+        const store_id = url.searchParams.get('store_id'); //(販売場所)
+        const q_stat = url.searchParams.get('q_stat'); //(商品ステータス)
+
+        if(url.searchParams.get('q_cat')){ //もしクエリに値を取れたら(=値があれば)
+            $("#category-select").val(q_cat); //セレクトボックスのidを指定してセレクトボックスの値をvalで指定
+        }
+        if(url.searchParams.get('store_id')){ //販売場所
+            $("#id_store_id").val(store_id);
+        }
+        if(url.searchParams.get('q_stat')){ //商品ステータス
+            $("#status-select").val(q_stat);
+        }
+
+        $('#search-btn').click(function() { //検索ボタン押下イベント--------------------------------------------------------------------------
+            const category_selected = $('#itemmascategory').val(); //変数〇〇_selectedに現在のセレクトボックスの値を取る(カテゴリ)
+            url.searchParams.set('q_cat',category_selected); //特定のクエリの値にselected値をセット
+            
+            const store_selected = $('#id_store_id').val(); //(販売場所)
+            url.searchParams.set('store_id',store_selected);
+
+            const status_selected = $('#status-select').val(); //(商品ステータス)
+            url.searchParams.set('q_stat',status_selected);
+
+            location.href = url; //は？よくわからないけどできてるからヨシ！location.href …… 現在ページURLを参照する
+        });
+    });
+</script>
+{% endblock %}
