@@ -1,0 +1,62 @@
+<!-- S02-03 店舗情報詳細
+
+    ToDo
+        *画面の制作お願いします
+        *
+
+-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SIMS | 店舗詳細画面{% endblock %}
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'storemas:S02-01' %}">店舗管理 詳細</a></h1>
+        <div class="edit-ditail-table">
+            <div class="st-left">
+                <a class="btn btn--orange btn--cubic btn--shadow return" href="{% url 'storemas:S02-01' %}">一覧に戻る</a>
+            </div>
+            <div class="st-right">
+                <p>最終更新日：{{ object.updated_at }}</p>
+            </div>
+        </div>
+        <table class="registertable">
+            <thead class="tablecolumn">
+            <tbody>
+                <tr>
+                    <th>店舗ID</th>
+                    <td>{% if object.id != None %}{{ object.id }}{% else %}未設定{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>場所カテゴリ</th>
+                    <td>{% if object.place_category != None %}{{ object.get_place_category_display }}{% else %}未設定{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>店舗名</th>
+                    <td>{% if object.store_name != None %}{{ object.store_name }}{% else %}未設定{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>連絡先</th>
+                    <td>{% if object.tel != None %}{{ object.tel }}{% else %}未設定{% endif %}</td>
+                </tr>
+                <tr>
+                    <th>住所</th>
+                    <td>{% if object.address != None %}{{ object.address }}{% else %}未設定{% endif %}</td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+        <form method="POST" action="{% url 'storemas:tamesi' object.pk %}">
+            {% csrf_token %}
+            <div class="placement-center">
+                <a class="btn btn--orange btn--cubic btn--shadow" href="{% url 'storemas:S02-04' object.pk %}">編集</a>
+                {% if object.invalid_flg %}
+                <button class="btn btn--orange btn--cubic btn--shadow" name="button_1" type="submit">無効化</button>
+                {% else %}
+                <button class="btn btn--orange btn--cubic btn--shadow" name="button_1" type="submit">有効化</button>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}

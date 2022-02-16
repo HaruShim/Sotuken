@@ -1,0 +1,93 @@
+<!-- S11-02 売上情報新規登録
+
+    ToDo
+        画面の制作お願いします
+        *
+
+-->
+
+{% extends 'base.html' %}
+
+{% block title %}SIMS | 売上情報新規登録{% endblock %}
+
+{% block main_contents %}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4"><a class="backlist" href="{% url 'earning:S11-01' %}">売上管理</a></h1>
+        <div class="row">
+            <div class="card-body">
+                <form method="POST" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    <table class="table">
+                        {% if form.errors %}
+                        <div class="errorlist">
+                            {% for errors in form.errors.values %}
+                            {% for error in errors %}
+                            {{ error }}<br>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <!-- { for field in form %}
+                            <div class="field">
+                                { field.label_tag }}
+                                { field }}
+                                { if field.help_text %}
+                                <span class="helptext">{ field.help_text }}</span>
+                                { endif %}
+                            </div>
+                            { endfor %} -->
+                        <table class="cleannesstable" frame="border">
+                            <tr>
+                                <td>商品コード{{form.item_code}}</td>
+                                <td>販売店舗{{form.store_id}}</td>
+                                <td>担当者{{form.employee_id}}</td>
+                            </tr>
+                            <tr>
+                                <td>販売価格{{form.selling_price}}</td>
+                                <td><button class="btn btn-primary" type="submit">追加</button></td>
+                            </tr>
+                        </table>
+                    </table>
+
+                </form>
+                <table class="earningtable">
+                    <thead class="tablecolumn">
+                        <tr>
+                            <th>ID</th>
+                            <th>販売日</th>
+                            <th>商品コード</th>
+                            <th>型番</th>
+                            <th>仕入価格</th>
+                            <th>販売価格</th>
+                            <th>粗利</th>
+                            <th>粗利率</th>
+                            <th>販売店舗</th>
+                            <th>担当者</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabletbody">
+                        {% for item in earninginfo_list %}
+                        <tr>
+                            {{item.item_code}}
+                            <!-- <td></td>
+                                    <td>2020/10/31</td>
+                                    <td>123456789</td>
+                                    <td>123456789</td>
+                                    <td>3000円</td>
+                                    <td>4000円</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>店舗A</td>
+                                    <td>大原太郎</td> -->
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <a class="btn btn-primary" href="{% url 'earning:S11-01'%}">一覧に戻る</a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

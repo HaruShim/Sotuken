@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}SIMS | ホーム画面{% endblock %}
+
+{% block main_contents %}
+
+<main>
+    <h1>Page not Found(404)</h1>
+    <div class="main-menu1">
+        <p class="cap">商品</p>
+        <a href="{% url 'itemmas:S03-01' %}" class="box-anchor">
+            <div class="btn_09">
+                <i class="fas fa-laptop"></i>
+                <div>商品</div>
+            </div>
+        </a>
+        <a href="{% url 'setitem:S08-01' %}" class="box-anchor">
+            <div class="btn_09">
+                <i class="fas fa-laptop"></i>
+                <div>セット商品</div>
+            </div>
+        </a>
+        <a href="{% url 'earningmas:S04-01' %}" class="box-anchor">
+            <div class="btn_09">
+                <i class="fas fa-yen-sign"></i>
+                <div>売上</div>
+            </div>
+        </a>
+        <a href="{% url 'estimate:S10-01' %}" class="box-anchor">
+            <div class="btn_09">
+                <i class="far fa-sticky-note"></i>
+                <div>見積</div>
+            </div>
+        </a>
+        <a href="{% url 'bottleneckmas:S06-01' %}" class="box-anchor">
+            <div class="btn_09">
+                <i class="fas fa-random"></i>
+                <div>ボトルネック</div>
+            </div>
+        </a>
+        <a href="{% url 'benchmas:S05-01CPU' %}" class="box-anchor">
+            <div class="btn_09">
+                <i class="fas fa-tachometer-alt"></i>
+                <div>ベンチマーク</div>
+            </div>
+        </a>
+        <a href="{% url 'reserve:S09-01' %}" class="box-anchor">
+            <div class="btn_09">
+                <i class="fas fa-boxes"></i>
+                <div>取置予約</div>
+            </div>
+        </a>
+    </div>
+    <div class="main-menu">
+        <div class="main-menu2">
+            <p class="cap">人事</p>
+            <a href="{% url 'employeemas:S01-01' %}" class="box-anchor">
+                <div class="btn_07">
+                    <i class="fas fa-book-open"></i>
+                    <div>従業員</div>
+                </div>
+            </a>
+            <a href="{% url 'workstatus:S14-01' %}" class="box-anchor">
+                <div class="btn_07">
+                    <i class="fas fa-street-view"></i>
+                    <div>勤務店舗状況</div>
+                </div>
+            </a>
+        </div>
+        <div class="main-menu2 sub1">
+            <p class="cap">店舗</p>
+            <a href="{% url 'storemas:S02-01' %}" class="box-anchor">
+                <div class="btn_07 sub1">
+                    <i class="fas fa-store-alt"></i>
+                    <div>店舗</div>
+                </div>
+            </a>
+        </div>
+    <div>
+</main>
+
+{% endblock %}
